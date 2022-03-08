@@ -38,7 +38,9 @@ a
     font-weight: bold;
     display: inline-block;
     color: #393d3f;
-    padding: 6px 8px 6px 8px;
+    height: 32px;
+    line-height: 30px;
+    padding: 0 8px 0 8px;
     border: 1px solid transparent;
     border-radius: 2px;
 }
@@ -54,7 +56,10 @@ a
 
 .button
 {
-    padding: 6px 8px 6px 8px;
+    display: inline-block;
+    height: 32px;
+    line-height: 30px;
+    padding: 0 8px 0 8px;
     border:1px solid #bbbdbe;
     border-right: 1px solid #a0a2a3;
     border-bottom: 1px solid #a0a2a3;
@@ -86,7 +91,6 @@ a
 {
     border: 1px solid #bcbebf;
     border-top: 0;
-    overflow: hidden;
     background: #eff0f1;
 }
 
@@ -114,51 +118,51 @@ a
 }
 .nav .home_
 {
-    background: url("images/24/home.png") 4px 2px no-repeat;
+    background: url("images/24/home.png") 4px 4px no-repeat;
 }
 .nav .home_:active
 {
-    background: url("images/24/home.png") 4px 2px no-repeat,linear-gradient(to bottom,#a7a7a8 0%,#cccdce 100%);
+    background: url("images/24/home.png") 4px 4px no-repeat,linear-gradient(to bottom,#a7a7a8 0%,#cccdce 100%);
 }
 .nav .download_
 {
-    background: url("images/24/download.png") 4px 4px no-repeat;
+    background: url("images/24/download.png") 4px 6px no-repeat;
 }
 .nav .download_:active
 {
-    background: url("images/24/download.png") 4px 4px no-repeat,linear-gradient(to bottom,#a7a7a8 0%,#cccdce 100%);
+    background: url("images/24/download.png") 4px 6px no-repeat,linear-gradient(to bottom,#a7a7a8 0%,#cccdce 100%);
 }
 .nav .description_
 {
-    background: url("images/24/description.png") 4px 2px no-repeat;
+    background: url("images/24/description.png") 4px 4px no-repeat;
 }
 .nav .description_:active
 {
-    background: url("images/24/description.png") 4px 2px no-repeat,linear-gradient(to bottom,#a7a7a8 0%,#cccdce 100%);
+    background: url("images/24/description.png") 4px 4px no-repeat,linear-gradient(to bottom,#a7a7a8 0%,#cccdce 100%);
 }
 .nav .features_
 {
-    background: url("images/24/features.png") 4px 2px no-repeat;
+    background: url("images/24/features.png") 4px 4px no-repeat;
 }
 .nav .features_:active
 {
-    background: url("images/24/features.png") 4px 2px no-repeat,linear-gradient(to bottom,#a7a7a8 0%,#cccdce 100%);
+    background: url("images/24/features.png") 4px 4px no-repeat,linear-gradient(to bottom,#a7a7a8 0%,#cccdce 100%);
 }
 .nav .screenshot_
 {
-    background: url("images/24/screenshot.png") 4px 2px no-repeat;
+    background: url("images/24/screenshot.png") 4px 4px no-repeat;
 }
 .nav .screenshot_:active
 {
-    background: url("images/24/screenshot.png") 4px 2px no-repeat,linear-gradient(to bottom,#a7a7a8 0%,#cccdce 100%);
+    background: url("images/24/screenshot.png") 4px 4px no-repeat,linear-gradient(to bottom,#a7a7a8 0%,#cccdce 100%);
 }
 .nav .share_
 {
-    background: url("images/24/share.png") 4px 4px no-repeat;
+    background: url("images/24/share.png") 4px 6px no-repeat;
 }
 .nav .share_:active
 {
-    background: url("images/24/share.png") 4px 4px no-repeat,linear-gradient(to bottom,#a7a7a8 0%,#cccdce 100%);
+    background: url("images/24/share.png") 4px 6px no-repeat,linear-gradient(to bottom,#a7a7a8 0%,#cccdce 100%);
 }
 
 
@@ -195,19 +199,53 @@ a
 }
 .header .languages_
 {
+    min-width: 100px;
+    text-align: center;
+    position: relative;
     margin-top: 15px;
     float: right;
     cursor: pointer;
+    border: 1px solid #bcbebf;
+}
+.header .languages_:hover
+{
+    border-color: #747474;
+}
+.header .languages_:hover .items_
+{
+    top: 28px;
+    left: -1px;
+    display: block;
 }
 .header .languages_ > .current_
 {
-
+    padding: 6px 8px 6px 8px;
+    background: white;
 }
+
 .header .languages_ > .items_
 {
+    position: absolute;
+    border: 1px solid #747474;
+    width: 100%;
+    border-top: 0;
+    background: white;
     display: none;
 }
+.header .languages_ > .items_ > .item_
+{
+    color: #393d3f;
+    text-decoration: none;
+    text-underline: none;
+    display: block;
+    padding: 6px 8px 6px 8px;
+}
 
+.header .languages_ > .items_ > .item_:hover
+{
+    color: white;
+    background: #3daee9;
+}
 
 
 /************************/

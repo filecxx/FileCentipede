@@ -10,15 +10,28 @@
 }
 .downloads .platform_ .button
 {
-    background:url("images/download.png") 5px 6px no-repeat,linear-gradient(to bottom,#eff0f1 0%,#dbdcdd 100%);
-    padding: 8px 12px 8px 25px;
+    background:url("images/download.png") 5px 8px no-repeat,linear-gradient(to bottom,#eff0f1 0%,#dbdcdd 100%);
+    padding: 0 12px 0 25px;
     margin-right: 6px;
 }
 .downloads .platform_ .button:active
 {
-    background: url("images/download.png") 5px 6px no-repeat,linear-gradient(to bottom,#a7a7a8 0%,#cccdce 100%);
+    background: url("images/download.png") 5px 8px no-repeat,linear-gradient(to bottom,#a7a7a8 0%,#cccdce 100%);
 }
 .downloads .platform_ .button
 {
 
+}
+
+.downloads .tips_
+{
+    display: inline-block;
+    padding: 8px;
+    border: 1px dotted #0b7c35;
+    background: rgba(106,255,156,0.1);
+}
+
+.body .description
+{
+    line-height: 38px;
 }
