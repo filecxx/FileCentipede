@@ -1,1 +1,24 @@
- 
+.screenshot img
+{
+    border: 1px solid #bcbebf;
+    border-radius: 8px;
+}
+
+.downloads .platforms_
+{
+    margin-bottom: 28px;
+}
+.downloads .platform_ .button
+{
+    background:url("images/download.png") 5px 6px no-repeat,linear-gradient(to bottom,#eff0f1 0%,#dbdcdd 100%);
+    padding: 8px 12px 8px 25px;
+    margin-right: 6px;
+}
+.downloads .platform_ .button:active
+{
+    background: url("images/download.png") 5px 6px no-repeat,linear-gradient(to bottom,#a7a7a8 0%,#cccdce 100%);
+}
+.downloads .platform_ .button
+{
+
+}

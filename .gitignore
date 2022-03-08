@@ -1,0 +1,13 @@
+**/.vs
+*.o
+*.obj
+*.gch
+*.pch
+.idea
+**/.idea
+**/.vscode
+**/.vs
+**/*.cbp
+**/cmake-build-release
+**/cmake-build-debug
+**/CMakeCache.txt
