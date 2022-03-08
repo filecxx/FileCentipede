@@ -39,7 +39,7 @@ a
     display: inline-block;
     color: #393d3f;
     height: 32px;
-    line-height: 30px;
+    line-height: 32px;
     padding: 0 8px 0 8px;
     border: 1px solid transparent;
     border-radius: 2px;
@@ -58,7 +58,7 @@ a
 {
     display: inline-block;
     height: 32px;
-    line-height: 30px;
+    line-height: 32px;
     padding: 0 8px 0 8px;
     border:1px solid #bbbdbe;
     border-right: 1px solid #a0a2a3;
