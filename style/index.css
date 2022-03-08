@@ -12,6 +12,7 @@
 {
     background:url("images/download.png") 5px 8px no-repeat,linear-gradient(to bottom,#eff0f1 0%,#dbdcdd 100%);
     padding: 0 12px 0 25px;
+    line-height: 32px;
     margin-right: 6px;
 }
 .downloads .platform_ .button:active
