@@ -10,6 +10,10 @@ increase your download speeds by up to 1.1 times, it's the best internet downloa
 FileU source code is in the source_code directory,
 this source code is for demonstration purposes only, it's full source code, but dependent libraries are not open source.
 
+this code proved that writing user interfaces in C++ could be significantly easier than HTML and JavaScript, without reducing performance.
+(see sml files in the UI directory)
+
+
 ## translate
 If you like this software, please give a help translate to other languages, translation tool has been contained in the software.
 
@@ -121,3 +125,4 @@ ${browser\_extension} ${screenshot}
 * Magnet to torrent tool	1.0
 * File merge tool	1.0
 * Statistics	1.0
+
