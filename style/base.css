@@ -314,16 +314,21 @@ a
     font-size: 16px;
     padding: 4px 6px 4px 0;
 }
-.footer .contact_
-{
-    display: inline-block;
-    border-bottom: 1px solid #bcbebf;
-}
 .footer .copyright_
 {
     font-size: 16px;
 }
+.footer .contact_
+{
+    float: right;
+}
+.footer .contact_ a
+{
+    padding: 0 8px 0 8px;
+
+}
 .footer .email_
 {
     float: right;
+    margin-left: 16px;
 }
