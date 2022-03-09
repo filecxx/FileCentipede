@@ -101,7 +101,7 @@
       <Application_Order_URL></Application_Order_URL>
       <Application_Screenshot_URL>http://www.filecxx.com/images/screenshot_software.png</Application_Screenshot_URL>
       <Application_Icon_URL>http://filecxx.com/style/images/logo.png</Application_Icon_URL>
-      <Application_XML_File_URL>http://repository.appvisor.com/app-0100aa3d7a5e/site-01/FileCentipede_pad.xml</Application_XML_File_URL>
+      <Application_XML_File_URL>http://filecxx.com/release/FileCentipede_pad.xml</Application_XML_File_URL>
     </Application_URLs>
     <Download_URLs>
       <Primary_Download_URL>https://github.com/filecxx/FileCentipede/releases/download/1.xx/filecxx_1.0_win_x64.zip</Primary_Download_URL>
