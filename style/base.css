@@ -109,6 +109,7 @@ a
 }
 .nav a
 {
+    min-width: 40px;
     text-decoration: none;
     text-underline: none;
 }
