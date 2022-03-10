@@ -17,12 +17,19 @@ void translate_files::init_actions()
 {
     ui.on_click("#translate",[this](auto)
     {
-        auto tab = ui.cast<ext::ui::tab*>("#tab");
+        auto tab    = ui.cast<ext::ui::tab*>("#tab");
+        auto index  = tab->currentIndex();
+        auto result = false;
 
-        if(tab->currentIndex() == 0){
-            translate_file();
-        }else{
-            translate_directory();
+        if(index == 0){
+            result = translate_file();
+        }else if(index == 1){
+            result = translate_directory();
+        }else if(index == 2){
+            result = translate_auto_directory();
+        }
+        if(result){
+            ext::ui::alert("info","OK",ext::ui::lang("file_translated")).exec();
         }
     });
 }
@@ -75,6 +82,26 @@ bool translate_files::translate_file(ext::ui::language& lang,const ext::fs::path
     return true;
 }
 
+bool translate_files::translate_directory(ext::ui::language& lang,const ext::fs::path& dir,const ext::fs::path& dir_save)
+{
+    for(auto& current : ext::fs::recursive_directory_iterator(dir,error_))
+    {
+        if(!current.is_regular_file(error_)){
+            continue;
+        }
+        auto target = dir_save / ext::fs::relative(current.path(),dir,error_);
+
+        if(!ext::fs::exists(target.parent_path(),error_) && !ext::fs::create_directories(target.parent_path(),error_)){
+            ext::ui::alert("error","error",ext::ui::lang("create_directory_error")).exec();
+            return false;
+        }
+        if(!translate_file(lang,current.path(),target)){
+            return false;
+        }
+    }
+    return true;
+}
+
 bool translate_files::translate_file()
 {
     auto form      = ext::ui::form(ui("#file_widget"));
@@ -84,7 +111,7 @@ bool translate_files::translate_file()
     auto save_path = values["save_path"].text();
 
     if(language.empty() || path.empty() || save_path.empty() || !ext::fs::exists(language,error_) || !ext::fs::exists(path,error_)){
-        ext::ui::alert("error","error",ext::ui::lang("open_file_error")).exec();
+        ext::ui::alert("error","error",ext::ui::lang("file_path_error")).exec();
         return true;
     }
     ext::ui::language lang;
@@ -93,11 +120,7 @@ bool translate_files::translate_file()
         ext::ui::alert("error","error",ext::ui::lang("open_file_error")).exec();
         return false;
     }
-    if(!translate_file(lang,path,save_path)){
-        return false;
-    }
-    ext::ui::alert("info","OK",ext::ui::lang("file_translated")).exec();
-    return true;
+    return translate_file(lang,path,save_path);
 }
 
 bool translate_files::translate_directory()
@@ -109,7 +132,7 @@ bool translate_files::translate_directory()
     auto save_path = values["save_path"].text();
 
     if(language.empty() || path.empty() || save_path.empty() || !ext::fs::exists(language,error_) || !ext::fs::is_directory(path,error_)){
-        ext::ui::alert("error","error",ext::ui::lang("open_file_error")).exec();
+        ext::ui::alert("error","error",ext::ui::lang("file_path_error")).exec();
         return false;
     }
     if(!ext::fs::is_directory(save_path,error_) && !ext::fs::create_directories(save_path,error_)){
@@ -124,22 +147,47 @@ bool translate_files::translate_directory()
         ext::ui::alert("error","error",ext::ui::lang("open_file_error")).exec();
         return false;
     }
-    for(auto& current : ext::fs::recursive_directory_iterator(ext::fs::path(path),error_))
+    return translate_directory(lang,path,save_path);
+}
+
+bool translate_files::translate_auto_directory()
+{
+    auto form      = ext::ui::form(ui("#auto_directory_widget"));
+    auto values    = form.values();
+    auto languages = values["languages"].text();
+    auto path      = values["path"].text();
+
+    if(languages.empty() || path.empty() || !ext::fs::exists(languages,error_) || !ext::fs::is_directory(path,error_)){
+        ext::ui::alert("error","error",ext::ui::lang("file_path_error")).exec();
+        return false;
+    }
+    for(auto& iter_lang : ext::fs::recursive_directory_iterator(ext::fs::path(languages),error_))
     {
-        if(!current.is_regular_file(error_)){
+        auto& path_lang = iter_lang.path();
+
+        if(!iter_lang.is_regular_file(error_) || path_lang.extension().string() != ".lang"){
             continue;
         }
-        auto target = ext::fs::path(save_path) / ext::fs::relative(current.path(),ext::fs::path(path),error_);
+        ext::fs::path     dir_save = ext::fs::path(path).parent_path() / path_lang.filename().replace_extension();
+        ext::ui::language lang;
+        std::string       file_buffer;
 
-        if(!ext::fs::exists(target.parent_path(),error_) && !ext::fs::create_directories(target.parent_path(),error_)){
-            ext::ui::alert("error","error",ext::ui::lang("create_directory_error")).exec();
+        if(!lang.load_file(path_lang)){
+            ext::ui::alert("error","error",ext::ui::lang("open_file_error")).exec();
             return false;
+        }else if(ext::fs::exists(dir_save,error_)){
+            if(!ext::fs::is_directory(dir_save,error_)){
+                create_directory_error:
+                ext::ui::alert("error","error",ext::ui::lang("create_directory_error")).exec();
+                return false;
+            }
+        }else if(!ext::fs::create_directories(dir_save,error_)){
+            goto create_directory_error;
         }
-        if(!translate_file(lang,current.path(),target)){
+        if(!translate_directory(lang,path,dir_save)){
             return false;
         }
     }
-    ext::ui::alert("info","OK",ext::ui::lang("file_translated")).exec();
     return true;
 }
 

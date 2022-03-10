@@ -126,3 +126,11 @@ ${browser\_extension} ${screenshot}
 * File merge tool	1.0
 * Statistics	1.0
 
+## Translate
+* Website:  "lang/*.lang"
+* Software: "bin/lang/*.lang"
+
+
+| Language            |@|
+|:--------------------|:-------------|
+| Русский             | [@vanja-san](https://github.com/vanja-san) 

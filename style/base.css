@@ -101,11 +101,11 @@ a
     position: sticky;
     top: 0;
     z-index: 9;
-    font-size: 16px;
+    font-size: 14px;
 }
 .nav .links_
 {
-    padding: 8px;
+    padding: 8px 4px 8px 4px;
 }
 .nav a
 {
@@ -114,57 +114,64 @@ a
 }
 .nav a.tool_button
 {
-    padding-left: 30px;
+    padding-left: 22px;
 }
 .nav .home_
 {
-    background: url("images/24/home.png") 4px 4px no-repeat;
+    background: url("images/16/home.png") 4px 7px no-repeat;
 }
 .nav .home_:active
 {
-    background: url("images/24/home.png") 4px 4px no-repeat,linear-gradient(to bottom,#a7a7a8 0%,#cccdce 100%);
+    background: url("images/16/home.png") 4px 7px no-repeat,linear-gradient(to bottom,#a7a7a8 0%,#cccdce 100%);
 }
 .nav .download_
 {
-    background: url("images/24/download.png") 4px 6px no-repeat;
+    background: url("images/download.png") 4px 8px no-repeat;
 }
 .nav .download_:active
 {
-    background: url("images/24/download.png") 4px 6px no-repeat,linear-gradient(to bottom,#a7a7a8 0%,#cccdce 100%);
+    background: url("images/download.png") 4px 8px no-repeat,linear-gradient(to bottom,#a7a7a8 0%,#cccdce 100%);
 }
 .nav .description_
 {
-    background: url("images/24/description.png") 4px 4px no-repeat;
+    background: url("images/16/description.png") 4px 7px no-repeat;
 }
 .nav .description_:active
 {
-    background: url("images/24/description.png") 4px 4px no-repeat,linear-gradient(to bottom,#a7a7a8 0%,#cccdce 100%);
+    background: url("images/16/description.png") 4px 7px no-repeat,linear-gradient(to bottom,#a7a7a8 0%,#cccdce 100%);
 }
 .nav .features_
 {
-    background: url("images/24/features.png") 4px 4px no-repeat;
+    background: url("images/16/features.png") 4px 7px no-repeat;
 }
 .nav .features_:active
 {
-    background: url("images/24/features.png") 4px 4px no-repeat,linear-gradient(to bottom,#a7a7a8 0%,#cccdce 100%);
+    background: url("images/16/features.png") 4px 7px no-repeat,linear-gradient(to bottom,#a7a7a8 0%,#cccdce 100%);
 }
 .nav .screenshot_
 {
-    background: url("images/24/screenshot.png") 4px 4px no-repeat;
+    background: url("images/16/screenshot.png") 4px 8px no-repeat;
 }
 .nav .screenshot_:active
 {
-    background: url("images/24/screenshot.png") 4px 4px no-repeat,linear-gradient(to bottom,#a7a7a8 0%,#cccdce 100%);
+    background: url("images/16/screenshot.png") 4px 8px no-repeat,linear-gradient(to bottom,#a7a7a8 0%,#cccdce 100%);
 }
 .nav .share_
 {
-    background: url("images/24/share.png") 4px 6px no-repeat;
+    background: url("images/16/share.png") 4px 7px no-repeat;
 }
 .nav .share_:active
 {
-    background: url("images/24/share.png") 4px 6px no-repeat,linear-gradient(to bottom,#a7a7a8 0%,#cccdce 100%);
+    background: url("images/16/share.png") 4px 7px no-repeat,linear-gradient(to bottom,#a7a7a8 0%,#cccdce 100%);
 }
-
+.nav .documentation_
+{
+    background: url("images/16/book.png") 4px 8px no-repeat;
+}
+.nav .documentation_:active
+{
+    background: url("images/16/book.png") 4px 8px no-repeat,linear-gradient(to bottom,#a7a7a8 0%,#cccdce 100%);
+}
 
 /************************/
 .header
