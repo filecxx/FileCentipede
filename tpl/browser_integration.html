@@ -43,12 +43,48 @@
     </div>
 
     <div class="body">
-
         <div class="section">
-            todo:
+            <h1>browser_extension</h1>
+            ${browsers_extension_introduction_}<br/>
+            <br/><br/><img src='../images/extension_video_bar.png'/>
+            <br/><br/><img src='../images/extension_videos.png'/>
+            <br/><br/><img src='../images/extension_audios.png'/>
         </div>
-        <div class="section json_keys" id="json_fields">
-            <h2>JSON</h2>
+        <div class="section">
+            <h2>Firefox</h2>
+            <div>
+                <h4>${open}:</h4> about:addons
+                <br/><br/><img src='../images/browser/firefox_addons.png'/>
+
+                <br/><br/>${drop} firefox.xpi ${file} ${into}
+                <br/><br/><img src='../images/browser/firefox_addons_drop.png'/>
+                <br/><br/><img src='../images/browser/firefox_addons_add.png'/>
+            </div>
+
+        </div>
+        <div class="section">
+            <h2>Chrome</h2>
+            <div>
+                <h4>${open}:</h4> chrome://extensions/
+
+                <br/><br/><img src='../images/browser/chrome_menu.png'/>
+                <br/><br/><img src='../images/browser/chrome_menu2.png'/>
+
+                <br/><br/>${enable} ${developer_mode}
+                <br/><br/><img src='../images/browser/chrome_extension_dev_mode.png'/>
+
+
+                <br/><br/>${drop} chrome.crx ${file} ${into}
+                <br/><br/><img src='../images/browser/chrome_drop.png'/>
+
+
+                <h3>${or}:</h3>
+                ${unzip} chrome.zip
+                <br/><br/><img src='../images/browser/chrome_unzip.png'/>
+
+                <br/><br/>${load_unpacked} <b></b>
+                <br/><br/><img src='../images/browser/chrome_load_unpacked.png'/>
+            </div>
         </div>
     </div>
 

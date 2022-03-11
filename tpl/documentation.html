@@ -45,10 +45,318 @@
     <div class="body">
 
         <div class="section">
-            todo:
+            <h2>${create_address}</h2>
+            <div>
+                <div>
+
+                </div>
+                <div>You can just use this file to create address: <a href="../script/create_filec_address.js">../script/create_filec_address.js</a></div>
+
+                <div>
+                    <h3>${usage}:</h3>
+                    <pre><code>create_filec_address({uri:"http://...."});</code></pre>
+                </div>
+            </div>
         </div>
+
         <div class="section json_keys" id="json_fields">
-            <h2>JSON</h2>
+            <h2>JSON: ${add_task}</h2>
+            <div>
+                You can use json as an address to add task, but remember, JSON string must be one line.
+                <br/>
+            </div>
+
+            <table class="grid" style="margin-top: 12px">
+                <thead>
+                <tr>
+                    <td>${key}</td>
+                    <td>${type}</td>
+                    <td style="width: 140px">${description}</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>uri</td>
+                    <td>${string}</td>
+                    <td>${address}</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <h4>HTTP / HTTPS / Stream ${optional}</h4>
+            <table class="grid" style="margin-top: 12px">
+                <thead>
+                <tr>
+                    <td>${key}</td>
+                    <td>${type}</td>
+                    <td style="width: 140px">${description}</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>method</td>
+                    <td>${string}</td>
+                    <td>GET, POST ... You know the thing</td>
+                </tr>
+                <tr>
+                    <td>catalog</td>
+                    <td>${string}</td>
+                    <td>${catalog}</td>
+                </tr>
+                <tr>
+                    <td>page_url</td>
+                    <td>${string}</td>
+                    <td>${page_url}</td>
+                </tr>
+                <tr>
+                    <td>user_agent</td>
+                    <td>${string}</td>
+                    <td>User Agent</td>
+                </tr>
+                <tr>
+                    <td>cookies</td>
+                    <td>${string}</td>
+                    <td>Cookies</td>
+                </tr>
+                <tr>
+                    <td>headers</td>
+                    <td>${string}</td>
+                    <td>HTTP Headers</td>
+                </tr>
+                <tr>
+                    <td>content_type</td>
+                    <td>${string}</td>
+                    <td>${content_type_option_}</td>
+                </tr>
+                <tr>
+                    <td>data</td>
+                    <td>${string}</td>
+                    <td>HTTP request data</td>
+                </tr>
+                <tr>
+                    <td>connect_timeout</td>
+                    <td>${number}</td>
+                    <td>${connect_timeout}</td>
+                </tr>
+                <tr>
+                    <td>max_connections</td>
+                    <td>${number}</td>
+                    <td>${max_connections}</td>
+                </tr>
+                <tr>
+                    <td>max_redirect</td>
+                    <td>${number}</td>
+                    <td>${max_redirect}</td>
+                </tr>
+                <tr>
+                    <td>max_retry</td>
+                    <td>${number}</td>
+                    <td>${max_retry}</td>
+                </tr>
+                <tr>
+                    <td>file_name</td>
+                    <td>${string}</td>
+                    <td>${file_name}</td>
+                </tr>
+                <tr>
+                    <td>speed_limit_download</td>
+                    <td>${number}</td>
+                    <td>${speed_limit_download}</td>
+                </tr>
+                <tr>
+                    <td>auto_rename_file</td>
+                    <td>${bool}</td>
+                    <td>${auto_rename_file}</td>
+                </tr>
+                <tr>
+                    <td>ignore_remote_modified</td>
+                    <td>${number}</td>
+                    <td>${ignore_remote_modified}</td>
+                </tr>
+                <tr>
+                    <td>ignore_server_busy</td>
+                    <td>${number}</td>
+                    <td>${ignore_server_busy}</td>
+                </tr>
+                <tr>
+                    <td>ignore_http_error</td>
+                    <td>${number}</td>
+                    <td>${ignore_http_error}</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <h4>FTP / FTPS ${optional}</h4>
+            <table class="grid" style="margin-top: 12px">
+                <thead>
+                <tr>
+                    <td>${key}</td>
+                    <td>${type}</td>
+                    <td style="width: 140px">${description}</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>catalog</td>
+                    <td>${string}</td>
+                    <td>${catalog}</td>
+                </tr>
+                <tr>
+                    <td>page_url</td>
+                    <td>${string}</td>
+                    <td>${page_url}</td>
+                </tr>
+                <tr>
+                    <td>connect_timeout</td>
+                    <td>${number}</td>
+                    <td>${connect_timeout}</td>
+                </tr>
+                <tr>
+                    <td>max_connections</td>
+                    <td>${number}</td>
+                    <td>${max_connections}</td>
+                </tr>
+                <tr>
+                    <td>max_retry</td>
+                    <td>${number}</td>
+                    <td>${max_retry}</td>
+                </tr>
+                <tr>
+                    <td>file_name</td>
+                    <td>${string}</td>
+                    <td>${file_name}</td>
+                </tr>
+                <tr>
+                    <td>user</td>
+                    <td>${string}</td>
+                    <td>${username}</td>
+                </tr>
+                <tr>
+                    <td>pass</td>
+                    <td>${string}</td>
+                    <td>${password}</td>
+                </tr>
+                <tr>
+                    <td>speed_limit_download</td>
+                    <td>${number}</td>
+                    <td>${speed_limit_download}</td>
+                </tr>
+                <tr>
+                    <td>speed_limit_upload</td>
+                    <td>${number}</td>
+                    <td>${speed_limit_upload}</td>
+                </tr>
+                <tr>
+                    <td>auto_rename_file</td>
+                    <td>${bool}</td>
+                    <td>${auto_rename_file}</td>
+                </tr>
+                <tr>
+                    <td>ignore_server_busy</td>
+                    <td>${number}</td>
+                    <td>${ignore_server_busy}</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <h4>Magnet / HASH ${optional}</h4>
+            <table class="grid" style="margin-top: 12px">
+                <thead>
+                <tr>
+                    <td>${key}</td>
+                    <td>${type}</td>
+                    <td style="width: 140px">${description}</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>catalog</td>
+                    <td>${string}</td>
+                    <td>${catalog}</td>
+                </tr>
+                <tr>
+                    <td>page_url</td>
+                    <td>${string}</td>
+                    <td>${page_url}</td>
+                </tr>
+                <tr>
+                    <td>max_connections</td>
+                    <td>${number}</td>
+                    <td>${max_connections}</td>
+                </tr>
+                <tr>
+                    <td>file_name</td>
+                    <td>${string}</td>
+                    <td>${file_name}</td>
+                </tr>
+                <tr>
+                    <td>speed_limit_download</td>
+                    <td>${number}</td>
+                    <td>download speed limit</td>
+                </tr>
+                <tr>
+                    <td>speed_limit_upload</td>
+                    <td>${number}</td>
+                    <td>upload speed limit</td>
+                </tr>
+                <tr>
+                    <td>auto_rename_file</td>
+                    <td>${bool}</td>
+                    <td>Auto rename file</td>
+                </tr>
+                <tr>
+                    <td>seeding_limit_ratio</td>
+                    <td>${number}</td>
+                    <td>${seeding_limit_ratio}</td>
+                </tr>
+                <tr>
+                    <td>seeding_limit_minutes</td>
+                    <td>${number}</td>
+                    <td>${seeding_limit_minutes}</td>
+                </tr>
+                <tr>
+                    <td>seeding_limit_size</td>
+                    <td>${number}</td>
+                    <td>${seeding_limit_size}</td>
+                </tr>
+                <tr>
+                    <td>seeding_limit_act</td>
+                    <td>${number}</td>
+                    <td>${seeding_limit_act}</td>
+                </tr>
+                <tr>
+                    <td>seeding_limit_speed_limit</td>
+                    <td>${number}</td>
+                    <td>${seeding_limit_speed_limit}</td>
+                </tr>
+                <tr>
+                    <td>seeding_limit_ratio_enable</td>
+                    <td>${bool}</td>
+                    <td>${seeding_limit_ratio_enable}</td>
+                </tr>
+                <tr>
+                    <td>seeding_limit_minutes_enable</td>
+                    <td>${bool}</td>
+                    <td>${seeding_limit_minutes_enable}</td>
+                </tr>
+                <tr>
+                    <td>seeding_limit_size_enable</td>
+                    <td>${bool}</td>
+                    <td>${seeding_limit_size_enable}</td>
+                </tr>
+                <tr>
+                    <td>without_confirm</td>
+                    <td>${bool}</td>
+                    <td>${without_confirm}</td>
+                </tr>
+                <tr>
+                    <td>sequential</td>
+                    <td>${bool}</td>
+                    <td>${sequential_download}</td>
+                </tr>
+                </tbody>
+            </table>
+
         </div>
     </div>
 
