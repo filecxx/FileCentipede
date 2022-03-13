@@ -18,6 +18,22 @@ a
     color: #2a8dcb;
 }
 
+pre
+{
+
+}
+code
+{
+    background: #272822;
+    display: block;
+    font-family: "Source Code Pro","Courier New","Helvetica Neue","monospace",HelveticaNeue,Helvetica,Arial,serif;
+    overflow-x: auto;
+    padding: 0.5em;
+    white-space: pre;
+    word-wrap: break-word;
+    font-size: 13px;
+}
+
 /************************/
 .central
 {
