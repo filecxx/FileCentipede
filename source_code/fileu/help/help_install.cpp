@@ -63,33 +63,41 @@ void install::create_desktop_shortcuts()
 #ifndef EXT_OS_WINDOWS
     desktop.icon(install_path_ / "icons" / "icon.png");
 #endif
-    desktop.create_shortcut(display,(install_path_ / "lib").executable(protocol::Client_Bin));
+    desktop.create_shortcut(display,(install_path_ / "lib").executable(pro::Client_Bin));
 }
 
 void install::start_install()
 {
+    ext::random random;
+    install_path_ = ext::fs::path(path_->value());
+
+    if(!ext::fs::exists(install_path_,error_) && !ext::fs::create_directories(install_path_,error_)){
+        goto readonly;
+    }
+    if(!ext::fs::test_write_perm(install_path_,random))
+    {
+        readonly:
+        return ext::ui::post([this]{
+            ext::ui::alert("error","error",ext::text(ext::ui::lang("write_file_error")) + " - " + ext::ui::lang("readonly")).exec();
+        });
+    }
     ui("#btn_install")->object.enable(false);
 
     thread_ = std::jthread([this]
     {
+        auto args     = std::vector<ext::text>{"install","path",install_path_.u8string()};
         auto settings = form_.values();
-        auto args     = ext::text("install path \"") + (install_path_ = ext::fs::path(path_->value())).u8string() + "\"";
 
-        for(auto i=0;i<args.size();++i){
-            if(args[i] == '\\'){
-                args[i] = '/';
-            }
-        }
         if(settings["system_service"] == true){
-            args += " system_service";
+            args.emplace_back("system_service");
         }
         bool elevatable = false;
-        int  ret        = doom::privilege::launch(zzz.workspace.executable(protocol::Service_Bin),args,elevatable,true);
+        int  ret        = doom::privilege::launch(zzz.workspace.executable(pro::Service_Bin),args,elevatable,true);
 
         ext::ui::post([this,ret,elevatable]() mutable
         {
             if(WEXITSTATUS(ret) != 200){
-                install_failed(elevatable);
+                install_failed(ret,elevatable);
             }else{
                 install_success();
             }
@@ -97,11 +105,20 @@ void install::start_install()
     });
 }
 
-void install::install_failed(bool elevatable)
+void install::install_failed(int ret,bool elevatable)
 {
-    ext::ui::alert("error","error",ext::ui::lang(elevatable ? "install_failed" : "install_failed_error1_")).exec();
-
+    if(ret == 99){
+        install_write_conf_failed();
+    }else{
+        ext::text error_str = ext::ui::lang(elevatable ? "install_failed" : "install_failed_error1_");
+        ext::ui::alert("error","error",error_str + " code: " + std::to_string(ret)).exec();
+    }
     ui("#btn_install")->object.enable(true);
+}
+
+void install::install_write_conf_failed()
+{
+    ext::ui::alert("error","error",ext::ui::lang("write_conf_failed")).exec();
 }
 
 void install::install_success()
@@ -119,12 +136,12 @@ void install::install_success()
     }
     zzz.shutdown();
 
-    if(ext::cfile::write((install_path_ / "lib" / Config_File_Name).u8string().c_str(),"wb",setting.stringify()).value() != 0){
-        ext::ui::alert("error","error",ext::ui::lang("write_conf_failed")).exec();
+    if(ext::cfile::write((install_path_ / "lib" / FileU_Config_File_Name).u8string().c_str(),"wb",setting.stringify()).value() != 0){
+        install_write_conf_failed();
     }else{
         ext::ui::alert("info","success",ext::ui::lang("install_success")).exec();
     }
-    ext::process::launch(0,(install_path_ / "lib").executable(protocol::Client_Bin));
+    ext::process::launch(0,(install_path_ / "lib").executable(pro::Client_Bin));
     std::exit(1);
 };
 

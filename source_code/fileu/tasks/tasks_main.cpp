@@ -816,9 +816,8 @@ void main::on_task_state(ext::value& json,int64_t id,task_t& task)
     auto item  = tasks_->sibling(task.node->value.item,"state");
     auto color = ext::value();
 
-    if(!matches_filter(task)){
-        tasks_->visible(task.node,false);
-    }
+    tasks_->visible(task.node,matches_filter(task));
+
     if(task.state == protocol::State_Error)
     {
         need_recount_text2_ = true;

@@ -5,7 +5,7 @@
 */
 void check_is_upgrading()
 {
-    if(ext::named_mutex(ext::os::cpu::hash(),pro::protocol::Upgrade_Mutex).locked()){
+    if(ext::named_mutex(ext::os::cpu::hash(),pro::Upgrade_Mutex).locked()){
         std::exit(0);
     }
 }
@@ -15,7 +15,7 @@ void check_is_upgrading()
 */
 int forward_to_client(const ext::value& list)
 {
-    ext::ipcx::send(pro::protocol::Client_Bin,pro::protocol::Version_IPC,list);
+    ext::ipcx::send(pro::Client_Bin,pro::Version_IPC,list);
     std::exit(0);
     return 0;
 }
@@ -84,6 +84,7 @@ int main(int argc,char *argv[])
 {
     boost::nowide::args _(argc,argv);
     ext::ui::application app(argc,argv,"platforms");
+
     app.workspace(app.variables.workspace.remove_filename());
     app.style("fusion");
     app.load_css(app.variables.workspace / "ui/css/default.css");

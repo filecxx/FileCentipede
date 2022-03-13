@@ -41,7 +41,7 @@ void uninstall::start_uninstall()
         thread_ = std::jthread([this]
         {
             bool elevatable = false;
-            int  ret        = doom::privilege::launch((zzz.workspace / "lib").executable(protocol::Service_Bin),"uninstall",elevatable,true);
+            int  ret        = doom::privilege::launch(zzz.workspace.executable(pro::Service_Bin),{"uninstall"},elevatable,true);
 
             ext::ui::post([this,elevatable]() mutable{
                 uninstall_failed(elevatable);

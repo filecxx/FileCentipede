@@ -19,6 +19,7 @@
 #include <doom/custom>
 #include <doom/ipdb>
 #include <doom/startup>
+#include "../common/pro_config.h"
 #include "../common/pro_error.h"
 #include "../common/pro_protocol.h"
 #include "../common/pro_uri.h"
@@ -29,14 +30,6 @@ namespace pro
 using namespace std::chrono_literals;
 using namespace std::placeholders;
 
-
-#ifdef EXT_OS_WINDOWS
-constexpr std::string_view Config_File_Name = "fileu_win32.conf";
-#elif EXT_OS_MAC
-constexpr std::string_view Config_File_Name = "fileu_mac.conf";
-#else
-constexpr std::string_view Config_File_Name = "fileu_linux.conf";
-#endif
 
 
 }

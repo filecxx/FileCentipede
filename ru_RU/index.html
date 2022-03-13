@@ -224,18 +224,25 @@
     <div class="footer">
         <div class="links_">
             <h2>Ссылки</h2>
-
             <div>
                 <h4>Если вам не нравится эта программа, вот некоторые другие аналогичные программы, рекомендованные вам.</h4>
-                <a href="https://lightzhan.xyz/index.php/en/qdown-en/">QDown</a>
-                <a href="https://xdown.org/">XDown</a>
-                <a href="https://motrix.app/">motrix</a>
+                <a target="_blank" href="https://www.qbittorrent.org/">qBittorrent</a>
+                <a target="_blank" href="https://transmissionbt.com/">Transmission</a>
+                <a target="_blank" href="https://www.freedownloadmanager.org/">FDM</a>
+                <a target="_blank" href="https://www.internetdownloadmanager.com//">IDM</a>
+                <a target="_blank" href="https://lightzhan.xyz/index.php/en/qdown-en/">QDown</a>
+                <a target="_blank" href="https://xdown.org/">XDown</a>
+                <a target="_blank" href="https://motrix.app/">motrix</a>
+            </div>
+            <div>
+                <br>
+                (If you like to add your software to the list, please send an email, you don't have to link this site back, but I will be appreciated it if you do.)
             </div>
             <div>
                 <h4>Opensource libraries</h4>
-                <a href="https://www.boost.org/">boost</a>
-                <a href="https://www.libtorrent.org/">libtorrent</a>
-                <a href="https://qt.io/">Qt</a>
+                <a target="_blank" href="https://www.boost.org/">boost</a>
+                <a target="_blank" href="https://www.libtorrent.org/">libtorrent</a>
+                <a target="_blank" href="https://qt.io/">Qt</a>
             </div>
         </div>
 
@@ -246,35 +253,17 @@
                 <a href="mailto:123123@123.com" id="contact_email">123123@123.com</a>
             </div>
             <div class="contact_">
-                <a href="https://twitter.com/namelessitguy">Twitter</a>
-                <a href="https://www.reddit.com/user/namelessitguy">Reddit</a>
-                <a href="https://mewe.com/i/namelessitguy">MeWe</a>
-                <a href="https://gab.com/namelessitguy">Gab</a>
-                <a href="https://gettr.com/user/namelessitguy">Gettr</a>
+                <a target="_blank" href="https://twitter.com/namelessitguy">Twitter</a>
+                <a target="_blank" href="https://www.reddit.com/user/namelessitguy">Reddit</a>
+                <a target="_blank" href="https://mewe.com/i/namelessitguy">MeWe</a>
+                <a target="_blank" href="https://gab.com/namelessitguy">Gab</a>
+                <a target="_blank" href="https://gettr.com/user/namelessitguy">Gettr</a>
             </div>
         </div>
     </div>
 </div>
 
-<script>
-    (function()
-    {
-        var decode_email = function()
-        {
-            var arr     = [110,112,100,47,102,100,111,102,103,109,106,98,110,65,122,118,104,117,106,116,116,102,109,102,110,98,111];
-            var element = document.getElementById("contact_email");
-
-            for(var i=0;i<arr.length;++i){
-                arr[i] = String.fromCharCode(arr[i] - 1);
-            }
-            var text = arr.reverse().join('');
-
-            element.setAttribute("href","mailto:" + text);
-            element.innerHTML = text;
-        }
-        decode_email();
-    })();
-</script>
+<script src="../script/base.js"></script>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6226ca040a5d34a0"></script>
 
 </body>

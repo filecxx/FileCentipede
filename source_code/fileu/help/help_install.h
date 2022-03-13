@@ -69,7 +69,11 @@ protected:
     /*
      * install failed
     */
-    void install_failed(bool elevatable);
+    void install_write_conf_failed();
+    /*
+     * install failed
+    */
+    void install_failed(int ret,bool elevatable);
     /*
      * install success
     */

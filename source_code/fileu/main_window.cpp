@@ -33,13 +33,13 @@ void main_window::init_ui()
 void main_window::init_config()
 {
     static std::pair<ext::text,ext::text> default_lang[] = {
-        {"__version__",ext::f2str(protocol::Version,1)},
+        {"__version__",ext::f2str(pro::Version,1)},
         {"__workspace__",zzz.workspace.u8string()}
     };
     ext::text conf;
     ext::text lang_name;
 
-    if(ext::cfile::read(zzz.workspace / "lib" / Config_File_Name,conf).value() == 0 && (zzz.settings = ext::json::parse(conf)).is_map()){
+    if(ext::cfile::read(zzz.workspace / "lib" / pro::FileU_Config_File_Name,conf).value() == 0 && (zzz.settings = ext::json::parse(conf)).is_map()){
         lang_name = zzz.settings.text_view("lang");
         init_ui();
     }
@@ -175,7 +175,7 @@ void main_window::init_ipc()
     if(!pro::is_service_running()){
         show_ipc_loading();
     }
-    if(!zzz.ipc.start(pro::protocol::Client_Bin,protocol::IPC_Space,protocol::Version_IPC)){
+    if(!zzz.ipc.start(pro::Client_Bin,pro::IPC_Space,pro::Version_IPC)){
         ext::ui::alert("error","error","start ipc failed.").exec();
         return zzz.app.exit();
     }
@@ -280,7 +280,7 @@ void main_window::init_methods()
     ext::ui::methods::bind(
     {
         {"filec-version",[](ext::ui::arguments& arguments){
-            arguments << protocol::Version;
+            arguments << pro::Version;
         }},
         {"filec-lang",[](ext::ui::arguments& arguments){
             if(arguments.argc == 1 && arguments[0].is_string()){
@@ -402,7 +402,7 @@ void main_window::launch_filec()
 {
     bool elevatable = false;
 
-    doom::privilege::launch(pro::service_path(zzz.workspace),"__elevating__",elevatable,true);
+    doom::privilege::launch(pro::service_path(zzz.workspace),{"__elevating__"},elevatable,true);
 
     if(!elevatable){
         ext::ui::alert("info","error",ext::ui::lang("launch_filec_error1_")).exec();
@@ -441,7 +441,7 @@ void main_window::connect_service()
 {
     Ext_Return_If(zzz.shutting_down);
 
-    ext::ipcx::connect(pro::protocol::Service_Bin,pro::protocol::Version_IPC,[this](auto error,auto connection)
+    ext::ipcx::connect(pro::Service_Bin,pro::Version_IPC,[this](auto error,auto connection)
     {
         if(error){
             show_ipc_loading();

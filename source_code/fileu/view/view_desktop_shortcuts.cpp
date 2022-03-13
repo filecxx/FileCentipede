@@ -53,6 +53,7 @@ void desktop_shortcuts::create_shortcut(ext::text_view display,ext::text_view na
 #ifndef EXT_OS_WINDOWS
     desktop.icon(zzz.workspace / "icons" / "icon.png");
 #endif
+    ext::fs::path p(path);
     desktop.create_shortcut(display,path,args);
 }
 

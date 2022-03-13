@@ -14,7 +14,6 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
 if(CMAKE_SYSTEM_NAME MATCHES "Windows")
-    set(QT_PATH I:\\lib\\Qt\\5.15.2\\mingw81_64\\lib\\cmake)
     set(CMAKE_PREFIX_PATH ${CMAKE_PREFIX_PATH} ${QT_PATH})
     set(CMAKE_EXE_LINKER_FLAGS -Wl,-subsystem,windows)
 else()

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="文件蜈蚣1.0是一个增强特性的网络文件下载管理器, 快速, 可定制的, 用户友好, 多协议支持, 包含许多有用的辅助工具, 免费无广告, 你也可以用来下载网页中的视频和音频, 将下载速度提高1.1倍, 这是你能找到的最好的互联网下载管理器(目前为止)."/>
-    <meta name="keywords" content="文件蜈蚣, IDM, BT种子客户端, 下载种子, 网页中下载视频, 最快的下载加速器, 最好的下载工具, linux下载工具, 免费下载工具, transmission, libtorrent, 迅雷替代工具, 无广告下载工具"/>
+    <meta name="keywords" content="文件蜈蚣, IDM, BT种子客户端, 下载种子, 网页中下载视频, 视频嗅探工具, 最快的下载加速器, 最好的下载工具, linux下载工具, 免费下载工具, transmission, libtorrent, 文件蜈蚣下载, 无广告下载工具"/>
     <title>文件蜈蚣</title>
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
     <link rel="icon" href="../favicon.ico" type="image/x-icon" />
@@ -22,7 +22,7 @@
             <a class="tool_button description_" href="#description">描述</a>
             <a class="tool_button features_" href="#features">特性</a>
             <a class="tool_button screenshot_" href="#screenshot">截图</a>
-            <a class="tool_button share_" href="#shares">Share</a>
+            <a class="tool_button share_" href="#shares">分享</a>
             <a class="tool_button documentation_" href="documentation.html">文档</a>
         </div>
     </div>
@@ -216,7 +216,7 @@
         </div>
 
         <div class="section shares" id="shares">
-            <h2>Share</h2>
+            <h2>分享</h2>
             <div class="addthis_inline_share_toolbox"></div>
         </div>
     </div>
@@ -224,18 +224,25 @@
     <div class="footer">
         <div class="links_">
             <h2>链接</h2>
-
             <div>
                 <h4>如果你不喜欢这个软件, 这里有一些其他类似的软件推荐给你.</h4>
-                <a href="https://lightzhan.xyz/index.php/en/qdown-en/">QDown</a>
-                <a href="https://xdown.org/">XDown</a>
-                <a href="https://motrix.app/">motrix</a>
+                <a target="_blank" href="https://www.qbittorrent.org/">qBittorrent</a>
+                <a target="_blank" href="https://transmissionbt.com/">Transmission</a>
+                <a target="_blank" href="https://www.freedownloadmanager.org/">FDM</a>
+                <a target="_blank" href="https://www.internetdownloadmanager.com//">IDM</a>
+                <a target="_blank" href="https://lightzhan.xyz/index.php/en/qdown-en/">QDown</a>
+                <a target="_blank" href="https://xdown.org/">XDown</a>
+                <a target="_blank" href="https://motrix.app/">motrix</a>
+            </div>
+            <div>
+                <br>
+                (如果你想添加你的软件到这个列表里, 请发送一个邮件, 你不需要将这个网站链接回来, 但如果你这样做了我会非常感谢.)
             </div>
             <div>
                 <h4>Opensource libraries</h4>
-                <a href="https://www.boost.org/">boost</a>
-                <a href="https://www.libtorrent.org/">libtorrent</a>
-                <a href="https://qt.io/">Qt</a>
+                <a target="_blank" href="https://www.boost.org/">boost</a>
+                <a target="_blank" href="https://www.libtorrent.org/">libtorrent</a>
+                <a target="_blank" href="https://qt.io/">Qt</a>
             </div>
         </div>
 
@@ -246,35 +253,17 @@
                 <a href="mailto:123123@123.com" id="contact_email">123123@123.com</a>
             </div>
             <div class="contact_">
-                <a href="https://twitter.com/namelessitguy">Twitter</a>
-                <a href="https://www.reddit.com/user/namelessitguy">Reddit</a>
-                <a href="https://mewe.com/i/namelessitguy">MeWe</a>
-                <a href="https://gab.com/namelessitguy">Gab</a>
-                <a href="https://gettr.com/user/namelessitguy">Gettr</a>
+                <a target="_blank" href="https://twitter.com/namelessitguy">Twitter</a>
+                <a target="_blank" href="https://www.reddit.com/user/namelessitguy">Reddit</a>
+                <a target="_blank" href="https://mewe.com/i/namelessitguy">MeWe</a>
+                <a target="_blank" href="https://gab.com/namelessitguy">Gab</a>
+                <a target="_blank" href="https://gettr.com/user/namelessitguy">Gettr</a>
             </div>
         </div>
     </div>
 </div>
 
-<script>
-    (function()
-    {
-        var decode_email = function()
-        {
-            var arr     = [110,112,100,47,102,100,111,102,103,109,106,98,110,65,122,118,104,117,106,116,116,102,109,102,110,98,111];
-            var element = document.getElementById("contact_email");
-
-            for(var i=0;i<arr.length;++i){
-                arr[i] = String.fromCharCode(arr[i] - 1);
-            }
-            var text = arr.reverse().join('');
-
-            element.setAttribute("href","mailto:" + text);
-            element.innerHTML = text;
-        }
-        decode_email();
-    })();
-</script>
+<script src="../script/base.js"></script>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6226ca040a5d34a0"></script>
 
 </body>

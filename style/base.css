@@ -13,6 +13,13 @@ h1
     padding: 6px;
 }
 
+h1 a
+{
+    color: #393d3f;
+    text-decoration: none;
+    text-underline: none;
+}
+
 a
 {
     color: #2a8dcb;

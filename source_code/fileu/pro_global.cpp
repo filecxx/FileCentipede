@@ -5,7 +5,7 @@ namespace pro
 
 global::global(ext::ui::application& application) :
     app(application),
-    named_mutex(ext::os::cpu::hash(),pro::protocol::Client_Bin),
+    named_mutex(ext::os::cpu::hash(),pro::Client_Bin),
     workspace(application.variables.workspace),
     icons_mime((workspace / "icons").u8string(),"png","mimetypes",(workspace / "icons/mimetypes/24/none.png").u8string()),
     icons_country((workspace / "icons" / "country").u8string(),"svg")
@@ -125,7 +125,7 @@ void global::settings_save()
 {
     if(settings_changed_){
         settings_changed_ = false;
-        ext::cfile::write(workspace / "lib" / Config_File_Name,"wb",settings.stringify());
+        ext::cfile::write(workspace / "lib" / FileU_Config_File_Name,"wb",settings.stringify());
     }
 }
 

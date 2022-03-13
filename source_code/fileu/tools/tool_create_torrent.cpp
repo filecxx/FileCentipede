@@ -20,7 +20,7 @@ create_torrent::create_torrent(pro::global& global) : pro::dialog_sample(global,
 void create_torrent::init_values()
 {
     form_.values({
-        {"creator",protocol::Client_Full_Name},
+        {"creator",pro::Client_Full_Name},
         {"trackers",zzz.configs["trackers"]["new_task_trackers"]}
     });
 }

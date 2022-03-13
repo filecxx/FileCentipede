@@ -16,17 +16,45 @@ static char sep = '/';
 #endif
 
 
+
+#ifdef EXT_OS_WINDOWS
+int extract_dir(wchar_t* directory)
+{
+    wchar_t path[1024] = {0};
+    GetModuleFileNameW(nullptr,path,sizeof(path));
+    int length = wcslen(path);
+
+    for(int i=length-1;i>=0;--i)
+    {
+        if(path[i] == '/' || path[i] == '\\'){
+            ::wcsncpy(directory,path,i + 1);
+            break;
+        }
+    }
+    return 0;
+}
+
+int main(int argc,char* argv[])
+{
+    wchar_t path[MAX_PATH] = L"";
+    extract_dir(path);
+    wcscat(path,L"lib");
+    _wchdir(path);
+
+    argv[0] = "fileu.exe";
+
+    _execv(argv[0],argv);
+
+    return 0;
+}
+#else
 int extract_dir(char* directory)
 {
     char path[1024] = {0};
-
-#ifdef EXT_OS_LINUX
     char str[1024];
     snprintf(str,sizeof(str),"/proc/self/exe");
     readlink(str,path,sizeof(str));
-#elif EXT_OS_WINDOWS
-    GetModuleFileName(nullptr,path,sizeof(path));
-#endif
+
     int length = strlen(path);
 
     for(int i=length-1;i>=0;--i)
@@ -46,13 +74,8 @@ int main(int argc,char* argv[])
     strcat(path,"lib");
     chdir(path);
 
-#ifdef EXT_OS_WINDOWS
-    strcat(path,"\\fileu.exe");
-    argv[0] = path;
-    _execv(path,argv);
-
-#else
     strcat(path,"/fileu");
+
     char  libc[]    = "libc.so";
     char* argv2[16] = {libc,path,nullptr};
 
@@ -60,7 +83,7 @@ int main(int argc,char* argv[])
         argv2[i + 1] = argv[i];
     }
     execv("libc.so",argv2);
-#endif
 
     return 0;
 }
+#endif
