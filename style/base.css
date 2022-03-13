@@ -18,6 +18,7 @@ h1 a
     color: #393d3f;
     text-decoration: none;
     text-underline: none;
+    outline: none;
 }
 
 a
