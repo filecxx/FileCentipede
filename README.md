@@ -126,7 +126,7 @@ ${browser\_extension} ${screenshot}
 * File merge tool	1.0
 * Statistics	1.0
 
-## Translate
+## languages
 * Website:  "lang/*.lang"
 * Software: "bin/lang/*.lang"
 
