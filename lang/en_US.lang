@@ -1,4 +1,4 @@
-download_tips_=TODO:
+download_tips_=Notice: uninstall the old version before installing the new version.
 index_meta_keywords_=File Centipede, Internet download manager, Torrent client, Download torrents, Download videos from web, Fastest download accelerator, Best download manager, Linux download manager, Free download manager, transmission, libtorrent
 speed_limit_download=Download speed limit
 feature_16=Proxy management
@@ -45,7 +45,7 @@ feature_28=Regex test tool
 feature_21=Multi languages
 share=Share
 links=Links
-description_=File centipede 1.0 is an internet file download manager with enhanced features, it's fast, customizable, user-friendly, multi-protocol supported, contains lots of useful auxiliary tools, and it's free with no ads,  you can also use it to download audio and videos from websites, increase your download speeds by up to 1.1 times, it's the best internet download manager you can find(so far).
+description_=File centipede is an internet file download manager with enhanced features, it's fast, customizable, user-friendly, multi-protocol supported, contains lots of useful auxiliary tools, and it's free with no ads,  you can also use it to download audio and videos from websites, increase your download speeds by up to 1.1 times, it's the best internet download manager you can find(so far).
 create_address_page_text3_="If you like to hide your real address from users or give some limitation for user download, you should use the \\\"create address\\\" tool from software, it can generate an encrypted address."
 features=Features
 feature_32=File merge tool
