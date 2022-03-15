@@ -59,9 +59,9 @@
   <Program_Info>
     <AppID>app-0100aa3d7a5e</AppID>
     <Program_Name>FileCentipede</Program_Name>
-    <Program_Version>1.1</Program_Version>
+    <Program_Version>1.2</Program_Version>
     <Program_Release_Month>03</Program_Release_Month>
-    <Program_Release_Day>15</Program_Release_Day>
+    <Program_Release_Day>16</Program_Release_Day>
     <Program_Release_Year>2022</Program_Release_Year>
     <Program_Cost_Dollars>0</Program_Cost_Dollars>
     <Program_Type>Freeware</Program_Type>
@@ -78,9 +78,9 @@
     <Limitations></Limitations>
     <Awards></Awards>
     <File_Info>
-      <File_Size_Bytes>25856624</File_Size_Bytes>
-      <File_Size_K>25856</File_Size_K>
-      <File_Size_MB>25.85</File_Size_MB>
+      <File_Size_Bytes>25502524</File_Size_Bytes>
+      <File_Size_K>25502</File_Size_K>
+      <File_Size_MB>24.3</File_Size_MB>
     </File_Info>
     <Expire_Info>
       <Has_Expire_Info>N</Has_Expire_Info>
@@ -116,8 +116,8 @@
       <Char_Desc_45>File centipede is an download manager</Char_Desc_45>
       <Char_Desc_80>File centipede is an internet file download manager</Char_Desc_80>
       <Char_Desc_250>File centipede is an internet file download manager</Char_Desc_250>
-      <Char_Desc_450>File centipede 1.1 is an internet file download manager with enhanced features, it's fast, customizable, user-friendly, multi-protocol supported, contains lots of useful auxiliary tools, and it's free with no ads, you can also use it to download audio and videos from websites, increase your download speeds by up to 1.1 times, it's the best internet download manager you can find(so far).</Char_Desc_450>
-      <Char_Desc_2000>File centipede 1.1 is an internet file download manager with enhanced features, it's fast, customizable, user-friendly, multi-protocol supported, contains lots of useful auxiliary tools, and it's free with no ads, you can also use it to download audio and videos from websites, increase your download speeds by up to 1.1 times, it's the best internet download manager you can find(so far).
+      <Char_Desc_450>File centipede is an internet file download manager with enhanced features, it's fast, customizable, user-friendly, multi-protocol supported, contains lots of useful auxiliary tools, and it's free with no ads, you can also use it to download audio and videos from websites, increase your download speeds by up to 1.1 times, it's the best internet download manager you can find(so far).</Char_Desc_450>
+      <Char_Desc_2000>File centipede is an internet file download manager with enhanced features, it's fast, customizable, user-friendly, multi-protocol supported, contains lots of useful auxiliary tools, and it's free with no ads, you can also use it to download audio and videos from websites, increase your download speeds by up to 1.1 times, it's the best internet download manager you can find(so far).
 
 Features
 feature	Minimum version
