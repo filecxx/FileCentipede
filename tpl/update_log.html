@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>${software_name_} - ${update_log}</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../style/base.css">
+    <style>
+        li{
+            font-size: 16px;
+            padding: 4px 8px 4px 8px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="central">
+    <div class="nav">
+        <div class="links_">
+            <a class="tool_button home_" href="index.html">${home_page}</a>
+            <a class="tool_button download_" href="index.html#downloads">${download}</a>
+            <a class="tool_button description_" href="index.html#description">${description}</a>
+            <a class="tool_button features_" href="index.html#features">${features}</a>
+            <a class="tool_button screenshot_" href="index.html#screenshot">${screenshot}</a>
+            <a class="tool_button share_" href="index.html#shares">${share}</a>
+            <a class="tool_button documentation_" href="documentation.html">${documentation}</a>
+        </div>
+    </div>
+
+    <div class="header">
+        <div class="top_">
+            <a href="http://filecxx.com" class="logo_"></a>
+            <div class="name_">
+                <h1><a href="http://filecxx.com">${software_name_}</a></h1>
+                <div class="text_"> - Since 2022</div>
+            </div>
+            <div class="languages_">
+                <div class="current_">${language_}</div>
+                <div class="items_">
+                    <a class="item_" href="../en_US/index.html">English</a>
+                    <a class="item_" href="../zh_CN/index.html">简体中文</a>
+                    <a class="item_" href="../ru_RU/index.html">Русский</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="body">
+        <div class="section">
+            <h1>${update_log}</h1>
+        </div>
+        <div class="section">
+            <h3>1.3 (uptime: 2022.03.18)</h3>
+            <h4>New:</h4>
+            <p>Users can change the software name during installation.</p>
+            <p>Switch download manager from browser extension popup panel.</p>
+            <p>Show confirm-dialog when tasks are sent from the web browser.</p>
+            <p>Add new option "Without confirm" to HTTP settings</p>
+            <h4>Fixed:</h4>
+            <p>HTTPS request fails when the port is not 443</p>
+            <p>The translation tool inserted redundant backslashes into the string</p>
+            <p>System service from settings is enabled when installing without system service</p>
+            <p>Add 5 DHT bootstrap nodes</p>
+        </div>
+        <div class="section">
+            <h3>1.2 (uptime: 2022.03.16)</h3>
+            <h4>fixed:</h4>
+            <p>filec.exe fails to start when the desktop environment is non-English (windows only)</p>
+        </div>
+        <div class="section">
+            <h3>1.1 (uptime: 2022.03.15)</h3>
+
+            <h4>new:</h4>
+            <p>save window size</p>
+            <p>auto add trackers to the new task (including downloads)</p>
+
+            <h4>fixed:</h4>
+            <p>few</p>
+
+            (uninstall before installing the new version)
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="copyright_">
+            <span>No copyright © 2022</span>
+            <div class="email_">
+                <b>EMAIL:</b>
+                <a href="mailto:123123@123.com" id="contact_email">123123@123.com</a>
+            </div>
+            <div class="contact_">
+                <a target="_blank" href="https://twitter.com/namelessitguy">Twitter</a>
+                <a target="_blank" href="https://www.reddit.com/user/namelessitguy">Reddit</a>
+                <a target="_blank" href="https://mewe.com/i/namelessitguy">MeWe</a>
+                <a target="_blank" href="https://gab.com/namelessitguy">Gab</a>
+                <a target="_blank" href="https://gettr.com/user/namelessitguy">Gettr</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../script/base.js"></script>
+
+</body>
+</html>
