@@ -179,7 +179,7 @@ void details::init_torrent_web_seeds_actions(ext::ui::model& ui)
         zzz.send(values);
         ext::ui::methods::invoke(node->object,"close");
     });
-    ui.on_action_id("act_edit_web_seed",[this,table,&ui](auto)
+    ui.on_action_id("act_edit_web_seed",[this,table](auto)
     {
         ext::value url = table->current_text("url");
 
@@ -264,13 +264,22 @@ void details::query_detail(bool try_status)
 
 
 ///---------------------------
-void details::update_partials(ext::ui::table* table,ext::value& values)
+void details::clear_mapped(ext::ui::table* table,mapped_items_t& mapped,mapped_items_t& mapped_temp)
 {
+    mapped.clear();
+    mapped_temp.clear();
+    table->clear_rows();
+}
+
+void details::update_partials(ext::ui::table* table,ext::value& values,bool clear)
+{
+    if(clear){
+        clear_mapped(table,mapped_partials_,mapped_partials_temp_);
+    }
     for(auto& item : *values.cast_array())
     {
-        if(!item.is_map()){
-            continue;
-        }
+        Ext_Continue_If(!item.is_map());
+
         auto range = item.text("range");
 
         if(auto iter = mapped_partials_.find(range);iter != mapped_partials_.end()){
@@ -290,13 +299,17 @@ void details::update_partials(ext::ui::table* table,ext::value& values)
     mapped_partials_temp_.clear();
 }
 
-void details::update_segments(ext::ui::table* table,ext::value& values)
+void details::update_segments(ext::ui::table* table,ext::value& values,bool clear)
 {
+    if(clear){
+        mapped_segments_.clear();
+        mapped_segments_temp_.clear();
+        table->clear_rows();
+    }
     for(auto& item : *values.cast_array())
     {
-        if(!item.is_map()){
-            continue;
-        }
+        Ext_Continue_If(!item.is_map());
+
         auto index = item.uint32("index");
 
         if(auto iter = mapped_segments_.find(index);iter != mapped_segments_.end()){
@@ -314,15 +327,18 @@ void details::update_segments(ext::ui::table* table,ext::value& values)
     }
     mapped_segments_ = std::move(mapped_segments_temp_);
     mapped_segments_temp_.clear();
+
 }
 
-void details::update_trackers(ext::ui::table* table,ext::value& values)
+void details::update_trackers(ext::ui::table* table,ext::value& values,bool clear)
 {
+    if(clear){
+        clear_mapped(table,mapped_trackers_,mapped_trackers_temp_);
+    }
     for(auto& item : *values.cast_array())
     {
-        if(!item.is_map()){
-            continue;
-        }
+        Ext_Continue_If(!item.is_map());
+
         auto  url    = item.text("url");
         auto& status = item["status"];
 
@@ -345,13 +361,15 @@ void details::update_trackers(ext::ui::table* table,ext::value& values)
     mapped_trackers_temp_.clear();
 }
 
-void details::update_web_seeds(ext::ui::table* table,ext::value& values)
+void details::update_web_seeds(ext::ui::table* table,ext::value& values,bool clear)
 {
+    if(clear){
+        clear_mapped(table,mapped_web_seeds_,mapped_web_seeds_temp_);
+    }
     for(auto& item : *values.cast_array())
     {
-        if(!item.is_map()){
-            continue;
-        }
+        Ext_Continue_If(!item.is_map());
+
         auto url = item.text("url");
 
         if(auto iter = mapped_web_seeds_.find(url);iter != mapped_web_seeds_.end()){
@@ -371,13 +389,15 @@ void details::update_web_seeds(ext::ui::table* table,ext::value& values)
     mapped_web_seeds_temp_.clear();
 }
 
-void details::update_peers(ext::ui::table* table,ext::value& values)
+void details::update_peers(ext::ui::table* table,ext::value& values,bool clear)
 {
+    if(clear){
+        clear_mapped(table,mapped_peers_,mapped_peers_temp_);
+    }
     for(auto& peer : *values.cast_array())
     {
-        if(!peer.is_map()){
-            continue;
-        }
+        Ext_Continue_If(!peer.is_map());
+
         auto address = peer.text("address");
 
         if(auto iter = mapped_peers_.find(address);iter != mapped_peers_.end()){
@@ -452,7 +472,7 @@ void details::display(uint16_t type,int64_t id,ext::value& values)
     type_    = type;
     id_      = id;
     current_ = &details_[type];
-    update(type,values);
+    update(type,values,true);
 }
 
 void details::hide()
@@ -469,7 +489,7 @@ void details::hide()
     detailbars_->hide();
 }
 
-void details::update(uint16_t type,ext::value& values)
+void details::update(uint16_t type,ext::value& values,bool clear)
 {
     auto subset = values.extract("subset");
 
@@ -490,28 +510,28 @@ void details::update(uint16_t type,ext::value& values)
             }
         }else if(subset == "partials"){
             if(auto& partials = values["partials"];partials.is_array()){
-                update_partials(details_[type].sample->ui.cast_id<ext::ui::table*>("partials"),partials);
+                update_partials(details_[type].sample->ui.cast_id<ext::ui::table*>("partials"),partials,clear);
             }
         }
     }else if(type == protocol::Task_Stream){
         if(subset == "segments"){
             if(auto& segments = values["segments"];segments.is_array()){
-                update_segments(details_[type].sample->ui.cast_id<ext::ui::table*>("segments"),segments);
+                update_segments(details_[type].sample->ui.cast_id<ext::ui::table*>("segments"),segments,clear);
             }
         }
     }else if(type == protocol::Task_Torrent)
     {
         if(subset == "trackers"){
             if(auto& trackers = values["trackers"];trackers.is_array()){
-                update_trackers(details_[type].sample->ui.cast_id<ext::ui::table*>("tracker_list"),trackers);
+                update_trackers(details_[type].sample->ui.cast_id<ext::ui::table*>("tracker_list"),trackers,clear);
             }
         }else if(subset == "web_seeds"){
             if(auto& web_seeds = values["web_seeds"];web_seeds.is_array()){
-                update_web_seeds(details_[type].sample->ui.cast_id<ext::ui::table*>("web_seeds_list"),web_seeds);
+                update_web_seeds(details_[type].sample->ui.cast_id<ext::ui::table*>("web_seeds_list"),web_seeds,clear);
             }
         }else if(subset == "peers"){
             if(auto& peers = values["peers"];peers.is_array()){
-                update_peers(details_[type].sample->ui.cast_id<ext::ui::table*>("peer_list"),peers);
+                update_peers(details_[type].sample->ui.cast_id<ext::ui::table*>("peer_list"),peers,clear);
             }
         }
     }

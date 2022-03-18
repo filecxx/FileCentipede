@@ -253,8 +253,8 @@ void main::query_progress(int64_t id,uint16_t type)
 ///---------------------------
 void main::add_task(uint16_t type,uint16_t state,int64_t id,ext::value& json,const ext::value& files,bool full_status)
 {
-    auto  node  = tasks_->add_file(json,std::to_string(id),json.text_view("file_path"));
-    auto& task  = all_tasks_.emplace(id,task_t{type,state,full_status,node}).first->second;
+    auto  node = tasks_->add_file(json,std::to_string(id),json.text_view("file_path"));
+    auto& task = all_tasks_.emplace(id,task_t{type,state,full_status,node}).first->second;
 
     if(files.is_array() && !files.empty()){
         update_task_files(id,task,files);
@@ -718,7 +718,9 @@ void main::on_timer(ext::steady_time_point_t now)
     if(seconds)
     {
         for(auto& iter : confirming_tasks_){
-            query_status(iter.first,iter.second.first);
+            if(iter.second.first == protocol::Task_Torrent){
+                query_status(iter.first,iter.second.first);
+            }
         }
         for(auto& iter : active_tasks_){
             query_status(iter.first,iter.second.type,!iter.second.extend_status_loaded);
@@ -811,6 +813,38 @@ void main::on_catalogs(ext::value& json)
     }
 }
 
+
+///------------------------------------
+void main::on_http_confirming(ext::value& json,int64_t id,uint16_t type,uint16_t state)
+{
+    auto iter = confirming_tasks_.find(id);
+
+    if(iter != confirming_tasks_.end()){
+        return;
+    }
+    auto pointer = new pro::tasks::confirm_http(zzz,json,[this](auto id,bool confirmed){
+        on_task_confirmed(id,confirmed);
+    });
+    pointer->exec(json,state);
+    confirming_tasks_.emplace(id,std::make_pair(type,pointer));
+}
+
+void main::on_torrent_confirming(ext::value& json,int64_t id,uint16_t type,uint16_t state)
+{
+    auto iter = confirming_tasks_.find(id);
+
+    if(iter != confirming_tasks_.end()){
+        return ((pro::tasks::confirm_torrent*)iter->second.second)->update(json,state);
+    }
+    auto pointer = new pro::tasks::confirm_torrent(zzz,json,[this](auto id,bool confirmed){
+        on_task_confirmed(id,confirmed);
+    });
+    pointer->exec(json,state);
+    confirming_tasks_.emplace(id,std::make_pair(type,pointer));
+}
+
+
+///------------------------------------
 void main::on_task_state(ext::value& json,int64_t id,task_t& task)
 {
     auto item  = tasks_->sibling(task.node->value.item,"state");
@@ -872,33 +906,31 @@ void main::on_task_state(ext::value& json,int64_t id,task_t& task)
     need_recount_text2_ = need_recount;
 }
 
+void main::on_task_confirmed(std::int64_t id,ext::boolean_t confirmed)
+{
+    if(auto iter = confirming_tasks_.find(id);iter != confirming_tasks_.end())
+    {
+        if(confirmed){
+            query_status(id,iter->second.first,true);
+        }
+        confirming_tasks_.erase(iter);
+        active_tasks_.emplace(id,iter->second.first);
+    }
+}
+
 void main::on_task_confirming(ext::value& json,int64_t id,uint16_t type,uint16_t state)
 {
-    auto iter = confirming_tasks_.find(id);
-
     erase_task(id);
 
     switch(type)
     {
+    case protocol::Task_HTTP:
+        on_http_confirming(json,id,type,state);
+        break;
     case protocol::Task_Stream:
         break;
     case protocol::Task_Torrent:
-        if(iter != confirming_tasks_.end()){
-            ((pro::tasks::confirm_torrent*)iter->second.second)->update(json,state);
-        }else{
-            auto pointer = new pro::tasks::confirm_torrent(zzz,json,[this,type](auto id,bool confirmed)
-            {
-                if(auto iter = confirming_tasks_.find(id);iter != confirming_tasks_.end()){
-                    if(confirmed){
-                        query_status(id,protocol::Task_Torrent,true);
-                    }
-                    confirming_tasks_.erase(iter);
-                    active_tasks_.emplace(id,type);
-                }
-            });
-            pointer->exec(json,state);
-            confirming_tasks_.emplace(id,std::make_pair(type,pointer));
-        }
+        on_torrent_confirming(json,id,type,state);
         break;
     default:
         break;
@@ -1084,8 +1116,13 @@ void main::clear()
     all_tasks_.clear();
     tasks_->clear_files();
 
-    for(auto iter : confirming_tasks_){
-        ((pro::tasks::confirm_torrent*)iter.second.second)->destroy();
+    for(auto iter : confirming_tasks_)
+    {
+        if(iter.second.first == protocol::Task_HTTP){
+            ((pro::tasks::confirm_http*)iter.second.second)->destroy();
+        }else if(iter.second.first == protocol::Task_Torrent){
+            ((pro::tasks::confirm_torrent*)iter.second.second)->destroy();
+        }
     }
     confirming_tasks_.clear();
 }

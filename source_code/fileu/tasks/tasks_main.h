@@ -7,6 +7,7 @@
 #include "tasks_edit_task.h"
 #include "tasks_details.h"
 #include "tasks_confirm_torrent.h"
+#include "tasks_confirm_http.h"
 #include "tasks_refresh_address.h"
 
 namespace pro::tasks
@@ -369,9 +370,24 @@ public:
 
 public:
     /*
+     * on http confirming
+    */
+    void on_http_confirming(ext::value& json,int64_t id,uint16_t type,uint16_t state);
+    /*
+     * on torrent confirming
+    */
+    void on_torrent_confirming(ext::value& json,int64_t id,uint16_t type,uint16_t state);
+
+
+public:
+    /*
      * on task state
     */
     void on_task_state(ext::value& json,int64_t id,task_t& task);
+    /*
+     * on task confirmed
+    */
+    void on_task_confirmed(std::int64_t id,ext::boolean_t confirmed);
     /*
      * on task confirming
     */

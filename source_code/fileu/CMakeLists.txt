@@ -14,8 +14,8 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
 if(CMAKE_SYSTEM_NAME MATCHES "Windows")
+    set(QT_PATH I:\\Librarys\\Qt\\5.15.2\\mingw81_64\\lib\\cmake)
     set(CMAKE_PREFIX_PATH ${CMAKE_PREFIX_PATH} ${QT_PATH})
-    set(CMAKE_EXE_LINKER_FLAGS -Wl,-subsystem,windows)
 else()
     set(QT_DIR /opt/Qt5)
     set(QT_PATH ${QT_DIR}/lib/cmake)
@@ -43,8 +43,10 @@ file(GLOB_RECURSE project_files
 )
 
 if(WIN32)
+    #set(CMAKE_EXE_LINKER_FLAGS -Wl,-subsystem,windows)
+    set(no_console WIN32)
     set(require_libs ${require_libs} Iphlpapi)
-	set(project_files ${project_files} "resources_win32.rc")
+	set(project_files ${project_files} "resources_win32.rc" ../common/pro_config.h)
 endif()
 
 #-Wl,-rpath,'$$ORIGIN/'
@@ -54,7 +56,7 @@ set(CMAKE_BUILD_WITH_INSTALL_RPATH TRUE)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/../bin/lib)
 
 #qt5_add_resources(QRC_FILES resources.qrc)
-add_executable(${PROJECT_NAME} ${QRC_FILES} ${project_files})
+add_executable(${PROJECT_NAME} ${no_console} ${QRC_FILES} ${project_files})
 
 if(WIN32)
     set(require_libs ${require_libs} Iphlpapi)

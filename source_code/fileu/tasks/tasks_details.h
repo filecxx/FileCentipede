@@ -10,6 +10,9 @@ class details
 {
     friend class main;
 
+    using mapped_items_t     = std::unordered_map<ext::text,ext::ui::standard_item*>;
+    using mapped_int_items_t = std::unordered_map<std::uint32_t,ext::ui::standard_item*>;
+
     struct details_t
     {
         ext::ui::sample*    sample    = nullptr;
@@ -72,43 +75,43 @@ protected:
     /*
      * mapped partials (range -> item)
     */
-    std::unordered_map<ext::text,ext::ui::standard_item*> mapped_partials_temp_;
+    mapped_items_t mapped_partials_temp_;
     /*
      * mapped segments (range -> item)
     */
-    std::unordered_map<std::uint32_t,ext::ui::standard_item*> mapped_segments_temp_;
+    mapped_int_items_t mapped_segments_temp_;
     /*
      * mapped trackers (url -> item)
     */
-    std::unordered_map<ext::text,ext::ui::standard_item*> mapped_trackers_temp_;
+    mapped_items_t mapped_trackers_temp_;
     /*
      * mapped peers (url -> item)
     */
-    std::unordered_map<ext::text,ext::ui::standard_item*> mapped_peers_temp_;
+    mapped_items_t mapped_peers_temp_;
     /*
      * mapped web seeds (url -> item)
     */
-    std::unordered_map<ext::text,ext::ui::standard_item*> mapped_web_seeds_temp_;
+    mapped_items_t mapped_web_seeds_temp_;
     /*
      * mapped partials (range -> item)
     */
-    std::unordered_map<ext::text,ext::ui::standard_item*> mapped_partials_;
+    mapped_items_t mapped_partials_;
     /*
      * mapped segments (range -> item)
     */
-    std::unordered_map<std::uint32_t,ext::ui::standard_item*> mapped_segments_;
+    mapped_int_items_t mapped_segments_;
     /*
      * mapped trackers (text -> item)
     */
-    std::unordered_map<ext::text,ext::ui::standard_item*> mapped_trackers_;
+    mapped_items_t mapped_trackers_;
     /*
      * mapped web seeds (url -> item)
     */
-    std::unordered_map<ext::text,ext::ui::standard_item*> mapped_web_seeds_;
+    mapped_items_t mapped_web_seeds_;
     /*
      * mapped peers (ip:port -> item)
     */
-    std::unordered_map<ext::text,ext::ui::standard_item*> mapped_peers_;
+    mapped_items_t mapped_peers_;
 
 
 protected:
@@ -147,25 +150,29 @@ protected:
 
 protected:
     /*
+     * clear mapped
+    */
+    void clear_mapped(ext::ui::table* table,mapped_items_t& mapped,mapped_items_t& mapped_temp);
+    /*
      * update partials
     */
-    void update_partials(ext::ui::table* table,ext::value& values);
+    void update_partials(ext::ui::table* table,ext::value& values,bool clear);
     /*
      * update segments
     */
-    void update_segments(ext::ui::table* table,ext::value& values);
+    void update_segments(ext::ui::table* table,ext::value& values,bool clear);
     /*
      * update trackers
     */
-    void update_trackers(ext::ui::table* table,ext::value& values);
+    void update_trackers(ext::ui::table* table,ext::value& values,bool clear);
     /*
      * update web seeds
     */
-    void update_web_seeds(ext::ui::table* table,ext::value& values);
+    void update_web_seeds(ext::ui::table* table,ext::value& values,bool clear);
     /*
      * update peers
     */
-    void update_peers(ext::ui::table* table,ext::value& values);
+    void update_peers(ext::ui::table* table,ext::value& values,bool clear);
 
 
 public:
@@ -201,7 +208,7 @@ public:
     /*
      * update
     */
-    void update(uint16_t type,ext::value& values);
+    void update(uint16_t type,ext::value& values,bool clear = false);
 
 
 };

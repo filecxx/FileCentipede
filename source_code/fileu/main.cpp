@@ -75,6 +75,7 @@ void try_command_line(pro::main_window& window,ext::text_view text,int argc,char
     }else{
         std::exit(0);
     }
+
 }
 
 /*

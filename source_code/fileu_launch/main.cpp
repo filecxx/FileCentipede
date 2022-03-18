@@ -37,13 +37,13 @@ int extract_dir(wchar_t* directory)
 int main(int argc,char* argv[])
 {
     wchar_t path[MAX_PATH] = L"";
+    char    name[] = "fileu.exe";
+
     extract_dir(path);
     wcscat(path,L"lib");
     _wchdir(path);
-
-    argv[0] = "fileu.exe";
-
-    _execv(argv[0],argv);
+    argv[0] = name;
+    _execv(name,argv);
 
     return 0;
 }

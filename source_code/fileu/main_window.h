@@ -77,6 +77,10 @@ protected:
     */
     ext::boolean_t clipboard_initialized_ = false;
     /*
+     * window size changed
+    */
+    ext::boolean_t window_size_changed_ = false;
+    /*
      * timer
     */
     std::int64_t timer_ = 0;
@@ -153,6 +157,14 @@ protected:
      * init views
     */
     void init_views();
+    /*
+     * init sizes
+    */
+    void init_sizes(ext::ui::object& object);
+    /*
+     * init events
+    */
+    void init_events();
     /*
      * init actions
     */

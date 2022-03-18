@@ -33,6 +33,10 @@ protected:
      * form
     */
     ext::ui::form form_;
+    /*
+     * values
+    */
+    ext::value values_;
     
 
 protected:
@@ -59,9 +63,13 @@ protected:
 
 protected:
     /*
+     * save lang file
+    */
+    void save_lang_file(ext::ui::language& lang,const ext::fs::path& path);
+    /*
      * create desktop shortcuts
     */
-    void create_desktop_shortcuts();
+    void create_desktop_shortcuts(const ext::text& name);
     /*
      * start install
     */

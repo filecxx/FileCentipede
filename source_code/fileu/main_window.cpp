@@ -84,11 +84,48 @@ void main_window::init_views()
     }
 }
 
+void main_window::init_sizes(ext::ui::object& object)
+{
+    int32_t width  = 0;
+    int32_t height = 0;
+
+    if(zzz.settings.get("save_window_size") != true){
+        return object.show("center");
+    }
+    if(zzz.settings.get("maximize") == true){
+        window_->move_to_center();
+        window_->showMaximized();
+    }else{
+        if(auto val = zzz.settings.get("width");val.is_number()){
+            width = val.int32();
+        }
+        if(auto val = zzz.settings.get("height");val.is_number()){
+            height = val.int32();
+        }
+        if(width > 200 && height > 100){
+            window_->resize(width,height);
+        }
+        object.show("center");
+    }
+}
+
+void main_window::init_events()
+{
+    window_->on_drop([this](const auto& paths)
+    {
+        for(auto& path : paths){
+            add_task(path);
+        }
+    });
+    window_->on_resize([this](auto){
+        window_size_changed_ = true;
+    });
+}
+
 void main_window::init_tabs()
 {
     ext::ui::post([this]{
         tasks_.init();
-
     });
 }
 
@@ -199,6 +236,8 @@ void main_window::init_tray()
         tray->bind(window_);
         tray->show();
         tray_initialized_ = true;
+        zzz.app.quit_on_last_window_closed(false);
+        window_->ignore_on_close(true);
     }
 }
 
@@ -489,6 +528,17 @@ void main_window::on_timer_200ms(ext::steady_time_t now)
 {
     for(auto& iter : interval_handlers_){
         ext::ui::methods::call(iter.second.cast<ext::ui::node_t*>());
+    }
+    if(window_size_changed_ && zzz.settings.get("save_window_size") == true)
+    {
+        if(window_->isMaximized()){
+            zzz.setting("maximize",true);
+        }else{
+            zzz.setting("maximize",false);
+            zzz.setting("width",window_->width());
+            zzz.setting("height",window_->height());
+        }
+        window_size_changed_ = false;
     }
     timepoint_interval_ = now;
     zzz.settings_save();
@@ -801,15 +851,10 @@ void main_window::create()
     auto object = ui.id("main")->object;
     window_ = object.cast<ext::ui::window*>();
     window_->central_layout_margin(1);
-    window_->on_drop([this](const auto& paths)
-    {
-        for(auto& path : paths){
-            add_task(path);
-        }
-    });
-    init_views();
 
-    object.show("center");
+    init_views();
+    init_sizes(object);
+    init_events();
 
     zzz.io_worker()->set_timeout([this]{
         init_tabs();

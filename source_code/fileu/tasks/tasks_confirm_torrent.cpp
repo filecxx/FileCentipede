@@ -5,7 +5,7 @@ namespace pro::tasks
 
 confirm_torrent::confirm_torrent(pro::global& global,ext::value& json,ext::func<void(int64_t,bool)>&& callback) :
     pro::dialog_sample(global,"ui/tasks/confirm_torrent.sml"),
-    callback_(callback)
+    callback_(std::move(callback))
 {
     ui.cast(loader_,"#loading");
     ui.cast(filter_,"#filter");
@@ -138,9 +138,9 @@ void confirm_torrent::exec(ext::value& json,uint16_t state)
         }
     });
     ui.on_click("#without_confirm",[this](auto val){
-        auto& config = zzz.configs["torrent"];
+        auto& config = zzz.configs["torrent_task"];
         config["without_confirm"] = val;
-        zzz.send({{"@",protocol::Message_Config_Update},{"name","torrent"},{"config",config}});
+        zzz.send({{"@",protocol::Message_Config_Update},{"name","torrent_task"},{"config",config}});
     });
     ui.on_click("#ok",[this](auto){
         on_ok();

@@ -8,7 +8,7 @@ namespace pro::settings
 
 class main : public pro::dialog_sample
 {
-    constexpr static std::string_view UI_Config_Fields[] = {"lang","fonts","font_size","tray_icon","autostart","watch_clipboard"};
+    constexpr static std::string_view UI_Config_Fields[] = {"lang","fonts","font_size","tray_icon","autostart","watch_clipboard","save_window_size"};
 
 
 public:

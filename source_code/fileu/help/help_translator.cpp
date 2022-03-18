@@ -213,19 +213,11 @@ void translator::save_lang(const ext::fs::path& path)
     {
         auto key  = boost::trim_copy(data_list_->text(index.row(),0));
         auto text = data_list_->text(index.row(),1);
-        auto raw  = true;
 
-        for(auto c : text)
-        {
-            if(c == '\r' || c == '\n' || c == '"'){
-                raw = false;
-                break;
-            }
-        }
         if(key.empty()){
             return false;
         }
-        if(raw && !text.empty()){
+        if(!text.empty() && ext::ui::language::is_raw(text)){
             mapped[key] = text;
         }else{
             mapped[key] = ext::value_view(text).stringify();
@@ -249,9 +241,7 @@ void translator::save_json(const ext::fs::path& path)
         auto text = data_list_->text(index.row(),1);
 
         if(!key.empty()){
-            values[key] = {
-                {"message",text}
-            };
+            values[key] = {{"message",text}};
         }
         return false;
     });

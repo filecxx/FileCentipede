@@ -52,45 +52,68 @@ void install::init_actions()
 
 
 ///--------------------------
-void install::create_desktop_shortcuts()
+void install::save_lang_file(ext::ui::language& lang,const ext::fs::path& path)
 {
-    ext::text display = ext::ui::lang("software_name_");
+    ext::text buffer;
 
+    lang.each([&](auto name,auto value)
+    {
+        buffer += ext::text(name) + "=";
+
+        if(!value.empty() && ext::ui::language::is_raw(value)){
+            buffer += ext::text(value);
+        }else{
+            buffer += ext::value_view(value).stringify();
+        }
+        buffer += "\r\n";
+        return false;
+    });
+    if(!buffer.empty()){
+        ext::cfile::write(path,"wb",buffer);
+    }
+}
+
+void install::create_desktop_shortcuts(const ext::text& name)
+{
     doom::custom::desktop desktop;
 
     desktop.categories("Application;Network;GNOME;Qt;");
-    desktop.full_name(display);
+    desktop.full_name(name);
 #ifndef EXT_OS_WINDOWS
     desktop.icon(install_path_ / "icons" / "icon.png");
 #endif
-    desktop.create_shortcut(display,(install_path_ / "lib").executable(pro::Client_Bin));
+    desktop.create_shortcut(name,(install_path_ / "lib").executable(pro::Client_Bin));
 }
 
 void install::start_install()
 {
     ext::random random;
     install_path_ = ext::fs::path(path_->value());
+    values_       = form_.values();
 
     if(!ext::fs::exists(install_path_,error_) && !ext::fs::create_directories(install_path_,error_)){
         goto readonly;
     }
-    if(!ext::fs::test_write_perm(install_path_,random))
-    {
+    if(!ext::fs::test_write_perm(install_path_,random)){
         readonly:
-        return ext::ui::post([this]{
-            ext::ui::alert("error","error",ext::text(ext::ui::lang("write_file_error")) + " - " + ext::ui::lang("readonly")).exec();
-        });
+        ext::ui::alert("error","error",ext::text(ext::ui::lang("write_file_error")) + " - " + ext::ui::lang("readonly")).exec();
+        return;
+    }
+    if(!ext::fs::filename_valid(values_["software_name"].text_view())){
+        ext::ui::alert("error","error",ext::text(ext::ui::lang("software_name")) + " " + ext::ui::lang("error")).exec();
+        return;
     }
     ui("#btn_install")->object.enable(false);
 
     thread_ = std::jthread([this]
     {
-        auto args     = std::vector<ext::text>{"install","path",install_path_.u8string()};
-        auto settings = form_.values();
+        auto args = std::vector<ext::text>{"install","path",install_path_.u8string()};
 
-        if(settings["system_service"] == true){
+        if(values_["system_service"] == true){
             args.emplace_back("system_service");
         }
+        zzz.shutdown();
+
         bool elevatable = false;
         int  ret        = doom::privilege::launch(zzz.workspace.executable(pro::Service_Bin),args,elevatable,true);
 
@@ -101,6 +124,7 @@ void install::start_install()
             }else{
                 install_success();
             }
+            std::exit(0);
         });
     });
 }
@@ -110,7 +134,7 @@ void install::install_failed(int ret,bool elevatable)
     if(ret == 99){
         install_write_conf_failed();
     }else{
-        ext::text error_str = ext::ui::lang(elevatable ? "install_failed" : "install_failed_error1_");
+        ext::text error_str = ext::ui::lang((!elevatable || ret == 0) ? "install_failed_error1_" : "install_failed");
         ext::ui::alert("error","error",error_str + " code: " + std::to_string(ret)).exec();
     }
     ui("#btn_install")->object.enable(true);
@@ -123,19 +147,35 @@ void install::install_write_conf_failed()
 
 void install::install_success()
 {
-    auto values  = form_.values();
+    auto lang    = language_->value();
     auto setting = ext::value{
         {"installed",1},
         {"watch_clipboard",true},
-        {"lang",language_->value()},
-        {"tray_icon",values["tray_icon"]},
-        {"autostart",values["autostart"]}
+        {"lang",lang},
+        {"tray_icon",values_["tray_icon"]},
+        {"autostart",values_["autostart"]}
     };
-    if(values["desktop_shortcuts"] == true){
-        create_desktop_shortcuts();
+    if(!lang.is_string()){
+        lang = ext::ui::language::locale_name();
     }
-    zzz.shutdown();
+    ext::ui::language language;
+    ext::text         software_name = ext::ui::lang("software_name_");
+    ext::fs::path     lang_path     = install_path_ / "lang" / (lang.text() + ".lang");
 
+    if(language.load_file(lang_path))
+    {
+        auto name     = language("software_name_");
+        auto name_new = values_["software_name"];
+
+        if(name_new != name){
+            software_name = name_new.string();
+            language("software_name_",software_name);
+            save_lang_file(language,lang_path);
+        }
+    }
+    if(values_["desktop_shortcuts"] == true){
+        create_desktop_shortcuts(software_name);
+    }
     if(ext::cfile::write((install_path_ / "lib" / FileU_Config_File_Name).u8string().c_str(),"wb",setting.stringify()).value() != 0){
         install_write_conf_failed();
     }else{

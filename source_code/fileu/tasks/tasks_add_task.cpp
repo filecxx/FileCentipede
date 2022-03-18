@@ -92,6 +92,9 @@ void add_task::download(bool immediately)
         if(!immediately){
             iter.second.values["download_later"] = true;
         }
+        if(iter.second.type != protocol::Task_Torrent){
+            iter.second.values["without_confirm"] = true;
+        }
         zzz.send(iter.second.values.stringify());
     }
     dialog_->close();
