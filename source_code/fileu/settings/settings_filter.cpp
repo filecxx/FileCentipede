@@ -3,7 +3,7 @@
 namespace pro::settings
 {
 
-filter::filter(pro::global& global) : pro::dialog_sample(global,"ui/settings/filter.sml")
+filter::filter(pro::global& global) : pro::dialog_sample<>(global,"ui/settings/filter.sml")
 {
     form_                 = ext::ui::form(ui("#main"));
     torrent_files_filter_ = ui.cast_id<ext::ui::table*>("torrent_files_filter");

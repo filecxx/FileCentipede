@@ -6,7 +6,7 @@
 namespace pro::tasks
 {
 
-class add_task : public pro::dialog_sample
+class add_task : public pro::dialog_sample<>
 {
     struct config_t
     {

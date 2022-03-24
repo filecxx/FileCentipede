@@ -4,6 +4,7 @@
 #include "pro_global.h"
 #include "pro_sample.h"
 #include "tasks/tasks_main.h"
+#include "tasks/tasks_confirm_links.h"
 #include "local_files/local_files_main.h"
 #include "search_engine/search_engine_main.h"
 #include "view/view_statistics.h"
@@ -230,6 +231,10 @@ protected:
 
 
 protected:
+    /*
+     * on version
+    */
+    void on_version(ext::value& json);
     /*
      * on stop
     */

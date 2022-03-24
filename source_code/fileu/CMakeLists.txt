@@ -59,7 +59,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/../bin/lib)
 add_executable(${PROJECT_NAME} ${no_console} ${QRC_FILES} ${project_files})
 
 if(WIN32)
-    set(require_libs ${require_libs} Iphlpapi)
+    set(require_libs ${require_libs} winmm wtsapi32 userenv iphlpapi)
 endif()
 
 target_precompile_headers(${PROJECT_NAME} PUBLIC pro_headers.h)

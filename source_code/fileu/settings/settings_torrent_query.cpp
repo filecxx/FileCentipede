@@ -3,7 +3,7 @@
 namespace pro::settings
 {
 
-torrent_query::torrent_query(pro::global& global) : pro::dialog_sample(global,"ui/settings/torrent_query.sml")
+torrent_query::torrent_query(pro::global& global) : pro::dialog_sample<>(global,"ui/settings/torrent_query.sml")
 {
     dialog_->on_close([this](auto){
 

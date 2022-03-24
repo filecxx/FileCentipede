@@ -3,7 +3,7 @@
 namespace pro::tasks
 {
 
-refresh_address::refresh_address(pro::global& global) : pro::dialog_sample(global,"ui/tasks/refresh_address.sml")
+refresh_address::refresh_address(pro::global& global) : pro::dialog_sample<>(global,"ui/tasks/refresh_address.sml")
 {
     dialog_->on_close([this](auto){
         delete this;
@@ -40,9 +40,7 @@ void refresh_address::exec(int64_t id,uint16_t type,ext::text_view page_url,ext:
     form.values({{"address",addr},{"page_url",page_url},{"resid",ext::uri::decode(resid)}});
 
     ui.cast<ext::ui::checkbox*>("#no_refresh_address_dialog")->on_toggle([this](auto val){
-        auto& config = zzz.configs["general"];
-        config["no_refresh_address_dialog"] = val;
-        zzz.send({{"@",protocol::Message_Config_Update},{"name","general"},{"config",config}});
+        zzz.setting("no_refresh_address_dialog",val);
     });
     dialog_->show_active();
 }

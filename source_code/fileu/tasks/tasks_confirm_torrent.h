@@ -6,7 +6,7 @@
 namespace pro::tasks
 {
 
-class confirm_torrent : public pro::dialog_sample
+class confirm_torrent : public pro::dialog_sample<>
 {
     struct task_directory_t
     {
@@ -78,7 +78,7 @@ protected:
     /*
      * on filter
     */
-    void on_filter(const ext::text& name);
+    void on_filter();
 
 
 protected:

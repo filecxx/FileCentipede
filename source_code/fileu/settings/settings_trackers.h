@@ -6,7 +6,7 @@
 namespace pro::settings
 {
 
-class trackers : public pro::dialog_sample
+class trackers : public pro::dialog_sample<>
 {
 public:
     trackers(pro::global& global);

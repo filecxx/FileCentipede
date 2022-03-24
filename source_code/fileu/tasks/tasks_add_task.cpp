@@ -3,7 +3,7 @@
 namespace pro::tasks
 {
 
-add_task::add_task(pro::global& global,ext::boolean_t is_stream,std::string_view ui_path) : pro::dialog_sample(global,ui_path),is_stream_(is_stream)
+add_task::add_task(pro::global& global,ext::boolean_t is_stream,std::string_view ui_path) : pro::dialog_sample<>(global,ui_path),is_stream_(is_stream)
 {
     dialog_->on_close([this](auto){
         ext::invoke(on_delete_);
@@ -148,7 +148,6 @@ void add_task::init_widget(const ext::text& name,std::uint16_t config_type,ext::
 void add_task::init_form(const ext::text& name,uint16_t type)
 {
     auto layout           = ui.query('#' + name);
-    auto paths_combobox   = ui.cast_id<ext::ui::combobox*>(name + "_save_path");
     auto catalog_combobox = ui.cast_id<ext::ui::combobox*>(name + "_catalog");
     auto proxy_combobox   = ui.cast_id<ext::ui::combobox*>(name + "_proxy");
 
@@ -170,12 +169,6 @@ void add_task::init_form(const ext::text& name,uint16_t type)
             forms_[type].values(config->values);
         }
     });
-    if(zzz.paths.is_map())
-    {
-        for(auto& iter : *zzz.paths.cast_map()){
-            paths_combobox->append(iter.second.text("path"));
-        }
-    }
     if(zzz.proxies.is_map() && proxy_combobox)
     {
         auto current = zzz.configs["network"].text("proxy");

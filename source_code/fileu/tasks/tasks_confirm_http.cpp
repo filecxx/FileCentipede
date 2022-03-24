@@ -4,12 +4,11 @@ namespace pro::tasks
 {
 
 confirm_http::confirm_http(pro::global& global,ext::value& json,ext::func<void(int64_t,bool)>&& callback) :
-    pro::dialog_sample(global,"ui/tasks/confirm_http.sml"),
+    pro::dialog_sample<>(global,"ui/tasks/confirm_http.sml"),
     callback_(std::move(callback))
 {
     form_ = ext::ui::form(ui.root());
     ui.cast(files_,"#files");
-    ui.cast(paths_combobox_,"#save_path");
     ui.cast(proxy_combobox_,"#proxy");
     files_->icons(&zzz.icons_mime);
 
@@ -26,10 +25,10 @@ void confirm_http::init_ui()
         zzz.send({{"@",protocol::Message_Config_Update},{"name","http_task"},{"config",config}});
     });
     ui.on_click("#download_later",[this](auto){
-        on_ok(true);
+        on_download(true);
     });
     ui.on_click("#download_now",[this](auto){
-        on_ok(false);
+        on_download(false);
     });
     dialog_->on_close([this](auto)
     {
@@ -58,13 +57,12 @@ void confirm_http::init_ui()
         }
     });
     load_catalogs();
-    load_paths();
     load_proxies();
 }
 
 
 ///-------------------------------
-void confirm_http::on_ok(bool later)
+void confirm_http::on_download(bool later)
 {
     auto values = ext::value({{"@",protocol::Message_Task_Confirm},{"type",protocol::Task_HTTP},{"id",id_}});
     values.merge(form_.values());
@@ -104,16 +102,6 @@ void confirm_http::load_catalogs()
     });
 }
 
-void confirm_http::load_paths()
-{
-    if(zzz.paths.is_map())
-    {
-        for(auto& iter : *zzz.paths.cast_map()){
-            paths_combobox_->append(iter.second.text("path"));
-        }
-    }
-}
-
 void confirm_http::load_proxies()
 {
     if(zzz.proxies.is_map() && proxy_combobox_)
@@ -140,7 +128,7 @@ void confirm_http::update(ext::value& json)
     if(file_size <= 0){
         json["file_size"] = ext::ui::lang("unknown");
     }
-    auto node      = files_->update_file(json,json.text_view("file_name"),json.text_view("file_path"),true);
+    auto node = files_->update_file(json,json.text_view("file_name"),json.text_view("file_path"),true);
     files_->type(ext::fs::file_type::regular,node);
 
     form_.values(json);

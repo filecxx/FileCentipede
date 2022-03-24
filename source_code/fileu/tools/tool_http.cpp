@@ -3,7 +3,7 @@
 namespace pro::tools
 {
 
-http::http(pro::global& global) : pro::dialog_sample(global,"ui/tools/http.sml")
+http::http(pro::global& global) : pro::dialog_sample<>(global,"ui/tools/http.sml")
 {
     form_response_ = ext::ui::form(ui("#response_headers_widget"));
     empty_values_  = form_response_.values();

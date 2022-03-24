@@ -3,7 +3,7 @@
 namespace pro::settings
 {
 
-proxies::proxies(pro::global& global) : pro::dialog_sample(global,"ui/settings/proxy.sml")
+proxies::proxies(pro::global& global) : pro::dialog_sample<>(global,"ui/settings/proxy.sml")
 {
     table_ = ui.cast_id<ext::ui::table*>("proxies");
     table_->on_context_menu([this]{

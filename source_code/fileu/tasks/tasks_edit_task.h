@@ -6,7 +6,7 @@
 namespace pro::tasks
 {
 
-class edit_task : public pro::dialog_sample
+class edit_task : public pro::dialog_sample<>
 {
 public:
     edit_task(pro::global& global);

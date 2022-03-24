@@ -6,7 +6,7 @@
 namespace pro::tools
 {
 
-class create_address : public pro::dialog_sample
+class create_address : public pro::dialog_sample<>
 {
 public:
     create_address(pro::global& global);

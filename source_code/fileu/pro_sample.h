@@ -24,6 +24,7 @@ protected:
 
 };
 
+template<typename dialog_type=ext::ui::dialog>
 class dialog_sample : public ext::ui::sample
 {
 public:
@@ -31,7 +32,7 @@ public:
         zzz(global)
     {
         if(!dialog_id.empty()){
-            dialog_ = ui.cast_id<ext::ui::dialog*>("main");
+            dialog_ = ui.cast_id<dialog_type*>("main");
         }
     }
 
@@ -44,14 +45,14 @@ protected:
     /*
      * dialog
     */
-    ext::ui::dialog* dialog_ = nullptr;
+    dialog_type* dialog_ = nullptr;
 
 
 public:
     /*
      * dialog
     */
-    ext::ui::dialog* dialog()
+    dialog_type* dialog()
     {
         return dialog_;
     }

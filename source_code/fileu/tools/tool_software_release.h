@@ -7,7 +7,7 @@
 namespace pro::tools
 {
 
-class software_release : public pro::dialog_sample
+class software_release : public pro::dialog_sample<>
 {
     using paths_type = std::vector<ext::fs::path>;
 

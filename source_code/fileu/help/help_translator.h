@@ -6,7 +6,7 @@
 namespace pro::help
 {
 
-class translator : public pro::dialog_sample
+class translator : public pro::dialog_sample<>
 {
     constexpr static auto Auto_Grow_Row = 2;
 

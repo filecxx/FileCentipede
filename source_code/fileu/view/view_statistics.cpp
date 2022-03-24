@@ -3,7 +3,7 @@
 namespace pro::view
 {
 
-statistics::statistics(pro::global& global) : pro::dialog_sample(global,"ui/view/statistics.sml")
+statistics::statistics(pro::global& global) : pro::dialog_sample<>(global,"ui/view/statistics.sml")
 {
     form_ = ext::ui::form(ui("#main"));
     dialog_->on_close([this](auto){

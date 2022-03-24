@@ -9,6 +9,7 @@
 #include "tasks_confirm_torrent.h"
 #include "tasks_confirm_http.h"
 #include "tasks_refresh_address.h"
+#include "tasks_download_completed.h"
 
 namespace pro::tasks
 {
@@ -340,6 +341,10 @@ public:
      * show detail
     */
     void show_detail(int64_t id);
+    /*
+     * show completed
+    */
+    void show_completed_dialog(int64_t id,ext::value& values,const ext::text& error = {});
 
 
 public:
@@ -381,9 +386,17 @@ public:
 
 public:
     /*
+     * on task error
+    */
+    void on_task_error(int64_t id,task_t& task,uint16_t old_state,const ext::text& error);
+    /*
+     * on task completed
+    */
+    void on_task_completed(int64_t id,task_t& task,uint16_t old_state);
+    /*
      * on task state
     */
-    void on_task_state(ext::value& json,int64_t id,task_t& task);
+    void on_task_state(ext::value& json,int64_t id,task_t& task,uint16_t old_state);
     /*
      * on task confirmed
     */

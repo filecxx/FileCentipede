@@ -6,7 +6,7 @@
 namespace pro::help
 {
 
-class uninstall : public pro::dialog_sample
+class uninstall : public pro::dialog_sample<>
 {
 public:
     uninstall(pro::global& global);

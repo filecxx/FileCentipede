@@ -6,7 +6,7 @@
 namespace pro::tools
 {
 
-class file_merge : public pro::dialog_sample
+class file_merge : public pro::dialog_sample<>
 {
 public:
     file_merge(pro::global& global);

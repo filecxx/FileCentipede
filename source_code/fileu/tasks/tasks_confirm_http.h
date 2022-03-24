@@ -6,7 +6,7 @@
 namespace pro::tasks
 {
 
-class confirm_http : public pro::dialog_sample
+class confirm_http : public pro::dialog_sample<>
 {
 public:
     confirm_http(pro::global& global,ext::value& json,ext::func<void(int64_t,bool)>&& callback);
@@ -60,9 +60,9 @@ protected:
 
 protected:
     /*
-     * on download now
+     * on download
     */
-    void on_ok(bool later);
+    void on_download(bool later);
 
 
 protected:
@@ -70,10 +70,6 @@ protected:
      * load catalogs
     */
     void load_catalogs();
-    /*
-     * load paths
-    */
-    void load_paths();
     /*
      * load proxies
     */

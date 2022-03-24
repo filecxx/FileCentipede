@@ -3,7 +3,7 @@
 namespace pro::view
 {
 
-desktop_shortcuts::desktop_shortcuts(pro::global& global) : pro::dialog_sample(global,"ui/view/desktop_shortcuts.sml")
+desktop_shortcuts::desktop_shortcuts(pro::global& global) : pro::dialog_sample<>(global,"ui/view/desktop_shortcuts.sml")
 {
     dialog_->on_close([this](auto){
         delete this;
@@ -29,7 +29,6 @@ void desktop_shortcuts::init_events()
         });
         return false;
     });
-
 }
 
 

@@ -3,7 +3,7 @@
 namespace pro::help
 {
 
-translate_files::translate_files(pro::global& global) : pro::dialog_sample(global,"ui/help/translate_files.sml")
+translate_files::translate_files(pro::global& global) : pro::dialog_sample<>(global,"ui/help/translate_files.sml")
 {
     dialog_->on_close([this](auto){
         delete this;

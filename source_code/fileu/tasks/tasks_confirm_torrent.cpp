@@ -4,7 +4,7 @@ namespace pro::tasks
 {
 
 confirm_torrent::confirm_torrent(pro::global& global,ext::value& json,ext::func<void(int64_t,bool)>&& callback) :
-    pro::dialog_sample(global,"ui/tasks/confirm_torrent.sml"),
+    pro::dialog_sample<>(global,"ui/tasks/confirm_torrent.sml"),
     callback_(std::move(callback))
 {
     ui.cast(loader_,"#loading");
@@ -54,7 +54,7 @@ void confirm_torrent::on_checked(ext::ui::filesystem::node_type* node)
     });
 }
 
-void confirm_torrent::on_filter(const ext::text& name)
+void confirm_torrent::on_filter()
 {
     std::vector<std::regex> rules;
     ext::parser::split_lines(filter_->value().text_view(),[&](auto text,auto index){
@@ -126,7 +126,7 @@ void confirm_torrent::exec(ext::value& json,uint16_t state)
     form_information_ = ext::ui::form(ui("#information"));
 
     filter_->on_change([this](auto str){
-        on_filter(ext::ui::text(str));
+        on_filter();
     });
     files_->on_checked([this](auto node){
         on_checked(node);
@@ -146,6 +146,7 @@ void confirm_torrent::exec(ext::value& json,uint16_t state)
         on_ok();
     });
     dialog_->show_active();
+
     load_catalogs();
     update(json,state);
 }

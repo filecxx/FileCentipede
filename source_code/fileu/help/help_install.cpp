@@ -3,7 +3,7 @@
 namespace pro::help
 {
 
-install::install(pro::global& global) : pro::dialog_sample(global,"ui/help/install.sml")
+install::install(pro::global& global) : pro::dialog_sample<>(global,"ui/help/install.sml")
 {
     ui.cast(licence_,"#licence");
     ui.cast(path_,"#path");
@@ -21,6 +21,32 @@ install::install(pro::global& global) : pro::dialog_sample(global,"ui/help/insta
 install::~install()
 {
     //ext::debug <<= "~install";
+}
+
+
+///--------------------------
+ext::value install::load_settings(const ext::fs::path& path,ext::text_view lang)
+{
+    std::error_code error;
+    ext::value      setting({
+        {"installed",1},
+        {"watch_clipboard",true},
+        {"lang",lang},
+        {"sound_effects",true}
+    });
+    if(ext::fs::exists(path,error))
+    {
+        ext::text  conf;
+        ext::value json;
+
+        if(ext::cfile::read(path,conf).value() == 0 && (json = ext::json::parse(conf)).is_map()){
+            setting.merge(std::move(json));
+        }
+    }
+    setting["tray_icon"] = values_["tray_icon"];
+    setting["autostart"] = values_["autostart"];
+
+    return setting;
 }
 
 
@@ -120,7 +146,7 @@ void install::start_install()
         ext::ui::post([this,ret,elevatable]() mutable
         {
             if(WEXITSTATUS(ret) != 200){
-                install_failed(ret,elevatable);
+                install_failed(WEXITSTATUS(ret),elevatable);
             }else{
                 install_success();
             }
@@ -147,20 +173,17 @@ void install::install_write_conf_failed()
 
 void install::install_success()
 {
-    auto lang    = language_->value();
-    auto setting = ext::value{
-        {"installed",1},
-        {"watch_clipboard",true},
-        {"lang",lang},
-        {"tray_icon",values_["tray_icon"]},
-        {"autostart",values_["autostart"]}
-    };
+    auto lang = language_->value();
+
     if(!lang.is_string()){
         lang = ext::ui::language::locale_name();
     }
     ext::ui::language language;
     ext::text         software_name = ext::ui::lang("software_name_");
     ext::fs::path     lang_path     = install_path_ / "lang" / (lang.text() + ".lang");
+    ext::fs::path     config_path   = install_path_ / "lib" / FileU_Config_File_Name;
+
+    auto setting = load_settings(config_path,lang.text_view());
 
     if(language.load_file(lang_path))
     {
@@ -176,7 +199,7 @@ void install::install_success()
     if(values_["desktop_shortcuts"] == true){
         create_desktop_shortcuts(software_name);
     }
-    if(ext::cfile::write((install_path_ / "lib" / FileU_Config_File_Name).u8string().c_str(),"wb",setting.stringify()).value() != 0){
+    if(ext::cfile::write(config_path,"wb",setting.stringify()).value() != 0){
         install_write_conf_failed();
     }else{
         ext::ui::alert("info","success",ext::ui::lang("install_success")).exec();

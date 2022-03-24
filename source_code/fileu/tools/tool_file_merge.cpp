@@ -3,7 +3,7 @@
 namespace pro::tools
 {
 
-file_merge::file_merge(pro::global& global) : pro::dialog_sample(global,"ui/tools/file_merge.sml")
+file_merge::file_merge(pro::global& global) : pro::dialog_sample<>(global,"ui/tools/file_merge.sml")
 {
     ui.cast(normal_files_,"#normal_files");
     ui.cast(statusbar_,"#status");

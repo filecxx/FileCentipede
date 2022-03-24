@@ -6,7 +6,7 @@
 namespace pro::help
 {
 
-class install : public pro::dialog_sample
+class install : public pro::dialog_sample<>
 {
 public:
     install(pro::global& global);
@@ -48,6 +48,13 @@ protected:
      * install path
     */
     ext::fs::path install_path_;
+
+
+protected:
+    /*
+     * load settings
+    */
+    ext::value load_settings(const ext::fs::path& path,ext::text_view lang);
 
 
 protected:

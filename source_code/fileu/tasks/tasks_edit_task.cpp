@@ -3,7 +3,7 @@
 namespace pro::tasks
 {
 
-edit_task::edit_task(pro::global& global) : pro::dialog_sample(global,"ui/tasks/edit_task.sml")
+edit_task::edit_task(pro::global& global) : pro::dialog_sample<>(global,"ui/tasks/edit_task.sml")
 {
     dialog_->on_close([this](auto){
         delete this;

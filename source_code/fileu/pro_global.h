@@ -44,6 +44,10 @@ public:
     */
     ext::ui::icons icons_country;
     /*
+     * sound
+    */
+    ext::audios::simple sound;
+    /*
      * ipc
     */
     ext::ipcx::service ipc;

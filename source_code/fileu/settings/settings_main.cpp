@@ -3,14 +3,12 @@
 namespace pro::settings
 {
 
-main::main(pro::global& global) : pro::dialog_sample(global,"ui/settings/main.sml")
+main::main(pro::global& global) : pro::dialog_sample<>(global,"ui/settings/main.sml")
 {
-    dialog_->on_close([this](auto){
-
-    });
     init_languages();
     init_fonts();
     init_events();
+    init_user_agents();
 
     if(zzz.settings.is_map())
     {
@@ -18,6 +16,9 @@ main::main(pro::global& global) : pro::dialog_sample(global,"ui/settings/main.sm
             ui.set_value("#gen_" + ext::text(key),zzz.settings[key]);
         }
     }
+    dialog_->on_close([this](auto){
+
+    });
 }
 
 
@@ -102,8 +103,42 @@ void main::init_events()
     });
 }
 
+void main::init_user_agents()
+{
+    ui.on_click("#edit_user_agents",[this](auto){
+        edit_user_agents();
+    });
+}
+
 
 ///--------------------------
+void main::edit_user_agents()
+{
+    auto& config   = zzz.configs["http_user_agents"];
+    auto  combobox = ui.cast_id<ext::ui::combobox*>("user_agents");
+    auto  sample   = new pro::dialog_sample(zzz,"ui/settings/user_agents.sml");
+    auto  dialog   = sample->dialog();
+    auto  edit     = sample->ui.cast<ext::ui::text_edit*>("TextEdit");
+
+    if(auto& text = config["text"];text.is_string()){
+        edit->value(text.text_view());
+    }
+    sample->ui.on_click("#save",[&](auto)
+    {
+        auto text = edit->text();
+        config["text"] = text;
+        zzz.send({{"@",protocol::Message_Config_Update},{"name","http_user_agents"},{"config",config}});
+
+        combobox->clear_items();
+        combobox->items(text);
+        dialog->close();
+    });
+    dialog->on_close([sample](auto){
+        delete sample;
+    });
+    dialog->exec();
+}
+
 void main::set_autostart(bool state)
 {
 #ifdef EXT_OS_WINDOWS

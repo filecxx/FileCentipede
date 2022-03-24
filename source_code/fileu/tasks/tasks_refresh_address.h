@@ -6,7 +6,7 @@
 namespace pro::tasks
 {
 
-class refresh_address : public pro::dialog_sample
+class refresh_address : public pro::dialog_sample<>
 {
 public:
     refresh_address(pro::global& global);

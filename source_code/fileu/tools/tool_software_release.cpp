@@ -3,7 +3,7 @@
 namespace pro::tools
 {
 
-software_release::software_release(pro::global& global) : pro::dialog_sample(global,"ui/tools/software_release.sml")
+software_release::software_release(pro::global& global) : pro::dialog_sample<>(global,"ui/tools/software_release.sml")
 {
     dialog_->on_close([this](auto e)
     {

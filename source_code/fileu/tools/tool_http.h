@@ -7,7 +7,7 @@
 namespace pro::tools
 {
 
-class http : public pro::dialog_sample
+class http : public pro::dialog_sample<>
 {
     struct request_values_t
     {

@@ -3,7 +3,7 @@
 namespace pro::help
 {
 
-translator::translator(pro::global& global) : pro::dialog_sample(global,"ui/help/translator.sml")
+translator::translator(pro::global& global) : pro::dialog_sample<>(global,"ui/help/translator.sml")
 {
     ui.cast(dialog_languages_,"#dialog_languages");
     ui.cast(languages_list_,"#languages_list");
@@ -111,8 +111,7 @@ void translator::init_data_list()
         }
         return false;
     });
-    data_list_->on_context_menu([this](auto)
-    {
+    data_list_->on_context_menu([this](auto){
         Ext_Return_If(!data_list_->has_selection());
         data_list_->show_context_menu();
     });

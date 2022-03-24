@@ -6,7 +6,7 @@
 namespace pro::settings
 {
 
-class speed_limit : public pro::dialog_sample
+class speed_limit : public pro::dialog_sample<>
 {
 public:
     speed_limit(pro::global& global,const ext::text& type);

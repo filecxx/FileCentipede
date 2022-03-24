@@ -408,6 +408,21 @@ void main_window::init_methods()
         {"filec-launch",[](ext::ui::arguments& arguments){
             self->launch_filec();
         }},
+        {"filec-user-agents",[](ext::ui::arguments& arguments){
+             arguments << self->zzz.configs["http_user_agents"]["text"].text_view();
+        }},
+        {"filec-paths",[](ext::ui::arguments& arguments)
+        {
+            ext::text text;
+
+            if(self->zzz.paths.is_array())
+            {
+                for(auto& iter : *self->zzz.paths.cast_array()){
+                    text += iter.text("path") + "\r\n";
+                }
+            }
+            arguments << text;
+        }},
         {"exit",[](ext::ui::arguments& arguments)
         {
             if(self->tray_initialized_){
@@ -495,6 +510,7 @@ void main_window::connect_service()
         connection->on_message([this](auto data,auto size){
             on_message(data,size);
         });
+        connection->send({{"@",protocol::Message_Version}});
         connection->send({{"@",protocol::Message_Configs}});
         connection->send({{"@",protocol::Message_Proxies}});
         connection->send({{"@",protocol::Message_Catalogs}});
@@ -561,6 +577,21 @@ void main_window::on_timer_1s(ext::steady_time_t now)
 
 
 ///========================================
+void main_window::on_version(ext::value& json)
+{
+    float version = json.number("version");
+
+    if(version != pro::Version)
+    {
+        zzz.shutdown();
+
+        ext::text prefix = ext::text("[") + ext::ui::lang("version") + "] ";
+        ext::text text   = prefix + "fileu : " + ext::f2str(pro::Version,1) + "<br/>" + prefix + "filec : " + ext::f2str(version,1);
+        ext::ui::alert("error",ext::ui::lang("error"),text).exec();
+        std::exit(9);
+    }
+}
+
 void main_window::on_stop()
 {
     zzz.shutdown();
@@ -590,9 +621,10 @@ void main_window::on_service_connected(std::shared_ptr<ext::ipcx::connection>& c
         init_actions();
     }
     if(zzz.settings.uint8("installed") == 1){
-        zzz.setting("installed",2);
-        ext::ui::arguments arguments(ext::ui::shared_stack,{(zzz.workspace / "ui/tools/browsers.sml").u8string(),"#main"});
+        ext::text path = (zzz.workspace / "ui/tools/browsers.sml").lexically_normal().u8string();
+        ext::ui::arguments arguments(ext::ui::shared_stack,{path,"#main"});
         ext::ui::methods::invokers_global["open-window"](arguments);
+        zzz.setting("installed",2);
     }
     zzz.service = connection;
     zzz.messages()->widget("#ipc_loading")->hide(true);
@@ -693,6 +725,8 @@ void main_window::on_message(uint16_t at,ext::value& json)
 {
     switch(json.erase("@");at)
     {
+    case protocol::Message_Version:
+        return on_version(json);
     case protocol::Message_Stop:
         return on_stop();
     case protocol::Message_UI:
@@ -703,6 +737,8 @@ void main_window::on_message(uint16_t at,ext::value& json)
         return tasks_.on_task_refresh_address(json);
     case protocol::Message_Task_Edit:
         return tasks_.on_task_edit(json);
+    case protocol::Message_Task_Confirm_Links:
+        return (new tasks::confirm_links(zzz))->exec(json);
     case protocol::Message_Configs:
         zzz.configs = json;
         zzz.configs.erase("@");

@@ -3,7 +3,7 @@
 namespace pro::help
 {
 
-uninstall::uninstall(pro::global& global) : pro::dialog_sample(global,"ui/help/uninstall.sml")
+uninstall::uninstall(pro::global& global) : pro::dialog_sample<>(global,"ui/help/uninstall.sml")
 {
     ui.cast(path_,"#path");
     path_->text(ext::text(zzz.workspace.u8string()));

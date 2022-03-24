@@ -15,6 +15,7 @@
 #include <extcpp/file_mapping>
 #include <extcpp/mutex>
 #include <extcpp/net>
+#include <extcpp/audios>
 #include <doom/privilege>
 #include <doom/custom>
 #include <doom/ipdb>

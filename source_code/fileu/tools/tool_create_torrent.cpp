@@ -3,7 +3,7 @@
 namespace pro::tools
 {
 
-create_torrent::create_torrent(pro::global& global) : pro::dialog_sample(global,"ui/tools/create_torrent.sml")
+create_torrent::create_torrent(pro::global& global) : pro::dialog_sample<>(global,"ui/tools/create_torrent.sml")
 {
     form_ = ext::ui::form(ui("#main"));
     dialog_->on_close([this](auto e){

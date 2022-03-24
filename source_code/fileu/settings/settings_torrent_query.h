@@ -6,7 +6,7 @@
 namespace pro::settings
 {
 
-class torrent_query : public pro::dialog_sample
+class torrent_query : public pro::dialog_sample<>
 {
 public:
     torrent_query(pro::global& global);

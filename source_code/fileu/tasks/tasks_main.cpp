@@ -263,7 +263,7 @@ void main::add_task(uint16_t type,uint16_t state,int64_t id,ext::value& json,con
     if(state < protocol::State_Completed/* || type == protocol::Task_Torrent*/){
         active_tasks_.emplace(id,type);
     }
-    on_task_state(json,id,task);
+    on_task_state(json,id,task,state);
 }
 
 bool main::update_task(uint16_t state,int64_t id,ext::value& json,const ext::value& files,bool full_status)
@@ -288,8 +288,9 @@ bool main::update_task(uint16_t state,int64_t id,ext::value& json,const ext::val
         tasks_->type(ext::fs::file_type::regular,iter->second.node);
     }
     if(iter->second.state != state){
+        auto current_state = iter->second.state;
         iter->second.state = state;
-        on_task_state(json,id,iter->second);
+        on_task_state(json,id,iter->second,current_state);
     }
     return true;
 }
@@ -524,7 +525,7 @@ void main::refresh_task_address(int64_t id)
 
 void main::refresh_task_address(int64_t id,uint16_t type,ext::text_view page_url,ext::text_view resid)
 {
-    if(zzz.configs["general"]["no_refresh_address_dialog"] == true){
+    if(zzz.settings["no_refresh_address_dialog"] == true){
         ext::ui::file_dialog::open_url(tasks::refresh_address::address(zzz,id,type,page_url,resid));
     }else{
         (new pro::tasks::refresh_address(zzz))->exec(id,type,page_url,resid);
@@ -703,6 +704,26 @@ void main::show_detail(int64_t id)
     });
 }
 
+void main::show_completed_dialog(int64_t id,ext::value& values,const ext::text& error)
+{
+    if(zzz.settings["sound_effects"] == true){
+        zzz.sound.play(zzz.workspace / "sounds" / (error.empty() ? "transfer_completed.wav" : "transfer_error.wav"));
+    }
+    if(zzz.settings["no_completed_dialog"] == true){
+        return;
+    }
+    if(auto mode = values.get("mode");mode.is_number())
+    {
+        if((mode.uint32() & protocol::Task_Mode_Internal) || (mode.uint32() & protocol::Task_Mode_Upgrade)){
+            return;
+        }
+    }
+    auto dialog = new tasks::download_completed(zzz,id,[this](auto id){
+
+    });
+    dialog->exec(values,error);
+}
+
 
 ///---------------------------
 void main::on_timer(ext::steady_time_point_t now)
@@ -845,23 +866,37 @@ void main::on_torrent_confirming(ext::value& json,int64_t id,uint16_t type,uint1
 
 
 ///------------------------------------
-void main::on_task_state(ext::value& json,int64_t id,task_t& task)
+void main::on_task_error(int64_t id,task_t& task,uint16_t old_state,const ext::text& error)
 {
-    auto item  = tasks_->sibling(task.node->value.item,"state");
-    auto color = ext::value();
+    if(old_state == protocol::State_Downloading || old_state == protocol::State_Downloading_Metadata || old_state == protocol::State_Starting){
+        show_completed_dialog(id,task.node->value.values,error);
+    }
+    need_recount_text2_ = true;
+    erase_active_task(id,task);
+}
+
+void main::on_task_completed(int64_t id,task_t& task,uint16_t old_state)
+{
+    if(old_state == protocol::State_Downloading){
+        show_completed_dialog(id,task.node->value.values);
+    }
+    erase_active_task(id,task);
+}
+
+void main::on_task_state(ext::value& json,int64_t id,task_t& task,uint16_t old_state)
+{
+    auto item         = tasks_->sibling(task.node->value.item,"state");
+    auto color        = ext::value();
+    bool need_recount = true;
 
     tasks_->visible(task.node,matches_filter(task));
 
-    if(task.state == protocol::State_Error)
-    {
-        need_recount_text2_ = true;
-        erase_active_task(id,task);
+    if(task.state == protocol::State_Error){
+        auto text = global::error_text(json.int32("error"));
+        on_task_error(id,task,old_state,text);
         tasks_->row_color(item,"#ad1c1f");
-
-        return item->text(global::error_text(json.int32("error")));
+        return item->text(text);
     }
-    bool need_recount = true;
-
     switch(task.state)
     {
     case protocol::State_Download_Later:
@@ -894,7 +929,7 @@ void main::on_task_state(ext::value& json,int64_t id,task_t& task)
         goto bottom;
     case protocol::State_Completed:
         color = "#1f1f1f";
-        erase_active_task(id,task);
+        on_task_completed(id,task,old_state);
         goto bottom;
     }
     if(auto iter = active_tasks_.find(id);iter == active_tasks_.end()){

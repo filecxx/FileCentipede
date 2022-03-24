@@ -35,6 +35,8 @@ If you like this software, please give a help translate to other languages, tran
 #### ${torrent\_confirm}
 
 ![${torrent_confirm}](images/screenshot_torrent_confirm.png)
+![${torrent_confirm}](images/screenshot_http_confirm.png)
+![${torrent_confirm}](images/screenshot_links_confirm.png)
 
 #### ${add\_catalog}
 
@@ -125,6 +127,7 @@ ${browser\_extension} ${screenshot}
 * Magnet to torrent tool	1.0
 * File merge tool	1.0
 * Statistics	1.0
+* Download all links from webpage 1.6
 
 ## languages
 * Website:  "lang/*.lang"

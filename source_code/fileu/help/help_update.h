@@ -6,7 +6,7 @@
 namespace pro::help
 {
 
-class update : public pro::dialog_sample
+class update : public pro::dialog_sample<>
 {
 public:
     update(pro::global& global);
