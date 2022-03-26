@@ -36,3 +36,13 @@
 {
     line-height: 38px;
 }
+
+.body .links_
+{
+    border-bottom: 1px solid #bcbebf;
+}
+.body .links_ a
+{
+    font-size: 16px;
+    padding: 4px 6px 4px 0;
+}
