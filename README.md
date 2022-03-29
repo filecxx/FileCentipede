@@ -2,7 +2,7 @@
 # File Centipede
 
 <a href="http://filecxx.com" target="_blank">
-  <img src="./style/images/logo_128.png" width="256" alt="File Centipede Icon" />
+  <img src="./style/images/logo_128.png" width="128" alt="File Centipede Icon" />
 </a>
 
 website: [http://filecxx.com](http://filecxx.com)
