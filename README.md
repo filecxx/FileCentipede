@@ -1,6 +1,12 @@
-website: [http://filecxx.com](http://filecxx.com)
 
 # File Centipede
+
+<a href="http://filecxx.com" target="_blank">
+  <img src="./style/images/logo_128.png" width="256" alt="File Centipede Icon" />
+</a>
+
+website: [http://filecxx.com](http://filecxx.com)
+
 File centipede is an internet file download manager with enhanced features, 
 it's fast, customizable, user-friendly, multi-protocol supported, contains lots of useful auxiliary tools, 
 and it's free with no ads, you can also use it to download audio and videos from websites, 
