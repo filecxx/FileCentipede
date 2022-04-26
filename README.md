@@ -1,6 +1,5 @@
-
-# <div style="float:left;background:black;padding:12px"><font style="color:white;padding:4px">File</font> <font style="color:black;background:#ef921c;padding:4px;border-radius:4px">Centipede</font></div>
-
+![image](https://user-images.githubusercontent.com/100348948/165334090-0b1a6f28-554e-484b-9946-1ffef010fa78.png)
+#
 <a href="http://filecxx.com" target="_blank">
   <img src="./style/images/logo_128.png" width="128" alt="File Centipede Icon" />
 </a>
