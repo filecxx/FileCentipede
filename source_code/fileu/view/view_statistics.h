@@ -6,7 +6,7 @@
 namespace pro::view
 {
 
-class statistics : public pro::dialog_sample<>
+class statistics : public pro::dialog_sample<pro::global>
 {
 public:
     statistics(pro::global& global);

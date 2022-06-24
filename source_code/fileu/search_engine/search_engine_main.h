@@ -34,7 +34,7 @@ public:
     /*
      * init
     */
-    void init();
+    void init(ext::ui::tab* main_tab);
 
 };
 

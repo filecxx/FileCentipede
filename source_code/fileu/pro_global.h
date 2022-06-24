@@ -9,6 +9,7 @@ namespace pro
 class global
 {
     friend class main_window;
+    friend class methods;
 
 public:
     global(ext::ui::application& application);
@@ -16,6 +17,12 @@ public:
 
 public:
     ~global();
+
+
+public:
+    pro::global* operator->(){
+        return this;
+    }
 
 
 public:
@@ -30,7 +37,7 @@ public:
     /*
      * error
     */
-    std::error_code error;
+    ext::error_code error;
     /*
      * workspace
     */
@@ -55,6 +62,10 @@ public:
      * service connection
     */
     std::shared_ptr<ext::ipcx::connection> service;
+    /*
+     * random
+    */
+    std::unique_ptr<ext::random> random;
 
 
 public:
@@ -86,6 +97,14 @@ public:
      * subscribes
     */
     std::unordered_map<int64_t,ext::value> subscribes;
+    /*
+     * nfs groups
+    */
+    std::unordered_map<int64_t,ext::value> nfs_groups;
+    /*
+     * nfs hosts
+    */
+    std::unordered_map<int64_t,ext::value> nfs_hosts;
     /*
      * xid
     */
@@ -146,6 +165,10 @@ protected:
      * messages
     */
     ext::ui::samples::messages* messages_ = nullptr;
+    /*
+     * messages
+    */
+    ext::ui::samples::messages* messages_nfs_ = nullptr;
 
 
 public:
@@ -158,6 +181,10 @@ public:
     */
     ext::ui::samples::messages* messages();
     /*
+     * messages nfs
+    */
+    ext::ui::samples::messages* messages_nfs();
+    /*
      * io worker
     */
     ext::worker* io_worker();
@@ -169,6 +196,10 @@ public:
      * endpoint to country
     */
     ext::text endpoint_to_country(const ext::text& endpoint_str);
+    /*
+     * random temp directory
+    */
+    ext::fs::path random_temp_directory();
 
 
 public:
@@ -185,8 +216,8 @@ public:
     template<typename...Arguments>
     bool send(Arguments&&...args)
     {
-        if(service){
-            return service->send(std::forward<Arguments>(args)...);
+        if(auto ptr = service){
+            return ptr->send(std::forward<Arguments>(args)...);
         }
         return false;
     }
@@ -195,8 +226,8 @@ public:
     */
     bool send(const std::initializer_list<std::pair<ext::value_view,ext::value_view>>& list)
     {
-        if(service){
-            return service->send(list);
+        if(auto ptr = service){
+            return ptr->send(list);
         }
         return false;
     }
@@ -243,6 +274,10 @@ public:
      * shutdown
     */
     void shutdown();
+    /*
+     * play sound
+    */
+    void play_sound(const ext::text& name);
 
 };
 

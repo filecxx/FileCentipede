@@ -6,7 +6,7 @@
 namespace pro::help
 {
 
-class translate_files : public pro::dialog_sample<>
+class translate_files : public pro::dialog_sample<pro::global>
 {
 public:
     translate_files(pro::global& global);

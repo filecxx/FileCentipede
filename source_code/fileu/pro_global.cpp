@@ -7,8 +7,8 @@ global::global(ext::ui::application& application) :
     app(application),
     named_mutex(ext::os::cpu::hash(),pro::Client_Bin),
     workspace(application.variables.workspace),
-    icons_mime((workspace / "icons").u8string(),"png","mimetypes",(workspace / "icons/mimetypes/24/none.png").u8string()),
-    icons_country((workspace / "icons" / "country").u8string(),"svg")
+    icons_mime(workspace / "icons","png","mimetypes",workspace / "icons/mimetypes/24/none.png"),
+    icons_country(workspace / "icons" / "country","svg")
 {
 
 }
@@ -24,6 +24,8 @@ global::~global()
         io_worker_->join();
     }
     delete ipdb;
+    delete messages_;
+    delete messages_nfs_;
 }
 
 
@@ -41,6 +43,21 @@ ext::ui::samples::messages* global::messages()
         ext::safe_delete(messages_);
     }
     return messages_;
+}
+
+ext::ui::samples::messages* global::messages_nfs()
+{
+    if(messages_nfs_){
+        return messages_nfs_;
+    }
+    auto path = workspace / "ui/file_browser/messages.sml";
+    messages_nfs_ = new ext::ui::samples::messages(path);
+
+    if(!messages_nfs_->ui){
+        ext::ui::alert("error","error",ext::text(u8"Load UI file " + path.u8string() + u8" failed."))();
+        ext::safe_delete(messages_nfs_);
+    }
+    return messages_nfs_;
 }
 
 ext::worker* global::io_worker()
@@ -73,14 +90,35 @@ ext::text global::endpoint_to_country(const ext::text& endpoint_str)
     }
     if(ipdb->is_open() && !endpoint_str.empty())
     {
-        auto error2   = std::error_code();
-        auto endpoint = ext::net::tcp::make_endpoint(endpoint_str,error2);
+        auto err      = ext::error_code();
+        auto endpoint = ext::net::tcp::make_endpoint(endpoint_str,err);
 
-        if(!error2 && !endpoint.address().is_unspecified()){
+        if(!err && !endpoint.address().is_unspecified()){
             return ipdb->country(endpoint.address());
         }
     }
     return {};
+}
+
+ext::fs::path global::random_temp_directory()
+{
+    if(!this->random){
+        this->random = std::make_unique<ext::random>();
+    }
+    ext::error_code error;
+    ext::fs::path   path = ext::fs::temp_directory_path() / (ext::text(".") + pro::Client_Bin + "_tmp_");
+    std::uint8_t    temp[8] = "";
+
+    for(int i=0;i<200;++i)
+    {
+        auto name = random->string_view(temp,sizeof(temp));
+
+        if(!ext::fs::exists(path / name,error)){
+            path = path / name;
+            break;
+        }
+    }
+    return path;
 }
 
 
@@ -109,6 +147,10 @@ ext::value global::task_config(uint8_t type)
         return configs["torrent_task"];
     case protocol::Task_Ed2k:
         return configs["ed2k_task"];
+    case protocol::Task_Stream:
+        return configs["stream_task"];
+    case protocol::Task_SSH:
+        return configs["ssh_task"];
     }
     return {};
 }
@@ -140,6 +182,13 @@ void global::shutdown()
     ipc.stop();
     ipc.join();
     named_mutex.unlock();
+}
+
+void global::play_sound(const ext::text& name)
+{
+    if(settings["sound_effects"] == true){
+        sound.play(workspace / "sounds" / (name + ".wav"));
+    }
 }
 
 }

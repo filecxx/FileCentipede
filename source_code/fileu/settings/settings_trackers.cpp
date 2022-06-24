@@ -3,7 +3,7 @@
 namespace pro::settings
 {
 
-trackers::trackers(pro::global& global) : pro::dialog_sample<>(global,"ui/settings/tracker.sml")
+trackers::trackers(pro::global& global) : pro::dialog_sample<pro::global>(global,"ui/settings/tracker.sml")
 {
     form_       = ext::ui::form(ui("#tab_settings"));
     subscribes_ = ui.cast_id<ext::ui::table*>("subscribes");

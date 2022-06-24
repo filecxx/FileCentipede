@@ -3,7 +3,7 @@
 namespace pro::settings
 {
 
-proxies::proxies(pro::global& global) : pro::dialog_sample<>(global,"ui/settings/proxy.sml")
+proxies::proxies(pro::global& global) : pro::dialog_sample<pro::global>(global,"ui/settings/proxy.sml")
 {
     table_ = ui.cast_id<ext::ui::table*>("proxies");
     table_->on_context_menu([this]{
@@ -137,7 +137,7 @@ void proxies::test()
 {
     ext::ui::input_dialog dialog;
     dialog.value("https://www.w3.org/");
-    dialog.label(ext::ui::lang("target"));
+    dialog.label("target"_lang);
 
     if(dialog.exec() != 0){
         zzz.send({{"@",protocol::Message_Proxy_Test},{"target",dialog.value()}});

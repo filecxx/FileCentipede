@@ -21,13 +21,11 @@ main::~main()
 void main::convert_nav_states(ext::text_view text,std::vector<int32_t>& states)
 {
     if(text == "delay"){
-        states = {protocol::State_Download_Later};
-    }else if(text == "downloading"){
-        states = {protocol::State_Downloading_Metadata,protocol::State_Downloading,protocol::State_Starting};
-    }else if(text == "uploading"){
-        states = {protocol::State_Uploading};
+        states = {protocol::State_Later};
+    }else if(text == "transferring"){
+        states = {protocol::State_Downloading_Metadata,protocol::State_Downloading,protocol::State_Uploading,protocol::State_Starting};
     }else if(text == "seeding"){
-        states = {protocol::State_Seeding,protocol::State_Uploading};
+        states = {protocol::State_Seeding};
     }else if(text == "stopped"){
         states = {protocol::State_Stopped};
     }else if(text == "completed"){
@@ -110,10 +108,13 @@ void main::init_actions()
     SHOpenWithDialog(NULL, &info);
     */
     ui.on_action_id("act_task_add",[this](auto){
-        (new pro::tasks::add_task(zzz,false,"ui/tasks/add_task.sml"))->exec();
+        (new pro::tasks::add_task(zzz,false,false))->exec();
+    });
+    ui.on_action_id("act_task_add_directory",[this](auto){
+        (new pro::tasks::add_task(zzz,false,true))->exec();
     });
     ui.on_action_id("act_task_add_stream",[this](auto){
-        (new pro::tasks::add_task(zzz,true,"ui/tasks/add_stream.sml"))->exec();
+        (new pro::tasks::add_task(zzz,true,false))->exec();
     });
     ui.on_action_id("act_task_start",std::bind(&main::start_selected_tasks,this));
     ui.on_action_id("act_task_start_all",std::bind(&main::start_all_tasks,this));
@@ -139,9 +140,10 @@ void main::init_actions()
 ///---------------------------
 void main::init_nav()
 {
-    nav_status_ = ui.cast_id<ext::ui::list*>("tasks_nav_list");
-    nav_status_->on_current_item_change([this](auto item,auto prev)
-    {
+    ui.cast_id(nav_status_panel_,"nav_tasks_status_panel");
+    ui.cast_id(nav_status_,"nav_tasks_list");
+
+    nav_status_->on_current_item_change([this](auto item,auto prev){
         selected_state_ = nav_status_->current_data().text();
         convert_nav_states(selected_state_,selected_states_);
         filter_tasks();
@@ -150,7 +152,9 @@ void main::init_nav()
 
 void main::init_catalogs()
 {
-    nav_catalogs_ = ui.cast_id<ext::ui::list*>("tasks_nav_catalogs");
+    ui.cast_id(nav_catalogs_panel_,"nav_tasks_catalogs_panel");
+    ui.cast_id(nav_catalogs_,"nav_tasks_catalogs");
+
     nav_catalogs_->on_selection_change([this]{
         selected_catalogs_ = nav_catalogs_->selected_items();
         filter_tasks();
@@ -173,8 +177,8 @@ void main::init_tasks()
 {
     details_.init_details(ui.cast_id<ext::ui::splitter*>("tasks_splitter"),ui.cast_id<ext::ui::widget*>("tasks_details"));
 
-    tasks_ = ui.cast_id<ext::ui::filesystem*>("tasks_list");
-    tasks_->icons(&zzz.icons_mime);
+    ui.cast_id(tasks_,"tasks_list");
+    tasks_->icons(&zzz->icons_mime);
     tasks_->on_click([this](auto index)
     {
         if(auto node = tasks_->selected_file()){
@@ -186,8 +190,28 @@ void main::init_tasks()
         if(e->matches(QKeySequence::Copy)){
             copy_selected_tasks_names();
             return true;
+        }else if(e->matches(QKeySequence::Cut)){
+            copy_selected_tasks_addresses();
+            return true;
+        }else if(e->matches(QKeySequence::Cancel)){
+            tasks_->clear_selection();
+            return true;
         }
         return false;
+    });
+    tasks_->on_expanded([this](auto index)
+    {
+        auto node = tasks_->find_node(index);
+        Ext_Return_If(!node);
+        auto id = node->value("id").int64();
+
+        if(auto iter = all_tasks_.find(id);iter != all_tasks_.end())
+        {
+            if(iter->second.requery > 0){
+                iter->second.requery = 0;
+                query_files(id,iter->second.type,0,100);
+            }
+        }
     });
     tasks_->on_checked([this](auto node)
     {
@@ -196,7 +220,7 @@ void main::init_tasks()
 
         if(iter != all_tasks_.end() && node->value.type != ext::fs::file_type::directory && node->value.checked != 1)
         {
-            zzz.send({
+            zzz->send({
                 {"@",protocol::Message_Task_Files_Enable},
                 {"type",iter->second.type},
                 {"id",id},
@@ -236,7 +260,7 @@ void main::init_tasks()
 ///---------------------------
 void main::query_status(int64_t id,uint16_t type,bool extended)
 {
-    zzz.send({
+    zzz->send({
         {"@",protocol::Message_Task_Status},
         {"type",type},
         {"id",id},
@@ -246,19 +270,27 @@ void main::query_status(int64_t id,uint16_t type,bool extended)
 
 void main::query_progress(int64_t id,uint16_t type)
 {
-    zzz.send({{"@",protocol::Message_Task_Progress},{"type",type},{"id",id}});
+    zzz->send({{"@",protocol::Message_Task_Progress},{"type",type},{"id",id}});
+}
+
+void main::query_files(int64_t id,uint16_t type,uint32_t offset,uint32_t size)
+{
+    zzz->send({{"@",protocol::Message_Task_Files},{"type",type},{"id",id},{"offset",offset},{"size",size}});
 }
 
 
 ///---------------------------
-void main::add_task(uint16_t type,uint16_t state,int64_t id,ext::value& json,const ext::value& files,bool full_status)
+void main::add_task(uint16_t type,uint16_t state,int64_t id,uint32_t mode,ext::value& json,bool full_status)
 {
-    auto  node = tasks_->add_file(json,std::to_string(id),json.text_view("file_path"));
-    auto& task = all_tasks_.emplace(id,task_t{type,state,full_status,node}).first->second;
+    auto  node  = tasks_->add_file(json,std::to_string(id),json.text_view("path"));
+    auto& task  = all_tasks_.emplace(id,task_t{type,state,0,0,full_status,node}).first->second;
+    auto  files = json.get("files");
 
-    if(files.is_array() && !files.empty()){
-        update_task_files(id,task,files);
+    if((mode & protocol::Task_Mode_Directory) || (files.is_number() && files.uint32() > 0)){
+        task.files = files.uint32();
         tasks_->type(ext::fs::file_type::directory,node);
+
+        query_files(id,type,0,10);
     }
     if(state < protocol::State_Completed/* || type == protocol::Task_Torrent*/){
         active_tasks_.emplace(id,type);
@@ -266,63 +298,87 @@ void main::add_task(uint16_t type,uint16_t state,int64_t id,ext::value& json,con
     on_task_state(json,id,task,state);
 }
 
-bool main::update_task(uint16_t state,int64_t id,ext::value& json,const ext::value& files,bool full_status)
+bool main::update_task(uint16_t state,int64_t id,uint32_t mode,ext::value& json,bool full_status)
 {
     auto iter = all_tasks_.find(id);
 
     if(iter == all_tasks_.end()){
         return false;
     }
-    if(!iter->second.full_status && full_status){
-        iter->second.full_status = full_status;
+    auto& task      = iter->second;
+    auto  files     = json.get("files");
+    auto  file_type = ext::fs::file_type::regular;
+
+    if(!task.full_status && full_status){
+        task.full_status = full_status;
     }
-    if(json.text_view("file_name") != iter->second.node->value.item->text()){
-        iter->second.node->value.type = ext::fs::file_type::none;
+    if(json.text_view("file_name") != task.node->value.item->text()){
+        task.node->value.type = ext::fs::file_type::none;
+    }
+    if((mode & protocol::Task_Mode_Directory) || (files.is_number() && files.uint32() > 0))
+    {
+        if(task.files == 0 || tasks_->expanded(iter->second.node->value.item)){
+            query_files(id,task.type,0,100);
+        }
+        file_type  = ext::fs::file_type::directory;
+        task.files = files.uint32();
     }
     tasks_->update_file(json,std::to_string(id),iter->second.node);
+    tasks_->type(file_type,task.node);
 
-    if(files.is_array() && !files.empty()){
-        update_task_files(id,iter->second,files);
-        tasks_->type(ext::fs::file_type::directory,iter->second.node);
-    }else{
-        tasks_->type(ext::fs::file_type::regular,iter->second.node);
-    }
-    if(iter->second.state != state){
-        auto current_state = iter->second.state;
-        iter->second.state = state;
-        on_task_state(json,id,iter->second,current_state);
+    if(task.state != state){
+        auto current = task.state;
+        task.state = state;
+        on_task_state(json,id,task,current);
     }
     return true;
 }
 
-void main::update_task_files(int64_t id,task_t& task,const ext::value& items)
+void main::update_task_files(int64_t id,task_t& task,ext::value& json)
 {
+    auto items  = json.extract("items");
+    auto offset = json.uint32("offset");
+    auto size   = json.uint32("size");
+    auto total  = json.uint32("total");
+
     for(auto& values : *items.cast_array())
     {
-        auto path     = values.text("file_path");
+        auto path     = values.text("path");
         auto priority = values.uint8("priority");
 
         values["id"] = id;
         path = path.empty() ? std::to_string(id) : (std::to_string(id) + "/" + path);
 
-        if(auto node = tasks_->update_file(std::move(values),values.text("file_name"),path,true)){
-            tasks_->checked(priority != 0 ? 2 : 0,node);
+        if(auto node = tasks_->update_file(std::move(values),values.text("file_name"),path,true))
+        {
+            assert((int)node->value.checked < 3);
+
+            if(task.type == protocol::Task_Torrent){
+                tasks_->checked(priority != 0 ? 2 : 0,node,false,true);
+            }else{
+                tasks_->checkable(node,false);
+            }
         }
     }
-    tasks_->recurse<task_directory_t>([this](node_type* node,auto& dir)
+    if(offset + size < (task.files = total)){
+        return query_files(id,task.type,offset + size,std::min<uint32_t>(100,total - (offset + size)));
+    }
+    //std::cout << offset << ":" << size << " / " << total << std::endl;
+    tasks_->recurse<task_directory_t>(task.node,[&](node_type* node,auto& dir)
     {
         Ext_Return_If(!node->parent);
         dir.checked[node->value.checked]++;
 
-        if(node->value.checked != 0){
-            dir.downloaded += node->value("downloaded").int64();
-            dir.file_size  += node->value("file_size").int64();
+        if(task.type != protocol::Task_Torrent || node->value.checked != 0){
+            dir.transferred += node->value("transferred").int64();
+            dir.file_size   += node->value("file_size").int64();
         }
     },[this](node_type* node,auto& dir)
     {
         Ext_Return_If(!node->parent);
-        node->value("downloaded",dir.downloaded);
+        node->value("transferred",dir.transferred);
         node->value("file_size",dir.file_size);
+        node->value("progress",ext::percentage(dir.transferred,dir.file_size));
 
         tasks_->checked(tasks_->parent_check_state(dir.checked),node);
         tasks_->siblings(node->value.item,node->value.values);
@@ -354,7 +410,7 @@ bool main::erase_task(int64_t id)
     {
         tasks_->remove_file(iter->second.node);
         erase_active_task(id,iter->second);
-        all_tasks_.erase(iter);
+        all_tasks_ -= iter;
         need_recount_text2_ = true;
         return true;
     }
@@ -366,7 +422,7 @@ bool main::erase_task(int64_t id)
 void main::start_task(int64_t id)
 {
     if(auto iter = all_tasks_.find(id);iter != all_tasks_.end()){
-        zzz.send({{"@",protocol::Message_Task_Resume},{"type",iter->second.type},{"id",id}});
+        zzz->send({{"@",protocol::Message_Task_Resume},{"type",iter->second.type},{"id",id}});
     }
 }
 
@@ -375,7 +431,7 @@ void main::start_all_tasks()
     for(auto& iter : all_tasks_)
     {
         if(tasks_->visible(iter.second.node)){
-            zzz.send({{"@",protocol::Message_Task_Resume},{"type",iter.second.type},{"id",iter.first}});
+            zzz->send({{"@",protocol::Message_Task_Resume},{"type",iter.second.type},{"id",iter.first}});
         }
     }
 }
@@ -390,7 +446,7 @@ void main::start_selected_tasks()
 void main::stop_task(int64_t id)
 {
     if(auto iter = all_tasks_.find(id);iter != all_tasks_.end()){
-        zzz.send({{"@",protocol::Message_Task_Stop},{"type",iter->second.type},{"id",id}});
+        zzz->send({{"@",protocol::Message_Task_Stop},{"type",iter->second.type},{"id",id}});
     }
 }
 
@@ -399,7 +455,7 @@ void main::stop_all_tasks()
     for(auto& iter : all_tasks_)
     {
         if(tasks_->visible(iter.second.node) && iter.second.state != protocol::State_Stopped){
-            zzz.send({{"@",protocol::Message_Task_Stop},{"type",iter.second.type},{"id",iter.first}});
+            zzz->send({{"@",protocol::Message_Task_Stop},{"type",iter.second.type},{"id",iter.first}});
         }
     }
 }
@@ -414,7 +470,7 @@ void main::stop_selected_tasks()
 void main::delete_task(int64_t id,bool delete_file)
 {
     if(auto iter = all_tasks_.find(id);iter != all_tasks_.end()){
-        zzz.send({{"@",protocol::Message_Task_Remove},{"type",iter->second.type},{"id",id},{"delete_file",delete_file}});
+        zzz->send({{"@",protocol::Message_Task_Remove},{"type",iter->second.type},{"id",id},{"delete_file",delete_file}});
     }
 }
 
@@ -425,18 +481,17 @@ void main::delete_all_tasks()
     for(auto& iter : all_tasks_)
     {
         if(tasks_->visible(iter.second.node)){
-            ids.emplace_back(iter.first);
+            ids += iter.first;
         }
     }
-    if(ids.empty()){
-        return;
-    }
-    auto ret = zzz.messages()->alert("#delete_all_tasks")->call();
+    Ext_Return_If(ids.empty());
+
+    auto ret = zzz->messages()->alert("#delete_all_tasks")->call();
 
     if(!ret.is_number() || ret == 0){
         return;
     }
-    if(auto input = zzz.messages()->input("#delete_all_tasks_confirm");input->exec() != 0 && input->value() == "123")
+    if(auto input = zzz->messages()->input("#delete_all_tasks_confirm");input->exec() != 0 && input->value() == "123")
     {
         for(auto id : ids){
             delete_task(id,ret == 2);
@@ -449,7 +504,7 @@ void main::delete_selected_tasks()
     auto selected = tasks_->selected_files();
     auto result   = ext::value(0);
 
-    if(selected.empty() || !(result = zzz.messages()->alert("#delete_task")->call()).is_number() || result == 0){
+    if(selected.empty() || !(result = zzz->messages()->alert("#delete_task")->call()).is_number() || result == 0){
         return;
     }
     for(auto node : selected){
@@ -461,13 +516,12 @@ bool main::rename_task(std::int64_t id,const ext::value& idx,std::string_view cu
 {
     if(auto iter = all_tasks_.find(id);iter != all_tasks_.end())
     {
-        auto input = zzz.messages()->input("#rename_task");
+        auto input = zzz->messages()->input("#rename_task");
 
         if(input->exec(current_name) == 0){
             return false;
         }
-        zzz.send({{"@",protocol::Message_Task_Rename},{"type",iter->second.type},{"id",id},{"idx",idx},{"name",new_name = input->value().text()}});
-        query_status(id,iter->second.type);
+        zzz->send({{"@",protocol::Message_Task_Rename},{"type",iter->second.type},{"id",id},{"idx",idx},{"name",new_name = input->value().text()}});
         return true;
     }
     return false;
@@ -484,7 +538,7 @@ void main::rename_selected_tasks()
 
     if(auto val = node->value("idx");val.is_number()){
         idx = val.int32();
-    }else if(node->value.type == ext::fs::file_type::directory && node->parent){
+    }else if(ext::fs::is_directory(node->value.type) && node->parent){
         if((idx = tasks_->path(node->value.item->index(),true,'/')).empty()){
             return;
         }
@@ -495,7 +549,7 @@ void main::rename_selected_tasks()
 void main::redownload_task(int64_t id)
 {
     find_task(id,[this](auto id,auto& task){
-        zzz.send({{"@",protocol::Message_Task_Redownload},{"type",task.type},{"id",id}});
+        zzz->send({{"@",protocol::Message_Task_Redownload},{"type",task.type},{"id",id}});
         active_tasks_.emplace(id,task.type);
     });
 }
@@ -518,14 +572,14 @@ void main::refresh_task_address(int64_t id)
         if(!page_url.empty() && !resid.empty()){
             refresh_task_address(id,iter->second.type,page_url,resid);
         }else{
-            zzz.send({{"@",protocol::Message_Task_Config},{"#",protocol::Message_Task_Refresh_Address},{"type",iter->second.type},{"id",id}});
+            zzz->send({{"@",protocol::Message_Task_Config},{"#",protocol::Message_Task_Refresh_Address},{"type",iter->second.type},{"id",id}});
         }
     }
 }
 
 void main::refresh_task_address(int64_t id,uint16_t type,ext::text_view page_url,ext::text_view resid)
 {
-    if(zzz.settings["no_refresh_address_dialog"] == true){
+    if(zzz->settings["no_refresh_address_dialog"] == true){
         ext::ui::file_dialog::open_url(tasks::refresh_address::address(zzz,id,type,page_url,resid));
     }else{
         (new pro::tasks::refresh_address(zzz))->exec(id,type,page_url,resid);
@@ -542,7 +596,7 @@ void main::refresh_selected_tasks_address()
 void main::edit_task(int64_t id)
 {
     find_task(id,[this](auto id,auto& task){
-        zzz.send({{"@",protocol::Message_Task_Config},{"#",protocol::Message_Task_Edit},{"type",task.type},{"id",id}});
+        zzz->send({{"@",protocol::Message_Task_Config},{"#",protocol::Message_Task_Edit},{"type",task.type},{"id",id}});
     });
 }
 
@@ -555,15 +609,20 @@ void main::edit_selected_tasks()
 
 void main::open_task_file(ext::ui::filesystem::node_type* node,bool completed_only)
 {
-    if(auto iter = all_tasks_.find(node->value("id").int64());iter != all_tasks_.end())
+    auto id   = node->value("id").int64();
+    auto iter = all_tasks_.find(id);
+
+    if(iter != all_tasks_.end())
     {
+        auto error     = ext::error_code();
         auto save_path = iter->second.node->value("save_path");
 
         if(completed_only && iter->second.node == node && iter->second.state != protocol::State_Completed && iter->second.state != protocol::State_Seeding){
-            return;
-        }
-        if(!save_path.empty()){
+            //...
+        }else if(!save_path.empty() && ext::fs::exists(ext::fs::path(save_path.text()) / tasks_->path(node->value.item->index()),error)){
             tasks_->open_file(node->value.item,save_path.text());
+        }else if(auto result = zzz->messages()->alert("#open_file_nexists")->call();result.is_number() && result == 1){
+            delete_task(id,false);
         }
     }
 }
@@ -597,7 +656,7 @@ void main::open_selected_tasks_directories()
 
 void main::move_selected_tasks()
 {
-    auto path = ext::ui::file_dialog::open_directory(ext::ui::lang("move_to"));
+    auto path = ext::ui::file_dialog::open_directory("move_to"_lang);
 
     if(path.empty()){
         return;
@@ -610,7 +669,7 @@ void main::move_selected_tasks()
 bool main::move_task(int64_t id,std::string_view path)
 {
     if(auto iter = all_tasks_.find(id);iter != all_tasks_.end()){
-        zzz.send({{"@",protocol::Message_Task_Move},{"type",iter->second.type},{"id",id},{"path",path}});
+        zzz->send({{"@",protocol::Message_Task_Move},{"type",iter->second.type},{"id",id},{"path",path}});
         return true;
     }
     return false;
@@ -624,14 +683,14 @@ void main::copy_selected_tasks_addresses()
     {
         find_task(node->value("id").int64(),[&](auto id,auto task)
         {
-            ext::text_view uri;
+            ext::text type;
 
             if(task.type == protocol::Task_Torrent){
-                uri = node->value("magnet").text();
+                type = "magnet";
             }else{
-                uri = node->value("uri").text();
+                type = "uri";
             }
-            text.append_line(uri);
+            text.append_line(node->value(type).text());
         });
     }
     ext::ui::clipboard::text(text);
@@ -668,14 +727,14 @@ void main::export_selected_tasks_torrent()
     {
         find_task(files[0]->value("id").int64(),[&](auto id,auto task)
         {
-            auto path = ext::ui::file_dialog::save_file(ext::ui::lang("save_as"),files[0]->value("file_name").text() + ".torrent");
+            auto path = ext::ui::file_dialog::save_file("save_as"_lang,files[0]->value("file_name").text() + ".torrent");
 
             if(!path.empty()){
-                zzz.send({{"@",protocol::Message_Task_Export_Torrent},{"type",task.type},{"id",id},{"path",path}});
+                zzz->send({{"@",protocol::Message_Task_Export_Torrent},{"type",task.type},{"id",id},{"path",path}});
             }
         });
     }else if(files.size() > 1){
-        auto path = ext::ui::file_dialog::open_directory(ext::ui::lang("save_as"));
+        auto path = ext::ui::file_dialog::open_directory("save_as"_lang);
 
         if(path.empty()){
             return;
@@ -684,7 +743,7 @@ void main::export_selected_tasks_torrent()
         {
             find_task(files[0]->value("id").int64(),[&](auto id,auto task){
                 auto name = files[0]->value("file_name").text() + ".torrent";
-                zzz.send({{"@",protocol::Message_Task_Export_Torrent},{"type",task.type},{"id",id},{"path",(ext::fs::path(path) / name).u8string()}});
+                zzz->send({{"@",protocol::Message_Task_Export_Torrent},{"type",task.type},{"id",id},{"path",(ext::fs::path(path) / name).u8string()}});
             });
         }
     }
@@ -696,7 +755,7 @@ void main::show_detail(int64_t id)
     {
         bool try_status = false;
 
-        if(!task.full_status && task.state >= protocol::State_Stopped){
+        if(!task.full_status && task.state >= protocol::State_Stopped && task.state <= protocol::State_Error){
             try_status = true;
         }
         details_.display(task.type,id,task.node->value.values);
@@ -706,22 +765,22 @@ void main::show_detail(int64_t id)
 
 void main::show_completed_dialog(int64_t id,ext::value& values,const ext::text& error)
 {
-    if(zzz.settings["sound_effects"] == true){
-        zzz.sound.play(zzz.workspace / "sounds" / (error.empty() ? "transfer_completed.wav" : "transfer_error.wav"));
-    }
-    if(zzz.settings["no_completed_dialog"] == true){
+    zzz->play_sound(error.empty() ? "transfer_completed" : "transfer_error");
+
+    if(zzz->settings["no_completed_dialog"] == true){
         return;
     }
-    if(auto mode = values.get("mode");mode.is_number())
-    {
-        if((mode.uint32() & protocol::Task_Mode_Internal) || (mode.uint32() & protocol::Task_Mode_Upgrade)){
-            return;
-        }
+    ext::value mode = values.get("mode");
+
+    if(!mode.is_number()){
+        mode = ext::value(0);
+    }else if((mode.uint32() & protocol::Task_Mode_Internal) || (mode.uint32() & protocol::Task_Mode_Upgrade)){
+        return;
     }
-    auto dialog = new tasks::download_completed(zzz,id,[this](auto id){
+    auto dialog = new tasks::transfer_completed(zzz,id,[this](auto id){
 
     });
-    dialog->exec(values,error);
+    dialog->exec(values,error,mode.uint32());
 }
 
 
@@ -746,18 +805,22 @@ void main::on_timer(ext::steady_time_point_t now)
         for(auto& iter : active_tasks_){
             query_status(iter.first,iter.second.type,!iter.second.extend_status_loaded);
         }
-        details_.query_detail();
-
         if(need_recount_text2_){
             recount_text2();
         }
+        if(details_.expanded()){
+            details_.query_detail();
+        }
         timepoint_seconds_  = now;
         timepoint_interval_ = now;
-    }else if(now - timepoint_interval_ >= interval){
-        for(auto& iter : active_tasks_){
-            if(iter.second.type != protocol::Task_Torrent){
-                query_progress(iter.first,iter.second.type);
+    }else if(now - timepoint_interval_ >= interval)
+    {
+        for(auto& iter : active_tasks_)
+        {
+            if(iter.second.type == protocol::Task_Torrent){
+                continue;
             }
+            query_progress(iter.first,iter.second.type);
         }
         timepoint_interval_ = now;
     }
@@ -769,24 +832,23 @@ void main::on_catalog_add(ext::value& json)
     auto catalog = new ext::ui::list_item("icons/24/catalog.svg",name);
 
     nav_catalogs_->append(catalog);
-    zzz.catalogs.emplace(name,std::move(json));
+    zzz->catalogs.emplace(name,std::move(json));
 }
 
 void main::on_catalog_update(ext::value& json)
 {
     auto name     = json.extract("name").text();
     auto old_name = json.extract("old_name").text();
-    auto path     = json.text("path");
 
     if(name.empty() || old_name.empty()){
         return;
     }
     if(name == old_name){
-        zzz.catalogs[name] = json;
+        zzz->catalogs[name] = json;
         return;
     }
-    zzz.catalogs.erase(old_name);
-    zzz.catalogs[name] = json;
+    zzz->catalogs.erase(old_name);
+    zzz->catalogs[name] = json;
 
     nav_catalogs_->each([&](auto i,auto item)
     {
@@ -807,7 +869,7 @@ void main::on_catalog_remove(ext::value& json)
     {
         if(item != nav_catalogs_->item(0) && item->text() == name){
             nav_catalogs_->remove(i);
-            zzz.catalogs.erase(name);
+            zzz->catalogs.erase(name);
             return true;
         }
         return false;
@@ -820,14 +882,14 @@ void main::on_catalog_remove(ext::value& json)
 
 void main::on_catalogs(ext::value& json)
 {
-    zzz.catalogs = json.get("items");
+    zzz->catalogs = json.get("items");
 
     for(auto i=nav_catalogs_->count() - 1;i>0;--i){
         nav_catalogs_->remove(i);
     }
-    if(zzz.catalogs.is_map())
+    if(zzz->catalogs.is_map())
     {
-        for(auto& iter : *zzz.catalogs.cast_map()){
+        for(auto& iter : *zzz->catalogs.cast_map()){
             auto catalog = new ext::ui::list_item("icons/24/catalog.svg",iter.first.string());
             nav_catalogs_->append(catalog);
         }
@@ -838,9 +900,7 @@ void main::on_catalogs(ext::value& json)
 ///------------------------------------
 void main::on_http_confirming(ext::value& json,int64_t id,uint16_t type,uint16_t state)
 {
-    auto iter = confirming_tasks_.find(id);
-
-    if(iter != confirming_tasks_.end()){
+    if(confirming_tasks_.contains(id)){
         return;
     }
     auto pointer = new pro::tasks::confirm_http(zzz,json,[this](auto id,bool confirmed){
@@ -852,9 +912,7 @@ void main::on_http_confirming(ext::value& json,int64_t id,uint16_t type,uint16_t
 
 void main::on_torrent_confirming(ext::value& json,int64_t id,uint16_t type,uint16_t state)
 {
-    auto iter = confirming_tasks_.find(id);
-
-    if(iter != confirming_tasks_.end()){
+    if(auto iter = confirming_tasks_.find(id);iter != confirming_tasks_.end()){
         return ((pro::tasks::confirm_torrent*)iter->second.second)->update(json,state);
     }
     auto pointer = new pro::tasks::confirm_torrent(zzz,json,[this](auto id,bool confirmed){
@@ -864,42 +922,117 @@ void main::on_torrent_confirming(ext::value& json,int64_t id,uint16_t type,uint1
     confirming_tasks_.emplace(id,std::make_pair(type,pointer));
 }
 
+void main::on_task_confirmed(std::int64_t id,ext::boolean_t confirmed)
+{
+    if(auto iter = confirming_tasks_.find(id);iter != confirming_tasks_.end())
+    {
+        if(confirmed){
+            query_status(id,iter->second.first,true);
+        }
+        active_tasks_.emplace(id,iter->second.first);
+        confirming_tasks_ -= iter;
+    }
+}
+
+void main::on_task_confirming(ext::value& json,int64_t id,uint16_t type,uint16_t state)
+{
+    switch(erase_task(id);type)
+    {
+    case protocol::Task_HTTP:
+        on_http_confirming(json,id,type,state);
+        break;
+    case protocol::Task_Torrent:
+        on_torrent_confirming(json,id,type,state);
+        break;
+    }
+    query_files(id,type,0,10);
+}
+
+void main::on_confirming_files(int64_t id,uint16_t type,ext::value& json,void* ptr)
+{
+    auto total  = json.uint32("total");
+    auto offset = json.uint32("offset");
+    auto size   = json.uint32("size");
+
+    switch(type)
+    {
+    case protocol::Task_HTTP:
+        break;
+    case protocol::Task_Torrent:
+        ((pro::tasks::confirm_torrent*)ptr)->update_files(json,total,offset,size);
+        break;
+    }
+    if(offset + size < total){
+        return query_files(id,type,offset + size,std::min<uint32_t>(100,total - (offset + size)));
+    }
+}
+
 
 ///------------------------------------
-void main::on_task_error(int64_t id,task_t& task,uint16_t old_state,const ext::text& error)
+bool main::on_task_error(int64_t id,task_t& task,uint16_t old_state,const ext::text& error)
 {
-    if(old_state == protocol::State_Downloading || old_state == protocol::State_Downloading_Metadata || old_state == protocol::State_Starting){
-        show_completed_dialog(id,task.node->value.values,error);
+    if(task.files > 0){
+        task.requery++;
+    }
+    constexpr uint8_t states[] = {
+        protocol::State_Starting,
+        protocol::State_Resuming,
+        protocol::State_Downloading,
+        protocol::State_Downloading_Metadata,
+        protocol::State_Uploading,
+        protocol::State_Merging
+    };
+    for(auto val : states)
+    {
+        if(old_state == val){
+            show_completed_dialog(id,task.node->value.values,error);
+            break;
+        }
+    }
+    if(id < 0){
+        erase_task(id);
+        return true;
     }
     need_recount_text2_ = true;
     erase_active_task(id,task);
+    return false;
 }
 
-void main::on_task_completed(int64_t id,task_t& task,uint16_t old_state)
+bool main::on_task_completed(int64_t id,task_t& task,uint16_t old_state)
 {
-    if(old_state == protocol::State_Downloading){
+    if(task.files > 0){
+        task.requery++;
+    }
+    if(old_state == protocol::State_Merging || old_state == protocol::State_Completing){
         show_completed_dialog(id,task.node->value.values);
     }
+    if(id < 0){
+        erase_task(id);
+        return true;
+    }
+    need_recount_text2_ = true;
     erase_active_task(id,task);
+    return false;
 }
 
 void main::on_task_state(ext::value& json,int64_t id,task_t& task,uint16_t old_state)
 {
     auto item         = tasks_->sibling(task.node->value.item,"state");
     auto color        = ext::value();
+    bool erased       = false;
     bool need_recount = true;
 
     tasks_->visible(task.node,matches_filter(task));
 
     if(task.state == protocol::State_Error){
-        auto text = global::error_text(json.int32("error"));
-        on_task_error(id,task,old_state,text);
+        auto text = pro::global::error_text(json.int32("error"));
         tasks_->row_color(item,"#ad1c1f");
-        return item->text(text);
+        item->text(text);
+        return on_task_error(id,task,old_state,text),void();
     }
     switch(task.state)
     {
-    case protocol::State_Download_Later:
+    case protocol::State_Later:
     case protocol::State_Queuing:
         color = "#025a75";
         break;
@@ -929,65 +1062,36 @@ void main::on_task_state(ext::value& json,int64_t id,task_t& task,uint16_t old_s
         goto bottom;
     case protocol::State_Completed:
         color = "#1f1f1f";
-        on_task_completed(id,task,old_state);
+        erased = on_task_completed(id,task,old_state);
         goto bottom;
     }
     if(auto iter = active_tasks_.find(id);iter == active_tasks_.end()){
         active_tasks_.emplace(id,task.type);
     }
     bottom:
-    item->text(ext::ui::lang(protocol::Task_States_Text[task.state]));
-    tasks_->row_color(item,color);
+    if(!erased){
+        item->text(ext::ui::lang(protocol::Task_States_Text[task.state]));
+        tasks_->row_color(item,color);
+    }
     need_recount_text2_ = need_recount;
-}
-
-void main::on_task_confirmed(std::int64_t id,ext::boolean_t confirmed)
-{
-    if(auto iter = confirming_tasks_.find(id);iter != confirming_tasks_.end())
-    {
-        if(confirmed){
-            query_status(id,iter->second.first,true);
-        }
-        confirming_tasks_.erase(iter);
-        active_tasks_.emplace(id,iter->second.first);
-    }
-}
-
-void main::on_task_confirming(ext::value& json,int64_t id,uint16_t type,uint16_t state)
-{
-    erase_task(id);
-
-    switch(type)
-    {
-    case protocol::Task_HTTP:
-        on_http_confirming(json,id,type,state);
-        break;
-    case protocol::Task_Stream:
-        break;
-    case protocol::Task_Torrent:
-        on_torrent_confirming(json,id,type,state);
-        break;
-    default:
-        break;
-    }
 }
 
 void main::on_task_status(ext::value& json)
 {
     auto id          = json.int64("id");
+    auto mode        = json.uint32("mode");
     auto type        = json.extract("type").uint16();
     auto state       = json.extract("state").uint16();
     auto extended    = json.extract("__extended__");
-    auto full_status = json.extract("#");
+    auto full_status = json.extract("#") == true;
 
     if(type >= protocol::Task_Types_Size){
         return ext::debug << "[tasks_main]main::on_task_status type error :" <<= type,void();
-    }
-    if(json.uint16("substate") == protocol::Substate_Confirming){
+    }else if(json.uint16("substate") == protocol::Substate_Confirming){
         return on_task_confirming(json,id,type,state);
     }
-    if(auto files = json.extract("files");!update_task(state,id,json,files,full_status == true)){
-        add_task(type,state,id,json,files,full_status == true);
+    if(!update_task(state,id,mode,json,full_status)){
+        add_task(type,state,id,mode,json,full_status);
     }
     if(details_.id_ == id && details_.expanded()){
         details_.update(type,json);
@@ -1004,6 +1108,18 @@ void main::on_task_progress(ext::value& json)
 {
     find_task(json,[&](auto id,auto& task){
         tasks_->siblings(task.node->value.item,json);
+    });
+}
+
+void main::on_task_files(ext::value& json)
+{
+    auto id = json.int64("id");
+
+    if(auto iter = confirming_tasks_.find(id);iter != confirming_tasks_.end()){
+        return on_confirming_files(id,iter->second.first,json,iter->second.second);
+    }
+    find_task(json,[&](auto id,auto& task){
+        update_task_files(id,task,json);
     });
 }
 
@@ -1030,9 +1146,9 @@ void main::on_task_renamed(ext::value& json)
     find_task(json,[&](auto id,auto& task)
     {
         if(auto node = tasks_->find_node(std::to_string(id) + "/" + json.text("old_path"))){
-            auto file_name = json.text_view("file_name");
+            auto file_name = json.text("file_name");
             node->value.values["file_name"] = file_name;
-            tasks_->rename_file(node,file_name);
+            tasks_->rename_file(node,file_name,true);
         }
     });
 }
@@ -1068,7 +1184,7 @@ void main::on_selection_changed()
         {"move",masks::Mask_Task},
         {"delete",masks::Mask_Task},
         {"delete_fully",masks::Mask_Task},
-        {"redownload",masks::Mask_Task_HTTP | masks::Mask_Task_FTP | masks::Mask_Task_Stream},
+        {"redownload",masks::Mask_Task_HTTP | masks::Mask_Task_FTP | masks::Mask_Task_Stream | masks::Mask_Task_SSH},
         {"refresh_address",masks::Mask_Task_HTTP | masks::Mask_Task_Stream},
         {"edit",masks::Mask_Task},
         {"copy_address",masks::Mask_Task},
@@ -1108,7 +1224,7 @@ void main::on_context_menu()
     }
     set_catalog->clear();
 
-    for(auto& iter : *zzz.catalogs.cast_map())
+    for(auto& iter : *zzz->catalogs.cast_map())
     {
         auto action = new ext::ui::action;
         auto text   = iter.first.string();
@@ -1125,7 +1241,7 @@ void main::on_context_menu()
             for(auto id : ids)
             {
                 if(auto iter = all_tasks_.find(id);iter != all_tasks_.end()){
-                    zzz.send({{"@",protocol::Message_Task_Set_Catalog},{"type",iter->second.type},{"id",id},{"catalog",text}});
+                    zzz->send({{"@",protocol::Message_Task_Set_Catalog},{"type",iter->second.type},{"id",id},{"catalog",text}});
                 }
             }
         });
@@ -1138,6 +1254,15 @@ void main::on_context_menu()
 ///---------------------------
 void main::init()
 {
+    if(tasks_)
+    {
+        nav_status_panel_->show();
+
+        if(zzz->settings["view_catalogs"] != false){
+            nav_catalogs_panel_->show();
+        }
+        return;
+    }
     init_tasks();
     init_actions();
     init_nav();

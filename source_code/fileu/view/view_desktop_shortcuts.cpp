@@ -3,7 +3,7 @@
 namespace pro::view
 {
 
-desktop_shortcuts::desktop_shortcuts(pro::global& global) : pro::dialog_sample<>(global,"ui/view/desktop_shortcuts.sml")
+desktop_shortcuts::desktop_shortcuts(pro::global& global) : pro::dialog_sample<pro::global>(global,"ui/view/desktop_shortcuts.sml")
 {
     dialog_->on_close([this](auto){
         delete this;
@@ -16,10 +16,10 @@ desktop_shortcuts::desktop_shortcuts(pro::global& global) : pro::dialog_sample<>
 void desktop_shortcuts::init_events()
 {
     ui.on_click("#filec",[this](auto){
-        create_shortcut(ext::ui::lang("software_name_") + ext::text(" (filec)"),"filec",{},true);
+        create_shortcut("software_name_"_lang + ext::text(" (filec)"),"filec",{},true);
     });
     ui.on_click("#fileu",[this](auto){
-        create_shortcut(ext::ui::lang("software_name_") + ext::text(" (fileu)"),"fileu",{},true);
+        create_shortcut("software_name_"_lang + ext::text(" (fileu)"),"fileu",{},true);
     });
     ext::ui::form(ui("#main")).each([this](auto name,auto node)
     {

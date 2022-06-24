@@ -46,6 +46,10 @@ protected:
     */
     std::int64_t id_ = 0;
     /*
+     * timepoint query
+    */
+    ext::steady_time_t timepoint_query_;
+    /*
      * detail subset
     */
     ext::text_view subset_;
@@ -73,33 +77,17 @@ protected:
 
 protected:
     /*
-     * mapped partials (range -> item)
-    */
-    mapped_items_t mapped_partials_temp_;
-    /*
-     * mapped segments (range -> item)
-    */
-    mapped_int_items_t mapped_segments_temp_;
-    /*
      * mapped trackers (url -> item)
     */
     mapped_items_t mapped_trackers_temp_;
-    /*
-     * mapped peers (url -> item)
-    */
-    mapped_items_t mapped_peers_temp_;
     /*
      * mapped web seeds (url -> item)
     */
     mapped_items_t mapped_web_seeds_temp_;
     /*
-     * mapped partials (range -> item)
+     * mapped peers (url -> item)
     */
-    mapped_items_t mapped_partials_;
-    /*
-     * mapped segments (range -> item)
-    */
-    mapped_int_items_t mapped_segments_;
+    mapped_items_t mapped_peers_temp_;
     /*
      * mapped trackers (text -> item)
     */
@@ -154,25 +142,17 @@ protected:
     */
     void clear_mapped(ext::ui::table* table,mapped_items_t& mapped,mapped_items_t& mapped_temp);
     /*
-     * update partials
-    */
-    void update_partials(ext::ui::table* table,ext::value& values,bool clear);
-    /*
-     * update segments
-    */
-    void update_segments(ext::ui::table* table,ext::value& values,bool clear);
-    /*
      * update trackers
     */
-    void update_trackers(ext::ui::table* table,ext::value& values,bool clear);
+    void update_trackers(ext::ui::table* table,ext::value&& values,bool clear);
     /*
      * update web seeds
     */
-    void update_web_seeds(ext::ui::table* table,ext::value& values,bool clear);
+    void update_web_seeds(ext::ui::table* table,ext::value&& values,bool clear);
     /*
      * update peers
     */
-    void update_peers(ext::ui::table* table,ext::value& values,bool clear);
+    void update_peers(ext::ui::table* table,ext::value&& values,bool clear);
 
 
 public:
@@ -181,7 +161,7 @@ public:
     */
     bool expanded() const
     {
-        return current_ && current_->detailbar && current_->detailbar->is_expanded();
+        return current_ && current_->detailbar && current_->detailbar->expanded();
     }
 
 
@@ -189,7 +169,7 @@ public:
     /*
      * query detail
     */
-    void query_detail(bool try_status = false);
+    void query_detail(bool try_status = false,bool immediately = false);
 
 
 public:

@@ -3,7 +3,7 @@
 namespace pro::tools
 {
 
-create_torrent::create_torrent(pro::global& global) : pro::dialog_sample<>(global,"ui/tools/create_torrent.sml")
+create_torrent::create_torrent(pro::global& global) : pro::dialog_sample<pro::global>(global,"ui/tools/create_torrent.sml")
 {
     form_ = ext::ui::form(ui("#main"));
     dialog_->on_close([this](auto e){
@@ -69,7 +69,7 @@ void create_torrent::create()
             if(error == 0){
                 dialog_->close();
             }else{
-                ext::ui::alert("error",ext::ui::lang("error"),global::error_text(error) + " " + message).exec();
+                ext::ui::alert("error","error"_lang,global::error_text(error) + " " + message).exec();
                 ui("#btn_create")->object.enable(true);
                 ui("#btn_cancel")->object.enable(true);
             }

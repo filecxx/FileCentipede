@@ -6,7 +6,7 @@
 namespace pro::view
 {
 
-class desktop_shortcuts : public pro::dialog_sample<>
+class desktop_shortcuts : public pro::dialog_sample<pro::global>
 {
 public:
     desktop_shortcuts(pro::global& global);

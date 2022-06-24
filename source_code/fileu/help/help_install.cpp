@@ -3,7 +3,7 @@
 namespace pro::help
 {
 
-install::install(pro::global& global) : pro::dialog_sample<>(global,"ui/help/install.sml")
+install::install(pro::global& global) : pro::dialog_sample<pro::global>(global,"ui/help/install.sml")
 {
     ui.cast(licence_,"#licence");
     ui.cast(path_,"#path");
@@ -27,7 +27,7 @@ install::~install()
 ///--------------------------
 ext::value install::load_settings(const ext::fs::path& path,ext::text_view lang)
 {
-    std::error_code error;
+    ext::error_code error;
     ext::value      setting({
         {"installed",1},
         {"watch_clipboard",true},
@@ -53,7 +53,7 @@ ext::value install::load_settings(const ext::fs::path& path,ext::text_view lang)
 ///--------------------------
 void install::init_languages()
 {
-    auto error = std::error_code();
+    ext::error_code error;
 
     for(auto& iter: ext::fs::directory_iterator("lang/",error))
     {
@@ -122,11 +122,11 @@ void install::start_install()
     }
     if(!ext::fs::test_write_perm(install_path_,random)){
         readonly:
-        ext::ui::alert("error","error",ext::text(ext::ui::lang("write_file_error")) + " - " + ext::ui::lang("readonly")).exec();
+        ext::ui::alert("error","error",ext::text("write_file_error"_lang) + " - " + "readonly"_lang).exec();
         return;
     }
     if(!ext::fs::filename_valid(values_["software_name"].text_view())){
-        ext::ui::alert("error","error",ext::text(ext::ui::lang("software_name")) + " " + ext::ui::lang("error")).exec();
+        ext::ui::alert("error","error",ext::text("software_name"_lang) + " " + "error"_lang).exec();
         return;
     }
     ui("#btn_install")->object.enable(false);
@@ -168,7 +168,7 @@ void install::install_failed(int ret,bool elevatable)
 
 void install::install_write_conf_failed()
 {
-    ext::ui::alert("error","error",ext::ui::lang("write_conf_failed")).exec();
+    ext::ui::alert("error","error"_lang,"write_conf_failed"_lang).exec();
 }
 
 void install::install_success()
@@ -179,7 +179,7 @@ void install::install_success()
         lang = ext::ui::language::locale_name();
     }
     ext::ui::language language;
-    ext::text         software_name = ext::ui::lang("software_name_");
+    ext::text         software_name = "software_name_"_lang;
     ext::fs::path     lang_path     = install_path_ / "lang" / (lang.text() + ".lang");
     ext::fs::path     config_path   = install_path_ / "lib" / FileU_Config_File_Name;
 
@@ -202,7 +202,7 @@ void install::install_success()
     if(ext::cfile::write(config_path,"wb",setting.stringify()).value() != 0){
         install_write_conf_failed();
     }else{
-        ext::ui::alert("info","success",ext::ui::lang("install_success")).exec();
+        ext::ui::alert("info","success","install_success"_lang).exec();
     }
     ext::process::launch(0,(install_path_ / "lib").executable(pro::Client_Bin));
     std::exit(1);

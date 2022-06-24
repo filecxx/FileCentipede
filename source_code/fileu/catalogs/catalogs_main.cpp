@@ -3,7 +3,7 @@
 namespace pro::catalogs
 {
 
-main::main(pro::global& global,ext::ui::list* list) : pro::sample(global,"ui/catalogs/main.sml")
+main::main(pro::global& global,ext::ui::list* list) : pro::sample<>(global,"ui/catalogs/main.sml")
 {
     list_         = list;
     context_menu_ = ui.cast_id<ext::ui::menu*>("context_menu");
@@ -84,10 +84,9 @@ void main::merge_catalogs()
 ///-------------------
 void main::show_context_menu(int32_t row)
 {
-    if(row == 0){
-        return;
+    if(row != 0){
+        context_menu_->show_context_menu();
     }
-    context_menu_->show_context_menu();
 }
 
 }

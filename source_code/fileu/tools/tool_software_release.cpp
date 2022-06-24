@@ -3,7 +3,7 @@
 namespace pro::tools
 {
 
-software_release::software_release(pro::global& global) : pro::dialog_sample<>(global,"ui/tools/software_release.sml")
+software_release::software_release(pro::global& global) : pro::dialog_sample<pro::global>(global,"ui/tools/software_release.sml")
 {
     dialog_->on_close([this](auto e)
     {
@@ -184,7 +184,7 @@ bool software_release::create_archive(const ext::text& name,const ext::fs::path&
         ext::archive::zip zip;
 
         if(!zip.open((const char*)(output_dir / (name + pair.second)).u8string().c_str(),ext::archive::Write | ext::archive::Create)){
-            error_ = ext::make_error_code(ext::errors::Create_File_Error);
+            error_ = ext::make_error_code(ext::errc::Create_File_Error);
             return false;
         }
         zip.on_progress([this](const ext::archive::file_info_t& info,int64_t position){
@@ -192,7 +192,7 @@ bool software_release::create_archive(const ext::text& name,const ext::fs::path&
             return 0;
         });
         if(!write_archive(zip,dir,directories,files_common,*pair.first)){
-            error_ = ext::make_error_code(ext::errors::Write_File_Error);
+            error_ = ext::make_error_code(ext::errc::Write_File_Error);
             return false;
         }
     }

@@ -3,7 +3,7 @@
 namespace pro::settings
 {
 
-speed_limit::speed_limit(pro::global& global,const ext::text& type) : pro::dialog_sample<>(global,"ui/settings/speed_limit_" + type + ".sml"),type_(type)
+speed_limit::speed_limit(pro::global& global,const ext::text& type) : pro::dialog_sample<pro::global>(global,"ui/settings/speed_limit_" + type + ".sml"),type_(type)
 {
     dialog_->on_close([this](auto){
         ext::ui::clear_timeout(timer_);

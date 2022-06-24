@@ -3,7 +3,7 @@
 namespace pro::help
 {
 
-translator::translator(pro::global& global) : pro::dialog_sample<>(global,"ui/help/translator.sml")
+translator::translator(pro::global& global) : pro::dialog_sample<pro::global>(global,"ui/help/translator.sml")
 {
     ui.cast(dialog_languages_,"#dialog_languages");
     ui.cast(languages_list_,"#languages_list");
@@ -131,7 +131,7 @@ void translator::init_data_list()
 bool translator::load_json_file(const ext::fs::path& path,const std::unordered_set<ext::text>& keys)
 {
     ext::stream<> stream;
-    std::error_code error = ext::cfile::read(path,stream);
+    ext::error_code error = ext::cfile::read(path,stream);
 
     if(error){
         ext::ui::alert("error","error",error.message()).exec();
@@ -160,7 +160,7 @@ bool translator::load_lang_file(const ext::fs::path& path,const std::unordered_s
     ext::ui::language lang;
 
     if(!lang.load_file(path)){
-        ext::ui::alert("error","error",ext::ui::lang("open_file_error")).exec();
+        ext::ui::alert("error","error","open_file_error"_lang).exec();
         return false;
     }
     shrink_rows();
@@ -192,7 +192,7 @@ bool translator::load_file(const ext::fs::path& path,const std::unordered_set<ex
 bool translator::load_default_lang(const ext::text& name)
 {
     auto file_path = zzz.workspace / "lang" / (name + ".lang");
-    auto error     = std::error_code();
+    auto error     = ext::error_code();
 
     if(ext::fs::exists(file_path,error)){
         import_file(ext::text(file_path.u8string()));
@@ -355,7 +355,7 @@ void translator::title(ext::text_view text)
 
 void translator::select_language()
 {
-    auto error     = std::error_code();
+    auto error     = ext::error_code();
     auto languages = std::unordered_map<ext::text,ext::text>();
 
     exists_locales_.clear();
@@ -373,6 +373,9 @@ void translator::select_language()
     }
     ext::ui::language::locales([&](const auto& locale,const auto& language,const auto& country)
     {
+        if(locale == "ar_IL"){
+            return false;
+        }
         auto row = languages_list_->create_row({
             {"name",locale},
             {"language",language},
@@ -388,7 +391,7 @@ void translator::select_language()
 
 void translator::open_file()
 {
-    auto text = ext::ui::file_dialog::open_file(ext::ui::lang("open_file"),"","*.lang *.json");
+    auto text = ext::ui::file_dialog::open_file("open_file"_lang,"","*.lang *.json");
 
     if(!text.empty()){
         data_list_->clear_rows();
@@ -415,7 +418,7 @@ void translator::save_as()
         name = path.filename().u8string();
         dir  = path.remove_filename().u8string();
     }
-    auto text = ext::ui::file_dialog::save_file(ext::ui::lang("save_as"),name,"*.lang;;*.json");
+    auto text = ext::ui::file_dialog::save_file("save_as"_lang,name,"*.lang;;*.json");
 
     if(!text.empty()){
         save_file(text);
@@ -440,7 +443,7 @@ void translator::import_file(ext::text_view path)
 
 void translator::import_file()
 {
-    auto text = ext::ui::file_dialog::open_file(ext::ui::lang("import"),"","*.lang *.json");
+    auto text = ext::ui::file_dialog::open_file("import"_lang,"","*.lang *.json");
 
     if(!text.empty()){
         import_file(text);

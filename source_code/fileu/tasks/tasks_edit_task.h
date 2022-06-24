@@ -6,7 +6,7 @@
 namespace pro::tasks
 {
 
-class edit_task : public pro::dialog_sample<>
+class edit_task : public pro::dialog_sample<pro::global>
 {
 public:
     edit_task(pro::global& global);
@@ -43,13 +43,6 @@ protected:
      * init default values
     */
     void init_default_values(const ext::text& type);
-
-
-public:
-    /*
-     * type
-    */
-    std::string_view type(std::uint16_t n);
 
 
 public:

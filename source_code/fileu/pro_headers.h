@@ -5,6 +5,7 @@
 #include <boost/nowide/args.hpp>
 #include <boost/algorithm/string.hpp>
 #include <extcpp/error>
+#include <extcpp/assign>
 #include <extcpp/numbers>
 #include <extcpp/os>
 #include <extcpp/ui>
@@ -16,6 +17,7 @@
 #include <extcpp/mutex>
 #include <extcpp/net>
 #include <extcpp/audios>
+#include <extcpp/structure>
 #include <doom/privilege>
 #include <doom/custom>
 #include <doom/ipdb>

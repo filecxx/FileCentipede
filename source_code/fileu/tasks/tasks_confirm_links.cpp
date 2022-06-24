@@ -3,8 +3,9 @@
 namespace pro::tasks
 {
 
-confirm_links::confirm_links(pro::global& global) : pro::dialog_sample<>(global,"ui/tasks/confirm_links.sml")
+confirm_links::confirm_links(pro::global& global) : pro::dialog_sample<pro::global>(global,"ui/tasks/confirm_links.sml")
 {
+    init_actions();
     init_form();
     init_events();
 
@@ -18,7 +19,7 @@ confirm_links::confirm_links(pro::global& global) : pro::dialog_sample<>(global,
 bool confirm_links::matches_filter(ext::text_view text)
 {
     std::vector<std::regex> rules;
-    ext::parser::split_lines(filter_->value().text_view(),[&](auto str,auto index){
+    ext::parser::split_lines(filter_rule_->value().text_view(),[&](auto str,auto index){
         try{
             rules.emplace_back(std::string(str),std::regex_constants::ECMAScript | std::regex_constants::optimize);
         }catch(...){}
@@ -40,11 +41,41 @@ bool confirm_links::matches_filter(ext::text_view text)
 
 
 ///---------------------------
+void confirm_links::init_actions()
+{
+    ui.on_action("#act_delete_selected",[this]{
+        table_->remove_selected_rows();
+    });
+    ui.on_action("#act_check_on",[this]
+    {
+        for(auto row : table_->selected_rows()){
+            table_->item(row)->checked(2);
+        }
+    });
+    ui.on_action("#act_uncheck_off",[this]{
+        for(auto row : table_->selected_rows()){
+            table_->item(row)->checked(0);
+        }
+    });
+    ui.on_action("#act_check_all",[this]{
+        table_->each([&](auto index){
+            table_->item(index)->checked(2);
+            return false;
+        });
+    });
+    ui.on_action("#act_uncheck_all",[this]{
+        table_->each([&](auto index){
+            table_->item(index)->checked(0);
+            return false;
+        });
+    });
+}
+
 void confirm_links::init_form()
 {
     form_ = ext::ui::form(ui.root());
     ui.cast(table_,"#table");
-    ui.cast(filter_,"#filter");
+    ui.cast(filter_rule_,"#filter");
     ui.cast(filter_field_,"#filter_field");
     ui.cast(filter_text_,"#filter_text");
     ui.cast(proxy_combobox_,"#proxy");
@@ -57,6 +88,9 @@ void confirm_links::init_events()
     });
     ui.on_click("#download_now",[this](auto){
         on_download(true);
+    });
+    table_->on_context_menu([this](auto){
+        table_->show_context_menu();
     });
 }
 
@@ -101,9 +135,9 @@ void confirm_links::on_download(bool immediately)
         value["uri"]             = table_->sibling_text(index,"url");
 
         if(!immediately){
-            value["download_later"] = true;
+            value["later"] = true;
         }
-        zzz.send(ext::value::merge(ext::value(config),std::move(value)).stringify());
+        zzz->send(ext::value::merge(ext::value(config),std::move(value)).stringify());
         return false;
     });
     dialog_->close();
@@ -113,11 +147,11 @@ void confirm_links::on_download(bool immediately)
 ///---------------------------
 void confirm_links::load_catalogs()
 {
-    Ext_Return_If(!zzz.catalogs.is_map());
+    Ext_Return_If(!zzz->catalogs.is_map());
 
     auto combobox = ui.cast_id<ext::ui::combobox*>("catalog");
 
-    for(auto& iter : *zzz.catalogs.cast_map()){
+    for(auto& iter : *zzz->catalogs.cast_map()){
         combobox->append(iter.first.text(),iter.first.text());
     }
     combobox->on_index_change([this,combobox](auto index)
@@ -125,9 +159,9 @@ void confirm_links::load_catalogs()
         ext::text path;
 
         if(index == 0){
-            path = zzz.configs["general"].text_view("default_save_path");
-        }else if(auto name = combobox->item_text(index);zzz.catalogs.contains(name)){
-            path = zzz.catalogs[name].text_view("path");
+            path = zzz->configs["general"].text_view("default_save_path");
+        }else if(auto name = combobox->item_text(index);zzz->catalogs.contains(name)){
+            path = zzz->catalogs[name].text_view("path");
         }
         ui.set_value("#save_path",path);
     });
@@ -135,15 +169,15 @@ void confirm_links::load_catalogs()
 
 void confirm_links::load_filters()
 {
-    auto& files = zzz.configs["filters"]["torrent_files"];
+    auto& files = zzz->configs["filters"]["torrent_files"];
 
     if(files.is_array())
     {
         for(auto& item : *files.cast_array()){
-            filter_->append(item.text_view("name"),item.text_view("rule"));
+            filter_rule_->append(item.text_view("name"),item.text_view("rule"));
         }
     }
-    filter_->on_change([this](auto str){
+    filter_rule_->on_change([this](auto str){
         on_filter();
     });
     filter_field_->on_change([this](auto str){
@@ -156,11 +190,11 @@ void confirm_links::load_filters()
 
 void confirm_links::load_proxies()
 {
-    if(zzz.proxies.is_map() && proxy_combobox_)
+    if(zzz->proxies.is_map() && proxy_combobox_)
     {
-        auto current = zzz.configs["network"].text("proxy");
+        auto current = zzz->configs["network"].text("proxy");
 
-        for(auto& iter : *zzz.proxies.cast_map())
+        for(auto& iter : *zzz->proxies.cast_map())
         {
             proxy_combobox_->append(iter.first.text(),iter.first.text());
 
@@ -191,12 +225,12 @@ void confirm_links::add(ext::value& value)
         }
         filename += ".html";
     }
-    value["file_name"] = (filename = ext::uri::optimize_file_name(filename));
+    value["file_name"] = (filename = ext::fs::optimize_file_name(filename));
 
     auto row  = table_->create_row(value);
     auto item = (ext::ui::standard_item*)row[0];
 
-    item->icon(zzz.icons_mime.mime(filename,24));
+    item->icon(zzz->icons_mime.mime(filename,24));
     item->checkable(true);
     item->checked(2);
     table_->append_row(row);
@@ -212,11 +246,12 @@ void confirm_links::exec(ext::value& values)
     for(auto& iter : *values["links"].cast_array()){
         add(iter);
     }
-    form_.values(ext::value::merge(zzz.task_config(protocol::Task_HTTP),ext::value(values)));
+    form_.values(ext::value::merge(zzz->task_config(protocol::Task_HTTP),ext::value(values)));
 
     load_catalogs();
     load_filters();
     load_proxies();
+
     dialog_->show_active();
 }
 

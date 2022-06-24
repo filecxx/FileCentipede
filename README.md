@@ -1,9 +1,14 @@
+![image](https://user-images.githubusercontent.com/100348948/165334090-0b1a6f28-554e-484b-9946-1ffef010fa78.png)
+#
+<a href="http://filecxx.com" target="_blank">
+  <img src="./style/images/logo_128.png" width="128" alt="File Centipede Icon" />
+</a>
+
 website: [http://filecxx.com](http://filecxx.com)
 
-# File Centipede
-File centipede is an internet file download manager with enhanced features, 
-it's fast, customizable, user-friendly, multi-protocol supported, contains lots of useful auxiliary tools, 
-and it's free with no ads, you can also use it to download audio and videos from websites, 
+File centipede is an internet file download manager with enhanced features,
+it's fast, customizable, user-friendly, multi-protocol supported, contains lots of useful auxiliary tools,
+and it's free with no ads, you can also use it to download audio and videos from websites,
 increase your download speeds by up to 1.1 times, it's the best internet download manager you can find(so far).
 
 ## Source code

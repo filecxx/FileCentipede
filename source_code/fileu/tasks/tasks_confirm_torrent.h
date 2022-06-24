@@ -6,7 +6,7 @@
 namespace pro::tasks
 {
 
-class confirm_torrent : public pro::dialog_sample<>
+class confirm_torrent : public pro::dialog_sample<pro::global>
 {
     struct task_directory_t
     {
@@ -45,9 +45,13 @@ protected:
     */
     ext::ui::form form_information_;
     /*
-     * options loaded
+     * attr loaded
     */
-    ext::boolean_t options_loaded_ = false;
+    ext::boolean_t attr_loaded_ = false;
+    /*
+     * meta loaded
+    */
+    ext::boolean_t meta_loaded_ = false;
     /*
      * files loaded
     */
@@ -64,6 +68,13 @@ protected:
      * id
     */
     std::int64_t id_ = 0;
+
+
+protected:
+    /*
+     * init actions
+    */
+    void init_actions();
 
 
 protected:
@@ -101,6 +112,10 @@ public:
      * update
     */
     void update(ext::value& json,uint16_t state);
+    /*
+     * update files
+    */
+    void update_files(ext::value& json,uint32_t total,uint32_t offset,uint32_t size);
     /*
      * destroy
     */

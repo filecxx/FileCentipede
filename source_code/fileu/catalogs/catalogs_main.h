@@ -7,7 +7,7 @@
 namespace pro::catalogs
 {
 
-class main : public pro::sample
+class main : public pro::sample<>
 {
 public:
     main(pro::global& global,ext::ui::list* list);

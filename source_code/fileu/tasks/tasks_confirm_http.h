@@ -6,7 +6,7 @@
 namespace pro::tasks
 {
 
-class confirm_http : public pro::dialog_sample<>
+class confirm_http : public pro::dialog_sample<pro::global>
 {
 public:
     confirm_http(pro::global& global,ext::value& json,ext::func<void(int64_t,bool)>&& callback);

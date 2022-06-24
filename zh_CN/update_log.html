@@ -53,6 +53,53 @@
             <h1>更新日志</h1>
         </div>
         <div class="section">
+            <h3>2.0 (uptime: 2022.06.24)</h3>
+            <h4>New:</h4>
+            <p>opening a task file show an alert when the file has been deleted or moved.</p>
+            <p>context-menu for torrent confirm-dialog</p>
+            <p>supported command line: curl, wget, aria2, axel</p>
+            <p>option: silent mode</p>
+            <p>detail panel: blocks</p>
+            <p>detail panel: connections</p>
+            <p>protocol: SSH(sftp)</p>
+            <p>option: proxy modes (Always, If_Available, Round_Robin, Round_Robin_Connections)</p>
+            <p>option: no task record</p>
+            <p>option: parallel (smooth, fastest)</p>
+            <p>settings: stream task</p>
+            <p>settings: SSH</p>
+            <p>settings: File Browser</p>
+            <p>download directory & upload directory</p>
+            <p>file browser, network file manager for WebDAV, WebDAVS, FTP, FTPS, SSH(SFTP)</p>
+            <p>...</p>
+            <h4>Fixed:</h4>
+            <p>filec fails to start when the database file is broken.</p>
+            <p>global-speed-limit settings for stream tasks.</p>
+            <p>file icon association error on windows.</p>
+            <p>filec crashes when the service receives an empty request.</p>
+            <p>filec crashes when the local network is unavailable.</p>
+            <p>ftp compatibility for non-standard server.</p>
+            <p>HTTP cookie containing a "secure" field case endless loop.</p>
+            <p>when add-task dialog switching the URL config causing fields are missed.</p>
+            <p>stream-task missing completed dialog.</p>
+            <p>tasks-detail update data is in slow motion.</p>
+            <p>tray icon show/hide fails in some case.</p>
+            <p>http-task state frozen when the response body is empty.</p>
+            <p>torrent-confirm dialog information error.</p>
+            <p>an invalid file is downloaded when the HTTP response code is 206 and the keep-alive is false.</p>
+            <p>incomplete encoded URI path.</p>
+            <p>encode URI path before sending the HTTP header.</p>
+            <p>stream-task HTTP response code 474 marked as server busy.</p>
+            <p>copy address from task error (std::string_view out of scope).</p>
+            <p>an empty file was downloaded when the HTTP response headers contained content-encoding and content-range.</p>
+            <p>"Host" field in HTTP headers.</p>
+            <p>translation tool: Israel has been removed from the Arabic countries list.</p>
+            <p>heap-use-after-free.</p>
+            <p>uncaught exceptions.</p>
+            <p>...</p>
+            <h4>Changes:</h4>
+            <p>few</p>
+        </div>
+        <div class="section">
             <h3>1.9 (uptime: 2022.03.27)</h3>
             <h4>Fixed:</h4>
             <p>The downloaded file is 1 byte when the HTTP header field "content-range" did not contain the "bytes" string</p>
@@ -148,9 +195,6 @@
             <div class="contact_">
                 <a target="_blank" href="https://twitter.com/namelessitguy">Twitter</a>
                 <a target="_blank" href="https://www.reddit.com/user/namelessitguy">Reddit</a>
-                <a target="_blank" href="https://mewe.com/i/namelessitguy">MeWe</a>
-                <a target="_blank" href="https://gab.com/namelessitguy">Gab</a>
-                <a target="_blank" href="https://gettr.com/user/namelessitguy">Gettr</a>
             </div>
         </div>
     </div>

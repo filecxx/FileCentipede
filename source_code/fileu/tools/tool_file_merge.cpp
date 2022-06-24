@@ -3,7 +3,7 @@
 namespace pro::tools
 {
 
-file_merge::file_merge(pro::global& global) : pro::dialog_sample<>(global,"ui/tools/file_merge.sml")
+file_merge::file_merge(pro::global& global) : pro::dialog_sample<pro::global>(global,"ui/tools/file_merge.sml")
 {
     ui.cast(normal_files_,"#normal_files");
     ui.cast(statusbar_,"#status");
@@ -49,7 +49,7 @@ void file_merge::merge_normal_files(ext::cfile&& file,const std::vector<ext::fs:
     auto show_error = [&](auto text,auto path)
     {
         ext::ui::post([this,text,path]{
-            ext::ui::alert("error",ext::ui::lang("error"),ext::text(ext::ui::lang(text)) + " : " + ext::text(path.u8string())).exec();
+            ext::ui::alert("error","error"_lang,ext::text(ext::ui::lang(text)) + " : " + ext::text(path.u8string())).exec();
             merge_done();
         });
     };
@@ -73,7 +73,7 @@ void file_merge::merge_normal_files(ext::cfile&& file,const std::vector<ext::fs:
         }
     }
     ext::ui::post([this]{
-        statusbar_->message(ext::ui::lang("merge_success"));
+        statusbar_->message("merge_success"_lang);
         merge_done();
     });
 }
@@ -124,7 +124,7 @@ void file_merge::normal_add(const std::vector<ext::text>& files)
 
 void file_merge::normal_add()
 {
-    normal_add(ext::ui::file_dialog::open_files(ext::ui::lang("open_file")));
+    normal_add(ext::ui::file_dialog::open_files("open_file"_lang));
 }
 
 void file_merge::normal_remove()
@@ -143,13 +143,13 @@ void file_merge::normal_merge()
 {
     ext::cfile                 file;
     std::vector<ext::fs::path> paths;
-    ext::fs::path              save_path = ext::ui::file_dialog::save_file(ext::ui::lang("save_file"));
+    ext::fs::path              save_path = ext::ui::file_dialog::save_file("save_file"_lang);
 
     if(save_path.empty()){
         return;
     }
     if(!file.open(save_path,"wb")){
-        ext::ui::alert("error",ext::ui::lang("error"),ext::ui::lang("create_file_error")).exec();
+        ext::ui::alert("error","error"_lang,"create_file_error"_lang).exec();
         return;
     }
     normal_files_->each([&](auto index)

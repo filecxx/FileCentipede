@@ -6,10 +6,11 @@
 namespace pro
 {
 
+template<typename global_type = pro::global>
 class sample : public ext::ui::sample
 {
 public:
-    sample(pro::global& global,const ext::fs::path& path) : ext::ui::sample(global.workspace / path),
+    sample(global_type& global,const ext::fs::path& path) : ext::ui::sample(global->workspace / path),
         zzz(global)
     {
 
@@ -20,15 +21,15 @@ protected:
     /*
      * global
     */
-    pro::global& zzz;
+    global_type& zzz;
 
 };
 
-template<typename dialog_type=ext::ui::dialog>
+template<typename global_type,typename dialog_type=ext::ui::dialog>
 class dialog_sample : public ext::ui::sample
 {
 public:
-    dialog_sample(pro::global& global,const ext::fs::path& path,ext::text_view dialog_id = "main") : ext::ui::sample(global.workspace / path),
+    dialog_sample(global_type& global,const ext::fs::path& path,ext::text_view dialog_id = "main") : ext::ui::sample(global->workspace / path),
         zzz(global)
     {
         if(!dialog_id.empty()){
@@ -41,7 +42,7 @@ protected:
     /*
      * global
     */
-    pro::global& zzz;
+    global_type& zzz;
     /*
      * dialog
     */

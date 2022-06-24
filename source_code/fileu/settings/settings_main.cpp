@@ -3,12 +3,14 @@
 namespace pro::settings
 {
 
-main::main(pro::global& global) : pro::dialog_sample<>(global,"ui/settings/main.sml")
+main::main(pro::global& global,settings::main*& self_ptr) : pro::dialog_sample<pro::global>(global,"ui/settings/main.sml"),self(self_ptr)
 {
-    init_languages();
-    init_fonts();
+    ui.cast(list_,"#settings_list");
+    ui.cast(widgets_,"#settings_widgets");
+
+    init_form("general");
+    init_list();
     init_events();
-    init_user_agents();
 
     if(zzz.settings.is_map())
     {
@@ -17,18 +19,41 @@ main::main(pro::global& global) : pro::dialog_sample<>(global,"ui/settings/main.
         }
     }
     dialog_->on_close([this](auto){
-
+        self = nullptr;
+        delete this;
     });
 }
 
 
 ///--------------------------
+void main::init_list()
+{
+    list_->on_current_row_change([this](auto row)
+    {
+        auto item = list_->item(row);
+        auto data = list_->item_data((ext::ui::list_item*)item);
+
+        if(!data.is_string() || data.empty()){
+            return;
+        }
+        if(current_){
+            current_->hide();
+        }
+        if(auto name = data.text();!loaded_.contains(name)){
+            init_form(name);
+        }else{
+            current_ = ui.query('#' + name)->object.cast<ext::ui::widget*>();
+            current_->show();
+        }
+    });
+}
+
 void main::init_languages()
 {
     auto lang  = ui.cast_id<ext::ui::combobox*>("gen_lang");
-    auto error = std::error_code();
+    auto error = ext::error_code();
 
-    for(auto& iter: std::filesystem::directory_iterator("lang/",error))
+    for(auto& iter: ext::fs::directory_iterator("lang/",error))
     {
         auto& path = iter.path();
 
@@ -55,7 +80,7 @@ void main::init_proxies()
     auto selected = zzz.configs["network"].text("proxy");
 
     proxies->clear();
-    proxies->append(ext::ui::lang("no_proxy"));
+    proxies->append("no_proxy"_lang);
 
     if(zzz.proxies.is_map())
     {
@@ -98,16 +123,46 @@ void main::init_events()
         }
         dialog_->close();
     });
-    ui.on_click("#settings_cancel",[this](auto){
-        dialog_->close();
-    });
 }
 
 void main::init_user_agents()
 {
-    ui.on_click("#edit_user_agents",[this](auto){
+    ui.on_click("#edit_http_user_agents",[this](auto){
         edit_user_agents();
     });
+}
+
+void main::init_form(const ext::text& name)
+{
+    ext::text path = "ui/settings/" + name + ".sml";
+
+    if(!ui.import(path)){
+        return ext::ui::alert("error","error"_lang,ext::text("Load UI file " + path + " failed."))(),void();
+    }
+    auto node = ui.query('#' + name);
+    widgets_->add(node->object);
+    current_ = node->object.cast<ext::ui::widget*>();
+    current_->show();
+
+    if(name == "general"){
+        init_languages();
+        init_fonts();
+    }else if(name == "network"){
+        init_proxies();
+    }else if(name == "http"){
+        init_user_agents();
+    }
+    for(auto& iter : *zzz.configs.cast_map())
+    {
+        auto key = iter.first.string();
+
+        if(key == name || key.starts_with(name + "_")){
+            if(auto page = ui.query("#page_" + key)){
+                ext::ui::form(page).values(iter.second);
+            }
+        }
+    }
+    loaded_.emplace(name);
 }
 
 
@@ -115,8 +170,8 @@ void main::init_user_agents()
 void main::edit_user_agents()
 {
     auto& config   = zzz.configs["http_user_agents"];
-    auto  combobox = ui.cast_id<ext::ui::combobox*>("user_agents");
-    auto  sample   = new pro::dialog_sample(zzz,"ui/settings/user_agents.sml");
+    auto  combobox = ui.cast_id<ext::ui::combobox*>("http_user_agents");
+    auto  sample   = new pro::dialog_sample<pro::global>(zzz,"ui/settings/user_agents.sml");
     auto  dialog   = sample->dialog();
     auto  edit     = sample->ui.cast<ext::ui::text_edit*>("TextEdit");
 
@@ -146,8 +201,9 @@ void main::set_autostart(bool state)
     doom::startup::normal startup(config);
 
     config.name  = "fileu";
-    config.title = ext::ui::lang("software_name_");
+    config.title = "software_name_"_lang;
     config.path  = zzz.workspace.executable("fileu").u8string();
+    config.args  = "boot";
 
     if(state)
     {
@@ -164,20 +220,6 @@ void main::set_autostart(bool state)
 ///--------------------------
 void main::exec()
 {
-    if(zzz.configs.empty()){
-        goto bottom;
-    }
-    for(auto& iter : *zzz.configs.cast_map())
-    {
-        auto name = iter.first.string();
-        auto page = ui.query("#page_" + name);
-
-        if(page){
-            ext::ui::form(page).values(iter.second);
-        }
-    }
-    bottom:
-    init_proxies();
     dialog_->show();
 }
 

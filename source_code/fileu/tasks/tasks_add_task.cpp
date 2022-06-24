@@ -3,14 +3,27 @@
 namespace pro::tasks
 {
 
-add_task::add_task(pro::global& global,ext::boolean_t is_stream,std::string_view ui_path) : pro::dialog_sample<>(global,ui_path),is_stream_(is_stream)
+add_task::add_task(pro::global& global,ext::boolean_t is_stream,ext::boolean_t is_directory) :
+    pro::dialog_sample<pro::global>(global,"ui/tasks/add_task.sml"),
+    is_stream_(is_stream),
+    is_directory_(is_directory)
 {
     dialog_->on_close([this](auto){
         ext::invoke(on_delete_);
         delete this;
     });
+    placeholders_ = ui("#placeholders");
     ui.cast(addresses_,"#addresses");
     ui.cast(tab_,"#tab");
+
+    auto placeholder = "file";
+
+    if(is_stream){
+        placeholder = "m3u8";
+    }else if(is_directory){
+        placeholder = "directory";
+    }
+    addresses_->setPlaceholderText(ext::ui::string(placeholders_->value(placeholder).text_view()));
 }
 
 add_task::~add_task()
@@ -22,9 +35,6 @@ add_task::~add_task()
 ///--------------------------
 void add_task::analyze_addresses()
 {
-    auto& general_config = zzz.configs["general"];
-    auto& network_config = zzz.configs["network"];
-
     ext::text protocol;
     ext::parser::split_lines(addresses_->text(),[&](auto& line,auto n)
     {
@@ -32,15 +42,22 @@ void add_task::analyze_addresses()
         {
             pro::uri uri;
 
-            if(address.starts_with('{') && address.ends_with('}'))
-            {
-                if(uri.analyze_json(address,ext::Map)){
-                    auto key = uri.config.text("uri");
-                    uris_.emplace(std::move(key),config_t{uri.type,std::move(uri.config)});
-                }
-            }else if(uri.analyze(address,ext::Map)){
-                uris_.emplace(line,config_t{uri.type,std::move(uri.config)});
+            if(!uri.analyze(address,ext::Map)){
+                return false;
             }
+            if(is_stream_)
+            {
+                if(uri.type != protocol::Task_HTTP){
+                    return false;
+                }
+                uri.type = protocol::Task_Stream;
+            }else if(is_directory_){
+                if(uri.type != protocol::Task_HTTP && uri.type != protocol::Task_FTP && uri.type != protocol::Task_SSH){
+                    return false;
+                }
+            }
+            auto key = uri.config.text("uri");
+            uris_.emplace(std::move(key),config_t{uri.type,std::move(uri.config)});
         }
         return false;
     });
@@ -58,25 +75,20 @@ void add_task::analyze_addresses()
         if(configs_.contains(iter.first)){
             continue;
         }
-        if(is_stream_ && iter.second.type != protocol::Task_HTTP){
-            continue;
-        }
-        ext::value values = ext::value::merge(zzz.task_config(iter.second.type),std::move(iter.second.values));
-        values["@"]         = is_stream_ ? protocol::Message_Task_Add_Stream : protocol::Message_Task_Add;
-        values["uri"]       = iter.first;
-        values["save_path"] = general_config.get("default_save_path");
-        values["proxy"]     = network_config.get("proxy");
-
         if(!combobox_configs_[iter.second.type]){
             ui.import(tab_->item_data(iter.second.type + 1).string());
             init_form(ext::text(protocol::Task_Types_Text[iter.second.type]),iter.second.type);
         }
+        ext::value values = default_values_[iter.second.type];
+        values.merge(std::move(iter.second.values));
+        values["uri"] = iter.first;
+
         configs_.emplace(iter.first,config_t{iter.second.type,std::move(values)});
         combobox_configs_[iter.second.type]->append(iter.first);
     }
     for(int i=0;i<combobox_configs_.size();++i){
         if(combobox_configs_[i]){
-            tab_->setTabVisible(i + 1,combobox_configs_[i]->count() != 0);
+            tab_->visible(i + 1,combobox_configs_[i]->count() != 0);
         }
     }
     uris_.clear();
@@ -90,12 +102,21 @@ void add_task::download(bool immediately)
     for(auto& iter : configs_)
     {
         if(!immediately){
-            iter.second.values["download_later"] = true;
+            iter.second.values["later"] = true;
         }
         if(iter.second.type != protocol::Task_Torrent){
             iter.second.values["without_confirm"] = true;
         }
-        zzz.send(iter.second.values.stringify());
+        if(is_directory_)
+        {
+            uint32_t mode = 0;
+
+            if(auto val = iter.second.values.get("mode");val.is_number()){
+                mode = val.uint32();
+            }
+            iter.second.values["mode"] = mode | protocol::Task_Mode_Directory;
+        }
+        zzz->send(iter.second.values.stringify());
     }
     dialog_->close();
 }
@@ -169,11 +190,11 @@ void add_task::init_form(const ext::text& name,uint16_t type)
             forms_[type].values(config->values);
         }
     });
-    if(zzz.proxies.is_map() && proxy_combobox)
+    if(zzz->proxies.is_map() && proxy_combobox)
     {
-        auto current = zzz.configs["network"].text("proxy");
+        auto current = zzz->configs["network"].text("proxy");
 
-        for(auto& iter : *zzz.proxies.cast_map())
+        for(auto& iter : *zzz->proxies.cast_map())
         {
             proxy_combobox->append(iter.first.text(),iter.first.text());
 
@@ -182,9 +203,9 @@ void add_task::init_form(const ext::text& name,uint16_t type)
             }
         }
     }
-    if(zzz.catalogs.is_map())
+    if(zzz->catalogs.is_map())
     {
-        for(auto& iter : *zzz.catalogs.cast_map()){
+        for(auto& iter : *zzz->catalogs.cast_map()){
             catalog_combobox->append(iter.first.text(),iter.first.text());
         }
         catalog_combobox->on_index_change([this,type,catalog_combobox](auto index)
@@ -192,13 +213,19 @@ void add_task::init_form(const ext::text& name,uint16_t type)
             ext::text path;
 
             if(index == 0){
-                path = zzz.configs["general"].text_view("default_save_path");
-            }else if(auto name = catalog_combobox->item_text(index);zzz.catalogs.contains(name)){
-                path = zzz.catalogs[name].text_view("path");
+                path = zzz->configs["general"].text_view("default_save_path");
+            }else if(auto name = catalog_combobox->item_text(index);zzz->catalogs.contains(name)){
+                path = zzz->catalogs[name].text_view("path");
             }
             forms_[type].values({{"save_path",path}});
         });
     }
+    auto values = forms_[type].values();
+    values["@"]         = is_stream_ ? protocol::Message_Task_Add_Stream : protocol::Message_Task_Add;
+    values["save_path"] = zzz->configs["general"].get("default_save_path");
+    values["proxy"]     = zzz->configs["network"].get("proxy");
+
+    default_values_[type] = ext::value::merge(values,zzz->task_config(type));
 }
 
 void add_task::init_events()
@@ -218,6 +245,7 @@ void add_task::init_events()
             analyze_addresses();
         },500ms);
     });
+
 }
 
 

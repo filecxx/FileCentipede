@@ -1,7 +1,6 @@
 #ifndef PRO_TASKS_MAIN_H
 #define PRO_TASKS_MAIN_H
 
-#include "../pro_global.h"
 #include "../catalogs/catalogs_main.h"
 #include "tasks_add_task.h"
 #include "tasks_edit_task.h"
@@ -9,7 +8,7 @@
 #include "tasks_confirm_torrent.h"
 #include "tasks_confirm_http.h"
 #include "tasks_refresh_address.h"
-#include "tasks_download_completed.h"
+#include "tasks_transfer_completed.h"
 
 namespace pro::tasks
 {
@@ -23,6 +22,8 @@ class main
     {
         std::uint16_t  type;
         std::uint16_t  state       = protocol::State_Invalid;
+        std::uint32_t  files       = 0;
+        std::uint32_t  requery     = 0;
         ext::boolean_t full_status = false;
         node_type*     node        = nullptr;
     };
@@ -33,9 +34,9 @@ class main
     };
     struct task_directory_t
     {
-        int32_t checked[3] = {0,0,0};
-        int64_t downloaded = 0;
-        int64_t file_size  = 0;
+        int32_t checked[3]  = {0,0,0};
+        int64_t transferred = 0;
+        int64_t file_size   = 0;
     };
 
 
@@ -74,6 +75,14 @@ protected:
      * tasks
     */
     ext::ui::filesystem* tasks_ = nullptr;
+    /*
+     * status panel
+    */
+    ext::ui::widget* nav_status_panel_ = nullptr;
+    /*
+     * catalogs panel
+    */
+    ext::ui::widget* nav_catalogs_panel_ = nullptr;
     /*
      * status
     */
@@ -195,21 +204,25 @@ protected:
      * query progress
     */
     void query_progress(int64_t id,uint16_t type);
+    /*
+     * query files
+    */
+    void query_files(int64_t id,uint16_t type,uint32_t offset,uint32_t size);
 
 
 protected:
     /*
      * add task
     */
-    void add_task(uint16_t type,uint16_t state,int64_t id,ext::value& json,const ext::value& files,bool full_status);
+    void add_task(uint16_t type,uint16_t state,int64_t id,uint32_t mode,ext::value& json,bool full_status);
     /*
      * update task
     */
-    bool update_task(uint16_t state,int64_t id,ext::value& json,const ext::value& files,bool full_status);
+    bool update_task(uint16_t state,int64_t id,uint32_t mode,ext::value& json,bool full_status);
     /*
      * update task files
     */
-    void update_task_files(int64_t id,task_t& task,const ext::value& items);
+    void update_task_files(int64_t id,task_t& task,ext::value& json);
     /*
      * update tasks catalog
     */
@@ -382,29 +395,33 @@ public:
      * on torrent confirming
     */
     void on_torrent_confirming(ext::value& json,int64_t id,uint16_t type,uint16_t state);
+    /*
+      * on task confirmed
+     */
+    void on_task_confirmed(std::int64_t id,ext::boolean_t confirmed);
+    /*
+     * on task confirming
+    */
+    void on_task_confirming(ext::value& json,int64_t id,uint16_t type,uint16_t state);
+    /*
+     * on confirming files
+    */
+    void on_confirming_files(int64_t id,uint16_t type,ext::value& json,void* ptr);
 
 
 public:
     /*
      * on task error
     */
-    void on_task_error(int64_t id,task_t& task,uint16_t old_state,const ext::text& error);
+    bool on_task_error(int64_t id,task_t& task,uint16_t old_state,const ext::text& error);
     /*
      * on task completed
     */
-    void on_task_completed(int64_t id,task_t& task,uint16_t old_state);
+    bool on_task_completed(int64_t id,task_t& task,uint16_t old_state);
     /*
      * on task state
     */
     void on_task_state(ext::value& json,int64_t id,task_t& task,uint16_t old_state);
-    /*
-     * on task confirmed
-    */
-    void on_task_confirmed(std::int64_t id,ext::boolean_t confirmed);
-    /*
-     * on task confirming
-    */
-    void on_task_confirming(ext::value& json,int64_t id,uint16_t type,uint16_t state);
     /*
      * on task status
     */
@@ -413,6 +430,10 @@ public:
      * on task progress
     */
     void on_task_progress(ext::value& json);
+    /*
+     * on task files
+    */
+    void on_task_files(ext::value& json);
     /*
      * on task detail
     */

@@ -6,7 +6,7 @@
 namespace pro::tasks
 {
 
-class confirm_links : public pro::dialog_sample<>
+class confirm_links : public pro::dialog_sample<pro::global>
 {
 public:
     confirm_links(pro::global& global);
@@ -28,7 +28,7 @@ protected:
     /*
      * filter
     */
-    ext::ui::combobox* filter_ = nullptr;
+    ext::ui::combobox* filter_rule_ = nullptr;
     /*
      * filter field
     */
@@ -51,6 +51,10 @@ protected:
 
 
 protected:
+    /*
+     * init actions
+    */
+    void init_actions();
     /*
      * init form
     */

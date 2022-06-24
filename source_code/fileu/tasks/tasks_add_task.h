@@ -6,7 +6,7 @@
 namespace pro::tasks
 {
 
-class add_task : public pro::dialog_sample<>
+class add_task : public pro::dialog_sample<pro::global>
 {
     struct config_t
     {
@@ -16,7 +16,7 @@ class add_task : public pro::dialog_sample<>
 
 
 public:
-    add_task(pro::global& global,ext::boolean_t is_stream,std::string_view ui_path);
+    add_task(pro::global& global,ext::boolean_t is_stream,ext::boolean_t is_directory);
 
 
 public:
@@ -28,6 +28,10 @@ protected:
      * is stream
     */
     ext::boolean_t is_stream_ = false;
+    /*
+     * is directory
+    */
+    ext::boolean_t is_directory_ = false;
     /*
      * tab
     */
@@ -49,6 +53,10 @@ protected:
     */
     std::array<config_t*,protocol::Task_Types_Size> current_configs_ = {};
     /*
+     * default values
+    */
+    std::array<ext::value,protocol::Task_Types_Size> default_values_ = {};
+    /*
      * timer
     */
     std::int64_t timer_ = 0;
@@ -68,6 +76,10 @@ protected:
      * on delete
     */
     std::function<void()> on_delete_;
+    /*
+     * placeholders
+    */
+    ext::ui::node_t* placeholders_ = nullptr;
 
 
 public:

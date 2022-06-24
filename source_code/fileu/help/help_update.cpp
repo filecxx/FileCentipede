@@ -3,7 +3,7 @@
 namespace pro::help
 {
 
-update::update(pro::global& global) : pro::dialog_sample<>(global,"ui/help/update.sml")
+update::update(pro::global& global) : pro::dialog_sample<pro::global>(global,"ui/help/update.sml")
 {
     dialog_->on_close([this](auto){
         ext::ui::clear_timeout(timer_);

@@ -6,7 +6,7 @@
 namespace pro::settings
 {
 
-class filter : public pro::dialog_sample<>
+class filter : public pro::dialog_sample<pro::global>
 {
 public:
     filter(pro::global& global);

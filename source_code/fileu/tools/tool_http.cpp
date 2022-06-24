@@ -3,7 +3,7 @@
 namespace pro::tools
 {
 
-http::http(pro::global& global) : pro::dialog_sample<>(global,"ui/tools/http.sml")
+http::http(pro::global& global) : pro::dialog_sample<pro::global>(global,"ui/tools/http.sml")
 {
     form_response_ = ext::ui::form(ui("#response_headers_widget"));
     empty_values_  = form_response_.values();
@@ -85,7 +85,7 @@ void http::load_request_values(request_values_t& request)
     request.tpl_text     = ui.query_value("#tpl_text").text();
 
     if(!request.tpl_name.empty()){
-        request.tpl_text = ext::uri::encode(request.tpl_prefix + request.tpl_text);
+        request.tpl_text = ext::convert::uri::encode(request.tpl_prefix + request.tpl_text);
         boost::replace_all(request.url,request.tpl_name,request.tpl_text);
         boost::replace_all(request.data,request.tpl_name,request.tpl_text);
     }
@@ -181,10 +181,10 @@ void http::request()
         request->add_header(values.headers);
         request->on_data([this](uint8_t* data,uint32_t length,uint64_t received){
             if(received > 4_MB){
-                return false;
+                return ext::errc::No_Space;
             }
             response_data_.append((const char*)data,length);
-            return true;
+            return ext::errc::OK;
         });
         connection->on_close([this](auto& error){
             ext::ui::post([this,error]{

@@ -6,7 +6,7 @@
 namespace pro::settings
 {
 
-class proxies : public pro::dialog_sample<>
+class proxies : public pro::dialog_sample<pro::global>
 {
 public:
     proxies(pro::global& global);

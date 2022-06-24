@@ -17,6 +17,7 @@ int forward_to_client(const ext::value& list)
 {
     ext::ipcx::send(pro::Client_Bin,pro::Version_IPC,list);
     std::exit(0);
+
     return 0;
 }
 
@@ -25,7 +26,9 @@ int forward_to_client(const ext::value& list)
 */
 void try_launch_tool(pro::main_window& window,const ext::fs::path& path)
 {
-    ext::ui::arguments arguments(ext::ui::shared_stack,{(window.zzz.workspace / path).u8string(),"#main"});
+    ext::text file_path = (window.zzz.workspace / path).u8string();
+    std::initializer_list<ext::value_view> args{file_path,"#main"};
+    ext::ui::arguments arguments(ext::ui::shared_stack,args);
     ext::ui::methods::invokers_global["open-window"](arguments);
 }
 
@@ -38,7 +41,7 @@ void try_launch_plugin(pro::main_window& window,int argc,char** argv)
         std::cerr << "error parameters" << std::endl;
         std::exit(0);
     }else{
-        try_launch_tool(window,ext::text("plugins/") + ext::text_view(argv[0]) + "/ui/main.sml");
+        try_launch_tool(window,"plugins/"_text + ext::text_view(argv[0]) + "/ui/main.sml");
     }
 }
 
@@ -75,8 +78,8 @@ void try_command_line(pro::main_window& window,ext::text_view text,int argc,char
     }else{
         std::exit(0);
     }
-
 }
+
 
 /*
  * main
@@ -100,7 +103,7 @@ int main(int argc,char *argv[])
             try_launch_tool(window,"ui/upgrading.sml");
             return app.exec();
         }else if(text == "__upgrading_error__"){
-            ext::ui::alert("error",ext::ui::lang("error"),ext::ui::lang("upgrading_error_message_")).exec();
+            ext::ui::alert("error","error"_lang,"upgrading_error_message_"_lang).exec();
             std::exit(1);
         }else if(text.starts_with("--")){
             check_is_upgrading();
@@ -113,12 +116,15 @@ int main(int argc,char *argv[])
     std::int32_t   error    = pro::errors::OK;
     ext::boolean_t locked   = window.zzz.named_mutex.lock();
     ext::boolean_t add_task = false;
+    ext::boolean_t booting  = false;
 
     if(argc > 1)
     {
         ext::text text(argv[1]);
 
-        if(text == "message" && argc == 3){
+        if(text == "boot"){
+            booting = true;
+        }else if(text == "message" && argc == 3){
             error = std::atoi(argv[2]);
         }else if(argc == 2){
             if(!locked){
@@ -128,14 +134,14 @@ int main(int argc,char *argv[])
         }
     }
     if(error != pro::errors::OK){
-        ext::ui::alert("error",ext::ui::lang("error"),pro::global::error_text(error)).exec();
+        ext::ui::alert("error","error"_lang,pro::global::error_text(error)).exec();
     }
     if(!locked){
         return forward_to_client({{"@",pro::protocol::Message_UI},{"type","active"}});
     }
     if(window.zzz.settings.uint8("installed") < 1){
         (new pro::help::install(window.zzz))->exec(true);
-    }else if(window.create();add_task){
+    }else if(window.create(booting);add_task){
         window.add_task(argv[1],true);
     }
     return app.exec();

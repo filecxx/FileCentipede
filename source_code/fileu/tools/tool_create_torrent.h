@@ -6,7 +6,7 @@
 namespace pro::tools
 {
 
-class create_torrent : public pro::dialog_sample<>
+class create_torrent : public pro::dialog_sample<pro::global>
 {
 public:
     create_torrent(pro::global& global);

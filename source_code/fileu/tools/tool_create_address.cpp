@@ -3,7 +3,7 @@
 namespace pro::tools
 {
 
-create_address::create_address(pro::global& global) : pro::dialog_sample<>(global,"ui/tools/create_address.sml")
+create_address::create_address(pro::global& global) : pro::dialog_sample<pro::global>(global,"ui/tools/create_address.sml")
 {
     dialog_->on_close([this](auto e){
         dialog_result_->close();

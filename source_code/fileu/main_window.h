@@ -3,9 +3,11 @@
 
 #include "pro_global.h"
 #include "pro_sample.h"
+#include "pro_methods.h"
 #include "tasks/tasks_main.h"
 #include "tasks/tasks_confirm_links.h"
-#include "local_files/local_files_main.h"
+#include "file_browser/file_browser_handler.h"
+#include "file_manager/file_manager_main.h"
 #include "search_engine/search_engine_main.h"
 #include "view/view_statistics.h"
 #include "view/view_desktop_shortcuts.h"
@@ -17,6 +19,7 @@
 #include "settings/settings_main.h"
 #include "settings/settings_speed_limit.h"
 #include "settings/settings_proxies.h"
+#include "settings/settings_site_rules.h"
 #include "settings/settings_trackers.h"
 #include "settings/settings_filter.h"
 #include "settings/settings_torrent_query.h"
@@ -24,6 +27,7 @@
 #include "help/help_install.h"
 #include "help/help_uninstall.h"
 #include "help/help_translator.h"
+#include "dialogs/dialog_code.h"
 
 namespace pro
 {
@@ -59,6 +63,10 @@ protected:
     */
     ext::ui::window* window_ = nullptr;
     /*
+     * main tab
+    */
+    ext::ui::tab* main_tab_ = nullptr;
+    /*
      * status
     */
     ext::ui::form status_form_;
@@ -66,21 +74,9 @@ protected:
 
 protected:
     /*
-     * actions initialized
+     * current tab
     */
-    ext::boolean_t actions_initialized_ = false;
-    /*
-     * tray initialized
-    */
-    ext::boolean_t tray_initialized_ = false;
-    /*
-     * clipboard initialized
-    */
-    ext::boolean_t clipboard_initialized_ = false;
-    /*
-     * window size changed
-    */
-    ext::boolean_t window_size_changed_ = false;
+    std::int32_t current_tab_ = 0;
     /*
      * timer
     */
@@ -94,9 +90,9 @@ protected:
     */
     ext::steady_time_point_t timepoint_interval_second_;
     /*
-     * interval handlers
+     * timepoint interval activation
     */
-    std::unordered_map<ext::text,ext::value_view> interval_handlers_;
+    ext::steady_time_point_t timepoint_interval_activation_;
     /*
      * queued messages
     */
@@ -105,9 +101,17 @@ protected:
 
 protected:
     /*
+     * methods
+    */
+    pro::methods methods_;
+    /*
      * tasks
     */
     pro::tasks::main tasks_;
+    /*
+     * file browser
+    */
+    pro::file_browser::handler file_browser_;
     /*
      * search engine
     */
@@ -128,6 +132,10 @@ protected:
     */
     pro::settings::proxies* proxies_ = nullptr;
     /*
+     * site rules
+    */
+    pro::settings::site_rules* site_rules_ = nullptr;
+    /*
      * trackers
     */
     pro::settings::trackers* trackers_ = nullptr;
@@ -143,6 +151,10 @@ protected:
      * update
     */
     pro::help::update* help_update_ = nullptr;
+    /*
+     * code
+    */
+    pro::dialogs::code* dialog_code_ = nullptr;
 
 
 protected:
@@ -161,7 +173,7 @@ protected:
     /*
      * init sizes
     */
-    void init_sizes(ext::ui::object& object);
+    void init_sizes(ext::ui::object& object,bool booting);
     /*
      * init events
     */
@@ -187,10 +199,6 @@ protected:
     */
     void init_clipboard();
     /*
-     * init methods
-    */
-    void init_methods();
-    /*
      * init timer
     */
     void init_timer();
@@ -201,10 +209,6 @@ protected:
 
 
 protected:
-    /*
-     * launch filec
-    */
-    void launch_filec();
     /*
      * show ipc loading
     */
@@ -295,6 +299,14 @@ protected:
      * on trackers
     */
     void on_trackers(ext::value& json);
+    /*
+     * on activation expired
+    */
+    void on_activation_expired(ext::value& json);
+    /*
+     * on activation query
+    */
+    void on_activation_query(ext::value& json);
 
 
 public:
@@ -312,7 +324,7 @@ public:
     /*
      * create
     */
-    void create();
+    void create(bool booting);
 
 };
 

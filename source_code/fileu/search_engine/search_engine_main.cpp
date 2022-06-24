@@ -17,7 +17,7 @@ void main::init_actions()
 
 
 ///---------------------------
-void main::init()
+void main::init(ext::ui::tab* main_tab)
 {
 
 }

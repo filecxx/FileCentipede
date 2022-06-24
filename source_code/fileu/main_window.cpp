@@ -5,10 +5,12 @@ namespace pro
 
 main_window::main_window(ext::ui::application& app) :
     zzz(app),
+    methods_(zzz,ui),
+    file_browser_(zzz,ui),
     tasks_(zzz,ui)
 {
     init_config();
-    init_methods();
+    methods_.init();
 }
 
 main_window::~main_window()
@@ -34,7 +36,7 @@ void main_window::init_config()
 {
     static std::pair<ext::text,ext::text> default_lang[] = {
         {"__version__",ext::f2str(pro::Version,1)},
-        {"__workspace__",zzz.workspace.u8string()}
+        {"__workspace__",zzz.workspace}
     };
     ext::text conf;
     ext::text lang_name;
@@ -62,37 +64,37 @@ void main_window::init_views()
         window_->statusBar()->setVisible(checked);
     });
     view_nav->on_trigger([this](auto checked){
-        ui("#tasks_nav")->object.visible(checked);
+        ui("#nav")->object.visible(checked);
         zzz.setting("view_nav",checked);
     });
     view_catalogs->on_trigger([this](auto checked){
-        ui("#tasks_nav_catalogs_widget")->object.visible(checked);
+        if(current_tab_ == 0){
+            ui("#nav_tasks_catalogs_panel")->object.visible(checked);
+        }
         zzz.setting("view_catalogs",checked);
     });
-
-    if(zzz.settings["view_statusbar"] == false){
+    if(zzz.settings.get("view_statusbar") == false){
         window_->statusBar()->hide();
         view_statusbar->checked(false);
     }
-    if(zzz.settings["view_nav"] == false){
-        ui("#tasks_nav")->object.hide();
+    if(zzz.settings.get("view_nav") == false){
+        ui("#nav")->object.hide();
         view_nav->checked(false);
     }
-    if(zzz.settings["view_catalogs"] == false){
-        ui("#tasks_nav_catalogs_widget")->object.hide();
+    if(zzz.settings.get("view_catalogs") == false){
+        ui("#nav_tasks_catalogs_panel")->object.hide();
         view_catalogs->checked(false);
     }
 }
 
-void main_window::init_sizes(ext::ui::object& object)
+void main_window::init_sizes(ext::ui::object& object,bool booting)
 {
     int32_t width  = 0;
     int32_t height = 0;
 
     if(zzz.settings.get("save_window_size") != true){
-        return object.show("center");
-    }
-    if(zzz.settings.get("maximize") == true){
+        object.show("center");
+    }else if(zzz.settings.get("maximize") == true){
         window_->move_to_center();
         window_->showMaximized();
     }else{
@@ -107,6 +109,10 @@ void main_window::init_sizes(ext::ui::object& object)
         }
         object.show("center");
     }
+    if(zzz.settings.get("tray_icon") == true && (zzz.settings.get("silent_mode") == true || booting)){
+        object.hide();
+        init_tray();
+    }
 }
 
 void main_window::init_events()
@@ -118,15 +124,30 @@ void main_window::init_events()
         }
     });
     window_->on_resize([this](auto){
-        window_size_changed_ = true;
+        methods_.window_size_changed_ = true;
     });
 }
 
 void main_window::init_tabs()
 {
-    ext::ui::post([this]{
-        tasks_.init();
+    ui.cast_id(main_tab_,"main_tab");
+    main_tab_->on_change([this](auto index)
+    {
+        ui.cast<ext::ui::widget*>("#nav")->layout_items([](auto item){
+            item->widget()->hide();
+            return false;
+        });
+        switch(current_tab_ = index)
+        {
+        case 0:
+            return tasks_.init();
+        case 1:
+            return file_browser_->init(main_tab_,(ext::ui::statusbar*)window_->statusBar());
+        case 2:
+            return ext::try_new<pro::search_engine::main>(search_engine_,zzz,ui)->init(main_tab_);
+        }
     });
+    tasks_.init();
 }
 
 void main_window::init_actions()
@@ -166,6 +187,9 @@ void main_window::init_actions()
     ui.on_action_id("act_setting_proxy",[this](auto){
         ext::try_new<pro::settings::proxies>(proxies_,zzz)->exec();
     });
+    ui.on_action_id("act_setting_site_rules",[this](auto){
+        ext::try_new<pro::settings::site_rules>(site_rules_,zzz)->exec();
+    });
     ui.on_action_id("act_setting_tracker",[this](auto){
         ext::try_new<pro::settings::trackers>(trackers_,zzz)->exec();
     });
@@ -176,7 +200,7 @@ void main_window::init_actions()
         ext::try_new<pro::settings::torrent_query>(torrent_query_,zzz)->exec();
     });
     ui.on_action_id("act_settings",[&](auto){
-        ext::try_new<pro::settings::main>(settings_,zzz)->exec();
+        ext::try_new<pro::settings::main>(settings_,zzz,settings_)->exec();
     });
 
 
@@ -192,6 +216,10 @@ void main_window::init_actions()
     });
     ui.on_action_id("act_help_translate",[this](auto){
         (new pro::help::translator(zzz))->exec();
+    });
+    ui.on_action_id("act_help_activation",[this](auto){
+        ext::value value;
+        on_activation_query(value);
     });
 
 
@@ -213,7 +241,7 @@ void main_window::init_ipc()
         show_ipc_loading();
     }
     if(!zzz.ipc.start(pro::Client_Bin,pro::IPC_Space,pro::Version_IPC)){
-        ext::ui::alert("error","error","start ipc failed.").exec();
+        ext::ui::alert("error","error"_lang,"start ipc error.")();
         return zzz.app.exit();
     }
     zzz.ipc.on_client([this](auto client){
@@ -235,7 +263,7 @@ void main_window::init_tray()
         auto tray = ui.cast_id<ext::ui::tray*>("tray");
         tray->bind(window_);
         tray->show();
-        tray_initialized_ = true;
+        methods_.tray_initialized_ = true;
         zzz.app.quit_on_last_window_closed(false);
         window_->ignore_on_close(true);
     }
@@ -268,13 +296,15 @@ void main_window::init_clipboard()
             if(uri.analyze(line,ext::String,false) && uri.scheme != "hash")
             {
                 if(uri.custom_protocol != pro::uri::Custom_None){
-                    if(setting.get(ext::text("enable_") + uri.custom_protocol_text()) == false){
+                    if(setting.get("enable_"_text + uri.custom_protocol_text()) == false){
                         return false;
                     }
-                }else if(setting.get(ext::text("enable_") + uri.scheme) == false){
+                }else if(setting.get("enable_"_text + uri.scheme) == false){
                     return false;
-                }else if((uri.type == protocol::Task_HTTP || uri.type == protocol::Task_FTP)){
-                    if(auto idx = line.rfind('.');idx == ext::text::npos || !suffixes.contains(line.substr(idx + 1))){
+                }else if((uri.type == protocol::Task_HTTP || uri.type == protocol::Task_FTP || uri.type == protocol::Task_SSH)){
+                    ext::uri::address address;
+
+                    if(!ext::uri::parse(uri.config.text(),address) || address.path().suffix().empty() || !suffixes.contains(address.path().suffix())){
                         return false;
                     }
                 }
@@ -289,7 +319,7 @@ void main_window::init_clipboard()
                 instance->active();
             }
         }else{
-            instance = new pro::tasks::add_task(zzz,false,"ui/tasks/add_task.sml");
+            instance = new pro::tasks::add_task(zzz,false,false);
             instance->on_delete([this]{
                 instance = nullptr;
             });
@@ -299,139 +329,7 @@ void main_window::init_clipboard()
         addresses.clear();
         suffixes.clear();
     });
-    clipboard_initialized_ = true;
-}
-
-void main_window::init_methods()
-{
-    static std::unordered_map<ext::text_view,uint16_t> message_types;
-    static main_window* self = this;
-    static auto message_type = [](ext::text_view type) -> uint16_t
-    {
-        if(message_types.empty()){
-            message_types = protocol::to_mapped_task_types();
-        }
-        if(auto iter = message_types.find(type);iter != message_types.end()){
-            return iter->second;
-        }
-        return protocol::Message_Types_Size;
-    };
-    ext::ui::methods::bind(
-    {
-        {"filec-version",[](ext::ui::arguments& arguments){
-            arguments << pro::Version;
-        }},
-        {"filec-lang",[](ext::ui::arguments& arguments){
-            if(arguments.argc == 1 && arguments[0].is_string()){
-                arguments << ext::ui::lang(arguments[0].text_view());
-            }else{
-                arguments << ext::text_view();
-            }
-        }},
-        {"filec-interval",[](ext::ui::arguments& arguments)
-        {
-            Ext_Return_If(arguments.argc != 2);
-
-            if(arguments[0].is_string() && ext::ui::callable(arguments[1])){
-                self->interval_handlers_.emplace(arguments[0].text(),arguments[1]);
-            }
-        }},
-        {"filec-submit",[](ext::ui::arguments& arguments)
-        {
-            Ext_Return_If(arguments.argc < 2 || !arguments[0].is_string() || !arguments[1].is_reference());
-
-            if(auto type = message_type(arguments[0].text_view());type != protocol::Message_Types_Size)
-            {
-                auto form   = ext::ui::form(arguments.node(1));
-                auto values = form.values(); //windows bug
-                values = form.values();
-
-                if(arguments.argc >= 3 && arguments[2].is_pointer()){
-                    ext::value extra;
-                    ext::ui::methods::to_value(arguments.node(2),extra);
-                    values.merge(std::move(extra));
-                }
-                values["@"] = type;
-
-                self->zzz.send(values);
-            }
-        }},
-        {"filec-form",[](ext::ui::arguments& arguments)
-        {
-            ext::ui::form form(arguments.stack.scope);
-
-            if(form && arguments.argc > 0 && arguments[0].is_map()){
-                form.values(arguments[0]);
-            }
-        }},
-        {"filec-send",[](ext::ui::arguments& arguments)
-        {
-            Ext_Return_If(arguments.argc == 0 || !arguments[0].is_string());
-
-            if(auto at = message_type(arguments[0].text_view());at == protocol::Message_Types_Size){
-                ext::debug <<= "filec_send error parameter";
-            }else if(arguments.argc == 1){
-                self->zzz.send({{"@",at}});
-            }else if(arguments.argc == 2 && arguments[1].is_caller())
-            {
-                if(ext::ui::methods::call(arguments.caller(1));arguments.result().is_map()){
-                    ext::value json(std::move(arguments.result()));
-                    json["@"] = at;
-                    self->zzz.send(std::move(json));
-                }
-            }else if(arguments.argc == 2 && arguments[1].is_pointer()){
-                ext::value json({{"@",at}});
-                ext::ui::methods::to_value(arguments.node(1),json);
-
-                self->zzz.send(std::move(json));
-            }
-        }},
-        {"filec-on",[](ext::ui::arguments& arguments)
-        {
-            if(arguments.argc == 1 && arguments[0].is_pointer())
-            {
-                for(auto& pair : arguments.node(0)->pairs)
-                {
-                    auto type = message_type(pair.first);
-
-                    if(ext::ui::callable(pair.second) && type < protocol::Message_Types_Size){
-                        self->zzz.ipc_handlers_[type] = pair.second;
-                    }
-                }
-            }else if(arguments.argc == 2 && arguments[0].is_string() && ext::ui::callable(arguments[1]))
-            {
-                if(auto type = message_type(arguments[0].text_view());type < protocol::Message_Types_Size){
-                    self->zzz.ipc_handlers_[type] = arguments[1];
-                }
-            }
-        }},
-        {"filec-launch",[](ext::ui::arguments& arguments){
-            self->launch_filec();
-        }},
-        {"filec-user-agents",[](ext::ui::arguments& arguments){
-             arguments << self->zzz.configs["http_user_agents"]["text"].text_view();
-        }},
-        {"filec-paths",[](ext::ui::arguments& arguments)
-        {
-            ext::text text;
-
-            if(self->zzz.paths.is_array())
-            {
-                for(auto& iter : *self->zzz.paths.cast_array()){
-                    text += iter.text("path") + "\r\n";
-                }
-            }
-            arguments << text;
-        }},
-        {"exit",[](ext::ui::arguments& arguments)
-        {
-            if(self->tray_initialized_){
-                self->ui.cast_id<ext::ui::tray*>("tray")->hide();
-            }
-            self->zzz.shutdown();
-            std::exit(1);
-        }}
-    });
+    methods_.clipboard_initialized_ = true;
 }
 
 void main_window::init_timer()
@@ -452,17 +350,6 @@ void main_window::init_plugins()
 
 
 ///-------------------------
-void main_window::launch_filec()
-{
-    bool elevatable = false;
-
-    doom::privilege::launch(pro::service_path(zzz.workspace),{"__elevating__"},elevatable,true);
-
-    if(!elevatable){
-        ext::ui::alert("info","error",ext::ui::lang("launch_filec_error1_")).exec();
-    }
-}
-
 void main_window::show_ipc_loading()
 {
     ext::ui::post([this]
@@ -476,12 +363,12 @@ void main_window::show_ipc_loading()
         auto visible  = false;
 
         if(pro::is_service_running()){
-            title = ext::ui::lang("connecting");
-            text  = ext::ui::lang("trying_to_establish_with_filec");
+            title = "connecting"_lang;
+            text  = "trying_to_establish_with_filec"_lang;
         }else{
             visible = true;
-            title   = ext::ui::lang("waiting");
-            text    = ext::ui::lang("waiting_for_filec_running");
+            title   = "waiting"_lang;
+            text    = "waiting_for_filec_running"_lang;
         }
         messages->ui.cast<ext::ui::label*>("#ipc_loading_title")->text(title);
         messages->ui.cast<ext::ui::label*>("#ipc_loading_text")->text(text);
@@ -517,6 +404,7 @@ void main_window::connect_service()
         connection->send({{"@",protocol::Message_Paths}});
         connection->send({{"@",protocol::Message_Subscribes}});
         connection->send({{"@",protocol::Message_Tasks}});
+        connection->send({{"@",protocol::Message_NFS_Hosts}});
     });
 }
 
@@ -542,10 +430,10 @@ void main_window::on_timer()
 
 void main_window::on_timer_200ms(ext::steady_time_t now)
 {
-    for(auto& iter : interval_handlers_){
+    for(auto& iter : methods_.interval_handlers_){
         ext::ui::methods::call(iter.second.cast<ext::ui::node_t*>());
     }
-    if(window_size_changed_ && zzz.settings.get("save_window_size") == true)
+    if(methods_.window_size_changed_ && zzz.settings.get("save_window_size") == true)
     {
         if(window_->isMaximized()){
             zzz.setting("maximize",true);
@@ -554,7 +442,7 @@ void main_window::on_timer_200ms(ext::steady_time_t now)
             zzz.setting("width",window_->width());
             zzz.setting("height",window_->height());
         }
-        window_size_changed_ = false;
+        methods_.window_size_changed_ = false;
     }
     timepoint_interval_ = now;
     zzz.settings_save();
@@ -565,11 +453,15 @@ void main_window::on_timer_1s(ext::steady_time_t now)
 {
     if(zzz.service)
     {
-        if(!tray_initialized_ && zzz.settings.get("tray_icon") == true){
+        if(!methods_.tray_initialized_ && zzz.settings.get("tray_icon") == true){
             init_tray();
         }
-        if(!clipboard_initialized_ && zzz.settings.get("watch_clipboard") == true){
+        if(!methods_.clipboard_initialized_ && zzz.settings.get("watch_clipboard") == true){
             init_clipboard();
+        }
+        if(now - timepoint_interval_activation_ >= dialogs::code::Activation_Interval){
+            zzz.send({{"@",protocol::Message_Activation_Expired}});
+            timepoint_interval_activation_ = now;
         }
     }
     timepoint_interval_second_ = now;
@@ -584,10 +476,9 @@ void main_window::on_version(ext::value& json)
     if(version != pro::Version)
     {
         zzz.shutdown();
-
-        ext::text prefix = ext::text("[") + ext::ui::lang("version") + "] ";
+        ext::text prefix = "["_text + "version"_lang + "] ";
         ext::text text   = prefix + "fileu : " + ext::f2str(pro::Version,1) + "<br/>" + prefix + "filec : " + ext::f2str(version,1);
-        ext::ui::alert("error",ext::ui::lang("error"),text).exec();
+        ext::ui::alert("error","error"_lang,text)();
         std::exit(9);
     }
 }
@@ -596,7 +487,7 @@ void main_window::on_stop()
 {
     zzz.shutdown();
 
-    if(tray_initialized_){
+    if(methods_.tray_initialized_){
         delete ui.cast_id<ext::ui::tray*>("tray");
     }
     std::exit(0);
@@ -608,6 +499,8 @@ void main_window::on_service_close()
 
     zzz.service.reset();
     tasks_.clear();
+    file_browser_.clear();
+
     connect_service();
     show_ipc_loading();
 }
@@ -616,12 +509,12 @@ void main_window::on_service_connected(std::shared_ptr<ext::ipcx::connection>& c
 {
     ext::debug <<= "on_service_connected";
 
-    if(!actions_initialized_){
-        actions_initialized_ = true;
+    if(!methods_.actions_initialized_){
+        methods_.actions_initialized_ = true;
         init_actions();
     }
     if(zzz.settings.uint8("installed") == 1){
-        ext::text path = (zzz.workspace / "ui/tools/browsers.sml").lexically_normal().u8string();
+        ext::text path = (zzz.workspace / "ui/tools/browsers.sml").lexically_normal();
         ext::ui::arguments arguments(ext::ui::shared_stack,{path,"#main"});
         ext::ui::methods::invokers_global["open-window"](arguments);
         zzz.setting("installed",2);
@@ -678,9 +571,9 @@ void main_window::on_error(ext::value& json)
 {
     auto text   = json.text("text");
     auto type   = protocol::Message_Types_Text[json.uint16("type")];
-    auto string = ext::ui::lang(type) + ext::text(":") + global::error_text(json.int32("error")) + " " + text;
+    auto string = ext::ui::lang(type) + ":"_text + global::error_text(json.int32("error")) + " " + text;
 
-    ext::ui::alert("error",ext::ui::lang("error"),string).exec();
+    ext::ui::alert("error","error"_lang,string)();
 }
 
 void main_window::on_client_message(ext::value& json)
@@ -688,9 +581,19 @@ void main_window::on_client_message(ext::value& json)
     auto type = json.get("type");
 
     if(type == "error"){
-        ext::ui::alert("error",ext::ui::lang("error"),global::error_text(json.int32("error"))).exec();
+        ext::ui::alert("error","error"_lang,global::error_text(json.int32("error")))();
     }else if(type == "active"){
-        window_->show_active();
+        if(methods_.tray_initialized_ && !window_->visible()){
+            window_->show();
+        }else{
+            window_->show_active();
+            window_->show_top(false);
+        }
+    }else if(type == "event"){
+        if(methods_.tray_initialized_){
+            ui.cast_id<ext::ui::tray*>("tray")->flashing(6);
+        }
+        zzz->play_sound("event");
     }else if(type == "add_task"){
         add_task(json.text_view("uri"),true);
     }
@@ -698,9 +601,10 @@ void main_window::on_client_message(ext::value& json)
 
 void main_window::on_xmessage(uint16_t at,ext::value& json)
 {
-    auto xid = json.int64("xid");
+    auto xid  = json.int64("xid");
+    auto iter = zzz.ipc_xhandlers_.find(xid);
 
-    if(auto iter = zzz.ipc_xhandlers_.find(xid);iter != zzz.ipc_xhandlers_.end()){
+    if(iter != zzz.ipc_xhandlers_.end()){
         iter->second(json);
     }
 }
@@ -710,9 +614,9 @@ void main_window::on_message2(uint16_t at,ext::value& json)
     if(auto iter = zzz.ipc_handlers_.find(at);iter != zzz.ipc_handlers_.end())
     {
         if(iter->second.is_number()){
-            return zzz.ipc_invokers_[iter->second.uint32()](json);
+            zzz.ipc_invokers_[iter->second.uint32()](json);
         }else if(iter->second.is_caller()){
-            return ext::ui::methods::call(iter->second.cast<ext::ui::node_t*>(),{json});
+            ext::ui::methods::call(iter->second.cast<ext::ui::node_t*>(),{json});
         }else for(auto& item : iter->second.cast<ext::ui::node_t*>()->items){
             if(item.is_caller()){
                 ext::ui::methods::call(item.cast<ext::ui::node_t*>(),{json});
@@ -744,16 +648,18 @@ void main_window::on_message(uint16_t at,ext::value& json)
         zzz.configs.erase("@");
         return;
     case protocol::Message_Proxies:
-        zzz.proxies = json.get("items");
+        zzz.proxies = json.extract("items");
         return;
     case protocol::Message_Paths:
-        zzz.paths = json.get("items");
+        zzz.paths = json.extract("items");
         return;
     case protocol::Message_Subscribes:
         for(zzz.subscribes.clear();auto& item : *json["items"].cast_array()){
             zzz.subscribes.emplace(item.int64("id"),item);
         }
         return;
+    case protocol::Message_NFS_Hosts:
+        return file_browser_.on_hosts(json);
     case protocol::Message_Catalogs:
         return tasks_.on_catalogs(json);
     case protocol::Message_Status:
@@ -772,6 +678,8 @@ void main_window::on_message(uint16_t at,ext::value& json)
         return tasks_.on_task_status(json);
     case protocol::Message_Task_Progress:
         return tasks_.on_task_progress(json);
+    case protocol::Message_Task_Files:
+        return tasks_.on_task_files(json);
     case protocol::Message_Task_Details:
         return tasks_.on_task_detail(json);
     case protocol::Message_Task_Config:
@@ -788,6 +696,25 @@ void main_window::on_message(uint16_t at,ext::value& json)
         return on_subscribe_remove(json);
     case protocol::Message_Torrent_Create:
         return on_xmessage(at,json);
+    case protocol::Message_FS:
+        return file_browser_.on_status(json);
+    case protocol::Message_FS_Group_Add:
+        return file_browser_.on_group_add(json);
+    case protocol::Message_FS_Group_Edit:
+        return file_browser_.on_group_edit(json);
+    case protocol::Message_FS_Group_Remove:
+        return file_browser_.on_group_remove(json);
+    case protocol::Message_FS_Host_Add:
+        return file_browser_.on_host_add(json);
+    case protocol::Message_FS_Host_Edit:
+        return file_browser_.on_host_edit(json);
+    case protocol::Message_FS_Host_Remove:
+        return file_browser_.on_host_remove(json);
+    case protocol::Message_Activation_Expired:
+        return on_activation_expired(json);
+    case protocol::Message_Activation_Query:
+    case protocol::Message_Activation_Reset:
+        return on_activation_query(json);
     default:
         return on_message2(at,json);
     }
@@ -802,7 +729,7 @@ void main_window::on_message(uint8_t* data,uint32_t length)
         ext::debug << "parse json failed " <<= ext::text_view((const char*)data,length);
     }else if(!(type = json.get("@")).is_number()){
         ext::debug <<= "@ field is missing ";
-    }else ext::ui::post([this,type = type.uint16(),json = std::move(json)]() mutable{
+    }else ext::ui::post([this,type = type.uint16(),Ext_Move(json)]() mutable{
         on_message(type,json);
     });
 }
@@ -847,14 +774,39 @@ void main_window::on_trackers(ext::value& json)
     }
 }
 
+void main_window::on_activation_expired(ext::value& json)
+{
+    Ext_Return_If(json.get("expired") != true);
+
+    ext::value value;
+    on_activation_query(value);
+}
+
+void main_window::on_activation_query(ext::value& json)
+{
+    if(auto error = json.get("error");error.is_number())
+    {
+        if(error.number() != 0){
+            ext::ui::alert("error","error"_lang,zzz->error_text(error.int32()))();
+        }else{
+            ext::ui::alert("info","success"_lang,"success")();
+            return;
+        }
+    }
+    ext::try_new<pro::dialogs::code>(dialog_code_,zzz)->exec(json,[this](ext::steady_time_point_t timepoint){
+        timepoint_interval_activation_ = timepoint;
+        dialog_code_ = nullptr;
+    });
+}
+
 
 ///-------------------------
 void main_window::open_files()
 {
     ext::local<128> filter;
-    filter << "*.torrent *.m3u8;;" << ext::ui::lang("all_files") << " (*.*)";
+    filter << "*.torrent *.m3u8;;" << "all_files"_lang << " (*.*)";
 
-    for(auto& path : ext::ui::file_dialog::open_files(ext::ui::lang("open_file"),"",filter.string_view())){
+    for(auto& path : ext::ui::file_dialog::open_files("open_file"_lang,"",filter.string_view())){
         add_task(path);
     }
 }
@@ -872,16 +824,16 @@ void main_window::add_task(ext::text_view text,bool important)
     if(zzz.service){
         zzz.send(message);
     }else if(important){
-        queued_messages_.emplace_back(message);
+        queued_messages_ << message;
     }
 }
 
 
 ///-------------------------
-void main_window::create()
+void main_window::create(bool booting)
 {
     if(!(ui = sml_.instantiate<ext::ui::model>(zzz.workspace / "ui/main.sml",zzz.error))){
-        ext::ui::alert("error","fatal","couldn't load ui/main.sml").exec();
+        ext::ui::alert("error","fatal"_lang,"couldn't load ui/main.sml")();
         std::exit(0);
     }
     auto object = ui.id("main")->object;
@@ -889,7 +841,7 @@ void main_window::create()
     window_->central_layout_margin(1);
 
     init_views();
-    init_sizes(object);
+    init_sizes(object,booting);
     init_events();
 
     zzz.io_worker()->set_timeout([this]{

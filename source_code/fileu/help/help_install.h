@@ -6,7 +6,7 @@
 namespace pro::help
 {
 
-class install : public pro::dialog_sample<>
+class install : public pro::dialog_sample<pro::global>
 {
 public:
     install(pro::global& global);

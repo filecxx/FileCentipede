@@ -3,7 +3,7 @@
 namespace pro::help
 {
 
-uninstall::uninstall(pro::global& global) : pro::dialog_sample<>(global,"ui/help/uninstall.sml")
+uninstall::uninstall(pro::global& global) : pro::dialog_sample<pro::global>(global,"ui/help/uninstall.sml")
 {
     ui.cast(path_,"#path");
     path_->text(ext::text(zzz.workspace.u8string()));
@@ -27,7 +27,7 @@ void uninstall::init_actions()
 ///--------------------------
 void uninstall::uninstall_failed(bool elevatable)
 {
-    ext::ui::alert("error","error",ext::ui::lang("uninstall_failed")).exec();
+    ext::ui::alert("error","error"_lang,"uninstall_failed"_lang).exec();
 }
 
 void uninstall::start_uninstall()
