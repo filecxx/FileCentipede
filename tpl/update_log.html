@@ -53,7 +53,15 @@
             <h1>${update_log}</h1>
         </div>
         <div class="section">
-            <h3>2.0 (uptime: 2022.06.24)</h3>
+            <h3>2.02 (uptime: 2022.06.25)</h3>
+            <h4>Fixed:</h4>
+            <p>redundant path separator</p>
+            <p>XML tag case-sensitive caused the WebDAV list directory to fail.</p>
+            <p>file has not been removed from the file browser list when the remote directory path is  /</p>
+            <p>when uploading/downloading a directory max connections have been reduced when the directory contains a small file.</p>
+        </div>
+        <div class="section">
+            <h3>2.0/2.01 (uptime: 2022.06.24)</h3>
             <h4>New:</h4>
             <p>opening a task file show an alert when the file has been deleted or moved.</p>
             <p>context-menu for torrent confirm-dialog</p>
@@ -95,6 +103,7 @@
             <p>translation tool: Israel has been removed from the Arabic countries list.</p>
             <p>heap-use-after-free.</p>
             <p>uncaught exceptions.</p>
+            <p>memory overflowed.</p>
             <p>...</p>
             <h4>Changes:</h4>
             <p>few</p>
