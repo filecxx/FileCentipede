@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="File centipede is an internet file download manager with enhanced features, it's fast, customizable, user-friendly, multi-protocol supported, contains lots of useful auxiliary tools, and it's free with no ads,  you can also use it to download audio and videos from websites, increase your download speeds by up to 1.1 times, it's the best internet download manager you can find(so far)."/>
-    <meta name="keywords" content="File Centipede, Internet download manager, Torrent client, Download torrents, Download videos from web, Fastest download accelerator, Best download manager, Linux download manager, Free download manager, transmission, libtorrent"/>
+    <meta name="description" content="File centipede is an internet file download/upload manager, WebDAV client, FTP client, and an SSH client. It's fast, customizable, user-friendly,  multi protocols supported, and free with no ads. It also contains many useful auxiliary tools such as HTTP requester,  file merge, and encoders. With the browser integration, you can download audio and videos from websites, even encrypted videos. File centipede makes everything easy and efficient, it's the best internet download manager you can find."/>
+    <meta name="keywords" content="File Centipede, Internet download manager, Torrent client, Torrents download manager, Download videos from web, Fastest download accelerator, Best download manager, Linux download manager, Free download manager, WebDAV client, FTP client, SSH(SFTP) client"/>
     <title>File Centipede</title>
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
     <link rel="icon" href="../favicon.ico" type="image/x-icon" />
@@ -21,7 +21,7 @@
             <a class="tool_button download_" href="#downloads">Download</a>
             <a class="tool_button description_" href="#description">Description</a>
             <a class="tool_button features_" href="#features">Features</a>
-            <a class="tool_button screenshot_" href="#screenshot">Screenshot</a>
+            <a class="tool_button screenshot_" href="screenshot.html">Screenshot</a>
             <a class="tool_button share_" href="#shares">Share</a>
             <a class="tool_button documentation_" href="documentation.html">Documentation</a>
         </div>
@@ -48,8 +48,16 @@
     <div class="body">
         <div class="section description" id="description">
             <h2>Description</h2>
-            <div>File centipede is an internet file download manager with enhanced features, it's fast, customizable, user-friendly, multi-protocol supported, contains lots of useful auxiliary tools, and it's free with no ads,  you can also use it to download audio and videos from websites, increase your download speeds by up to 1.1 times, it's the best internet download manager you can find(so far).</div>
+            <div id="description_text">File centipede is an internet file download/upload manager, WebDAV client, FTP client, and an SSH client. It's fast, customizable, user-friendly,  multi protocols supported, and free with no ads. It also contains many useful auxiliary tools such as HTTP requester,  file merge, and encoders. With the browser integration, you can download audio and videos from websites, even encrypted videos. File centipede makes everything easy and efficient, it's the best internet download manager you can find.</div>
         </div>
+        <script>
+            (function(){
+                var element = document.getElementById("description_text");
+                var text    = element.innerText;
+
+                element.innerHTML = text.replaceAll('.',".<br/>");
+            })();
+        </script>
 
         <div class="section downloads" id="downloads">
             <h2>Download</h2>
@@ -151,6 +159,16 @@
                 <tr><td>File merge tool</td><td>1.0</td></tr>
                 <tr><td>Statistics</td><td>1.0</td></tr>
                 <tr><td>Download all links from webpage</td><td>1.6</td></tr>
+                <tr><td>SSH, SFTP protocol</td><td>2.0</td></tr>
+                <tr><td>curl, wget, aria2, axel command line</td><td>2.0</td></tr>
+                <tr><td>WebDAV protocol</td><td>2.0</td></tr>
+                <tr><td>Upload file</td><td>2.0</td></tr>
+                <tr><td>Upload directory</td><td>2.0</td></tr>
+                <tr><td>Download directory</td><td>2.0</td></tr>
+                <tr><td>Full featured WebDAV(s) file manager</td><td>2.0</td></tr>
+                <tr><td>Full featured FTP(s) file manager</td><td>2.0</td></tr>
+                <tr><td>Full featured SSH(sftp) file manager</td><td>2.0</td></tr>
+                <tr><td>File browser persistent caches</td><td>2.0</td></tr>
                 </tbody>
             </table>
         </div>
@@ -161,60 +179,67 @@
                 <div>
                     <h4>File Centipede</h4>
                     <img loading="lazy" src="../images/screenshot_software.png" alt="File Centipede" width="800">
+                    <img loading="lazy" src="../images/screenshot_software2.png" alt="File Centipede" width="800">
+
+                    <img loading="lazy" src="../images/screenshot_software_file_browser_webdav.png" alt="File Centipede File browser WebDAV" width="800">
+                    <img loading="lazy" src="../images/screenshot_software_file_browser_ssh.png" alt="File Centipede File browser SSH, SFTP" width="800">
+                    <img loading="lazy" src="../images/screenshot_software_file_browser_ftp.png" alt="File Centipede File browser FTP" width="800">
+                    <img loading="lazy" src="../images/screenshot_software_file_browser_add.png" alt="File Centipede File browser Add host" width="800">
+                    <img loading="lazy" src="../images/screenshot_software_file_browser_log.png" alt="File Centipede File browser log" width="800">
                 </div>
                 <div>
                     <h4>Add task</h4>
-                    <img loading="lazy" src="../images/screenshot_add_task.png" alt="Add task">
+                    <img loading="lazy" src="../images/screenshot_add_task.png" alt="File Centipede Add task">
+                    <img loading="lazy" src="../images/screenshot_add_task2.png" alt="File Centipede Add task">
+                    <img loading="lazy" src="../images/screenshot_add_task3.png" alt="File Centipede Add task">
+                    <img loading="lazy" src="../images/screenshot_add_task4.png" alt="File Centipede Add task">
                 </div>
-                <div>
-                    <h4>Add task</h4>
-                    <img loading="lazy" src="../images/screenshot_add_task2.png" alt="Add task">
-                </div>
+
                 <div>
                     <h4>Torrent confirm</h4>
-                    <img loading="lazy" src="../images/screenshot_torrent_confirm.png" alt="Torrent confirm">
+                    <img loading="lazy" src="../images/screenshot_torrent_confirm.png" alt="File Centipede Torrent confirm">
                 </div>
                 <div>
-                    <img loading="lazy" src="../images/screenshot_http_confirm.png" alt="http_confirm">
+                    <img loading="lazy" src="../images/screenshot_http_confirm.png" alt="File Centipede HTTP confirm">
                 </div>
                 <div>
-                    <img loading="lazy" src="../images/screenshot_links_confirm.png" alt="Download all links from webpage">
+                    <img loading="lazy" src="../images/screenshot_links_confirm.png" alt="File Centipede Download all links from webpage">
                 </div>
                 <div>
                     <h4>Add catalog</h4>
-                    <img loading="lazy" src="../images/screenshot_add_catalog.png" alt="Add catalog">
+                    <img loading="lazy" src="../images/screenshot_add_catalog.png" alt="File Centipede Add catalog">
                 </div>
                 <div>
                     <h4>Settings</h4>
-                    <img loading="lazy" src="../images/screenshot_settings.png" alt="Settings">
+                    <img loading="lazy" src="../images/screenshot_settings.png" alt="File Centipede Settings">
                 </div>
                 <div>
                     <h4>Proxy</h4>
-                    <img loading="lazy" src="../images/screenshot_proxy.png" alt="Proxy">
+                    <img loading="lazy" src="../images/screenshot_proxy.png" alt="File Centipede Proxy">
                 </div>
                 <div>
                     <h4>Filter</h4>
-                    <img loading="lazy" src="../images/screenshot_filter.png" alt="Filter">
+                    <img loading="lazy" src="../images/screenshot_filter.png" alt="File Centipede Filter">
                 </div>
                 <div>
                     <h4>Refresh address</h4>
-                    <img loading="lazy" src="../images/screenshot_refresh_address.png" alt="Refresh address">
+                    <img loading="lazy" src="../images/screenshot_refresh_address.png" alt="File Centipede Refresh address">
                 </div>
                 <div>
                     <h4>Create torrent</h4>
-                    <img loading="lazy" src="../images/screenshot_create_torrent.png" alt="Create torrent">
+                    <img loading="lazy" src="../images/screenshot_create_torrent.png" alt="File Centipede Create torrent">
                 </div>
                 <div>
                     <h4>Download speed limit</h4>
-                    <img loading="lazy" src="../images/screenshot_download_speed_limit.png" alt="Download speed limit">
+                    <img loading="lazy" src="../images/screenshot_download_speed_limit.png" alt="File Centipede Download speed limit">
                 </div>
                 <div>
                     <h4>Translate</h4>
-                    <img loading="lazy" src="../images/screenshot_translate.png" alt="Translate">
+                    <img loading="lazy" src="../images/screenshot_translate.png" alt="File Centipede Translate">
                 </div>
                 <div>
                     <h4>HTTP tool</h4>
-                    <img loading="lazy" src="../images/screenshot_http_tool.png" alt="HTTP tool">
+                    <img loading="lazy" src="../images/screenshot_http_tool.png" alt="File Centipede HTTP tool">
                 </div>
             </div>
 
@@ -256,6 +281,9 @@
                 <a target="_blank" href="https://lightzhan.xyz/index.php/en/qdown-en/">QDown</a>
                 <a target="_blank" href="https://xdown.org/">XDown</a>
                 <a target="_blank" href="https://motrix.app/">motrix</a>
+                <a target="_blank" href="https://filezilla-project.org/">filezilla</a>
+                <a target="_blank" href="https://winscp.net/">WinSCP</a>
+                <a target="_blank" href="https://www.xshell.com/xftp/">xftp</a>
             </div>
             <div>
                 <br>
@@ -279,7 +307,6 @@
             </div>
             <div class="contact_">
                 <a target="_blank" href="https://twitter.com/namelessitguy">Twitter</a>
-                <a target="_blank" href="https://www.reddit.com/user/namelessitguy">Reddit</a>
             </div>
         </div>
     </div>

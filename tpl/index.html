@@ -21,7 +21,7 @@
             <a class="tool_button download_" href="#downloads">${download}</a>
             <a class="tool_button description_" href="#description">${description}</a>
             <a class="tool_button features_" href="#features">${features}</a>
-            <a class="tool_button screenshot_" href="#screenshot">${screenshot}</a>
+            <a class="tool_button screenshot_" href="screenshot.html">${screenshot}</a>
             <a class="tool_button share_" href="#shares">${share}</a>
             <a class="tool_button documentation_" href="documentation.html">${documentation}</a>
         </div>
@@ -48,8 +48,16 @@
     <div class="body">
         <div class="section description" id="description">
             <h2>${description}</h2>
-            <div>${description_}</div>
+            <div id="description_text">${description_}</div>
         </div>
+        <script>
+            (function(){
+                var element = document.getElementById("description_text");
+                var text    = element.innerText;
+
+                element.innerHTML = text.replaceAll('.',".<br/>");
+            })();
+        </script>
 
         <div class="section downloads" id="downloads">
             <h2>${download}</h2>
@@ -151,6 +159,16 @@
                 <tr><td>${feature_32}</td><td>1.0</td></tr>
                 <tr><td>${feature_33}</td><td>1.0</td></tr>
                 <tr><td>${feature_34}</td><td>1.6</td></tr>
+                <tr><td>${feature_35}</td><td>2.0</td></tr>
+                <tr><td>${feature_36}</td><td>2.0</td></tr>
+                <tr><td>${feature_37}</td><td>2.0</td></tr>
+                <tr><td>${feature_38}</td><td>2.0</td></tr>
+                <tr><td>${feature_39}</td><td>2.0</td></tr>
+                <tr><td>${feature_40}</td><td>2.0</td></tr>
+                <tr><td>${feature_41}</td><td>2.0</td></tr>
+                <tr><td>${feature_42}</td><td>2.0</td></tr>
+                <tr><td>${feature_43}</td><td>2.0</td></tr>
+                <tr><td>${feature_44}</td><td>2.0</td></tr>
                 </tbody>
             </table>
         </div>
@@ -161,60 +179,67 @@
                 <div>
                     <h4>${software_name_}</h4>
                     <img loading="lazy" src="../images/screenshot_software.png" alt="${software_name_}" width="800">
+                    <img loading="lazy" src="../images/screenshot_software2.png" alt="${software_name_}" width="800">
+
+                    <img loading="lazy" src="../images/screenshot_software_file_browser_webdav.png" alt="${software_name_} File browser WebDAV" width="800">
+                    <img loading="lazy" src="../images/screenshot_software_file_browser_ssh.png" alt="${software_name_} File browser SSH, SFTP" width="800">
+                    <img loading="lazy" src="../images/screenshot_software_file_browser_ftp.png" alt="${software_name_} File browser FTP" width="800">
+                    <img loading="lazy" src="../images/screenshot_software_file_browser_add.png" alt="${software_name_} File browser Add host" width="800">
+                    <img loading="lazy" src="../images/screenshot_software_file_browser_log.png" alt="${software_name_} File browser log" width="800">
                 </div>
                 <div>
                     <h4>${add_task}</h4>
-                    <img loading="lazy" src="../images/screenshot_add_task.png" alt="${add_task}">
+                    <img loading="lazy" src="../images/screenshot_add_task.png" alt="${software_name_} ${add_task}">
+                    <img loading="lazy" src="../images/screenshot_add_task2.png" alt="${software_name_} ${add_task}">
+                    <img loading="lazy" src="../images/screenshot_add_task3.png" alt="${software_name_} ${add_task}">
+                    <img loading="lazy" src="../images/screenshot_add_task4.png" alt="${software_name_} ${add_task}">
                 </div>
-                <div>
-                    <h4>${add_task}</h4>
-                    <img loading="lazy" src="../images/screenshot_add_task2.png" alt="${add_task}">
-                </div>
+
                 <div>
                     <h4>${torrent_confirm}</h4>
-                    <img loading="lazy" src="../images/screenshot_torrent_confirm.png" alt="${torrent_confirm}">
+                    <img loading="lazy" src="../images/screenshot_torrent_confirm.png" alt="${software_name_} ${torrent_confirm}">
                 </div>
                 <div>
-                    <img loading="lazy" src="../images/screenshot_http_confirm.png" alt="http_confirm">
+                    <img loading="lazy" src="../images/screenshot_http_confirm.png" alt="${software_name_} HTTP confirm">
                 </div>
                 <div>
-                    <img loading="lazy" src="../images/screenshot_links_confirm.png" alt="${feature_34}">
+                    <img loading="lazy" src="../images/screenshot_links_confirm.png" alt="${software_name_} ${feature_34}">
                 </div>
                 <div>
                     <h4>${add_catalog}</h4>
-                    <img loading="lazy" src="../images/screenshot_add_catalog.png" alt="${add_catalog}">
+                    <img loading="lazy" src="../images/screenshot_add_catalog.png" alt="${software_name_} ${add_catalog}">
                 </div>
                 <div>
                     <h4>${settings}</h4>
-                    <img loading="lazy" src="../images/screenshot_settings.png" alt="${settings}">
+                    <img loading="lazy" src="../images/screenshot_settings.png" alt="${software_name_} ${settings}">
                 </div>
                 <div>
                     <h4>${proxy}</h4>
-                    <img loading="lazy" src="../images/screenshot_proxy.png" alt="${proxy}">
+                    <img loading="lazy" src="../images/screenshot_proxy.png" alt="${software_name_} ${proxy}">
                 </div>
                 <div>
                     <h4>${filter}</h4>
-                    <img loading="lazy" src="../images/screenshot_filter.png" alt="${filter}">
+                    <img loading="lazy" src="../images/screenshot_filter.png" alt="${software_name_} ${filter}">
                 </div>
                 <div>
                     <h4>${refresh_address}</h4>
-                    <img loading="lazy" src="../images/screenshot_refresh_address.png" alt="${refresh_address}">
+                    <img loading="lazy" src="../images/screenshot_refresh_address.png" alt="${software_name_} ${refresh_address}">
                 </div>
                 <div>
                     <h4>${create_torrent}</h4>
-                    <img loading="lazy" src="../images/screenshot_create_torrent.png" alt="${create_torrent}">
+                    <img loading="lazy" src="../images/screenshot_create_torrent.png" alt="${software_name_} ${create_torrent}">
                 </div>
                 <div>
                     <h4>${download_speed_limit}</h4>
-                    <img loading="lazy" src="../images/screenshot_download_speed_limit.png" alt="${download_speed_limit}">
+                    <img loading="lazy" src="../images/screenshot_download_speed_limit.png" alt="${software_name_} ${download_speed_limit}">
                 </div>
                 <div>
                     <h4>${translate}</h4>
-                    <img loading="lazy" src="../images/screenshot_translate.png" alt="${translate}">
+                    <img loading="lazy" src="../images/screenshot_translate.png" alt="${software_name_} ${translate}">
                 </div>
                 <div>
                     <h4>${http_tool}</h4>
-                    <img loading="lazy" src="../images/screenshot_http_tool.png" alt="${http_tool}">
+                    <img loading="lazy" src="../images/screenshot_http_tool.png" alt="${software_name_} ${http_tool}">
                 </div>
             </div>
 
@@ -256,6 +281,9 @@
                 <a target="_blank" href="https://lightzhan.xyz/index.php/en/qdown-en/">QDown</a>
                 <a target="_blank" href="https://xdown.org/">XDown</a>
                 <a target="_blank" href="https://motrix.app/">motrix</a>
+                <a target="_blank" href="https://filezilla-project.org/">filezilla</a>
+                <a target="_blank" href="https://winscp.net/">WinSCP</a>
+                <a target="_blank" href="https://www.xshell.com/xftp/">xftp</a>
             </div>
             <div>
                 <br>
@@ -279,7 +307,6 @@
             </div>
             <div class="contact_">
                 <a target="_blank" href="https://twitter.com/namelessitguy">Twitter</a>
-                <a target="_blank" href="https://www.reddit.com/user/namelessitguy">Reddit</a>
             </div>
         </div>
     </div>
