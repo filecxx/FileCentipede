@@ -6,10 +6,15 @@
 
 website: [http://filecxx.com](http://filecxx.com)
 
-File centipede is an internet file download manager with enhanced features, 
-it's fast, customizable, user-friendly, multi-protocol supported, contains lots of useful auxiliary tools, 
-and it's free with no ads, you can also use it to download audio and videos from websites, 
-increase your download speeds by up to 1.1 times, it's the best internet download manager you can find(so far).
+File centipede is an internet file download/upload manager, WebDAV client, FTP client, and an SSH client.
+
+It's fast, customizable, user-friendly, multi protocols supported, and free with no ads.
+
+It also contains many useful auxiliary tools such as HTTP requester, file merge, and encoders.
+
+With the browser integration, you can download audio and videos from websites, even encrypted videos.
+
+File centipede makes everything easy and efficient, it's the best internet download manager you can find.
 
 ## Source code
 FileU source code is in the source_code directory,
@@ -19,80 +24,92 @@ this code proved that writing user interfaces in C++ could be significantly easi
 (see sml files in the UI directory)
 
 
-## translate
-If you like this software, please give a help translate to other languages, translation tool has been contained in the software.
+## Translate
+If you like this software, please help translate this software into other languages, the translation tool has been contained in the software.
 
 
-## screenshot
+## Screenshot
 
-#### ${software\_name\_}
+#### File Centipede
 
-![${software_name_}](images/screenshot_software.png)
+![File Centipede](images/screenshot_software.png)
+![File Centipede](images/screenshot_software2.png)
+![File Centipede](images/screenshot_software_file_browser_webdav.png)
+![File Centipede](images/screenshot_software_file_browser_ssh.png)
+![File Centipede](images/screenshot_software_file_browser_ftp.png)
+![File Centipede](images/screenshot_software_file_browser_add.png)
+![File Centipede](images/screenshot_software_file_browser_log.png)
 
-#### ${add\_task}
+#### Add task
 
-![${add_task}](images/screenshot_add_task.png)
+![Add task](images/screenshot_add_task.png)
+![Add task](images/screenshot_add_task2.png)
+![Add task](images/screenshot_add_task3.png)
+![Add task](images/screenshot_add_task4.png)
 
-#### ${add\_task}
+#### Edit task
 
-![${add_task}](images/screenshot_add_task2.png)
+![Edit task](images/screenshot_edit_task.png)
+![Edit task](images/screenshot_edit_task2.png)
 
-#### ${torrent\_confirm}
 
-![${torrent_confirm}](images/screenshot_torrent_confirm.png)
-![${torrent_confirm}](images/screenshot_http_confirm.png)
-![${torrent_confirm}](images/screenshot_links_confirm.png)
+#### Confirm dialog
 
-#### ${add\_catalog}
+![torrent confirm](images/screenshot_torrent_confirm.png)
+![http confirm](images/screenshot_http_confirm.png)
+![links confirm](images/screenshot_links_confirm.png)
 
-![${add_catalog}](images/screenshot_add_catalog.png)
+#### Add catalog
 
-#### ${settings}
+![add catalog](images/screenshot_add_catalog.png)
 
-![${settings}](images/screenshot_settings.png)
+#### Settings
 
-#### ${proxy}
+![settings](images/screenshot_settings.png)
 
-![${proxy}](images/screenshot_proxy.png)
+#### Proxy settings
 
-#### ${filter}
+![proxy](images/screenshot_proxy.png)
 
-![${filter}](images/screenshot_filter.png)
+#### Filter
 
-#### ${refresh\_address}
+![filter](images/screenshot_filter.png)
+
+#### Refresh address
 
 ![${refresh_address}](images/screenshot_refresh_address.png)
 
-#### ${create\_torrent}
+#### Create torrent
 
-![${create_torrent}](images/screenshot_create_torrent.png)
+![create_torrent](images/screenshot_create_torrent.png)
 
-#### ${download\_speed\_limit}
+#### Speed limit
 
-![${download_speed_limit}](images/screenshot_download_speed_limit.png)
+![Speed limit](images/screenshot_download_speed_limit.png)
 
-#### ${translate}
+#### Translate tool
 
-![${translate}](images/screenshot_translate.png)
+![Translate tool](images/screenshot_translate.png)
 
-#### ${http\_tool}
+#### HTTP tool
 
-![${http_tool}](images/screenshot_http_tool.png)
+![HTTP tool](images/screenshot_http_tool.png)
 
-${browser\_extension} ${screenshot}
+Browser extension screenshots
 -----------------------------------
 
-#### ${video\_bar}
+#### Video bar
 
-![${video_bar}](images/extension_video_bar.png)
+![Video bar](images/extension_video_bar.png)
 
-#### ${videos\_panel}
+#### Videos panel
 
-![${videos_panel}](images/extension_videos.png)
+![videos panel](images/extension_videos.png)
 
-#### ${audios\_panel}
+#### Audios panel
 
-![${audios_panel}](images/extension_audios.png)
+![Audios panel](images/extension_audios.png)
+
 
 ## features
 * HTTP,HTTPS protocol (basic features like gzip, resumable, multi-connections will not be listed.)	1.0
@@ -132,9 +149,19 @@ ${browser\_extension} ${screenshot}
 * Magnet to torrent tool	1.0
 * File merge tool	1.0
 * Statistics	1.0
-* Download all links from webpage 1.6
+* Download all links from webpage	1.6
+* SSH, SFTP protocol	2.0
+* curl, wget, aria2, axel command line	2.0
+* WebDAV protocol	2.0
+* Upload file	2.0
+* Upload directory	2.0
+* Download directory	2.0
+* Full-featured WebDAV(s) file manager	2.0
+* Full-featured FTP(s) file manager	2.0
+* Full-featured SSH(sftp) file manager	2.0
+* File browser persistent caches	2.0
 
-## languages
+## Language files
 * Website:  "lang/*.lang"
 * Software: "bin/lang/*.lang"
 
