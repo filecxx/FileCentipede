@@ -52,6 +52,21 @@
         <div class="section">
             <h1>${update_log}</h1>
         </div>
+
+        <div class="section">
+            <h3>2.1 (uptime: 2022.06.29)</h3>
+            <h4>New:</h4>
+            <p>site rules</p>
+            <p>language zh_TW</p>
+            <h4>Fixed:</h4>
+            <p>WebDAV default config error for file downloading.</p>
+            <p>torrent-task is not able to stop when checking files.</p>
+            <p>when the HTTP server response code is 401 or 403, remove the "Referer" and "Origin" fields from HTTP headers before resending the HTTP request.</p>
+            <p>some web servers accepted HTTP range requests but the response code is 200 with 0-byte content, instead of 201, causing a 0-byte file to be downloaded. (wingftp)</p>
+            <p>torrent-task files rename failed after multiple tries.</p>
+            <p>FTP server 504 error (CLNT, OPTS UTF8 ON).</p>
+            <p>DateTime 0.000000.</p>
+        </div>
         <div class="section">
             <h3>2.02 (uptime: 2022.06.25)</h3>
             <h4>Fixed:</h4>

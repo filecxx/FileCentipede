@@ -71,6 +71,11 @@ If you like this software, please help translate this software into other langua
 
 ![proxy](images/screenshot_proxy.png)
 
+#### Site rules
+
+![Site rules](images/screenshot_site_rule.png)
+![Site rules](images/screenshot_site_rule2.png)
+
 #### Filter
 
 ![filter](images/screenshot_filter.png)
@@ -160,6 +165,7 @@ Browser extension screenshots
 * Full-featured FTP(s) file manager	2.0
 * Full-featured SSH(sftp) file manager	2.0
 * File browser persistent caches	2.0
+* Site rules	2.1
 
 ## Language files
 * Website:  "lang/*.lang"
@@ -169,3 +175,4 @@ Browser extension screenshots
 | Language            |@|
 |:--------------------|:-------------|
 | Русский             | [@vanja-san](https://github.com/vanja-san) 
+| zh_TW            | [@bear0316](https://github.com/bear0316) 
