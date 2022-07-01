@@ -24,14 +24,6 @@
 
 }
 
-.downloads .tips_
-{
-    display: inline-block;
-    padding: 8px;
-    border: 1px dotted #0b7c35;
-    background: rgba(106,255,156,0.1);
-}
-
 .body .description
 {
     line-height: 38px;

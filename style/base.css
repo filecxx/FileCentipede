@@ -326,6 +326,14 @@ code
     background-color: #eff0f1;
 }
 
+.body .tips_
+{
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px;
+    border: 1px dotted #0b7c35;
+    background: rgba(106,255,156,0.1);
+}
 
 /************************/
 .footer
