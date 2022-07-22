@@ -4,6 +4,7 @@ body
     margin: 0;
     padding: 0;
     color: #393d3f;
+    background: white;
 }
 
 h1
@@ -181,13 +182,13 @@ code
 {
     background: url("images/16/screenshot.png") 4px 8px no-repeat,linear-gradient(to bottom,#a7a7a8 0%,#cccdce 100%);
 }
-.nav .share_
+.nav .user_reviews_
 {
-    background: url("images/16/share.png") 4px 7px no-repeat;
+    background: url("images/16/user.png") 4px 7px no-repeat;
 }
-.nav .share_:active
+.nav .user_reviews_:active
 {
-    background: url("images/16/share.png") 4px 7px no-repeat,linear-gradient(to bottom,#a7a7a8 0%,#cccdce 100%);
+    background: url("images/16/user.png") 4px 7px no-repeat,linear-gradient(to bottom,#a7a7a8 0%,#cccdce 100%);
 }
 .nav .documentation_
 {

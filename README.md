@@ -4,7 +4,10 @@
   <img src="./style/images/logo_128.png" width="128" alt="File Centipede Icon" />
 </a>
 
+
 website: [http://filecxx.com](http://filecxx.com)
+
+dashboard: [https://w.filecxx.com](https://w.filecxx.com)
 
 File centipede is an internet file download/upload manager, WebDAV client, FTP client, and an SSH client.
 
