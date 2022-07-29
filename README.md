@@ -12,15 +12,15 @@ website: [http://filecxx.com](http://filecxx.com)
 
 dashboard: [https://w.filecxx.com](https://w.filecxx.com)
 
-File centipede is an internet file download/upload manager, WebDAV client, FTP client, and an SSH client.
+File centipede is an All-In-One internet file upload/download manager, BitTorrent Client, WebDAV client, FTP client, and SSH client.
 
-It's fast, customizable, user-friendly, multi protocols supported, and free with no ads.
+It is designed to be fast, customizable, and user-friendly.
 
-It also contains many useful auxiliary tools such as HTTP requester, file merge, and encoders.
+It supports multi-protocols and contains many useful auxiliary tools such as HTTP requester, file merge, and encoders.
 
 With the browser integration, you can download audio and videos from websites, even encrypted videos.
 
-File centipede makes everything easy and efficient, it's the best internet download manager you can find.
+(It's free with no ads)
 
 ## Source code
 FileU source code is in the source_code directory,
@@ -181,4 +181,6 @@ Browser extension screenshots
 | Language            |@|
 |:--------------------|:-------------|
 | Русский             | [@vanja-san](https://github.com/vanja-san) 
-| zh_TW            | [@bear0316](https://github.com/bear0316) 
+| 繁體中文             | [@bear0316](https://github.com/bear0316) [@postman1year](https://github.com/postman1year)
+| Français           | [@XIAA25](https://github.com/XIAA25)
+| Nederlands         | [@XIAA25](https://github.com/XIAA25)
