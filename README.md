@@ -106,6 +106,10 @@ If you like this software, please help translate this software into other langua
 
 ![HTTP tool](images/screenshot_http_tool.png)
 
+#### Checksum tool
+
+![Checksum tool](images/screenshot_checksum_tool.png)
+
 Browser extension screenshots
 -----------------------------------
 
@@ -172,6 +176,7 @@ Browser extension screenshots
 * Full-featured SSH(sftp) file manager	2.0
 * File browser persistent caches	2.0
 * Site rules	2.1
+* Checksum tool	2.3
 
 ## Language files
 * Website:  "lang/*.lang"

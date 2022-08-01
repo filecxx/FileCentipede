@@ -271,3 +271,5 @@ completed=Completed
 signup=Signup
 confirm_password_error_=The password must match the one above.
 official_website=Official Website
+feature_46=Checksum tool
+checksum_tool=Checksum tool
