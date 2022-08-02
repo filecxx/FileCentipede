@@ -8,9 +8,11 @@
 </a>
 
 
-website: [http://filecxx.com](http://filecxx.com)
+Website: [http://filecxx.com](http://filecxx.com)
 
-dashboard: [https://w.filecxx.com](https://w.filecxx.com)
+Dashboard: [https://w.filecxx.com](https://w.filecxx.com)
+
+Sponsors: [http://www.filecxx.com/en_US/sponsors.html](http://www.filecxx.com/en_US/sponsors.html)
 
 File centipede is an All-In-One internet file upload/download manager, BitTorrent Client, WebDAV client, FTP client, and SSH client.
 
