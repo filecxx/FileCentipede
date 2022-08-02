@@ -134,6 +134,7 @@ void main::init_actions()
     ui.on_action_id("act_task_copy_address",std::bind(&main::copy_selected_tasks_addresses,this));
     ui.on_action_id("act_task_copy_hash",std::bind(&main::copy_selected_tasks_hashes,this));
     ui.on_action_id("act_task_export_torrent",std::bind(&main::export_selected_tasks_torrent,this));
+    ui.on_action_id("act_task_calc_checksum",std::bind(&main::calc_checksum,this));
 }
 
 
@@ -293,7 +294,7 @@ void main::add_task(uint16_t type,uint16_t state,int64_t id,uint32_t mode,ext::v
         query_files(id,type,0,10);
     }
     if(state < protocol::State_Completed/* || type == protocol::Task_Torrent*/){
-        active_tasks_.emplace(id,type);
+        active_tasks_.emplace(id,active_task_t{type,state,full_status,json.int32("progress")});
     }
     on_task_state(json,id,task,state);
 }
@@ -341,6 +342,9 @@ void main::update_task_files(int64_t id,task_t& task,ext::value& json)
     auto size   = json.uint32("size");
     auto total  = json.uint32("total");
 
+    if(!items.empty()){
+        tasks_->type(ext::fs::file_type::directory,task.node);
+    }
     for(auto& values : *items.cast_array())
     {
         auto path     = values.text("path");
@@ -363,7 +367,6 @@ void main::update_task_files(int64_t id,task_t& task,ext::value& json)
     if(offset + size < (task.files = total)){
         return query_files(id,task.type,offset + size,std::min<uint32_t>(100,total - (offset + size)));
     }
-    //std::cout << offset << ":" << size << " / " << total << std::endl;
     tasks_->recurse<task_directory_t>(task.node,[&](node_type* node,auto& dir)
     {
         Ext_Return_If(!node->parent);
@@ -373,14 +376,16 @@ void main::update_task_files(int64_t id,task_t& task,ext::value& json)
             dir.transferred += node->value("transferred").int64();
             dir.file_size   += node->value("file_size").int64();
         }
-    },[this](node_type* node,auto& dir)
+    },[&](node_type* node,auto& dir)
     {
         Ext_Return_If(!node->parent);
         node->value("transferred",dir.transferred);
         node->value("file_size",dir.file_size);
         node->value("progress",ext::percentage(dir.transferred,dir.file_size));
 
-        tasks_->checked(tasks_->parent_check_state(dir.checked),node);
+        if(task.type == protocol::Task_Torrent){
+            tasks_->checked(tasks_->parent_check_state(dir.checked),node,false,true);
+        }
         tasks_->siblings(node->value.item,node->value.values);
     });
 }
@@ -395,6 +400,19 @@ void main::update_tasks_catalog(ext::text_view name,ext::text_view new_name)
         if(catalog == name){
             tasks_->sibling(node->value.item,"catalog",catalog = new_name);
         }
+    }
+}
+
+void main::update_active_task_state(ext::value& json,std::int64_t id,task_t& task)
+{
+    auto iter     = active_tasks_.find(id);
+    auto progress = json.int32("progress");
+
+    if(iter == active_tasks_.end()){
+        active_tasks_.emplace(id,active_task_t{task.type,task.state,false,progress});
+    }else{
+        iter->second.state    = task.state;
+        iter->second.progress = progress;
     }
 }
 
@@ -501,14 +519,22 @@ void main::delete_all_tasks()
 
 void main::delete_selected_tasks()
 {
-    auto selected = tasks_->selected_files();
-    auto result   = ext::value(0);
+    auto selected   = tasks_->selected_files();
+    auto result     = ext::value(0);
+    auto alert_type = zzz.settings.get("alert_delete_task");
 
-    if(selected.empty() || !(result = zzz->messages()->alert("#delete_task")->call()).is_number() || result == 0){
+    if(selected.empty()){
         return;
     }
-    for(auto node : selected){
-        delete_task(node->value("id").int64(),result == 2);
+    if(alert_type == 1 || alert_type == 2){
+        result = alert_type.number();
+    }else{
+        result = zzz->messages()->alert("#delete_task")->call();
+    }
+    if(result.is_number() && result != 0){
+        for(auto node : selected){
+            delete_task(node->value("id").int64(),result == 2);
+        }
     }
 }
 
@@ -550,7 +576,7 @@ void main::redownload_task(int64_t id)
 {
     find_task(id,[this](auto id,auto& task){
         zzz->send({{"@",protocol::Message_Task_Redownload},{"type",task.type},{"id",id}});
-        active_tasks_.emplace(id,task.type);
+        active_tasks_.emplace(id,active_task_t{task.type,task.state,task.full_status,0});
     });
 }
 
@@ -749,6 +775,24 @@ void main::export_selected_tasks_torrent()
     }
 }
 
+void main::calc_checksum()
+{
+    for(auto node : tasks_->selected_files())
+    {
+        auto id   = node->value("id").int64();
+        auto iter = all_tasks_.find(id);
+
+        if(iter != all_tasks_.end())
+        {
+            auto save_path = iter->second.node->value("save_path");
+
+            if(!save_path.empty()){
+                (new pro::tools::checksum(zzz))->exec(save_path.text().add_path(tasks_->path(node->value.item->index())));
+            }
+        }
+    }
+}
+
 void main::show_detail(int64_t id)
 {
     find_task(id,[&](auto id,auto& task)
@@ -795,35 +839,65 @@ void main::on_timer(ext::steady_time_point_t now)
     }else if(active_tasks_.size() > 40){
         interval = 500ms;
     }
-    if(seconds)
+    if(seconds){
+        on_timer_second(now);
+    }else if(now - timepoint_interval_ >= interval){
+        on_timer_actives(now);
+    }
+}
+
+void main::on_timer_second(ext::steady_time_point_t now)
+{
+    for(auto& iter : confirming_tasks_){
+        if(iter.second.first == protocol::Task_Torrent){
+            query_status(iter.first,iter.second.first);
+        }
+    }
+    for(auto& iter : active_tasks_){
+        query_status(iter.first,iter.second.type,!iter.second.full_status);
+    }
+    if(need_recount_text2_){
+        recount_text2();
+    }
+    if(details_.expanded()){
+        details_.query_detail();
+    }
+    timepoint_seconds_  = now;
+    timepoint_interval_ = now;
+}
+
+void main::on_timer_actives(ext::steady_time_point_t now)
+{
+    auto total_progress     = 0;
+    auto total_transferring = 0;
+
+    for(auto& iter : active_tasks_)
     {
-        for(auto& iter : confirming_tasks_){
-            if(iter.second.first == protocol::Task_Torrent){
-                query_status(iter.first,iter.second.first);
-            }
-        }
-        for(auto& iter : active_tasks_){
-            query_status(iter.first,iter.second.type,!iter.second.extend_status_loaded);
-        }
-        if(need_recount_text2_){
-            recount_text2();
-        }
-        if(details_.expanded()){
-            details_.query_detail();
-        }
-        timepoint_seconds_  = now;
-        timepoint_interval_ = now;
-    }else if(now - timepoint_interval_ >= interval)
-    {
-        for(auto& iter : active_tasks_)
+        constexpr uint8_t states[] = {
+            protocol::State_Starting,protocol::State_Resuming,
+            protocol::State_Downloading,protocol::State_Downloading_Metadata,protocol::State_Uploading,
+            protocol::State_Merging,protocol::State_Completing
+        };
+        for(auto val : states)
         {
-            if(iter.second.type == protocol::Task_Torrent){
-                continue;
+            if(iter.second.state == val){
+                total_transferring++;
+                total_progress += iter.second.progress;
+                break;
             }
+        }
+        if(iter.second.type != protocol::Task_Torrent){
             query_progress(iter.first,iter.second.type);
         }
-        timepoint_interval_ = now;
     }
+    if(total_transferring == 0){
+        zzz.taskbar.value(0);
+        zzz.taskbar.state(ext::ui::taskbar::None);
+    }else{
+        zzz.taskbar.state(ext::ui::taskbar::Normal);
+        zzz.taskbar.value(ext::percentage(total_progress,total_transferring * 100));
+    }
+    timepoint_interval_ = now;
 }
 
 void main::on_catalog_add(ext::value& json)
@@ -929,7 +1003,7 @@ void main::on_task_confirmed(std::int64_t id,ext::boolean_t confirmed)
         if(confirmed){
             query_status(id,iter->second.first,true);
         }
-        active_tasks_.emplace(id,iter->second.first);
+        active_tasks_.emplace(id,active_task_t{iter->second.first,protocol::State_Starting,false,0});
         confirming_tasks_ -= iter;
     }
 }
@@ -1003,7 +1077,7 @@ bool main::on_task_completed(int64_t id,task_t& task,uint16_t old_state)
     if(task.files > 0){
         task.requery++;
     }
-    if(old_state == protocol::State_Merging || old_state == protocol::State_Completing){
+    if(old_state == protocol::State_Merging || old_state == protocol::State_Downloading || old_state == protocol::State_Completing){
         show_completed_dialog(id,task.node->value.values);
     }
     if(id < 0){
@@ -1065,11 +1139,9 @@ void main::on_task_state(ext::value& json,int64_t id,task_t& task,uint16_t old_s
         erased = on_task_completed(id,task,old_state);
         goto bottom;
     }
-    if(auto iter = active_tasks_.find(id);iter == active_tasks_.end()){
-        active_tasks_.emplace(id,task.type);
-    }
-    bottom:
-    if(!erased){
+    update_active_task_state(json,id,task);
+
+    bottom: if(!erased){
         item->text(ext::ui::lang(protocol::Task_States_Text[task.state]));
         tasks_->row_color(item,color);
     }
@@ -1096,18 +1168,24 @@ void main::on_task_status(ext::value& json)
     if(details_.id_ == id && details_.expanded()){
         details_.update(type,json);
     }
-    if(extended == true)
-    {
-        if(auto iter = active_tasks_.find(id);iter != active_tasks_.end()){
-            iter->second.extend_status_loaded = true;
+    if(auto iter = active_tasks_.find(id);iter != active_tasks_.end()){
+        if(extended == true){
+            iter->second.full_status = true;
         }
+        iter->second.state    = state;
+        iter->second.progress = json.int32("progress");
     }
 }
 
 void main::on_task_progress(ext::value& json)
 {
-    find_task(json,[&](auto id,auto& task){
+    find_task(json,[&](auto id,auto& task)
+    {
         tasks_->siblings(task.node->value.item,json);
+
+        if(auto iter = active_tasks_.find(id);iter != active_tasks_.end()){
+            iter->second.progress = json.int32("progress");
+        }
     });
 }
 
@@ -1148,7 +1226,7 @@ void main::on_task_renamed(ext::value& json)
         if(auto node = tasks_->find_node(std::to_string(id) + "/" + json.text("old_path"))){
             auto file_name = json.text("file_name");
             node->value.values["file_name"] = file_name;
-            tasks_->rename_file(node,file_name,true);
+            tasks_->rename_file(node,file_name,json.get("idx") == -1);
         }
     });
 }
@@ -1183,7 +1261,6 @@ void main::on_selection_changed()
         {"stop",masks::Mask_Task},
         {"move",masks::Mask_Task},
         {"delete",masks::Mask_Task},
-        {"delete_fully",masks::Mask_Task},
         {"redownload",masks::Mask_Task_HTTP | masks::Mask_Task_FTP | masks::Mask_Task_Stream | masks::Mask_Task_SSH},
         {"refresh_address",masks::Mask_Task_HTTP | masks::Mask_Task_Stream},
         {"edit",masks::Mask_Task},

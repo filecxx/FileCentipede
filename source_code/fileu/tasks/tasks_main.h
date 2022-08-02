@@ -9,6 +9,7 @@
 #include "tasks_confirm_http.h"
 #include "tasks_refresh_address.h"
 #include "tasks_transfer_completed.h"
+#include "../tools/tool_checksum.h"
 
 namespace pro::tasks
 {
@@ -30,7 +31,9 @@ class main
     struct active_task_t
     {
         std::uint16_t  type;
-        ext::boolean_t extend_status_loaded = false;
+        std::uint16_t  state;
+        ext::boolean_t full_status = false;
+        std::int32_t   progress    = 0;
     };
     struct task_directory_t
     {
@@ -228,6 +231,10 @@ protected:
     */
     void update_tasks_catalog(ext::text_view name,ext::text_view new_name);
     /*
+     * update active task state
+    */
+    void update_active_task_state(ext::value& json,std::int64_t id,task_t& task);
+    /*
      * erase active task
     */
     bool erase_active_task(int64_t id,task_t& task);
@@ -351,6 +358,10 @@ public:
     */
     void export_selected_tasks_torrent();
     /*
+     * calc_checksum
+    */
+    void calc_checksum();
+    /*
      * show detail
     */
     void show_detail(int64_t id);
@@ -365,6 +376,14 @@ public:
      * on timer
     */
     void on_timer(ext::steady_time_point_t now);
+    /*
+     * on timer
+    */
+    void on_timer_second(ext::steady_time_point_t now);
+    /*
+     * on timer actives
+    */
+    void on_timer_actives(ext::steady_time_point_t now);
 
 
 public:

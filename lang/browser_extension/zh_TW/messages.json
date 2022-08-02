@@ -1,0 +1,111 @@
+{
+    "appname":{
+       "message": "檔案蜈蚣"
+    },
+    "videos": {
+      "message": "視訊"
+    },
+    "audios": {
+      "message": "音訊"
+    },
+    "magnets": {
+      "message": "磁力"
+    },
+    "type": {
+      "message": "類型"
+    },
+    "length_duration": {
+      "message": "長度 / 時間 / 大小"
+    },
+    "download": {
+      "message": "下載"
+    },
+    "cancel": {
+      "message": "取消"
+    },
+    "file": {
+      "message": "檔案"
+    },
+    "files": {
+      "message": "檔案"
+    },
+    "download_video": {
+      "message": "下載這個視訊"
+    },
+    "download_audio": {
+      "message": "下載這個音訊"
+    },
+    "download_link": {
+      "message": "下載這個連結"
+    },
+    "download_image": {
+      "message": "下載這個圖片"
+    },
+    "minutes": {
+      "message": "分鐘"
+    },
+    "text": {
+      "message": "文字"
+    },
+    "download_all": {
+      "message": "下載全部"
+    },
+    "copy_all": {
+      "message": "複製全部"
+    },
+    "copy": {
+      "message": "複製"
+    },
+    "copy_addr_msg": {
+      "message": "地址複製成功"
+    },
+    "video_floating_bar": {
+      "message": "視訊浮動欄"
+    },
+    "enable": {
+      "message": "啟用"
+    },
+    "disable": {
+      "message": "禁用"
+    },
+    "yes": {
+      "message": "是"
+    },
+    "no": {
+      "message": "否"
+    },
+    "send_failed": {
+      "message": "發送失敗"
+    },
+    "download_send_failed_message_prefix": {
+      "message": "無法連接到 "
+    },
+    "download_send_failed_message": {
+      "message": "要麼沒有安裝,或者沒有啟動, 選擇一個操作."
+    },
+    "browser": {
+      "message": "瀏覽器"
+    },
+    "download_manager": {
+      "message": "下載管理器"
+    },
+    "recapture_address": {
+      "message": "重新捕獲地址"
+    },
+    "refresh_address_msg_content": {
+      "message": "在地址捕捉到之前不要刷新當前網頁, 請找到: "
+    },
+    "recapture_address_msg_success": {
+      "message": "已經成功捕獲到新地址,請打開軟體查看是否正常下載."
+    },
+    "ignore_this_site": {
+      "message": "忽略此站"
+    },
+    "potential_urls": {
+      "message": "潛在URLs"
+    },
+    "potential_keys": {
+      "message": "潛在密鑰"
+    }
+}
+ 

@@ -280,9 +280,6 @@ void hosts::connect_host(const ext::uri::address& address,ext::text_view default
     if(hostname.empty()){
         return;
     }
-    if(path.empty()){
-        path = "/";
-    }
     auto type = protocol::filesystem_type(protocol);
 
     for(auto& nfs_host : zzz->nfs_hosts)
@@ -291,7 +288,15 @@ void hosts::connect_host(const ext::uri::address& address,ext::text_view default
             return zzz->send({{"@",protocol::Message_FS},{"id",nfs_host.first},Ext_Pairs((type)(path))}),void();
         }
     }
-    zzz->send({
+    auto config = ext::value(zzz->configs["nfs"]);
+
+    if(!host.user().empty()){
+        config["user"] = host.user();
+    }
+    if(!host.password().empty()){
+        config["pass"] = host.password();
+    }
+    config.merge({
         {"@",protocol::Message_FS_Host_Add},
         {"gid",0},
         {"connect",true},
@@ -299,6 +304,7 @@ void hosts::connect_host(const ext::uri::address& address,ext::text_view default
 
         Ext_Pairs((type)(protocol)(hostname)(port)(path))
     });
+    zzz->send(config);
 }
 
 

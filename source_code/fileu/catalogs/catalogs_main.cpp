@@ -39,15 +39,18 @@ void main::init_actions()
 ///-------------------
 void main::remove_catalog()
 {
-    auto ret = zzz.messages()->alert("#delete_catalog")->call();
+    auto alert_type = zzz.settings.get("alert_delete_catalog");
+    auto result     = ext::value(0);
 
-    if(!ret.is_number() || ret == 0){
-        return;
+    if(alert_type.is_number() && alert_type != 0){
+        result = alert_type.number();
+    }else{
+        result = zzz.messages()->alert("#delete_catalog")->call();
     }
-    for(auto item : list_->selected_items())
+    if(result.is_number() && result != 0) for(auto item : list_->selected_items())
     {
         if(item != list_->item(0)){
-            zzz.send({{"@",protocol::Message_Catalog_Remove},{"name",item->text()},{"operation",ret}});
+            zzz.send({{"@",protocol::Message_Catalog_Remove},{"name",item->text()},{"operation",result}});
         }
     }
 }

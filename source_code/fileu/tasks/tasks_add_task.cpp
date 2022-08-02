@@ -72,19 +72,25 @@ void add_task::analyze_addresses()
     }
     for(auto& iter : uris_)
     {
+        auto type = iter.second.type;
+
         if(configs_.contains(iter.first)){
             continue;
         }
-        if(!combobox_configs_[iter.second.type]){
-            ui.import(tab_->item_data(iter.second.type + 1).string());
-            init_form(ext::text(protocol::Task_Types_Text[iter.second.type]),iter.second.type);
+        if(!combobox_configs_[type]){
+            ui.import(tab_->item_data(type + 1).string());
+            init_form(ext::text(protocol::Task_Types_Text[type]),type);
         }
-        ext::value values = default_values_[iter.second.type];
+        ext::value values = default_values_[type];
+
+        if(type == protocol::Task_HTTP || type == protocol::Task_FTP || type == protocol::Task_SSH){
+            zzz.task_config(type,iter.first,values);
+        }
         values.merge(std::move(iter.second.values));
         values["uri"] = iter.first;
 
-        configs_.emplace(iter.first,config_t{iter.second.type,std::move(values)});
-        combobox_configs_[iter.second.type]->append(iter.first);
+        configs_.emplace(iter.first,config_t{type,std::move(values)});
+        combobox_configs_[type]->append(iter.first);
     }
     for(int i=0;i<combobox_configs_.size();++i){
         if(combobox_configs_[i]){
@@ -119,6 +125,27 @@ void add_task::download(bool immediately)
         zzz->send(iter.second.values.stringify());
     }
     dialog_->close();
+}
+
+void add_task::change_save_path(const ext::text& path)
+{
+    default_save_path_ = path;
+
+    for(auto& value : default_values_){
+        if(value.is_map()){
+            value["save_path"] = path;
+        }
+    }
+    for(auto& config : configs_){
+        if(config.second.values.is_map()){
+            config.second.values["save_path"] = path;
+        }
+    }
+    for(auto& form : forms_){
+        if(form){
+            form.values({{"save_path",path}});
+        }
+    }
 }
 
 
@@ -213,7 +240,7 @@ void add_task::init_form(const ext::text& name,uint16_t type)
             ext::text path;
 
             if(index == 0){
-                path = zzz->configs["general"].text_view("default_save_path");
+                path = default_save_path();
             }else if(auto name = catalog_combobox->item_text(index);zzz->catalogs.contains(name)){
                 path = zzz->catalogs[name].text_view("path");
             }
@@ -222,7 +249,7 @@ void add_task::init_form(const ext::text& name,uint16_t type)
     }
     auto values = forms_[type].values();
     values["@"]         = is_stream_ ? protocol::Message_Task_Add_Stream : protocol::Message_Task_Add;
-    values["save_path"] = zzz->configs["general"].get("default_save_path");
+    values["save_path"] = default_save_path();
     values["proxy"]     = zzz->configs["network"].get("proxy");
 
     default_values_[type] = ext::value::merge(values,zzz->task_config(type));
@@ -230,6 +257,14 @@ void add_task::init_form(const ext::text& name,uint16_t type)
 
 void add_task::init_events()
 {
+    ui.on_action("#act_save_path",[this](auto)
+    {
+        auto path = ext::ui::file_dialog::open_directory("save_path"_lang);
+
+        if(!path.empty()){
+            change_save_path(path);
+        }
+    });
     ui.on_click("#download_later",[this](auto){
         download(false);
     });

@@ -132,7 +132,6 @@ void confirm_http::update(ext::value& json)
     }
     auto node = files_->update_file(json,json.text_view("file_name"),json.text_view("file_path"),true);
     files_->type(ext::fs::file_type::regular,node);
-
     form_.values(json);
 }
 

@@ -13,7 +13,7 @@ class code : public pro::dialog_sample<pro::global>
 
 
 public:
-    constexpr static auto Activation_Interval = 1min;
+    constexpr static auto Activation_Interval = 2min;
 
 
 public:

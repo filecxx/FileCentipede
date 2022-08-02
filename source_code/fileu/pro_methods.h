@@ -35,6 +35,10 @@ protected:
     */
     ext::boolean_t tray_initialized_ = false;
     /*
+     * DHT warning visible
+    */
+    ext::boolean_t DHT_warning_visible_ = false;
+    /*
      * clipboard initialized
     */
     ext::boolean_t clipboard_initialized_ = false;

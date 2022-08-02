@@ -10,6 +10,11 @@ code::code(pro::global& global) : pro::dialog_sample<pro::global>(global,global-
         callback_(ext::time::steady_now() + dialogs::code::Activation_Interval);
         delete this;
     });
+    ext::crypto::bts1 bts1("activation");
+    ext::local<16>    local;
+    local << uint64_t(std::max<uint64_t>(ext::os::cpu::hash(),11101) * 10111);
+
+    ui.set_value("#uid",bts1.encode(local.string_view()));
     ui.on_click("#get",[this](auto){
         ext::ui::file_dialog::open_url(ui.query_value("#addr").string());
     });

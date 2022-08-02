@@ -141,29 +141,28 @@ void details::init_torrent_peers_actions(ext::ui::model& ui)
         zzz->send(values);
         ext::ui::methods::invoke(node->object,"close");
     });
-    ui.on_action("#act_copy_peer_endpoint",[this,table,&ui](auto){
+    ui.on_action("#act_copy_peer_endpoint",[this,table](auto){
         if(auto text = table->selected_rows_text("address");!text.empty()){
             ext::ui::clipboard::text(text);
         }
     });
-    ui.on_action("#act_copy_peer_client",[this,table,&ui](auto){
+    ui.on_action("#act_copy_peer_client",[this,table](auto){
         if(auto text = table->selected_rows_text("client");!text.empty()){
             ext::ui::clipboard::text(text);
         }
     });
-    ui.on_action("#act_disconnect_peer",[this,table,&ui](auto){
+    ui.on_action("#act_disconnect_peer",[this,table](auto){
         if(auto text = table->selected_rows_text("address");!text.empty()){
             zzz->send({{"@",protocol::Message_Task_Peer_Operation},{"id",id_},{"type",type_},{"operation",protocol::Peer_Disconnect},{"endpoints",text}});
         }
     });
-    ui.on_action("#act_ban_peer",[this,table,&ui](auto){
+    ui.on_action("#act_ban_peer",[this,table](auto){
         if(auto text = table->selected_rows_text("address");!text.empty()){
             zzz->send({{"@",protocol::Message_Task_Peer_Operation},{"id",id_},{"type",type_},{"operation",protocol::Peer_Ban_IP},{"endpoints",text}});
         }
     });
     ui.on_action("#act_refresh_peers",[this,table]{
-        clear_mapped(table,mapped_peers_temp_,mapped_peers_);
-        ext::debug << "row count:" <<= table->row_count();
+        clear_mapped(table,mapped_peers_);
     });
 }
 
@@ -251,21 +250,32 @@ void details::query_detail(bool try_status,bool immediately)
     }
 }
 
-
-///---------------------------
-void details::clear_mapped(ext::ui::table* table,mapped_items_t& mapped,mapped_items_t& mapped_temp)
+void details::clear_mapped(ext::ui::table* table,mapped_items_t& mapped)
 {
     mapped.clear();
-    mapped_temp.clear();
     table->clear_rows();
+}
+
+void details::clear_mapped(ext::ui::table* table,mapped_items_t& mapped,std::int64_t timestamp)
+{
+    for(auto iter = mapped.begin();iter != mapped.end();)
+    {
+        if(iter->second.second == timestamp){
+            iter++;
+        }else{
+            table->remove_row(iter->second.first);
+            mapped.erase(iter++);
+        }
+    }
 }
 
 void details::update_trackers(ext::ui::table* table,ext::value&& values,bool clear)
 {
     if(!values.is_array() || clear){
-        clear_mapped(table,mapped_trackers_,mapped_trackers_temp_);
+        clear_mapped(table,mapped_trackers_);
     }
     Ext_Return_If(!values.is_array());
+    auto now = ext::timestamp();
 
     for(auto& item : *values.cast_array())
     {
@@ -277,27 +287,24 @@ void details::update_trackers(ext::ui::table* table,ext::value&& values,bool cle
         status = ext::ui::lang(protocol::Tracker_Status_Text[status.uint16()]);
 
         if(auto iter = mapped_trackers_.find(url);iter != mapped_trackers_.end()){
-            table->siblings(iter->second,item);
-            mapped_trackers_temp_.insert(mapped_trackers_.extract(iter));
+            table->siblings(iter->second.first,item);
+            iter->second.second = now;
         }else{
             auto cells = table->create_row(item);
             table->append_row(cells);
-            mapped_trackers_temp_.emplace(url,(ext::ui::standard_item*)cells[0]);
+            mapped_trackers_.emplace(url,std::make_pair((ext::ui::standard_item*)cells[0],now));
         }
     }
-    for(auto& iter : mapped_trackers_){
-        table->remove_row(iter.second);
-    }
-    mapped_trackers_ = std::move(mapped_trackers_temp_);
-    mapped_trackers_temp_.clear();
+    clear_mapped(table,mapped_trackers_,now);
 }
 
 void details::update_web_seeds(ext::ui::table* table,ext::value&& values,bool clear)
 {
     if(!values.is_array() || clear){
-        clear_mapped(table,mapped_web_seeds_,mapped_web_seeds_temp_);
+        clear_mapped(table,mapped_web_seeds_);
     }
     Ext_Return_If(!values.is_array());
+    auto now = ext::timestamp();
 
     for(auto& item : *values.cast_array())
     {
@@ -307,28 +314,24 @@ void details::update_web_seeds(ext::ui::table* table,ext::value&& values,bool cl
         auto iter = mapped_web_seeds_.find(url);
 
         if(iter != mapped_web_seeds_.end()){
-            table->siblings(iter->second,item);
-            mapped_web_seeds_temp_.insert(mapped_web_seeds_.extract(iter));
+            table->siblings(iter->second.first,item);
+            iter->second.second = now;
         }else{
             auto cells = table->create_row(item);
             table->append_row(cells);
-            mapped_web_seeds_temp_.emplace(url,(ext::ui::standard_item*)cells[0]);
+            mapped_web_seeds_.emplace(url,std::make_pair((ext::ui::standard_item*)cells[0],now));
         }
     }
-    for(auto& iter : mapped_web_seeds_){
-        table->remove_row(iter.second);
-    }
-    mapped_web_seeds_ = std::move(mapped_web_seeds_temp_);
-    mapped_web_seeds_temp_.clear();
+    clear_mapped(table,mapped_web_seeds_,now);
 }
 
 void details::update_peers(ext::ui::table* table,ext::value&& values,bool clear)
 {
     if(!values.is_array() || clear){
-        ext::debug <<= "[details::update_peers] clear";
-        clear_mapped(table,mapped_peers_,mapped_peers_temp_);
+        clear_mapped(table,mapped_peers_);
     }
     Ext_Return_If(!values.is_array());
+    auto now = ext::timestamp();
 
     for(auto& peer : *values.cast_array())
     {
@@ -338,28 +341,22 @@ void details::update_peers(ext::ui::table* table,ext::value&& values,bool clear)
         auto iter    = mapped_peers_.find(address);
 
         if(iter != mapped_peers_.end()){
-            table->siblings(iter->second,peer);
-            mapped_peers_temp_.insert(mapped_peers_.extract(iter));
+            table->siblings(iter->second.first,peer);
+            iter->second.second = now;
         }else{
             auto cells    = table->create_row(peer);
-            auto location = zzz->endpoint_to_country(address);
             auto item     = (ext::ui::standard_item*)cells[0];
-
-            table->append_row(cells);
-            mapped_peers_temp_.emplace(address,item);
+            auto location = zzz->endpoint_to_country(address);
 
             if(!location.empty()){
                 item->text(location);
                 item->icon(zzz->icons_country.get(location.lower(),{24,18}));
             }
+            table->append_row(cells);
+            mapped_peers_.emplace(address,std::make_pair(item,now));
         }
     }
-    for(auto& iter : mapped_peers_){
-        table->remove_row(iter.second);
-    }
-    mapped_peers_ = std::move(mapped_peers_temp_);
-    mapped_peers_temp_.clear();
-
+    clear_mapped(table,mapped_peers_,now);
 }
 
 

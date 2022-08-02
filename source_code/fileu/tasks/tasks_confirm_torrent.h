@@ -33,6 +33,18 @@ protected:
     */
     ext::ui::combobox* filter_ = nullptr;
     /*
+     * filter size type
+    */
+    ext::ui::combobox* filter_size_type_ = nullptr;
+    /*
+     * filter size
+    */
+    ext::ui::spinbox* filter_size_ = nullptr;
+    /*
+     * filter size unit
+    */
+    ext::ui::combobox* filter_size_unit_ = nullptr;
+    /*
      * callback
     */
     ext::func<void(int64_t,bool)> callback_;
@@ -90,6 +102,10 @@ protected:
      * on filter
     */
     void on_filter();
+    /*
+     * on filter size
+    */
+    void on_filter_size(uint16_t type,size_t size);
 
 
 protected:

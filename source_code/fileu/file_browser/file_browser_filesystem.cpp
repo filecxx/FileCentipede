@@ -128,9 +128,7 @@ void filesystem::init_addresses()
     addresses_->on_uri([this](auto& text)
     {
         auto current = protocols_->value().text();
-
         text = current + "://" + text;
-
         return true;
     });
     addresses_->on_text_change([this](auto str)
@@ -149,7 +147,8 @@ void filesystem::init_addresses()
         }
         return on_address_change(address);
     });
-    addresses_->on_return([this](const auto& text,bool changed){
+    addresses_->on_return([this](const auto& text,bool changed)
+    {
         ext::uri::address address;
 
         if(!changed && ext::uri::parse(text,address) && !path_.empty() && operations_.empty()){

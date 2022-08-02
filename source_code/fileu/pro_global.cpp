@@ -155,6 +155,30 @@ ext::value global::task_config(uint8_t type)
     return {};
 }
 
+ext::void_t global::task_config(uint8_t type,ext::text_view url,ext::value& value)
+{
+    ext::uri::host host;
+
+    if(!ext::uri::parse(url,host)){
+        return;
+    }
+    for(auto& iter : site_rules)
+    {
+        if(iter.second.get("type") != protocol::Site_Rule_File_Transfer || iter.second.get("subtype") != protocol::Task_Types_Text[type]){
+            continue;
+        }
+        if(host.hostname() != iter.second.text_view("host")){
+            continue;
+        }
+        auto port = iter.second.uint16("port");
+
+        if(port == host.port() || port == 0){
+            value.merge(ext::value(iter.second["config"]));
+            break;
+        }
+    }
+}
+
 
 ///----------------------------
 void global::setting(ext::text_view name,ext::value_view value)
@@ -186,9 +210,17 @@ void global::shutdown()
 
 void global::play_sound(const ext::text& name)
 {
+    static ext::steady_time_t timepoint;
+
+    auto now = ext::time::steady_now();
+
+    if(now - timepoint < 300ms){
+        return;
+    }
     if(settings["sound_effects"] == true){
         sound.play(workspace / "sounds" / (name + ".wav"));
     }
+    timepoint = now;
 }
 
 }

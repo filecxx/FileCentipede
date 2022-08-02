@@ -51,6 +51,10 @@ public:
     */
     ext::ui::icons icons_country;
     /*
+     * taskbar
+    */
+    ext::ui::taskbar taskbar;
+    /*
      * sound
     */
     ext::audios::simple sound;
@@ -69,6 +73,10 @@ public:
 
 
 public:
+    /*
+     * filec state
+    */
+    ext::value filec_state;
     /*
      * fileu settings
     */
@@ -93,6 +101,10 @@ public:
      * status
     */
     ext::value status;
+    /*
+     * site rules
+    */
+    std::unordered_map<int64_t,ext::value> site_rules;
     /*
      * subscribes
     */
@@ -176,6 +188,10 @@ public:
      * task config
     */
     ext::value task_config(uint8_t type);
+    /*
+     * task config
+    */
+    ext::void_t task_config(uint8_t type,ext::text_view url,ext::value& value);
     /*
      * messages
     */

@@ -93,6 +93,9 @@ void main::init_proxies()
             }
         }
     }
+    ui.on_click("#show_proxies",[this](auto){
+        callback_("show_proxies");
+    });
 }
 
 void main::init_events()
@@ -218,8 +221,9 @@ void main::set_autostart(bool state)
 
 
 ///--------------------------
-void main::exec()
+void main::exec(ext::func_void<ext::text_view>&& callback)
 {
+    callback_ = std::move(callback);
     dialog_->show();
 }
 

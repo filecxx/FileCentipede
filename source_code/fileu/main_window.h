@@ -16,6 +16,7 @@
 #include "tools/tool_create_address.h"
 #include "tools/tool_file_merge.h"
 #include "tools/tool_software_release.h"
+#include "tools/tool_checksum.h"
 #include "settings/settings_main.h"
 #include "settings/settings_speed_limit.h"
 #include "settings/settings_proxies.h"
@@ -214,6 +215,10 @@ protected:
     */
     void show_ipc_loading();
     /*
+     * show DHT warning
+    */
+    void show_DHT_warning(uint32_t peers);
+    /*
      * connect service
     */
     void connect_service();
@@ -239,6 +244,10 @@ protected:
      * on version
     */
     void on_version(ext::value& json);
+    /*
+     * on running state
+    */
+    void on_running_state(ext::value& json);
     /*
      * on stop
     */

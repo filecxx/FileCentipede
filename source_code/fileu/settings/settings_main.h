@@ -8,10 +8,13 @@ namespace pro::settings
 
 class main : public pro::dialog_sample<pro::global>
 {
-    constexpr static std::string_view UI_Config_Fields[] = {
+    constexpr static std::string_view UI_Config_Fields[] =
+    {
         "lang","fonts","font_size","tray_icon",
         "autostart","watch_clipboard","no_refresh_address_dialog","no_completed_dialog",
-        "sound_effects","save_window_size","silent_mode"
+        "sound_effects","save_window_size","silent_mode",
+
+        "alert_delete_task","alert_delete_catalog"
     };
 
 
@@ -40,6 +43,10 @@ protected:
      * widgets
     */
     ext::ui::widgets* widgets_ = nullptr;
+    /*
+     * callback
+    */
+    ext::func_void<ext::text_view> callback_;
 
 
 protected:
@@ -88,7 +95,7 @@ public:
     /*
      * exec
     */
-    void exec();
+    void exec(ext::func_void<ext::text_view>&& callback);
 
 };
 

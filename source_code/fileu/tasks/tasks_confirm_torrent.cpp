@@ -9,6 +9,9 @@ confirm_torrent::confirm_torrent(pro::global& global,ext::value& json,ext::func<
 {
     ui.cast(loader_,"#loading");
     ui.cast(filter_,"#filter");
+    ui.cast(filter_size_type_,"#filter_size_type");
+    ui.cast(filter_size_,"#filter_size");
+    ui.cast(filter_size_unit_,"#filter_size_unit");
     ui.cast(files_,"#files");
 
     files_->on_context_menu([this](auto){
@@ -115,6 +118,52 @@ void confirm_torrent::on_filter()
     },true);
 }
 
+void confirm_torrent::on_filter_size(uint16_t type,size_t size)
+{
+    std::int64_t                    current_size = 0;
+    ext::ui::filesystem::node_type* current_node = nullptr;
+
+    for(auto i=0;i<filter_size_unit_->currentIndex();++i){
+        size *= 1024;
+    }
+    files_->each([&](auto node)
+    {
+        if(node->value.type == ext::fs::file_type::directory){
+            return false;
+        }
+        if(auto file_size = node->value("file_size").int64();type == 1){
+            if(file_size >= current_size){
+                if(current_node){
+                    files_->checked(0,current_node,true);
+                }
+                current_size = file_size;
+                current_node = node;
+            }else{
+                files_->checked(0,node,true);
+            }
+        }else if(type == 2){
+            if(file_size < current_size || current_size == 0){
+                if(current_node){
+                    files_->checked(0,current_node,true);
+                }
+                current_size = file_size;
+                current_node = node;
+            }else{
+                files_->checked(0,node,true);
+            }
+        }else if(type == 3){
+            files_->checked(file_size > size ? 2 : 0,node,true);
+        }else if(type == 4){
+            files_->checked(file_size < size ? 2 : 0,node,true);
+        }
+        return false;
+    },true);
+
+    if(current_node){
+        files_->checked(2,current_node,true);
+    }
+}
+
 
 ///--------------------------
 void confirm_torrent::load_catalogs()
@@ -149,6 +198,7 @@ void confirm_torrent::load_filters()
             filter_->append(item.text_view("name"),item.text_view("rule"));
         }
     }
+    filter_size_type_->setEnabled(true);
 }
 
 
@@ -165,6 +215,14 @@ void confirm_torrent::exec(ext::value& json,uint16_t state)
     files_->on_checked([this](auto node){
         on_checked(node);
     });
+    auto filter_size_change = [this](auto){
+        auto size_type = filter_size_type_->currentIndex();
+        filter_size_->setEnabled(size_type >= 3);
+        on_filter_size(size_type,filter_size_->value());
+    };
+    filter_size_type_->on_index_change(filter_size_change);
+    filter_size_->on_change(filter_size_change);
+    filter_size_unit_->on_change(filter_size_change);
     files_->on_insert([this](auto node,auto auto_created)
     {
         if(auto_created){
@@ -203,10 +261,11 @@ void confirm_torrent::update(ext::value& json,uint16_t state)
         {
             loader_->hide();
 
-            if(json.uint32("files") == 0){
+            if(json.uint32("files") == 0)
+            {
                 auto name = json.text("torrent_name");
                 files_->checkable(false);
-                files_->add_file({{"file_name",name}},name);
+                files_->add_file({{"file_name",name},{"file_size",json.get("file_size")}},name);
             }
             meta_loaded_ = true;
         }

@@ -79,7 +79,7 @@ void edit_host::init_form(const ext::text& type)
     if((form_index_ = index) != 0 && !forms_[index])
     {
         ui.import(tab_->item_data(index).string());
-        auto layout = ui.query('#' + name);
+        auto layout = ui('#' + name);
         forms_[index] = ext::ui::form(layout);
         tab_->layout(index,layout->object);
 

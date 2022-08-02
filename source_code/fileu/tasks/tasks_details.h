@@ -10,8 +10,7 @@ class details
 {
     friend class main;
 
-    using mapped_items_t     = std::unordered_map<ext::text,ext::ui::standard_item*>;
-    using mapped_int_items_t = std::unordered_map<std::uint32_t,ext::ui::standard_item*>;
+    using mapped_items_t = std::unordered_map<ext::text,std::pair<ext::ui::standard_item*,std::int64_t>>;
 
     struct details_t
     {
@@ -77,18 +76,6 @@ protected:
 
 protected:
     /*
-     * mapped trackers (url -> item)
-    */
-    mapped_items_t mapped_trackers_temp_;
-    /*
-     * mapped web seeds (url -> item)
-    */
-    mapped_items_t mapped_web_seeds_temp_;
-    /*
-     * mapped peers (url -> item)
-    */
-    mapped_items_t mapped_peers_temp_;
-    /*
      * mapped trackers (text -> item)
     */
     mapped_items_t mapped_trackers_;
@@ -140,7 +127,11 @@ protected:
     /*
      * clear mapped
     */
-    void clear_mapped(ext::ui::table* table,mapped_items_t& mapped,mapped_items_t& mapped_temp);
+    void clear_mapped(ext::ui::table* table,mapped_items_t& mapped);
+    /*
+     * clear mapped
+    */
+    void clear_mapped(ext::ui::table* table,mapped_items_t& mapped,std::int64_t timestamp);
     /*
      * update trackers
     */

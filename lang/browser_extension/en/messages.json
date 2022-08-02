@@ -1,0 +1,111 @@
+{
+    "appname":{
+        "message": "File Centipede"
+    },
+    "videos": {
+        "message": "Videos"
+    },
+    "audios": {
+        "message": "Audios"
+    },
+    "magnets": {
+        "message": "Magnets"
+    },
+    "type": {
+        "message": "type"
+    },
+    "length_duration": {
+        "message": "length / duration / size"
+    },
+    "download": {
+        "message": "Download"
+    },
+    "cancel": {
+        "message": "Cancel"
+    },
+    "file": {
+        "message": "file"
+    },
+    "files": {
+        "message": "files"
+    },
+    "download_video": {
+        "message": "Download this video"
+    },
+    "download_audio": {
+        "message": "Download this audio"
+    },
+    "download_link": {
+        "message": "Download this link"
+    },
+    "download_image": {
+        "message": "Download this image"
+    },
+    "minutes": {
+        "message": "Minutes"
+    },
+    "text": {
+        "message": "text"
+    },
+    "download_all": {
+        "message": "Download all"
+    },
+    "copy_all": {
+        "message": "Copy all"
+    },
+    "copy": {
+        "message": "copy"
+    },
+    "copy_addr_msg": {
+        "message": "Address copy success"
+    },
+    "video_floating_bar": {
+        "message": "Video floating bar"
+    },
+    "enable": {
+        "message": "Enable"
+    },
+    "disable": {
+        "message": "Disable"
+    },
+    "yes": {
+        "message": "Yes"
+    },
+    "no": {
+        "message": "No"
+    },
+    "send_failed": {
+        "message": "Send failed"
+    },
+    "browser": {
+        "message": "Browser"
+    },
+    "download_manager": {
+        "message": "Download manager"
+    },
+    "download_send_failed_message_prefix": {
+        "message": "Cannot connect to "
+    },
+    "download_send_failed_message": {
+        "message": "either is not installed,or is not running, choose an operation."
+    },
+    "recapture_address": {
+        "message": "Recapture Address"
+    },
+    "recapture_address_msg_success": {
+        "message": "Recapture address success, please open the software and check if it's downloading."
+    },
+    "refresh_address_msg_content": {
+        "message": "Before the address being captured, do not refresh the current page, please find: "
+    },
+    "ignore_this_site": {
+        "message": "Ignore this site"
+    },
+    "potential_urls": {
+        "message": "Potential URLs"
+    },
+    "potential_keys": {
+        "message": "Potential Keys"
+    }
+
+}

@@ -59,9 +59,9 @@
   <Program_Info>
     <AppID>app-0100aa3d7a5e</AppID>
     <Program_Name>FileCentipede</Program_Name>
-    <Program_Version>2.3</Program_Version>
+    <Program_Version>2.4</Program_Version>
     <Program_Release_Month>08</Program_Release_Month>
-    <Program_Release_Day>01</Program_Release_Day>
+    <Program_Release_Day>02</Program_Release_Day>
     <Program_Release_Year>2022</Program_Release_Year>
     <Program_Cost_Dollars>0</Program_Cost_Dollars>
     <Program_Type>Freeware</Program_Type>
@@ -104,7 +104,7 @@
       <Application_XML_File_URL>http://filecxx.com/release/FileCentipede_pad.xml</Application_XML_File_URL>
     </Application_URLs>
     <Download_URLs>
-      <Primary_Download_URL>https://github.com/filecxx/FileCentipede/releases/download/2.3/filecxx_2.3_win_x64.zip</Primary_Download_URL>
+      <Primary_Download_URL>https://github.com/filecxx/FileCentipede/releases/download/2.4/filecxx_2.4_win_x64.zip</Primary_Download_URL>
       <Secondary_Download_URL>http://www.filecxx.com/release/filecxx_latest_win_x64.zip</Secondary_Download_URL>
       <Additional_Download_URL_1></Additional_Download_URL_1>
       <Additional_Download_URL_2></Additional_Download_URL_2>
@@ -116,8 +116,8 @@
       <Char_Desc_45>File centipede is an download manager</Char_Desc_45>
       <Char_Desc_80>File centipede is an internet file download manager</Char_Desc_80>
       <Char_Desc_250>File centipede is an internet file download manager</Char_Desc_250>
-      <Char_Desc_450>File centipede is an internet file download manager with enhanced features, it's fast, customizable, user-friendly, multi-protocol supported, contains lots of useful auxiliary tools, and it's free with no ads, you can also use it to download audio and videos from websites, increase your download speeds by up to 1.1 times, it's the best internet download manager you can find(so far).</Char_Desc_450>
-      <Char_Desc_2000>File centipede is an internet file download manager with enhanced features, it's fast, customizable, user-friendly, multi-protocol supported, contains lots of useful auxiliary tools, and it's free with no ads, you can also use it to download audio and videos from websites, increase your download speeds by up to 1.1 times, it's the best internet download manager you can find(so far).
+      <Char_Desc_450>File centipede is an All-In-One internet file upload/download manager, BitTorrent Client, WebDAV client, FTP client, and SSH client. It is designed to be fast, customizable, and user-friendly. It supports multi-protocols and contains many useful auxiliary tools such as HTTP requester, file merge, and encoders. With the browser integration, you can download audio and videos from websites, even encrypted videos.</Char_Desc_450>
+      <Char_Desc_2000>File centipede is an All-In-One internet file upload/download manager, BitTorrent Client, WebDAV client, FTP client, and SSH client. It is designed to be fast, customizable, and user-friendly. It supports multi-protocols and contains many useful auxiliary tools such as HTTP requester, file merge, and encoders. With the browser integration, you can download audio and videos from websites, even encrypted videos. (It's free with no ads)
 
 Features
 feature	Minimum version

@@ -61,6 +61,10 @@ protected:
     */
     std::int64_t timer_ = 0;
     /*
+     * default save path
+    */
+    ext::text default_save_path_;
+    /*
      * uris
     */
     std::unordered_map<ext::text,config_t> uris_;
@@ -93,6 +97,19 @@ public:
     }
 
 
+public:
+    /*
+     * default_save_path
+    */
+    ext::text_view default_save_path()
+    {
+        if(!default_save_path_.empty()){
+            return default_save_path_;
+        }
+        return zzz->configs["general"].text_view("default_save_path");
+    }
+
+
 protected:
     /*
      * analyze addresses
@@ -102,6 +119,10 @@ protected:
      * download now
     */
     void download(bool immediately);
+    /*
+     * change save path
+    */
+    void change_save_path(const ext::text& path);
 
 
 protected:

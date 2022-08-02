@@ -1,0 +1,110 @@
+{
+    "appname":{
+       "message": "文件蜈蚣"
+    },
+    "videos": {
+      "message": "视频"
+    },
+    "audios": {
+      "message": "音频"
+    },
+    "magnets": {
+      "message": "磁力"
+    },
+    "type": {
+      "message": "类型"
+    },
+    "length_duration": {
+      "message": "长度 / 时间 / 大小"
+    },
+    "download": {
+      "message": "下载"
+    },
+    "cancel": {
+      "message": "取消"
+    },
+    "file": {
+      "message": "文件"
+    },
+    "files": {
+      "message": "文件"
+    },
+    "download_video": {
+      "message": "下载这个视频"
+    },
+    "download_audio": {
+      "message": "下载这个音频"
+    },
+    "download_link": {
+      "message": "下载这个链接"
+    },
+    "download_image": {
+      "message": "下载这个图片"
+    },
+    "minutes": {
+      "message": "分钟"
+    },
+    "text": {
+      "message": "文字"
+    },
+    "download_all": {
+      "message": "下载全部"
+    },
+    "copy_all": {
+      "message": "复制全部"
+    },
+    "copy": {
+      "message": "复制"
+    },
+    "copy_addr_msg": {
+      "message": "地址复制成功"
+    },
+    "video_floating_bar": {
+      "message": "视频浮动栏"
+    },
+    "enable": {
+      "message": "启用"
+    },
+    "disable": {
+      "message": "禁用"
+    },
+    "yes": {
+      "message": "是"
+    },
+    "no": {
+      "message": "否"
+    },
+    "send_failed": {
+      "message": "发送失败"
+    },
+    "download_send_failed_message_prefix": {
+      "message": "无法连接到 "
+    },
+    "download_send_failed_message": {
+      "message": "要么没有安装,或者没有启动, 选择一个操作."
+    },
+    "browser": {
+      "message": "浏览器"
+    },
+    "download_manager": {
+      "message": "下载管理器"
+    },
+    "recapture_address": {
+      "message": "重新捕获地址"
+    },
+    "refresh_address_msg_content": {
+      "message": "在地址捕捉到之前不要刷新当前网页, 请找到: "
+    },
+    "recapture_address_msg_success": {
+      "message": "已经成功捕获到新地址,请打开软件查看是否正常下载."
+    },
+    "ignore_this_site": {
+      "message": "忽略此站"
+    },
+    "potential_urls": {
+      "message": "潜在URLs"
+    },
+    "potential_keys": {
+      "message": "潜在密钥"
+    }
+}

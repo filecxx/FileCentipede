@@ -30,6 +30,7 @@ void try_launch_tool(pro::main_window& window,const ext::fs::path& path)
     std::initializer_list<ext::value_view> args{file_path,"#main"};
     ext::ui::arguments arguments(ext::ui::shared_stack,args);
     ext::ui::methods::invokers_global["open-window"](arguments);
+
 }
 
 /*
@@ -67,6 +68,8 @@ void try_command_line(pro::main_window& window,ext::text_view text,int argc,char
 
     }else if(text == "--magnet_to_torrent"){
 
+    }else if(text == "--checksum"){
+        (new pro::tools::checksum(window.zzz))->exec(argc - 2,argv + 2);
     }else if(text == "--file_merge"){
         (new pro::tools::file_merge(window.zzz))->exec();
     }else if(text == "--translate"){
@@ -74,7 +77,7 @@ void try_command_line(pro::main_window& window,ext::text_view text,int argc,char
     }else if(text == "--software_release"){
         (new pro::tools::software_release(window.zzz))->exec();
     }else if(text == "--p"){
-        try_launch_plugin(window,argc + 2,argv + 2);
+        try_launch_plugin(window,argc - 2,argv + 2);
     }else{
         std::exit(0);
     }

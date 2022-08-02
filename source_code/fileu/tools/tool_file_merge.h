@@ -12,7 +12,15 @@ public:
     file_merge(pro::global& global);
 
 
+public:
+    ~file_merge();
+
+
 protected:
+    /*
+     * tab
+    */
+    ext::ui::tab* tab_ = nullptr;
     /*
      * normal files
     */
@@ -22,6 +30,10 @@ protected:
     */
     ext::ui::statusbar* statusbar_ = nullptr;
     /*
+     * video audio form
+    */
+    ext::ui::form video_audio_form_;
+    /*
      * state
     */
     std::atomic<uint8_t> state_ = ext::state::Running;
@@ -29,6 +41,10 @@ protected:
      * refcount
     */
     std::atomic_uint32_t refcount_ = 0;
+    /*
+     * process
+    */
+    ext::process process_;
 
 
 protected:
@@ -36,6 +52,13 @@ protected:
      * init actions
     */
     void init_actions();
+
+
+protected:
+    /*
+     * detect ffmpeg
+    */
+    void detect_ffmpeg();
 
 
 protected:
@@ -81,6 +104,13 @@ protected:
      * merge
     */
     void normal_merge();
+
+
+protected:
+    /*
+     * video audio merge
+    */
+    void video_audio_merge();
 
 
 public:

@@ -179,6 +179,9 @@ void main_window::init_actions()
     ui.on_action_id("act_tool_create_torrent",[this](auto){
         (new pro::tools::create_torrent(zzz))->exec();
     });
+    ui.on_action_id("act_tool_checksum",[this](auto){
+        (new pro::tools::checksum(zzz))->exec();
+    });
     ui.on_action_id("act_tool_file_merge",[this](auto){
         (new pro::tools::file_merge(zzz))->exec();
     });
@@ -199,8 +202,13 @@ void main_window::init_actions()
     ui.on_action_id("act_setting_torrent_query",[this](auto){
         ext::try_new<pro::settings::torrent_query>(torrent_query_,zzz)->exec();
     });
-    ui.on_action_id("act_settings",[&](auto){
-        ext::try_new<pro::settings::main>(settings_,zzz,settings_)->exec();
+    ui.on_action_id("act_settings",[&](auto)
+    {
+        ext::try_new<pro::settings::main>(settings_,zzz,settings_)->exec([this](auto type){
+            if(type == "show_proxies"){
+                ext::try_new<pro::settings::proxies>(proxies_,zzz)->exec();
+            }
+        });
     });
 
 
@@ -274,22 +282,24 @@ void main_window::init_clipboard()
     static pro::tasks::add_task*         instance = nullptr;
     static std::vector<ext::text>        addresses;
     static std::unordered_set<ext::text> suffixes;
+    static ext::text                     clipboard_text;
 
-    ext::ui::clipboard::on_change([this](bool is_owner)
+    ext::ui::clipboard::on_change([this](auto board,bool is_owner)
     {
         if(!zzz.service || is_owner || !ext::ui::clipboard::has_text() || zzz.settings.get("watch_clipboard") != true){
             return;
         }
         auto& setting = zzz.configs["general_clipboard"];
+        auto  text    = ext::ui::clipboard::text();
 
-        if(!setting.is_map()){
+        if(!setting.is_map() || clipboard_text == text){
             return;
         }
         ext::parser::split(setting.text_view("suffixes"),',',[&](auto text,auto){
             suffixes.emplace(text);
             return false;
         });
-        ext::parser::split_lines(ext::ui::clipboard::text(),[&](auto line,auto)
+        ext::parser::split_lines(text,[&](auto line,auto)
         {
             pro::uri uri;
 
@@ -326,6 +336,7 @@ void main_window::init_clipboard()
             instance->exec();
             instance->append(addresses);
         }
+        clipboard_text = text;
         addresses.clear();
         suffixes.clear();
     });
@@ -355,7 +366,6 @@ void main_window::show_ipc_loading()
     ext::ui::post([this]
     {
         Ext_Return_If(zzz.shutting_down);
-
         auto title    = ext::text();
         auto text     = ext::text();
         auto messages = zzz.messages();
@@ -378,6 +388,22 @@ void main_window::show_ipc_loading()
     });
 }
 
+void main_window::show_DHT_warning(uint32_t peers)
+{
+    if(peers == 0)
+    {
+        if(!methods_.DHT_warning_visible_){
+            auto object = ui("#torrent_DHT_warning")->object;
+            object.cast<ext::ui::img*>()->src("icons/16/network_error.png");
+            object.show();
+            methods_.DHT_warning_visible_ = true;
+        }
+    }else if(methods_.DHT_warning_visible_){
+        ui("#torrent_DHT_warning")->object.hide();
+        methods_.DHT_warning_visible_ = false;
+    }
+}
+
 void main_window::connect_service()
 {
     Ext_Return_If(zzz.shutting_down);
@@ -388,23 +414,15 @@ void main_window::connect_service()
             show_ipc_loading();
             return connect_service();
         }
-        ext::ui::post([this,connection]() mutable{
-            on_service_connected(connection);
-        });
         connection->on_close([this]{
             ext::ui::post(std::bind(&main_window::on_service_close,this));
         });
         connection->on_message([this](auto data,auto size){
             on_message(data,size);
         });
-        connection->send({{"@",protocol::Message_Version}});
-        connection->send({{"@",protocol::Message_Configs}});
-        connection->send({{"@",protocol::Message_Proxies}});
-        connection->send({{"@",protocol::Message_Catalogs}});
-        connection->send({{"@",protocol::Message_Paths}});
-        connection->send({{"@",protocol::Message_Subscribes}});
-        connection->send({{"@",protocol::Message_Tasks}});
-        connection->send({{"@",protocol::Message_NFS_Hosts}});
+        ext::ui::post([this,connection]() mutable{
+            on_service_connected(connection);
+        });
     });
 }
 
@@ -417,6 +435,13 @@ void main_window::on_timer()
         Ext_Return_If(zzz.shutting_down);
         auto now = ext::time::steady_now();
 
+        if(!zzz.service){
+            return on_timer();
+        }
+        if(zzz.filec_state.get("engines") != true){
+            zzz.send({{"@",protocol::Message_Running_State}});
+            return on_timer();
+        }
         if(now - timepoint_interval_ >= 200ms){
             on_timer_200ms(now);
         }
@@ -483,6 +508,27 @@ void main_window::on_version(ext::value& json)
     }
 }
 
+void main_window::on_running_state(ext::value& json)
+{
+    if(json["engines"] != true){
+        return;
+    }
+    zzz.filec_state = json;
+    zzz.send({{"@",protocol::Message_Configs}});
+    zzz.send({{"@",protocol::Message_Proxies}});
+    zzz.send({{"@",protocol::Message_Site_Rules}});
+    zzz.send({{"@",protocol::Message_Catalogs}});
+    zzz.send({{"@",protocol::Message_Paths}});
+    zzz.send({{"@",protocol::Message_Subscribes}});
+    zzz.send({{"@",protocol::Message_NFS_Hosts}});
+    zzz.send({{"@",protocol::Message_Tasks}});
+
+    for(auto& value : queued_messages_){
+        zzz.send(value);
+    }
+    queued_messages_.clear();
+}
+
 void main_window::on_stop()
 {
     zzz.shutdown();
@@ -495,9 +541,8 @@ void main_window::on_stop()
 
 void main_window::on_service_close()
 {
-    ext::debug <<= "on_service_close";
-
     zzz.service.reset();
+    zzz.filec_state = nullptr;
     tasks_.clear();
     file_browser_.clear();
 
@@ -519,13 +564,11 @@ void main_window::on_service_connected(std::shared_ptr<ext::ipcx::connection>& c
         ext::ui::methods::invokers_global["open-window"](arguments);
         zzz.setting("installed",2);
     }
+    connection->send({{"@",protocol::Message_Version}});
+    connection->send({{"@",protocol::Message_Running_State}});
+
     zzz.service = connection;
     zzz.messages()->widget("#ipc_loading")->hide(true);
-
-    for(auto& value : queued_messages_){
-        zzz.send(value);
-    }
-    queued_messages_.clear();
 }
 
 void main_window::on_subscribe_add(ext::value& json)
@@ -589,9 +632,17 @@ void main_window::on_client_message(ext::value& json)
             window_->show_active();
             window_->show_top(false);
         }
-    }else if(type == "event"){
+    }else if(type == "event")
+    {
         if(methods_.tray_initialized_){
-            ui.cast_id<ext::ui::tray*>("tray")->flashing(6);
+            auto tray = ui.cast_id<ext::ui::tray*>("tray");
+
+            tray->flashing(6);
+            /*
+            if(json.get("error") == 0){
+                tray->message("info","software_name_"_lang,"add_task"_lang,2000);
+            }
+            */
         }
         zzz->play_sound("event");
     }else if(type == "add_task"){
@@ -631,6 +682,8 @@ void main_window::on_message(uint16_t at,ext::value& json)
     {
     case protocol::Message_Version:
         return on_version(json);
+    case protocol::Message_Running_State:
+        return on_running_state(json);
     case protocol::Message_Stop:
         return on_stop();
     case protocol::Message_UI:
@@ -649,6 +702,11 @@ void main_window::on_message(uint16_t at,ext::value& json)
         return;
     case protocol::Message_Proxies:
         zzz.proxies = json.extract("items");
+        return;
+    case protocol::Message_Site_Rules:
+        for(zzz.site_rules.clear();auto& item : *json["items"].cast_array()){
+            zzz.site_rules.emplace(item.int64("id"),item);
+        }
         return;
     case protocol::Message_Paths:
         zzz.paths = json.extract("items");
@@ -759,6 +817,8 @@ void main_window::on_status(ext::value& json)
 
             if(name.starts_with("global_speed")){
                 value = " " + ext::format_number("bytes/s",iter.second.number());
+            }else if(name == "torrent_DHT_peers"){
+                show_DHT_warning(value.uint32());
             }
             ext::ui::methods::invoke(node->object,"text",value);
         }
@@ -844,6 +904,7 @@ void main_window::create(bool booting)
     init_sizes(object,booting);
     init_events();
 
+    zzz.taskbar.bind((ext::ui::widget*)window_);
     zzz.io_worker()->set_timeout([this]{
         init_tabs();
         init_ipc();
