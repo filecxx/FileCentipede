@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>${software_name_} - ${how_to_uninstall} ${software_name_}</title>
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../../style/base.css">
+</head>
+<body>
+
+<div class="central">
+    ${@import ../tpl/tpl_nav.html}
+    ${@import ../tpl/tpl_header.html}
+    ${@lang_dir documentation/how_to_uninstall}
+
+    <div class="body">
+        <div class="section">
+            <h1>${how_to_uninstall} ${software_name_}</h1>
+        </div>
+
+        <div class="section">
+            <div class="article_">
+                <h3>GUI</h3>
+                <p>1. ${content_section_1_}.</p>
+                <p><img src="../../images/document/misc/filecxx_menu_help.png"></p>
+                <p>2. ${content_section_2_}.</p>
+                <p><img src="../../images/document/misc/filecxx_menu_help_uninstall.png"></p>
+                <p>3. ${content_section_3_}.</p>
+                <p><img src="../../images/document/misc/filecxx_menu_help_uninstall_btn.png"></p>
+                <p>4. ${content_section_4_}.</p>
+            </div>
+
+            <div class="article_">
+                <h3>${command_line}</h3>
+                <p>
+                    filec -u
+                </p>
+            </div>
+        </div>
+
+        ${@import ../tpl/tpl_share.html}
+    </div>
+
+    ${@import ../tpl/tpl_footer.html}
+
+</div>
+
+<script src="../../script/base.js"></script>
+
+</body>
+</html>

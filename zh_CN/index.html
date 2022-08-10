@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="文件蜈蚣是一个全能网络文件上传/下载器, BitTorrent客户端, WebDAV客户端, FTP客户端, 和SSH客户端. 它快速, 可定制, 用户友好, 多协议支持, 同时也包含了很多有用的辅助工具如: HTTP请求器, 文件合并工具, 编码/解码工具等. 和网页浏览器进行集成, 你可以从网页上下载音频和视频, 甚至是加密视频.(这是免费的,并且没有广告)"/>
     <meta name="keywords" content="文件蜈蚣, IDM, BT种子客户端, 下载种子, 网页中下载视频, 视频嗅探工具, 最快的下载加速器, 最好的下载工具, linux下载工具, 免费下载工具, transmission, libtorrent, 文件蜈蚣下载, 无广告下载工具"/>
     <title>文件蜈蚣 官方网站</title>
@@ -16,40 +16,46 @@
 
 <div class="central">
     <div class="nav">
-        <div class="links_">
-            <a class="tool_button home_" href="#">主页</a>
-            <a class="tool_button download_" href="#downloads">下载</a>
-            <a class="tool_button description_" href="#description">描述</a>
-            <a class="tool_button features_" href="#features">特性</a>
-            <a class="tool_button screenshot_" href="#screenshot">截图</a>
-            <a class="tool_button user_reviews_" href="#user_reviews">用户评价</a>
-            <a class="tool_button documentation_" href="documentation.html">文档</a>
-        </div>
+    <div class="links_">
+        <a class="tool_button home_" href="index.html#">主页</a>
+        <a class="tool_button features_" href="index.html#features">特性</a>
+        <a class="tool_button download_" href="download.html">下载</a>
+        <a class="tool_button screenshot_" href="screenshot.html">截图</a>
+        <a class="tool_button user_reviews_" href="index.html#user_reviews">用户评价</a>
+        <a class="tool_button documentation_" href="documentation.html">文档</a>
     </div>
-
+</div>
     <div class="header">
-        <div class="top_">
-            <a href="http://filecxx.com" class="logo_"></a>
-            <div class="name_">
-                <h1><a href="http://filecxx.com">文件蜈蚣</a></h1>
-                <div class="text_"> - Since 2022</div>
-            </div>
-            <div class="languages_">
-                <div class="current_">简体中文</div>
-                <div class="items_">
-                    <a class="item_" href="../en_US/index.html">English</a>
-                    <a class="item_" href="../zh_CN/index.html">简体中文</a>
-                    <a class="item_" href="../zh_TW/index.html">繁體中文</a>
-                    <a class="item_" href="../ru_RU/index.html">Русский</a>
-                </div>
+    <div class="top_">
+        <a href="http://filecxx.com" class="logo_"></a>
+        <div class="name_">
+            <h1><a href="http://filecxx.com">文件蜈蚣</a></h1>
+            <div class="text_"> - Since 2022</div>
+        </div>
+        <div class="languages_">
+            <div class="current_">简体中文</div>
+            <div class="items_">
+                <a class="item_" href="/en_US/index.html">English</a>
+                <a class="item_" href="/zh_CN/index.html">简体中文</a>
+                <a class="item_" href="/zh_TW/index.html">繁體中文</a>
+                <a class="item_" href="/ru_RU/index.html">Русский</a>
             </div>
         </div>
     </div>
+</div>
 
     <div class="body">
         <div class="section description" id="description">
             <h2>描述</h2>
             <div id="description_text">文件蜈蚣是一个全能网络文件上传/下载器, BitTorrent客户端, WebDAV客户端, FTP客户端, 和SSH客户端. 它快速, 可定制, 用户友好, 多协议支持, 同时也包含了很多有用的辅助工具如: HTTP请求器, 文件合并工具, 编码/解码工具等. 和网页浏览器进行集成, 你可以从网页上下载音频和视频, 甚至是加密视频.(这是免费的,并且没有广告)</div>
+        </div>
+        <div class="section">
+            <a class="label_ blue_" href="os/linux_download_manager.html">Linux下载工具</a>
+            <a class="label_ blue_" href="features/video_downloader.html">视频下载工具</a>
+            <a class="label_ blue_" href="features/bittorrent_client.html">BitTorrent客户端</a>
+            <a class="label_ blue_" href="features/webdav_file_manager.html">WebDAV文件管理器</a>
+            <a class="label_ blue_" href="features/ftp_file_manager.html">FTP文件管理器</a>
+            <a class="label_ blue_" href="features/ssh_file_manager.html">SSH文件管理器</a>
         </div>
         <script>
             (function(){
@@ -59,65 +65,91 @@
                 element.innerHTML = text.replaceAll('.',".<br/>");
             })();
         </script>
-
         <div class="section downloads" id="downloads">
-            <h2>下载</h2>
-            <div class="detail_">
-                <div class="version_">
-                    最新版本:
-                    <b>2.4</b>
-                    <span style="color: green">(2022.08.02)</span>
-                    <span> - </span>
-                    <a href="update_log.html">更新日志</a>
-                </div>
-                <div style="margin-top: 12px">
-                    <span>激活码:</span>
-                    <a href="activation_code.html">免费获取</a>
-                </div>
-            </div>
-            <div class="platforms_">
-                <div class="platform_">
-                    <h4>Windows x64 (>= Windows vista)</h4>
-                    <a class="button" href="https://github.com/filecxx/FileCentipede/releases/download/2.4/filecxx_2.4_win_x64.zip">下载链接1</a>
-                    <a class="button" href="../release/filecxx_latest_win_x64.zip">下载链接2</a>
-                    <a class="button" href="https://sourceforge.net/projects/filecentipede/files/">下载链接3</a>
-                </div>
-                <div class="platform_">
-                    <h4>Linux x64 (No glibc dependency)</h4>
-                    <a class="button" href="https://github.com/filecxx/FileCentipede/releases/download/2.4/filecxx_2.4_linux_x64.zip">下载链接1</a>
-                    <a class="button" href="../release/filecxx_latest_linux_x64.zip">下载链接2</a>
-                    <a class="button" href="https://sourceforge.net/projects/filecentipede/files/">下载链接3</a>
-                </div>
-                <div class="platform_">
-                    <h4>MacOS x64</h4>
-                    <a class="button disabled" href="#">缺乏构建环境</a>
-                </div>
-                <div class="platform_">
-                    <h4>Chrome extension 1.5</h4>
-                    <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/chrome.zip">下载链接1</a>
-                    <a class="button" href="../release/chrome.zip">下载链接2</a>
-                </div>
-                <div class="platform_">
-                    <h4>Firefox extension 1.5</h4>
-                    <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/firefox.xpi">下载链接1</a>
-                    <a class="button" href="../release/firefox.xpi">下载链接2</a>
-                </div>
-                <div class="platform_">
-                    <h4>Github</h4>
-                    <a class="button" target="_blank" href="https://github.com/filecxx/FileCentipede">https://github.com/filecxx/FileCentipede</a>
-                </div>
-                <div class="platform_">
-                    <h4>PAD</h4>
-                    <a class="button" target="_blank" href="/release/FileCentipede_pad.xml">File Centipede PAD.xml</a>
-                </div>
-            </div>
-
-            <div class="tips_">
-                <p>如果看到软件底部的 BT DHT 为 0, 并且磁力链接和Torrent下载没有速度, 这是由Windows防火墙造成的.</p>
-                <p>可以尝试关闭filec进程, 或者重新启动电脑.</p>
-            </div>
+    <h2>下载</h2>
+    <div class="detail_">
+        <div class="version_">
+            最新版本:
+            <b>2.4</b>
+            <span style="color: green">(2022.08.02)</span>
+            <span> - </span>
+            <a href="update_log.html">更新日志</a>
+        </div>
+        <div style="margin-top: 12px">
+            <span>激活码:</span>
+            <a href="activation_code.html">免费获取</a>
+        </div>
+    </div>
+    <div class="platforms_">
+        <div class="platform_">
+            <h4>Windows x64 (>= Windows vista)</h4>
+            <a class="button" href="https://github.com/filecxx/FileCentipede/releases/download/2.4/filecxx_2.4_win_x64.zip">下载链接1</a>
+            <a class="button" href="../release/filecxx_latest_win_x64.zip">下载链接2</a>
+            <a class="button" href="https://sourceforge.net/projects/filecentipede/files/">下载链接3</a>
+        </div>
+        <div class="platform_">
+            <h4>Linux x64 (No glibc dependency)</h4>
+            <a class="button" href="https://github.com/filecxx/FileCentipede/releases/download/2.4/filecxx_2.4_linux_x64.zip">下载链接1</a>
+            <a class="button" href="../release/filecxx_latest_linux_x64.zip">下载链接2</a>
+            <a class="button" href="https://sourceforge.net/projects/filecentipede/files/">下载链接3</a>
+        </div>
+        <div class="platform_">
+            <h4>MacOS x64</h4>
+            <a class="button disabled" href="#">缺乏构建环境</a>
+        </div>
+        <div class="platform_">
+            <h4>定制</h4>
+            <a class="button disabled" href="#">获取定制的版本 (免费)</a>
         </div>
 
+        <div class="platform_">
+            <h4>Firefox extension 1.51</h4>
+            <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/firefox.xpi">下载链接1</a>
+            <a class="button" href="../release/firefox.xpi">下载链接2</a>
+            <a class="button" href="https://addons.mozilla.org/firefox/addon/filecxx/" target="_blank">在线安装</a>
+        </div>
+        <div class="platform_">
+            <h4>Microsoft Edge 1.51</h4>
+            <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/chrome.zip">下载链接1</a>
+            <a class="button" href="../release/chrome.zip">下载链接2</a>
+            <a class="button" href="https://microsoftedge.microsoft.com/addons/detail/jeekmibdibcjeihbjnjgbegjalfelhon" target="_blank">在线安装</a>
+        </div>
+        <div class="platform_">
+            <h4>Chrome extension 1.51</h4>
+            <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/chrome.zip">下载链接1</a>
+            <a class="button" href="../release/chrome.zip">下载链接2</a>
+            <a class="button disabled" href="#">在线安装</a>
+        </div>
+        <div class="platform_">
+            <h4>Github</h4>
+            <a class="button" target="_blank" href="https://github.com/filecxx/FileCentipede">https://github.com/filecxx/FileCentipede</a>
+        </div>
+        <div class="platform_">
+            <h4>PAD (Portable Application Description)</h4>
+            <a class="button" target="_blank" href="/release/FileCentipede_pad.xml">File Centipede PAD.xml</a>
+        </div>
+
+    </div>
+
+    <div class="tips_">
+        <p>如果看到软件底部的 BT DHT 为 0, 并且磁力链接和Torrent下载没有速度, 这是由Windows防火墙造成的.</p>
+        <p>可以尝试关闭filec进程, 或者重新启动电脑.</p>
+    </div>
+</div>
+        <div class="section">
+            <div>
+                <h2>语言</h2>
+            </div>
+            <div>
+                <div class="label_">English</div>
+                <div class="label_">简体中文</div>
+                <div class="label_">繁體中文</div>
+                <div class="label_">русский</div>
+                <div class="label_">português</div>
+                <div class="label_">Français</div>
+                <div class="label_">Nederlands</div>
+            </div>
+        </div>
         <div class="section features" id="features">
             <div style="position: relative">
                 <h2 style="display: inline-block;text-align: left">特性</h2>
@@ -183,106 +215,6 @@
             </table>
         </div>
 
-        <div class="section screenshot" id="screenshot">
-            <h2>截图</h2>
-            <div>
-                <div>
-                    <h4>文件蜈蚣</h4>
-                    <img loading="lazy" src="../images/screenshot_software.png" alt="文件蜈蚣" width="800">
-                    <img loading="lazy" src="../images/screenshot_software2.png" alt="文件蜈蚣" width="800">
-                    <img loading="lazy" src="../images/screenshot_software_file_browser_webdav.png" alt="文件蜈蚣 File browser WebDAV" width="800">
-                    <img loading="lazy" src="../images/screenshot_software_file_browser_ssh.png" alt="文件蜈蚣 File browser SSH, SFTP" width="800">
-                    <img loading="lazy" src="../images/screenshot_software_file_browser_ftp.png" alt="文件蜈蚣 File browser FTP" width="800">
-                    <img loading="lazy" src="../images/screenshot_software_file_browser_add.png" alt="文件蜈蚣 File browser Add host" width="800">
-                    <img loading="lazy" src="../images/screenshot_software_file_browser_log.png" alt="文件蜈蚣 File browser log" width="800">
-                </div>
-                <div>
-                    <h4>添加任务</h4>
-                    <img loading="lazy" src="../images/screenshot_add_task.png" alt="文件蜈蚣 添加任务">
-                    <img loading="lazy" src="../images/screenshot_add_task2.png" alt="文件蜈蚣 添加任务">
-                    <img loading="lazy" src="../images/screenshot_add_task3.png" alt="文件蜈蚣 添加任务">
-                    <img loading="lazy" src="../images/screenshot_add_task4.png" alt="文件蜈蚣 添加任务">
-                </div>
-                <div>
-                    <h4>编辑任务</h4>
-                    <img loading="lazy" src="../images/screenshot_edit_task.png" alt="文件蜈蚣 编辑任务">
-                    <img loading="lazy" src="../images/screenshot_edit_task2.png" alt="文件蜈蚣 编辑任务">
-                </div>
-
-                <div>
-                    <h4>种子确认</h4>
-                    <img loading="lazy" src="../images/screenshot_torrent_confirm.png" alt="文件蜈蚣 种子确认">
-                </div>
-                <div>
-                    <img loading="lazy" src="../images/screenshot_http_confirm.png" alt="文件蜈蚣 HTTP confirm">
-                </div>
-                <div>
-                    <img loading="lazy" src="../images/screenshot_links_confirm.png" alt="文件蜈蚣 从网页下载所有链接">
-                </div>
-                <div>
-                    <h4>添加分类</h4>
-                    <img loading="lazy" src="../images/screenshot_add_catalog.png" alt="文件蜈蚣 添加分类">
-                </div>
-                <div>
-                    <h4>设置</h4>
-                    <img loading="lazy" src="../images/screenshot_settings.png" alt="文件蜈蚣 设置">
-                </div>
-                <div>
-                    <h4>代理</h4>
-                    <img loading="lazy" src="../images/screenshot_proxy.png" alt="文件蜈蚣 代理">
-                </div>
-                <div>
-                    <h4>站点规则</h4>
-                    <img loading="lazy" src="../images/screenshot_site_rule.png" alt="文件蜈蚣 站点规则">
-                    <img loading="lazy" src="../images/screenshot_site_rule2.png" alt="文件蜈蚣 站点规则2">
-                </div>
-                <div>
-                    <h4>过滤器</h4>
-                    <img loading="lazy" src="../images/screenshot_filter.png" alt="文件蜈蚣 过滤器">
-                </div>
-                <div>
-                    <h4>刷新地址</h4>
-                    <img loading="lazy" src="../images/screenshot_refresh_address.png" alt="文件蜈蚣 刷新地址">
-                </div>
-                <div>
-                    <h4>创建种子</h4>
-                    <img loading="lazy" src="../images/screenshot_create_torrent.png" alt="文件蜈蚣 创建种子">
-                </div>
-                <div>
-                    <h4>下载速度限制</h4>
-                    <img loading="lazy" src="../images/screenshot_download_speed_limit.png" alt="文件蜈蚣 下载速度限制">
-                </div>
-                <div>
-                    <h4>翻译</h4>
-                    <img loading="lazy" src="../images/screenshot_translate.png" alt="文件蜈蚣 翻译">
-                </div>
-                <div>
-                    <h4>HTTP工具</h4>
-                    <img loading="lazy" src="../images/screenshot_http_tool.png" alt="文件蜈蚣 HTTP工具">
-                </div>
-                <div>
-                    <h4>校验和工具</h4>
-                    <img loading="lazy" src="../images/screenshot_checksum_tool.png" alt="文件蜈蚣 校验和工具">
-                </div>
-            </div>
-
-            <div>
-                <h2>浏览器扩展 截图</h2>
-                <div>
-                    <h4>视频栏</h4>
-                    <img loading="lazy" src="../images/extension_video_bar.png" alt="视频栏">
-                </div>
-                <div>
-                    <h4>视频面板</h4>
-                    <img loading="lazy" src="../images/extension_videos.png" alt="视频面板">
-                </div>
-                <div>
-                    <h4>音频面板</h4>
-                    <img loading="lazy" src="../images/extension_audios.png" alt="音频面板">
-                </div>
-            </div>
-        </div>
-
         <div class="section" id="user_reviews">
             <h2>用户评价</h2>
 
@@ -337,10 +269,10 @@
             </div>
         </div>
 
-        <div class="section shares" id="shares">
-            <h2>分享</h2>
-            <div class="addthis_inline_share_toolbox"></div>
-        </div>
+        <div class="section" id="shares">
+    <h2>分享</h2>
+    <div class="addthis_inline_share_toolbox"></div>
+</div>
 
         <div class="section links_">
             <h2>链接</h2>
@@ -358,12 +290,9 @@
                 <a target="_blank" href="https://www.internetdownloadmanager.com/">IDM</a>
                 <a target="_blank" href="http://www.neatdownloadmanager.com/">NDM</a>
                 <a target="_blank" href="https://lightzhan.xyz/index.php/en/qdown-en/">QDown</a>
-                <a target="_blank" href="https://xdown.org/">XDown</a>
-                <a target="_blank" href="https://motrix.app/">motrix</a>
                 <a target="_blank" href="https://filezilla-project.org/">filezilla</a>
                 <a target="_blank" href="https://winscp.net/">WinSCP</a>
                 <a target="_blank" href="https://www.xshell.com/xftp/">xftp</a>
-                
             </div>
 
             <div><br>(如果你想添加你的软件到这个列表里, 请发送一个邮件, 你不需要将这个网站链接回来, 但如果你这样做了我会非常感谢.)</div>
@@ -376,29 +305,24 @@
 
             </div>
 
-            <div>
-                <h4>Opensource libraries</h4>
-                <a target="_blank" href="https://www.boost.org/">boost</a>
-                <a target="_blank" href="https://www.libtorrent.org/">libtorrent</a>
-                <a target="_blank" href="https://qt.io/">Qt</a>
-            </div>
         </div>
     </div>
 
     <div class="footer">
-        <div class="copyright_">
-            <span>No copyright © 2022</span>
-            <div class="email_">
-                <b>EMAIL:</b>
-                <a href="mailto:123123@123.com" id="contact_email">123123@123.com</a>
-            </div>
-            <div class="contact_"></div>
+    <div class="copyright_">
+        <span>No copyright © 2022</span>
+        <div class="email_">
+            <b>EMAIL:</b>
+            <a href="mailto:123123@123.com" id="contact_email">123123@123.com</a>
         </div>
+        <div class="contact_"></div>
     </div>
+</div>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6226ca040a5d34a0"></script>
 </div>
 
 <script src="../script/base.js"></script>
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6226ca040a5d34a0"></script>
+
 
 </body>
 </html>

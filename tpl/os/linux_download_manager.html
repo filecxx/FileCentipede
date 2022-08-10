@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>${software_name_} - ${linux_download_manager}</title>
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../../style/base.css">
+</head>
+<body>
+
+<div class="central">
+    ${@import ../tpl/tpl_nav.html}
+    ${@import ../tpl/tpl_header.html}
+    ${@lang_dir os/linux_download_manager}
+
+    <div class="body">
+        <div class="section">
+            <h1>${linux_download_manager}</h1>
+        </div>
+        <div class="section">
+            <div class="article_">
+                ${content_section_1_}
+            </div>
+
+            <div class="article_">
+                <img src="../../images/screenshot_add_task.png" alt="file centipede add task">
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="article_">
+                ${content_section_2_}
+            </div>
+
+            <div class="article_">
+                <img src="../../images/tools/screenshot_file_merge.png" alt="file merge">
+            </div>
+
+            <div class="article_">
+                <img src="../../images/screenshot_checksum_tool.png" alt="file checksum">
+            </div>
+
+            <div class="article_">
+                <img src="../../images/tools/screenshot_magnet2torrent.png" alt="magnet to torrent">
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="article_">
+                ${content_section_3_}
+            </div>
+            <div class="article_">
+                <img src="../../images/screenshot_software_file_browser_webdav.png" alt="file centipede remote file manager" width="800">
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="article_">
+                ${content_section_4_}
+            </div>
+        </div>
+
+        <div class="section">
+            <a href="../download.html" class="button">${download}</a>
+        </div>
+
+        ${@import ../tpl/tpl_share.html}
+    </div>
+
+    ${@import ../tpl/tpl_footer.html}
+</div>
+<script src="../../script/base.js"></script>
+</body>
+</html>

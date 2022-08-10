@@ -1,9 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    ${@import tpl/tpl_htmlmeta.html}
     <meta name="description" content="${description_}"/>
     <meta name="keywords" content="${index_meta_keywords_}"/>
     <title>${title_index_} ${official_website}</title>
@@ -15,41 +13,21 @@
 <body>
 
 <div class="central">
-    <div class="nav">
-        <div class="links_">
-            <a class="tool_button home_" href="#">${home_page}</a>
-            <a class="tool_button download_" href="#downloads">${download}</a>
-            <a class="tool_button description_" href="#description">${description}</a>
-            <a class="tool_button features_" href="#features">${features}</a>
-            <a class="tool_button screenshot_" href="#screenshot">${screenshot}</a>
-            <a class="tool_button user_reviews_" href="#user_reviews">${user_reviews}</a>
-            <a class="tool_button documentation_" href="documentation.html">${documentation}</a>
-        </div>
-    </div>
-
-    <div class="header">
-        <div class="top_">
-            <a href="http://filecxx.com" class="logo_"></a>
-            <div class="name_">
-                <h1><a href="http://filecxx.com">${software_name_}</a></h1>
-                <div class="text_"> - Since 2022</div>
-            </div>
-            <div class="languages_">
-                <div class="current_">${language_}</div>
-                <div class="items_">
-                    <a class="item_" href="../en_US/index.html">English</a>
-                    <a class="item_" href="../zh_CN/index.html">简体中文</a>
-                    <a class="item_" href="../zh_TW/index.html">繁體中文</a>
-                    <a class="item_" href="../ru_RU/index.html">Русский</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    ${@import tpl/tpl_nav_root.html}
+    ${@import tpl/tpl_header.html}
 
     <div class="body">
         <div class="section description" id="description">
             <h2>${description}</h2>
             <div id="description_text">${description_}</div>
+        </div>
+        <div class="section">
+            <a class="label_ blue_" href="os/linux_download_manager.html">${linux_download_manager}</a>
+            <a class="label_ blue_" href="features/video_downloader.html">${video_downloader}</a>
+            <a class="label_ blue_" href="features/bittorrent_client.html">${bittorrent_client}</a>
+            <a class="label_ blue_" href="features/webdav_file_manager.html">${webdav_file_manager}</a>
+            <a class="label_ blue_" href="features/ftp_file_manager.html">${ftp_file_manager}</a>
+            <a class="label_ blue_" href="features/ssh_file_manager.html">${ssh_file_manager}</a>
         </div>
         <script>
             (function(){
@@ -59,65 +37,21 @@
                 element.innerHTML = text.replaceAll('.',".<br/>");
             })();
         </script>
-
-        <div class="section downloads" id="downloads">
-            <h2>${download}</h2>
-            <div class="detail_">
-                <div class="version_">
-                    ${latest_version}:
-                    <b>2.4</b>
-                    <span style="color: green">(2022.08.02)</span>
-                    <span> - </span>
-                    <a href="update_log.html">${update_log}</a>
-                </div>
-                <div style="margin-top: 12px">
-                    <span>${activation_code}:</span>
-                    <a href="activation_code.html">${get_it_free}</a>
-                </div>
+        ${@import tpl/tpl_download.html}
+        <div class="section">
+            <div>
+                <h2>${languages}</h2>
             </div>
-            <div class="platforms_">
-                <div class="platform_">
-                    <h4>Windows x64 (>= Windows vista)</h4>
-                    <a class="button" href="https://github.com/filecxx/FileCentipede/releases/download/2.4/filecxx_2.4_win_x64.zip">${download_link}1</a>
-                    <a class="button" href="../release/filecxx_latest_win_x64.zip">${download_link}2</a>
-                    <a class="button" href="https://sourceforge.net/projects/filecentipede/files/">${download_link}3</a>
-                </div>
-                <div class="platform_">
-                    <h4>Linux x64 (No glibc dependency)</h4>
-                    <a class="button" href="https://github.com/filecxx/FileCentipede/releases/download/2.4/filecxx_2.4_linux_x64.zip">${download_link}1</a>
-                    <a class="button" href="../release/filecxx_latest_linux_x64.zip">${download_link}2</a>
-                    <a class="button" href="https://sourceforge.net/projects/filecentipede/files/">${download_link}3</a>
-                </div>
-                <div class="platform_">
-                    <h4>MacOS x64</h4>
-                    <a class="button disabled" href="#">${lack_build_environment}</a>
-                </div>
-                <div class="platform_">
-                    <h4>Chrome extension 1.5</h4>
-                    <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/chrome.zip">${download_link}1</a>
-                    <a class="button" href="../release/chrome.zip">${download_link}2</a>
-                </div>
-                <div class="platform_">
-                    <h4>Firefox extension 1.5</h4>
-                    <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/firefox.xpi">${download_link}1</a>
-                    <a class="button" href="../release/firefox.xpi">${download_link}2</a>
-                </div>
-                <div class="platform_">
-                    <h4>Github</h4>
-                    <a class="button" target="_blank" href="https://github.com/filecxx/FileCentipede">https://github.com/filecxx/FileCentipede</a>
-                </div>
-                <div class="platform_">
-                    <h4>PAD</h4>
-                    <a class="button" target="_blank" href="/release/FileCentipede_pad.xml">File Centipede PAD.xml</a>
-                </div>
-            </div>
-
-            <div class="tips_">
-                <p>${bt_dht_0_tips_}</p>
-                <p>${bt_dht_0_tips_2_}</p>
+            <div>
+                <div class="label_">English</div>
+                <div class="label_">简体中文</div>
+                <div class="label_">繁體中文</div>
+                <div class="label_">русский</div>
+                <div class="label_">português</div>
+                <div class="label_">Français</div>
+                <div class="label_">Nederlands</div>
             </div>
         </div>
-
         <div class="section features" id="features">
             <div style="position: relative">
                 <h2 style="display: inline-block;text-align: left">${features}</h2>
@@ -183,106 +117,6 @@
             </table>
         </div>
 
-        <div class="section screenshot" id="screenshot">
-            <h2>${screenshot}</h2>
-            <div>
-                <div>
-                    <h4>${software_name_}</h4>
-                    <img loading="lazy" src="../images/screenshot_software.png" alt="${software_name_}" width="800">
-                    <img loading="lazy" src="../images/screenshot_software2.png" alt="${software_name_}" width="800">
-                    <img loading="lazy" src="../images/screenshot_software_file_browser_webdav.png" alt="${software_name_} File browser WebDAV" width="800">
-                    <img loading="lazy" src="../images/screenshot_software_file_browser_ssh.png" alt="${software_name_} File browser SSH, SFTP" width="800">
-                    <img loading="lazy" src="../images/screenshot_software_file_browser_ftp.png" alt="${software_name_} File browser FTP" width="800">
-                    <img loading="lazy" src="../images/screenshot_software_file_browser_add.png" alt="${software_name_} File browser Add host" width="800">
-                    <img loading="lazy" src="../images/screenshot_software_file_browser_log.png" alt="${software_name_} File browser log" width="800">
-                </div>
-                <div>
-                    <h4>${add_task}</h4>
-                    <img loading="lazy" src="../images/screenshot_add_task.png" alt="${software_name_} ${add_task}">
-                    <img loading="lazy" src="../images/screenshot_add_task2.png" alt="${software_name_} ${add_task}">
-                    <img loading="lazy" src="../images/screenshot_add_task3.png" alt="${software_name_} ${add_task}">
-                    <img loading="lazy" src="../images/screenshot_add_task4.png" alt="${software_name_} ${add_task}">
-                </div>
-                <div>
-                    <h4>${edit_task}</h4>
-                    <img loading="lazy" src="../images/screenshot_edit_task.png" alt="${software_name_} ${edit_task}">
-                    <img loading="lazy" src="../images/screenshot_edit_task2.png" alt="${software_name_} ${edit_task}">
-                </div>
-
-                <div>
-                    <h4>${torrent_confirm}</h4>
-                    <img loading="lazy" src="../images/screenshot_torrent_confirm.png" alt="${software_name_} ${torrent_confirm}">
-                </div>
-                <div>
-                    <img loading="lazy" src="../images/screenshot_http_confirm.png" alt="${software_name_} HTTP confirm">
-                </div>
-                <div>
-                    <img loading="lazy" src="../images/screenshot_links_confirm.png" alt="${software_name_} ${feature_34}">
-                </div>
-                <div>
-                    <h4>${add_catalog}</h4>
-                    <img loading="lazy" src="../images/screenshot_add_catalog.png" alt="${software_name_} ${add_catalog}">
-                </div>
-                <div>
-                    <h4>${settings}</h4>
-                    <img loading="lazy" src="../images/screenshot_settings.png" alt="${software_name_} ${settings}">
-                </div>
-                <div>
-                    <h4>${proxy}</h4>
-                    <img loading="lazy" src="../images/screenshot_proxy.png" alt="${software_name_} ${proxy}">
-                </div>
-                <div>
-                    <h4>${feature_45}</h4>
-                    <img loading="lazy" src="../images/screenshot_site_rule.png" alt="${software_name_} ${feature_45}">
-                    <img loading="lazy" src="../images/screenshot_site_rule2.png" alt="${software_name_} ${feature_45}2">
-                </div>
-                <div>
-                    <h4>${filter}</h4>
-                    <img loading="lazy" src="../images/screenshot_filter.png" alt="${software_name_} ${filter}">
-                </div>
-                <div>
-                    <h4>${refresh_address}</h4>
-                    <img loading="lazy" src="../images/screenshot_refresh_address.png" alt="${software_name_} ${refresh_address}">
-                </div>
-                <div>
-                    <h4>${create_torrent}</h4>
-                    <img loading="lazy" src="../images/screenshot_create_torrent.png" alt="${software_name_} ${create_torrent}">
-                </div>
-                <div>
-                    <h4>${download_speed_limit}</h4>
-                    <img loading="lazy" src="../images/screenshot_download_speed_limit.png" alt="${software_name_} ${download_speed_limit}">
-                </div>
-                <div>
-                    <h4>${translate}</h4>
-                    <img loading="lazy" src="../images/screenshot_translate.png" alt="${software_name_} ${translate}">
-                </div>
-                <div>
-                    <h4>${http_tool}</h4>
-                    <img loading="lazy" src="../images/screenshot_http_tool.png" alt="${software_name_} ${http_tool}">
-                </div>
-                <div>
-                    <h4>${checksum_tool}</h4>
-                    <img loading="lazy" src="../images/screenshot_checksum_tool.png" alt="${software_name_} ${checksum_tool}">
-                </div>
-            </div>
-
-            <div>
-                <h2>${browser_extension} ${screenshot}</h2>
-                <div>
-                    <h4>${video_bar}</h4>
-                    <img loading="lazy" src="../images/extension_video_bar.png" alt="${video_bar}">
-                </div>
-                <div>
-                    <h4>${videos_panel}</h4>
-                    <img loading="lazy" src="../images/extension_videos.png" alt="${videos_panel}">
-                </div>
-                <div>
-                    <h4>${audios_panel}</h4>
-                    <img loading="lazy" src="../images/extension_audios.png" alt="${audios_panel}">
-                </div>
-            </div>
-        </div>
-
         <div class="section" id="user_reviews">
             <h2>${user_reviews}</h2>
 
@@ -337,10 +171,7 @@
             </div>
         </div>
 
-        <div class="section shares" id="shares">
-            <h2>${share}</h2>
-            <div class="addthis_inline_share_toolbox"></div>
-        </div>
+        ${@import tpl/tpl_share.html}
 
         <div class="section links_">
             <h2>${links}</h2>
@@ -358,8 +189,6 @@
                 <a target="_blank" href="https://www.internetdownloadmanager.com/">IDM</a>
                 <a target="_blank" href="http://www.neatdownloadmanager.com/">NDM</a>
                 <a target="_blank" href="https://lightzhan.xyz/index.php/en/qdown-en/">QDown</a>
-                <a target="_blank" href="https://xdown.org/">XDown</a>
-                <a target="_blank" href="https://motrix.app/">motrix</a>
                 <a target="_blank" href="https://filezilla-project.org/">filezilla</a>
                 <a target="_blank" href="https://winscp.net/">WinSCP</a>
                 <a target="_blank" href="https://www.xshell.com/xftp/">xftp</a>
@@ -369,32 +198,18 @@
 
             <div>
                 <h4>${links}</h4>
-                <a target="_blank" href="https://www.softlay.com/downloads/file-centipede">softlay</a>
+                ${@import external_links/global.html}
+                ${@import_matches_lang html external_links/}
             </div>
 
-            <div>
-                <h4>Opensource libraries</h4>
-                <a target="_blank" href="https://www.boost.org/">boost</a>
-                <a target="_blank" href="https://www.libtorrent.org/">libtorrent</a>
-                <a target="_blank" href="https://qt.io/">Qt</a>
-            </div>
         </div>
     </div>
 
-    <div class="footer">
-        <div class="copyright_">
-            <span>No copyright © 2022</span>
-            <div class="email_">
-                <b>EMAIL:</b>
-                <a href="mailto:123123@123.com" id="contact_email">123123@123.com</a>
-            </div>
-            <div class="contact_"></div>
-        </div>
-    </div>
+    ${@import tpl/tpl_footer.html}
 </div>
 
 <script src="../script/base.js"></script>
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6226ca040a5d34a0"></script>
+
 
 </body>
 </html>

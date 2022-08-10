@@ -1,0 +1,16 @@
+content_section_1_="
+<p>File Centipede is the best Linux download manager.</p>
+<p>It's the only one that supports all mainstream protocols and the video sniffer's Linux download manager.</p>
+"
+
+content_section_2_="
+It also contains tons of auxiliary tools like file-merge, checksum, base64-encoder, URI-encoder, and magnet-to-torrent......
+"
+
+content_section_3_="
+You can also use it to manage remote files like WebDAV, FTP, and SSH.
+"
+
+content_section_4_="
+It's very easy to install, only need one click, and it has no other dynamic libraries requirement, even Glibc.
+"

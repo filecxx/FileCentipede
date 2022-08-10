@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>${software_name_} - ${download}</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../style/base.css">
+</head>
+<body>
+
+<div class="central">
+    ${@import tpl/tpl_nav_root.html}
+    ${@import tpl/tpl_header.html}
+
+    <div class="body">
+        ${@import tpl/tpl_download.html}
+    </div>
+
+    ${@import tpl/tpl_footer.html}
+</div>
+<script src="../script/base.js"></script>
+</body>
+</html>

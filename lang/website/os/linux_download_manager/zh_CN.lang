@@ -1,0 +1,5 @@
+content_section_1_="<p>文件蜈蚣是最强大的Linux下载工具.</p>
+<p>它是唯一支持所有主流协议和视频嗅探的Linux下载管理器.</p>"
+content_section_2_=它包含了很多的辅助工具例如文件合并，校验和，base64编码器，URI编码器，磁力链接转种子等等。。。
+content_section_4_=它很容易安装，只需要一次点击，没有任何其他动态库的依赖，甚至是Glibc.
+content_section_3_=你也可以用它来管理远程文件，例如WebDAV, FTP, and SSH.

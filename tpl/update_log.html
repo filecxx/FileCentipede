@@ -1,9 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    ${@import tpl/tpl_htmlmeta.html}
     <title>${software_name_} - ${update_log}</title>
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
     <link rel="icon" href="../favicon.ico" type="image/x-icon" />
@@ -18,36 +16,8 @@
 <body>
 
 <div class="central">
-    <div class="nav">
-        <div class="links_">
-            <a class="tool_button home_" href="index.html">${home_page}</a>
-            <a class="tool_button download_" href="index.html#downloads">${download}</a>
-            <a class="tool_button description_" href="index.html#description">${description}</a>
-            <a class="tool_button features_" href="index.html#features">${features}</a>
-            <a class="tool_button screenshot_" href="index.html#screenshot">${screenshot}</a>
-            <a class="tool_button user_reviews_" href="index.html#user_reviews">${user_reviews}</a>
-            <a class="tool_button documentation_" href="documentation.html">${documentation}</a>
-        </div>
-    </div>
-
-    <div class="header">
-        <div class="top_">
-            <a href="http://filecxx.com" class="logo_"></a>
-            <div class="name_">
-                <h1><a href="http://filecxx.com">${software_name_}</a></h1>
-                <div class="text_"> - Since 2022</div>
-            </div>
-            <div class="languages_">
-                <div class="current_">${language_}</div>
-                <div class="items_">
-                    <a class="item_" href="../en_US/index.html">English</a>
-                    <a class="item_" href="../zh_CN/index.html">简体中文</a>
-                    <a class="item_" href="../zh_TW/index.html">繁體中文</a>
-                    <a class="item_" href="../ru_RU/index.html">Русский</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    ${@import tpl/tpl_nav_root.html}
+    ${@import tpl/tpl_header.html}
 
     <div class="body">
         <div class="section">
@@ -278,18 +248,7 @@
         </div>
     </div>
 
-    <div class="footer">
-        <div class="copyright_">
-            <span>No copyright © 2022</span>
-            <div class="email_">
-                <b>EMAIL:</b>
-                <a href="mailto:123123@123.com" id="contact_email">123123@123.com</a>
-            </div>
-            <div class="contact_">
-
-            </div>
-        </div>
-    </div>
+    ${@import tpl/tpl_footer.html}
 </div>
 
 <script src="../script/base.js"></script>

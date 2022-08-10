@@ -336,6 +336,18 @@ code
     background: rgba(106,255,156,0.1);
 }
 
+.body .article_
+{
+    font-size: 16px;
+    padding: 8px 0 8px 0;
+}
+
+.body .article_ img
+{
+    border: 1px solid #bcbebf;
+}
+
+
 /************************/
 .footer
 {

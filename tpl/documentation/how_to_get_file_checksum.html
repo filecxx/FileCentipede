@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>${software_name_} - ${how_to_get_file_checksum}</title>
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../../style/base.css">
+</head>
+<body>
+
+<div class="central">
+    ${@import ../tpl/tpl_nav.html}
+    ${@import ../tpl/tpl_header.html}
+    ${@lang_dir documentation/how_to_get_file_checksum}
+
+    <div class="body">
+        <div class="section">
+            <h1>${how_to_get_file_checksum}</h1>
+        </div>
+        <div class="section">
+
+            <div class="article_">
+                <h3>GUI</h3>
+                <p>
+                    ${content_section_1_}
+                </p>
+                <p>
+                    <img src="../../images/document/misc/filecxx_menu_help_tool_checksum.png" alt="${software_name_} Checksum">
+                </p>
+                <p>
+                    <img src="../../images/screenshot_checksum_tool.png" alt="${checksum_tool}">
+                </p>
+
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="article_">
+                <h3>${command_line}</h3>
+                <div>
+                    <p>fileu --checksum Path</p>
+                    <p>filec md5 Path</p>
+                    <p>filec crc32 Path</p>
+                    <p>filec sha1 Path</p>
+                    <p>filec sha256 Path</p>
+                </div>
+            </div>
+        </div>
+
+        ${@import ../tpl/tpl_share.html}
+    </div>
+
+    ${@import ../tpl/tpl_footer.html}
+</div>
+
+<script src="../../script/base.js"></script>
+
+</body>
+</html>

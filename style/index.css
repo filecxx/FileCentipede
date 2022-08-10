@@ -19,6 +19,11 @@
 {
     background: url("images/download.png") 5px 8px no-repeat,linear-gradient(to bottom,#a7a7a8 0%,#cccdce 100%);
 }
+.downloads .platform_ .button.disabled
+{
+    background: url("images/download.png") 5px 8px no-repeat,transparent;
+
+}
 .downloads .platform_ .button
 {
 
@@ -78,4 +83,26 @@
     color: gray;
     font-size: 16px;
     margin-top: 8px;
+}
+
+.body .label_
+{
+    font-size: 14px;
+    display: inline-block;
+    padding: 10px;
+    margin: 2px;
+    border-radius: 18px;
+    border: 1px solid #bcbebf;
+    background: white;
+    text-decoration: none;
+}
+.body .label_.blue_
+{
+    border-color: #2a8dcb;
+}
+.body .label_.blue_:hover
+{
+    border-color: #2885bf;
+    background: rgba(42,141,203,0.1);
+    color: #1283da;
 }

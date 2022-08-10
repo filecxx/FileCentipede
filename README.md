@@ -181,8 +181,12 @@ Browser extension screenshots
 * Checksum tool	2.3
 
 ## Language files
-* Website:  "lang/*.lang"
-* Software: "bin/lang/*.lang"
+* Website:  "lang/website/*.lang"
+* Software: "lang/software/*.lang"
+* Browser extension: "lang/browser_extension/*.lang"
+
+#### How to translate the website?
+![translate](images/document/how_to_translate_this_website.png)
 
 
 | Language            |@|
@@ -191,3 +195,9 @@ Browser extension screenshots
 | 繁體中文             | [@bear0316](https://github.com/bear0316) [@postman1year](https://github.com/postman1year)
 | Français           | [@XIAA25](https://github.com/XIAA25)
 | Nederlands         | [@XIAA25](https://github.com/XIAA25)
+
+
+## Opensource libraries
+[boost](https://www.boost.org)
+[Qt](https://qt.io/)
+[libtorrent](https://www.libtorrent.org)
