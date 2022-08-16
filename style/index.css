@@ -47,31 +47,35 @@
 .body .user_review
 {
     display: inline-block;
-    padding: 12px 8px 12px 8px;
     border: 1px solid #bcbebf;
     border-radius: 4px;
     background: #f7f8f9;
     margin-right: 2px;
     margin-bottom: 6px;
     vertical-align: top;
-    width: 220px;
-}
-.body .user_review > .photo_
-{
+    width: 450px;
+    padding: 12px;
     overflow: hidden;
+    text-overflow: ellipsis;
+}
 
-    background: transparent;
-}
-.body .user_review > .photo_ > img
-{
-    display:block;
-    width: 220px;
-    height: 160px;
-}
-.body .user_review > .comment_
+.body .user_review > .title_
 {
     font-size: 16px;
-    padding: 8px 0 8px 0;
+    margin-top: 8px;
+    padding: 12px 0 12px 0;
+}
+
+.body .user_review > .title_ h4
+{
+    margin: 0;
+    padding: 0;
+}
+
+.body .user_review > .desc_
+{
+    font-size: 16px;
+
     line-height: 20px;
     white-space:normal;
     word-break:keep-all;
@@ -79,10 +83,21 @@
 .body .user_review > .name_
 {
     text-align: right;
+    margin-top: 8px;
+}
+
+.body .user_review > .name_ a
+{
+    font-weight: bold;
     font-style: italic;
     color: gray;
     font-size: 16px;
-    margin-top: 8px;
+    text-decoration: none;
+}
+
+.body .user_review > .name_ a:hover
+{
+    text-decoration: underline;
 }
 
 .body .label_
