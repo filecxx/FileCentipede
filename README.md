@@ -179,6 +179,7 @@ Browser extension screenshots
 * File browser persistent caches	2.0
 * Site rules	2.1
 * Checksum tool	2.3
+* Remote download	2.6
 
 ## Language files
 * Website:  "lang/website/*.lang"

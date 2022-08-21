@@ -61,7 +61,7 @@
     <Program_Name>FileCentipede</Program_Name>
     <Program_Version>2.5</Program_Version>
     <Program_Release_Month>08</Program_Release_Month>
-    <Program_Release_Day>13</Program_Release_Day>
+    <Program_Release_Day>21</Program_Release_Day>
     <Program_Release_Year>2022</Program_Release_Year>
     <Program_Cost_Dollars>0</Program_Cost_Dollars>
     <Program_Type>Freeware</Program_Type>
@@ -100,11 +100,11 @@
       <Application_Info_URL>http://www.filecxx.com/</Application_Info_URL>
       <Application_Order_URL></Application_Order_URL>
       <Application_Screenshot_URL>http://www.filecxx.com/images/screenshot_software.png</Application_Screenshot_URL>
-      <Application_Icon_URL>http://filecxx.com/style/images/logo_32.png</Application_Icon_URL>
+      <Application_Icon_URL>http://filecxx.com/style/images/logo_128.png</Application_Icon_URL>
       <Application_XML_File_URL>http://filecxx.com/release/FileCentipede_pad.xml</Application_XML_File_URL>
     </Application_URLs>
     <Download_URLs>
-      <Primary_Download_URL>https://github.com/filecxx/FileCentipede/releases/download/2.5/filecxx_2.5_win_x64.zip</Primary_Download_URL>
+      <Primary_Download_URL>https://github.com/filecxx/FileCentipede/releases/download/2.6/filecxx_2.6_win_x64.zip</Primary_Download_URL>
       <Secondary_Download_URL>http://www.filecxx.com/release/filecxx_latest_win_x64.zip</Secondary_Download_URL>
       <Additional_Download_URL_1></Additional_Download_URL_1>
       <Additional_Download_URL_2></Additional_Download_URL_2>
@@ -159,7 +159,9 @@ Torrent to magnet tool
 Magnet to torrent tool
 File merge tool
 Checksum tool
-Statistics</Char_Desc_2000>
+Statistics
+Remote download
+      </Char_Desc_2000>
     </English>
   </Program_Descriptions>
   <Permissions>
