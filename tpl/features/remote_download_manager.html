@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>${software_name_} - ${remote_download_manager}</title>
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../../style/base.css" />
+</head>
+<body>
+
+<div class="central">
+    ${@import ../tpl/tpl_nav.html}
+    ${@import ../tpl/tpl_header.html}
+    ${@lang_dir features/remote_download_manager}
+
+    <div class="body">
+        <div class="section">
+            <h1>${remote_download_manager}</h1>
+        </div>
+
+        <div class="section">
+            <div class="article_">
+                <p>${content_section_1_}</p>
+                <p>${content_section_2_}</p>
+                <p>${content_section_3_}</p>
+                <p>
+                    <img src="../../images/document/misc/filecxx_menu_remote_add.png" alt="add remote host">
+                </p>
+                <p>${content_section_4_}</p>
+                <p>
+                    <img src="../../images/document/misc/filecxx_settings_enable_remote_access.png" alt="enable remote access">
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="article_">
+                <h3>${command_line}</h3>
+                <p>filec remote_access on</p>
+                <p>filec service_port 10111</p>
+                <p>filec service_password your_password</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <a href="../download.html" class="button">${download}</a>
+        </div>
+
+        ${@import ../tpl/tpl_share.html}
+    </div>
+
+    ${@import ../tpl/tpl_footer.html}
+</div>
+<script src="../../script/base.js"></script>
+</body>
+</html>

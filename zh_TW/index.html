@@ -9,8 +9,8 @@
     <title>檔案蜈蚣 官方網站</title>
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
     <link rel="icon" href="../favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="../style/base.css?t=3">
-    <link rel="stylesheet" href="../style/index.css?t=3">
+    <link rel="stylesheet" href="../style/base.css?t=4">
+    <link rel="stylesheet" href="../style/index.css?t=4">
 </head>
 <body>
 
@@ -49,6 +49,7 @@
             <h2>描述</h2>
             <div id="description_text">檔案蜈蚣是一個全能網絡檔案上傳/下載器, BitTorrent客戶端, WebDAV客戶端, FTP客戶端, 和SSH客戶端. 它快速, 可定制, 用戶友好, 多協議支持, 同時也包含了很多有用的輔助工具如: HTTP請求器, 檔案合併工具, 編碼/解碼工具等. 和網頁瀏覽器進行集成, 你可以從網頁上下載音訊和視訊, 甚至是加密視訊.(這是免費的,並且沒有廣告)</div>
         </div>
+
         <div class="section">
             <a class="label_ blue_" href="os/linux_download_manager.html">Linux下載工具</a>
             <a class="label_ blue_" href="features/video_downloader.html">視頻下載工具</a>
@@ -56,7 +57,9 @@
             <a class="label_ blue_" href="features/webdav_file_manager.html">WebDAV檔案管理器</a>
             <a class="label_ blue_" href="features/ftp_file_manager.html">FTP檔案管理器</a>
             <a class="label_ blue_" href="features/ssh_file_manager.html">SSH檔案管理器</a>
+            <a class="label_ blue_" href="features/remote_download_manager.html">遠程下載管理器</a>
         </div>
+
         <script>
             (function(){
                 var element = document.getElementById("description_text");
@@ -65,78 +68,108 @@
                 element.innerHTML = text.replaceAll('.',".<br/>");
             })();
         </script>
-        <div class="section downloads" id="downloads">
-    <h2>下載</h2>
-    <div class="detail_">
-        <div class="version_">
-            最新版本:
-            <b>2.61</b>
-            <span style="color: green">(2022.08.21)</span>
-            <span> - </span>
-            <a href="update_log.html">更新日誌</a>
-        </div>
-        <div style="margin-top: 12px">
-            <span>啟用碼:</span>
-            <a href="activation_code.html">免費獲取</a>
-        </div>
-    </div>
-    <div class="platforms_">
-        <div class="platform_">
-            <h4>Windows x64 (>= Windows vista)</h4>
-            <a class="button" href="https://github.com/filecxx/FileCentipede/releases/download/2.61/filecxx_2.61_win_x64.zip">下載連線1</a>
-            <a class="button" href="../release/filecxx_latest_win_x64.zip">下載連線2</a>
-            <a class="button" href="https://sourceforge.net/projects/filecentipede/files/">下載連線3</a>
-        </div>
-        <div class="platform_">
-            <h4>Linux x64 (No glibc dependency)</h4>
-            <a class="button" href="https://github.com/filecxx/FileCentipede/releases/download/2.61/filecxx_2.61_linux_x64.zip">下載連線1</a>
-            <a class="button" href="../release/filecxx_latest_linux_x64.zip">下載連線2</a>
-            <a class="button" href="https://sourceforge.net/projects/filecentipede/files/">下載連線3</a>
-        </div>
-        <div class="platform_">
-            <h4>MacOS x64</h4>
-            <a class="button disabled" href="#">缺乏構建環境</a>
-        </div>
-        <div class="platform_">
-            <h4>客製化</h4>
-            <a class="button disabled" href="#">獲取客製化版本 (免費)</a>
+
+        <div class="downloads" id="downloads">
+    <div class="section">
+        <h2>高級版 - 下載</h2>
+        <div class="detail_">
+            <div class="version_">
+                最新版本:
+                <b>2.7</b>
+                <span style="color: green">(2022.08.29)</span>
+                <span> - </span>
+                <a href="update_log.html">更新日誌</a>
+            </div>
+            <div style="margin-top: 12px">
+                <span>啟用碼:</span>
+                <a href="activation_code.html">免費獲取</a>
+            </div>
         </div>
 
-        <div class="platform_">
-            <h4>Firefox extension 1.70</h4>
-            <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/firefox.xpi">下載連線1</a>
-            <a class="button" href="../release/firefox.xpi">下載連線2</a>
-            <a class="button" href="https://addons.mozilla.org/firefox/addon/filecxx/" target="_blank">在線安裝</a>
+        <div class="platforms_">
+            <div class="platform_">
+                <h4>Windows x64 (>= Windows vista)</h4>
+                <a class="button" href="https://github.com/filecxx/FileCentipede/releases/download/2.7/filecxx_2.7_win_x64.zip">下載連線1</a>
+                <a class="button" href="../release/filecxx_latest_win_x64.zip">下載連線2</a>
+                <a class="button" href="https://sourceforge.net/projects/filecentipede/files/">下載連線3</a>
+            </div>
+            <div class="platform_">
+                <h4>Linux x64 (No glibc dependency)</h4>
+                <a class="button" href="https://github.com/filecxx/FileCentipede/releases/download/2.7/filecxx_2.7_linux_x64.zip">下載連線1</a>
+                <a class="button" href="../release/filecxx_latest_linux_x64.zip">下載連線2</a>
+                <a class="button" href="https://sourceforge.net/projects/filecentipede/files/">下載連線3</a>
+            </div>
+            <div class="platform_">
+                <h4>MacOS x64</h4>
+                <a class="button disabled" href="#">缺乏構建環境</a>
+            </div>
         </div>
-        <div class="platform_">
-            <h4>Microsoft Edge 1.70</h4>
-            <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/chrome.zip">下載連線1</a>
-            <a class="button" href="../release/chrome.zip">下載連線2</a>
-            <a class="button" href="https://microsoftedge.microsoft.com/addons/detail/jeekmibdibcjeihbjnjgbegjalfelhon" target="_blank">在線安裝</a>
-        </div>
-        <div class="platform_">
-            <h4>Chrome extension 1.70</h4>
-            <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/chrome.zip">下載連線1</a>
-            <a class="button" href="../release/chrome.zip">下載連線2</a>
-            <a class="button disabled" href="#">在線安裝</a>
-        </div>
-        <div class="platform_">
-            <h4>Github</h4>
-            <a class="button" target="_blank" href="https://github.com/filecxx/FileCentipede">https://github.com/filecxx/FileCentipede</a>
-        </div>
-        <div class="platform_">
-            <h4>PAD (Portable Application Description)</h4>
-            <a class="button" target="_blank" href="/release/FileCentipede_pad.xml">File Centipede PAD.xml</a>
-        </div>
+    </div>
 
+    <div class="section">
+        <h2>免費版 - 下載</h2>
+        <div class="detail_">
+            <div class="version_">
+                最新版本:
+                <b>1.9</b>
+                <span style="color: green">(2022.03.27)</span>
+            </div>
+        </div>
+        <div class="platforms_">
+            <div class="platform_">
+                <h4>Windows x64 (>= Windows vista)</h4>
+                <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/filecxx_1.9_linux_x64.zip">下載連線1</a>
+                <a class="button" href="../release/filecxx_1.9_win_x64.zip">下載連線2</a>
+                <a class="button" href="https://sourceforge.net/projects/filecentipede/files/">下載連線3</a>
+            </div>
+            <div class="platform_">
+                <h4>Linux x64 (No glibc dependency)</h4>
+                <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/filecxx_1.9_linux_x64.zip">下載連線1</a>
+                <a class="button" href="../release/filecxx_1.9_linux_x64.zip">下載連線2</a>
+                <a class="button" href="https://sourceforge.net/projects/filecentipede/files/">下載連線3</a>
+            </div>
+        </div>
     </div>
-    <!--
-    <div class="tips_">
-        <p>如果看到軟體底部的 BT DHT 為 0, 並且磁力連線和Torrent下載沒有速度, 這是由Windows防火牆造成的.</p>
-        <p>可以嘗試關閉filec進程, 或者重新啟動電腦.</p>
+
+    <div class="section">
+        <div class="platforms_">
+            <div class="platform_">
+                <h4>客製化</h4>
+                <a class="button disabled" href="#">獲取客製化版本 (免費)</a>
+            </div>
+            <div class="platform_">
+                <h4>Firefox extension 1.70</h4>
+                <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/firefox.xpi">下載連線1</a>
+                <a class="button" href="../release/firefox.xpi">下載連線2</a>
+                <a class="button" href="https://addons.mozilla.org/firefox/addon/filecxx/" target="_blank">在線安裝</a>
+            </div>
+            <div class="platform_">
+                <h4>Microsoft Edge 1.70</h4>
+                <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/chrome.zip">下載連線1</a>
+                <a class="button" href="../release/chrome.zip">下載連線2</a>
+                <a class="button" href="https://microsoftedge.microsoft.com/addons/detail/jeekmibdibcjeihbjnjgbegjalfelhon" target="_blank">在線安裝</a>
+            </div>
+            <div class="platform_">
+                <h4>Chrome extension 1.70</h4>
+                <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/chrome.zip">下載連線1</a>
+                <a class="button" href="../release/chrome.zip">下載連線2</a>
+                <a class="button disabled" href="#">在線安裝</a>
+            </div>
+            <div class="platform_">
+                <h4>Github</h4>
+                <a class="button" target="_blank" href="https://github.com/filecxx/FileCentipede">https://github.com/filecxx/FileCentipede</a>
+            </div>
+            <div class="platform_">
+                <h4>PAD (Portable Application Description)</h4>
+                <a class="button" target="_blank" href="/release/FileCentipede_pad.xml">File Centipede PAD.xml</a>
+            </div>
+
+        </div>
     </div>
-    -->
+
+
 </div>
+
         <div class="section">
             <div>
                 <h2>語言</h2>
@@ -151,6 +184,7 @@
                 <div class="label_">Nederlands</div>
             </div>
         </div>
+
         <div class="section features" id="features">
             <div style="position: relative">
                 <h2 style="display: inline-block;text-align: left">特徵</h2>
@@ -224,7 +258,6 @@
                 <div class="title_">
                     <h4>File Centipede - A download tool with more features than you can handle</h4>
                 </div>
-
                 <div class="desc_">
                     <a target="_blank" href="https://www.wfdownloader.xyz/blog/file-centipede-a-download-tool-with-more-features-than-you-can-handle">
                         Recently, I found a download manager that caught my attention and is worth talking about. It's called File Centipede.
@@ -242,7 +275,6 @@
                 <div class="title_">
                     <h4>This Internet file download manager comes equipped with enhanced features and offers support for a wide range of download sources</h4>
                 </div>
-
                 <div class="desc_">
                     <a target="_blank" href="https://www.softpedia.com/get/Internet/Download-Managers/File-Centipede.shtmle">
                         Right from the start, we noticed the logical and well-thought design of the layout, which relies on a series of panels and tabs for providing the available tools and various information. One can, at a single glance preview downloading content
@@ -258,7 +290,6 @@
                 <div class="title_">
                     <h4>HTTP、FTP、magnet、torrent、m3u8 などのプロトコルに対応しているダウンロードマネージャ</h4>
                 </div>
-
                 <div class="desc_">
                     <a target="_blank" href="https://softaro.net/file-centipede/">
                         File Centipede は、HTTP / HTTPS、FTP / FTPS、magnet や torrent、m3u8 などのプロトコルに対応している、使いやすくカスタマイズが可能なダウンロードマネージャです。
@@ -276,7 +307,6 @@
                 <div class="title_">
                     <h4>File Centipede is an internet file download manager that includes many enhanced features</h4>
                 </div>
-
                 <div class="desc_">
                     <a target="_blank" href="https://www.majorgeeks.com/files/details/file_centipede.html">
                         The dev has included pretty much anything that comes to mind as far as features go and wrapped them in a user-friendly interface.
@@ -293,7 +323,6 @@
                 <div class="title_">
                     <h4>Free File Upload & Download Manager with BitTorrent Client</h4>
                 </div>
-
                 <div class="desc_">
                     <a target="_blank" href="https://www.softlay.com/downloads/file-centipede">
                         The clean user interface allows users to upload or download files at ease.
@@ -311,7 +340,6 @@
                 <div class="title_">
                     <h4>Công cụ tải tập tin miễn phí đáng dùng trên Windows 11</h4>
                 </div>
-
                 <div class="desc_">
                     <a target="_blank" href="https://trainghiemso.vn/file-centipede/">
                         Mặc dù, File Centipede không hỗ trợ tiếng Việt nhưng phần mềm này là một trong những công cụ tốt nhất, sạch và gọn nhẹ nhất mà bạn có thể tin tưởng sử dụng để tải file trên internet mà không cần phải trả phí hay nhìn quảng cáo
@@ -340,7 +368,6 @@
                 <a target="_blank" href="/troubleshooting.html">故障處理</a>
                 <a href="sponsors.html">贊助者</a>
             </div>
-
             <div>
                 <h4>如果你不喜歡這個軟體, 這裡有一些其他類似的軟體推薦給你.</h4>
                 <a target="_blank" href="https://www.wfdownloader.xyz/" style="font-weight: bold">WFDownloader</a>
@@ -354,18 +381,15 @@
                 <a target="_blank" href="https://winscp.net/">WinSCP</a>
                 <a target="_blank" href="https://www.xshell.com/xftp/">xftp</a>
             </div>
-
             <div><br>(如果你想添加你的軟體到這個列表裡, 請發送一個郵件, 你不需要將這個網站連線回來, 但如果你這樣做了我會非常感謝.)</div>
-
             <div>
                 <h4>連線</h4>
                 <a target="_blank" href="https://www.softlay.com/downloads/file-centipede">softlay</a>
                 
             </div>
-
         </div>
-    </div>
 
+    </div>
     <div class="footer">
     <div class="copyright_">
         <span>No copyright © 2022</span>
@@ -380,7 +404,6 @@
 </div>
 
 <script src="../script/base.js"></script>
-
 
 </body>
 </html>

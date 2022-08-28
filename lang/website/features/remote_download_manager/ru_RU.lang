@@ -1,0 +1,4 @@
+content_section_1_=File centipede provided a native user interface for remote file downloading.
+content_section_2_=It's located on the main menu called <b>remote</b>.
+content_section_3_=It's very simple to use. You just need to input the remote host's IP/domain address, then click the host from the menu item you just added.
+content_section_4_=If you want your computer to be connectable, your need to open the Setting -> Service, and toggle the <b>Remote access</b> to the <b>enable</b>. and don't forget to set a password.

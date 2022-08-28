@@ -12,7 +12,6 @@
 {
     background:url("images/download.png") 5px 8px no-repeat,linear-gradient(to bottom,#eff0f1 0%,#dbdcdd 100%);
     padding: 0 12px 0 25px;
-
     margin-right: 6px;
 }
 .downloads .platform_ .button:active
@@ -22,7 +21,6 @@
 .downloads .platform_ .button.disabled
 {
     background: url("images/download.png") 5px 8px no-repeat,transparent;
-
 }
 .downloads .platform_ .button
 {
@@ -80,6 +78,7 @@
     white-space:normal;
     word-break:keep-all;
 }
+
 .body .user_review > .name_
 {
     text-align: right;
@@ -105,16 +104,18 @@
     font-size: 14px;
     display: inline-block;
     padding: 10px;
-    margin: 2px;
+    margin: 4px;
     border-radius: 18px;
     border: 1px solid #bcbebf;
     background: white;
     text-decoration: none;
 }
+
 .body .label_.blue_
 {
     border-color: #2a8dcb;
 }
+
 .body .label_.blue_:hover
 {
     border-color: #2885bf;

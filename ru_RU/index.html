@@ -9,8 +9,8 @@
     <title>File Centipede Official Website</title>
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
     <link rel="icon" href="../favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="../style/base.css?t=3">
-    <link rel="stylesheet" href="../style/index.css?t=3">
+    <link rel="stylesheet" href="../style/base.css?t=4">
+    <link rel="stylesheet" href="../style/index.css?t=4">
 </head>
 <body>
 
@@ -49,6 +49,7 @@
             <h2>Описание</h2>
             <div id="description_text">File centipede is an All-In-One internet file download/upload manager, BitTorrent Client, WebDAV client, FTP client, and SSH client. It is designed to be fast, customizable, and user-friendly. It supports multi-protocols and contains many useful auxiliary tools such as HTTP requester, file merge, and encoders. With the browser integration, you can download audio and videos from websites, even encrypted videos.(It's free with no ads)</div>
         </div>
+
         <div class="section">
             <a class="label_ blue_" href="os/linux_download_manager.html">Linux download manager</a>
             <a class="label_ blue_" href="features/video_downloader.html">Video downloader</a>
@@ -56,7 +57,9 @@
             <a class="label_ blue_" href="features/webdav_file_manager.html">WebDAV file manager</a>
             <a class="label_ blue_" href="features/ftp_file_manager.html">FTP file manager</a>
             <a class="label_ blue_" href="features/ssh_file_manager.html">SSH file manager</a>
+            <a class="label_ blue_" href="features/remote_download_manager.html">Remote download manager</a>
         </div>
+
         <script>
             (function(){
                 var element = document.getElementById("description_text");
@@ -65,78 +68,108 @@
                 element.innerHTML = text.replaceAll('.',".<br/>");
             })();
         </script>
-        <div class="section downloads" id="downloads">
-    <h2>Скачать</h2>
-    <div class="detail_">
-        <div class="version_">
-            Последняя версия:
-            <b>2.61</b>
-            <span style="color: green">(2022.08.21)</span>
-            <span> - </span>
-            <a href="update_log.html">Update log</a>
-        </div>
-        <div style="margin-top: 12px">
-            <span>Activation code:</span>
-            <a href="activation_code.html">Get it free</a>
-        </div>
-    </div>
-    <div class="platforms_">
-        <div class="platform_">
-            <h4>Windows x64 (>= Windows vista)</h4>
-            <a class="button" href="https://github.com/filecxx/FileCentipede/releases/download/2.61/filecxx_2.61_win_x64.zip">Ссылка на скачивание1</a>
-            <a class="button" href="../release/filecxx_latest_win_x64.zip">Ссылка на скачивание2</a>
-            <a class="button" href="https://sourceforge.net/projects/filecentipede/files/">Ссылка на скачивание3</a>
-        </div>
-        <div class="platform_">
-            <h4>Linux x64 (No glibc dependency)</h4>
-            <a class="button" href="https://github.com/filecxx/FileCentipede/releases/download/2.61/filecxx_2.61_linux_x64.zip">Ссылка на скачивание1</a>
-            <a class="button" href="../release/filecxx_latest_linux_x64.zip">Ссылка на скачивание2</a>
-            <a class="button" href="https://sourceforge.net/projects/filecentipede/files/">Ссылка на скачивание3</a>
-        </div>
-        <div class="platform_">
-            <h4>MacOS x64</h4>
-            <a class="button disabled" href="#">Отсутствие среды сборки</a>
-        </div>
-        <div class="platform_">
-            <h4>Customize</h4>
-            <a class="button disabled" href="#">Get a customized version (Free)</a>
+
+        <div class="downloads" id="downloads">
+    <div class="section">
+        <h2>Premium - Скачать</h2>
+        <div class="detail_">
+            <div class="version_">
+                Последняя версия:
+                <b>2.7</b>
+                <span style="color: green">(2022.08.29)</span>
+                <span> - </span>
+                <a href="update_log.html">Update log</a>
+            </div>
+            <div style="margin-top: 12px">
+                <span>Activation code:</span>
+                <a href="activation_code.html">Get it free</a>
+            </div>
         </div>
 
-        <div class="platform_">
-            <h4>Firefox extension 1.70</h4>
-            <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/firefox.xpi">Ссылка на скачивание1</a>
-            <a class="button" href="../release/firefox.xpi">Ссылка на скачивание2</a>
-            <a class="button" href="https://addons.mozilla.org/firefox/addon/filecxx/" target="_blank">Online install</a>
+        <div class="platforms_">
+            <div class="platform_">
+                <h4>Windows x64 (>= Windows vista)</h4>
+                <a class="button" href="https://github.com/filecxx/FileCentipede/releases/download/2.7/filecxx_2.7_win_x64.zip">Ссылка на скачивание1</a>
+                <a class="button" href="../release/filecxx_latest_win_x64.zip">Ссылка на скачивание2</a>
+                <a class="button" href="https://sourceforge.net/projects/filecentipede/files/">Ссылка на скачивание3</a>
+            </div>
+            <div class="platform_">
+                <h4>Linux x64 (No glibc dependency)</h4>
+                <a class="button" href="https://github.com/filecxx/FileCentipede/releases/download/2.7/filecxx_2.7_linux_x64.zip">Ссылка на скачивание1</a>
+                <a class="button" href="../release/filecxx_latest_linux_x64.zip">Ссылка на скачивание2</a>
+                <a class="button" href="https://sourceforge.net/projects/filecentipede/files/">Ссылка на скачивание3</a>
+            </div>
+            <div class="platform_">
+                <h4>MacOS x64</h4>
+                <a class="button disabled" href="#">Отсутствие среды сборки</a>
+            </div>
         </div>
-        <div class="platform_">
-            <h4>Microsoft Edge 1.70</h4>
-            <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/chrome.zip">Ссылка на скачивание1</a>
-            <a class="button" href="../release/chrome.zip">Ссылка на скачивание2</a>
-            <a class="button" href="https://microsoftedge.microsoft.com/addons/detail/jeekmibdibcjeihbjnjgbegjalfelhon" target="_blank">Online install</a>
-        </div>
-        <div class="platform_">
-            <h4>Chrome extension 1.70</h4>
-            <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/chrome.zip">Ссылка на скачивание1</a>
-            <a class="button" href="../release/chrome.zip">Ссылка на скачивание2</a>
-            <a class="button disabled" href="#">Online install</a>
-        </div>
-        <div class="platform_">
-            <h4>Github</h4>
-            <a class="button" target="_blank" href="https://github.com/filecxx/FileCentipede">https://github.com/filecxx/FileCentipede</a>
-        </div>
-        <div class="platform_">
-            <h4>PAD (Portable Application Description)</h4>
-            <a class="button" target="_blank" href="/release/FileCentipede_pad.xml">File Centipede PAD.xml</a>
-        </div>
+    </div>
 
+    <div class="section">
+        <h2>Free Edition - Скачать</h2>
+        <div class="detail_">
+            <div class="version_">
+                Последняя версия:
+                <b>1.9</b>
+                <span style="color: green">(2022.03.27)</span>
+            </div>
+        </div>
+        <div class="platforms_">
+            <div class="platform_">
+                <h4>Windows x64 (>= Windows vista)</h4>
+                <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/filecxx_1.9_linux_x64.zip">Ссылка на скачивание1</a>
+                <a class="button" href="../release/filecxx_1.9_win_x64.zip">Ссылка на скачивание2</a>
+                <a class="button" href="https://sourceforge.net/projects/filecentipede/files/">Ссылка на скачивание3</a>
+            </div>
+            <div class="platform_">
+                <h4>Linux x64 (No glibc dependency)</h4>
+                <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/filecxx_1.9_linux_x64.zip">Ссылка на скачивание1</a>
+                <a class="button" href="../release/filecxx_1.9_linux_x64.zip">Ссылка на скачивание2</a>
+                <a class="button" href="https://sourceforge.net/projects/filecentipede/files/">Ссылка на скачивание3</a>
+            </div>
+        </div>
     </div>
-    <!--
-    <div class="tips_">
-        <p>If the BT DHT is 0 from the bottom of the software, and there is no speed for downloading magnet links and torrents, this is caused by the Windows firewall.</p>
-        <p>You should try to close the filec process or restart your computer.</p>
+
+    <div class="section">
+        <div class="platforms_">
+            <div class="platform_">
+                <h4>Customize</h4>
+                <a class="button disabled" href="#">Get a customized version (Free)</a>
+            </div>
+            <div class="platform_">
+                <h4>Firefox extension 1.70</h4>
+                <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/firefox.xpi">Ссылка на скачивание1</a>
+                <a class="button" href="../release/firefox.xpi">Ссылка на скачивание2</a>
+                <a class="button" href="https://addons.mozilla.org/firefox/addon/filecxx/" target="_blank">Online install</a>
+            </div>
+            <div class="platform_">
+                <h4>Microsoft Edge 1.70</h4>
+                <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/chrome.zip">Ссылка на скачивание1</a>
+                <a class="button" href="../release/chrome.zip">Ссылка на скачивание2</a>
+                <a class="button" href="https://microsoftedge.microsoft.com/addons/detail/jeekmibdibcjeihbjnjgbegjalfelhon" target="_blank">Online install</a>
+            </div>
+            <div class="platform_">
+                <h4>Chrome extension 1.70</h4>
+                <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/chrome.zip">Ссылка на скачивание1</a>
+                <a class="button" href="../release/chrome.zip">Ссылка на скачивание2</a>
+                <a class="button disabled" href="#">Online install</a>
+            </div>
+            <div class="platform_">
+                <h4>Github</h4>
+                <a class="button" target="_blank" href="https://github.com/filecxx/FileCentipede">https://github.com/filecxx/FileCentipede</a>
+            </div>
+            <div class="platform_">
+                <h4>PAD (Portable Application Description)</h4>
+                <a class="button" target="_blank" href="/release/FileCentipede_pad.xml">File Centipede PAD.xml</a>
+            </div>
+
+        </div>
     </div>
-    -->
+
+
 </div>
+
         <div class="section">
             <div>
                 <h2>Languages</h2>
@@ -151,6 +184,7 @@
                 <div class="label_">Nederlands</div>
             </div>
         </div>
+
         <div class="section features" id="features">
             <div style="position: relative">
                 <h2 style="display: inline-block;text-align: left">Возможности</h2>
@@ -224,7 +258,6 @@
                 <div class="title_">
                     <h4>File Centipede - A download tool with more features than you can handle</h4>
                 </div>
-
                 <div class="desc_">
                     <a target="_blank" href="https://www.wfdownloader.xyz/blog/file-centipede-a-download-tool-with-more-features-than-you-can-handle">
                         Recently, I found a download manager that caught my attention and is worth talking about. It's called File Centipede.
@@ -242,7 +275,6 @@
                 <div class="title_">
                     <h4>This Internet file download manager comes equipped with enhanced features and offers support for a wide range of download sources</h4>
                 </div>
-
                 <div class="desc_">
                     <a target="_blank" href="https://www.softpedia.com/get/Internet/Download-Managers/File-Centipede.shtmle">
                         Right from the start, we noticed the logical and well-thought design of the layout, which relies on a series of panels and tabs for providing the available tools and various information. One can, at a single glance preview downloading content
@@ -258,7 +290,6 @@
                 <div class="title_">
                     <h4>HTTP、FTP、magnet、torrent、m3u8 などのプロトコルに対応しているダウンロードマネージャ</h4>
                 </div>
-
                 <div class="desc_">
                     <a target="_blank" href="https://softaro.net/file-centipede/">
                         File Centipede は、HTTP / HTTPS、FTP / FTPS、magnet や torrent、m3u8 などのプロトコルに対応している、使いやすくカスタマイズが可能なダウンロードマネージャです。
@@ -276,7 +307,6 @@
                 <div class="title_">
                     <h4>File Centipede is an internet file download manager that includes many enhanced features</h4>
                 </div>
-
                 <div class="desc_">
                     <a target="_blank" href="https://www.majorgeeks.com/files/details/file_centipede.html">
                         The dev has included pretty much anything that comes to mind as far as features go and wrapped them in a user-friendly interface.
@@ -293,7 +323,6 @@
                 <div class="title_">
                     <h4>Free File Upload & Download Manager with BitTorrent Client</h4>
                 </div>
-
                 <div class="desc_">
                     <a target="_blank" href="https://www.softlay.com/downloads/file-centipede">
                         The clean user interface allows users to upload or download files at ease.
@@ -311,7 +340,6 @@
                 <div class="title_">
                     <h4>Công cụ tải tập tin miễn phí đáng dùng trên Windows 11</h4>
                 </div>
-
                 <div class="desc_">
                     <a target="_blank" href="https://trainghiemso.vn/file-centipede/">
                         Mặc dù, File Centipede không hỗ trợ tiếng Việt nhưng phần mềm này là một trong những công cụ tốt nhất, sạch và gọn nhẹ nhất mà bạn có thể tin tưởng sử dụng để tải file trên internet mà không cần phải trả phí hay nhìn quảng cáo
@@ -340,7 +368,6 @@
                 <a target="_blank" href="/troubleshooting.html">Устранение неполадок</a>
                 <a href="sponsors.html">Sponsors</a>
             </div>
-
             <div>
                 <h4>Если вам не нравится эта программа, вот некоторые другие аналогичные программы, рекомендованные вам.</h4>
                 <a target="_blank" href="https://www.wfdownloader.xyz/" style="font-weight: bold">WFDownloader</a>
@@ -354,18 +381,15 @@
                 <a target="_blank" href="https://winscp.net/">WinSCP</a>
                 <a target="_blank" href="https://www.xshell.com/xftp/">xftp</a>
             </div>
-
             <div><br>(If you like to add your software to the list, please send an email, you don't have to link this site back, but I will be appreciated it if you do.)</div>
-
             <div>
                 <h4>Ссылки</h4>
                 <a target="_blank" href="https://www.softlay.com/downloads/file-centipede">softlay</a>
                 
             </div>
-
         </div>
-    </div>
 
+    </div>
     <div class="footer">
     <div class="copyright_">
         <span>No copyright © 2022</span>
@@ -380,7 +404,6 @@
 </div>
 
 <script src="../script/base.js"></script>
-
 
 </body>
 </html>
