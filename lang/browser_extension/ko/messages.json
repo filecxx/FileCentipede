@@ -1,0 +1,111 @@
+{
+    "appname":{
+        "message": "File Centipede"
+    },
+    "videos": {
+        "message": "비디오"
+    },
+    "audios": {
+        "message": "오디오"
+    },
+    "magnets": {
+        "message": "자석"
+    },
+    "type": {
+        "message": "유형"
+    },
+    "length_duration": {
+        "message": "길이 / 지속 / 크기"
+    },
+    "download": {
+        "message": "다운로드"
+    },
+    "cancel": {
+        "message": "취소"
+    },
+    "file": {
+        "message": "파일"
+    },
+    "files": {
+        "message": "파일"
+    },
+    "download_video": {
+        "message": "이 비디오 다운로드"
+    },
+    "download_audio": {
+        "message": "이 비디오 다운로드"
+    },
+    "download_link": {
+        "message": "이 링크 다운로드"
+    },
+    "download_image": {
+        "message": "이 이미지 다운로드"
+    },
+    "minutes": {
+        "message": "분"
+    },
+    "text": {
+        "message": "텍스트"
+    },
+    "download_all": {
+        "message": "모두 다운로드"
+    },
+    "copy_all": {
+        "message": "모두 복사"
+    },
+    "copy": {
+        "message": "복사"
+    },
+    "copy_addr_msg": {
+        "message": "주소 복사 성공"
+    },
+    "video_floating_bar": {
+        "message": "비디오 부동 막대"
+    },
+    "enable": {
+        "message": "사용함"
+    },
+    "disable": {
+        "message": "사용 안 함"
+    },
+    "yes": {
+        "message": "예"
+    },
+    "no": {
+        "message": "아니오"
+    },
+    "send_failed": {
+        "message": "전송 실패"
+    },
+    "browser": {
+        "message": "브라우저"
+    },
+    "download_manager": {
+        "message": "다운로드 관리자"
+    },
+    "download_send_failed_message_prefix": {
+        "message": "연결할 수 없음 "
+    },
+    "download_send_failed_message": {
+        "message": "설치되지 않았거나 실행되고 있지 않은 경우 작업을 선택합니다."
+    },
+    "recapture_address": {
+        "message": "주소 다시 캡쳐"
+    },
+    "recapture_address_msg_success": {
+        "message": "주소 다시 캡쳐가 성공입니다. 소프트웨어를 열고 다운로드 중인지 확인하십시오."
+    },
+    "refresh_address_msg_content": {
+        "message": "주소를 캡처하기 전에 현재 페이지를 새로 고치지 마십시오. 다음 항목을 찾으십시오: "
+    },
+    "ignore_this_site": {
+        "message": "이 사이트 무시"
+    },
+    "potential_urls": {
+        "message": "잠재적 URL"
+    },
+    "potential_keys": {
+        "message": "잠재적 키"
+    }
+
+}
