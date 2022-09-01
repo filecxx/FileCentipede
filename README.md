@@ -196,6 +196,7 @@ Browser extension screenshots
 | 繁體中文             | [@bear0316](https://github.com/bear0316) [@postman1year](https://github.com/postman1year)
 | Français           | [@XIAA25](https://github.com/XIAA25)
 | Nederlands         | [@XIAA25](https://github.com/XIAA25)
+| 한국어         | [@VenusGirl](https://github.com/VenusGirl)
 
 
 ## Opensource libraries
