@@ -310,3 +310,7 @@ feature_47=원격 다운로드
 premium_version=프리미엄 에디션
 free_version=무료 에디션
 remote_download_manager=원격 다운로드 관리자
+extra_return=Extra return
+reset=Reset
+balance_reset_=You can reset your balance every year (the threshold is 28$). <br/>If you topped up 30$, whether you used 1 or 30$, you can reset it to 30$.
+

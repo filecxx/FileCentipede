@@ -310,3 +310,6 @@ feature_47=遠程下載
 premium_version=高級版
 free_version=免費版
 remote_download_manager=遠程下載管理器
+extra_return=額外贈送
+reset=重置
+balance_reset_=您可以每年重置餘額（門檻為28$）.<br/>如果您充值了30$，無論您使用了1$或者30$，您都可以將其重置為30$.

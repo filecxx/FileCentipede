@@ -311,3 +311,6 @@ feature_47=远程下载
 premium_version=高级版
 free_version=免费版
 remote_download_manager=远程下载管理器
+extra_return=额外赠送
+reset=重置
+balance_reset_=您可以每年重置余额(门槛为28$). <br/>如果您充值了30美元, 无论您使用了1$或者30$, 您都可以将其重置为30$. 
