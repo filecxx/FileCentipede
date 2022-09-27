@@ -10,7 +10,7 @@ assignees: ''
 
 **Please provide as much information as possible.**
 
-version :
+version(>=2.0) :
 
 screenshot:
 
