@@ -192,7 +192,7 @@ Browser extension screenshots
 
 | Language            |@|
 |:--------------------|:-------------|
-| Русский             | [@vanja-san](https://github.com/vanja-san) 
+| Русский             | [@vanja-san](https://github.com/vanja-san) [@Den1704](https://github.com/Den1704)
 | 繁體中文             | [@bear0316](https://github.com/bear0316) [@postman1year](https://github.com/postman1year)
 | Français           | [@XIAA25](https://github.com/XIAA25)
 | Nederlands         | [@XIAA25](https://github.com/XIAA25)

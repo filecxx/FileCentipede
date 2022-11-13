@@ -25,12 +25,12 @@
 <div class="central">
     <div class="nav">
     <div class="links_">
-        <a class="tool_button home_" href="../index.html">Home</a>
+        <a class="tool_button home_" href="../index.html">Домой</a>
         <a class="tool_button features_" href="../index.html#features">Возможности</a>
         <a class="tool_button download_" href="../download.html">Скачать</a>
         <a class="tool_button screenshot_" href="../screenshot.html">Снимок экрана</a>
-        <a class="tool_button user_reviews_" href="../index.html#user_reviews">User reviews</a>
-        <a class="tool_button documentation_" href="../documentation.html">Documentation</a>
+        <a class="tool_button user_reviews_" href="../index.html#user_reviews">Обзоры пользователей</a>
+        <a class="tool_button documentation_" href="../documentation.html">Документация</a>
     </div>
 </div>
     <div class="header">
@@ -60,19 +60,19 @@
 
         <div class="section">
             <h2>Javascript</h2>
-            <p>If you are running a website.</p>
-            <p>Insert this script into your web page, or put the script code into your web page, but the better way is to put the script on your website, in case this website is not online.</p>
+            <p>Если вы имеете свой веб-сайт</p>
+            <p>Вставьте этот скрипт на свою веб-страницу или поместите код скрипта на свою веб-страницу, лучший способ - разместить скрипт на своем веб-сайте, если этот веб-сайт не подключен к сети.</p>
             <div>
                 <pre><xmp><script1 src="http://filecxx.com/script/create_filec_address.js"></script1></xmp></pre>
             </div>
             <div>
-                <a href="../../script/create_filec_address.js">Download script</a>
+                <a href="../../script/create_filec_address.js">Скачать скрипт</a>
             </div>
 
             <div>
-                <h3>Usage:</h3>
+                <h3>Использование:</h3>
                 <p>
-                    Pass a JSON into create_filec_address function, json fields see
+                    Пропустить JSON в функцию create_filec_address, увидеть поля JSON
                     <a href="#json_fields">JSON</a>
                 </p>
                 <pre><code>create_filec_address({uri:"http://...."});</code></pre>
@@ -89,10 +89,10 @@
         <div class="section">
             <div style="margin-top: 24px">
                 <p>
-                    If you like to hide your real address from users or give some limitations for user download, you should use the \\\\\\\\\\\\\\\"create address\\\\\\\\\\\\\\\" tool from software, it can generate an encrypted address.
+                    Если вы хотите скрыть свой реальный адрес от пользователей или ввести некоторые ограничения для загрузки пользователями, вам следует использовать инструмент \\\\\\\\\\\\\\\"создать адрес\\\\\\\\\\\\\\\" в программе, он может сгенерировать зашифрованный адрес.
                 </p>
                 <p>
-                    (Javascript is not able to create an encrypted address.)
+                    (Javascript не может создать зашифрованный адрес.)
                 </p>
             </div>
             <div>
@@ -103,7 +103,7 @@
         <div class="section json_keys" id="json_fields">
             <h2>JSON: Добавить задачу</h2>
             <div>
-                You can use JSON as an address to add a task, but remember, the JSON string must on one line.
+                Вы можете использовать JSON как адрес для добавления задачи, но помните, строка JSON должна быть в одну линию.
                 <br/>
                 <br/>
                 <img src="../../images/tools/screenshot_add_json_task.png" alt="">
@@ -120,13 +120,13 @@
                 <tbody>
                 <tr>
                     <td>uri</td>
-                    <td>String</td>
+                    <td>Цепочка</td>
                     <td>Адрес</td>
                 </tr>
                 </tbody>
             </table>
 
-            <h4>HTTP / HTTPS / Stream Optional</h4>
+            <h4>HTTP / HTTPS / Stream Опционально</h4>
             <table class="grid" style="margin-top: 12px">
                 <thead>
                 <tr>
@@ -138,72 +138,72 @@
                 <tbody>
                 <tr>
                     <td>method</td>
-                    <td>String</td>
+                    <td>Цепочка</td>
                     <td>GET, POST ... You know the thing</td>
                 </tr>
                 <tr>
                     <td>catalog</td>
-                    <td>String</td>
+                    <td>Цепочка</td>
                     <td>Каталог</td>
                 </tr>
                 <tr>
                     <td>page_url</td>
-                    <td>String</td>
+                    <td>Цепочка</td>
                     <td>URL-адрес страницы</td>
                 </tr>
                 <tr>
                     <td>user_agent</td>
-                    <td>String</td>
+                    <td>Цепочка</td>
                     <td>User Agent</td>
                 </tr>
                 <tr>
                     <td>cookies</td>
-                    <td>String</td>
+                    <td>Цепочка</td>
                     <td>Cookies</td>
                 </tr>
                 <tr>
                     <td>headers</td>
-                    <td>String</td>
+                    <td>Цепочка</td>
                     <td>HTTP Headers</td>
                 </tr>
                 <tr>
                     <td>content_type</td>
-                    <td>String</td>
+                    <td>Цепочка</td>
                     <td>Content Type (for HTTP POST)</td>
                 </tr>
                 <tr>
                     <td>data</td>
-                    <td>String</td>
+                    <td>Цепочка</td>
                     <td>HTTP request data</td>
                 </tr>
                 <tr>
                     <td>connect_timeout</td>
-                    <td>Number</td>
+                    <td>Номер</td>
                     <td>Вышло время на подключение</td>
                 </tr>
                 <tr>
                     <td>max_connections</td>
-                    <td>Number</td>
+                    <td>Номер</td>
                     <td>Максимальное количество подключений</td>
                 </tr>
                 <tr>
                     <td>max_redirect</td>
-                    <td>Number</td>
+                    <td>Номер</td>
                     <td>Максимальное перенаправление</td>
                 </tr>
                 <tr>
                     <td>max_retry</td>
-                    <td>Number</td>
+                    <td>Номер</td>
                     <td>Максимум попыток</td>
                 </tr>
                 <tr>
                     <td>file_name</td>
-                    <td>String</td>
+                    <td>Цепочка</td>
                     <td>Имя файла</td>
                 </tr>
                 <tr>
                     <td>speed_limit_download</td>
-                    <td>Number</td>
+                    <td>Номер</td>
                     <td>Ограничение скорости скачивания</td>
                 </tr>
                 <tr>
@@ -213,23 +213,23 @@
                 </tr>
                 <tr>
                     <td>ignore_remote_modified</td>
-                    <td>Number</td>
+                    <td>Номер</td>
                     <td>Игнорировать удаленное изменение</td>
                 </tr>
                 <tr>
                     <td>ignore_server_busy</td>
-                    <td>Number</td>
+                    <td>Номер</td>
                     <td>Игнорировать занятость сервера</td>
                 </tr>
                 <tr>
                     <td>ignore_http_error</td>
-                    <td>Number</td>
+                    <td>Номер</td>
                     <td>Игнорировать ошибку HTTP</td>
                 </tr>
                 </tbody>
             </table>
 
-            <h4>FTP / FTPS Optional</h4>
+            <h4>FTP / FTPS Опционально</h4>
             <table class="grid" style="margin-top: 12px">
                 <thead>
                 <tr>
@@ -241,52 +241,52 @@
                 <tbody>
                 <tr>
                     <td>catalog</td>
-                    <td>String</td>
+                    <td>Цепочка</td>
                     <td>Каталог</td>
                 </tr>
                 <tr>
                     <td>page_url</td>
-                    <td>String</td>
+                    <td>Цепочка</td>
                     <td>URL-адрес страницы</td>
                 </tr>
                 <tr>
                     <td>connect_timeout</td>
-                    <td>Number</td>
+                    <td>Номер</td>
                     <td>Вышло время на подключение</td>
                 </tr>
                 <tr>
                     <td>max_connections</td>
-                    <td>Number</td>
+                    <td>Номер</td>
                     <td>Максимальное количество подключений</td>
                 </tr>
                 <tr>
                     <td>max_retry</td>
-                    <td>Number</td>
+                    <td>Номер</td>
                     <td>Максимум попыток</td>
                 </tr>
                 <tr>
                     <td>file_name</td>
-                    <td>String</td>
+                    <td>Цепочка</td>
                     <td>Имя файла</td>
                 </tr>
                 <tr>
                     <td>user</td>
-                    <td>String</td>
+                    <td>Цепочка</td>
                     <td>Пользователь</td>
                 </tr>
                 <tr>
                     <td>pass</td>
-                    <td>String</td>
+                    <td>Цепочка</td>
                     <td>Пароль</td>
                 </tr>
                 <tr>
                     <td>speed_limit_download</td>
-                    <td>Number</td>
+                    <td>Номер</td>
                     <td>Ограничение скорости скачивания</td>
                 </tr>
                 <tr>
                     <td>speed_limit_upload</td>
-                    <td>Number</td>
+                    <td>Номер</td>
                     <td>Ограничение скорости скачивания</td>
                 </tr>
                 <tr>
@@ -296,13 +296,13 @@
                 </tr>
                 <tr>
                     <td>ignore_server_busy</td>
-                    <td>Number</td>
+                    <td>Номер</td>
                     <td>Игнорировать занятость сервера</td>
                 </tr>
                 </tbody>
             </table>
 
-            <h4>Magnet / HASH Optional</h4>
+            <h4>Magnet / HASH Опционально</h4>
             <table class="grid" style="margin-top: 12px">
                 <thead>
                 <tr>
@@ -314,32 +314,32 @@
                 <tbody>
                 <tr>
                     <td>catalog</td>
-                    <td>String</td>
+                    <td>Цепочка</td>
                     <td>Каталог</td>
                 </tr>
                 <tr>
                     <td>page_url</td>
-                    <td>String</td>
+                    <td>Цепочка</td>
                     <td>URL-адрес страницы</td>
                 </tr>
                 <tr>
                     <td>max_connections</td>
-                    <td>Number</td>
+                    <td>Номер</td>
                     <td>Максимальное количество подключений</td>
                 </tr>
                 <tr>
                     <td>file_name</td>
-                    <td>String</td>
+                    <td>Цепочка</td>
                     <td>Имя файла</td>
                 </tr>
                 <tr>
                     <td>speed_limit_download</td>
-                    <td>Number</td>
+                    <td>Номер</td>
                     <td>Ограничение скорости скачивания</td>
                 </tr>
                 <tr>
                     <td>speed_limit_upload</td>
-                    <td>Number</td>
+                    <td>Номер</td>
                     <td>Ограничение скорости скачивания</td>
                 </tr>
                 <tr>
@@ -349,43 +349,43 @@
                 </tr>
                 <tr>
                     <td>seeding_limit_ratio</td>
-                    <td>Number</td>
-                    <td>Seeding limit, ratio</td>
+                    <td>Номер</td>
+                    <td>Ограничение сидирования, по соотношению</td>
                 </tr>
                 <tr>
                     <td>seeding_limit_minutes</td>
-                    <td>Number</td>
-                    <td>Seeding limit, minutes</td>
+                    <td>Номер</td>
+                    <td>Ограничение сидирования, по минутам</td>
                 </tr>
                 <tr>
                     <td>seeding_limit_size</td>
-                    <td>Number</td>
-                    <td>Seeding limit, size</td>
+                    <td>Номер</td>
+                    <td>Ограничение сидирования, по размеру</td>
                 </tr>
                 <tr>
                     <td>seeding_limit_act</td>
-                    <td>Number</td>
-                    <td>Seeding limit, action</td>
+                    <td>Номер</td>
+                    <td>Ограничение сидирования по действию</td>
                 </tr>
                 <tr>
                     <td>seeding_limit_speed_limit</td>
-                    <td>Number</td>
-                    <td>Seeding limit, speed limit</td>
+                    <td>Номер</td>
+                    <td>Ограничение сидирования, по скорости</td>
                 </tr>
                 <tr>
                     <td>seeding_limit_ratio_enable</td>
                     <td>bool</td>
-                    <td>Seeding limit, ratio enable</td>
+                    <td>Ограничение сидирования, по соотношению включить</td>
                 </tr>
                 <tr>
                     <td>seeding_limit_minutes_enable</td>
                     <td>bool</td>
-                    <td>Seeding limit, minutes enable</td>
+                    <td>Ограничение сидирования, по минутам включить</td>
                 </tr>
                 <tr>
                     <td>seeding_limit_size_enable</td>
                     <td>bool</td>
-                    <td>Seeding limit, size enable</td>
+                    <td>Ограничение сидирования, по размеру включить</td>
                 </tr>
                 <tr>
                     <td>without_confirm</td>
