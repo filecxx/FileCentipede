@@ -26,17 +26,35 @@
         </div>
 
         <div class="section">
-            <h3>2.71 (uptime: 2022.09.02)</h3>
-            <h4>New:</h4>
-            <p>skip installation</p>
-            <p>add-task: import HTTP raw</p>
-            <p>Language: 한국어</p>
+            <h3>2.8 stable (uptime: 2022.12.31)</h3>
+            <p>
+                This is the last version of FileCentipede2. The development of the next major version 3.0 has started.<br/><br/>
+                If you have any feature requests, please post them on
+                <a href="https://github.com/filecxx/FileCentipede/discussions/402">https://github.com/filecxx/FileCentipede/discussions/402</a>
+            </p>
+
+            <h4>Changes:</h4>
+            <p>Browser extensions up to 1.8</p>
+            <p>Language file "ru_RU.lang" updated.</p>
 
             <h4>Fixed:</h4>
-            <p>catalog setting from the task-confirm dialog.</p>
-            <p>filec crashes when changing service port from remote.</p>
-            <p>FTP compatibility fixes.</p>
-            <p>unable to download FTP directory when the directory contains file names like "." or ".."</p>
+            <p>URL directory parse error, such as "http://localhost/a=1&b=/dir/file".</p>
+            <p>The FTP task becomes stuck in the stopping state if the connection fails.</p>
+            <p>Unable to receive FTP file list when remote FTP server sends code 226 before sending the file list.</p>
+            <p>The browser extension shows "Send failed" when getting an URL that starts with "blob:".</p>
+            <p>The browser extension sometimes fails to obtain the cookie information for a URL.</p>
+            <p>A new strategy for downloading protected m3u8 segments.</p>
+            <p>In some cases, the downloaded file is m3u8 content instead of a video.</p>
+            <p>m3u8 png segments.</p>
+            <p>m3u8 parsing segment URL lost the last character when the m3u8 file did not end with a newline.</p>
+            <p>Use "filename*=UTF-8" as the preferred filename instead of "filename=".</p>
+            <p>The "Blocks" from the detail panel are displayed reversely when the HTTP task is not resumable.</p>
+            <p>Unlocked variables caused the filec process to crash.</p>
+            <p>The settings from the 'Update-dialog' cannot be saved.</p>
+            <p>Display an error message when the remote client fails to connect.</p>
+            <p>Increase the SSH maximum connect timeout to 120 seconds, rather than the current 12 seconds.</p>
+            <p>filec crashes if the remote HTTP response headers include both 'content-range' and 'transfer-encoding' at the same time.</p>
+            <p>When downloading multiple files with the same file name but different contents simultaneously, the automatic renaming function may potentially cause errors in writing to the files due to a lack of locking, indirectly causing filec to crash.</p>
         </div>
 
         <div class="section">
