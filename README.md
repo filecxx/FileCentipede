@@ -8,12 +8,6 @@
 </a>
 
 
-Website: [http://filecxx.com](http://filecxx.com)
-
-Dashboard: [https://w.filecxx.com](https://w.filecxx.com)
-
-Sponsors: [http://www.filecxx.com/en_US/sponsors.html](http://www.filecxx.com/en_US/sponsors.html)
-
 File centipede is an All-In-One internet file upload/download manager, BitTorrent Client, WebDAV client, FTP client, and SSH client.
 
 It is designed to be fast, customizable, and user-friendly.
@@ -24,17 +18,12 @@ With the browser integration, you can download audio and videos from websites, e
 
 (It's free with no ads)
 
-## Source code
-FileU source code is in the source_code directory,
-this source code is for demonstration purposes only, it's full source code, but dependent libraries are not open source.
 
-this code proved that writing user interfaces in C++ could be significantly easier than HTML and JavaScript, without reducing performance.
-(see sml files in the UI directory)
+Website: [http://filecxx.com](http://filecxx.com)
 
+Dashboard: [https://w.filecxx.com](https://w.filecxx.com)
 
-## Translate
-If you like this software, please help translate this software into other languages, the translation tool has been contained in the software.
-
+Sponsors: [http://www.filecxx.com/en_US/sponsors.html](http://www.filecxx.com/en_US/sponsors.html)
 
 ## Screenshot
 
@@ -181,6 +170,23 @@ Browser extension screenshots
 * Checksum tool	2.3
 * Remote download	2.6
 
+## Source code
+
+The full source code of FileU can be found in the "source_code" directory.
+
+It's for demonstration purposes only, the dependent libraries used in the project are not open source.
+
+It has proved that writing user interfaces in C++ could be significantly easier than HTML and JavaScript, without reducing performance.
+
+(as seen in the .sml files in the "UI" directory).
+
+
+## Translate
+If you like this software, you can help by using the translation tool provided in the software to translate it into other languages.
+
+This will make the software more accessible to people who speak languages other than the one it was originally written in. Your contribution would be greatly appreciated.
+
+
 ## Language files
 * Website:  "lang/website/*.lang"
 * Software: "lang/software/*.lang"
@@ -197,6 +203,7 @@ Browser extension screenshots
 | Français           | [@XIAA25](https://github.com/XIAA25)
 | Nederlands         | [@XIAA25](https://github.com/XIAA25)
 | 한국어         | [@VenusGirl](https://github.com/VenusGirl)
+| Tiếng Việt | @[vuongtuha](https://github.com/vuongtuha)
 
 
 ## Opensource libraries
