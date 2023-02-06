@@ -25,6 +25,21 @@
         </div>
 
         <div class="section">
+            <h3>2.82 (uptime: 2023.02.06)</h3>
+            <h4>New:</h4>
+            <p>Fully shutdown.</p>
+
+            <h4>Fixed:</h4>
+            <p>When the remote HTTP server sends error data without disconnecting, causing this segment of data not to be downloaded and the final file size to not match the remote one, this scenario is likely to occur when the remote connection is unstable or frequently switches proxy IPs.</p>
+            <p>When downloading a file from the file browser, the file save path follows the catalog instead of the user choosing one.</p>
+            <p>The browser extension gets the wrong cookies from the incognito window.</p>
+
+            <h4>Changes:</h4>
+            <p>Change the default parallel option to "Fastest".</p>
+            <p>FileCXX private DHT network module (libdybn) has been removed, using BitTorrent public DHT network as the alternate.</p>
+        </div>
+
+        <div class="section">
             <h3>2.81 (uptime: 2023.1.6)</h3>
             <h4>New:</h4>
             <p>Language: Tiếng Việt</p>

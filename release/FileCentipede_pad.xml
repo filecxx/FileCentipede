@@ -59,8 +59,8 @@
   <Program_Info>
     <AppID>app-0100aa3d7a5e</AppID>
     <Program_Name>FileCentipede</Program_Name>
-    <Program_Version>2.81</Program_Version>
-    <Program_Release_Month>1</Program_Release_Month>
+    <Program_Version>2.82</Program_Version>
+    <Program_Release_Month>2</Program_Release_Month>
     <Program_Release_Day>6</Program_Release_Day>
     <Program_Release_Year>2023</Program_Release_Year>
     <Program_Cost_Dollars>0</Program_Cost_Dollars>
@@ -78,9 +78,9 @@
     <Limitations></Limitations>
     <Awards></Awards>
     <File_Info>
-      <File_Size_Bytes>29571226</File_Size_Bytes>
-      <File_Size_K>28878</File_Size_K>
-      <File_Size_MB>28.2</File_Size_MB>
+      <File_Size_Bytes>27594745</File_Size_Bytes>
+      <File_Size_K>26947</File_Size_K>
+      <File_Size_MB>26.3</File_Size_MB>
     </File_Info>
     <Expire_Info>
       <Has_Expire_Info>N</Has_Expire_Info>
