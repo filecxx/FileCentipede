@@ -27,6 +27,13 @@
 
 }
 
+.downloads .platform_ .button.blue_
+{
+    border-color: #30a3e1;
+    color: #1f6893;
+}
+
+
 .body .description
 {
     line-height: 38px;
