@@ -23,6 +23,7 @@ function web_centipede(address)
     var max_connections = 16;
     var segment_length  = 1024 * 256;
     var downloaded_size = 0;
+    var aborted         = false;
     var file_size       = 0;
     var file_data       = [];
     var ui              = {};
@@ -126,6 +127,9 @@ function web_centipede(address)
     }
     var download_completed = function()
     {
+        if(aborted){
+            return;
+        }
         var blob     = new Blob(file_data,{type: "application/octet-binary"});
         var filename = extract_file_name(address);
 
@@ -175,7 +179,10 @@ function web_centipede(address)
                     for(var i=0;i<connections.length;++i){
                         connections[i].abort();
                     }
-                    download_failed();
+                    if(!aborted){
+                        download_failed();
+                        aborted = true;
+                    }
                 }
             },
             success:function(){
