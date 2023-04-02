@@ -106,6 +106,84 @@
     },
     "potential_keys": {
       "message": "潛在密鑰"
+    },
+    "rules": {
+      "message": "規則"
+    },
+    "filename": {
+      "message": "檔案名稱"
+    },
+    "filetypes": {
+      "message": "檔案類型"
+    },
+    "domain": {
+      "message": "網域"
+    },
+    "settings": {
+      "message": "設定"
+    },
+    "others": {
+      "message": "其他"
+    },
+    "preview": {
+      "message": "預覽"
+    },
+    "save": {
+      "message": "保存"
+    },
+    "add": {
+      "message": "添加"
+    },
+    "edit": {
+      "message": "編輯"
+    },
+    "remove": {
+      "message": "删除"
+    },
+    "clear": {
+      "message": "清空"
+    },
+    "general": {
+      "message": "常規"
+    },
+    "deep_analysis": {
+      "message": "深度分析"
+    },
+    "duplicated_row": {
+      "message": "重複的行"
+    },
+    "service": {
+      "message": "服務"
+    },
+    "service_password": {
+      "message": "服務密碼"
+    },
+    "extension": {
+      "message": "擴展"
+    },
+    "css_selector": {
+      "message": "CSS 選擇器"
+    },
+    "do_not_download": {
+      "message": "不下載"
+    },
+    "capture_other_file_types": {
+      "message": "捕捉其他檔案類型"
+    },
+    "file_unsuport_preview": {
+      "message": "您無法預覽此檔案。"
+    },
+    "unsuport_m3u8_preview": {
+      "message": "您的網頁瀏覽器不支援 m3u8 檔案預覽。"
+    },
+    "invalid_domain": {
+      "message": "無效域名."
+    },
+    "filter": {
+      "message": "過濾"
+    },
+    "filter_out": {
+      "message": "過濾掉"
     }
 }
  

@@ -203,7 +203,8 @@ This will make the software more accessible to people who speak languages other 
 | Français           | [@XIAA25](https://github.com/XIAA25)
 | Nederlands         | [@XIAA25](https://github.com/XIAA25)
 | 한국어         | [@VenusGirl](https://github.com/VenusGirl)
-| Tiếng Việt | @[vuongtuha](https://github.com/vuongtuha)
+| Tiếng Việt | [@vuongtuha](https://github.com/vuongtuha)
+| Türkçe     | [@geeede](https://github.com/geeede)
 
 
 ## Opensource libraries

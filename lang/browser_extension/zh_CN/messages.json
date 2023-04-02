@@ -106,5 +106,83 @@
     },
     "potential_keys": {
       "message": "潜在密钥"
+    },
+    "rules": {
+      "message": "规则"
+    },
+    "filename": {
+      "message": "文件名"
+    },
+    "filetypes": {
+      "message": "文件类型"
+    },
+    "domain": {
+      "message": "域名"
+    },
+    "settings": {
+      "message": "设置"
+    },
+    "others": {
+      "message": "其他"
+    },
+    "preview": {
+      "message": "预览"
+    },
+    "save": {
+      "message": "保存"
+    },
+    "add": {
+      "message": "添加"
+    },
+    "edit": {
+      "message": "编辑"
+    },
+    "remove": {
+      "message": "删除"
+    },
+    "clear": {
+      "message": "清空"
+    },
+    "general": {
+      "message": "常规"
+    },
+    "deep_analysis": {
+      "message": "深度分析"
+    },
+    "duplicated_row": {
+      "message": "重复的行"
+    },
+    "service": {
+      "message": "服务"
+    },
+    "service_password": {
+      "message": "服务密码"
+    },
+    "extension": {
+      "message": "扩展"
+    },
+    "css_selector": {
+      "message": "CSS 选择器"
+    },
+    "do_not_download": {
+      "message": "不下载"
+    },
+    "capture_other_file_types": {
+      "message": "捕获其他文件类型"
+    },
+    "file_unsuport_preview": {
+      "message": "你无法预览这个文件."
+    },
+    "unsuport_m3u8_preview": {
+      "message": "你的浏览器不支持m3u8文件预览."
+    },
+    "invalid_domain": {
+      "message": "无效的域名."
+    },
+    "filter": {
+      "message": "过滤"
+    },
+    "filter_out": {
+      "message": "过滤掉"
     }
 }

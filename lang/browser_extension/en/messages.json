@@ -106,6 +106,83 @@
     },
     "potential_keys": {
         "message": "Potential Keys"
+    },
+    "rules": {
+        "message": "Rules"
+    },
+    "filename": {
+        "message": "Filename"
+    },
+    "filetypes": {
+        "message": "File types"
+    },
+    "domain": {
+        "message": "Domain"
+    },
+    "settings": {
+        "message": "Settings"
+    },
+    "others": {
+        "message": "Others"
+    },
+    "preview": {
+        "message": "Preview"
+    },
+    "save": {
+        "message": "Save"
+    },
+    "add": {
+        "message": "Add"
+    },
+    "edit": {
+        "message": "Edit"
+    },
+    "remove": {
+        "message": "Remove"
+    },
+    "clear": {
+        "message": "Clear"
+    },
+    "general": {
+        "message": "General"
+    },
+    "deep_analysis": {
+        "message": "Deep analysis"
+    },
+    "duplicated_row": {
+        "message": "Duplicated row"
+    },
+    "service": {
+        "message": "Service"
+    },
+    "service_password": {
+        "message": "Service password"
+    },
+    "extension": {
+        "message": "Extension"
+    },
+    "css_selector": {
+        "message": "CSS Selector"
+    },
+    "do_not_download": {
+        "message": "Do not download"
+    },
+    "capture_other_file_types": {
+        "message": "Capture other file types"
+    },
+    "file_unsuport_preview": {
+        "message": "You can't preview this file"
+    },
+    "unsuport_m3u8_preview": {
+        "message": "Your web browser doesn't support preview m3u8 files."
+    },
+    "invalid_domain": {
+        "message": "Invalid domain."
+    },
+    "filter": {
+        "message": "Filter"
+    },
+    "filter_out": {
+        "message": "Filter out"
     }
-
 }

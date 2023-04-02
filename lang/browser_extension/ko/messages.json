@@ -106,6 +106,77 @@
     },
     "potential_keys": {
         "message": "잠재적 키"
+    },
+    "rules": {
+        "message": "규칙"
+    },
+    "filename": {
+        "message": "파일 이름"
+    },
+    "filetypes": {
+        "message": "파일 형식"
+    },
+    "domain": {
+        "message": "도메인 이름"
+    },
+    "settings": {
+        "message": "설정"
+    },
+    "others": {
+        "message": "기타"
+    },
+    "preview": {
+        "message": "미리보기"
+    },
+    "save": {
+        "message": "저장"
+    },
+    "add": {
+        "message": "추가"
+    },
+    "edit": {
+        "message": "편집"
+    },
+    "remove": {
+        "message": "삭제"
+    },
+    "clear": {
+        "message": "비우기"
+    },
+    "general": {
+        "message": "일반"
+    },
+    "deep_analysis": {
+        "message": "깊은 분석"
+    },
+    "duplicated_row": {
+        "message": "중복 행"
+    },
+    "service": {
+        "message": "서비스"
+    },
+    "service_password": {
+        "message": "서비스 비밀번호"
+    },
+    "extension": {
+        "message": "확장"
+    },
+    "css_selector": {
+        "message": "CSS 선택자"
+    },
+    "do_not_download": {
+        "message": "다운로드하지 마십시오"
+    },
+    "capture_other_file_types": {
+        "message": "캡처 다른 파일 유형"
+    },
+    "invalid_domain": {
+        "message": "잘못된 도메인 이름."
+    },
+    "filter": {
+        "message": "필터"
+    },
+    "filter_out": {
+        "message": "필터링하다"
     }
-
 }
