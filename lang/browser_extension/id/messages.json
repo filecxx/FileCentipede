@@ -1,0 +1,188 @@
+{
+    "appname":{
+        "message": "File Centipede"
+    },
+    "videos": {
+        "message": "Video"
+    },
+    "audios": {
+        "message": "Audio"
+    },
+    "magnets": {
+        "message": "Magnet"
+    },
+    "type": {
+        "message": "tipe"
+    },
+    "length_duration": {
+        "message": "panjang / durasi / ukuran"
+    },
+    "download": {
+        "message": "Unduh"
+    },
+    "cancel": {
+        "message": "Batal"
+    },
+    "file": {
+        "message": "file"
+    },
+    "files": {
+        "message": "file"
+    },
+    "download_video": {
+        "message": "Unduh video ini"
+    },
+    "download_audio": {
+        "message": "Unduh audio ini"
+    },
+    "download_link": {
+        "message": "Unduh tautan ini"
+    },
+    "download_image": {
+        "message": "Unduh gambar ini"
+    },
+    "minutes": {
+        "message": "Menit"
+    },
+    "text": {
+        "message": "teks"
+    },
+    "download_all": {
+        "message": "Unduh semua"
+    },
+    "copy_all": {
+        "message": "Salin semua"
+    },
+    "copy": {
+        "message": "salin"
+    },
+    "copy_addr_msg": {
+        "message": "Alamat telah disalin"
+    },
+    "video_floating_bar": {
+        "message": "Bar mengambang"
+    },
+    "enable": {
+        "message": "Nyalakan"
+    },
+    "disable": {
+        "message": "Matiakn"
+    },
+    "yes": {
+        "message": "Ya"
+    },
+    "no": {
+        "message": "Tidak"
+    },
+    "send_failed": {
+        "message": "Gagal mengirim"
+    },
+    "browser": {
+        "message": "Peramban"
+    },
+    "download_manager": {
+        "message": "Pengelola unduhan"
+    },
+    "download_send_failed_message_prefix": {
+        "message": "Tidak dapat menghubung ke "
+    },
+    "download_send_failed_message": {
+        "message": "baik tidak terpasang, atau tidak berjalan, pilih salah satu."
+    },
+    "recapture_address": {
+        "message": "Tangkap ulang alamat"
+    },
+    "recapture_address_msg_success": {
+        "message": "Penangkapan ulang berhasil, harap buka perangkat lunak dan pastikan itu sedang mengunduh."
+    },
+    "refresh_address_msg_content": {
+        "message": "Sebelum alamat ditangkap, jangan memuat ulang halaman saat ini, cari: "
+    },
+    "ignore_this_site": {
+        "message": "Abaikan situs ini"
+    },
+    "potential_urls": {
+        "message": "URL potensial"
+    },
+    "potential_keys": {
+        "message": "Kunci Potensial"
+    },
+    "rules": {
+        "message": "Aturan"
+    },
+    "filename": {
+        "message": "Nama file"
+    },
+    "filetypes": {
+        "message": "Tipe file"
+    },
+    "domain": {
+        "message": "Domain"
+    },
+    "settings": {
+        "message": "Peraturan"
+    },
+    "others": {
+        "message": "Lain"
+    },
+    "preview": {
+        "message": "Tinjau"
+    },
+    "save": {
+        "message": "Simpan"
+    },
+    "add": {
+        "message": "Tambah"
+    },
+    "edit": {
+        "message": "Edit"
+    },
+    "remove": {
+        "message": "Buang"
+    },
+    "clear": {
+        "message": "Bersihkan"
+    },
+    "general": {
+        "message": "Umum"
+    },
+    "deep_analysis": {
+        "message": "Analisis mendalam"
+    },
+    "duplicated_row": {
+        "message": "Baris duplikat"
+    },
+    "service": {
+        "message": "Layanan"
+    },
+    "service_password": {
+        "message": "Kata kunci layanan"
+    },
+    "extension": {
+        "message": "Ekstensi"
+    },
+    "css_selector": {
+        "message": "Pemilih CSS"
+    },
+    "do_not_download": {
+        "message": "Jangan unduh"
+    },
+    "capture_other_file_types": {
+        "message": "Tangkap tipe file lain"
+    },
+    "file_unsuport_preview": {
+        "message": "Anda tidak dapat meninjau file ini"
+    },
+    "unsuport_m3u8_preview": {
+        "message": "Peramban web anda tidak mendukung pratinjau file m3u8."
+    },
+    "invalid_domain": {
+        "message": "Domain tidak sah."
+    },
+    "filter": {
+        "message": "Filter"
+    },
+    "filter_out": {
+        "message": "Tersaring"
+    }
+}
