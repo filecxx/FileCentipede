@@ -205,6 +205,7 @@ This will make the software more accessible to people who speak languages other 
 | 한국어         | [@VenusGirl](https://github.com/VenusGirl)
 | Tiếng Việt | [@vuongtuha](https://github.com/vuongtuha)
 | Türkçe     | [@geeede](https://github.com/geeede)
+| Indonesian     | [@gigglylo](https://github.com/gigglylo)
 
 
 ## Opensource libraries
