@@ -129,7 +129,7 @@
 -   隊列或無限並發設置 1.0
 -   Chrome 瀏覽器集成 1.0
 -   Firefox 瀏覽器集成 1.0
--   1.0 從網頁抓取視頻、音頻
+-   從網頁抓取視頻、音頻 1.0
 -   從網頁 1.0 中查找所有磁鐵
 -   翻譯工具 1.0
 -   HTTP 工具 1.0
@@ -162,7 +162,7 @@ FileU 的完整源代碼可以在“source_code”目錄中找到。
 
 僅供演示，項目中使用的依賴庫均未開源。
 
-事實證明，用 C++ 編寫用戶界面比用 HTML 和 JavaScript 編寫用戶界面要容易得多，而且不會降低性能。
+事實證明，在不降低性能的情況下，用 C++ 編寫用戶界面比用 HTML 和 JavaScript 編寫用戶界面要容易得多。
 
 （如“UI”目錄中的 .sml 文件所示）。
 
@@ -190,7 +190,7 @@ FileU 的完整源代碼可以在“source_code”目錄中找到。
 | 荷蘭語   | [@卡西克](https://github.com/XIAA25)                                                        |
 | 韓國人   | [@維納斯女孩](https://github.com/VenusGirl)                                                   |
 | 越南語   | [@vuongtuha](https://github.com/vuongtuha)                                               |
-| 土耳其   | [@geeede](https://github.com/geeede)                                                     |
+| 土耳其   | [@geeeede](https://github.com/geeede)                                                    |
 | 印度尼西亞 | [@gigglylo](https://github.com/gigglylo)                                                 |
 
 ## 開源庫
