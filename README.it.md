@@ -187,10 +187,10 @@ Ciò renderà il software più accessibile alle persone che parlano lingue diver
 | russo               | [@vanja-san](https://github.com/vanja-san)[@Den1704](https://github.com/Den1704)          |
 | cinese tradizionale | [@orso0316](https://github.com/bear0316)[@ postino1anno](https://github.com/postman1year) |
 | Francese            | [@kasikh](https://github.com/XIAA25)                                                      |
-| Olandese            | [@kasikh](https://github.com/XIAA25)                                                      |
+| Olandese            | [@XIAA25](https://github.com/XIAA25)                                                      |
 | coreano             | [@VenereGirl](https://github.com/VenusGirl)                                               |
 | vietnamita          | [@vuongtuha](https://github.com/vuongtuha)                                                |
-| Turco               | [@geeede](https://github.com/geeede)                                                      |
+| Turco               | [@geeeee](https://github.com/geeede)                                                      |
 | indonesiano         | [@gigglylo](https://github.com/gigglylo)                                                  |
 
 ## Opensource libraries
