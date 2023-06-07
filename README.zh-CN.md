@@ -24,7 +24,7 @@
 
 仪表板：[HTTPS://我.file C选项.com](https://w.filecxx.com)
 
-赞助商：[HTTP://呜呜呜.file C选项.com/恩\_US/sponsors.HTML](http://www.filecxx.com/en_US/sponsors.html)
+赞助商：<http://www.filecxx.com/en_US/sponsors.html>
 
 ## 截屏
 
@@ -129,7 +129,7 @@
 -   队列或无限并发设置 1.0
 -   Chrome 浏览器集成 1.0
 -   Firefox 浏览器集成 1.0
--   1.0 从网页抓取视频、音频
+-   从网页抓取视频、音频 1.0
 -   从网页 1.0 中查找所有磁铁
 -   翻译工具 1.0
 -   HTTP 工具 1.0
@@ -162,7 +162,7 @@ FileU 的完整源代码可以在“source_code”目录中找到。
 
 仅供演示，项目中使用的依赖库均未开源。
 
-事实证明，用 C++ 编写用户界面比用 HTML 和 JavaScript 编写用户界面要容易得多，而且不会降低性能。
+事实证明，在不降低性能的情况下，用 C++ 编写用户界面比用 HTML 和 JavaScript 编写用户界面要容易得多。
 
 （如“UI”目录中的 .sml 文件所示）。
 
@@ -190,7 +190,7 @@ FileU 的完整源代码可以在“source_code”目录中找到。
 | 荷兰语   | [@卡西克](https://github.com/XIAA25)                                                        |
 | 韩国人   | [@维纳斯女孩](https://github.com/VenusGirl)                                                   |
 | 越南语   | [@vuongtuha](https://github.com/vuongtuha)                                               |
-| 土耳其   | [@geeede](https://github.com/geeede)                                                     |
+| 土耳其   | [@geeeede](https://github.com/geeede)                                                    |
 | 印度尼西亚 | [@gigglylo](https://github.com/gigglylo)                                                 |
 
 ## 开源库
