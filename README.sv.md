@@ -10,7 +10,7 @@
   <img src="./style/images/logo_128.png" width="128" alt="File Centipede Icon" />
 </a>
 
-File centipede är en allt-i-ett-hanterare för internetuppladdning/nedladdning, BitTorrent-klient, WebDAV-klient, FTP-klient och SSH-klient.
+Fil tusenfoting är en allt-i-ett-hanterare för internetuppladdning/nedladdning, BitTorrent-klient, WebDAV-klient, FTP-klient och SSH-klient.
 
 Den är designad för att vara snabb, anpassningsbar och användarvänlig.
 
@@ -162,7 +162,7 @@ Den fullständiga källkoden för FileU finns i katalogen "source_code".
 
 Det är endast för demonstrationsändamål, de beroende biblioteken som används i projektet är inte öppen källkod.
 
-Det har visat sig att skriva användargränssnitt i C++ kan vara betydligt enklare än HTML och JavaScript, utan att försämra prestanda.
+It has proved that writing user interfaces in C++ could be significantly easier than HTML and JavaScript, without reducing performance.
 
 (som ses i .sml-filerna i "UI"-katalogen).
 
@@ -191,7 +191,7 @@ Detta kommer att göra programvaran mer tillgänglig för personer som talar and
 | koreanska              | [@VenusGirl](https://github.com/VenusGirl)                                              |
 | vietnamesiska          | [@vuongtuha](https://github.com/vuongtuha)                                              |
 | turkiska               | [@geeede](https://github.com/geeede)                                                    |
-| indonesiska            | [@fniss](https://github.com/gigglylo)                                                   |
+| indonesiska            | [@gigglylo](https://github.com/gigglylo)                                                |
 
 ## Bibliotek med öppen källkod
 
