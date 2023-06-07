@@ -107,8 +107,8 @@ File centipede는 올인원 인터넷 파일 업로드/다운로드 관리자, B
 -   HTTP,HTTPS 프로토콜(gzip, 재개 가능, 다중 연결과 같은 기본 기능은 나열되지 않음) 1.0
 -   FTP, FTPS 프로토콜 1.0
 -   자석, HASH 주소 1.0
--   비트토렌트 1.0
--   Thunder, flashget, qqdl 1.0과 같은 기타 사용자 지정 프로토콜
+-   BitTorrent	1.0
+-   Thunder, flashget, qqdl 1.0과 같은 기타 사용자 정의 프로토콜
 -   JSON 형식의 주소 1.0
 -   m3u8 스트림 작업 1.0
 -   스트림 작업 AES-128 복호화(SAMPLE-AES 복호화는 아직 지원되지 않음) 1.0
@@ -121,7 +121,7 @@ File centipede는 올인원 인터넷 파일 업로드/다운로드 관리자, B
 -   다운로드 제한, 업로드 속도 1.0
 -   사용자 지정 주소 만들기(filec, fileu) 1.0
 -   프록시 관리 1.0
--   필터 사용자 지정 1.0
+-   필터 사용자 정의 1.0
 -   트래커 관리 1.0
 -   작업 세부 정보 1.0
 -   작업 1.0에서 토렌트 내보내기
@@ -190,7 +190,7 @@ FileU의 전체 소스 코드는 "source_code" 디렉토리에서 찾을 수 있
 | 네덜란드 사람 | [@kasikh](https://github.com/XIAA25)                                                     |
 | 한국어     | [@VenusGirl](https://github.com/VenusGirl)                                               |
 | 베트남어    | [@vuongtuha](https://github.com/vuongtuha)                                               |
-| 터키어     | [@geeede](https://github.com/geeede)                                                     |
+| 터키어     | [@geeeede](https://github.com/geeede)                                                    |
 | 인도네시아 인 | [@gigglylo](https://github.com/gigglylo)                                                 |
 
 ## 오픈소스 라이브러리
