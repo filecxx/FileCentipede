@@ -1,4 +1,4 @@
-[अंग्रेज़ी](./README.md)\|[सरलीकृत चीनी](./README.zh-CN.md)\|[परंपरागत चीनी](./README.zh-TW.md)\|[कोरियाई](./README.ko.md)\|[नहीं](./README.hi.md)\|[अरबी](./README.ar.md)\|[फ्रेंच](./README.fr.md)\|[रूसी](./README.ru.md)\|[लैटिन](./README.la.md)\|[जापानी](./README.ja.md)\|[इतालवी](./README.it.md)\|[जर्मन](./README.de.md)\|[स्पैनिश](./README.es.md)\|[स्वीडिश](./README.sv.md)
+[अंग्रेज़ी](./README.md)\|[सरलीकृत चीनी](./README.zh-CN.md)\|[परंपरागत चीनी](./README.zh-TW.md)\|[कोरियाई](./README.ko.md)\|[नहीं](./README.hi.md) \| [अरबी](./README.ar.md)\|[फ्रेंच](./README.fr.md)\|[रूसी](./README.ru.md)\|[लैटिन](./README.la.md)\|[जापानी](./README.ja.md)\|[इतालवी](./README.it.md)\|[जर्मन](./README.de.md)\|[स्पैनिश](./README.es.md)\|[स्वीडिश](./README.sv.md)
 
 ![image](https://user-images.githubusercontent.com/100348948/165334090-0b1a6f28-554e-484b-9946-1ffef010fa78.png)
 
