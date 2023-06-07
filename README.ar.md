@@ -68,7 +68,7 @@
 
 ![${refresh_address}](images/screenshot_refresh_address.png)
 
-#### قم بإنشاء سيل
+#### إنشاء سيل
 
 ![create_torrent](images/screenshot_create_torrent.png)
 
@@ -160,7 +160,7 @@
 
 يمكن العثور على الكود المصدري الكامل لـ FileU في دليل "source_code".
 
-لأغراض العرض فقط ، فإن المكتبات التابعة المستخدمة في المشروع ليست مفتوحة المصدر.
+It's for demonstration purposes only, the dependent libraries used in the project are not open source.
 
 لقد أثبت أن كتابة واجهات المستخدم في C ++ يمكن أن تكون أسهل بكثير من HTML و JavaScript ، دون تقليل الأداء.
 
@@ -185,7 +185,7 @@
 | لغة               | @                                                                                         |
 | :---------------- | :---------------------------------------------------------------------------------------- |
 | الروسية           | [@ فانجا سان](https://github.com/vanja-san)[هههههههههههه](https://github.com/Den1704)     |
-| الصينية التقليدية | [@bear0316](https://github.com/bear0316)[@ postman1year](https://github.com/postman1year) |
+| الصينية التقليدية | [@Bear0316](https://github.com/bear0316)[@ postman1year](https://github.com/postman1year) |
 | فرنسي             | [@كسائخ](https://github.com/XIAA25)                                                       |
 | هولندي            | [@كسائخ](https://github.com/XIAA25)                                                       |
 | الكورية           | [تضمين التغريدة](https://github.com/VenusGirl)                                            |
