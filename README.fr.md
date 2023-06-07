@@ -16,7 +16,7 @@ Il est conçu pour être rapide, personnalisable et convivial.
 
 Il prend en charge plusieurs protocoles et contient de nombreux outils auxiliaires utiles tels que le demandeur HTTP, la fusion de fichiers et les encodeurs.
 
-Avec l'intégration du navigateur, vous pouvez télécharger de l'audio et des vidéos à partir de sites Web, même des vidéos cryptées.
+Grâce à l'intégration du navigateur, vous pouvez télécharger de l'audio et des vidéos à partir de sites Web, même des vidéos cryptées.
 
 (C'est gratuit sans publicité)
 
@@ -120,7 +120,7 @@ Commanditaires :<http://www.filecxx.com/en_US/sponsors.html>
 -   Catalogues 1.0
 -   Limite de téléchargement, vitesse de téléchargement 1.0
 -   Créer une adresse personnalisée (filec, fileu) 1.0
--   Gestion des proxys 1.0
+-   Gestion des procurations 1.0
 -   Filtre personnalisé 1.0
 -   Gestion des traqueurs 1.0
 -   Détails de la tâche 1.0
@@ -188,7 +188,7 @@ Cela rendra le logiciel plus accessible aux personnes qui parlent des langues au
 | chinois traditionnel | [@ ours0316](https://github.com/bear0316)[@facteur1année](https://github.com/postman1year) |
 | Français             | [@kasikh](https://github.com/XIAA25)                                                       |
 | Néerlandais          | [@kasikh](https://github.com/XIAA25)                                                       |
-| coréen               | [@VenusGirl](https://github.com/VenusGirl)                                                 |
+| coréen               | [@VénusGirl](https://github.com/VenusGirl)                                                 |
 | vietnamien           | [@vuongtuha](https://github.com/vuongtuha)                                                 |
 | turc                 | [@geeede](https://github.com/geeede)                                                       |
 | indonésien           | [@gigglylo](https://github.com/gigglylo)                                                   |
