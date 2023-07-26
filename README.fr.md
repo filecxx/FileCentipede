@@ -16,7 +16,7 @@ Il est conçu pour être rapide, personnalisable et convivial.
 
 Il prend en charge plusieurs protocoles et contient de nombreux outils auxiliaires utiles tels que le demandeur HTTP, la fusion de fichiers et les encodeurs.
 
-Grâce à l'intégration du navigateur, vous pouvez télécharger de l'audio et des vidéos à partir de sites Web, même des vidéos cryptées.
+Avec l'intégration du navigateur, vous pouvez télécharger de l'audio et des vidéos à partir de sites Web, même des vidéos cryptées.
 
 (C'est gratuit sans publicité)
 
@@ -80,7 +80,7 @@ Commanditaires :<http://www.filecxx.com/en_US/sponsors.html>
 
 ![Translate tool](images/screenshot_translate.png)
 
-#### Outil HTTP
+#### HTTP tool
 
 ![HTTP tool](images/screenshot_http_tool.png)
 
@@ -136,7 +136,7 @@ Commanditaires :<http://www.filecxx.com/en_US/sponsors.html>
 -   Outil d'encodage/décodage d'URI 1.0
 -   Outil d'encodage/décodage Base64 1.0
 -   Outil de test Regex 1.0
--   Créer un torrent 1.0
+-   Create torrent	1.0
 -   Torrent vers l'outil magnétique 1.0
 -   Outil aimant à torrent 1.0
 -   Outil de fusion de fichiers 1.0
