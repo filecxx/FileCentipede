@@ -107,7 +107,7 @@ File centipede는 올인원 인터넷 파일 업로드/다운로드 관리자, B
 -   HTTP,HTTPS 프로토콜(gzip, 재개 가능, 다중 연결과 같은 기본 기능은 나열되지 않음) 1.0
 -   FTP, FTPS 프로토콜 1.0
 -   자석, HASH 주소 1.0
--   BitTorrent	1.0
+-   비트토렌트 1.0
 -   Thunder, flashget, qqdl 1.0과 같은 기타 사용자 정의 프로토콜
 -   JSON 형식의 주소 1.0
 -   m3u8 스트림 작업 1.0
@@ -182,16 +182,16 @@ FileU의 전체 소스 코드는 "source_code" 디렉토리에서 찾을 수 있
 
 ![translate](images/document/how_to_translate_this_website.png)
 
-| 언어      | @                                                                                        |
-| :------ | :--------------------------------------------------------------------------------------- |
-| 러시아인    | [@vanja-산](https://github.com/vanja-san)[@덴1704](https://github.com/Den1704)             |
-| 중국어 번체  | [@bear0316](https://github.com/bear0316)[@postman1year](https://github.com/postman1year) |
-| 프랑스 국민  | [@kasikh](https://github.com/XIAA25)                                                     |
-| 네덜란드 사람 | [@kasikh](https://github.com/XIAA25)                                                     |
-| 한국어     | [@VenusGirl](https://github.com/VenusGirl)                                               |
-| 베트남어    | [@vuongtuha](https://github.com/vuongtuha)                                               |
-| 터키어     | [@geeeede](https://github.com/geeede)                                                    |
-| 인도네시아 인 | [@gigglylo](https://github.com/gigglylo)                                                 |
+| 언어         | @                                                                                        |
+| :--------- | :--------------------------------------------------------------------------------------- |
+| 러시아인       | [@vanja-산](https://github.com/vanja-san)[@덴1704](https://github.com/Den1704)             |
+| 중국어 번체     | [@bear0316](https://github.com/bear0316)[@postman1year](https://github.com/postman1year) |
+| 프랑스 국민     | [@kasikh](https://github.com/XIAA25)                                                     |
+| 네덜란드 사람    | [@kasikh](https://github.com/XIAA25)                                                     |
+| 한국어        | [@VenusGirl](https://github.com/VenusGirl)                                               |
+| 베트남어       | [@vuongtuha](https://github.com/vuongtuha)                                               |
+| 터키어        | [@geeede](https://github.com/geeede)                                                     |
+| Indonesian | [@gigglylo](https://github.com/gigglylo)                                                 |
 
 ## 오픈소스 라이브러리
 
