@@ -1,4 +1,4 @@
-[영어](./README.md)\|[중국어 간체](./README.zh-CN.md)\|[중국어 번체](./README.zh-TW.md)\|[한국어](./README.ko.md)\|[아니요](./README.hi.md)\|[아라비아 말](./README.ar.md)\|[프랑스 국민](./README.fr.md)\|[러시아인](./README.ru.md)\|[라틴어](./README.la.md)\|[일본어](./README.ja.md)\|[이탈리아 사람](./README.it.md)\|[독일 사람](./README.de.md)\|[스페인의](./README.es.md)\|[스웨덴어](./README.sv.md)
+[영어](./README.md)\|[중국어 간체](./README.zh-CN.md)\|[중국어 번체](./README.zh-TW.md)\|[한국어](./README.ko.md)\|[아니요](./README.hi.md)\|[아라비아 말](./README.ar.md)\|[프랑스 국민](./README.fr.md)\|[러시아인](./README.ru.md)\|[라틴어](./README.la.md)\|[일본어](./README.ja.md)\|[이탈리아 사람](./README.it.md)\|[독일 사람](./README.de.md)\|[스페인의](./README.es.md)\|[스웨덴어](./README.sv.md)\|[페르시아어](./README.fa.md)
 
 ![image](https://user-images.githubusercontent.com/100348948/165334090-0b1a6f28-554e-484b-9946-1ffef010fa78.png)
 
@@ -121,7 +121,7 @@ File centipede는 올인원 인터넷 파일 업로드/다운로드 관리자, B
 -   다운로드 제한, 업로드 속도 1.0
 -   사용자 지정 주소 만들기(filec, fileu) 1.0
 -   프록시 관리 1.0
--   필터 사용자 정의 1.0
+-   필터 사용자 지정 1.0
 -   트래커 관리 1.0
 -   작업 세부 정보 1.0
 -   작업 1.0에서 토렌트 내보내기
@@ -148,8 +148,8 @@ File centipede는 올인원 인터넷 파일 업로드/다운로드 관리자, B
 -   파일 업로드 2.0
 -   업로드 디렉토리 2.0
 -   디렉토리 2.0 다운로드
--   모든 기능을 갖춘 WebDAV(s) 파일 관리자 2.0
--   모든 기능을 갖춘 FTP(s) 파일 관리자 2.0
+-   완전한 기능을 갖춘 WebDAV(s) 파일 관리자 2.0
+-   완전한 기능을 갖춘 FTP(s) 파일 관리자 2.0
 -   모든 기능을 갖춘 SSH(sftp) 파일 관리자 2.0
 -   파일 브라우저 영구 캐시 2.0
 -   사이트 규칙 2.1
@@ -182,16 +182,16 @@ FileU의 전체 소스 코드는 "source_code" 디렉토리에서 찾을 수 있
 
 ![translate](images/document/how_to_translate_this_website.png)
 
-| 언어         | @                                                                                        |
-| :--------- | :--------------------------------------------------------------------------------------- |
-| 러시아인       | [@vanja-산](https://github.com/vanja-san)[@덴1704](https://github.com/Den1704)             |
-| 중국어 번체     | [@bear0316](https://github.com/bear0316)[@postman1year](https://github.com/postman1year) |
-| 프랑스 국민     | [@kasikh](https://github.com/XIAA25)                                                     |
-| 네덜란드 사람    | [@kasikh](https://github.com/XIAA25)                                                     |
-| 한국어        | [@VenusGirl](https://github.com/VenusGirl)                                               |
-| 베트남어       | [@vuongtuha](https://github.com/vuongtuha)                                               |
-| 터키어        | [@geeede](https://github.com/geeede)                                                     |
-| Indonesian | [@gigglylo](https://github.com/gigglylo)                                                 |
+| 언어      | @                                                                                        |
+| :------ | :--------------------------------------------------------------------------------------- |
+| 러시아인    | [@vanja-산](https://github.com/vanja-san)[@Den1704](https://github.com/Den1704)           |
+| 중국어 번체  | [@bear0316](https://github.com/bear0316)[@postman1year](https://github.com/postman1year) |
+| 프랑스 국민  | [@kasikh](https://github.com/XIAA25)                                                     |
+| 네덜란드 사람 | [@kasikh](https://github.com/XIAA25)                                                     |
+| 한국어     | [@VenusGirl](https://github.com/VenusGirl)                                               |
+| 베트남어    | [@vuongtuha](https://github.com/vuongtuha)                                               |
+| 터키어     | [@geeede](https://github.com/geeede)                                                     |
+| 인도네시아 인 | [@gigglylo](https://github.com/gigglylo)                                                 |
 
 ## 오픈소스 라이브러리
 
