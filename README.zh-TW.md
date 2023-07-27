@@ -1,4 +1,4 @@
-[英語](./README.md)\|[簡體中文](./README.zh-CN.md)\|[繁體中文](./README.zh-TW.md)\|[韓國人](./README.ko.md)\|[沒有](./README.hi.md)\|[阿拉伯](./README.ar.md)\|[法語](./README.fr.md)\|[俄語](./README.ru.md)\|[拉丁](./README.la.md)\|[日本人](./README.ja.md)\|[意大利語](./README.it.md)\|[德語](./README.de.md)\|[西班牙語](./README.es.md)\|[瑞典](./README.sv.md)
+[英語](./README.md)\|[簡體中文](./README.zh-CN.md)\|[繁體中文](./README.zh-TW.md)\|[韓國人](./README.ko.md)\|[沒有](./README.hi.md)\|[阿拉伯](./README.ar.md)\|[法語](./README.fr.md)\|[俄語](./README.ru.md)\|[拉丁](./README.la.md)\|[日本人](./README.ja.md)\|[意大利語](./README.it.md)\|[德語](./README.de.md)\|[西班牙語](./README.es.md)\|[瑞典](./README.sv.md)\|[波斯語](./README.fa.md)
 
 ![image](https://user-images.githubusercontent.com/100348948/165334090-0b1a6f28-554e-484b-9946-1ffef010fa78.png)
 
@@ -10,7 +10,7 @@
   <img src="./style/images/logo_128.png" width="128" alt="File Centipede Icon" />
 </a>
 
-File centipede 是一款一體化互聯網文件上傳/下載管理器、BitTorrent 客戶端、WebDAV 客戶端、FTP 客戶端和 SSH 客戶端。
+File centipede is an All-In-One internet file upload/download manager, BitTorrent Client, WebDAV client, FTP client, and SSH client.
 
 它被設計為快速、可定制且用戶友好。
 
@@ -107,12 +107,12 @@ File centipede 是一款一體化互聯網文件上傳/下載管理器、BitTorr
 -   HTTP、HTTPS協議（gzip、斷點續傳、多連接等基本功能不再列出） 1.0
 -   FTP、FTPS協議1.0
 -   磁鐵，HASH地址1.0
--   BitTorrent	1.0
+-   BT 1.0
 -   其他自定義協議如迅雷、快車、qqdl 1.0
 -   JSON格式的地址1.0
 -   m3u8 流任務 1.0
 -   流任務AES-128解密（尚不支持SAMPLE-AES解密）1.0
--   HTTP cookie、標頭、用戶代理和用戶自定義 1.0
+-   HTTP cookie、標頭、用戶代理以及用戶自定義 1.0
 -   Torrent 種子限制 1.0
 -   動態編輯傳輸任務配置 1.0
 -   防蛭1.0
@@ -135,10 +135,10 @@ File centipede 是一款一體化互聯網文件上傳/下載管理器、BitTorr
 -   HTTP工具1.0
 -   URI編碼/解碼工具1.0
 -   Base64編碼/解碼工具1.0
--   Regex test tool	1.0
+-   正則表達式測試工具1.0
 -   創建種子 1.0
 -   激流轉磁力工具 1.0
--   磁力轉種子工具 1.0
+-   磁鐵轉Torrent工具1.0
 -   文件合併工具1.0
 -   統計1.0
 -   下載網頁1.6的所有鏈接
@@ -168,7 +168,7 @@ FileU 的完整源代碼可以在“source_code”目錄中找到。
 
 ## 翻譯
 
-如果您喜歡這款軟件，您可以使用軟件中提供的翻譯工具將其翻譯成其他語言。
+如果您喜歡這個軟件，您可以使用軟件中提供的翻譯工具將其翻譯成其他語言。
 
 這將使使用該軟件最初編寫的語言以外的語言的人更容易使用該軟件。我們將非常感謝您的貢獻。
 
