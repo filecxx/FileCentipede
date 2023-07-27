@@ -1,4 +1,4 @@
-[Anglais](./README.md)\|[Chinois simplifié](./README.zh-CN.md)\|[chinois traditionnel](./README.zh-TW.md)\|[coréen](./README.ko.md)\|[Non](./README.hi.md)\|[arabe](./README.ar.md)\|[Français](./README.fr.md)\|[russe](./README.ru.md)\|[Latin](./README.la.md)\|[Japonais](./README.ja.md)\|[italien](./README.it.md)\|[Allemand](./README.de.md)\|[Espagnol](./README.es.md)\|[suédois](./README.sv.md)
+[Anglais](./README.md)\|[Chinois simplifié](./README.zh-CN.md)\|[chinois traditionnel](./README.zh-TW.md)\|[coréen](./README.ko.md)\|[Non](./README.hi.md)\|[arabe](./README.ar.md)\|[Français](./README.fr.md)\|[russe](./README.ru.md)\|[Latin](./README.la.md)\|[Japonais](./README.ja.md)\|[italien](./README.it.md)\|[Allemand](./README.de.md)\|[Espagnol](./README.es.md)\|[suédois](./README.sv.md)\|[Farsi](./README.fa.md)
 
 ![image](https://user-images.githubusercontent.com/100348948/165334090-0b1a6f28-554e-484b-9946-1ffef010fa78.png)
 
@@ -16,7 +16,7 @@ Il est conçu pour être rapide, personnalisable et convivial.
 
 Il prend en charge plusieurs protocoles et contient de nombreux outils auxiliaires utiles tels que le demandeur HTTP, la fusion de fichiers et les encodeurs.
 
-Avec l'intégration du navigateur, vous pouvez télécharger de l'audio et des vidéos à partir de sites Web, même des vidéos cryptées.
+Grâce à l'intégration du navigateur, vous pouvez télécharger de l'audio et des vidéos à partir de sites Web, même des vidéos cryptées.
 
 (C'est gratuit sans publicité)
 
@@ -80,7 +80,7 @@ Commanditaires :<http://www.filecxx.com/en_US/sponsors.html>
 
 ![Translate tool](images/screenshot_translate.png)
 
-#### HTTP tool
+#### Outil HTTP
 
 ![HTTP tool](images/screenshot_http_tool.png)
 
@@ -120,7 +120,7 @@ Commanditaires :<http://www.filecxx.com/en_US/sponsors.html>
 -   Catalogues 1.0
 -   Limite de téléchargement, vitesse de téléchargement 1.0
 -   Créer une adresse personnalisée (filec, fileu) 1.0
--   Gestion des procurations 1.0
+-   Gestion des proxys 1.0
 -   Filtre personnalisé 1.0
 -   Gestion des traqueurs 1.0
 -   Détails de la tâche 1.0
@@ -136,7 +136,7 @@ Commanditaires :<http://www.filecxx.com/en_US/sponsors.html>
 -   Outil d'encodage/décodage d'URI 1.0
 -   Outil d'encodage/décodage Base64 1.0
 -   Outil de test Regex 1.0
--   Create torrent	1.0
+-   Créer un torrent 1.0
 -   Torrent vers l'outil magnétique 1.0
 -   Outil aimant à torrent 1.0
 -   Outil de fusion de fichiers 1.0
@@ -182,16 +182,16 @@ Cela rendra le logiciel plus accessible aux personnes qui parlent des langues au
 
 ![translate](images/document/how_to_translate_this_website.png)
 
-| Langue               | @                                                                                          |
-| :------------------- | :----------------------------------------------------------------------------------------- |
-| russe                | [@vanja-san](https://github.com/vanja-san)[@Den1704](https://github.com/Den1704)           |
-| chinois traditionnel | [@ ours0316](https://github.com/bear0316)[@facteur1année](https://github.com/postman1year) |
-| Français             | [@kasikh](https://github.com/XIAA25)                                                       |
-| Néerlandais          | [@kasikh](https://github.com/XIAA25)                                                       |
-| coréen               | [@VénusGirl](https://github.com/VenusGirl)                                                 |
-| vietnamien           | [@vuongtuha](https://github.com/vuongtuha)                                                 |
-| turc                 | [@geeede](https://github.com/geeede)                                                       |
-| indonésien           | [@gigglylo](https://github.com/gigglylo)                                                   |
+| Langue               | @                                                                                           |
+| :------------------- | :------------------------------------------------------------------------------------------ |
+| russe                | [@vanja-san](https://github.com/vanja-san)[@Den1704](https://github.com/Den1704)            |
+| chinois traditionnel | [@ ours0316](https://github.com/bear0316) [@facteur1année](https://github.com/postman1year) |
+| Français             | [@kasikh](https://github.com/XIAA25)                                                        |
+| Néerlandais          | [@kasikh](https://github.com/XIAA25)                                                        |
+| coréen               | [@VénusGirl](https://github.com/VenusGirl)                                                  |
+| vietnamien           | [@vuongtuha](https://github.com/vuongtuha)                                                  |
+| turc                 | [@geeeede](https://github.com/geeede)                                                       |
+| indonésien           | [@gigglylo](https://github.com/gigglylo)                                                    |
 
 ## Opensource libraries
 
