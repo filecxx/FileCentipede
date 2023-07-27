@@ -1,4 +1,4 @@
-[إنجليزي](./README.md)\|[الصينية المبسطة](./README.zh-CN.md)\|[الصينية التقليدية](./README.zh-TW.md)\|[الكورية](./README.ko.md)\|[لا](./README.hi.md)\|[عربي](./README.ar.md)\|[فرنسي](./README.fr.md)\|[الروسية](./README.ru.md)\|[لاتيني](./README.la.md)\|[اليابانية](./README.ja.md)\|[إيطالي](./README.it.md)\|[ألماني](./README.de.md)\|[الأسبانية](./README.es.md)\|[السويدية](./README.sv.md)
+[إنجليزي](./README.md)\|[الصينية المبسطة](./README.zh-CN.md)\|[الصينية التقليدية](./README.zh-TW.md)\|[الكورية](./README.ko.md)\|[لا](./README.hi.md)\|[عربي](./README.ar.md)\|[فرنسي](./README.fr.md)\|[الروسية](./README.ru.md)\|[لاتيني](./README.la.md)\|[اليابانية](./README.ja.md)\|[إيطالي](./README.it.md)\|[ألماني](./README.de.md)\|[الأسبانية](./README.es.md)\|[السويدية](./README.sv.md)\|[الفارسية](./README.fa.md)
 
 ![image](https://user-images.githubusercontent.com/100348948/165334090-0b1a6f28-554e-484b-9946-1ffef010fa78.png)
 
@@ -68,7 +68,7 @@
 
 ![${refresh_address}](images/screenshot_refresh_address.png)
 
-#### قم بإنشاء سيل
+#### إنشاء سيل
 
 ![create_torrent](images/screenshot_create_torrent.png)
 
@@ -185,7 +185,7 @@
 | لغة               | @                                                                                         |
 | :---------------- | :---------------------------------------------------------------------------------------- |
 | الروسية           | [@ فانجا سان](https://github.com/vanja-san)[هههههههههههه](https://github.com/Den1704)     |
-| الصينية التقليدية | [@Bear0316](https://github.com/bear0316)[@ postman1year](https://github.com/postman1year) |
+| الصينية التقليدية | [@bear0316](https://github.com/bear0316)[@ postman1year](https://github.com/postman1year) |
 | فرنسي             | [@كسائخ](https://github.com/XIAA25)                                                       |
 | هولندي            | [@كسائخ](https://github.com/XIAA25)                                                       |
 | الكورية           | [تضمين التغريدة](https://github.com/VenusGirl)                                            |
