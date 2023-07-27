@@ -1,4 +1,4 @@
-[अंग्रेज़ी](./README.md)\|[सरलीकृत चीनी](./README.zh-CN.md)\|[परंपरागत चीनी](./README.zh-TW.md)\|[कोरियाई](./README.ko.md)\|[नहीं](./README.hi.md)\|[अरबी](./README.ar.md)\|[फ़्रेंच](./README.fr.md)\|[रूसी](./README.ru.md)\|[लैटिन](./README.la.md)\|[जापानी](./README.ja.md)\|[इतालवी](./README.it.md)\|[जर्मन](./README.de.md)\|[स्पैनिश](./README.es.md)\|[स्वीडिश](./README.sv.md)
+[अंग्रेज़ी](./README.md)\|[सरलीकृत चीनी](./README.zh-CN.md)\|[परंपरागत चीनी](./README.zh-TW.md)\|[कोरियाई](./README.ko.md)\|[नहीं](./README.hi.md)\|[अरबी](./README.ar.md)\|[फ़्रेंच](./README.fr.md)\|[रूसी](./README.ru.md)\|[लैटिन](./README.la.md)\|[जापानी](./README.ja.md)\|[इतालवी](./README.it.md)\|[जर्मन](./README.de.md)\|[स्पैनिश](./README.es.md)\|[स्वीडिश](./README.sv.md)\|[फारसी](./README.fa.md)
 
 ![image](https://user-images.githubusercontent.com/100348948/165334090-0b1a6f28-554e-484b-9946-1ffef010fa78.png)
 
@@ -36,7 +36,7 @@
 
 ![Add task](images/screenshot_add_task.png)![Add task](images/screenshot_add_task2.png)![Add task](images/screenshot_add_task3.png)![Add task](images/screenshot_add_task4.png)
 
-#### Edit task
+#### कार्य संपादित करें
 
 ![Edit task](images/screenshot_edit_task.png)![Edit task](images/screenshot_edit_task2.png)
 
@@ -94,7 +94,7 @@
 
 ![Video bar](images/extension_video_bar.png)
 
-#### वीडियो पैनल
+#### Videos panel
 
 ![videos panel](images/extension_videos.png)
 
