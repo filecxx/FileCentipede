@@ -1,4 +1,4 @@
-[English](./README.md) | [简体中文](./README.zh-CN.md) | [繁體中文](./README.zh-TW.md) | [한국어](./README.ko.md) | [Hindi](./README.hi.md) | [Arabic](./README.ar.md) | [Français](./README.fr.md) | [Русский](./README.ru.md) | [Latin](./README.la.md) | [日本語](./README.ja.md)| [Italian](./README.it.md) | [Deutsch](./README.de.md) | [Español](./README.es.md) | [svenska](./README.sv.md) | [فارسی](./README.fa.md)
+[انگلیسی](./README.md) | [چینی ساده شده](./README.zh-CN.md) | [چینی سنتی](./README.zh-TW.md) | [کره‌ای](./README.ko.md) | [هندی](./README.hi.md) | [عربی](./README.ar.md) | [فرانسوی](./README.fr.md) | [روسی](./README.ru.md) | [لاتین](./README.la.md) | [ژاپنی](./README.ja.md) | [ایتالیایی](./README.it.md) | [آلمانی](./README.de.md) | [اسپانیولی](./README.es.md) | [سوئدی](./README.sv.md) | [فارسی](./README.fa.md)
 
 ![image](https://user-images.githubusercontent.com/100348948/165334090-0b1a6f28-554e-484b-9946-1ffef010fa78.png)
 #
@@ -10,24 +10,28 @@
 </a>
 
 
-File centipede is an All-In-One internet file upload/download manager, BitTorrent Client, WebDAV client, FTP client, and SSH client.
 
-It is designed to be fast, customizable, and user-friendly.
-
-It supports multi-protocols and contains many useful auxiliary tools such as HTTP requester, file merge, and encoders.
-
-With the browser integration, you can download audio and videos from websites, even encrypted videos.
-
-(It's free with no ads)
+ این یک برنامه مدیریت دانلود/ آپلود همه کاره است که  کلاینت های BitTorrent و WebDAV و FTP و SSH را در اختیار شما قرار میدهد.
+ 
+ این برنامه به گونه‌ای طراحی شده است که سریع، قابل شخصی سازی و کاربرپسند باشد.
 
 
-Website: [http://filecxx.com](http://filecxx.com)
+این برنامه نه تنها از پروتکل های مخلتف پشتیبانی میکند بلکه بسیاری ابزار کاربردی دیگر مانند HTTP requester و به هم چسباندن فایل ها و انکودر و دیکودر در اختیار شما قرار میدهد.
 
-Dashboard: [https://w.filecxx.com](https://w.filecxx.com)
+با استفاده از افزونه‌ی مرورگر این برنامه می‌توانید فایل صوتی و ویدیویی و حتی ویدیوهای رمز گذاری شده را از پخش آنلاین وبسایت‌ها دانلود کنید.
 
-Sponsors: [http://www.filecxx.com/en_US/sponsors.html](http://www.filecxx.com/en_US/sponsors.html)
+(این برنامه کاملا رایگان است و هیچ تبلیغی  ندارد)
 
-## Screenshot
+وب سایت برنامه: [http://filecxx.com](http://filecxx.com)
+
+داشبورد: [https://w.filecxx.com](https://w.filecxx.com)
+
+
+لیست حامی‌های مالی: [http://www.filecxx.com/en_US/sponsors.html](http://www.filecxx.com/en_US/sponsors.html)
+
+
+## تصاویر محیط برنامه
+
 
 #### File Centipede
 
@@ -39,87 +43,104 @@ Sponsors: [http://www.filecxx.com/en_US/sponsors.html](http://www.filecxx.com/en
 ![File Centipede](images/screenshot_software_file_browser_add.png)
 ![File Centipede](images/screenshot_software_file_browser_log.png)
 
-#### Add task
+
+#### اضافه کردن ماموریت
 
 ![Add task](images/screenshot_add_task.png)
 ![Add task](images/screenshot_add_task2.png)
 ![Add task](images/screenshot_add_task3.png)
 ![Add task](images/screenshot_add_task4.png)
 
-#### Edit task
+
+#### تنظیم ماموریت
 
 ![Edit task](images/screenshot_edit_task.png)
 ![Edit task](images/screenshot_edit_task2.png)
 
 
-#### Confirm dialog
+#### تاییدیه قبل اجرا
 
 ![torrent confirm](images/screenshot_torrent_confirm.png)
 ![http confirm](images/screenshot_http_confirm.png)
 ![links confirm](images/screenshot_links_confirm.png)
 
-#### Add catalog
+
+#### اضافه کردن کاتالوگ
 
 ![add catalog](images/screenshot_add_catalog.png)
 
-#### Settings
+
+#### تنظیمات برنامه
 
 ![settings](images/screenshot_settings.png)
 
-#### Proxy settings
+
+#### تمظیمات پراکسی
 
 ![proxy](images/screenshot_proxy.png)
 
-#### Site rules
+
+#### تنظیمات رول برای سایت ها
 
 ![Site rules](images/screenshot_site_rule.png)
 ![Site rules](images/screenshot_site_rule2.png)
 
-#### Filter
+
+#### اعمال فیلتر
 
 ![filter](images/screenshot_filter.png)
 
-#### Refresh address
+
+#### تازه سازی آدرس
 
 ![${refresh_address}](images/screenshot_refresh_address.png)
 
-#### Create torrent
+
+#### ساخت تورنت
 
 ![create_torrent](images/screenshot_create_torrent.png)
 
-#### Speed limit
+
+#### محدودیت سرعت
 
 ![Speed limit](images/screenshot_download_speed_limit.png)
 
-#### Translate tool
+
+#### ابزار ترجمه
 
 ![Translate tool](images/screenshot_translate.png)
 
-#### HTTP tool
+
+#### HTTP ابزار
 
 ![HTTP tool](images/screenshot_http_tool.png)
 
-#### Checksum tool
+
+#### Checksum ابزار
 
 ![Checksum tool](images/screenshot_checksum_tool.png)
 
-Browser extension screenshots
+تصاویر افزونه‌ی مرورگر برنامه
 -----------------------------------
 
-#### Video bar
+
+#### نوار ویدیو
 
 ![Video bar](images/extension_video_bar.png)
 
-#### Videos panel
+
+#### پنل ویدیو
 
 ![videos panel](images/extension_videos.png)
 
-#### Audios panel
+
+#### پنل فایل صوتی
 
 ![Audios panel](images/extension_audios.png)
 
 
-## features
+## قابلیت‌ها
+
 * HTTP,HTTPS protocol (basic features like gzip, resumable, multi-connections will not be listed.)	1.0
 * FTP, FTPS protocol	1.0
 * Magnet, HASH address	1.0
@@ -172,29 +193,34 @@ Browser extension screenshots
 * Checksum tool	2.3
 * Remote download	2.6
 
-## Source code
 
-The full source code of FileU can be found in the "source_code" directory.
+## کد منبع
 
-It's for demonstration purposes only, the dependent libraries used in the project are not open source.
+کد منبع کامل FileU را میتوانید در مسیر "source_code" پیدا کنید.
 
-It has proved that writing user interfaces in C++ could be significantly easier than HTML and JavaScript, without reducing performance.
+این برنامه تنها برای نمونه و اهداف آزمایشی طراحی شده است وگرنه کتابخانه‌های مورد استفاده در برنامه منبع باز نیستند.
 
-(as seen in the .sml files in the "UI" directory).
+ثابت شده است که نوشتن رابط های کاربری در ++C می تواند به طور قابل توجهی ساده تر از HTML و جاوا اسکریپت باشد، بدون اینکه کارایی کاهش یابد.
 
-
-## Translate
-If you like this software, you can help by using the translation tool provided in the software to translate it into other languages.
-
-This will make the software more accessible to people who speak languages other than the one it was originally written in. Your contribution would be greatly appreciated.
+(همانطور که در فایل های .sml در دایرکتوری "UI" مشاهده می شود).
 
 
-## Language files
-* Website:  "lang/website/*.lang"
-* Software: "lang/software/*.lang"
-* Browser extension: "lang/browser_extension/*.lang"
+## ترجمه 
 
-#### How to translate the website?
+اگر این نرم افزار مورد پسند شما واقع شد، می توانید با استفاده از ابزار ترجمه ارائه شده در نرم افزار به ترجمه آن به زبان های دیگر کمک کنید.
+
+این امر باعث می شود که نرم افزار برای افرادی که به زبان هایی غیر از زبانی که در ابتدا به آن نوشته شده صحبت می کنند قابل دسترس تر باشد. کمک شما  مورد قدردانی ما خواهد بود.
+
+
+## فایل های زبان
+
+* وبسایت:  "lang/website/*.lang"
+* نرم افزار: "lang/software/*.lang"
+* افزونه‌ی مرورگر: "lang/browser_extension/*.lang"
+
+
+#### چگونه وبسایت را ترجمه کنیم؟
+
 ![translate](images/document/how_to_translate_this_website.png)
 
 
@@ -210,7 +236,8 @@ This will make the software more accessible to people who speak languages other 
 | Indonesian     | [@gigglylo](https://github.com/gigglylo)
 
 
-## Opensource libraries
+#### کتابخانه های منبع باز
+
 [boost](https://www.boost.org)
 [Qt](https://qt.io/)
 [libtorrent](https://www.libtorrent.org)
