@@ -20,11 +20,11 @@ File centipede 是一款一体化互联网文件上传/下载管理器、BitTorr
 
 （免费无广告）
 
-网站：[HTTP://file C选项.com](http://filecxx.com)
+网站：[http://filecxx.com](http://filecxx.com)
 
-仪表板：[HTTPS://我.file C选项.com](https://w.filecxx.com)
+仪表板：[https://w.filecxx.com](https://w.filecxx.com)
 
-赞助商：[HTTP://呜呜呜.file C选项.com/恩\_US/sponsors.HTML](http://www.filecxx.com/en_US/sponsors.html)
+赞助商：[http://www.filecxx.com/en_US/sponsors.htm](http://www.filecxx.com/en_US/sponsors.html)
 
 ## 截屏
 
