@@ -1,4 +1,4 @@
-[Anglais](./README.md)\|[Chinois simplifié](./README.zh-CN.md)\|[chinois traditionnel](./README.zh-TW.md)\|[coréen](./README.ko.md)\|[Non](./README.hi.md)\|[arabe](./README.ar.md)\|[Français](./README.fr.md)\|[russe](./README.ru.md)\|[Latin](./README.la.md)\|[Japonais](./README.ja.md)\|[italien](./README.it.md)\|[Allemand](./README.de.md)\|[Espagnol](./README.es.md)\|[suédois](./README.sv.md)\|[Farsi](./README.fa.md)
+[Anglais](./README.md)\|[Chinois simplifié](./README.zh-CN.md)\|[chinois traditionnel](./README.zh-TW.md)\|[coréen](./README.ko.md)\|[Non](./README.hi.md)\|[arabe](./README.ar.md)\|[Français](./README.fr.md)\|[russe](./README.ru.md)\|[Latin](./README.la.md)\|[Japonais](./README.ja.md)\| [italien](./README.it.md)\|[Allemand](./README.de.md)\|[Espagnol](./README.es.md)\|[suédois](./README.sv.md)\|[Farsi](./README.fa.md)
 
 ![image](https://user-images.githubusercontent.com/100348948/165334090-0b1a6f28-554e-484b-9946-1ffef010fa78.png)
 
@@ -16,7 +16,7 @@ Il est conçu pour être rapide, personnalisable et convivial.
 
 Il prend en charge plusieurs protocoles et contient de nombreux outils auxiliaires utiles tels que le demandeur HTTP, la fusion de fichiers et les encodeurs.
 
-Grâce à l'intégration du navigateur, vous pouvez télécharger de l'audio et des vidéos à partir de sites Web, même des vidéos cryptées.
+Avec l'intégration du navigateur, vous pouvez télécharger de l'audio et des vidéos à partir de sites Web, même des vidéos cryptées.
 
 (C'est gratuit sans publicité)
 
@@ -125,7 +125,7 @@ Commanditaires :<http://www.filecxx.com/en_US/sponsors.html>
 -   Gestion des traqueurs 1.0
 -   Détails de la tâche 1.0
 -   Exporter le torrent de la tâche 1.0
--   Multi langues 1.0
+-   Multi languages	1.0
 -   Paramètre de file d'attente ou de simultanéité illimitée 1.0
 -   Intégration du navigateur Chrome 1.0
 -   Intégration du navigateur Firefox 1.0
@@ -182,16 +182,16 @@ Cela rendra le logiciel plus accessible aux personnes qui parlent des langues au
 
 ![translate](images/document/how_to_translate_this_website.png)
 
-| Langue               | @                                                                                           |
-| :------------------- | :------------------------------------------------------------------------------------------ |
-| russe                | [@vanja-san](https://github.com/vanja-san)[@Den1704](https://github.com/Den1704)            |
-| chinois traditionnel | [@ ours0316](https://github.com/bear0316) [@facteur1année](https://github.com/postman1year) |
-| Français             | [@kasikh](https://github.com/XIAA25)                                                        |
-| Néerlandais          | [@kasikh](https://github.com/XIAA25)                                                        |
-| coréen               | [@VénusGirl](https://github.com/VenusGirl)                                                  |
-| vietnamien           | [@vuongtuha](https://github.com/vuongtuha)                                                  |
-| turc                 | [@geeeede](https://github.com/geeede)                                                       |
-| indonésien           | [@gigglylo](https://github.com/gigglylo)                                                    |
+| Langue               | @                                                                                          |
+| :------------------- | :----------------------------------------------------------------------------------------- |
+| russe                | [@vanja-san](https://github.com/vanja-san)[@Den1704](https://github.com/Den1704)           |
+| chinois traditionnel | [@ ours0316](https://github.com/bear0316)[@facteur1année](https://github.com/postman1year) |
+| Français             | [@kasikh](https://github.com/XIAA25)                                                       |
+| Néerlandais          | [@kasikh](https://github.com/XIAA25)                                                       |
+| coréen               | [@VenusGirl](https://github.com/VenusGirl)                                                 |
+| vietnamien           | [@vuongtuha](https://github.com/vuongtuha)                                                 |
+| turc                 | [@geeede](https://github.com/geeede)                                                       |
+| indonésien           | [@gigglylo](https://github.com/gigglylo)                                                   |
 
 ## Opensource libraries
 
