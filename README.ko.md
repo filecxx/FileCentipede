@@ -121,7 +121,7 @@ File centipede는 올인원 인터넷 파일 업로드/다운로드 관리자, B
 -   다운로드 제한, 업로드 속도 1.0
 -   사용자 지정 주소 만들기(filec, fileu) 1.0
 -   프록시 관리 1.0
--   필터 사용자 지정 1.0
+-   필터 사용자 정의 1.0
 -   트래커 관리 1.0
 -   작업 세부 정보 1.0
 -   작업 1.0에서 토렌트 내보내기
@@ -148,8 +148,8 @@ File centipede는 올인원 인터넷 파일 업로드/다운로드 관리자, B
 -   파일 업로드 2.0
 -   업로드 디렉토리 2.0
 -   디렉토리 2.0 다운로드
--   완전한 기능을 갖춘 WebDAV(s) 파일 관리자 2.0
--   완전한 기능을 갖춘 FTP(s) 파일 관리자 2.0
+-   모든 기능을 갖춘 WebDAV(s) 파일 관리자 2.0
+-   모든 기능을 갖춘 FTP(s) 파일 관리자 2.0
 -   모든 기능을 갖춘 SSH(sftp) 파일 관리자 2.0
 -   파일 브라우저 영구 캐시 2.0
 -   사이트 규칙 2.1
@@ -184,7 +184,7 @@ FileU의 전체 소스 코드는 "source_code" 디렉토리에서 찾을 수 있
 
 | 언어      | @                                                                                        |
 | :------ | :--------------------------------------------------------------------------------------- |
-| 러시아인    | [@vanja-산](https://github.com/vanja-san)[@Den1704](https://github.com/Den1704)           |
+| 러시아인    | [@vanja-산](https://github.com/vanja-san)[@덴1704](https://github.com/Den1704)             |
 | 중국어 번체  | [@bear0316](https://github.com/bear0316)[@postman1year](https://github.com/postman1year) |
 | 프랑스 국민  | [@kasikh](https://github.com/XIAA25)                                                     |
 | 네덜란드 사람 | [@kasikh](https://github.com/XIAA25)                                                     |
