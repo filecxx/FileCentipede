@@ -10,7 +10,7 @@
   <img src="./style/images/logo_128.png" width="128" alt="File Centipede Icon" />
 </a>
 
-File centipede is an All-In-One internet file upload/download manager, BitTorrent Client, WebDAV client, FTP client, and SSH client.
+File centipede 是一款一體化互聯網文件上傳/下載管理器、BitTorrent 客戶端、WebDAV 客戶端、FTP 客戶端和 SSH 客戶端。
 
 它被設計為快速、可定制且用戶友好。
 
@@ -106,13 +106,13 @@ File centipede is an All-In-One internet file upload/download manager, BitTorren
 
 -   HTTP、HTTPS協議（gzip、斷點續傳、多連接等基本功能不再列出） 1.0
 -   FTP、FTPS協議1.0
--   磁鐵，HASH地址1.0
+-   Magnet, HASH address	1.0
 -   BT 1.0
 -   其他自定義協議如迅雷、快車、qqdl 1.0
 -   JSON格式的地址1.0
 -   m3u8 流任務 1.0
--   流任務AES-128解密（尚不支持SAMPLE-AES解密）1.0
--   HTTP cookie、標頭、用戶代理以及用戶自定義 1.0
+-   流任務AES​​-128解密（尚不支持SAMPLE-AES解密）1.0
+-   HTTP cookie、標頭、用戶代理和用戶自定義 1.0
 -   Torrent 種子限制 1.0
 -   動態編輯傳輸任務配置 1.0
 -   防蛭1.0
@@ -168,7 +168,7 @@ FileU 的完整源代碼可以在“source_code”目錄中找到。
 
 ## 翻譯
 
-如果您喜歡這個軟件，您可以使用軟件中提供的翻譯工具將其翻譯成其他語言。
+如果您喜歡這款軟件，您可以使用軟件中提供的翻譯工具將其翻譯成其他語言。
 
 這將使使用該軟件最初編寫的語言以外的語言的人更容易使用該軟件。我們將非常感謝您的貢獻。
 
@@ -190,7 +190,7 @@ FileU 的完整源代碼可以在“source_code”目錄中找到。
 | 荷蘭語   | [@kasikh](https://github.com/XIAA25)                                                  |
 | 韓國人   | [@維納斯女孩](https://github.com/VenusGirl)                                                |
 | 越南語   | [@vuongtuha](https://github.com/vuongtuha)                                            |
-| 土耳其   | [@geeede](https://github.com/geeede)                                                  |
+| 土耳其   | [@geeeede](https://github.com/geeede)                                                 |
 | 印度尼西亞 | [@吉格利洛](https://github.com/gigglylo)                                                  |
 
 ## 開源庫
