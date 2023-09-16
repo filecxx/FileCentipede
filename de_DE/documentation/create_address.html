@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Adresse erstellen - File Centipede</title>
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../../style/base.css">
+    <link rel="stylesheet" href="../../style/highlight.monokai.css">
+    <script src="../../script/highlight.pack.js"></script>
+    <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "dk9clgn4o4");
+</script> 
+
+</head>
+<body>
+
+<div class="central">
+    <div class="nav">
+    <div class="links_">
+        <a class="tool_button home_" href="../index.html">Startseite</a>
+        <a class="tool_button features_" href="../index.html#features">Funktionen</a>
+        <a class="tool_button download_" href="../download.html">Herunterladen</a>
+        <a class="tool_button screenshot_" href="../screenshot.html">Screenshot</a>
+        <a class="tool_button user_reviews_" href="../index.html#user_reviews">Benutzerbewertungen</a>
+        <a class="tool_button documentation_" href="../documentation.html">Dokumentation</a>
+    </div>
+</div>
+    <div class="header">
+    <div class="top_">
+        <a href="http://filecxx.com" class="logo_"></a>
+        <div class="name_">
+            <h1><a href="http://filecxx.com">File Centipede</a></h1>
+            <div class="text_"> - Since 2022</div>
+        </div>
+        <div class="languages_">
+            <div class="current_">Deutsch</div>
+            <div class="items_">
+                <a class="item_" href="/en_US/index.html">English</a>
+                <a class="item_" href="/zh_CN/index.html">简体中文</a>
+                <a class="item_" href="/zh_TW/index.html">繁體中文</a>
+                <a class="item_" href="/ru_RU/index.html">Русский</a>
+                <a class="item_" href="/ko_KR/index.html">한국어</a>
+                <a class="item_" href="/de_DE/index.html">Deutsch</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="body">
+        <div class="section">
+            <h1>Adresse erstellen</h1>
+        </div>
+
+        <div class="section">
+            <h2>Javascript</h2>
+            <p>Wenn Sie eine Website betreiben.</p>
+            <p>Fügen Sie dieses Skript in Ihre Webseite ein, oder setzen Sie den Skriptcode in Ihre Webseite, aber der bessere Weg ist, das Skript auf Ihrer Webseite zu platzieren, falls diese Webseite nicht online ist.</p>
+            <div>
+                <pre><xmp><script1 src="//filecxx.com/script/create_filec_address.js"></script1></xmp></pre>
+            </div>
+            <div>
+                <a href="../../script/create_filec_address.js">Skript herunterladen</a>
+            </div>
+
+            <div>
+                <h3>Verwendung:</h3>
+                <p>
+                    Geben Sie ein JSON in die Funktion create_filec_address ein, json-Felder siehe
+                    <a href="#json_fields">JSON</a>
+                </p>
+                <pre><code>create_filec_address({uri:"http://...."});</code></pre>
+            </div>
+
+            <div>
+                <h4>Sample:</h4>
+                <a href="fileu:0eyJ1cmkiOiJodHRwczovL2dpdGh1Yi5jb20vZmlsZWN4eC9GaWxlQ2VudGlwZWRlL3Jhdy9tYWluL3JlbGVhc2UvY2hyb21lLmNyeCJ9">
+                    fileu:0eyJ1cmkiOiJodHRwczovL2dpdGh1Yi5jb20vZmlsZWN4eC9GaWxlQ2VudGlwZWRlL3Jhdy9tYWluL3JlbGVhc2UvY2hyb21lLmNyeCJ9
+                </a>
+            </div>
+        </div>
+
+        <div class="section">
+            <div style="margin-top: 24px">
+                <p>
+                    Wenn Sie Ihre echte Adresse vor Benutzern verbergen oder einige Einschränkungen für den Benutzerdownload geben möchten, sollten Sie das \"Adresse erstellen\"-Tool aus der Software verwenden, es kann eine verschlüsselte Adresse generieren.
+                </p>
+                <p>
+                    (Javascript kann keine verschlüsselte Adresse erstellen.)
+                </p>
+            </div>
+            <div>
+                <img src="../../images/tools/screenshot_create_address.png" alt="Adresse erstellen">
+            </div>
+        </div>
+
+        <div class="section json_keys" id="json_fields">
+            <h2>JSON: Aufgabe hinzufügen</h2>
+            <div>
+                Sie können JSON als Adresse verwenden, um eine Aufgabe hinzuzufügen, aber denken Sie daran, dass der JSON-String in einer Zeile sein muss.
+                <br/>
+                <br/>
+                <img src="../../images/tools/screenshot_add_json_task.png" alt="">
+            </div>
+
+            <table class="grid" style="margin-top: 12px">
+                <thead>
+                <tr>
+                    <td>Schlüssel</td>
+                    <td>Typ</td>
+                    <td style="width: 140px">Beschreibung</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>uri</td>
+                    <td>String</td>
+                    <td>Adresse</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <h4>HTTP / HTTPS / Stream Optional</h4>
+            <table class="grid" style="margin-top: 12px">
+                <thead>
+                <tr>
+                    <td>Schlüssel</td>
+                    <td>Typ</td>
+                    <td style="width: 140px">Beschreibung</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>method</td>
+                    <td>String</td>
+                    <td>GET, POST ... You know the thing</td>
+                </tr>
+                <tr>
+                    <td>catalog</td>
+                    <td>String</td>
+                    <td>Katalog</td>
+                </tr>
+                <tr>
+                    <td>page_url</td>
+                    <td>String</td>
+                    <td>Seiten-URL</td>
+                </tr>
+                <tr>
+                    <td>user_agent</td>
+                    <td>String</td>
+                    <td>User Agent</td>
+                </tr>
+                <tr>
+                    <td>cookies</td>
+                    <td>String</td>
+                    <td>Cookies</td>
+                </tr>
+                <tr>
+                    <td>headers</td>
+                    <td>String</td>
+                    <td>HTTP Headers</td>
+                </tr>
+                <tr>
+                    <td>content_type</td>
+                    <td>String</td>
+                    <td>Content Type (for HTTP POST)</td>
+                </tr>
+                <tr>
+                    <td>data</td>
+                    <td>String</td>
+                    <td>HTTP request data</td>
+                </tr>
+                <tr>
+                    <td>connect_timeout</td>
+                    <td>Nummer</td>
+                    <td>Verbindungs-Timeout</td>
+                </tr>
+                <tr>
+                    <td>max_connections</td>
+                    <td>Nummer</td>
+                    <td>Maximale Verbindungen</td>
+                </tr>
+                <tr>
+                    <td>max_redirect</td>
+                    <td>Nummer</td>
+                    <td>Maximale Weiterleitung</td>
+                </tr>
+                <tr>
+                    <td>max_retry</td>
+                    <td>Nummer</td>
+                    <td>Maximale Wiederholungen</td>
+                </tr>
+                <tr>
+                    <td>file_name</td>
+                    <td>String</td>
+                    <td>Dateiname</td>
+                </tr>
+                <tr>
+                    <td>speed_limit_download</td>
+                    <td>Nummer</td>
+                    <td>Download-Geschwindigkeitslimit</td>
+                </tr>
+                <tr>
+                    <td>auto_rename_file</td>
+                    <td>bool</td>
+                    <td>Datei automatisch umbenennen</td>
+                </tr>
+                <tr>
+                    <td>ignore_remote_modified</td>
+                    <td>Nummer</td>
+                    <td>Remote-Änderungen ignorieren</td>
+                </tr>
+                <tr>
+                    <td>ignore_server_busy</td>
+                    <td>Nummer</td>
+                    <td>Serverauslastung ignorieren</td>
+                </tr>
+                <tr>
+                    <td>ignore_http_error</td>
+                    <td>Nummer</td>
+                    <td>HTTP-Fehler ignorieren</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <h4>FTP / FTPS Optional</h4>
+            <table class="grid" style="margin-top: 12px">
+                <thead>
+                <tr>
+                    <td>Schlüssel</td>
+                    <td>Typ</td>
+                    <td style="width: 140px">Beschreibung</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>catalog</td>
+                    <td>String</td>
+                    <td>Katalog</td>
+                </tr>
+                <tr>
+                    <td>page_url</td>
+                    <td>String</td>
+                    <td>Seiten-URL</td>
+                </tr>
+                <tr>
+                    <td>connect_timeout</td>
+                    <td>Nummer</td>
+                    <td>Verbindungs-Timeout</td>
+                </tr>
+                <tr>
+                    <td>max_connections</td>
+                    <td>Nummer</td>
+                    <td>Maximale Verbindungen</td>
+                </tr>
+                <tr>
+                    <td>max_retry</td>
+                    <td>Nummer</td>
+                    <td>Maximale Wiederholungen</td>
+                </tr>
+                <tr>
+                    <td>file_name</td>
+                    <td>String</td>
+                    <td>Dateiname</td>
+                </tr>
+                <tr>
+                    <td>user</td>
+                    <td>String</td>
+                    <td>Benutzername</td>
+                </tr>
+                <tr>
+                    <td>pass</td>
+                    <td>String</td>
+                    <td>Passwort</td>
+                </tr>
+                <tr>
+                    <td>speed_limit_download</td>
+                    <td>Nummer</td>
+                    <td>Download-Geschwindigkeitslimit</td>
+                </tr>
+                <tr>
+                    <td>speed_limit_upload</td>
+                    <td>Nummer</td>
+                    <td>Upload-Geschwindigkeitslimit</td>
+                </tr>
+                <tr>
+                    <td>auto_rename_file</td>
+                    <td>bool</td>
+                    <td>Datei automatisch umbenennen</td>
+                </tr>
+                <tr>
+                    <td>ignore_server_busy</td>
+                    <td>Nummer</td>
+                    <td>Serverauslastung ignorieren</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <h4>Magnet / HASH Optional</h4>
+            <table class="grid" style="margin-top: 12px">
+                <thead>
+                <tr>
+                    <td>Schlüssel</td>
+                    <td>Typ</td>
+                    <td style="width: 140px">Beschreibung</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>catalog</td>
+                    <td>String</td>
+                    <td>Katalog</td>
+                </tr>
+                <tr>
+                    <td>page_url</td>
+                    <td>String</td>
+                    <td>Seiten-URL</td>
+                </tr>
+                <tr>
+                    <td>max_connections</td>
+                    <td>Nummer</td>
+                    <td>Maximale Verbindungen</td>
+                </tr>
+                <tr>
+                    <td>file_name</td>
+                    <td>String</td>
+                    <td>Dateiname</td>
+                </tr>
+                <tr>
+                    <td>speed_limit_download</td>
+                    <td>Nummer</td>
+                    <td>Download-Geschwindigkeitslimit</td>
+                </tr>
+                <tr>
+                    <td>speed_limit_upload</td>
+                    <td>Nummer</td>
+                    <td>Upload-Geschwindigkeitslimit</td>
+                </tr>
+                <tr>
+                    <td>auto_rename_file</td>
+                    <td>bool</td>
+                    <td>Datei automatisch umbenennen</td>
+                </tr>
+                <tr>
+                    <td>seeding_limit_ratio</td>
+                    <td>Nummer</td>
+                    <td>Seeding-Limit, Verhältnis</td>
+                </tr>
+                <tr>
+                    <td>seeding_limit_minutes</td>
+                    <td>Nummer</td>
+                    <td>Seeding-Limit, Minuten</td>
+                </tr>
+                <tr>
+                    <td>seeding_limit_size</td>
+                    <td>Nummer</td>
+                    <td>Seeding-Limit, Größe</td>
+                </tr>
+                <tr>
+                    <td>seeding_limit_act</td>
+                    <td>Nummer</td>
+                    <td>Seeding-Limit, Aktion</td>
+                </tr>
+                <tr>
+                    <td>seeding_limit_speed_limit</td>
+                    <td>Nummer</td>
+                    <td>Seeding-Limit, Geschwindigkeitslimit</td>
+                </tr>
+                <tr>
+                    <td>seeding_limit_ratio_enable</td>
+                    <td>bool</td>
+                    <td>Seeding-Limit, Verhältnis aktivieren</td>
+                </tr>
+                <tr>
+                    <td>seeding_limit_minutes_enable</td>
+                    <td>bool</td>
+                    <td>Seeding-Limit, Minuten aktivieren</td>
+                </tr>
+                <tr>
+                    <td>seeding_limit_size_enable</td>
+                    <td>bool</td>
+                    <td>Seeding-Limit, Größe aktivieren</td>
+                </tr>
+                <tr>
+                    <td>without_confirm</td>
+                    <td>bool</td>
+                    <td>Ohne Bestätigung</td>
+                </tr>
+                <tr>
+                    <td>sequential</td>
+                    <td>bool</td>
+                    <td>Sequentieller Download</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section" id="shares">
+    <h2>Teilen</h2>
+    <div class="addthis_inline_share_toolbox"></div>
+</div>
+    </div>
+
+    <div class="footer">
+    <div class="copyright_">
+        <span>No copyright © 2022</span>
+        <div class="email_">
+            <b>EMAIL:</b>
+            <a href="mailto:123123@123.com" id="contact_email">123123@123.com</a>
+        </div>
+        <div class="contact_"></div>
+    </div>
+</div>
+
+</div>
+<script src="../../script/base.js"></script>
+<script>
+    (function(){
+        var codes = document.getElementsByTagName("code");
+
+        for(var i=0;i<codes.length;++i){
+            hljs.highlightBlock(codes[i]);
+        }
+    })();
+</script>
+</body>
+</html>
