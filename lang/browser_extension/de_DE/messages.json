@@ -1,0 +1,188 @@
+{
+  "appname": {
+    "message": "File Centipede"
+  },
+  "videos": {
+    "message": "Videos"
+  },
+  "audios": {
+    "message": "Audios"
+  },
+  "magnets": {
+    "message": "Magnete"
+  },
+  "type": {
+    "message": "Typ"
+  },
+  "length_duration": {
+    "message": "Länge / Dauer / Größe"
+  },
+  "download": {
+    "message": "Herunterladen"
+  },
+  "cancel": {
+    "message": "Abbrechen"
+  },
+  "file": {
+    "message": "Datei"
+  },
+  "files": {
+    "message": "Dateien"
+  },
+  "download_video": {
+    "message": "Dieses Video herunterladen"
+  },
+  "download_audio": {
+    "message": "Dieses Audio herunterladen"
+  },
+  "download_link": {
+    "message": "Diesen Link herunterladen"
+  },
+  "download_image": {
+    "message": "Dieses Bild herunterladen"
+  },
+  "minutes": {
+    "message": "Minuten"
+  },
+  "text": {
+    "message": "Text"
+  },
+  "download_all": {
+    "message": "Alles herunterladen"
+  },
+  "copy_all": {
+    "message": "Alles kopieren"
+  },
+  "copy": {
+    "message": "Kopieren"
+  },
+  "copy_addr_msg": {
+    "message": "Adresse erfolgreich kopiert"
+  },
+  "video_floating_bar": {
+    "message": "Video-Schwebenleiste"
+  },
+  "enable": {
+    "message": "Aktivieren"
+  },
+  "disable": {
+    "message": "Deaktivieren"
+  },
+  "yes": {
+    "message": "Ja"
+  },
+  "no": {
+    "message": "Nein"
+  },
+  "send_failed": {
+    "message": "Senden fehlgeschlagen"
+  },
+  "browser": {
+    "message": "Browser"
+  },
+  "download_manager": {
+    "message": "Download-Manager"
+  },
+  "download_send_failed_message_prefix": {
+    "message": "Kann keine Verbindung herstellen zu "
+  },
+  "download_send_failed_message": {
+    "message": "entweder ist nicht installiert oder läuft nicht, wählen Sie eine Operation."
+  },
+  "recapture_address": {
+    "message": "Adresse erneut erfassen"
+  },
+  "recapture_address_msg_success": {
+    "message": "Adresse erfolgreich erneut erfasst, bitte öffnen Sie die Software und prüfen Sie, ob sie herunterlädt."
+  },
+  "refresh_address_msg_content": {
+    "message": "Bevor die Adresse erfasst wird, aktualisieren Sie die aktuelle Seite nicht, bitte suchen Sie: "
+  },
+  "ignore_this_site": {
+    "message": "Diese Seite ignorieren"
+  },
+  "potential_urls": {
+    "message": "Potenzielle URLs"
+  },
+  "potential_keys": {
+    "message": "Potenzielle Schlüssel"
+  },
+  "rules": {
+    "message": "Regeln"
+  },
+  "filename": {
+    "message": "Dateiname"
+  },
+  "filetypes": {
+    "message": "Dateitypen"
+  },
+  "domain": {
+    "message": "Domain"
+  },
+  "settings": {
+    "message": "Einstellungen"
+  },
+  "others": {
+    "message": "Andere"
+  },
+  "preview": {
+    "message": "Vorschau"
+  },
+  "save": {
+    "message": "Speichern"
+  },
+  "add": {
+    "message": "Hinzufügen"
+  },
+  "edit": {
+    "message": "Bearbeiten"
+  },
+  "remove": {
+    "message": "Entfernen"
+  },
+  "clear": {
+    "message": "Löschen"
+  },
+  "general": {
+    "message": "Allgemein"
+  },
+  "deep_analysis": {
+    "message": "Tiefe Analyse"
+  },
+  "duplicated_row": {
+    "message": "Doppelte Zeile"
+  },
+  "service": {
+    "message": "Service"
+  },
+  "service_password": {
+    "message": "Service-Passwort"
+  },
+  "extension": {
+    "message": "Erweiterung"
+  },
+  "css_selector": {
+    "message": "CSS-Selektor"
+  },
+  "do_not_download": {
+    "message": "Nicht herunterladen"
+  },
+  "capture_other_file_types": {
+    "message": "Erfassen Sie andere Dateitypen"
+  },
+  "file_unsuport_preview": {
+    "message": "Sie können diese Datei nicht anzeigen"
+  },
+  "unsuport_m3u8_preview": {
+    "message": "Ihr Webbrowser unterstützt die Vorschau von m3u8-Dateien nicht."
+  },
+  "invalid_domain": {
+    "message": "Ungültige Domain."
+  },
+  "filter": {
+    "message": "Filter"
+  },
+  "filter_out": {
+    "message": "Filtern"
+  }
+}
