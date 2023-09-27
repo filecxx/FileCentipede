@@ -208,6 +208,7 @@ This will make the software more accessible to people who speak languages other 
 | Tiếng Việt | [@vuongtuha](https://github.com/vuongtuha)
 | Türkçe     | [@geeede](https://github.com/geeede)
 | Indonesian     | [@gigglylo](https://github.com/gigglylo)
+| Deutsch     | [@Vulcanraven91](https://github.com/Vulcanraven91)
 
 
 ## Opensource libraries
