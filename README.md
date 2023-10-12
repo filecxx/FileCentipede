@@ -209,6 +209,7 @@ This will make the software more accessible to people who speak languages other 
 | Türkçe     | [@geeede](https://github.com/geeede)
 | Indonesian     | [@gigglylo](https://github.com/gigglylo)
 | Deutsch     | [@Vulcanraven91](https://github.com/Vulcanraven91)
+| 日本語     | [@wany-oh](https://github.com/wany-oh)
 
 
 ## Opensource libraries
