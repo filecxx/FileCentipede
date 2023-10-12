@@ -1,0 +1,188 @@
+{
+    "appname": {
+        "message": "File Centipede"
+    },
+    "videos": {
+        "message": "動画"
+    },
+    "audios": {
+        "message": "音声"
+    },
+    "magnets": {
+        "message": "マグネット"
+    },
+    "type": {
+        "message": "タイプ"
+    },
+    "length_duration": {
+        "message": "メディア情報"
+    },
+    "download": {
+        "message": "ダウンロード"
+    },
+    "cancel": {
+        "message": "キャンセル"
+    },
+    "file": {
+        "message": "ファイル"
+    },
+    "files": {
+        "message": "ファイル"
+    },
+    "download_video": {
+        "message": "動画をダウンロード"
+    },
+    "download_audio": {
+        "message": "音声をダウンロード"
+    },
+    "download_link": {
+        "message": "リンクをダウンロード"
+    },
+    "download_image": {
+        "message": "画像をダウンロード"
+    },
+    "minutes": {
+        "message": "分"
+    },
+    "text": {
+        "message": "テキスト"
+    },
+    "download_all": {
+        "message": "全てダウンロード"
+    },
+    "copy_all": {
+        "message": "全てコピー"
+    },
+    "copy": {
+        "message": "コピー"
+    },
+    "copy_addr_msg": {
+        "message": "アドレスのコピー完了"
+    },
+    "video_floating_bar": {
+        "message": "フローティングバー"
+    },
+    "enable": {
+        "message": "有効"
+    },
+    "disable": {
+        "message": "無効"
+    },
+    "yes": {
+        "message": "Yes"
+    },
+    "no": {
+        "message": "No"
+    },
+    "send_failed": {
+        "message": "Send failed"
+    },
+    "browser": {
+        "message": "ブラウザ"
+    },
+    "download_manager": {
+        "message": "ダウンロードマネージャー"
+    },
+    "download_send_failed_message_prefix": {
+        "message": "接続失敗"
+    },
+    "download_send_failed_message": {
+        "message": "がインストールされていないか、起動していません。"
+    },
+    "recapture_address": {
+        "message": "Recapture Address"
+    },
+    "recapture_address_msg_success": {
+        "message": "Recapture address success, please open the software and check if it's downloading."
+    },
+    "refresh_address_msg_content": {
+        "message": "Before the address being captured, do not refresh the current page, please find: "
+    },
+    "ignore_this_site": {
+        "message": "このサイトで無効"
+    },
+    "potential_urls": {
+        "message": "Potential URLs"
+    },
+    "potential_keys": {
+        "message": "Potential Keys"
+    },
+    "rules": {
+        "message": "ルール"
+    },
+    "filename": {
+        "message": "ファイル名"
+    },
+    "filetypes": {
+        "message": "ファイルの種類"
+    },
+    "domain": {
+        "message": "ドメイン"
+    },
+    "settings": {
+        "message": "設定"
+    },
+    "others": {
+        "message": "その他"
+    },
+    "preview": {
+        "message": "プレビュー"
+    },
+    "save": {
+        "message": "保存"
+    },
+    "add": {
+        "message": "追加"
+    },
+    "edit": {
+        "message": "終了"
+    },
+    "remove": {
+        "message": "削除"
+    },
+    "clear": {
+        "message": "クリア"
+    },
+    "general": {
+        "message": "General"
+    },
+    "deep_analysis": {
+        "message": "Deep analysis"
+    },
+    "duplicated_row": {
+        "message": "Duplicated row"
+    },
+    "service": {
+        "message": "サービス"
+    },
+    "service_password": {
+        "message": "サービスのパスワード"
+    },
+    "extension": {
+        "message": "Extension"
+    },
+    "css_selector": {
+        "message": "CSSセレクター"
+    },
+    "do_not_download": {
+        "message": "Do not download"
+    },
+    "capture_other_file_types": {
+        "message": "Capture other file types"
+    },
+    "file_unsuport_preview": {
+        "message": "このファイルはプレビューできません"
+    },
+    "unsuport_m3u8_preview": {
+        "message": "このブラウザはm3u8のプレビューに対応していません"
+    },
+    "invalid_domain": {
+        "message": "無効なドメイン。"
+    },
+    "filter": {
+        "message": "フィルター"
+    },
+    "filter_out": {
+        "message": "フィルター実行"
+    }
+}
