@@ -1,0 +1,188 @@
+{
+    "appname":{
+        "message": "File Centipede"
+    },
+    "videos": {
+        "message": "Wideo"
+    },
+    "audios": {
+        "message": "Audio"
+    },
+    "magnets": {
+        "message": "Pliki magnet"
+    },
+    "type": {
+        "message": "typ"
+    },
+    "length_duration": {
+        "message": "długość / czas / rozmiar"
+    },
+    "download": {
+        "message": "Pobierz"
+    },
+    "cancel": {
+        "message": "Anuluj"
+    },
+    "file": {
+        "message": "plik"
+    },
+    "files": {
+        "message": "pliki"
+    },
+    "download_video": {
+        "message": "Pobierz ten film"
+    },
+    "download_audio": {
+        "message": "Pobierz to audio"
+    },
+    "download_link": {
+        "message": "Pobierz ten link"
+    },
+    "download_image": {
+        "message": "Pobierz ten obraz"
+    },
+    "minutes": {
+        "message": "Minuty"
+    },
+    "text": {
+        "message": "tekst"
+    },
+    "download_all": {
+        "message": "Pobierz wszystko"
+    },
+    "copy_all": {
+        "message": "Kopiuj wszystko"
+    },
+    "copy": {
+        "message": "kopiuj"
+    },
+    "copy_addr_msg": {
+        "message": "Skopiowano adres"
+    },
+    "video_floating_bar": {
+        "message": "Pływający pasek wideo"
+    },
+    "enable": {
+        "message": "Włącz"
+    },
+    "disable": {
+        "message": "Wyłącz"
+    },
+    "yes": {
+        "message": "Tak"
+    },
+    "no": {
+        "message": "Nie"
+    },
+    "send_failed": {
+        "message": "Błąd wysyłania"
+    },
+    "browser": {
+        "message": "Przeglądaj"
+    },
+    "download_manager": {
+        "message": "Menedżer pobierania"
+    },
+    "download_send_failed_message_prefix": {
+        "message": "Nie można nawiązać połączenia"
+    },
+    "download_send_failed_message": {
+        "message": "nie jest zainstalowany lub nie działa, wybierz operację."
+    },
+    "recapture_address": {
+        "message": "Odśwież adres"
+    },
+    "recapture_address_msg_success": {
+        "message": "Odświeżenie adresu powiodło się, otwórz program i sprawdź, czy trwa pobieranie."
+    },
+    "refresh_address_msg_content": {
+        "message": "Przed przechwyceniem adresu nie odświeżaj bieżącej strony, znajdź: "
+    },
+    "ignore_this_site": {
+        "message": "Ignoruj stronę"
+    },
+    "potential_urls": {
+        "message": "Potencjalne adresy URL"
+    },
+    "potential_keys": {
+        "message": "Potencjalne Klucze"
+    },
+    "rules": {
+        "message": "Reguły"
+    },
+    "filename": {
+        "message": "Nazwa pliku"
+    },
+    "filetypes": {
+        "message": "Typ pliku"
+    },
+    "domain": {
+        "message": "Domena"
+    },
+    "settings": {
+        "message": "Ustawienia"
+    },
+    "others": {
+        "message": "Inne"
+    },
+    "preview": {
+        "message": "Podgląd"
+    },
+    "save": {
+        "message": "Zapisz"
+    },
+    "add": {
+        "message": "Dodaj"
+    },
+    "edit": {
+        "message": "Edytuj"
+    },
+    "remove": {
+        "message": "Usuń"
+    },
+    "clear": {
+        "message": "Wyczyść"
+    },
+    "general": {
+        "message": "Ogólne"
+    },
+    "deep_analysis": {
+        "message": "Głęboka analiza"
+    },
+    "duplicated_row": {
+        "message": "Zduplikowany wiersz"
+    },
+    "service": {
+        "message": "Usługi"
+    },
+    "service_password": {
+        "message": "Hasło usłgi"
+    },
+    "extension": {
+        "message": "Rozszerzenie"
+    },
+    "css_selector": {
+        "message": "Selektor CSS"
+    },
+    "do_not_download": {
+        "message": "Nie pobieraj"
+    },
+    "capture_other_file_types": {
+        "message": "Przechwyć  inne typy plików"
+    },
+    "file_unsuport_preview": {
+        "message": "Nie można wyświetlić podglądu"
+    },
+    "unsuport_m3u8_preview": {
+        "message": "Twoja przeglądarka nie wspiera podglądu plików m3u8."
+    },
+    "invalid_domain": {
+        "message": "Błędna domena."
+    },
+    "filter": {
+        "message": "Filtr"
+    },
+    "filter_out": {
+        "message": "Wyfiltruj"
+    }
+}
