@@ -210,6 +210,7 @@ This will make the software more accessible to people who speak languages other 
 | Indonesian     | [@gigglylo](https://github.com/gigglylo)
 | Deutsch     | [@Vulcanraven91](https://github.com/Vulcanraven91)
 | 日本語     | [@wany-oh](https://github.com/wany-oh)
+| polski     | [@RunoHawk](https://github.com/RunoHawk)
 
 
 ## Opensource libraries
