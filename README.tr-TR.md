@@ -150,7 +150,7 @@ Tarayıcı uzantısının ekran görüntüleri
 * Çeviri aracı	1.0
 * HTTP aracı	1.0
 * URI şifreleme/şifre çözme aracı	1.0
-* Base64 encode/decode tool	1.0
+* Base64 şifreleme/şifre çözme aracı	1.0
 * Regex deneme aracı	1.0
 * Torrent oluşturucu	1.0
 * Torrentten mıknatısa dönüştürme aracı	1.0
