@@ -1,4 +1,4 @@
-[English](./README.md) | [简体中文](./README.zh-CN.md) | [繁體中文](./README.zh-TW.md) | [한국어](./README.ko.md) | [Hindi](./README.hi.md) | [Arabic](./README.ar.md) | [Français](./README.fr.md) | [Русский](./README.ru.md) | [Latin](./README.la.md) | [日本語](./README.ja.md)| [Italian](./README.it.md) | [Deutsch](./README.de.md) | [Español](./README.es.md) | [svenska](./README.sv.md) | [فارسی](./README.fa.md)
+[English](./README.md) | [简体中文](./README.zh-CN.md) | [繁體中文](./README.zh-TW.md) | [한국어](./README.ko.md) | [Hindi](./README.hi.md) | [Arabic](./README.ar.md) | [Français](./README.fr.md) | [Русский](./README.ru.md) | [Latin](./README.la.md) | [日本語](./README.ja.md)| [Italian](./README.it.md) | [Deutsch](./README.de.md) | [Español](./README.es.md) | [svenska](./README.sv.md) | [فارسی](./README.fa.md) | [Türkçe](./README.tr-TR.md)
 
 ![image](https://user-images.githubusercontent.com/100348948/165334090-0b1a6f28-554e-484b-9946-1ffef010fa78.png)
 #
@@ -206,7 +206,7 @@ This will make the software more accessible to people who speak languages other 
 | Nederlands         | [@XIAA25](https://github.com/XIAA25)
 | 한국어         | [@VenusGirl](https://github.com/VenusGirl)
 | Tiếng Việt | [@vuongtuha](https://github.com/vuongtuha)
-| Türkçe     | [@geeede](https://github.com/geeede)
+| Türkçe     | [@geeede](https://github.com/geeede) [@saurane](https://github.com/saurane)
 | Indonesian     | [@gigglylo](https://github.com/gigglylo)
 | Deutsch     | [@Vulcanraven91](https://github.com/Vulcanraven91)
 | 日本語     | [@wany-oh](https://github.com/wany-oh)
