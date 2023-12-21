@@ -1,4 +1,4 @@
-[英语](./README.md)\|[简体中文](./README.zh-CN.md)\|[繁体中文](./README.zh-TW.md)\|[韩国人](./README.ko.md)\|[没有](./README.hi.md)\|[阿拉伯](./README.ar.md)\|[法语](./README.fr.md)\|[俄语](./README.ru.md)\|[拉丁](./README.la.md)\|[日本人](./README.ja.md)\|[意大利语](./README.it.md)\|[德语](./README.de.md)\|[西班牙语](./README.es.md)\|[瑞典](./README.sv.md)\|[波斯语](./README.fa.md)
+[英语](./README.md)\|[简体中文](./README.zh-CN.md)\|[繁体中文](./README.zh-TW.md)\|[韩国人](./README.ko.md)\|[没有](./README.hi.md)\|[阿拉伯](./README.ar.md)\|[法语](./README.fr.md)\|[俄语](./README.ru.md)\|[拉丁](./README.la.md)\|[日本人](./README.ja.md)\|[意大利语](./README.it.md)\|[德语](./README.de.md)\|[西班牙语](./README.es.md)\|[瑞典](./README.sv.md)\|[波斯语](./README.fa.md)\|[土耳其](./README.tr-TR.md)
 
 ![image](https://user-images.githubusercontent.com/100348948/165334090-0b1a6f28-554e-484b-9946-1ffef010fa78.png)
 
@@ -20,11 +20,11 @@ File centipede 是一款一体化互联网文件上传/下载管理器、BitTorr
 
 （免费无广告）
 
-网站：[http://filecxx.com](http://filecxx.com)
+网站：[HTTP://file C选项.com](http://filecxx.com)
 
-仪表板：[https://w.filecxx.com](https://w.filecxx.com)
+仪表板：[HTTPS://我.file C选项.com](https://w.filecxx.com)
 
-赞助商：[http://www.filecxx.com/en_US/sponsors.htm](http://www.filecxx.com/en_US/sponsors.html)
+赞助商：[HTTP://呜呜呜.file C选项.com/恩\_US/sponsors.HTML](http://www.filecxx.com/en_US/sponsors.html)
 
 ## 截屏
 
@@ -32,7 +32,7 @@ File centipede 是一款一体化互联网文件上传/下载管理器、BitTorr
 
 ![File Centipede](images/screenshot_software.png)![File Centipede](images/screenshot_software2.png)![File Centipede](images/screenshot_software_file_browser_webdav.png)![File Centipede](images/screenshot_software_file_browser_ssh.png)![File Centipede](images/screenshot_software_file_browser_ftp.png)![File Centipede](images/screenshot_software_file_browser_add.png)![File Centipede](images/screenshot_software_file_browser_log.png)
 
-#### Add task
+#### 添加任务
 
 ![Add task](images/screenshot_add_task.png)![Add task](images/screenshot_add_task2.png)![Add task](images/screenshot_add_task3.png)![Add task](images/screenshot_add_task4.png)
 
@@ -121,7 +121,7 @@ File centipede 是一款一体化互联网文件上传/下载管理器、BitTorr
 -   限制下载、上传速度1.0
 -   创建自定义地址（filec、fileu）1.0
 -   代理管理1.0
--   Filter customize	1.0
+-   过滤器定制1.0
 -   追踪器管理1.0
 -   任务详情1.0
 -   从任务 1.0 导出 torrent
@@ -141,7 +141,7 @@ File centipede 是一款一体化互联网文件上传/下载管理器、BitTorr
 -   磁铁转Torrent工具1.0
 -   文件合并工具1.0
 -   统计1.0
--   Download all links from webpage	1.6
+-   下载网页1.6的所有链接
 -   SSH、SFTP协议2.0
 -   卷曲、wget、aria2、axel 命令行 2.0
 -   WebDAV协议2.0
@@ -186,12 +186,15 @@ FileU 的完整源代码可以在“source_code”目录中找到。
 | :---- | :------------------------------------------------------------------------------------ |
 | 俄语    | [@vanja-san](https://github.com/vanja-san)[@Den1704](https://github.com/Den1704)      |
 | 繁体中文  | [@熊0316](https://github.com/bear0316)[@postman1year](https://github.com/postman1year) |
-| 法语    | [@kasikh](https://github.com/XIAA25)                                                  |
-| 荷兰语   | [@kasikh](https://github.com/XIAA25)                                                  |
+| 法语    | [@Ksahikh](https://github.com/XIAA25)                                                 |
+| 荷兰语   | [@Ksahikh](https://github.com/XIAA25)                                                 |
 | 韩国人   | [@维纳斯女孩](https://github.com/VenusGirl)                                                |
 | 越南语   | [@vuongtuha](https://github.com/vuongtuha)                                            |
-| 土耳其   | [@geeeede](https://github.com/geeede)                                                 |
+| 土耳其   | [@geeeede](https://github.com/geeede)[@saurane](https://github.com/saurane)           |
 | 印度尼西亚 | [@吉格利洛](https://github.com/gigglylo)                                                  |
+| 德语    | [@Vulcanraven91](https://github.com/Vulcanraven91)                                    |
+| 日本人   | [@wany-哦](https://github.com/wany-oh)                                                 |
+| 抛光    | [@鲁诺霍克](https://github.com/RunoHawk)                                                  |
 
 ## 开源库
 
