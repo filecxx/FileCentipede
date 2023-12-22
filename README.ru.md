@@ -1,4 +1,4 @@
-[Английский](./README.md)\|[Упрощенный китайский](./README.zh-CN.md)\|[традиционный китайский](./README.zh-TW.md)\|[Корейский](./README.ko.md)\|[Неа](./README.hi.md)\|[арабский](./README.ar.md)\|[Французский](./README.fr.md)\|[Русский](./README.ru.md)\|[латинский](./README.la.md)\|[Японский](./README.ja.md)\|[итальянский](./README.it.md)\|[Немецкий](./README.de.md)\|[испанский](./README.es.md)\|[Шведский](./README.sv.md)\|[фарси](./README.fa.md)\|[Türkçe](./README.tr-TR.md)
+[Английский](./README.md)\|[Упрощенный китайский](./README.zh-CN.md)\|[традиционный китайский](./README.zh-TW.md)\|[Корейский](./README.ko.md)\|[Неа](./README.hi.md)\|[арабский](./README.ar.md)\|[Французский](./README.fr.md)\|[Русский](./README.ru.md)\|[латинский](./README.la.md)\|[Японский](./README.ja.md)\|[итальянский](./README.it.md)\|[Немецкий](./README.de.md)\|[испанский](./README.es.md)\|[Шведский](./README.sv.md)\|[фарси](./README.fa.md)\|[турецкий](./README.tr-TR.md)
 
 ![image](https://user-images.githubusercontent.com/100348948/165334090-0b1a6f28-554e-484b-9946-1ffef010fa78.png)
 
@@ -26,7 +26,7 @@ File centipede — это универсальный менеджер загру
 
 Спонсоры:[хттп://ввв.филеккс.ком/ен\_УС/спонсорс.хтмл](http://www.filecxx.com/en_US/sponsors.html)
 
-## Скриншот
+## Screenshot
 
 #### Файловая многоножка
 
@@ -182,9 +182,9 @@ File centipede — это универсальный менеджер загру
 
 ![translate](images/document/how_to_translate_this_website.png)
 
-| Language               | @                                                                                        |
+| Язык                   | @                                                                                        |
 | :--------------------- | :--------------------------------------------------------------------------------------- |
-| Русский                | [@vanja-san](https://github.com/vanja-san)[@Den1704](https://github.com/Den1704)         |
+| Русский                | [@ванья-сан](https://github.com/vanja-san)[@Den1704](https://github.com/Den1704)         |
 | традиционный китайский | [@bear0316](https://github.com/bear0316)[@postman1year](https://github.com/postman1year) |
 | Французский            | [@Ксахих](https://github.com/XIAA25)                                                     |
 | Голландский            | [@Ксахих](https://github.com/XIAA25)                                                     |
