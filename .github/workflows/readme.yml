@@ -46,11 +46,6 @@ jobs:
         with:
           LANG: ru
 
-      - name: Adding README - Latin
-        uses: dephraiim/translate-readme@main
-        with:
-          LANG: la
-
       - name: Adding README - 日本語
         uses: dephraiim/translate-readme@main
         with:
