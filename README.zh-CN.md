@@ -1,4 +1,4 @@
-[英语](./README.md)\|[简体中文](./README.zh-CN.md)\|[繁体中文](./README.zh-TW.md)\|[韩国人](./README.ko.md)\|[没有](./README.hi.md)\|[阿拉伯](./README.ar.md)\|[法语](./README.fr.md)\|[俄语](./README.ru.md)\|[拉丁](./README.la.md)\|[日本人](./README.ja.md)\|[意大利语](./README.it.md)\|[德语](./README.de.md)\|[西班牙语](./README.es.md)\|[瑞典](./README.sv.md)\|[波斯语](./README.fa.md)\|[土耳其](./README.tr-TR.md)
+[英语](./README.md)\|[简体中文](./README.zh-CN.md)\|[繁体中文](./README.zh-TW.md)\|[韩国语](./README.ko.md)\|[印度](./README.hi.md)\|[阿拉伯](./README.ar.md)\|[法语](./README.fr.md)\|[俄语](./README.ru.md)\|[拉丁](./README.la.md)\|[日本语](./README.ja.md)\|[意大利语](./README.it.md)\|[德语](./README.de.md)\|[西班牙语](./README.es.md)\|[瑞典](./README.sv.md)\|[波斯语](./README.fa.md)\|[土耳其](./README.tr-TR.md)
 
 ![image](https://user-images.githubusercontent.com/100348948/165334090-0b1a6f28-554e-484b-9946-1ffef010fa78.png)
 
@@ -20,15 +20,15 @@ File centipede 是一款一体化互联网文件上传/下载管理器、BitTorr
 
 （免费无广告）
 
-网站：[HTTP://file C选项.com](http://filecxx.com)
+网站：[http://filecxx.com](http://filecxx.com)
 
-仪表板：[HTTPS://我.file C选项.com](https://w.filecxx.com)
+仪表板：[https://w.filecxx.com](https://w.filecxx.com)
 
-赞助商：[HTTP://呜呜呜.file C选项.com/恩\_US/sponsors.HTML](http://www.filecxx.com/en_US/sponsors.html)
+赞助商：[http://www.filecxx.com/en_US/sponsors.html](http://www.filecxx.com/en_US/sponsors.html)
 
 ## 截屏
 
-#### 锉蜈蚣
+#### 文件蜈蚣
 
 ![File Centipede](images/screenshot_software.png)![File Centipede](images/screenshot_software2.png)![File Centipede](images/screenshot_software_file_browser_webdav.png)![File Centipede](images/screenshot_software_file_browser_ssh.png)![File Centipede](images/screenshot_software_file_browser_ftp.png)![File Centipede](images/screenshot_software_file_browser_add.png)![File Centipede](images/screenshot_software_file_browser_log.png)
 
@@ -188,13 +188,13 @@ FileU 的完整源代码可以在“source_code”目录中找到。
 | 繁体中文  | [@熊0316](https://github.com/bear0316)[@postman1year](https://github.com/postman1year) |
 | 法语    | [@Ksahikh](https://github.com/XIAA25)                                                 |
 | 荷兰语   | [@Ksahikh](https://github.com/XIAA25)                                                 |
-| 韩国人   | [@维纳斯女孩](https://github.com/VenusGirl)                                                |
+| 韩国语   | [@维纳斯女孩](https://github.com/VenusGirl)                                                |
 | 越南语   | [@vuongtuha](https://github.com/vuongtuha)                                            |
 | 土耳其   | [@geeeede](https://github.com/geeede)[@saurane](https://github.com/saurane)           |
 | 印度尼西亚 | [@吉格利洛](https://github.com/gigglylo)                                                  |
 | 德语    | [@Vulcanraven91](https://github.com/Vulcanraven91)                                    |
-| 日本人   | [@wany-哦](https://github.com/wany-oh)                                                 |
-| 抛光    | [@鲁诺霍克](https://github.com/RunoHawk)                                                  |
+| 日本语   | [@wany-哦](https://github.com/wany-oh)                                                 |
+| 波兰语    | [@鲁诺霍克](https://github.com/RunoHawk)                                                  |
 
 ## 开源库
 
