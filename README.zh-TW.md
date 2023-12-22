@@ -76,7 +76,7 @@ File centipede 是一款一體化互聯網檔案上傳/下載管理器、BitTorr
 
 ![Speed limit](images/screenshot_download_speed_limit.png)
 
-#### Translate tool
+#### 翻譯工具
 
 ![Translate tool](images/screenshot_translate.png)
 
