@@ -1,4 +1,4 @@
-[영어](./README.md)\|[중국어 간체](./README.zh-CN.md)\|[중국어 번체](./README.zh-TW.md)\|[한국어](./README.ko.md)\|[아니요](./README.hi.md)\|[아라비아 말](./README.ar.md) \| [프랑스 국민](./README.fr.md)\|[러시아인](./README.ru.md)\|[라틴어](./README.la.md)\|[일본어](./README.ja.md)\|[이탈리아 사람](./README.it.md)\|[독일 사람](./README.de.md)\|[스페인의](./README.es.md)\|[스웨덴어](./README.sv.md)\|[페르시아어](./README.fa.md)\|[터키어](./README.tr-TR.md)
+[영어](./README.md)\|[중국어 간체](./README.zh-CN.md)\|[중국어 번체](./README.zh-TW.md)\|[한국어](./README.ko.md)\|[아니요](./README.hi.md)\|[아라비아 말](./README.ar.md)\|[프랑스 국민](./README.fr.md)\|[러시아인](./README.ru.md)\|[라틴어](./README.la.md)\|[일본어](./README.ja.md)\|[이탈리아 사람](./README.it.md)\|[독일 사람](./README.de.md)\|[스페인의](./README.es.md)\|[스웨덴어](./README.sv.md)\|[페르시아어](./README.fa.md)\|[터키어](./README.tr-TR.md)
 
 ![image](https://user-images.githubusercontent.com/100348948/165334090-0b1a6f28-554e-484b-9946-1ffef010fa78.png)
 
@@ -108,7 +108,7 @@
 -   FTP, FTPS 프로토콜 1.0
 -   자석, HASH 주소 1.0
 -   비트토렌트 1.0
--   Other custom protocol like thunder, flashget, qqdl	1.0
+-   Thunder, flashget, qqdl 1.0과 같은 기타 사용자 정의 프로토콜
 -   JSON 형식의 주소 1.0
 -   m3u8 스트림 작업 1.0
 -   스트림 작업 AES-128 암호 해독(SAMPLE-AES 암호 해독은 아직 지원되지 않음) 1.0
@@ -133,7 +133,7 @@
 -   웹페이지 1.0에서 모든 자석 찾기
 -   번역 도구 1.0
 -   HTTP 도구 1.0
--   URI encode/decode tool	1.0
+-   URI 인코딩/디코딩 도구 1.0
 -   Base64 인코딩/디코딩 도구 1.0
 -   정규식 테스트 도구 1.0
 -   토렌트 1.0 만들기
@@ -190,7 +190,7 @@ FileU의 전체 소스 코드는 "source_code" 디렉터리에서 찾을 수 있
 | 네덜란드 사람 | [@크사히크](https://github.com/XIAA25)                                                |
 | 한국어     | [@비너스걸](https://github.com/VenusGirl)                                             |
 | 베트남어    | [@vuongtuha](https://github.com/vuongtuha)                                        |
-| 터키어     | [@geeede](https://github.com/geeede)[@saurane](https://github.com/saurane)        |
+| 터키어     | [@geeeede](https://github.com/geeede)[@saurane](https://github.com/saurane)       |
 | 인도네시아 인 | [@gigglylo](https://github.com/gigglylo)                                          |
 | 독일 사람   | [@Vulcanraven91](https://github.com/Vulcanraven91)                                |
 | 일본어     | [@wany-oh](https://github.com/wany-oh)                                            |

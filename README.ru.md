@@ -190,7 +190,7 @@ File centipede — это универсальный менеджер загру
 | Голландский            | [@Ксахих](https://github.com/XIAA25)                                                     |
 | Корейский              | [@VenusGirl](https://github.com/VenusGirl)                                               |
 | вьетнамский            | [@vuongtuha](https://github.com/vuongtuha)                                               |
-| турецкий               | [@geeede](https://github.com/geeede)[@saurane](https://github.com/saurane)               |
+| турецкий               | [@geeeede](https://github.com/geeede)[@saurane](https://github.com/saurane)              |
 | индонезийский          | [@gigglylo](https://github.com/gigglylo)                                                 |
 | Немецкий               | [@Vulcanraven91](https://github.com/Vulcanraven91)                                       |
 | Японский               | [@wany-ох](https://github.com/wany-oh)                                                   |

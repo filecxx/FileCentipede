@@ -120,7 +120,7 @@ File centipede 是一款一体化互联网文件上传/下载管理器、BitTorr
 -   目录1.0
 -   限制下载、上传速度1.0
 -   创建自定义地址（filec、fileu）1.0
--   Proxy management	1.0
+-   代理管理1.0
 -   过滤器定制1.0
 -   追踪器管理1.0
 -   任务详情1.0
@@ -190,7 +190,7 @@ FileU 的完整源代码可以在“source_code”目录中找到。
 | 荷兰语   | [@Ksahikh](https://github.com/XIAA25)                                                 |
 | 韩国语   | [@维纳斯女孩](https://github.com/VenusGirl)                                                |
 | 越南语   | [@vuongtuha](https://github.com/vuongtuha)                                            |
-| 土耳其   | [@geeede](https://github.com/geeede)[@saurane](https://github.com/saurane)            |
+| 土耳其   | [@geeeede](https://github.com/geeede)[@saurane](https://github.com/saurane)           |
 | 印度尼西亚 | [@吉格利洛](https://github.com/gigglylo)                                                  |
 | 德语    | [@Vulcanraven91](https://github.com/Vulcanraven91)                                    |
 | 日本语   | [@wany-哦](https://github.com/wany-oh)                                                 |

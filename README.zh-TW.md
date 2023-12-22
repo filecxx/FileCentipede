@@ -76,7 +76,7 @@ File centipede 是一款一體化互聯網檔案上傳/下載管理器、BitTorr
 
 ![Speed limit](images/screenshot_download_speed_limit.png)
 
-#### Translate tool
+#### 翻譯工具
 
 ![Translate tool](images/screenshot_translate.png)
 
@@ -190,7 +190,7 @@ FileU 的完整原始碼可以在「source_code」目錄中找到。
 | 荷蘭語  | [@Ksahikh](https://github.com/XIAA25)                                                 |
 | 韓國語  | [@維納斯女孩](https://github.com/VenusGirl)                                                |
 | 越南語  | [@vuongtuha](https://github.com/vuongtuha)                                            |
-| 土耳其  | [@geeede](https://github.com/geeede)[@saurane](https://github.com/saurane)            |
+| 土耳其  | [@geeeede](https://github.com/geeede)[@saurane](https://github.com/saurane)           |
 | 印尼   | [@吉格利洛](https://github.com/gigglylo)                                                  |
 | 德文   | [@Vulcanraven91](https://github.com/Vulcanraven91)                                    |
 | 日本語  | [@wany-哦](https://github.com/wany-oh)                                                 |
