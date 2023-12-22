@@ -182,19 +182,19 @@ Cela rendra le logiciel plus accessible aux personnes parlant des langues autres
 
 ![translate](images/document/how_to_translate_this_website.png)
 
-| Langue               | @                                                                                         |
-| :------------------- | :---------------------------------------------------------------------------------------- |
-| russe                | [@vanja-san](https://github.com/vanja-san)[@Den1704](https://github.com/Den1704)          |
-| chinois traditionnel | [@ours0316](https://github.com/bear0316)[@postman1année](https://github.com/postman1year) |
-| Français             | [@Ksahikh](https://github.com/XIAA25)                                                     |
-| Néerlandais          | [@Ksahikh](https://github.com/XIAA25)                                                     |
-| coréen               | [@VénusGirl](https://github.com/VenusGirl)                                                |
-| vietnamien           | [@vuongtuha](https://github.com/vuongtuha)                                                |
-| turc                 | [@geeede](https://github.com/geeede)[@saurane](https://github.com/saurane)                |
-| indonésien           | [@gigglylo](https://github.com/gigglylo)                                                  |
-| Allemand             | [@Vulcanraven91](https://github.com/Vulcanraven91)                                        |
-| Japonais             | [@wany-oh](https://github.com/wany-oh)                                                    |
-| polonais             | [@RunoHawk](https://github.com/RunoHawk)                                                  |
+| Langue               | @                                                                                        |
+| :------------------- | :--------------------------------------------------------------------------------------- |
+| russe                | [@vanja-san](https://github.com/vanja-san)[@Den1704](https://github.com/Den1704)         |
+| chinois traditionnel | [@ours0316](https://github.com/bear0316)[@postman1year](https://github.com/postman1year) |
+| Français             | [@Ksahikh](https://github.com/XIAA25)                                                    |
+| Néerlandais          | [@Ksahikh](https://github.com/XIAA25)                                                    |
+| coréen               | [@VénusGirl](https://github.com/VenusGirl)                                               |
+| vietnamien           | [@vuongtuha](https://github.com/vuongtuha)                                               |
+| turc                 | [@geeede](https://github.com/geeede)[@saurane](https://github.com/saurane)               |
+| indonésien           | [@gigglylo](https://github.com/gigglylo)                                                 |
+| Allemand             | [@Vulcanraven91](https://github.com/Vulcanraven91)                                       |
+| Japonais             | [@wany-oh](https://github.com/wany-oh)                                                   |
+| polonais             | [@RunoHawk](https://github.com/RunoHawk)                                                 |
 
 ## Opensource libraries
 
