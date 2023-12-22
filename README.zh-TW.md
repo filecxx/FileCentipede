@@ -1,4 +1,4 @@
-[英語](./README.md)\|[簡體中文](./README.zh-CN.md)\|[繁體中文](./README.zh-TW.md)\|[韓國人](./README.ko.md)\|[沒有](./README.hi.md)\|[阿拉伯](./README.ar.md)\|[法語](./README.fr.md)\|[俄文](./README.ru.md)\|[拉丁](./README.la.md)\|[日本人](./README.ja.md)\|[義大利語](./README.it.md)\|[德文](./README.de.md)\|[西班牙語](./README.es.md)\|[瑞典](./README.sv.md)\|[波斯語](./README.fa.md)\|[土耳其](./README.tr-TR.md)
+[英語](./README.md)\|[简体中文](./README.zh-CN.md)\|[繁體中文](./README.zh-TW.md)\|[韓國人](./README.ko.md)\|[沒有](./README.hi.md)\|[阿拉伯](./README.ar.md)\|[法語](./README.fr.md)\|[俄文](./README.ru.md)\|[拉丁](./README.la.md)\|[日本人](./README.ja.md)\|[義大利語](./README.it.md)\|[德文](./README.de.md)\|[西班牙語](./README.es.md)\|[瑞典](./README.sv.md)\|[波斯語](./README.fa.md)\|[土耳其](./README.tr-TR.md)
 
 ![image](https://user-images.githubusercontent.com/100348948/165334090-0b1a6f28-554e-484b-9946-1ffef010fa78.png)
 
@@ -76,7 +76,7 @@ File centipede 是一款一體化互聯網檔案上傳/下載管理器、BitTorr
 
 ![Speed limit](images/screenshot_download_speed_limit.png)
 
-#### 翻譯工具
+#### Translate tool
 
 ![Translate tool](images/screenshot_translate.png)
 
@@ -190,7 +190,7 @@ FileU 的完整原始碼可以在「source_code」目錄中找到。
 | 荷蘭語  | [@Ksahikh](https://github.com/XIAA25)                                                 |
 | 韓國人  | [@維納斯女孩](https://github.com/VenusGirl)                                                |
 | 越南語  | [@vuongtuha](https://github.com/vuongtuha)                                            |
-| 土耳其  | [@geeeede](https://github.com/geeede)[@saurane](https://github.com/saurane)           |
+| 土耳其  | [@geeede](https://github.com/geeede)[@saurane](https://github.com/saurane)            |
 | 印尼   | [@吉格利洛](https://github.com/gigglylo)                                                  |
 | 德文   | [@Vulcanraven91](https://github.com/Vulcanraven91)                                    |
 | 日本人  | [@wany-哦](https://github.com/wany-oh)                                                 |
