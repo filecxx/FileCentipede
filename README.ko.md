@@ -36,7 +36,7 @@
 
 ![Add task](images/screenshot_add_task.png)![Add task](images/screenshot_add_task2.png)![Add task](images/screenshot_add_task3.png)![Add task](images/screenshot_add_task4.png)
 
-#### 작업 수정
+#### 작업 편집
 
 ![Edit task](images/screenshot_edit_task.png)![Edit task](images/screenshot_edit_task2.png)
 
@@ -90,7 +90,7 @@
 
 ## 브라우저 확장 스크린샷
 
-#### 비디오바
+#### 비디오 바
 
 ![Video bar](images/extension_video_bar.png)
 
