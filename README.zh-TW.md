@@ -194,7 +194,7 @@ FileU 的完整原始碼可以在「source_code」目錄中找到。
 | 印尼   | [@吉格利洛](https://github.com/gigglylo)                                                  |
 | 德文   | [@Vulcanraven91](https://github.com/Vulcanraven91)                                    |
 | 日本人  | [@wany-哦](https://github.com/wany-oh)                                                 |
-| 拋光   | [@魯諾霍克](https://github.com/RunoHawk)                                                  |
+| 波蘭語   | [@魯諾霍克](https://github.com/RunoHawk)                                                  |
 
 ## 開源函式庫
 
