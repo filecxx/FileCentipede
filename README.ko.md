@@ -190,7 +190,7 @@ FileU의 전체 소스 코드는 "source_code" 디렉터리에서 찾을 수 있
 | 네덜란드 사람 | [@크사히크](https://github.com/XIAA25)                                                |
 | 한국어     | [@비너스걸](https://github.com/VenusGirl)                                             |
 | 베트남어    | [@vuongtuha](https://github.com/vuongtuha)                                        |
-| 터키어     | [@geeeede](https://github.com/geeede)[@saurane](https://github.com/saurane)       |
+| 터키어     | [@geeede](https://github.com/geeede)[@saurane](https://github.com/saurane)        |
 | 인도네시아 인 | [@gigglylo](https://github.com/gigglylo)                                          |
 | 독일 사람   | [@Vulcanraven91](https://github.com/Vulcanraven91)                                |
 | 일본어     | [@wany-oh](https://github.com/wany-oh)                                            |
