@@ -190,7 +190,7 @@ File Centipede هو مدير تحميل/تنزيل ملفات الإنترنت �
 | هولندي            | [@كسائخ](https://github.com/XIAA25)                                                      |
 | الكورية           | [@فينوسجيرل](https://github.com/VenusGirl)                                               |
 | الفيتنامية        | [@vuongtuha](https://github.com/vuongtuha)                                               |
-| اللغة التركية     | [@geeeede](https://github.com/geeede)[@سوران](https://github.com/saurane)                |
+| اللغة التركية     | [@geeede](https://github.com/geeede)[@سوران](https://github.com/saurane)                 |
 | الاندونيسية       | [@gigglylo](https://github.com/gigglylo)                                                 |
 | ألماني            | [@فولكانرافين91](https://github.com/Vulcanraven91)                                       |
 | اليابانية         | [@wany-أوه](https://github.com/wany-oh)                                                  |
