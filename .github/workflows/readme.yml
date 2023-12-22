@@ -21,11 +21,6 @@ jobs:
         with:
           LANG: ko
 
-      - name: Adding README - 简体中文
-        uses: dephraiim/translate-readme@main
-        with:
-          LANG: zh-CN
-
       - name: Adding README - 繁體中文
         uses: dephraiim/translate-readme@main
         with:
@@ -50,11 +45,6 @@ jobs:
         uses: dephraiim/translate-readme@main
         with:
           LANG: ru
-
-      - name: Adding README - Latin
-        uses: dephraiim/translate-readme@main
-        with:
-          LANG: la
 
       - name: Adding README - 日本語
         uses: dephraiim/translate-readme@main
