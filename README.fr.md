@@ -190,7 +190,7 @@ Cela rendra le logiciel plus accessible aux personnes parlant des langues autres
 | Néerlandais          | [@Ksahikh](https://github.com/XIAA25)                                                     |
 | coréen               | [@VénusGirl](https://github.com/VenusGirl)                                                |
 | vietnamien           | [@vuongtuha](https://github.com/vuongtuha)                                                |
-| turc                 | [@geeeede](https://github.com/geeede)[@saurane](https://github.com/saurane)               |
+| turc                 | [@geeede](https://github.com/geeede)[@saurane](https://github.com/saurane)                |
 | indonésien           | [@gigglylo](https://github.com/gigglylo)                                                  |
 | Allemand             | [@Vulcanraven91](https://github.com/Vulcanraven91)                                        |
 | Japonais             | [@wany-oh](https://github.com/wany-oh)                                                    |
