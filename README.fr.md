@@ -102,7 +102,7 @@ Commanditaires :<http://www.filecxx.com/en_US/sponsors.html>
 
 ![Audios panel](images/extension_audios.png)
 
-## caractéristiques
+## features
 
 -   Protocole HTTP, HTTPS (les fonctionnalités de base telles que gzip, reprise, multi-connexions ne seront pas répertoriées.) 1.0
 -   FTP, protocole FTPS 1.0
@@ -184,13 +184,13 @@ Cela rendra le logiciel plus accessible aux personnes parlant des langues autres
 
 | Langue               | @                                                                                         |
 | :------------------- | :---------------------------------------------------------------------------------------- |
-| russe                | [@vanja-san](https://github.com/vanja-san)[@Den1704](https://github.com/Den1704)          |
+| russe                | [@vanja-san](https://github.com/vanja-san) [@Den1704](https://github.com/Den1704)         |
 | chinois traditionnel | [@ours0316](https://github.com/bear0316)[@postman1année](https://github.com/postman1year) |
 | Français             | [@Ksahikh](https://github.com/XIAA25)                                                     |
 | Néerlandais          | [@Ksahikh](https://github.com/XIAA25)                                                     |
 | coréen               | [@VénusGirl](https://github.com/VenusGirl)                                                |
 | vietnamien           | [@vuongtuha](https://github.com/vuongtuha)                                                |
-| turc                 | [@geeeede](https://github.com/geeede)[@saurane](https://github.com/saurane)               |
+| turc                 | [@geeede](https://github.com/geeede)[@saurane](https://github.com/saurane)                |
 | indonésien           | [@gigglylo](https://github.com/gigglylo)                                                  |
 | Allemand             | [@Vulcanraven91](https://github.com/Vulcanraven91)                                        |
 | Japonais             | [@wany-oh](https://github.com/wany-oh)                                                    |
