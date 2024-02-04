@@ -179,10 +179,163 @@
     "invalid_domain": {
         "message": "無効なドメイン。"
     },
+    "invalid_css_selector": {
+        "message": "Invalid css selector."
+    },
     "filter": {
         "message": "フィルター"
     },
     "filter_out": {
         "message": "フィルター実行"
+    },
+    "more": {
+        "message": "もっと"
+    },
+    "name": {
+        "message": "名"
+    },
+    "collector_mode": {
+        "message": "Collector Mode"
+    },
+    "record": {
+        "message": "Record"
+    },
+    "determined": {
+        "message": "Determined"
+    },
+    "uncertain": {
+        "message": "Uncertain"
+    },
+    "segments": {
+        "message": "Segments"
+    },
+    "hide_low_resolution": {
+        "message": "Hide low resolution"
+    },
+    "all": {
+        "message": "All"
+    },
+    "adverts": {
+        "message": "Adverts"
+    },
+    "adverts_detection": {
+        "message": "Adverts detection"
+    },
+    "resolution": {
+        "message": "Resolution"
+    },
+    "play_all": {
+        "message": "Play all"
+    },
+    "pause_all": {
+        "message": "Pause all"
+    },
+    "load_all": {
+        "message": "Load all"
+    },
+    "brute_force_search": {
+        "message": "Brute-force search"
+    },
+    "readme": {
+        "message": "Readme"
+    },
+    "help": {
+        "message": "Help"
+    },
+    "start": {
+        "message": "Start"
+    },
+    "stop": {
+        "message": "Stop"
+    },
+    "port": {
+        "message": "Port"
+    },
+    "action": {
+        "message": "Action"
+    },
+    "actions": {
+        "message": "Actions"
+    },
+    "are_u_sure": {
+        "message": "Are you sure?"
+    },
+    "crawler": {
+        "message": "Crawler"
+    },
+    "feature_not_implemented": {
+        "message": "This feature is currently reserved and has not been implemented yet."
+    },
+    "remove_low_quality_videos": {
+        "message": "Remove low quality videos"
+    },
+    "remove_failed_loading_videos": {
+        "message": "Remove failed loading videos"
+    },
+    "page_url": {
+        "message": "Page URL"
+    },
+    "file_size": {
+        "message": "File size"
+    },
+    "file_duration": {
+        "message": "File duration"
+    },
+    "playback_speed": {
+        "message": "Playback speed"
+    },
+    "video_duration": {
+        "message": "Video duration"
+    },
+    "video_source": {
+        "message": "Video source"
+    },
+    "read_from_cache": {
+        "message": "Read from cache"
+    },
+    "record_from_screen": {
+        "message": "Record from screen"
+    },
+    "progress": {
+        "message": "Progress"
+    },
+    "allow_external_messages": {
+        "message": "Allow external messages"
+    },
+    "example": {
+        "message": "Example"
+    },
+    "deep_analysis_text_": {
+        "message": "Enabling this option will perform a deep analysis of the webpage to find hidden video or audio resources,<br/> but at the cost of consuming more CPU resources.<br/> If the webpage has fewer scripts or low data interaction frequency,<br/> the additional consumption can be negligible."
+    },
+    "allow_external_messages_text_": {
+        "message": "Allows other extensions or JS scripts to send messages to this extension,<br/> typically used when this extension cannot capture media resources on a certain webpage,<br/> you can write JS scripts for that webpage and send the script's results to this extension,<br/> eliminating the need to separately develop frontend and download functionality."
+    },
+    "filename_rule_tips_": {
+        "message": "Uses CSS selector rules to retrieve the text of a specified element on the webpage as the preferred filename for media files in that domain.<br/> If retrieval fails, it will still use the title or og:title as the filename."
+    },
+    "download_manager_tip_": {
+        "message": "Default download manager used when downloading files."
+    },
+    "collector_mode_tip_": {
+        "message": "Records all media resources captured on webpages,<br/> and performs batch preview and filtering when necessary,<br/> reducing repetitive work."
+    },
+    "collector_notify_": {
+        "message": "Collector mode is only effective when the window is open; closing the window will lose all records.<br/> Due to browser limitations and website download chain rules, not all videos can be previewed.<br/> Some videos cannot be previewed but can be downloaded.<br/> Some videos cannot be previewed and cannot be downloaded."
+    },
+    "collector_mode_help_text_": {
+        "message": "In Collector mode, when opened, it initially lists all media resources obtained from the currently open tabs, and newly obtained ones will also be added to the Collector mode list. These records will disappear when the window is closed.<br/><br/>Note that due to browser limitations, when the number of videos exceeds 5000, the Referer HTTP header cannot be set, causing some resources on certain websites to be unpreviewable.<br/><br/>Browsers have limitations on HTTP concurrent connections, preventing too many videos from playing simultaneously and limiting the number of video elements that can be created (approximately 100 in Chrome), consuming a significant amount of memory and CPU resources.<br/><br/>Optimization: All previewed videos are dynamically loaded based on the scrollbar position; invisible videos are automatically removed and their snapshots saved. They will be recreated when visible again, causing intermittent pauses if 'Play All' is enabled and the network is slow.<br/><br/>Collector mode is currently in beta; feel free to provide feedback if you encounter any issues."
+    },
+    "settings_tip_": {
+        "message": "Detailed settings for the extension."
+    },
+    "select_element_tip_": {
+        "message": "Select elements on the webpage, set rules for obtaining filenames for media files in this domain, and record videos/audio, etc."
+    },
+    "ignore_this_site_tip_": {
+        "message": "Ignore this website when downloading files, use the browser's default download manager."
+    },
+    "preview_notify_": {
+        "message": "Due to browser limitations and website anti-download rules, not all videos can be previewed.<br/> Some videos cannot be previewed but can be downloaded.<br/> Some videos cannot be previewed and cannot be downloaded."
     }
 }

@@ -45,7 +45,7 @@
       "message": "分钟"
     },
     "text": {
-      "message": "文字"
+      "message": "文本"
     },
     "download_all": {
       "message": "下载全部"
@@ -179,10 +179,163 @@
     "invalid_domain": {
       "message": "无效的域名."
     },
+    "invalid_css_selector": {
+      "message": "无效的CSS选择器."
+    },
     "filter": {
       "message": "过滤"
     },
     "filter_out": {
       "message": "过滤掉"
+    },
+    "more": {
+      "message": "更多"
+    },
+    "name": {
+      "message": "名称"
+    },
+    "collector_mode": {
+      "message": "收藏家模式"
+    },
+    "record": {
+      "message": "录制"
+    },
+    "determined": {
+      "message": "已确定的"
+    },
+    "uncertain": {
+      "message": "不确定的"
+    },
+    "segments": {
+      "message": "片段"
+    },
+    "hide_low_resolution": {
+      "message": "隐藏低分辨率"
+    },
+    "all": {
+      "message": "全部"
+    },
+    "adverts": {
+      "message": "广告"
+    },
+    "adverts_detection": {
+      "message": "广告检测"
+    },
+    "resolution": {
+      "message": "分辨率"
+    },
+    "play_all": {
+      "message": "播放全部"
+    },
+    "pause_all": {
+      "message": "暂停全部"
+    },
+    "load_all": {
+      "message": "加载全部"
+    },
+    "brute_force_search": {
+      "message": "暴力搜索"
+    },
+    "readme": {
+      "message": "自述"
+    },
+    "help": {
+      "message": "帮助"
+    },
+    "start": {
+      "message": "开始"
+    },
+    "stop": {
+      "message": "停止"
+    },
+    "port": {
+      "message": "端口"
+    },
+    "action": {
+      "message": "行为"
+    },
+    "actions": {
+      "message": "行为"
+    },
+    "are_u_sure": {
+      "message": "你确定吗？"
+    },
+    "crawler": {
+      "message": "爬行器"
+    },
+    "feature_not_implemented": {
+      "message": "此功能目前保留, 尚未实施."
+    },
+    "remove_low_quality_videos": {
+      "message": "移除低质量视频"
+    },
+    "remove_failed_loading_videos": {
+      "message": "移除加载失败的视频"
+    },
+    "page_url": {
+      "message": "网页URL"
+    },
+    "file_size": {
+      "message": "文件大小"
+    },
+    "file_duration": {
+      "message": "文件时间长度"
+    },
+    "playback_speed": {
+      "message": "播放速度"
+    },
+    "video_duration": {
+      "message": "视频时长"
+    },
+    "video_source": {
+      "message": "视频源"
+    },
+    "read_from_cache": {
+      "message": "从缓存中读取"
+    },
+    "record_from_screen": {
+      "message": "从屏幕录制"
+    },
+    "progress": {
+      "message": "进度"
+    },
+    "allow_external_messages": {
+      "message": "允许外部消息"
+    },
+    "example": {
+      "message": "示例"
+    },
+    "deep_analysis_text_": {
+      "message": "启用该项会对网页进行深度分析以查找隐藏的视频或音频资源,<br/> 但是会以消耗更多CPU资源为代价.<br/> 如果网页中包含的脚本较少或者数据交互频率不高,<br/> 那么额外的消耗可以忽略不计."
+    },
+    "allow_external_messages_text_": {
+      "message": "允许其他扩展程序或者JS脚本给本扩展程序发送消息,<br/> 通常用于本扩展程序无法捕获某个网页的媒体资源时候,<br/> 可以针对该网页编写JS脚本然后将脚本获取到的结果发送给本扩展程序, <br/>而无需再单独开发前端和下载功能."
+    },
+    "filename_rule_tips_": {
+      "message": "使用CSS选择器规则获取网页中指定元素的文本作为该域下媒体文件的首选文件名.<br/>如果获取失败, 仍然会继续使用标题或者og:title来作为文件名."
+    },
+    "download_manager_tip_": {
+      "message": "下载文件时候默认使用的下载管理器."
+    },
+    "collector_mode_tip_": {
+      "message": "记录所有网页捕获到的媒体资源, 必要时候再进行批量的预览和筛选, 减少重复的工作."
+    },
+    "collector_notify_": {
+      "message": "收藏家模式只有在窗口开启时候才会有效, 关闭该窗口会丢失所有记录.<br/>由于浏览器的限制以及网站的下载链规则会导致并非所有视频都可以被预览.<br/>部分视频无法被预览, 但是可以被下载.<br/>部分视频既无法被预览, 也无法被下载."
+    },
+    "collector_mode_help_text_": {
+      "message": "收藏家模式在打开时候会首先列出当前所有标签页中已经获取到的媒体资源, 之后获取到的也会加入到收藏家模式列表中, 当窗口关闭时候这些记录都会消失.<br/><br/>需要注意, 由于浏览器的限制, 当视频数量超过5000时候无法再设置Referer HTTP 头, 会导致有一些网站的资源无法被预览. <br/><br/>浏览器对HTTP并发连接具有限制, 无法同时播放太多的视频，并且限制了创建video元素的数量(chrome下大约100个), 并且会消耗大量的内存和CPU资源.<br/><br/>优化: 所有预览的视频是根据滚动条位置动态加载的, 不可见的视频都会被自动移除, 并保存视频的截图, 再次可见时候又会自动创建, 网络不佳时候如果启动了 '播放全部' 会导致间断性的停顿. <br/><br/>收藏家模式目前属于beta版本, 有任何问题欢迎进行反馈.<br/>"
+    },
+    "settings_tip_": {
+      "message": "扩展程序的详细设置"
+    },
+    "select_element_tip_": {
+      "message": "选择网页中的元素, 对该域下媒体文件的文件名的获取规则设置, 录制视频/音频等."
+    },
+    "ignore_this_site_tip_": {
+      "message": "下载文件时忽略该网站, 使用浏览器默认的下载工具."
+    },
+    "preview_notify_": {
+      "message": "由于浏览器的限制以及网站的防下载规则会导致并非所有视频都可以被预览.<br/>部分视频无法被预览, 但是可以被下载.<br/>部分视频既无法被预览, 也无法被下载."
     }
 }
