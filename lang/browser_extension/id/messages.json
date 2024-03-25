@@ -12,10 +12,10 @@
         "message": "Magnet"
     },
     "type": {
-        "message": "tipe"
+        "message": "Tipe"
     },
     "length_duration": {
-        "message": "panjang / durasi / ukuran"
+        "message": "Panjang / Durasi / Ukuran"
     },
     "download": {
         "message": "Unduh"
@@ -24,10 +24,10 @@
         "message": "Batal"
     },
     "file": {
-        "message": "file"
+        "message": "File"
     },
     "files": {
-        "message": "file"
+        "message": "File"
     },
     "download_video": {
         "message": "Unduh video ini"
@@ -45,7 +45,7 @@
         "message": "Menit"
     },
     "text": {
-        "message": "teks"
+        "message": "Teks"
     },
     "download_all": {
         "message": "Unduh semua"
@@ -57,16 +57,16 @@
         "message": "salin"
     },
     "copy_addr_msg": {
-        "message": "Alamat telah disalin"
+        "message": "Alamat berhasil disalin"
     },
     "video_floating_bar": {
         "message": "Bar mengambang"
     },
     "enable": {
-        "message": "Nyalakan"
+        "message": "Aktifkan"
     },
     "disable": {
-        "message": "Matiakn"
+        "message": "Nonaktifkan"
     },
     "yes": {
         "message": "Ya"
@@ -78,25 +78,25 @@
         "message": "Gagal mengirim"
     },
     "browser": {
-        "message": "Peramban"
+        "message": "Browser"
     },
     "download_manager": {
         "message": "Pengelola unduhan"
     },
     "download_send_failed_message_prefix": {
-        "message": "Tidak dapat menghubung ke "
+        "message": "Tidak dapat terhubung ke "
     },
     "download_send_failed_message": {
-        "message": "baik tidak terpasang, atau tidak berjalan, pilih salah satu."
+        "message": "entah tidak diinstal, atau tidak berjalan, pilih operasi."
     },
     "recapture_address": {
-        "message": "Tangkap ulang alamat"
+        "message": "Ambil alamat ulang"
     },
     "recapture_address_msg_success": {
-        "message": "Penangkapan ulang berhasil, harap buka perangkat lunak dan pastikan itu sedang mengunduh."
+        "message": "Pengambilan alamat ulang berhasil, harap buka aplikasi dan pastikan sedang mengunduh."
     },
     "refresh_address_msg_content": {
-        "message": "Sebelum alamat ditangkap, jangan memuat ulang halaman saat ini, cari: "
+        "message": "Sebelum alamat diambil, jangan refresh halaman saat ini, temukan: "
     },
     "ignore_this_site": {
         "message": "Abaikan situs ini"
@@ -120,13 +120,13 @@
         "message": "Domain"
     },
     "settings": {
-        "message": "Peraturan"
+        "message": "Pengaturan"
     },
     "others": {
-        "message": "Lain"
+        "message": "Lainnya"
     },
     "preview": {
-        "message": "Tinjau"
+        "message": "Pratinjau"
     },
     "save": {
         "message": "Simpan"
@@ -138,7 +138,7 @@
         "message": "Edit"
     },
     "remove": {
-        "message": "Buang"
+        "message": "Hapus"
     },
     "clear": {
         "message": "Bersihkan"
@@ -156,7 +156,7 @@
         "message": "Layanan"
     },
     "service_password": {
-        "message": "Kata kunci layanan"
+        "message": "Kata sandi layanan"
     },
     "extension": {
         "message": "Ekstensi"
@@ -168,19 +168,19 @@
         "message": "Jangan unduh"
     },
     "capture_other_file_types": {
-        "message": "Tangkap tipe file lain"
+        "message": "Tangkap tipe file lainnya"
     },
     "file_unsuport_preview": {
-        "message": "Anda tidak dapat meninjau file ini"
+        "message": "Anda tidak dapat melihat pratinjau file ini"
     },
     "unsuport_m3u8_preview": {
-        "message": "Peramban web anda tidak mendukung pratinjau file m3u8."
+        "message": "Browser web anda tidak mendukung pratinjau file m3u8."
     },
     "invalid_domain": {
-        "message": "Domain tidak sah."
+        "message": "Domain tidak valid."
     },
     "invalid_css_selector": {
-        "message": "Invalid css selector."
+        "message": "Pemilih css tidak valid."
     },
     "filter": {
         "message": "Filter"
@@ -189,154 +189,154 @@
         "message": "Tersaring"
     },
     "more": {
-        "message": "More"
+        "message": "Lebih banyak lagi"
     },
     "name": {
-        "message": "Name"
+        "message": "Nama"
     },
     "collector_mode": {
-        "message": "Collector Mode"
+        "message": "Mode Kolektor"
     },
     "record": {
-        "message": "Record"
+        "message": "Rekam"
     },
     "determined": {
-        "message": "Determined"
+        "message": "Ditentukan"
     },
     "uncertain": {
-        "message": "Uncertain"
+        "message": "Tidak pasti"
     },
     "segments": {
-        "message": "Segments"
+        "message": "Segmen"
     },
     "hide_low_resolution": {
-        "message": "Hide low resolution"
+        "message": "Sembunyikan resolusi rendah"
     },
     "all": {
-        "message": "All"
+        "message": "Semua"
     },
     "adverts": {
-        "message": "Adverts"
+        "message": "Iklan"
     },
     "adverts_detection": {
-        "message": "Adverts detection"
+        "message": "Deteksi iklan"
     },
     "resolution": {
-        "message": "Resolution"
+        "message": "Resolusi"
     },
     "play_all": {
-        "message": "Play all"
+        "message": "Putar semua"
     },
     "pause_all": {
-        "message": "Pause all"
+        "message": "Jeda semua"
     },
     "load_all": {
-        "message": "Load all"
+        "message": "Muat semua"
     },
     "brute_force_search": {
-        "message": "Brute-force search"
+        "message": "Pencarian brute-force"
     },
     "readme": {
-        "message": "Readme"
+        "message": "Baca aku"
     },
     "help": {
-        "message": "Help"
+        "message": "Bantuan"
     },
     "start": {
-        "message": "Start"
+        "message": "Mulai"
     },
     "stop": {
-        "message": "Stop"
+        "message": "Berhenti"
     },
     "port": {
         "message": "Port"
     },
     "action": {
-        "message": "Action"
+        "message": "Aksi"
     },
     "actions": {
-        "message": "Actions"
+        "message": "Aksi"
     },
     "are_u_sure": {
-        "message": "Are you sure?"
+        "message": "Apa anda yakin?"
     },
     "crawler": {
         "message": "Crawler"
     },
     "feature_not_implemented": {
-        "message": "This feature is currently reserved and has not been implemented yet."
+        "message": "Fitur ini saat ini dicadangkan dan belum diimplementasikan."
     },
     "remove_low_quality_videos": {
-        "message": "Remove low quality videos"
+        "message": "Hapus video berkualitas rendah"
     },
     "remove_failed_loading_videos": {
-        "message": "Remove failed loading videos"
+        "message": "Hapus video yang gagal dimuat"
     },
     "page_url": {
-        "message": "Page URL"
+        "message": "Halaman URL"
     },
     "file_size": {
-        "message": "File size"
+        "message": "Ukuran file"
     },
     "file_duration": {
-        "message": "File duration"
+        "message": "Durasi file"
     },
     "playback_speed": {
-        "message": "Playback speed"
+        "message": "Kecepatan pemutaran"
     },
     "video_duration": {
-        "message": "Video duration"
+        "message": "Durasi video"
     },
     "video_source": {
-        "message": "Video source"
+        "message": "Sumber video"
     },
     "read_from_cache": {
-        "message": "Read from cache"
+        "message": "Baca dari cache"
     },
     "record_from_screen": {
-        "message": "Record from screen"
+        "message": "Rekam dari layar"
     },
     "progress": {
         "message": "Progress"
     },
     "allow_external_messages": {
-        "message": "Allow external messages"
+        "message": "Izinkan pesan eksternal"
     },
     "example": {
-        "message": "Example"
+        "message": "Contoh"
     },
 
     "deep_analysis_text_": {
-        "message": "Enabling this option will perform a deep analysis of the webpage to find hidden video or audio resources,<br/> but at the cost of consuming more CPU resources.<br/> If the webpage has fewer scripts or low data interaction frequency,<br/> the additional consumption can be negligible."
+        "message": "Mengaktifkan opsi ini akan melakukan analisis mendalam terhadap halaman web untuk menemukan sumber daya video atau audio yang tersembunyi,<br/> tetapi dengan mengorbankan sumber daya CPU yang lebih banyak.<br/> Jika halaman web memiliki skrip yang lebih sedikit atau frekuensi interaksi data yang rendah,<br/> konsumsi tambahan dapat diabaikan."
     },
     "allow_external_messages_text_": {
-        "message": "Allows other extensions or JS scripts to send messages to this extension,<br/> typically used when this extension cannot capture media resources on a certain webpage,<br/> you can write JS scripts for that webpage and send the script's results to this extension,<br/> eliminating the need to separately develop frontend and download functionality."
+        "message": "Mengizinkan ekstensi atau skrip JS lain untuk mengirim pesan ke ekstensi ini,<br/> biasanya digunakan ketika ekstensi ini tidak dapat mengambil sumber daya media di halaman web tertentu,<br/> anda dapat menulis skrip JS untuk halaman web tersebut dan mengirimkan hasil skrip ke ekstensi ini,<br/> menghilangkan kebutuhan untuk mengembangkan fungsionalitas frontend dan unduhan secara terpisah."
     },
     "filename_rule_tips_": {
-        "message": "Uses CSS selector rules to retrieve the text of a specified element on the webpage as the preferred filename for media files in that domain.<br/> If retrieval fails, it will still use the title or og:title as the filename."
+        "message": "Menggunakan aturan pemilih CSS untuk mengambil teks dari elemen tertentu di halaman web sebagai nama file pilihan untuk file media di domain tersebut.<br/> Jika pengambilan gagal, judul atau og:title masih akan digunakan sebagai nama file."
     },
     "download_manager_tip_": {
-        "message": "Default download manager used when downloading files."
+        "message": "Pengelola unduhan default yang digunakan saat mengunduh file."
     },
     "collector_mode_tip_": {
-        "message": "Records all media resources captured on webpages, and performs batch preview and filtering when necessary, reducing repetitive work."
+        "message": "Merekam semua sumber daya media yang diambil di halaman web,<br/> dan melakukan pratinjau batch dan pemfilteran bila diperlukan, <br/>mengurangi pekerjaan yang berulang."
     },
     "collector_notify_": {
-        "message": "Collector mode is only effective when the window is open; closing the window will lose all records.<br/> Due to browser limitations and website download chain rules, not all videos can be previewed.<br/> Some videos cannot be previewed but can be downloaded.<br/> Some videos cannot be previewed and cannot be downloaded."
+        "message": "Mode kolektor hanya efektif ketika jendela terbuka; menutup jendela akan menghilangkan semua rekaman.<br/> Karena keterbatasan browser dan aturan pengunduhan berantai pada situs web, tidak semua video dapat dipratinjau.<br/> Beberapa video tidak dapat dipratinjau tetapi dapat diunduh.<br/> Beberapa video tidak dapat dipratinjau dan tidak dapat diunduh."
     },
     "collector_mode_help_text_": {
-        "message": "In Collector mode, when opened, it initially lists all media resources obtained from the currently open tabs, and newly obtained ones will also be added to the Collector mode list. These records will disappear when the window is closed.<br/><br/>Note that due to browser limitations, when the number of videos exceeds 5000, the Referer HTTP header cannot be set, causing some resources on certain websites to be unpreviewable.<br/><br/>Browsers have limitations on HTTP concurrent connections, preventing too many videos from playing simultaneously and limiting the number of video elements that can be created (approximately 100 in Chrome), consuming a significant amount of memory and CPU resources.<br/><br/>Optimization: All previewed videos are dynamically loaded based on the scrollbar position; invisible videos are automatically removed and their snapshots saved. They will be recreated when visible again, causing intermittent pauses if 'Play All' is enabled and the network is slow.<br/><br/>Collector mode is currently in beta; feel free to provide feedback if you encounter any issues."
+        "message": "Dalam mode Kolektor, ketika dibuka, awalnya akan mencantumkan semua sumber daya media yang diperoleh dari tab yang sedang terbuka, dan sumber daya yang baru diperoleh juga akan ditambahkan ke daftar mode Kolektor. Catatan ini akan hilang ketika jendela ditutup.<br/><br/>Perhatikan bahwa karena keterbatasan browser, ketika jumlah video melebihi 5000, rujukan header HTTP tidak dapat disetel, menyebabkan beberapa sumber daya di situs web tertentu tidak dapat dipratinjau.<br/><br/>Browser memiliki batasan pada koneksi HTTP yang bersamaan, mencegah terlalu banyak video diputar secara bersamaan dan membatasi jumlah elemen video yang dapat dibuat (sekitar 100 di Chrome), sehingga menghabiskan banyak memori dan sumber daya CPU.<br/><br/>Optimasi: Semua video yang dipratinjau dimuat secara dinamis berdasarkan posisi bilah gulir; video yang tidak terlihat dihapus secara otomatis dan cuplikannya disimpan. Mereka akan dibuat ulang ketika terlihat kembali, sehingga menyebabkan jeda terputus-putus jika 'Putar Semua' diaktifkan dan jaringan lambat.<br/><br/>Mode kolektor saat ini dalam versi beta; jangan ragu untuk memberikan umpan balik jika anda mengalami masalah."
     },
     "settings_tip_": {
-        "message": "Detailed settings for the extension."
+        "message": "Pengaturan terperinci untuk ekstensi."
     },
     "select_element_tip_": {
-        "message": "Select elements on the webpage, set rules for obtaining filenames for media files in this domain, and record videos/audio, etc."
+        "message": "Pilih elemen di halaman web, tetapkan aturan untuk mendapatkan nama file untuk file media di domain ini, dan rekam video/audio, dll."
     },
     "ignore_this_site_tip_": {
-        "message": "Ignore this website when downloading files, use the browser's default download manager."
+        "message": "Abaikan situs web ini saat mengunduh file, gunakan pengelola unduhan bawaan browser."
     },
     "preview_notify_": {
-        "message": "Due to browser limitations and website anti-download rules, not all videos can be previewed.<br/> Some videos cannot be previewed but can be downloaded.<br/> Some videos cannot be previewed and cannot be downloaded."
+        "message": "Karena keterbatasan browser dan aturan anti-unduhan situs web, tidak semua video dapat dipratinjau.<br/> Beberapa video tidak dapat dipratinjau tetapi dapat diunduh.<br/> Beberapa video tidak dapat dipratinjau dan tidak dapat diunduh."
     }
 }

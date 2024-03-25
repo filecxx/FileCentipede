@@ -207,7 +207,7 @@ This will make the software more accessible to people who speak languages other 
 | 한국어         | [@VenusGirl](https://github.com/VenusGirl)
 | Tiếng Việt | [@vuongtuha](https://github.com/vuongtuha)
 | Türkçe     | [@geeede](https://github.com/geeede) [@saurane](https://github.com/saurane)
-| Indonesian     | [@gigglylo](https://github.com/gigglylo)
+| Indonesian     | [@gigglylo](https://github.com/gigglylo) Rangga S. Nugraha
 | Deutsch     | [@Vulcanraven91](https://github.com/Vulcanraven91)
 | 日本語     | [@wany-oh](https://github.com/wany-oh)
 | polski     | [@RunoHawk](https://github.com/RunoHawk)
