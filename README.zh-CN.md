@@ -60,7 +60,7 @@ File centipede 是一款一体化互联网文件上传/下载管理器、BitTorr
 
 ![Site rules](images/screenshot_site_rule.png)![Site rules](images/screenshot_site_rule2.png)
 
-#### 筛选
+#### 过滤器
 
 ![filter](images/screenshot_filter.png)
 
@@ -72,7 +72,7 @@ File centipede 是一款一体化互联网文件上传/下载管理器、BitTorr
 
 ![create_torrent](images/screenshot_create_torrent.png)
 
-#### 速度极限
+#### 速度限制
 
 ![Speed limit](images/screenshot_download_speed_limit.png)
 
@@ -105,56 +105,56 @@ File centipede 是一款一体化互联网文件上传/下载管理器、BitTorr
 ## 特征
 
 -   HTTP、HTTPS协议（gzip、断点续传、多连接等基本功能不再列出） 1.0
--   FTP、FTPS协议1.0
--   磁铁，HASH地址1.0
+-   FTP、FTPS协议 1.0
+-   magnet、HASH 地址 1.0
 -   BT 1.0
 -   其他自定义协议如迅雷、快车、qqdl 1.0
--   JSON格式的地址1.0
+-   JSON 格式的地址 1.0
 -   m3u8 流任务 1.0
--   流任务AES​​-128解密（尚不支持SAMPLE-AES解密）1.0
+-   流任务 AES​​-128 解密（尚不支持SAMPLE-AES解密）1.0
 -   HTTP cookie、标头、用户代理以及用户自定义 1.0
--   Torrent 种子限制 1.0
+-   torrent 种子限制 1.0
 -   动态编辑传输任务配置 1.0
--   防蛭1.0
--   刷新过期地址1.0
--   目录1.0
--   限制下载、上传速度1.0
+-   防蛭 1.0
+-   刷新过期地址 1.0
+-   目录 1.0
+-   限制下载、上传速度 1.0
 -   创建自定义地址（filec、fileu）1.0
--   代理管理1.0
--   过滤器定制1.0
--   追踪器管理1.0
--   任务详情1.0
--   从任务 1.0 导出 torrent
--   多语言1.0
+-   代理管理 1.0
+-   过滤器定制 1.0
+-   追踪器管理 1.0
+-   任务详情 1.0
+-   从任务导出 torrent 1.0 
+-   多语言 1.0
 -   队列或无限并发设置 1.0
 -   Chrome 浏览器集成 1.0
 -   火狐浏览器集成1.0
--   抓取网页视频、音频1.0
--   查找网页 1.0 中的所有磁铁
--   翻译工具1.0
--   HTTP工具1.0
--   URI编码/解码工具1.0
--   Base64编码/解码工具1.0
--   正则表达式测试工具1.0
+-   抓取网页视频、音频 1.0
+-   从网页中查找所有的 magnets 1.0
+-   翻译工具 1.0
+-   HTTP 工具 1.0
+-   URI 编码/解码工具 1.0
+-   Base64 编码/解码工具 1.0
+-   正则表达式测试工具 1.0
 -   创建种子 1.0
--   激流转磁力工具 1.0
--   磁铁转Torrent工具1.0
--   文件合并工具1.0
--   统计1.0
--   下载网页1.6的所有链接
--   SSH、SFTP协议2.0
--   卷曲、wget、aria2、axel 命令行 2.0
--   WebDAV协议2.0
--   上传文件2.0
--   上传目录2.0
--   下载目录2.0
+-   torrent 转 magnet 工具 1.0
+-   magnet 转 torrent 工具 1.0
+-   文件合并工具 1.0
+-   统计 1.0
+-   下载网页的所有链接 1.6
+-   SSH、SFTP协议 2.0
+-   curl、wget、aria2、axel 命令行 2.0
+-   WebDAV 协议 2.0
+-   上传文件 2.0
+-   上传目录 2.0
+-   下载目录 2.0
 -   全功能 WebDAV 文件管理器 2.0
 -   全功能 FTP 文件管理器 2.0
--   全功能SSH(sftp)文件管理器2.0
--   文件浏览器持久缓存2.0
--   网站规则2.1
--   校验和工具2.3
--   远程下载2.6
+-   全功能 SSH(sftp) 文件管理器 2.0
+-   文件浏览器持久缓存 2.0
+-   网站规则 2.1
+-   校验和工具 2.3
+-   远程下载 2.6
 
 ## 源代码
 
@@ -198,4 +198,4 @@ FileU 的完整源代码可以在“source_code”目录中找到。
 
 ## 开源库
 
-[促进](https://www.boost.org)[Qt](https://qt.io/)[自由种子](https://www.libtorrent.org)
+[boost](https://www.boost.org) [Qt](https://qt.io/) [libtorrent](https://www.libtorrent.org)
