@@ -1,4 +1,4 @@
-[영어](./README.md)\|[중국어 간체](./README.zh-CN.md)\|[중국어 번체](./README.zh-TW.md)\|[한국어](./README.ko.md)\|[아니요](./README.hi.md)\|[아라비아 말](./README.ar.md)\|[프랑스 국민](./README.fr.md)\|[러시아인](./README.ru.md)\|[라틴어](./README.la.md)\|[일본어](./README.ja.md)\|[이탈리아 사람](./README.it.md)\|[독일 사람](./README.de.md)\|[스페인의](./README.es.md)\|[스웨덴어](./README.sv.md)\|[페르시아어](./README.fa.md)\|[터키어](./README.tr-TR.md)
+[영어](./README.md)\|[중국어 간체](./README.zh-CN.md)\|[중국어 번체](./README.zh-TW.md)\|[한국어](./README.ko.md)\|[힌디어](./README.hi.md)\|[아랍어](./README.ar.md)\|[프랑스어](./README.fr.md)\|[러시아어](./README.ru.md)\|[라틴어](./README.la.md)\|[일본어](./README.ja.md)\|[이탈리아어](./README.it.md)\|[독일어](./README.de.md)\|[스페인어](./README.es.md)\|[스웨덴어](./README.sv.md)\|[페르시아어](./README.fa.md)\|[튀르키예어](./README.tr-TR.md)
 
 ![image](https://user-images.githubusercontent.com/100348948/165334090-0b1a6f28-554e-484b-9946-1ffef010fa78.png)
 
@@ -10,7 +10,7 @@
   <img src="./style/images/logo_128.png" width="128" alt="File Centipede Icon" />
 </a>
 
-파일 센티피드는 올인원 인터넷 파일 업로드/다운로드 관리자, BitTorrent 클라이언트, WebDAV 클라이언트, FTP 클라이언트 및 SSH 클라이언트입니다.
+FileCentipede는 올인원 인터넷 파일 업로드/다운로드 관리자, BitTorrent 클라이언트, WebDAV 클라이언트, FTP 클라이언트 및 SSH 클라이언트입니다.
 
 빠르고 사용자 정의가 가능하며 사용자 친화적으로 설계되었습니다.
 
@@ -90,7 +90,7 @@
 
 ## 브라우저 확장 스크린샷
 
-#### 비디오바
+#### 비디오 표시줄
 
 ![Video bar](images/extension_video_bar.png)
 
@@ -166,7 +166,7 @@ FileU의 전체 소스 코드는 "source_code" 디렉터리에서 찾을 수 있
 
 ("UI" 디렉터리의 .sml 파일에서 볼 수 있음)
 
-## 번역하다
+## 번역
 
 이 소프트웨어가 마음에 드시면 소프트웨어에 제공된 번역 도구를 사용하여 다른 언어로 번역하시면 도움이 될 수 있습니다.
 
@@ -184,17 +184,17 @@ FileU의 전체 소스 코드는 "source_code" 디렉터리에서 찾을 수 있
 
 | 언어      | @                                                                                 |
 | :------ | :-------------------------------------------------------------------------------- |
-| 러시아인    | [@반자산](https://github.com/vanja-san)[@덴1704](https://github.com/Den1704)          |
-| 중국어 번체  | [@bear0316](https://github.com/bear0316)[@우체부1년](https://github.com/postman1year) |
-| 프랑스 국민  | [@크사히크](https://github.com/XIAA25)                                                |
-| 네덜란드 사람 | [@크사히크](https://github.com/XIAA25)                                                |
-| 한국어     | [@비너스걸](https://github.com/VenusGirl)                                             |
+| 러시아어    | [@vanja-san @Den1704](https://github.com/vanja-san)[@덴1704](https://github.com/Den1704)          |
+| 중국어 번체  | [@bear0316 @postman1year](https://github.com/bear0316)[@우체부1년](https://github.com/postman1year) |
+| 프랑스어  | [@XIAA25](https://github.com/XIAA25)                                                |
+| 네덜란드어 | [@XIAA25](https://github.com/XIAA25)                                                |
+| 한국어     | [@VenusGirl](https://github.com/VenusGirl)                                             |
 | 베트남어    | [@vuongtuha](https://github.com/vuongtuha)                                        |
-| 터키어     | [@geeeede](https://github.com/geeede)[@saurane](https://github.com/saurane)       |
-| 인도네시아 인 | [@gigglylo](https://github.com/gigglylo)                                          |
-| 독일 사람   | [@Vulcanraven91](https://github.com/Vulcanraven91)                                |
+| 튀르키예어     | [@geeede @saurane](https://github.com/geeede)[@saurane](https://github.com/saurane)       |
+| 인도네시아어 | [@gigglylo Rangga S. Nugraha](https://github.com/gigglylo)                                          |
+| 독일어   | [@Vulcanraven91](https://github.com/Vulcanraven91)                                |
 | 일본어     | [@wany-oh](https://github.com/wany-oh)                                            |
-| 광택      | [@루노호크](https://github.com/RunoHawk)                                              |
+| 폴란드어      | [@RunoHawk](https://github.com/RunoHawk)                                              |
 
 ## 오픈소스 라이브러리
 
