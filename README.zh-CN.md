@@ -105,7 +105,7 @@ File centipede 是一款一体化互联网文件上传/下载管理器、BitTorr
 ## 特征
 
 -   HTTP、HTTPS协议（gzip、断点续传、多连接等基本功能不再列出） 1.0
--   FTP、FTPS协议1.0
+-   FTP、FTPS协议 1.0
 -   magnet、HASH 地址 1.0
 -   BT 1.0
 -   其他自定义协议如迅雷、快车、qqdl 1.0
@@ -134,17 +134,17 @@ File centipede 是一款一体化互联网文件上传/下载管理器、BitTorr
 -   翻译工具 1.0
 -   HTTP 工具 1.0
 -   URI 编码/解码工具 1.0
--   Base64 编码/解码工具1.0
+-   Base64 编码/解码工具 1.0
 -   正则表达式测试工具 1.0
 -   创建种子 1.0
 -   torrent 转 magnet 工具 1.0
--   magnet 转 torrent 工具1.0
+-   magnet 转 torrent 工具 1.0
 -   文件合并工具 1.0
 -   统计 1.0
 -   下载网页的所有链接 1.6
 -   SSH、SFTP协议 2.0
 -   curl、wget、aria2、axel 命令行 2.0
--   WebDAV协议 2.0
+-   WebDAV 协议 2.0
 -   上传文件 2.0
 -   上传目录 2.0
 -   下载目录 2.0
