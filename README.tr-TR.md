@@ -217,3 +217,4 @@ Bu, yazılımın orijinal olarak yazıldığı dilden farklı dilleri konuşan k
 [boost](https://www.boost.org)
 [Qt](https://qt.io/)
 [libtorrent](https://www.libtorrent.org)
+merhaba ben ibrahim yılmaz
