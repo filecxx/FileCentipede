@@ -10,7 +10,7 @@
   <img src="./style/images/logo_128.png" width="128" alt="File Centipede Icon" />
 </a>
 
-File millepiedi è un gestore di caricamento/download di file Internet all-in-one, client BitTorrent, client WebDAV, client FTP e client SSH.
+File Centipede è un gestore di caricamento/download di file Internet all-in-one, client BitTorrent, client WebDAV, client FTP e client SSH.
 
 È progettato per essere veloce, personalizzabile e facile da usare.
 
@@ -26,9 +26,9 @@ Pannello di controllo:<https://w.filecxx.com>
 
 Sponsor:<http://www.filecxx.com/en_US/sponsors.html>
 
-## Immagine dello schermo
+## Screenshots
 
-#### File millepiedi
+#### File Centipede
 
 ![File Centipede](images/screenshot_software.png)![File Centipede](images/screenshot_software2.png)![File Centipede](images/screenshot_software_file_browser_webdav.png)![File Centipede](images/screenshot_software_file_browser_ssh.png)![File Centipede](images/screenshot_software_file_browser_ftp.png)![File Centipede](images/screenshot_software_file_browser_add.png)![File Centipede](images/screenshot_software_file_browser_log.png)
 
@@ -40,7 +40,7 @@ Sponsor:<http://www.filecxx.com/en_US/sponsors.html>
 
 ![Edit task](images/screenshot_edit_task.png)![Edit task](images/screenshot_edit_task2.png)
 
-#### Conferma la finestra di dialogo
+#### Schermata di conferma
 
 ![torrent confirm](images/screenshot_torrent_confirm.png)![http confirm](images/screenshot_http_confirm.png)![links confirm](images/screenshot_links_confirm.png)
 
@@ -84,7 +84,7 @@ Sponsor:<http://www.filecxx.com/en_US/sponsors.html>
 
 ![HTTP tool](images/screenshot_http_tool.png)
 
-#### Strumento di somma di controllo
+#### Strumento di somma di controllo (checksum)
 
 ![Checksum tool](images/screenshot_checksum_tool.png)
 
@@ -102,11 +102,11 @@ Sponsor:<http://www.filecxx.com/en_US/sponsors.html>
 
 ![Audios panel](images/extension_audios.png)
 
-## caratteristiche
+## Caratteristiche
 
 -   HTTP, protocollo HTTPS (funzionalità di base come gzip, ripristino, connessioni multiple non saranno elencate.) 1.0
 -   FTP, protocollo FTPS 1.0
--   Magnete, indirizzo HASH 1.0
+-   Magnet, indirizzo HASH 1.0
 -   BitTorrent 1.0
 -   Altri protocolli personalizzati come thunder, flashget, qqdl 1.0
 -   Indirizzo in formato JSON 1.0
@@ -115,12 +115,12 @@ Sponsor:<http://www.filecxx.com/en_US/sponsors.html>
 -   Cookie HTTP, header, user-agent con personalizzazione dell'utente 1.0
 -   Limite seeding torrent 1.0
 -   Modifica dinamicamente la configurazione dell'attività di trasferimento 1.0
--   Anti sanguisughe 1.0
+-   Anti leeches 1.0
 -   Aggiorna indirizzo scaduto 1.0
 -   Cataloghi 1.0
 -   Limita download, velocità di caricamento 1.0
 -   Crea indirizzo personalizzato (filec, fileu) 1.0
--   Gestione delle deleghe 1.0
+-   Gestione proxy 1.0
 -   Filtro personalizza 1.0
 -   Gestione del tracker 1.0
 -   Dettagli attività 1.0
@@ -130,15 +130,15 @@ Sponsor:<http://www.filecxx.com/en_US/sponsors.html>
 -   Integrazione del browser Chrome 1.0
 -   Integrazione del browser Firefox 1.0
 -   Cattura video, audio dalla pagina web 1.0
--   Trova tutti i magneti dalla pagina web 1.0
+-   Trova tutti i magnet dalla pagina web 1.0
 -   Strumento di traduzione 1.0
 -   Strumento HTTP 1.0
 -   Strumento di codifica/decodifica URI 1.0
 -   Strumento di codifica/decodifica Base64 1.0
 -   Strumento di test Regex 1.0
 -   Crea torrent 1.0
--   Strumento da torrent a magnete 1.0
--   Strumento da magnete a torrent 1.0
+-   Strumento da torrent a magnet 1.0
+-   Strumento da magnet a torrent 1.0
 -   Strumento di unione file 1.0
 -   Statistiche 1.0
 -   Scarica tutti i link dalla pagina web 1.6
@@ -146,10 +146,10 @@ Sponsor:<http://www.filecxx.com/en_US/sponsors.html>
 -   curl, wget, aria2, riga di comando axel 2.0
 -   Protocollo WebDAV 2.0
 -   Carica file 2.0
--   Carica directory 2.0
--   Scarica directory 2.0
+-   Carica cartella 2.0
+-   Scarica cartella 2.0
 -   File manager WebDAV completo 2.0
--   File manager completo FTP(s) 2.0
+-   File manager FTP(s) completo 2.0
 -   File manager SSH (sftp) completo 2.0
 -   File browser cache persistenti 2.0
 -   Regole del sito 2.1
@@ -162,11 +162,11 @@ Il codice sorgente completo di FileU può essere trovato nella directory "source
 
 È solo a scopo dimostrativo, le librerie dipendenti utilizzate nel progetto non sono open source.
 
-Ha dimostrato che la scrittura di interfacce utente in C++ potrebbe essere notevolmente più semplice rispetto a HTML e JavaScript, senza ridurre le prestazioni.
+È dimostrato che la scrittura di interfacce utente in C++ potrebbe essere notevolmente più semplice rispetto a HTML e JavaScript, senza ridurre le prestazioni.
 
 (come visto nei file .sml nella directory "UI").
 
-## Tradurre
+## Come tradurre
 
 Se ti piace questo software, puoi aiutare utilizzando lo strumento di traduzione fornito nel software per tradurlo in altre lingue.
 
@@ -174,9 +174,9 @@ Ciò renderà il software più accessibile alle persone che parlano lingue diver
 
 ## File di lingua
 
--   Sito web: "lingua/sito web/\*.lang"
--   Software: "lang/software/\*.lang"
--   Estensione del browser: "lang/browser_extension/\*.lang"
+-   Sito web: "lang/website/*.lang"
+-   Software: "lang/software/*.lang"
+-   Estensione del browser: "lang/browser_extension/*.lang"
 
 #### Come tradurre il sito web?
 
@@ -193,6 +193,6 @@ Ciò renderà il software più accessibile alle persone che parlano lingue diver
 | Turco               | [@geeeee](https://github.com/geeede)                                                      |
 | indonesiano         | [@gigglylo](https://github.com/gigglylo)                                                  |
 
-## Opensource libraries
+## Librerie Opensource
 
-[aumento](https://www.boost.org)[Qt](https://qt.io/)[libtorrent](https://www.libtorrent.org)
+[boost](https://www.boost.org) [Qt](https://qt.io/) [libtorrent](https://www.libtorrent.org)
