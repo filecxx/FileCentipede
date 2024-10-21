@@ -87,7 +87,7 @@
     "message": "Filtrele"
   },
   "file_unsuport_preview": {
-    "message": "Bu dosyayı ön izleyemezsiniz"
+    "message": "Bu dosyayı önizleyemezsiniz"
   },
   "no": {
     "message": "Hayır"
@@ -183,159 +183,159 @@
     "message": "Evet"
   },
   "preview": {
-    "message": "Ön izle"
+    "message": "Önizle"
   },
   "add": {
     "message": "Ekle"
   },
   "more": {
-    "message": "More"
+    "message": "Daha fazla"
   },
   "name": {
-    "message": "Name"
+    "message": "İsim"
   },
   "collector_mode": {
-    "message": "Collector Mode"
+    "message": "Toplayıcı Modu"
   },
   "record": {
-    "message": "Record"
+    "message": "Kayıt"
   },
   "determined": {
-    "message": "Determined"
+    "message": "Belirlenmiş"
   },
   "uncertain": {
-    "message": "Uncertain"
+    "message": "Belirsiz"
   },
   "segments": {
-    "message": "Segments"
+    "message": "Segmentler"
   },
   "hide_low_resolution": {
-    "message": "Hide low resolution"
+    "message": "Düşük çözünürlüğü gizle"
   },
   "all": {
-    "message": "All"
+    "message": "Tümü"
   },
   "adverts": {
-    "message": "Adverts"
+    "message": "Reklamlar"
   },
   "adverts_detection": {
-    "message": "Adverts detection"
+    "message": "Reklam algılama"
   },
   "resolution": {
-    "message": "Resolution"
+    "message": "Çözünürlük"
   },
   "play_all": {
-    "message": "Play all"
+    "message": "Hepsini oynat"
   },
   "pause_all": {
-    "message": "Pause all"
+    "message": "Tümünü duraklat"
   },
   "load_all": {
-    "message": "Load all"
+    "message": "Tümünü yükle"
   },
   "brute_force_search": {
-    "message": "Brute-force search"
+    "message": "Kaba kuvvetle arama"
   },
   "readme": {
-    "message": "Readme"
+    "message": "Beni oku"
   },
   "help": {
-    "message": "Help"
+    "message": "Yardım"
   },
   "start": {
-    "message": "Start"
+    "message": "Başlangıç"
   },
   "stop": {
-    "message": "Stop"
+    "message": "Dur"
   },
   "port": {
     "message": "Port"
   },
   "action": {
-    "message": "Action"
+    "message": "Eylem"
   },
   "actions": {
-    "message": "Actions"
+    "message": "Eylemler"
   },
   "are_u_sure": {
-    "message": "Are you sure?"
+    "message": "Emin misin?"
   },
   "crawler": {
-    "message": "Crawler"
+    "message": "Paletli"
   },
   "feature_not_implemented": {
-    "message": "This feature is currently reserved and has not been implemented yet."
+    "message": "Bu özellik şu anda rezerve edilmiştir ve henüz uygulanmamıştır."
   },
   "remove_low_quality_videos": {
-    "message": "Remove low quality videos"
+    "message": "Düşük kaliteli videoları kaldırın"
   },
   "remove_failed_loading_videos": {
-    "message": "Remove failed loading videos"
+    "message": "Başarısız yükleme videolarını kaldırın"
   },
   "page_url": {
-    "message": "Page URL"
+    "message": "Sayfa URL'si"
   },
   "file_size": {
-    "message": "File size"
+    "message": "Dosya boyutu"
   },
   "file_duration": {
-    "message": "File duration"
+    "message": "Dosya süresi"
   },
   "playback_speed": {
-    "message": "Playback speed"
+    "message": "Oynatma hızı"
   },
   "video_duration": {
-    "message": "Video duration"
+    "message": "Video süresi"
   },
   "video_source": {
-    "message": "Video source"
+    "message": "Video kaynağı"
   },
   "read_from_cache": {
-    "message": "Read from cache"
+    "message": "Önbellekten okuma"
   },
   "record_from_screen": {
-    "message": "Record from screen"
+    "message": "Ekrandan kayıt"
   },
   "progress": {
-    "message": "Progress"
+    "message": "İlerleme"
   },
   "allow_external_messages": {
-    "message": "Allow external messages"
+    "message": "Harici mesajlara izin ver"
   },
   "example": {
-    "message": "Example"
+    "message": "Örnek"
   },
   "deep_analysis_text_": {
-    "message": "Enabling this option will perform a deep analysis of the webpage to find hidden video or audio resources,<br/> but at the cost of consuming more CPU resources.<br/> If the webpage has fewer scripts or low data interaction frequency,<br/> the additional consumption can be negligible."
+    "message": "Bu seçeneğin etkinleştirilmesi, gizli video veya ses kaynaklarını bulmak için web sayfasının derinlemesine bir analizini gerçekleştirecektir.<br/> ancak bunun bedeli daha fazla CPU kaynağı tüketmektir.<br/> Web sayfasında daha az betik veya düşük veri etkileşim sıklığı varsa,<br/> ek tüketim önemsiz olabilir."
   },
   "allow_external_messages_text_": {
-    "message": "Allows other extensions or JS scripts to send messages to this extension,<br/> typically used when this extension cannot capture media resources on a certain webpage,<br/> you can write JS scripts for that webpage and send the script's results to this extension,<br/> eliminating the need to separately develop frontend and download functionality."
+    "message": "Diğer uzantıların veya JS komut dosyalarının bu uzantıya mesaj göndermesine izin verir,<br/> genellikle bu uzantı belirli bir web sayfasındaki medya kaynaklarını yakalayamadığında kullanılır,<br/> Bu web sayfası için JS komut dosyaları yazabilir ve komut dosyasının sonuçlarını bu uzantıya gönderebilirsiniz,<br/> ön uç ve indirme işlevlerini ayrı ayrı geliştirme ihtiyacını ortadan kaldırır."
   },
   "filename_rule_tips_": {
-    "message": "Uses CSS selector rules to retrieve the text of a specified element on the webpage as the preferred filename for media files in that domain.<br/> If retrieval fails, it will still use the title or og:title as the filename."
+    "message": "Web sayfasındaki belirli bir öğenin metnini, o etki alanındaki medya dosyaları için tercih edilen dosya adı olarak almak için CSS seçici kurallarını kullanır.<br/> Alım başarısız olursa, dosya adı olarak başlık veya og:title kullanılır."
   },
   "download_manager_tip_": {
-    "message": "Default download manager used when downloading files."
+    "message": "Dosya indirirken kullanılan varsayılan indirme yöneticisi."
   },
   "collector_mode_tip_": {
-    "message": "Records all media resources captured on webpages,<br/> and performs batch preview and filtering when necessary,<br/> reducing repetitive work."
+    "message": "Web sayfalarında yakalanan tüm medya kaynaklarını kaydeder,<br/> ve gerektiğinde toplu önizleme ve filtreleme gerçekleştirir,<br/> tekrarlayan işlerin azaltılması."
   },
   "collector_notify_": {
-    "message": "Collector mode is only effective when the window is open; closing the window will lose all records.<br/> Due to browser limitations and website download chain rules, not all videos can be previewed.<br/> Some videos cannot be previewed but can be downloaded.<br/> Some videos cannot be previewed and cannot be downloaded."
+    "message": "Toplayıcı modu yalnızca pencere açıkken etkilidir; pencerenin kapatılması tüm kayıtları kaybedecektir.<br/> Tarayıcı sınırlamaları ve web sitesi indirme zinciri kuralları nedeniyle, tüm videolar önizlenemez.<br/> Bazı videolar önizlenemez ancak indirilebilir.<br/> Bazı videolar önizlenemez ve indirilemez."
   },
   "collector_mode_help_text_": {
-    "message": "In Collector mode, when opened, it initially lists all media resources obtained from the currently open tabs, and newly obtained ones will also be added to the Collector mode list. These records will disappear when the window is closed.<br/><br/>Note that due to browser limitations, when the number of videos exceeds 5000, the Referer HTTP header cannot be set, causing some resources on certain websites to be unpreviewable.<br/><br/>Browsers have limitations on HTTP concurrent connections, preventing too many videos from playing simultaneously and limiting the number of video elements that can be created (approximately 100 in Chrome), consuming a significant amount of memory and CPU resources.<br/><br/>Optimization: All previewed videos are dynamically loaded based on the scrollbar position; invisible videos are automatically removed and their snapshots saved. They will be recreated when visible again, causing intermittent pauses if 'Play All' is enabled and the network is slow.<br/><br/>Collector mode is currently in beta; feel free to provide feedback if you encounter any issues."
+    "message": "Collector modu açıldığında, başlangıçta açık sekmelerden elde edilen tüm medya kaynaklarını listeler ve yeni elde edilenler de Collector modu listesine eklenir.<br/><br/>Bu kayıtlar, pencere kapatıldığında kaybolur.<br/><br/>Tarayıcı sınırlamaları nedeniyle, video sayısı 5000'i aştığında, Referer HTTP başlığı ayarlanamaz ve bu da bazı web sitelerindeki kaynakların önizlenememesine neden olur.<br/><br/>Tarayıcılar, HTTP eşzamanlı bağlantılarına sınırlama getirir, bu da aynı anda çok fazla videonun oynatılmasını engeller ve video elemanlarının oluşturulabileceği sayıyı sınırlar (Chrome'da yaklaşık 100), bu da önemli miktarda bellek ve CPU kaynağı tüketir.<br/><br/>Optimizasyon: Önizlenen tüm videolar, kaydırma çubuğu pozisyonuna göre dinamik olarak yüklenir; görünmeyen videolar otomatik olarak kaldırılır ve anlık görüntüleri kaydedilir.<br/><br/>Görünür hale geldiklerinde yeniden oluşturulurlar, eğer 'Tümünü Oynat' etkinleştirilirse ve ağ yavaşsa aralıklı duraklamalar olabilir.<br/><br/>Collector modu şu anda beta sürümündedir; herhangi bir sorunla karşılaşırsanız geri bildirimde bulunmaktan çekinmeyin."
   },
   "settings_tip_": {
-    "message": "Detailed settings for the extension."
+    "message": "Uzantı için ayrıntılı ayarlar."
   },
   "select_element_tip_": {
-    "message": "Select elements on the webpage, set rules for obtaining filenames for media files in this domain, and record videos/audio, etc."
+    "message": "Web sayfasındaki öğeleri seçin, bu etki alanındaki medya dosyalarının dosya adlarını almak için kurallar belirleyin ve video/ses vb. kaydedin."
   },
   "ignore_this_site_tip_": {
-    "message": "Ignore this website when downloading files, use the browser's default download manager."
+    "message": "Dosya indirirken bu web sitesini dikkate almayın, tarayıcının varsayılan indirme yöneticisini kullanın."
   },
   "preview_notify_": {
-    "message": "Due to browser limitations and website anti-download rules, not all videos can be previewed.<br/> Some videos cannot be previewed but can be downloaded.<br/> Some videos cannot be previewed and cannot be downloaded."
+    "message": "Tarayıcı sınırlamaları ve web sitelerinin indirme karşıtı kuralları nedeniyle, tüm videolar önizlenemeyebilir.<br/> Bazı videolar önizlenemeyebilir ancak indirilebilir.<br/> Bazı videolar ise ne önizlenebilir ne de indirilebilir."
   }
 }
