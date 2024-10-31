@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Buat alamat - File Centipede</title>
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../../style/base.css">
+    <link rel="stylesheet" href="../../style/highlight.monokai.css">
+    <script src="../../script/highlight.pack.js"></script>
+    <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "dk9clgn4o4");
+</script> 
+
+</head>
+<body>
+
+<div class="central">
+    <div class="nav">
+    <div class="links_">
+        <a class="tool_button home_" href="../index.html">Beranda</a>
+        <a class="tool_button features_" href="../index.html#features">Fitur</a>
+        <a class="tool_button download_" href="../download.html">Unduh</a>
+        <a class="tool_button screenshot_" href="../screenshot.html">Tangkapan layar</a>
+        <a class="tool_button user_reviews_" href="../index.html#user_reviews">Ulasan pengguna</a>
+        <a class="tool_button documentation_" href="../documentation.html">Dokumentasi</a>
+    </div>
+</div>
+    <div class="header">
+    <div class="top_">
+        <a href="http://filecxx.com" class="logo_"></a>
+        <div class="name_">
+            <h1><a href="http://filecxx.com">File Centipede</a></h1>
+            <div class="text_"> - Since 2022</div>
+        </div>
+        <div class="languages_">
+            <div class="current_">Bahasa Inggris</div>
+            <div class="items_">
+                <a class="item_" href="/en_US/index.html">English</a>
+                <a class="item_" href="/zh_CN/index.html">简体中文</a>
+                <a class="item_" href="/zh_TW/index.html">繁體中文</a>
+                <a class="item_" href="/ru_RU/index.html">Русский</a>
+                <a class="item_" href="/ko_KR/index.html">한국어</a>
+                <a class="item_" href="/de_DE/index.html">Deutsch</a>
+                <a class="item_" href="/id_ID/index.html">Indonesia</a>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="body">
+        <div class="section">
+            <h1>Buat alamat</h1>
+        </div>
+
+        <div class="section">
+            <h2>Javascript</h2>
+            <p>Jika Anda menjalankan sebuah situs web.</p>
+            <p>Sisipkan skrip ini ke dalam halaman web Anda, atau masukkan kode skrip ke dalam halaman web Anda, tetapi cara yang lebih baik adalah menempatkan skrip di situs web Anda, jika situs ini tidak online.</p>
+            <div>
+                <pre><xmp><script1 src="//filecxx.com/script/create_filec_address.js"></script1></xmp></pre>
+            </div>
+            <div>
+                <a href="../../script/create_filec_address.js">Unduh skrip</a>
+            </div>
+
+            <div>
+                <h3>Penggunaan:</h3>
+                <p>
+                    Lepaskan JSON ke dalam fungsi create_filec_address, lihat bidang json
+                    <a href="#json_fields">JSON</a>
+                </p>
+                <pre><code>create_filec_address({uri:"http://...."});</code></pre>
+            </div>
+
+            <div>
+                <h4>Sample:</h4>
+                <a href="fileu:0eyJ1cmkiOiJodHRwczovL2dpdGh1Yi5jb20vZmlsZWN4eC9GaWxlQ2VudGlwZWRlL3Jhdy9tYWluL3JlbGVhc2UvY2hyb21lLmNyeCJ9">
+                    fileu:0eyJ1cmkiOiJodHRwczovL2dpdGh1Yi5jb20vZmlsZWN4eC9GaWxlQ2VudGlwZWRlL3Jhdy9tYWluL3JlbGVhc2UvY2hyb21lLmNyeCJ9
+                </a>
+            </div>
+        </div>
+
+        <div class="section">
+            <div style="margin-top: 24px">
+                <p>
+                    Jika Anda ingin menyembunyikan alamat asli Anda dari pengguna atau memberikan beberapa batasan untuk unduhan pengguna, Anda harus menggunakan alat \"buat alamat\" dari perangkat lunak, itu dapat menghasilkan alamat terenkripsi.
+                </p>
+                <p>
+                    (Javascript tidak dapat membuat alamat terenkripsi.)
+                </p>
+            </div>
+            <div>
+                <img src="../../images/tools/screenshot_create_address.png" alt="Buat alamat">
+            </div>
+        </div>
+
+        <div class="section json_keys" id="json_fields">
+            <h2>JSON: Tambahkan tugas</h2>
+            <div>
+                Anda dapat menggunakan JSON sebagai alamat untuk menambahkan tugas, tetapi ingat, string JSON harus dalam satu baris.
+                <br/>
+                <br/>
+                <img src="../../images/tools/screenshot_add_json_task.png" alt="">
+            </div>
+
+            <table class="grid" style="margin-top: 12px">
+                <thead>
+                <tr>
+                    <td>Kunci</td>
+                    <td>Tipe</td>
+                    <td style="width: 140px">Deskripsi</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>uri</td>
+                    <td>String</td>
+                    <td>Alamat</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <h4>HTTP / HTTPS / Stream Opsional</h4>
+            <table class="grid" style="margin-top: 12px">
+                <thead>
+                <tr>
+                    <td>Kunci</td>
+                    <td>Tipe</td>
+                    <td style="width: 140px">Deskripsi</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>method</td>
+                    <td>String</td>
+                    <td>GET, POST ... You know the thing</td>
+                </tr>
+                <tr>
+                    <td>catalog</td>
+                    <td>String</td>
+                    <td>Katalog</td>
+                </tr>
+                <tr>
+                    <td>page_url</td>
+                    <td>String</td>
+                    <td>Tautan halaman</td>
+                </tr>
+                <tr>
+                    <td>user_agent</td>
+                    <td>String</td>
+                    <td>User Agent</td>
+                </tr>
+                <tr>
+                    <td>cookies</td>
+                    <td>String</td>
+                    <td>Cookies</td>
+                </tr>
+                <tr>
+                    <td>headers</td>
+                    <td>String</td>
+                    <td>HTTP Headers</td>
+                </tr>
+                <tr>
+                    <td>content_type</td>
+                    <td>String</td>
+                    <td>Content Type (for HTTP POST)</td>
+                </tr>
+                <tr>
+                    <td>data</td>
+                    <td>String</td>
+                    <td>HTTP request data</td>
+                </tr>
+                <tr>
+                    <td>connect_timeout</td>
+                    <td>Nomor</td>
+                    <td>Timeout koneksi</td>
+                </tr>
+                <tr>
+                    <td>max_connections</td>
+                    <td>Nomor</td>
+                    <td>Maksimal koneksi</td>
+                </tr>
+                <tr>
+                    <td>max_redirect</td>
+                    <td>Nomor</td>
+                    <td>Maksimal pengalihan</td>
+                </tr>
+                <tr>
+                    <td>max_retry</td>
+                    <td>Nomor</td>
+                    <td>Maksimal percobaan ulang</td>
+                </tr>
+                <tr>
+                    <td>file_name</td>
+                    <td>String</td>
+                    <td>Nama file</td>
+                </tr>
+                <tr>
+                    <td>speed_limit_download</td>
+                    <td>Nomor</td>
+                    <td>Batas kecepatan unduh</td>
+                </tr>
+                <tr>
+                    <td>auto_rename_file</td>
+                    <td>bool</td>
+                    <td>Ganti nama file secara otomatis</td>
+                </tr>
+                <tr>
+                    <td>ignore_remote_modified</td>
+                    <td>Nomor</td>
+                    <td>Abaikan modifikasi jarak jauh</td>
+                </tr>
+                <tr>
+                    <td>ignore_server_busy</td>
+                    <td>Nomor</td>
+                    <td>Abaikan server sibuk</td>
+                </tr>
+                <tr>
+                    <td>ignore_http_error</td>
+                    <td>Nomor</td>
+                    <td>Abaikan kesalahan http</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <h4>FTP / FTPS Opsional</h4>
+            <table class="grid" style="margin-top: 12px">
+                <thead>
+                <tr>
+                    <td>Kunci</td>
+                    <td>Tipe</td>
+                    <td style="width: 140px">Deskripsi</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>catalog</td>
+                    <td>String</td>
+                    <td>Katalog</td>
+                </tr>
+                <tr>
+                    <td>page_url</td>
+                    <td>String</td>
+                    <td>Tautan halaman</td>
+                </tr>
+                <tr>
+                    <td>connect_timeout</td>
+                    <td>Nomor</td>
+                    <td>Timeout koneksi</td>
+                </tr>
+                <tr>
+                    <td>max_connections</td>
+                    <td>Nomor</td>
+                    <td>Maksimal koneksi</td>
+                </tr>
+                <tr>
+                    <td>max_retry</td>
+                    <td>Nomor</td>
+                    <td>Maksimal percobaan ulang</td>
+                </tr>
+                <tr>
+                    <td>file_name</td>
+                    <td>String</td>
+                    <td>Nama file</td>
+                </tr>
+                <tr>
+                    <td>user</td>
+                    <td>String</td>
+                    <td>Nama pengguna</td>
+                </tr>
+                <tr>
+                    <td>pass</td>
+                    <td>String</td>
+                    <td>Kata sandi</td>
+                </tr>
+                <tr>
+                    <td>speed_limit_download</td>
+                    <td>Nomor</td>
+                    <td>Batas kecepatan unduh</td>
+                </tr>
+                <tr>
+                    <td>speed_limit_upload</td>
+                    <td>Nomor</td>
+                    <td>Batas kecepatan unggah</td>
+                </tr>
+                <tr>
+                    <td>auto_rename_file</td>
+                    <td>bool</td>
+                    <td>Ganti nama file secara otomatis</td>
+                </tr>
+                <tr>
+                    <td>ignore_server_busy</td>
+                    <td>Nomor</td>
+                    <td>Abaikan server sibuk</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <h4>Magnet / HASH Opsional</h4>
+            <table class="grid" style="margin-top: 12px">
+                <thead>
+                <tr>
+                    <td>Kunci</td>
+                    <td>Tipe</td>
+                    <td style="width: 140px">Deskripsi</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>catalog</td>
+                    <td>String</td>
+                    <td>Katalog</td>
+                </tr>
+                <tr>
+                    <td>page_url</td>
+                    <td>String</td>
+                    <td>Tautan halaman</td>
+                </tr>
+                <tr>
+                    <td>max_connections</td>
+                    <td>Nomor</td>
+                    <td>Maksimal koneksi</td>
+                </tr>
+                <tr>
+                    <td>file_name</td>
+                    <td>String</td>
+                    <td>Nama file</td>
+                </tr>
+                <tr>
+                    <td>speed_limit_download</td>
+                    <td>Nomor</td>
+                    <td>Batas kecepatan unduh</td>
+                </tr>
+                <tr>
+                    <td>speed_limit_upload</td>
+                    <td>Nomor</td>
+                    <td>Batas kecepatan unggah</td>
+                </tr>
+                <tr>
+                    <td>auto_rename_file</td>
+                    <td>bool</td>
+                    <td>Ganti nama file secara otomatis</td>
+                </tr>
+                <tr>
+                    <td>seeding_limit_ratio</td>
+                    <td>Nomor</td>
+                    <td>Batas seeding, rasio</td>
+                </tr>
+                <tr>
+                    <td>seeding_limit_minutes</td>
+                    <td>Nomor</td>
+                    <td>Batas seeding, menit</td>
+                </tr>
+                <tr>
+                    <td>seeding_limit_size</td>
+                    <td>Nomor</td>
+                    <td>Batas seeding, ukuran</td>
+                </tr>
+                <tr>
+                    <td>seeding_limit_act</td>
+                    <td>Nomor</td>
+                    <td>Batas seeding, tindakan</td>
+                </tr>
+                <tr>
+                    <td>seeding_limit_speed_limit</td>
+                    <td>Nomor</td>
+                    <td>Batas seeding, batas kecepatan</td>
+                </tr>
+                <tr>
+                    <td>seeding_limit_ratio_enable</td>
+                    <td>bool</td>
+                    <td>Batas seeding, rasio diaktifkan</td>
+                </tr>
+                <tr>
+                    <td>seeding_limit_minutes_enable</td>
+                    <td>bool</td>
+                    <td>Batas seeding, menit diaktifkan</td>
+                </tr>
+                <tr>
+                    <td>seeding_limit_size_enable</td>
+                    <td>bool</td>
+                    <td>Batas seeding, ukuran diaktifkan</td>
+                </tr>
+                <tr>
+                    <td>without_confirm</td>
+                    <td>bool</td>
+                    <td>Tanpa konfirmasi</td>
+                </tr>
+                <tr>
+                    <td>sequential</td>
+                    <td>bool</td>
+                    <td>Unduhan berurutan</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section" id="shares">
+    <h2>Bagikan</h2>
+    <div class="addthis_inline_share_toolbox"></div>
+</div>
+    </div>
+
+    <div class="footer">
+    <div class="copyright_">
+        <span>No copyright © 2022</span>
+        <div class="email_">
+            <b>EMAIL:</b>
+            <a href="mailto:123123@123.com" id="contact_email">123123@123.com</a>
+        </div>
+        <div class="contact_"></div>
+    </div>
+</div>
+
+</div>
+<script src="../../script/base.js"></script>
+<script>
+    (function(){
+        var codes = document.getElementsByTagName("code");
+
+        for(var i=0;i<codes.length;++i){
+            hljs.highlightBlock(codes[i]);
+        }
+    })();
+</script>
+</body>
+</html>
