@@ -1,0 +1,16 @@
+content_section_1_="
+<p>File Centipede adalah manajer unduh Linux terbaik.</p>
+<p>Ini adalah satu-satunya yang mendukung semua protokol utama dan manajer unduh video sniffer untuk Linux.</p>
+"
+
+content_section_2_="
+Ini juga berisi banyak alat bantu seperti penggabungan file, checksum, pengkode base64, pengkode URI, dan magnet-ke-torrent......
+"
+
+content_section_3_="
+Anda juga dapat menggunakannya untuk mengelola file jarak jauh seperti WebDAV, FTP, dan SSH.
+"
+
+content_section_4_="
+Sangat mudah untuk menginstalnya, hanya perlu satu klik, dan tidak memerlukan pustaka dinamis lainnya, bahkan Glibc.
+"

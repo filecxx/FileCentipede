@@ -1,0 +1,12 @@
+content_section_1_="
+Untuk tugas HTTP, pengaturan paralel default adalah halus, tetapi Anda dapat mengubahnya menjadi tercepat, yang dapat meningkatkan kecepatan unduh Anda dan menghemat waktu Anda sekitar 1-30 detik.
+"
+
+content_section_2_="
+Namun, mengubahnya menjadi tercepat dapat menyebabkan alamat IP Anda diblokir oleh server jarak jauh. (probabilitas rendah)
+"
+
+content_section_3_="
+Untuk tugas Torrent, Anda dapat menambahkan tracker untuk meningkatkan kecepatan unduh & unggah Anda.
+Tetapi syaratnya adalah peer lain menggunakan tracker yang sama dan mengunduh atau mengunggah file yang sama.
+"
