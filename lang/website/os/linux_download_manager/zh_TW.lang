@@ -1,5 +1,5 @@
 content_section_1_="<p>檔案蜈蚣是最強大的Linux下載工具.</p>
-<p>它是唯一支持所有主流協議和視頻嗅探的Linux下載管理器.</p>"
-content_section_2_=它包含了很多的輔助工具例如檔案合併，校驗和，base64編碼器，URI編碼器，磁力鏈接轉種子等等。 。 。
-content_section_4_=它很容易安裝，只需要一次點擊，沒有任何其他動態庫的依賴，甚至是Glibc.
-content_section_3_=你也可以用它來管理遠程檔案，例如WebDAV, FTP, and SSH.
+<p>它是唯一支援所有主流協議和影片嗅探的Linux下載管理器.</p>"
+content_section_2_=它包含了很多的輔助工具例如檔案合併，校驗和，base64編碼器，URI編碼器，磁力連結轉種子等等。 。 。
+content_section_4_=它很容易安裝，只需要一次點選，沒有任何其他動態庫的依賴，甚至是Glibc.
+content_section_3_=你也可以用它來管理遠端檔案，例如WebDAV, FTP, and SSH.
