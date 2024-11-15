@@ -66,7 +66,7 @@
       "message": "啟用"
     },
     "disable": {
-      "message": "禁用"
+      "message": "停用"
     },
     "yes": {
       "message": "是"
@@ -75,13 +75,13 @@
       "message": "否"
     },
     "send_failed": {
-      "message": "發送失敗"
+      "message": "傳送失敗"
     },
     "download_send_failed_message_prefix": {
       "message": "無法連接到 "
     },
     "download_send_failed_message": {
-      "message": "要麼沒有安裝,或者沒有啟動, 選擇一個操作."
+      "message": "要麼沒有安裝，或者沒有啟動，選擇一個操作。"
     },
     "browser": {
       "message": "瀏覽器"
@@ -93,19 +93,19 @@
       "message": "重新捕獲地址"
     },
     "refresh_address_msg_content": {
-      "message": "在地址捕捉到之前不要刷新當前網頁, 請找到: "
+      "message": "在地址捕捉到之前不要重新整理目前網頁，請找到："
     },
     "recapture_address_msg_success": {
-      "message": "已經成功捕獲到新地址,請打開軟體查看是否正常下載."
+      "message": "已經成功捕獲到新地址，請開啟軟體檢視是否正常下載。"
     },
     "ignore_this_site": {
       "message": "忽略此站"
     },
     "potential_urls": {
-      "message": "潛在URLs"
+      "message": "潛在 URLs"
     },
     "potential_keys": {
-      "message": "潛在密鑰"
+      "message": "潛在金鑰"
     },
     "rules": {
       "message": "規則"
@@ -129,16 +129,16 @@
       "message": "預覽"
     },
     "save": {
-      "message": "保存"
+      "message": "儲存"
     },
     "add": {
-      "message": "添加"
+      "message": "新增"
     },
     "edit": {
       "message": "編輯"
     },
     "remove": {
-      "message": "删除"
+      "message": "刪除"
     },
     "clear": {
       "message": "清空"
@@ -177,10 +177,10 @@
       "message": "您的網頁瀏覽器不支援 m3u8 檔案預覽。"
     },
     "invalid_domain": {
-      "message": "無效域名."
+      "message": "無效域名。"
     },
     "invalid_css_selector": {
-      "message": "無效的CSS選擇器."
+      "message": "無效的 CSS 選擇器。"
     },
     "filter": {
       "message": "過濾"
@@ -210,7 +210,7 @@
       "message": "片段"
     },
     "hide_low_resolution": {
-      "message": "隱藏低分辨率"
+      "message": "隱藏低解析度"
     },
     "all": {
       "message": "全部"
@@ -219,7 +219,7 @@
       "message": "廣告"
     },
     "adverts_detection": {
-      "message": "廣告檢測"
+      "message": "廣告偵測"
     },
     "resolution": {
       "message": "解析度"
@@ -234,7 +234,7 @@
       "message": "載入全部"
     },
     "brute_force_search": {
-      "message": "暴力搜索"
+      "message": "暴力搜尋"
     },
     "readme": {
       "message": "自述"
@@ -249,7 +249,7 @@
       "message": "停止"
     },
     "port": {
-      "message": "端口"
+      "message": "埠"
     },
     "action": {
       "message": "行為"
@@ -264,16 +264,16 @@
       "message": "爬行器"
     },
     "feature_not_implemented": {
-      "message": "此功能目前保留，尚未實施."
+      "message": "此功能目前保留，尚未實施。"
     },
     "remove_low_quality_videos": {
-      "message": "移除低質量影片"
+      "message": "移除低畫質影片"
     },
     "remove_failed_loading_videos": {
-      "message": "移除加載失敗的影片"
+      "message": "移除載入失敗的影片"
     },
     "page_url": {
-      "message": "網頁URL"
+      "message": "網頁 URL"
     },
     "file_size": {
       "message": "檔案大小"
@@ -291,7 +291,7 @@
       "message": "影片來源"
     },
     "read_from_cache": {
-      "message": "從緩存中讀取"
+      "message": "從快取中讀取"
     },
     "record_from_screen": {
       "message": "從螢幕錄制"
@@ -300,40 +300,40 @@
       "message": "進度"
     },
     "allow_external_messages": {
-      "message": "允許外部消息"
+      "message": "允許外部訊息"
     },
     "example": {
       "message": "示例"
     },
     "deep_analysis_text_": {
-      "message": "啟用該項會對網頁進行深度分析以查找隱藏的影片或音訊資源,<br/> 但是會以消耗更多CPU資源為代價.<br/> 如果網頁中包含的腳本較少或者數據交互頻率不高,<br/> 那麼額外的消耗可以忽略不計."
+      "message": "啟用該項會對網頁進行深度分析以查詢隱藏的影片或音訊資源，<br/> 但是會以消耗更多 CPU 資源為代價.<br/> 如果網頁中包含的指令碼較少或者資料互動頻率不高，<br/> 那麼額外的消耗可以忽略不計。"
     },
     "allow_external_messages_text_": {
-      "message": "允許其他擴展程序或者JS腳本給本擴展程序發送消息,<br/> 通常用於本擴展程序無法捕獲某個網頁的媒體資源時候,<br/> 可以針對該網頁編寫JS腳本然後將腳本獲取到的結果發送給本擴展程序, <br/>而無需再單獨開發前端和下載功能."
+      "message": "允許其他擴展程式或者 JS 指令碼給本擴展程式傳送訊息，<br/> 通常用於本擴展程式無法捕獲某個網頁的媒體資源時候，<br/> 可以針對該網頁編寫 JS 指令碼然後將指令碼取得到的結果傳送給本擴展程式，<br/>而無需再單獨開發前端和下載功能。"
     },
     "filename_rule_tips_": {
-      "message": "使用CSS選擇器規則獲取網頁中指定元素的文本作為該域下媒體檔案的首選檔名.<br/>如果獲取失敗, 仍然會繼續使用標題或者og:title來作為檔名."
+      "message": "使用 CSS 選擇器規則取得網頁中指定元素的文字作為該域下媒體檔案的首選檔名.<br/>如果取得失敗，仍然會繼續使用標題或者 og:title 來作為檔名。"
     },
     "download_manager_tip_": {
-      "message": "下載檔案時候默認使用的下載管理器."
+      "message": "下載檔案時候預設使用的下載管理器。"
     },
     "collector_mode_tip_": {
-      "message": "記錄所有網頁捕獲到的媒體資源, 必要時候再進行批量的預覽和篩選, 減少重復的工作."
+      "message": "記錄所有網頁捕獲到的媒體資源，必要時候再進行批次的預覽和篩選，減少重復的工作。"
     },
     "collector_notify_": {
-      "message": "收藏家模式只有在窗口開啟時候才會有效, 關閉該窗口會丟失所有記錄.<br/>由於瀏覽器的限制以及網站的下載鏈規則會導致並非所有影片都可以被預覽.<br/>部分影片無法被預覽, 但是可以被下載.<br/>部分影片既無法被預覽, 也無法被下載."
+      "message": "收藏家模式只有在視窗開啟時候才會有效，關閉該視窗會遺失所有記錄.<br/>由於瀏覽器的限制以及網站的下載鏈規則會導致並非所有影片都可以被預覽.<br/>部分影片無法被預覽，但是可以被下載.<br/>部分影片既無法被預覽，也無法被下載。"
     },
     "collector_mode_help_text_": {
-      "message": "收藏家模式在開啟時會首先列出當前所有標籤頁中已經獲取到的媒體資源，之後獲取到的也會加入到收藏家模式列表中。當窗口關閉時，這些記錄都會消失。<br/><br/>需要注意，由於瀏覽器的限制，當影片數量超過5000時無法再設置Referer HTTP 头，會導致有一些網站的資源無法被預覽。<br/><br/>瀏覽器對HTTP並發連接具有限制，無法同時播放太多的影片，並且限制了創建video元素的數量（在Chrome下大約為100個），會消耗大量的內存和CPU資源。<br/><br/>優化：所有預覽的影片是根據滾動條位置動態加載的，不可見的影片都會被自動移除，並保存影片的截圖，再次可見時又會自動創建。網路不佳時，如果啟動了 '播放全部' 會導致間斷性的停頓。<br/><br/>收藏家模式目前屬於beta版本，有任何問題歡迎進行反饋。<br/>"
+      "message": "收藏家模式在開啟時會首先列出目前所有標籤頁中已經取得到的媒體資源，之後取得到的也會加入到收藏家模式列表中。當視窗關閉時，這些記錄都會消失。<br/><br/>需要注意，由於瀏覽器的限制，當影片數量超過 5000 時無法再設定 Referer HTTP 標頭，會導致有一些網站的資源無法被預覽。<br/><br/>瀏覽器對 HTTP 併發連接具有限制，無法同時播放太多的影片，並且限制了建立 video 元素的數量（在 Chrome 下大約為 100 個），會消耗大量的記憶體和 CPU 資源。<br/><br/>最佳化：所有預覽的影片是根據捲軸位置動態載入的，不可見的影片都會被自動移除，並儲存影片的截圖，再次可見時又會自動建立。網路不佳時，如果啟動了 '播放全部' 會導致間斷性的停頓。<br/><br/>收藏家模式目前屬於 beta 版本，有任何問題歡迎進行回饋。<br/>"
     },
     "settings_tip_": {
-      "message": "擴展程序的詳細設置"
+      "message": "擴展程式的詳細設定"
     },
     "select_element_tip_": {
-      "message": "選擇網頁中的元素，對該域下媒體檔案的檔名的獲取規則設置，錄制影片/音訊等。"
+      "message": "選擇網頁中的元素，對該域下媒體檔案的檔名的取得規則設定，錄制影片/音訊等。"
     },
     "ignore_this_site_tip_": {
-      "message": "下載檔案時忽略該網站，使用瀏覽器默認的下載工具。"
+      "message": "下載檔案時忽略該網站，使用瀏覽器預設的下載工具。"
     },
     "preview_notify_": {
       "message": "由於瀏覽器的限制以及網站的防下載規則會導致並非所有影片都可以被預覽。<br/>部分影片無法被預覽，但是可以被下載。<br/>部分影片既無法被預覽，也無法被下載。"
