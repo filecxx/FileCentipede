@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Güncelleme günlüğü - File Centipede</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../style/base.css">
+    <style>
+        li{
+            font-size: 16px;
+            padding: 4px 8px 4px 8px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="central">
+    <div class="nav">
+    <div class="links_">
+        <a class="tool_button home_" href="index.html#">Ana Sayfa</a>
+        <a class="tool_button features_" href="index.html#features">Özellikler</a>
+        <a class="tool_button download_" href="download.html">İndirme</a>
+        <a class="tool_button screenshot_" href="screenshot.html">Ekran görüntüsü</a>
+        <a class="tool_button user_reviews_" href="index.html#user_reviews">Kullanıcı incelemeleri</a>
+        <a class="tool_button documentation_" href="documentation.html">Dökümantasyon</a>
+    </div>
+</div>
+    <div class="header">
+    <div class="top_">
+        <a href="http://filecxx.com" class="logo_"></a>
+        <div class="name_">
+            <h1><a href="http://filecxx.com">File Centipede</a></h1>
+            <div class="text_"> - Since 2022</div>
+        </div>
+        <div class="languages_">
+            <div class="current_">Türkçe</div>
+            <div class="items_">
+                <a class="item_" href="/en_US/index.html">English</a>
+                <a class="item_" href="/zh_CN/index.html">简体中文</a>
+                <a class="item_" href="/zh_TW/index.html">繁體中文</a>
+                <a class="item_" href="/ru_RU/index.html">Русский</a>
+                <a class="item_" href="/ko_KR/index.html">한국어</a>
+                <a class="item_" href="/de_DE/index.html">Deutsch</a>
+                <a class="item_" href="/id_ID/index.html">Indonesia</a>
+                <a class="item_" href="/tr_TR/index.html">Türkçe</a>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="body">
+        <div class="section">
+            <h1>Güncelleme günlüğü</h1>
+        </div>
+
+        <div class="section">
+            <h3>2.82 (uptime: 2023.02.06)</h3>
+            <h4>New:</h4>
+            <p>Fully shutdown.</p>
+
+            <h4>Fixed:</h4>
+            <p>When the remote HTTP server sends error data without disconnecting, causing this segment of data not to be downloaded and the final file size to not match the remote one, this scenario is likely to occur when the remote connection is unstable or frequently switches proxy IPs.</p>
+            <p>When downloading a file from the file browser, the file save path follows the catalog instead of the user choosing one.</p>
+            <p>The browser extension gets the wrong cookies from the incognito window.</p>
+
+            <h4>Changes:</h4>
+            <p>Change the default parallel option to "Fastest".</p>
+            <p>FileCXX private DHT network module (libdybn) has been removed, using BitTorrent public DHT network as the alternate.</p>
+        </div>
+
+        <div class="section">
+            <h3>2.81 (uptime: 2023.1.6)</h3>
+            <h4>New:</h4>
+            <p>Language: Tiếng Việt</p>
+
+            <h4>Fixed:</h4>
+            <p>HTTP task infinite redirect when reading partial content gets 301 code.</p>
+            <p>When downloading a large number of small files, repeatedly stopping or deleting tasks may cause errors in tasks that are waiting in the queue, indirectly causing filec to crash.</p>
+            <p>When the taskbar tray icon is clicked, the window does not become the top window.</p>
+        </div>
+        <div class="section">
+            <h3>2.8 stable (uptime: 2022.12.31)</h3>
+            <p>
+                This is the last version of FileCentipede2. The development of the next major version 3.0 has started.<br/><br/>
+                If you have any feature requests, please post them on
+                <a href="https://github.com/filecxx/FileCentipede/discussions/402">https://github.com/filecxx/FileCentipede/discussions/402</a>
+            </p>
+
+            <h4>Changes:</h4>
+            <p>Browser extensions up to 1.8</p>
+            <p>Language file "ru_RU.lang" updated.</p>
+
+            <h4>Fixed:</h4>
+            <p>URL directory parse error, such as "http://localhost/a=1&b=/dir/file".</p>
+            <p>The FTP task becomes stuck in the stopping state if the connection fails.</p>
+            <p>Unable to receive FTP file list when remote FTP server sends code 226 before sending the file list.</p>
+            <p>The browser extension shows "Send failed" when getting an URL that starts with "blob:".</p>
+            <p>The browser extension sometimes fails to obtain the cookie information for a URL.</p>
+            <p>A new strategy for downloading protected m3u8 segments.</p>
+            <p>In some cases, the downloaded file is m3u8 content instead of a video.</p>
+            <p>m3u8 png segments.</p>
+            <p>m3u8 parsing segment URL lost the last character when the m3u8 file did not end with a newline.</p>
+            <p>Use "filename*=UTF-8" as the preferred filename instead of "filename=".</p>
+            <p>The "Blocks" from the detail panel are displayed reversely when the HTTP task is not resumable.</p>
+            <p>Unlocked variables caused the filec process to crash.</p>
+            <p>The settings from the 'Update-dialog' cannot be saved.</p>
+            <p>Display an error message when the remote client fails to connect.</p>
+            <p>Increase the SSH maximum connect timeout to 120 seconds, rather than the current 12 seconds.</p>
+            <p>filec crashes if the remote HTTP response headers include both 'content-range' and 'transfer-encoding' at the same time.</p>
+            <p>When downloading multiple files with the same file name but different contents simultaneously, the automatic renaming function may potentially cause errors in writing to the files due to a lack of locking, indirectly causing filec to crash.</p>
+        </div>
+
+        <div class="section">
+            <h3>2.7 (uptime: 2022.08.29)</h3>
+            <h4>New:</h4>
+            <p>URI generator (from URI tool)</p>
+
+            <h4>Fixed:</h4>
+            <p>thread deadlock</p>
+            <p>unable to download files when HTTP server response conflicted headers: Accept-Ranges, Content-Range, Content-Encoding</p>
+            <p>unable to download files when HTTP server response transfer_encoding is chunked with 0-byte data</p>
+            <p>magnet-task causing filec crashes during multiple times of adding and canceling.</p>
+            <p>ESC key on dialog</p>
+            <p>duplicate shortcut key</p>
+            <p>fileu dialog crashes</p>
+            <p>fileu status bar DHT number was inaccurate.</p>
+            <p>remote client crashes on windows 7</p>
+            <p>torrent-task directory icon missed after restarting filec</p>
+
+        </div>
+
+        <div class="section">
+            <h3>2.6 & 2.61 (uptime: 2022.08.21)</h3>
+            <h4>New:</h4>
+            <p>Remote download manager (NativeUI, not WebUI)</p>
+            <p>File browser: copy file URL, path</p>
+            <p>Command line: service_port, service_password, remote_access</p>
+            <p>Browser extensions up to 1.7</p>
+
+            <h4>Fixed:</h4>
+            <p>(2.61) downgrade wolfssl to 5.4.0 </p>
+            <p>Cannot save options from the software's update dialog.</p>
+            <p>filec crashes when deleting an SSH or FTP directory and then canceling it.</p>
+
+        </div>
+
+        <div class="section">
+            <h3>2.5 (uptime: 2022.08.13)</h3>
+            <h4>New:</h4>
+            <p>Save column width.</p>
+            <p>Save window position. (default: off)</p>
+            <p>Force restart</p>
+            <p>Add trackers from the subscribed list.</p>
+            <p>Command line: create_torrent</p>
+            <p>Language: português</p>
+            <p>Translation tool: select languages directory</p>
+
+            <h4>Fixed:</h4>
+            <p>When remote HTTP server received range: bytes=0-0, but continue response more data, causing task progress over 100%.</p>
+            <p>Max Connect timeout up to 120s instead of 12s</p>
+            <p>File name incomplete when remote HTTP server response header field content-disposition contains multiple "=?UTF8?B?" sections.</p>
+            <p>Auto upgrade software.</p>
+        </div>
+
+
+        <div class="section">
+            <h3>2.4 (uptime: 2022.08.02)</h3>
+            <h4>New:</h4>
+            <p>Tray icon event for windows.</p>
+            <p>Set all new tasks save-path from the Add-task-dialog.</p>
+
+            <h4>Fixed:</h4>
+            <p>After pausing and resuming an HTTP task, the task progress reset to 0.</p>
+            <p>Auto-created host's default config error when entering address from the file browser's address bar.</p>
+            <p>File browser extracts username and password from URL.</p>
+            <p>Remove the default path "/" from the file browser.</p>
+            <p>Remove the checkbox from torrent confirm-dialog when the torrent only has one file.</p>
+            <p>Torrent confirm-dialog file size missing when the torrent only has one file.</p>
+        </div>
+
+        <div class="section">
+            <h3>2.3 (uptime: 2022.08.01)</h3>
+            <h4>New:</h4>
+            <p>Browser extension up to 1.5, massively optimized, it can extract videos from javascript.</p>
+            <p>File checksum tool (text, file, directory).</p>
+            <p>File size filter for torrent-task.</p>
+            <p>Taskbar progress for windows</p>
+            <p>Alert setting: delete task</p>
+            <p>Alert setting: delete catalog</p>
+            <p>Stream-task settings: Base URL, Key, IV</p>
+            <p>Merge tool: video+audio merge (FFmpeg required)</p>
+            <p>Language Français</p>
+            <p>Language Nederlands</p>
+
+            <h4>Fixed:</h4>
+            <p>announce_to_all_tiers and announce_to_all_trackers set as default.</p>
+            <p>HTTPS trackers (Linux)</p>
+            <p>filec crashes when HTTP cookies over 4 KB.</p>
+            <p>Convert URI space to "%20" instead of "+"</p>
+            <p>m3u8 merge files error on windows7</p>
+            <p>uploaded directories displayed as regular files from the file browser.</p>
+            <p>SSH connections timed out but the state was still connected.</p>
+            <p>SSH file manager "operation failed" error.</p>
+            <p>When resuming an HTTP task and the URL address was expired causing an incomplete file to be downloaded. (New bug since 2.0)</p>
+            <p>Torrent-task inaccurate statistics.</p>
+            <p>Torrent-task rename from confirm-dialog failed.</p>
+            <p>m3u8 parse error.</p>
+            <p>Clipboard multiple triggers.</p>
+            <p>HTTP-task filename with =?UTF-8?B?</p>
+            <p>fileu incomplete task list (fully fixed).</p>
+            <p>fileu directory icon.</p>
+            <p>fileu window randomly activated.</p>
+            <p>DHT 0</p>
+            <p>...</p>
+        </div>
+
+        <div class="section">
+            <h3>2.21 (uptime: 2022.07.02)</h3>
+            <h4>Fixed:</h4>
+            <p>stream-task 401, 403 error.</p>
+            <p>stream-task HTTP 302 redirect causing filec crashes.</p>
+            <p>stream-task merge file error after pausing and resuming the task.</p>
+        </div>
+        <div class="section">
+            <h3>2.2 (uptime: 2022.06.30)</h3>
+            <h4>New:</h4>
+            <p>torrent port setting</p>
+
+            <h4>Fixed:</h4>
+            <p>"CheckBox" for torrent-task subdirectories</p>
+            <p>torrent-task state display as completed but still seeding.</p>
+            <p>torrent-task lost the resume-data in some cases.</p>
+        </div>
+        <div class="section">
+            <h3>2.1 (uptime: 2022.06.29)</h3>
+            <h4>New:</h4>
+            <p>site rules</p>
+            <p>language zh_TW</p>
+            <h4>Fixed:</h4>
+            <p>WebDAV default config error for file downloading.</p>
+            <p>torrent-task is not able to stop when checking files.</p>
+            <p>when the HTTP server response code is 401 or 403, remove the "Referer" and "Origin" fields from HTTP headers before resending the HTTP request.</p>
+            <p>some web servers accepted HTTP range requests but the response code is 200 with 0-byte content, instead of 201, causing a 0-byte file to be downloaded. (wingftp)</p>
+            <p>torrent-task files rename failed after multiple tries.</p>
+            <p>FTP server 504 error (CLNT, OPTS UTF8 ON).</p>
+            <p>DateTime 0.000000.</p>
+        </div>
+        <div class="section">
+            <h3>2.02 (uptime: 2022.06.25)</h3>
+            <h4>Fixed:</h4>
+            <p>redundant path separator</p>
+            <p>XML tag case-sensitive caused the WebDAV list directory to fail.</p>
+            <p>file has not been removed from the file browser list when the remote directory path is  /</p>
+            <p>when uploading/downloading a directory max connections have been reduced when the directory contains a small file.</p>
+        </div>
+        <div class="section">
+            <h3>2.0/2.01 (uptime: 2022.06.24)</h3>
+            <h4>New:</h4>
+            <p>opening a task file show an alert when the file has been deleted or moved.</p>
+            <p>context-menu for torrent confirm-dialog</p>
+            <p>supported command line: curl, wget, aria2, axel</p>
+            <p>option: silent mode</p>
+            <p>detail panel: blocks</p>
+            <p>detail panel: connections</p>
+            <p>protocol: SSH(sftp)</p>
+            <p>option: proxy modes (Always, If_Available, Round_Robin, Round_Robin_Connections)</p>
+            <p>option: no task record</p>
+            <p>option: parallel (smooth, fastest)</p>
+            <p>settings: stream task</p>
+            <p>settings: SSH</p>
+            <p>settings: File Browser</p>
+            <p>download directory & upload directory</p>
+            <p>file browser, network file manager for WebDAV, WebDAVS, FTP, FTPS, SSH(SFTP)</p>
+            <p>...</p>
+            <h4>Fixed:</h4>
+            <p>filec fails to start when the database file is broken.</p>
+            <p>global-speed-limit settings for stream tasks.</p>
+            <p>file icon association error on windows.</p>
+            <p>filec crashes when the service receives an empty request.</p>
+            <p>filec crashes when the local network is unavailable.</p>
+            <p>ftp compatibility for non-standard server.</p>
+            <p>HTTP cookie containing a "secure" field case endless loop.</p>
+            <p>when add-task dialog switching the URL config causing fields are missed.</p>
+            <p>stream-task missing completed dialog.</p>
+            <p>tasks-detail update data is in slow motion.</p>
+            <p>tray icon show/hide fails in some case.</p>
+            <p>http-task state frozen when the response body is empty.</p>
+            <p>torrent-confirm dialog information error.</p>
+            <p>an invalid file is downloaded when the HTTP response code is 206 and the keep-alive is false.</p>
+            <p>incomplete encoded URI path.</p>
+            <p>encode URI path before sending the HTTP header.</p>
+            <p>stream-task HTTP response code 474 marked as server busy.</p>
+            <p>copy address from task error (std::string_view out of scope).</p>
+            <p>an empty file was downloaded when the HTTP response headers contained content-encoding and content-range.</p>
+            <p>"Host" field in HTTP headers.</p>
+            <p>translation tool: Israel has been removed from the Arabic countries list.</p>
+            <p>heap-use-after-free.</p>
+            <p>uncaught exceptions.</p>
+            <p>memory overflowed.</p>
+            <p>...</p>
+            <h4>Changes:</h4>
+            <p>few</p>
+        </div>
+        <div class="section">
+            <h3>1.9 (uptime: 2022.03.27)</h3>
+            <h4>Fixed:</h4>
+            <p>The downloaded file is 1 byte when the HTTP header field "content-range" did not contain the "bytes" string</p>
+            <p>HTTP request range limitations</p>
+        </div>
+        <div class="section">
+            <h3>1.8 (uptime: 2022.03.26)</h3>
+            <h4>New:</h4>
+            <p>Ignore this site -> browser extensions</p>
+            <p>Browser extensions up to 1.4</p>
+            <h4>Fixed:</h4>
+            <p>The rename dialog is behind the confirm-dialog (windows only)</p>
+            <p>Open directory did not work when save-path is the root directory (windows only)</p>
+        </div>
+        <div class="section">
+            <h3>1.7 (uptime: 2022.03.25)</h3>
+            <h4>New:</h4>
+            <p>Add context menu on confirm-links dialog</p>
+            <h4>Fixed:</h4>
+            <p>Process filec.exe froze when HTTP response header no charset and "attachment;filename=" contains a non-utf8 string (windows only, caused by MinGW)</p>
+            <p>Not able to change proxy on task-edit dialog</p>
+        </div>
+        <div class="section">
+            <h3>1.6 (uptime: 2022.03.25)</h3>
+            <h4>New:</h4>
+            <p>Sound effects when task download completed or error. (optional)</p>
+            <p>Browser extensions up to 1.3</p>
+            <p>Download all links from the web page</p>
+            <h4>Fixed:</h4>
+            <p>UI configs are lost when upgrading to a new version.</p>
+            <p>On windows7, fileu std::filesystem::path error (caused by MinGW).</p>
+        </div>
+        <div class="section">
+            <h3>1.5 (uptime: 2022.03.22)</h3>
+            <h4>New:</h4>
+            <p>File last modified time from HTTP server</p>
+            <p>Show HTTP, Torrent confirming-dialog on top</p>
+            <p>Task completed dialog</p>
+            <h4>Fixed:</h4>
+            <p>302 redirect on stream task</p>
+            <p>Datetime format changed from GTM to ISO YYYY-MM-DD hh:mm:ss</p>
+            <p>fileu.exe is hidden when launched from Windows system service. (from browser extension after reboot)</p>
+        </div>
+        <div class="section">
+            <h3>1.4 (uptime: 2022.03.20)</h3>
+            <h4>New:</h4>
+            <p>Add/Remove User agents.</p>
+            <h4>Fixed:</h4>
+            <p>HTTP tasks lost 1 byte after during pause and restart the task. (critical)</p>
+            <p>Some websites have HTTP range request limitations, auto-ban small range requests, cause download errors.</p>
+            <p>History path</p>
+            <p>Windows DPI</p>
+        </div>
+        <div class="section">
+            <h3>1.3 (uptime: 2022.03.18)</h3>
+            <h4>New:</h4>
+            <p>Users can change the software name during installation.</p>
+            <p>Switch download manager from browser extension popup panel.</p>
+            <p>Show confirm-dialog when tasks are sent from the web browser.</p>
+            <p>Add new option "Without confirm" to HTTP settings</p>
+            <h4>Fixed:</h4>
+            <p>HTTPS request fails when the port is not 443</p>
+            <p>The translation tool inserted redundant backslashes into the string</p>
+            <p>System service from settings is enabled when installing without system service</p>
+            <p>Add 5 DHT bootstrap nodes</p>
+        </div>
+        <div class="section">
+            <h3>1.2 (uptime: 2022.03.16)</h3>
+            <h4>Fixed:</h4>
+            <p>filec.exe fails to start when the desktop environment is non-English (windows only)</p>
+        </div>
+        <div class="section">
+            <h3>1.1 (uptime: 2022.03.15)</h3>
+
+            <h4>New:</h4>
+            <p>save window size</p>
+            <p>auto add trackers to the new task (including downloads)</p>
+
+            <h4>Fixed:</h4>
+            <p>few</p>
+
+            (uninstall before installing the new version)
+        </div>
+    </div>
+
+    <div class="footer">
+    <div class="copyright_">
+        <span>© 2022</span>
+        <div class="email_">
+            <b>EMAIL:</b>
+            <a href="mailto:123123@123.com" id="contact_email">123123@123.com</a>
+        </div>
+        <div class="contact_"></div>
+    </div>
+</div>
+
+</div>
+
+<script src="../script/base.js"></script>
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "dk9clgn4o4");
+</script> 
+
+</body>
+</html>

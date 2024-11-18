@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sponsorlar - File Centipede</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../style/base.css">
+    <style>
+        .sponsor_tips
+        {
+            padding: 8px;
+        }
+        .sponsor_buttons
+        {
+            height: 32px;
+            padding: 8px 0 8px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="central">
+    <div class="nav">
+    <div class="links_">
+        <a class="tool_button home_" href="index.html#">Ana Sayfa</a>
+        <a class="tool_button features_" href="index.html#features">Özellikler</a>
+        <a class="tool_button download_" href="download.html">İndirme</a>
+        <a class="tool_button screenshot_" href="screenshot.html">Ekran görüntüsü</a>
+        <a class="tool_button user_reviews_" href="index.html#user_reviews">Kullanıcı incelemeleri</a>
+        <a class="tool_button documentation_" href="documentation.html">Dökümantasyon</a>
+    </div>
+</div>
+    <div class="header">
+    <div class="top_">
+        <a href="http://filecxx.com" class="logo_"></a>
+        <div class="name_">
+            <h1><a href="http://filecxx.com">File Centipede</a></h1>
+            <div class="text_"> - Since 2022</div>
+        </div>
+        <div class="languages_">
+            <div class="current_">Türkçe</div>
+            <div class="items_">
+                <a class="item_" href="/en_US/index.html">English</a>
+                <a class="item_" href="/zh_CN/index.html">简体中文</a>
+                <a class="item_" href="/zh_TW/index.html">繁體中文</a>
+                <a class="item_" href="/ru_RU/index.html">Русский</a>
+                <a class="item_" href="/ko_KR/index.html">한국어</a>
+                <a class="item_" href="/de_DE/index.html">Deutsch</a>
+                <a class="item_" href="/id_ID/index.html">Indonesia</a>
+                <a class="item_" href="/tr_TR/index.html">Türkçe</a>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="body">
+
+        <div style="padding: 4px">
+            <div class="sponsor_buttons">
+                <div class="tips_" style="display: inline-block;float: left;margin: 0">En iyi 20 sponsor</div>
+                <div class="buttons_" style="float: right">
+                    <a class="button" style="cursor: pointer" href="https://w.filecxx.com" target="_blank" ref="nofollow">Katılmak</a>
+                </div>
+            </div>
+
+            <table class="grid" style="width: 100%">
+                <thead>
+                <tr>
+                    <td style="width: 128px;">Sponsor logosu</td>
+                    <td>Reklam</td>
+                    <td style="width: 120px">İsim</td>
+                    <td style="width: 120px">Bakiye (USD)</td>
+                </tr>
+                </thead>
+                <tbody id="sponsors_tbody">
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section"></div>
+        <div class="section sponsor_tips">
+            <h2>[Sponsorlar / Katkıda bulunanlar] Ayrıcalıklar:</h2>
+            <div>
+                <p>Şikayet edin ve kötü yorumlar yazın.</p>
+                <p>Yeni özellikler isteyin.</p>
+                <p>Tavsiye ve Öneri.</p>
+                <p>Aktivasyon kodları takası.</p>
+                <p>Yazılım özelleştirme desteği.</p>
+                <p>Kişisel destek.</p>
+                <p>...</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+    <div class="copyright_">
+        <span>© 2022</span>
+        <div class="email_">
+            <b>EMAIL:</b>
+            <a href="mailto:123123@123.com" id="contact_email">123123@123.com</a>
+        </div>
+        <div class="contact_"></div>
+    </div>
+</div>
+
+</div>
+
+<script>
+    load_sponsors = function(list)
+    {
+        if(!(list instanceof Array)){
+            return;
+        }
+        var tbody = document.getElementById("sponsors_tbody");
+
+        for(var i=0;i<list.length;++i)
+        {
+            var row     = list[i];
+            var tr      = document.createElement("tr");
+            var name    = document.createElement("td");
+            var logo    = document.createElement("td");
+            var text    = document.createElement("td");
+            var balance = document.createElement("td");
+
+            logo.innerHTML    = "<img src='http://w.filecxx.com/tpl/"+row.logo+"' style='max-height: 150px;max-width: 250px'>";
+            text.innerText    = row.text;
+            name.innerText    = row.name;
+            balance.innerHTML = row.balance;
+
+            tr.appendChild(logo);
+            tr.appendChild(text);
+            tr.appendChild(name);
+            tr.appendChild(balance);
+
+            tbody.appendChild(tr);
+        }
+    }
+</script>
+<script src="https://w.filecxx.com/action.php?act=sponsors&callback=load_sponsors"></script>
+<script src="../script/base.js"></script>
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "dk9clgn4o4");
+</script> 
+
+</body>
+</html>

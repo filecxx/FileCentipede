@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Adres oluşturmak - File Centipede</title>
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../../style/base.css">
+    <link rel="stylesheet" href="../../style/highlight.monokai.css">
+    <script src="../../script/highlight.pack.js"></script>
+    <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "dk9clgn4o4");
+</script> 
+
+</head>
+<body>
+
+<div class="central">
+    <div class="nav">
+    <div class="links_">
+        <a class="tool_button home_" href="../index.html">Ana Sayfa</a>
+        <a class="tool_button features_" href="../index.html#features">Özellikler</a>
+        <a class="tool_button download_" href="../download.html">İndirme</a>
+        <a class="tool_button screenshot_" href="../screenshot.html">Ekran görüntüsü</a>
+        <a class="tool_button user_reviews_" href="../index.html#user_reviews">Kullanıcı incelemeleri</a>
+        <a class="tool_button documentation_" href="../documentation.html">Dökümantasyon</a>
+    </div>
+</div>
+    <div class="header">
+    <div class="top_">
+        <a href="http://filecxx.com" class="logo_"></a>
+        <div class="name_">
+            <h1><a href="http://filecxx.com">File Centipede</a></h1>
+            <div class="text_"> - Since 2022</div>
+        </div>
+        <div class="languages_">
+            <div class="current_">Türkçe</div>
+            <div class="items_">
+                <a class="item_" href="/en_US/index.html">English</a>
+                <a class="item_" href="/zh_CN/index.html">简体中文</a>
+                <a class="item_" href="/zh_TW/index.html">繁體中文</a>
+                <a class="item_" href="/ru_RU/index.html">Русский</a>
+                <a class="item_" href="/ko_KR/index.html">한국어</a>
+                <a class="item_" href="/de_DE/index.html">Deutsch</a>
+                <a class="item_" href="/id_ID/index.html">Indonesia</a>
+                <a class="item_" href="/tr_TR/index.html">Türkçe</a>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="body">
+        <div class="section">
+            <h1>Adres oluşturmak</h1>
+        </div>
+
+        <div class="section">
+            <h2>Javascript</h2>
+            <p>Bir web sitesi çalıştırıyorsanız.</p>
+            <p>Bu scripti web sayfanıza yerleştirin veya script kodunu web sayfanıza koyun, ancak en iyi yol, bu web sitesi yayında değilse, scripti web sitenize koymaktır.</p>
+            <div>
+                <pre><xmp><script1 src="//filecxx.com/script/create_filec_address.js"></script1></xmp></pre>
+            </div>
+            <div>
+                <a href="../../script/create_filec_address.js">Komut dosyasını indir</a>
+            </div>
+
+            <div>
+                <h3>Kullanım:</h3>
+                <p>
+                    JSON girdisini create_filec_address fonksiyonuna parametre olarak verin, JSON alanları için bkz.
+                    <a href="#json_fields">JSON</a>
+                </p>
+                <pre><code>create_filec_address({uri:"http://...."});</code></pre>
+            </div>
+
+            <div>
+                <h4>Örnek:</h4>
+                <a href="fileu:0eyJ1cmkiOiJodHRwczovL2dpdGh1Yi5jb20vZmlsZWN4eC9GaWxlQ2VudGlwZWRlL3Jhdy9tYWluL3JlbGVhc2UvY2hyb21lLmNyeCJ9">
+                    fileu:0eyJ1cmkiOiJodHRwczovL2dpdGh1Yi5jb20vZmlsZWN4eC9GaWxlQ2VudGlwZWRlL3Jhdy9tYWluL3JlbGVhc2UvY2hyb21lLmNyeCJ9
+                </a>
+            </div>
+        </div>
+
+        <div class="section">
+            <div style="margin-top: 24px">
+                <p>
+                    Gerçek adresinizi kullanıcılardan gizlemek veya kullanıcıların indirmelerine bazı sınırlamalar getirmek istiyorsanız, yazılımdaki \"adres oluşturma\" aracını kullanmalısınız, bu araç şifrelenmiş bir adres üretebilir.
+                </p>
+                <p>
+                    (JavaScript şifreli bir adres oluşturamaz.)
+                </p>
+            </div>
+            <div>
+                <img src="../../images/tools/screenshot_create_address.png" alt="Adres Oluştur">
+            </div>
+        </div>
+
+        <div class="section json_keys" id="json_fields">
+            <h2>JSON: Görev eklemek</h2>
+            <div>
+                Görev eklemek için adres olarak JSON kullanabilirsiniz, ancak JSON dizesinin tek satırda olması gerektiğini unutmayın.
+                <br/>
+                <br/>
+                <img src="../../images/tools/screenshot_add_json_task.png" alt="">
+            </div>
+
+            <table class="grid" style="margin-top: 12px">
+                <thead>
+                <tr>
+                    <td>Anahtar</td>
+                    <td>Tip</td>
+                    <td style="width: 140px">Tanım</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>uri</td>
+                    <td>Metin</td>
+                    <td>Adres</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <h4>HTTP / HTTPS / Stream (İsteğe bağlı)</h4>
+            <table class="grid" style="margin-top: 12px">
+                <thead>
+                <tr>
+                    <td>Anahtar</td>
+                    <td>Tip</td>
+                    <td style="width: 140px">Tanım</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>method</td>
+                    <td>Metin</td>
+                    <td>GET, POST ... You know the thing</td>
+                </tr>
+                <tr>
+                    <td>catalog</td>
+                    <td>Metin</td>
+                    <td>Katalog</td>
+                </tr>
+                <tr>
+                    <td>page_url</td>
+                    <td>Metin</td>
+                    <td>Sayfa URL</td>
+                </tr>
+                <tr>
+                    <td>user_agent</td>
+                    <td>Metin</td>
+                    <td>User Agent</td>
+                </tr>
+                <tr>
+                    <td>cookies</td>
+                    <td>Metin</td>
+                    <td>Cookies</td>
+                </tr>
+                <tr>
+                    <td>headers</td>
+                    <td>Metin</td>
+                    <td>HTTP Headers</td>
+                </tr>
+                <tr>
+                    <td>content_type</td>
+                    <td>Metin</td>
+                    <td>Content Type (for HTTP POST)</td>
+                </tr>
+                <tr>
+                    <td>data</td>
+                    <td>Metin</td>
+                    <td>HTTP request data</td>
+                </tr>
+                <tr>
+                    <td>connect_timeout</td>
+                    <td>Sayı</td>
+                    <td>Zaman aşımını bağlayın</td>
+                </tr>
+                <tr>
+                    <td>max_connections</td>
+                    <td>Sayı</td>
+                    <td>Maksimum bağlantılar</td>
+                </tr>
+                <tr>
+                    <td>max_redirect</td>
+                    <td>Sayı</td>
+                    <td>Max yeniden yönlendirme</td>
+                </tr>
+                <tr>
+                    <td>max_retry</td>
+                    <td>Sayı</td>
+                    <td>Maksimum yeniden deneme</td>
+                </tr>
+                <tr>
+                    <td>file_name</td>
+                    <td>Metin</td>
+                    <td>Dosya adı</td>
+                </tr>
+                <tr>
+                    <td>speed_limit_download</td>
+                    <td>Sayı</td>
+                    <td>İndirme hızı sınırı</td>
+                </tr>
+                <tr>
+                    <td>auto_rename_file</td>
+                    <td>bool</td>
+                    <td>Dosyayı otomatik yeniden adlandırma</td>
+                </tr>
+                <tr>
+                    <td>ignore_remote_modified</td>
+                    <td>Sayı</td>
+                    <td>Uzaktan değiştirilenleri yoksay</td>
+                </tr>
+                <tr>
+                    <td>ignore_server_busy</td>
+                    <td>Sayı</td>
+                    <td>Sunucunun meşgul olduğunu görmezden gelin</td>
+                </tr>
+                <tr>
+                    <td>ignore_http_error</td>
+                    <td>Sayı</td>
+                    <td>HTTP hatasını yok say</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <h4>FTP / FTPS (İsteğe bağlı)</h4>
+            <table class="grid" style="margin-top: 12px">
+                <thead>
+                <tr>
+                    <td>Anahtar</td>
+                    <td>Tip</td>
+                    <td style="width: 140px">Tanım</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>catalog</td>
+                    <td>Metin</td>
+                    <td>Katalog</td>
+                </tr>
+                <tr>
+                    <td>page_url</td>
+                    <td>Metin</td>
+                    <td>Sayfa URL</td>
+                </tr>
+                <tr>
+                    <td>connect_timeout</td>
+                    <td>Sayı</td>
+                    <td>Zaman aşımını bağlayın</td>
+                </tr>
+                <tr>
+                    <td>max_connections</td>
+                    <td>Sayı</td>
+                    <td>Maksimum bağlantılar</td>
+                </tr>
+                <tr>
+                    <td>max_retry</td>
+                    <td>Sayı</td>
+                    <td>Maksimum yeniden deneme</td>
+                </tr>
+                <tr>
+                    <td>file_name</td>
+                    <td>Metin</td>
+                    <td>Dosya adı</td>
+                </tr>
+                <tr>
+                    <td>user</td>
+                    <td>Metin</td>
+                    <td>Kullanıcı adı</td>
+                </tr>
+                <tr>
+                    <td>pass</td>
+                    <td>Metin</td>
+                    <td>Şifre</td>
+                </tr>
+                <tr>
+                    <td>speed_limit_download</td>
+                    <td>Sayı</td>
+                    <td>İndirme hızı sınırı</td>
+                </tr>
+                <tr>
+                    <td>speed_limit_upload</td>
+                    <td>Sayı</td>
+                    <td>Yükleme hızı sınırı</td>
+                </tr>
+                <tr>
+                    <td>auto_rename_file</td>
+                    <td>bool</td>
+                    <td>Dosyayı otomatik yeniden adlandırma</td>
+                </tr>
+                <tr>
+                    <td>ignore_server_busy</td>
+                    <td>Sayı</td>
+                    <td>Sunucunun meşgul olduğunu görmezden gelin</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <h4>Magnet / HASH (İsteğe bağlı)</h4>
+            <table class="grid" style="margin-top: 12px">
+                <thead>
+                <tr>
+                    <td>Anahtar</td>
+                    <td>Tip</td>
+                    <td style="width: 140px">Tanım</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>catalog</td>
+                    <td>Metin</td>
+                    <td>Katalog</td>
+                </tr>
+                <tr>
+                    <td>page_url</td>
+                    <td>Metin</td>
+                    <td>Sayfa URL</td>
+                </tr>
+                <tr>
+                    <td>max_connections</td>
+                    <td>Sayı</td>
+                    <td>Maksimum bağlantılar</td>
+                </tr>
+                <tr>
+                    <td>file_name</td>
+                    <td>Metin</td>
+                    <td>Dosya adı</td>
+                </tr>
+                <tr>
+                    <td>speed_limit_download</td>
+                    <td>Sayı</td>
+                    <td>İndirme hızı sınırı</td>
+                </tr>
+                <tr>
+                    <td>speed_limit_upload</td>
+                    <td>Sayı</td>
+                    <td>Yükleme hızı sınırı</td>
+                </tr>
+                <tr>
+                    <td>auto_rename_file</td>
+                    <td>bool</td>
+                    <td>Dosyayı otomatik yeniden adlandırma</td>
+                </tr>
+                <tr>
+                    <td>seeding_limit_ratio</td>
+                    <td>Sayı</td>
+                    <td>seeding sınırı, oran</td>
+                </tr>
+                <tr>
+                    <td>seeding_limit_minutes</td>
+                    <td>Sayı</td>
+                    <td>Seeding sınırı, dakikalar</td>
+                </tr>
+                <tr>
+                    <td>seeding_limit_size</td>
+                    <td>Sayı</td>
+                    <td>Seeding sınırı, boyut</td>
+                </tr>
+                <tr>
+                    <td>seeding_limit_act</td>
+                    <td>Sayı</td>
+                    <td>Seeding sınırı, eylem</td>
+                </tr>
+                <tr>
+                    <td>seeding_limit_speed_limit</td>
+                    <td>Sayı</td>
+                    <td>Seeding sınırı, hız sınırı</td>
+                </tr>
+                <tr>
+                    <td>seeding_limit_ratio_enable</td>
+                    <td>bool</td>
+                    <td>seeding sınırı, oran etkin</td>
+                </tr>
+                <tr>
+                    <td>seeding_limit_minutes_enable</td>
+                    <td>bool</td>
+                    <td>seeding sınırı, dakika etkinleştirme</td>
+                </tr>
+                <tr>
+                    <td>seeding_limit_size_enable</td>
+                    <td>bool</td>
+                    <td>Seeding sınırı, boyut etkinleştirme</td>
+                </tr>
+                <tr>
+                    <td>without_confirm</td>
+                    <td>bool</td>
+                    <td>Onaysız</td>
+                </tr>
+                <tr>
+                    <td>sequential</td>
+                    <td>bool</td>
+                    <td>Sıralı indirme</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section" id="shares">
+    <h2>Paylaş</h2>
+    <div class="addthis_inline_share_toolbox"></div>
+</div>
+    </div>
+
+    <div class="footer">
+    <div class="copyright_">
+        <span>© 2022</span>
+        <div class="email_">
+            <b>EMAIL:</b>
+            <a href="mailto:123123@123.com" id="contact_email">123123@123.com</a>
+        </div>
+        <div class="contact_"></div>
+    </div>
+</div>
+
+</div>
+<script src="../../script/base.js"></script>
+<script>
+    (function(){
+        var codes = document.getElementsByTagName("code");
+
+        for(var i=0;i<codes.length;++i){
+            hljs.highlightBlock(codes[i]);
+        }
+    })();
+</script>
+</body>
+</html>
