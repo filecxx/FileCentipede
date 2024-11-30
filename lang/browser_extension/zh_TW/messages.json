@@ -1,342 +1,698 @@
 {
+    "custom_rule_url_regexp_tips_":{
+        "message":"Use JavaScript regular expressions to match all URL addresses.<br/> (Note: Using regular expressions may impact the performance of the webpage.)"
+    },
+    "name":{
+        "message":"名稱"
+    },
+    "edit_rule":{
+        "message":"Edit rule"
+    },
+    "more":{
+        "message":"更多"
+    },
+    "filter_out":{
+        "message":"過濾掉"
+    },
+    "filter":{
+        "message":"過濾"
+    },
+    "behaviors":{
+        "message":"Behaviors"
+    },
+    "response_data_type":{
+        "message":"Response data type"
+    },
+    "all_sites":{
+        "message":"All sites"
+    },
+    "uncertain":{
+        "message":"不確定的"
+    },
+    "unsuport_m3u8_preview":{
+        "message":"您的網頁瀏覽器不支援 m3u8 檔案預覽。"
+    },
+    "file_unsuport_preview":{
+        "message":"您無法預覽此檔案。"
+    },
+    "resources":{
+        "message":"Resources"
+    },
+    "potentials":{
+        "message":"Potentials"
+    },
+    "action":{
+        "message":"行為"
+    },
+    "path_match_placeholder_":{
+        "message":"Match the paths corresponding to the host addresses above. Each path should start with a '/', and you can use regular expressions. One path per line."
+    },
+    "capture_other_file_types":{
+        "message":"捕捉其他檔案類型"
+    },
+    "download_manager":{
+        "message":"下載管理器"
+    },
+    "download_managers": {
+        "message": "下載管理器"
+    },
+    "service_password":{
+        "message":"服務密碼"
+    },
+    "download_send_failed_message_prefix":{
+        "message":"無法連接到 "
+    },
+    "css_selector":{
+        "message":"CSS 選擇器"
+    },
+    "create_rule":{
+        "message":"Create rule"
+    },
+    "service":{
+        "message":"服務"
+    },
+    "select_element_tip_":{
+        "message":"選擇網頁中的元素，對該域下媒體檔案的檔名的取得規則設定，錄制影片/音訊等。"
+    },
+    "readme":{
+        "message":"自述"
+    },
+    "duplicated_row":{
+        "message":"重複的行"
+    },
+    "duplicated_name": {
+        "message": "Duplicated name"
+    },
+    "clear":{
+        "message":"清空"
+    },
+    "download_all":{
+        "message":"下載全部"
+    },
+    "video_floating_bar":{
+        "message":"視訊浮動欄"
+    },
+    "allow_external_messages":{
+        "message":"允許外部訊息"
+    },
+    "pause_all":{
+        "message":"暫停全部"
+    },
+    "download_link":{
+        "message":"下載這個連結"
+    },
+    "potential_urls":{
+        "message":"潛在 URLs"
+    },
+    "minutes":{
+        "message":"分鐘"
+    },
+    "invalid_css_selector":{
+        "message":"無效的 CSS 選擇器。"
+    },
+    "download":{
+        "message":"下載"
+    },
+    "images":{
+        "message":"Images"
+    },
+    "domain":{
+        "message":"網域"
+    },
+    "do_not_download":{
+        "message":"不下載"
+    },
+    "download_image":{
+        "message":"下載這個圖片"
+    },
+    "file_type":{
+        "message":"File type"
+    },
+    "recapture_address_msg_success":{
+        "message":"已經成功捕獲到新地址，請開啟軟體檢視是否正常下載。"
+    },
+    "stop":{
+        "message":"停止"
+    },
+    "remove_failed_loading_images":{
+        "message":"Remove failed loading images"
+    },
+    "copy_all":{
+        "message":"複製全部"
+    },
+    "send_failed":{
+        "message":"傳送失敗"
+    },
+    "collector_mode_tip_":{
+        "message":"記錄所有網頁捕獲到的媒體資源，必要時候再進行批次的預覽和篩選，減少重復的工作。"
+    },
+    "provider_website":{
+        "message":"Provider website"
+    },
+    "deep_analysis":{
+        "message":"深度分析"
+    },
+    "refresh_address_msg_content":{
+        "message":"在地址捕捉到之前不要重新整理目前網頁，請找到："
+    },
+    "edit":{
+        "message":"編輯"
+    },
+    "scripts":{
+        "message":"Scripts"
+    },
+    "start":{
+        "message":"開始"
+    },
+    "progress":{
+        "message":"進度"
+    },
+    "settings_tip_":{
+        "message":"擴展程式的詳細設定"
+    },
+    "help":{
+        "message":"幫助"
+    },
+    "collector_mode_help_text_":{
+        "message":"收藏家模式在開啟時會首先列出目前所有標籤頁中已經取得到的媒體資源，之後取得到的也會加入到收藏家模式列表中。當視窗關閉時，這些記錄都會消失。<br/><br/>需要注意，由於瀏覽器的限制，當影片數量超過 5000 時無法再設定 Referer HTTP 標頭，會導致有一些網站的資源無法被預覽。<br/><br/>瀏覽器對 HTTP 併發連接具有限制，無法同時播放太多的影片，並且限制了建立 video 元素的數量（在 Chrome 下大約為 100 個），會消耗大量的記憶體和 CPU 資源。<br/><br/>最佳化：所有預覽的影片是根據捲軸位置動態載入的，不可見的影片都會被自動移除，並儲存影片的截圖，再次可見時又會自動建立。網路不佳時，如果啟動了 '播放全部' 會導致間斷性的停頓。<br/><br/>收藏家模式目前屬於 beta 版本，有任何問題歡迎進行回饋。<br/>"
+    },
+    "filename_rule_tips_":{
+        "message":"使用 CSS 選擇器規則取得網頁中指定元素的文字作為該域下媒體檔案的首選檔名.<br/>如果取得失敗，仍然會繼續使用標題或者 og:title 來作為檔名。"
+    },
+    "cancel":{
+        "message":"取消"
+    },
+    "exclude_cross_origin_resources":{
+        "message":"Exclude cross-origin resources"
+    },
+    "custom_file_rules":{
+        "message":"Custom file rules"
+    },
+    "remove":{
+        "message":"刪除"
+    },
+    "yes":{
+        "message":"是"
+    },
+    "enable":{
+        "message":"啟用"
+    },
+    "allow_external_messages_text_":{
+        "message":"允許外部腳本向本擴展發送消息，這個功能可以被第三方查詢接口取代。"
+    },
+    "deep_analysis_text_":{
+        "message":"啟用該項會對網頁進行深度分析以查詢隱藏的影片或音訊資源，<br/> 但是會以消耗更多 CPU 資源為代價.<br/> 如果網頁中包含的指令碼較少或者資料互動頻率不高，<br/> 那麼額外的消耗可以忽略不計。"
+    },
+    "host_match_placeholder_":{
+        "message":"Match the host addresses (domain names or IPs) in the input box, excluding ports. One address per line."
+    },
+    "browser":{
+        "message":"瀏覽器"
+    },
+    "videos":{
+        "message":"視訊"
+    },
+    "height":{
+        "message":"Height"
+    },
+    "rules":{
+        "message":"規則"
+    },
+    "record":{
+        "message":"錄製"
+    },
+    "invalid_domain":{
+        "message":"無效域名。"
+    },
+    "data_source":{
+        "message":"Data source"
+    },
+    "rule":{
+        "message":"Rule"
+    },
+    "configs":{
+        "message":"Configs"
+    },
+    "general":{
+        "message":"常規"
+    },
+    "example":{
+        "message":"示例"
+    },
+    "settings":{
+        "message":"設定"
+    },
+    "file":{
+        "message":"檔案"
+    },
+    "filename":{
+        "message":"檔案名稱"
+    },
+    "type":{
+        "message":"類型"
+    },
+    "text":{
+        "message":"文字"
+    },
     "appname":{
-       "message": "檔案蜈蚣"
+        "message":"檔案蜈蚣"
     },
-    "videos": {
-      "message": "視訊"
+    "custom_rule_tips_":{
+        "message":"When multiple settings are selected, the URL is only considered valid if all of these settings are matched."
     },
-    "audios": {
-      "message": "音訊"
+    "download_send_failed_message":{
+        "message":"要麼沒有安裝，或者沒有啟動，選擇一個操作。"
     },
-    "magnets": {
-      "message": "磁力"
+    "copy":{
+        "message":"複製"
     },
-    "type": {
-      "message": "類型"
+    "play_all":{
+        "message":"播放全部"
     },
-    "length_duration": {
-      "message": "長度 / 時間 / 大小"
+    "potential_keys":{
+        "message":"潛在金鑰"
     },
-    "download": {
-      "message": "下載"
+    "ignore_this_site_tip_":{
+        "message":"下載檔案時忽略該網站，使用瀏覽器預設的下載工具。"
     },
-    "cancel": {
-      "message": "取消"
+    "are_u_sure":{
+        "message":"你確定嗎？"
     },
-    "file": {
-      "message": "檔案"
+    "resolution":{
+        "message":"解析度"
     },
-    "files": {
-      "message": "檔案"
+    "remove_failed_loading_videos":{
+        "message":"移除載入失敗的影片"
     },
-    "download_video": {
-      "message": "下載這個視訊"
+    "recapture_address":{
+        "message":"重新捕獲地址"
     },
-    "download_audio": {
-      "message": "下載這個音訊"
+    "preview":{
+        "message":"預覽"
     },
-    "download_link": {
-      "message": "下載這個連結"
+    "third_party_query_interfaces":{
+        "message":"Third-Party Query Interfaces"
     },
-    "download_image": {
-      "message": "下載這個圖片"
+    "video_duration":{
+        "message":"影片時長"
     },
-    "minutes": {
-      "message": "分鐘"
+    "no":{
+        "message":"否"
     },
-    "text": {
-      "message": "文字"
+    "copy_addr_msg":{
+        "message":"地址複製成功"
     },
-    "download_all": {
-      "message": "下載全部"
+    "load_all":{
+        "message":"載入全部"
     },
-    "copy_all": {
-      "message": "複製全部"
+    "others":{
+        "message":"其他"
     },
-    "copy": {
-      "message": "複製"
+    "download_video":{
+        "message":"下載這個視訊"
     },
-    "copy_addr_msg": {
-      "message": "地址複製成功"
+    "collector_mode":{
+        "message":"收藏家模式"
     },
-    "video_floating_bar": {
-      "message": "視訊浮動欄"
+    "test":{
+        "message":"Test"
     },
-    "enable": {
-      "message": "啟用"
+    "determined":{
+        "message":"已確定的"
     },
-    "disable": {
-      "message": "停用"
+    "files":{
+        "message":"檔案"
     },
-    "yes": {
-      "message": "是"
+    "hide_low_resolution":{
+        "message":"隱藏低解析度"
     },
-    "no": {
-      "message": "否"
+    "all":{
+        "message":"全部"
     },
-    "send_failed": {
-      "message": "傳送失敗"
+    "adverts":{
+        "message":"廣告"
     },
-    "download_send_failed_message_prefix": {
-      "message": "無法連接到 "
+    "res_explorer":{
+        "message":"Resource explorer"
     },
-    "download_send_failed_message": {
-      "message": "要麼沒有安裝，或者沒有啟動，選擇一個操作。"
+    "brute_force_search":{
+        "message":"暴力搜尋"
     },
-    "browser": {
-      "message": "瀏覽器"
+    "port":{
+        "message":"埠"
     },
-    "download_manager": {
-      "message": "下載管理器"
+    "segments":{
+        "message":"片段"
     },
-    "recapture_address": {
-      "message": "重新捕獲地址"
+    "too_many_tasks_download_warning_":{
+        "message":"You have %d download tasks ready to send. This may result in multiple pop-up windows appearing. Do you want to continue?"
     },
-    "refresh_address_msg_content": {
-      "message": "在地址捕捉到之前不要重新整理目前網頁，請找到："
+    "read_from_cache":{
+        "message":"從快取中讀取"
     },
-    "recapture_address_msg_success": {
-      "message": "已經成功捕獲到新地址，請開啟軟體檢視是否正常下載。"
+    "audios":{
+        "message":"音訊"
     },
-    "ignore_this_site": {
-      "message": "忽略此站"
+    "actions":{
+        "message":"行為"
     },
-    "potential_urls": {
-      "message": "潛在 URLs"
+    "crawler":{
+        "message":"爬行器"
     },
-    "potential_keys": {
-      "message": "潛在金鑰"
+    "add":{
+        "message":"新增"
     },
-    "rules": {
-      "message": "規則"
+    "remove_low_quality_videos":{
+        "message":"移除低畫質影片"
     },
-    "filename": {
-      "message": "檔案名稱"
+    "filetypes":{
+        "message":"檔案類型"
     },
-    "filetypes": {
-      "message": "檔案類型"
+    "HTTP_res_request_monitoring":{
+        "message":"HTTP Resource Request Monitoring"
     },
-    "domain": {
-      "message": "網域"
+    "ignore_this_site":{
+        "message":"忽略此站"
     },
-    "settings": {
-      "message": "設定"
+    "page_url":{
+        "message":"網頁 URL"
     },
-    "others": {
-      "message": "其他"
+    "documentation":{
+        "message":"Documentation"
     },
-    "preview": {
-      "message": "預覽"
+    "extension":{
+        "message":"擴展"
     },
-    "save": {
-      "message": "儲存"
+    "explicit":{
+        "message":"Explicit"
     },
-    "add": {
-      "message": "新增"
+    "file_size":{
+        "message":"檔案大小"
     },
-    "edit": {
-      "message": "編輯"
+    "save":{
+        "message":"儲存"
     },
-    "remove": {
-      "message": "刪除"
+    "file_extension":{
+        "message":"File extension"
     },
-    "clear": {
-      "message": "清空"
+    "one_css_selector_per_line":{
+        "message":"One CSS selector per line"
     },
-    "general": {
-      "message": "常規"
+    "file_duration":{
+        "message":"檔案時間長度"
     },
-    "deep_analysis": {
-      "message": "深度分析"
+    "hidden_iframe":{
+        "message":"Hidden iframe"
     },
-    "duplicated_row": {
-      "message": "重複的行"
+    "record_from_screen":{
+        "message":"從螢幕錄制"
     },
-    "service": {
-      "message": "服務"
+    "path_match":{
+        "message":"Path match"
     },
-    "service_password": {
-      "message": "服務密碼"
+    "host_match":{
+        "message":"Host match"
     },
-    "extension": {
-      "message": "擴展"
+    "data_format":{
+        "message":"Data format"
     },
-    "css_selector": {
-      "message": "CSS 選擇器"
+    "visible_element": {
+        "message": "Visible element"
     },
-    "do_not_download": {
-      "message": "不下載"
+    "visible_elements":{
+        "message":"Visible elements"
     },
-    "capture_other_file_types": {
-      "message": "捕捉其他檔案類型"
+    "hidden_elements": {
+        "message": "Hidden elements"
     },
-    "file_unsuport_preview": {
-      "message": "您無法預覽此檔案。"
+    "magnets":{
+        "message":"磁力"
     },
-    "unsuport_m3u8_preview": {
-      "message": "您的網頁瀏覽器不支援 m3u8 檔案預覽。"
+    "window_height":{
+        "message":"Window height"
     },
-    "invalid_domain": {
-      "message": "無效域名。"
+    "window_width":{
+        "message":"Window width"
     },
-    "invalid_css_selector": {
-      "message": "無效的 CSS 選擇器。"
+    "trash_script_code":{
+        "message":"Trash script code"
     },
-    "filter": {
-      "message": "過濾"
+    "preview_notify_":{
+        "message":"由於瀏覽器的限制以及網站的防下載規則會導致並非所有影片都可以被預覽。<br/>部分影片無法被預覽，但是可以被下載。<br/>部分影片既無法被預覽，也無法被下載。"
     },
-    "filter_out": {
-      "message": "過濾掉"
+    "relative_URL_to_absolute_URL_tips_":{
+        "message":"Convert relative URL to absolute URL.<br/>Example: /123/123.txt -> http://xxxx/123/123.txt"
     },
-    "more": {
-      "message": "更多"
+    "interface_type":{
+        "message":"Interface type"
     },
-    "name": {
-      "message": "名稱"
+    "download_manager_tip_":{
+        "message":"下載檔案時候預設使用的下載管理器。"
     },
-    "collector_mode": {
-      "message": "收藏家模式"
+    "optional":{
+        "message":"Optional"
     },
-    "record": {
-      "message": "錄製"
+    "implicit":{
+        "message":"Implicit"
     },
-    "determined": {
-      "message": "已確定的"
+    "window":{
+        "message":"Window"
     },
-    "uncertain": {
-      "message": "不確定的"
+    "selected":{
+        "message":"Selected"
     },
-    "segments": {
-      "message": "片段"
+    "adverts_detection":{
+        "message":"廣告偵測"
     },
-    "hide_low_resolution": {
-      "message": "隱藏低解析度"
+    "types":{
+        "message":"Types"
     },
-    "all": {
-      "message": "全部"
+    "media_files":{
+        "message":"Media files"
     },
-    "adverts": {
-      "message": "廣告"
+    "url_conversion":{
+        "message":"URL conversion"
     },
-    "adverts_detection": {
-      "message": "廣告偵測"
+    "custom_rule_selector_attr_name_tips_":{
+        "message":"Once an element is matched using the specified CSS selector, extract the content from the designated attribute name. To extract the text content, use curly braces {} instead."
     },
-    "resolution": {
-      "message": "解析度"
+    "paths":{
+        "message":"Paths"
     },
-    "play_all": {
-      "message": "播放全部"
+    "interface":{
+        "message":"Interface"
     },
-    "pause_all": {
-      "message": "暫停全部"
+    "filename_rules":{
+        "message":"File name rules"
     },
-    "load_all": {
-      "message": "載入全部"
+    "attr_name":{
+        "message":"Attribute name"
     },
-    "brute_force_search": {
-      "message": "暴力搜尋"
+    "rule_name_duplicated":{
+        "message":"Rule name is duplicated"
     },
-    "readme": {
-      "message": "自述"
+    "invalid_settings":{
+        "message":"Invalid settings"
     },
-    "help": {
-      "message": "幫助"
+    "name_cannot_be_empty":{
+        "message":"Name cannot be empty"
     },
-    "start": {
-      "message": "開始"
+    "host_cannot_be_empty": {
+        "message": "Host cannot be empty"
     },
-    "stop": {
-      "message": "停止"
+    "video_source":{
+        "message":"影片來源"
     },
-    "port": {
-      "message": "埠"
+    "apply_to":{
+        "message":"Apply to"
     },
-    "action": {
-      "message": "行為"
+    "playback_speed":{
+        "message":"播放速度"
     },
-    "actions": {
-      "message": "行為"
+    "custom_rule_selector_tips_":{
+        "message":"Use CSS selectors to query DOM elements from a webpage and extract URL addresses from the attributes or text content of the selected elements.<br/> For example, you can retrieve the URL from the 'href' attribute of an a tag."
     },
-    "are_u_sure": {
-      "message": "你確定嗎？"
+    "length_duration":{
+        "message":"長度 / 時間 / 大小"
     },
-    "crawler": {
-      "message": "爬行器"
+    "error":{
+        "message":"Error"
     },
-    "feature_not_implemented": {
-      "message": "此功能目前保留，尚未實施。"
+    "dark":{
+        "message":"Dark"
     },
-    "remove_low_quality_videos": {
-      "message": "移除低畫質影片"
+    "planned_no_implemented_":{
+        "message":"Planned but not implemented."
     },
-    "remove_failed_loading_videos": {
-      "message": "移除載入失敗的影片"
+    "sorting":{
+        "message":"Sorting"
     },
-    "page_url": {
-      "message": "網頁 URL"
+    "width":{
+        "message":"Width"
     },
-    "file_size": {
-      "message": "檔案大小"
+    "collector_notify_":{
+        "message":"收藏家模式只有在視窗開啟時候才會有效，關閉該視窗會遺失所有記錄.<br/>由於瀏覽器的限制以及網站的下載鏈規則會導致並非所有影片都可以被預覽.<br/>部分影片無法被預覽，但是可以被下載.<br/>部分影片既無法被預覽，也無法被下載。"
     },
-    "file_duration": {
-      "message": "檔案時間長度"
+    "size":{
+        "message":"Size"
     },
-    "playback_speed": {
-      "message": "播放速度"
+    "provider":{
+        "message":"Provider"
     },
-    "video_duration": {
-      "message": "影片時長"
+    "feature_not_implemented":{
+        "message":"此功能目前保留，尚未實施。"
     },
-    "video_source": {
-      "message": "影片來源"
+    "download_selected":{
+        "message":"Download selected"
     },
-    "read_from_cache": {
-      "message": "從快取中讀取"
+    "remove_selected":{
+        "message":"Remove selected"
     },
-    "record_from_screen": {
-      "message": "從螢幕錄制"
+    "unselect_all":{
+        "message":"Unselect all"
     },
-    "progress": {
-      "message": "進度"
+    "hosts":{
+        "message":"Hosts"
     },
-    "allow_external_messages": {
-      "message": "允許外部訊息"
+    "iframe":{
+        "message":"Iframe"
     },
-    "example": {
-      "message": "示例"
+    "download_exclusions":{
+        "message":"Download Exclusions"
     },
-    "deep_analysis_text_": {
-      "message": "啟用該項會對網頁進行深度分析以查詢隱藏的影片或音訊資源，<br/> 但是會以消耗更多 CPU 資源為代價.<br/> 如果網頁中包含的指令碼較少或者資料互動頻率不高，<br/> 那麼額外的消耗可以忽略不計。"
+    "select_all":{
+        "message":"Select all"
     },
-    "allow_external_messages_text_": {
-      "message": "允許其他擴展程式或者 JS 指令碼給本擴展程式傳送訊息，<br/> 通常用於本擴展程式無法捕獲某個網頁的媒體資源時候，<br/> 可以針對該網頁編寫 JS 指令碼然後將指令碼取得到的結果傳送給本擴展程式，<br/>而無需再單獨開發前端和下載功能。"
+    "open_with_new_tab":{
+        "message":"Open with new tab"
     },
-    "filename_rule_tips_": {
-      "message": "使用 CSS 選擇器規則取得網頁中指定元素的文字作為該域下媒體檔案的首選檔名.<br/>如果取得失敗，仍然會繼續使用標題或者 og:title 來作為檔名。"
+    "disable":{
+        "message":"停用"
     },
-    "download_manager_tip_": {
-      "message": "下載檔案時候預設使用的下載管理器。"
+    "HTTP_res_request_monitoring_tips_": {
+        "message": "Enabling HTTP resource request monitoring lets you record all resources on web pages, even if the resource explorer is closed. This means you can track resources that aren't currently displayed or have been removed. However, if the resource explorer is already open, turning on this feature won't offer any extra advantages. Please keep in mind that this feature will use more memory to store the recorded data, even when the resource explorer is not open."
     },
-    "collector_mode_tip_": {
-      "message": "記錄所有網頁捕獲到的媒體資源，必要時候再進行批次的預覽和篩選，減少重復的工作。"
+    "custom":{
+        "message":"Custom"
     },
-    "collector_notify_": {
-      "message": "收藏家模式只有在視窗開啟時候才會有效，關閉該視窗會遺失所有記錄.<br/>由於瀏覽器的限制以及網站的下載鏈規則會導致並非所有影片都可以被預覽.<br/>部分影片無法被預覽，但是可以被下載.<br/>部分影片既無法被預覽，也無法被下載。"
+    "site_settings":{
+        "message":"Site settings"
     },
-    "collector_mode_help_text_": {
-      "message": "收藏家模式在開啟時會首先列出目前所有標籤頁中已經取得到的媒體資源，之後取得到的也會加入到收藏家模式列表中。當視窗關閉時，這些記錄都會消失。<br/><br/>需要注意，由於瀏覽器的限制，當影片數量超過 5000 時無法再設定 Referer HTTP 標頭，會導致有一些網站的資源無法被預覽。<br/><br/>瀏覽器對 HTTP 併發連接具有限制，無法同時播放太多的影片，並且限制了建立 video 元素的數量（在 Chrome 下大約為 100 個），會消耗大量的記憶體和 CPU 資源。<br/><br/>最佳化：所有預覽的影片是根據捲軸位置動態載入的，不可見的影片都會被自動移除，並儲存影片的截圖，再次可見時又會自動建立。網路不佳時，如果啟動了 '播放全部' 會導致間斷性的停頓。<br/><br/>收藏家模式目前屬於 beta 版本，有任何問題歡迎進行回饋。<br/>"
+    "excluded_from_collector_mode":{
+        "message":"Excluded from collector mode"
     },
-    "settings_tip_": {
-      "message": "擴展程式的詳細設定"
+    "download_audio":{
+        "message":"下載這個音訊"
     },
-    "select_element_tip_": {
-      "message": "選擇網頁中的元素，對該域下媒體檔案的檔名的取得規則設定，錄制影片/音訊等。"
+    "icon":{
+        "message":"Icon"
     },
-    "ignore_this_site_tip_": {
-      "message": "下載檔案時忽略該網站，使用瀏覽器預設的下載工具。"
+    "note":{
+        "message":"Note"
     },
-    "preview_notify_": {
-      "message": "由於瀏覽器的限制以及網站的防下載規則會導致並非所有影片都可以被預覽。<br/>部分影片無法被預覽，但是可以被下載。<br/>部分影片既無法被預覽，也無法被下載。"
+    "use_browser_for_downloading":{
+        "message":"Use browser for downloading"
+    },
+    "resolutions":{
+        "message":"Resolutions"
+    },
+    "res_explorer_tip_":{
+        "message":"List all resources, images, scripts, documents, and custom file types in the current website."
+    },
+    "this_site":{
+        "message":"This site"
+    },
+    "unselect":{
+        "message":"Unselect"
+    },
+    "collector":{
+        "message":"Collector"
+    },
+    "embed_code": {
+        "message": "Embed Code"
+    },
+    "import": {
+        "message": "Import"
+    },
+    "export": {
+        "message": "Export"
+    },
+    "share": {
+        "message": "Share"
+    },
+    "public_lists": {
+        "message": "Public lists"
+    },
+    "no_selected_rows": {
+        "message": "No selected rows"
+    },
+    "override": {
+        "message": "Override"
+    },
+    "override_duplicated_name_tips_": {
+        "message": "The name already exists.<br/> Do you want to overwrite the existing setting?"
+    },
+    "version": {
+        "message": "Version"
+    },
+    "create_button": {
+        "message": "Create button"
+    },
+    "styles": {
+        "message": "Styles"
+    },
+    "CSS_injection": {
+        "message": "CSS injection"
+    },
+    "insert_to": {
+        "message": "Insert to"
+    },
+    "display_options": {
+        "message": "Display options"
+    },
+    "media_files_detection": {
+        "message": "Media files detection"
+    },
+    "insertion_method": {
+        "message": "Insertion method"
+    },
+    "trigger": {
+        "message": "Trigger"
+    },
+    "script_code_cannot_be_empty": {
+        "message": "Script code cannot be empty."
+    },
+    "troubleshooting": {
+        "message": "Troubleshooting"
+    },
+    "invalid_data": {
+        "message": "Invalid data"
+    },
+    "description": {
+        "message": "Description"
+    },
+    "description_note_": {
+        "message": "The description, please make it as short as possible."
+    },
+    "download_exclusions_help_": {
+        "message": "When you start a download task, the browser will handle the download if it meets the specified settings. This option takes priority over all other settings. However, keep in mind that this does not apply to captured video and audio files. For these files, the download manager will still be used, as the browser's built-in download tool is not designed to handle them."
+    },
+    "custom_file_rules_help_": {
+        "message": "You can create custom rules for specific file types, such as lyrics or subtitles. As long as the webpage contains these resources, they will be detected. The detected resources will then show up in the custom section of the popup in the upper right corner, as well as in the resource explorer."
+    },
+    "site_settings_help_": {
+        "message": "Each website has its own individual settings. By checking any option in the \"This Website\" section of the popup, you will automatically create settings for that specific website. The custom file rules in the website settings will only apply to that particular website."
+    },
+    "third_party_interface_help_": {
+        "message": "The third-party query interface and file detection feature serve different purposes. Sometimes, on certain specially processed websites, files may not be easily detectable. This feature is designed to address that issue! You can easily extract file download links from specific web pages by writing scripts, or check for files on other servers or local applications using HTTP interactions. While there are third-party applications that can perform similar tasks, this feature simplifies the process with one-click downloading, improving overall efficiency."
+    },
+    "media_files_detection_text_": {
+        "message": "啟用或禁用媒體檔案檢測功能。"
+    },
+    "deep_analysis_res_text_": {
+        "message": "啟用或禁用對圖片、腳本等資源檔案的深度檢測。<br/>啟用此功能可以幫助識別更多潛在的資源檔案。<br/> 如果您不使用資源管理器功能，可以禁用此選項。<br/> 要完全禁用深度分析，您需要關閉所有相關選項。"
+    },
+    "deep_analysis_customs_text_": {
+        "message": "此選項決定深度分析是否也匹配自訂檔案規則。<br/>注意：如果自訂檔案規則包含正則表達式，可能會影響網頁性能。<br/> 要完全禁用深度分析，您需要關閉所有相關選項。"
     }
 }
- 

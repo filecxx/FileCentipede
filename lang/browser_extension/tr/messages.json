@@ -1,60 +1,306 @@
 {
-  "edit": {
-    "message": "Düzenle"
+  "collector": {
+    "message": "Collector"
   },
-  "copy": {
-    "message": "kopyala"
+  "res_explorer_tip_": {
+    "message": "List all resources, images, scripts, documents, and custom file types in the current website."
   },
-  "filename": {
-    "message": "Dosya adı"
+  "video_source": {
+    "message": "Video kaynağı"
   },
-  "file": {
-    "message": "dosya"
+  "playback_speed": {
+    "message": "Oynatma hızı"
   },
-  "remove": {
-    "message": "Kaldır"
+  "file_size": {
+    "message": "Dosya boyutu"
+  },
+  "page_url": {
+    "message": "Sayfa URL'si"
+  },
+  "remove_low_quality_videos": {
+    "message": "Düşük kaliteli videoları kaldırın"
+  },
+  "crawler": {
+    "message": "Paletli"
+  },
+  "actions": {
+    "message": "Eylemler"
+  },
+  "audios": {
+    "message": "Sesler"
+  },
+  "port": {
+    "message": "Port"
+  },
+  "brute_force_search": {
+    "message": "Kaba kuvvetle arama"
+  },
+  "res_explorer": {
+    "message": "Resource explorer"
+  },
+  "adverts": {
+    "message": "Reklamlar"
+  },
+  "all": {
+    "message": "Tümü"
+  },
+  "hide_low_resolution": {
+    "message": "Düşük çözünürlüğü gizle"
+  },
+  "segments": {
+    "message": "Segmentler"
+  },
+  "determined": {
+    "message": "Belirlenmiş"
+  },
+  "collector_mode": {
+    "message": "Toplayıcı Modu"
   },
   "rules": {
     "message": "Kurallar"
   },
+  "remove_failed_loading_videos": {
+    "message": "Başarısız yükleme videolarını kaldırın"
+  },
+  "are_u_sure": {
+    "message": "Emin misin?"
+  },
   "browser": {
     "message": "Tarayıcı"
-  },
-  "filetypes": {
-    "message": "Dosya türleri"
-  },
-  "download_audio": {
-    "message": "Bu sesi indir"
-  },
-  "deep_analysis": {
-    "message": "Derinlemesine analiz"
-  },
-  "potential_keys": {
-    "message": "Olası anahtarlar"
   },
   "videos": {
     "message": "Videolar"
   },
-  "recapture_address": {
-    "message": "Yeniden adres yakalama"
+  "potentials": {
+    "message": "Potentials"
   },
-  "type": {
-    "message": "tür"
+  "potential_keys": {
+    "message": "Olası anahtarlar"
+  },
+  "play_all": {
+    "message": "Hepsini oynat"
+  },
+  "help": {
+    "message": "Yardım"
+  },
+  "progress": {
+    "message": "İlerleme"
+  },
+  "settings_tip_": {
+    "message": "Uzantı için ayrıntılı ayarlar."
+  },
+  "deep_analysis_text_": {
+    "message": "Bu seçeneğin etkinleştirilmesi, gizli video veya ses kaynaklarını bulmak için web sayfasının derinlemesine bir analizini gerçekleştirecektir.<br/> ancak bunun bedeli daha fazla CPU kaynağı tüketmektir.<br/> Web sayfasında daha az betik veya düşük veri etkileşim sıklığı varsa,<br/> ek tüketim önemsiz olabilir."
+  },
+  "no": {
+    "message": "Hayır"
+  },
+  "download_send_failed_message_prefix": {
+    "message": "Bağlanılamıyor "
+  },
+  "service_password": {
+    "message": "hizmet şifresi"
+  },
+  "filetypes": {
+    "message": "Dosya türleri"
+  },
+  "length_duration": {
+    "message": "uzunluk / süre / boyut"
+  },
+  "deep_analysis": {
+    "message": "Derinlemesine analiz"
+  },
+  "download_manager_tip_": {
+    "message": "Dosya indirirken kullanılan varsayılan indirme yöneticisi."
+  },
+  "download_audio": {
+    "message": "Bu sesi indir"
+  },
+  "enable": {
+    "message": "Etkinleştir"
+  },
+  "allow_external_messages_text_": {
+    "message": "Allow external scripts to send messages to this extension; this feature can be replaced by the third-party query interface."
+  },
+  "action": {
+    "message": "Eylem"
+  },
+  "uncertain": {
+    "message": "Belirsiz"
+  },
+  "unsuport_m3u8_preview": {
+    "message": "Web tarayıcınız m3u8 dosyalarının önizlemesini desteklemiyor."
+  },
+  "read_from_cache": {
+    "message": "Önbellekten okuma"
+  },
+  "appname": {
+    "message": "File Centipede"
+  },
+  "text": {
+    "message": "metin"
+  },
+  "collector_mode_tip_": {
+    "message": "Web sayfalarında yakalanan tüm medya kaynaklarını kaydeder,<br/> ve gerektiğinde toplu önizleme ve filtreleme gerçekleştirir,<br/> tekrarlayan işlerin azaltılması."
+  },
+  "example": {
+    "message": "Örnek"
+  },
+  "record": {
+    "message": "Kayıt"
+  },
+  "invalid_domain": {
+    "message": "Geçersiz alan adı."
+  },
+  "extension": {
+    "message": "Uzantı"
+  },
+  "filter": {
+    "message": "Filtre"
+  },
+  "resources": {
+    "message": "Resources"
+  },
+  "file_unsuport_preview": {
+    "message": "Bu dosyayı önizleyemezsiniz"
+  },
+  "file_duration": {
+    "message": "Dosya süresi"
+  },
+  "preview_notify_": {
+    "message": "Tarayıcı sınırlamaları ve web sitelerinin indirme karşıtı kuralları nedeniyle, tüm videolar önizlenemeyebilir.<br/> Bazı videolar önizlenemeyebilir ancak indirilebilir.<br/> Bazı videolar ise ne önizlenebilir ne de indirilebilir."
+  },
+  "cancel": {
+    "message": "İptal"
+  },
+  "filename_rule_tips_": {
+    "message": "Web sayfasındaki belirli bir öğenin metnini, o etki alanındaki medya dosyaları için tercih edilen dosya adı olarak almak için CSS seçici kurallarını kullanır.<br/> Alım başarısız olursa, dosya adı olarak başlık veya og:title kullanılır."
+  },
+  "collector_mode_help_text_": {
+    "message": "Collector modu açıldığında, başlangıçta açık sekmelerden elde edilen tüm medya kaynaklarını listeler ve yeni elde edilenler de Collector modu listesine eklenir.<br/><br/>Bu kayıtlar, pencere kapatıldığında kaybolur.<br/><br/>Tarayıcı sınırlamaları nedeniyle, video sayısı 5000'i aştığında, Referer HTTP başlığı ayarlanamaz ve bu da bazı web sitelerindeki kaynakların önizlenememesine neden olur.<br/><br/>Tarayıcılar, HTTP eşzamanlı bağlantılarına sınırlama getirir, bu da aynı anda çok fazla videonun oynatılmasını engeller ve video elemanlarının oluşturulabileceği sayıyı sınırlar (Chrome'da yaklaşık 100), bu da önemli miktarda bellek ve CPU kaynağı tüketir.<br/><br/>Optimizasyon: Önizlenen tüm videolar, kaydırma çubuğu pozisyonuna göre dinamik olarak yüklenir; görünmeyen videolar otomatik olarak kaldırılır ve anlık görüntüleri kaydedilir.<br/><br/>Görünür hale geldiklerinde yeniden oluşturulurlar, eğer 'Tümünü Oynat' etkinleştirilirse ve ağ yavaşsa aralıklı duraklamalar olabilir.<br/><br/>Collector modu şu anda beta sürümündedir; herhangi bir sorunla karşılaşırsanız geri bildirimde bulunmaktan çekinmeyin."
+  },
+  "start": {
+    "message": "Başlangıç"
+  },
+  "record_from_screen": {
+    "message": "Ekrandan kayıt"
+  },
+  "readme": {
+    "message": "Beni oku"
+  },
+  "feature_not_implemented": {
+    "message": "Bu özellik şu anda rezerve edilmiştir ve henüz uygulanmamıştır."
+  },
+  "select_element_tip_": {
+    "message": "Web sayfasındaki öğeleri seçin, bu etki alanındaki medya dosyalarının dosya adlarını almak için kurallar belirleyin ve video/ses vb. kaydedin."
+  },
+  "preview": {
+    "message": "Önizle"
+  },
+  "duplicated_row": {
+    "message": "Şimdi yinele"
+  },
+  "duplicated_name": {
+    "message": "Duplicated name"
+  },
+  "add": {
+    "message": "Ekle"
+  },
+  "video_duration": {
+    "message": "Video süresi"
+  },
+  "css_selector": {
+    "message": "CSS seçici"
+  },
+  "service": {
+    "message": "hizmeti"
+  },
+  "capture_other_file_types": {
+    "message": "Yakalanacak diğer dosya türleri"
+  },
+  "general": {
+    "message": "Genel"
   },
   "download_send_failed_message": {
     "message": "yüklü değilse veya çalışmıyorsa bir işlem seçin."
   },
+  "file": {
+    "message": "dosya"
+  },
+  "copy": {
+    "message": "kopyala"
+  },
+  "edit": {
+    "message": "Düzenle"
+  },
+  "collector_notify_": {
+    "message": "Toplayıcı modu yalnızca pencere açıkken etkilidir; pencerenin kapatılması tüm kayıtları kaybedecektir.<br/> Tarayıcı sınırlamaları ve web sitesi indirme zinciri kuralları nedeniyle, tüm videolar önizlenemez.<br/> Bazı videolar önizlenemez ancak indirilebilir.<br/> Bazı videolar önizlenemez ve indirilemez."
+  },
+  "refresh_address_msg_content": {
+    "message": "Adres yakalanmadan önce mevcut sayfayı yenilemeyin, lütfen şunu bulun:"
+  },
+  "download": {
+    "message": "İndir"
+  },
+  "invalid_css_selector": {
+    "message": "Invalid css selector."
+  },
+  "filter_out": {
+    "message": "Filtrele"
+  },
+  "recapture_address": {
+    "message": "Yeniden adres yakalama"
+  },
+  "filename": {
+    "message": "Dosya adı"
+  },
+  "type": {
+    "message": "tür"
+  },
+  "save": {
+    "message": "Kaydet"
+  },
+  "stop": {
+    "message": "Dur"
+  },
+  "this_site": {
+    "message": "This site"
+  },
+  "ignore_this_site": {
+    "message": "Bu siteleri yoksay"
+  },
+  "recapture_address_msg_success": {
+    "message": "Yeniden adres yakalama başarılı, lütfen yazılımı açın ve indirilip indirilmediğini kontrol edin."
+  },
+  "download_image": {
+    "message": "Bu resmi indir"
+  },
+  "do_not_download": {
+    "message": "İndirilmeyecekler"
+  },
   "domain": {
     "message": "Domain"
   },
-  "download_link": {
-    "message": "Bu bağlantıyı indir"
+  "clear": {
+    "message": "Temizle"
+  },
+  "minutes": {
+    "message": "Dakika"
+  },
+  "adverts_detection": {
+    "message": "Reklam algılama"
   },
   "potential_urls": {
     "message": "Olası URL'ler"
   },
-  "minutes": {
-    "message": "Dakika"
+  "download_link": {
+    "message": "Bu bağlantıyı indir"
+  },
+  "pause_all": {
+    "message": "Tümünü duraklat"
+  },
+  "allow_external_messages": {
+    "message": "Harici mesajlara izin ver"
   },
   "video_floating_bar": {
     "message": "Video üzerinde çubuk"
@@ -62,101 +308,11 @@
   "download_all": {
     "message": "Tümünü indir"
   },
-  "clear": {
-    "message": "Temizle"
-  },
-  "enable": {
-    "message": "Etkinleştir"
-  },
-  "download": {
-    "message": "İndir"
-  },
-  "capture_other_file_types": {
-    "message": "Yakalanacak diğer dosya türleri"
-  },
-  "service_password": {
-    "message": "hizmet şifresi"
-  },
-  "unsuport_m3u8_preview": {
-    "message": "Web tarayıcınız m3u8 dosyalarının önizlemesini desteklemiyor."
-  },
-  "general": {
-    "message": "Genel"
-  },
-  "filter_out": {
-    "message": "Filtrele"
-  },
-  "file_unsuport_preview": {
-    "message": "Bu dosyayı önizleyemezsiniz"
-  },
-  "no": {
-    "message": "Hayır"
-  },
-  "filter": {
-    "message": "Filtre"
-  },
-  "extension": {
-    "message": "Uzantı"
-  },
-  "invalid_domain": {
-    "message": "Geçersiz alan adı."
-  },
-  "invalid_css_selector": {
-    "message": "Invalid css selector."
-  },
-  "service": {
-    "message": "hizmeti"
-  },
-  "css_selector": {
-    "message": "CSS seçici"
-  },
-  "duplicated_row": {
-    "message": "Şimdi yinele"
-  },
-  "cancel": {
-    "message": "İptal"
-  },
-  "do_not_download": {
-    "message": "İndirilmeyecekler"
-  },
-  "download_image": {
-    "message": "Bu resmi indir"
-  },
-  "audios": {
-    "message": "Sesler"
-  },
-  "download_manager": {
-    "message": "İndirme yöneticisi"
-  },
-  "recapture_address_msg_success": {
-    "message": "Yeniden adres yakalama başarılı, lütfen yazılımı açın ve indirilip indirilmediğini kontrol edin."
-  },
-  "ignore_this_site": {
-    "message": "Bu siteleri yoksay"
-  },
-  "save": {
-    "message": "Kaydet"
-  },
-  "length_duration": {
-    "message": "uzunluk / süre / boyut"
-  },
-  "download_send_failed_message_prefix": {
-    "message": "Bağlanılamıyor "
-  },
-  "copy_all": {
-    "message": "Tümünü kopyala"
-  },
-  "refresh_address_msg_content": {
-    "message": "Adres yakalanmadan önce mevcut sayfayı yenilemeyin, lütfen şunu bulun:"
-  },
   "send_failed": {
     "message": "Gönderim başarısız"
   },
-  "appname": {
-    "message": "File Centipede"
-  },
-  "text": {
-    "message": "metin"
+  "copy_all": {
+    "message": "Tümünü kopyala"
   },
   "disable": {
     "message": "Devre dışı bırak"
@@ -170,8 +326,14 @@
   "files": {
     "message": "dosya"
   },
+  "resolution": {
+    "message": "Çözünürlük"
+  },
   "settings": {
     "message": "Ayarlar"
+  },
+  "load_all": {
+    "message": "Tümünü yükle"
   },
   "magnets": {
     "message": "Mıknatıslar"
@@ -182,11 +344,14 @@
   "yes": {
     "message": "Evet"
   },
-  "preview": {
-    "message": "Önizle"
+  "remove": {
+    "message": "Kaldır"
   },
-  "add": {
-    "message": "Ekle"
+  "download_manager": {
+    "message": "İndirme yöneticisi"
+  },
+  "download_managers": {
+    "message": "Download managers"
   },
   "more": {
     "message": "Daha fazla"
@@ -194,148 +359,340 @@
   "name": {
     "message": "İsim"
   },
-  "collector_mode": {
-    "message": "Toplayıcı Modu"
+  "resolutions": {
+    "message": "Resolutions"
   },
-  "record": {
-    "message": "Kayıt"
+  "use_browser_for_downloading": {
+    "message": "Use browser for downloading"
   },
-  "determined": {
-    "message": "Belirlenmiş"
+  "excluded_from_collector_mode": {
+    "message": "Excluded from collector mode"
   },
-  "uncertain": {
-    "message": "Belirsiz"
+  "site_settings": {
+    "message": "Site settings"
   },
-  "segments": {
-    "message": "Segmentler"
+  "images": {
+    "message": "Images"
   },
-  "hide_low_resolution": {
-    "message": "Düşük çözünürlüğü gizle"
+  "scripts": {
+    "message": "Scripts"
   },
-  "all": {
-    "message": "Tümü"
+  "custom": {
+    "message": "Custom"
   },
-  "adverts": {
-    "message": "Reklamlar"
+  "custom_file_rules": {
+    "message": "Custom file rules"
   },
-  "adverts_detection": {
-    "message": "Reklam algılama"
+  "filename_rules": {
+    "message": "File name rules"
   },
-  "resolution": {
-    "message": "Çözünürlük"
+  "HTTP_res_request_monitoring": {
+    "message": "HTTP Resource Request Monitoring"
   },
-  "play_all": {
-    "message": "Hepsini oynat"
+  "HTTP_res_request_monitoring_tips_": {
+    "message": "Enabling HTTP resource request monitoring lets you record all resources on web pages, even if the resource explorer is closed. This means you can track resources that aren't currently displayed or have been removed. However, if the resource explorer is already open, turning on this feature won't offer any extra advantages. Please keep in mind that this feature will use more memory to store the recorded data, even when the resource explorer is not open."
   },
-  "pause_all": {
-    "message": "Tümünü duraklat"
+  "open_with_new_tab": {
+    "message": "Open with new tab"
   },
-  "load_all": {
-    "message": "Tümünü yükle"
+  "select_all": {
+    "message": "Select all"
   },
-  "brute_force_search": {
-    "message": "Kaba kuvvetle arama"
+  "unselect_all": {
+    "message": "Unselect all"
   },
-  "readme": {
-    "message": "Beni oku"
+  "remove_selected": {
+    "message": "Remove selected"
   },
-  "help": {
-    "message": "Yardım"
+  "download_selected": {
+    "message": "Download selected"
   },
-  "start": {
-    "message": "Başlangıç"
+  "size": {
+    "message": "Size"
   },
-  "stop": {
-    "message": "Dur"
+  "width": {
+    "message": "Width"
   },
-  "port": {
-    "message": "Port"
+  "height": {
+    "message": "Height"
   },
-  "action": {
-    "message": "Eylem"
+  "sorting": {
+    "message": "Sorting"
   },
-  "actions": {
-    "message": "Eylemler"
+  "create_rule": {
+    "message": "Create rule"
   },
-  "are_u_sure": {
-    "message": "Emin misin?"
+  "edit_rule": {
+    "message": "Edit rule"
   },
-  "crawler": {
-    "message": "Paletli"
+  "rule": {
+    "message": "Rule"
   },
-  "feature_not_implemented": {
-    "message": "Bu özellik şu anda rezerve edilmiştir ve henüz uygulanmamıştır."
+  "unselect": {
+    "message": "Unselect"
   },
-  "remove_low_quality_videos": {
-    "message": "Düşük kaliteli videoları kaldırın"
+  "dark": {
+    "message": "Dark"
   },
-  "remove_failed_loading_videos": {
-    "message": "Başarısız yükleme videolarını kaldırın"
+  "too_many_tasks_download_warning_": {
+    "message": "You have %d download tasks ready to send. This may result in multiple pop-up windows appearing. Do you want to continue?"
   },
-  "page_url": {
-    "message": "Sayfa URL'si"
+  "exclude_cross_origin_resources": {
+    "message": "Exclude cross-origin resources"
   },
-  "file_size": {
-    "message": "Dosya boyutu"
+  "error": {
+    "message": "Error"
   },
-  "file_duration": {
-    "message": "Dosya süresi"
+  "apply_to": {
+    "message": "Apply to"
   },
-  "playback_speed": {
-    "message": "Oynatma hızı"
+  "all_sites": {
+    "message": "All sites"
   },
-  "video_duration": {
-    "message": "Video süresi"
+  "file_extension": {
+    "message": "File extension"
   },
-  "video_source": {
-    "message": "Video kaynağı"
+  "name_cannot_be_empty": {
+    "message": "Name cannot be empty"
   },
-  "read_from_cache": {
-    "message": "Önbellekten okuma"
+  "host_cannot_be_empty": {
+    "message": "Host cannot be empty"
   },
-  "record_from_screen": {
-    "message": "Ekrandan kayıt"
+  "invalid_settings": {
+    "message": "Invalid settings"
   },
-  "progress": {
-    "message": "İlerleme"
+  "download_exclusions": {
+    "message": "Download Exclusions"
   },
-  "allow_external_messages": {
-    "message": "Harici mesajlara izin ver"
+  "planned_no_implemented_": {
+    "message": "Planned but not implemented."
   },
-  "example": {
-    "message": "Örnek"
+  "rule_name_duplicated": {
+    "message": "Rule name is duplicated"
   },
-  "deep_analysis_text_": {
-    "message": "Bu seçeneğin etkinleştirilmesi, gizli video veya ses kaynaklarını bulmak için web sayfasının derinlemesine bir analizini gerçekleştirecektir.<br/> ancak bunun bedeli daha fazla CPU kaynağı tüketmektir.<br/> Web sayfasında daha az betik veya düşük veri etkileşim sıklığı varsa,<br/> ek tüketim önemsiz olabilir."
+  "attr_name": {
+    "message": "Attribute name"
   },
-  "allow_external_messages_text_": {
-    "message": "Diğer uzantıların veya JS komut dosyalarının bu uzantıya mesaj göndermesine izin verir,<br/> genellikle bu uzantı belirli bir web sayfasındaki medya kaynaklarını yakalayamadığında kullanılır,<br/> Bu web sayfası için JS komut dosyaları yazabilir ve komut dosyasının sonuçlarını bu uzantıya gönderebilirsiniz,<br/> ön uç ve indirme işlevlerini ayrı ayrı geliştirme ihtiyacını ortadan kaldırır."
+  "custom_rule_selector_tips_": {
+    "message": "Use CSS selectors to query DOM elements from a webpage and extract URL addresses from the attributes or text content of the selected elements.<br/> For example, you can retrieve the URL from the 'href' attribute of an a tag."
   },
-  "filename_rule_tips_": {
-    "message": "Web sayfasındaki belirli bir öğenin metnini, o etki alanındaki medya dosyaları için tercih edilen dosya adı olarak almak için CSS seçici kurallarını kullanır.<br/> Alım başarısız olursa, dosya adı olarak başlık veya og:title kullanılır."
+  "custom_rule_selector_attr_name_tips_": {
+    "message": "Once an element is matched using the specified CSS selector, extract the content from the designated attribute name. To extract the text content, use curly braces {} instead."
   },
-  "download_manager_tip_": {
-    "message": "Dosya indirirken kullanılan varsayılan indirme yöneticisi."
+  "custom_rule_url_regexp_tips_": {
+    "message": "Use JavaScript regular expressions to match all URL addresses.<br/> (Note: Using regular expressions may impact the performance of the webpage.)"
   },
-  "collector_mode_tip_": {
-    "message": "Web sayfalarında yakalanan tüm medya kaynaklarını kaydeder,<br/> ve gerektiğinde toplu önizleme ve filtreleme gerçekleştirir,<br/> tekrarlayan işlerin azaltılması."
+  "url_conversion": {
+    "message": "URL conversion"
   },
-  "collector_notify_": {
-    "message": "Toplayıcı modu yalnızca pencere açıkken etkilidir; pencerenin kapatılması tüm kayıtları kaybedecektir.<br/> Tarayıcı sınırlamaları ve web sitesi indirme zinciri kuralları nedeniyle, tüm videolar önizlenemez.<br/> Bazı videolar önizlenemez ancak indirilebilir.<br/> Bazı videolar önizlenemez ve indirilemez."
+  "relative_URL_to_absolute_URL_tips_": {
+    "message": "Convert relative URL to absolute URL.<br/>Example: /123/123.txt -> http://xxxx/123/123.txt"
   },
-  "collector_mode_help_text_": {
-    "message": "Collector modu açıldığında, başlangıçta açık sekmelerden elde edilen tüm medya kaynaklarını listeler ve yeni elde edilenler de Collector modu listesine eklenir.<br/><br/>Bu kayıtlar, pencere kapatıldığında kaybolur.<br/><br/>Tarayıcı sınırlamaları nedeniyle, video sayısı 5000'i aştığında, Referer HTTP başlığı ayarlanamaz ve bu da bazı web sitelerindeki kaynakların önizlenememesine neden olur.<br/><br/>Tarayıcılar, HTTP eşzamanlı bağlantılarına sınırlama getirir, bu da aynı anda çok fazla videonun oynatılmasını engeller ve video elemanlarının oluşturulabileceği sayıyı sınırlar (Chrome'da yaklaşık 100), bu da önemli miktarda bellek ve CPU kaynağı tüketir.<br/><br/>Optimizasyon: Önizlenen tüm videolar, kaydırma çubuğu pozisyonuna göre dinamik olarak yüklenir; görünmeyen videolar otomatik olarak kaldırılır ve anlık görüntüleri kaydedilir.<br/><br/>Görünür hale geldiklerinde yeniden oluşturulurlar, eğer 'Tümünü Oynat' etkinleştirilirse ve ağ yavaşsa aralıklı duraklamalar olabilir.<br/><br/>Collector modu şu anda beta sürümündedir; herhangi bir sorunla karşılaşırsanız geri bildirimde bulunmaktan çekinmeyin."
+  "note": {
+    "message": "Note"
   },
-  "settings_tip_": {
-    "message": "Uzantı için ayrıntılı ayarlar."
+  "custom_rule_tips_": {
+    "message": "When multiple settings are selected, the URL is only considered valid if all of these settings are matched."
   },
-  "select_element_tip_": {
-    "message": "Web sayfasındaki öğeleri seçin, bu etki alanındaki medya dosyalarının dosya adlarını almak için kurallar belirleyin ve video/ses vb. kaydedin."
+  "media_files": {
+    "message": "Media files"
   },
-  "ignore_this_site_tip_": {
-    "message": "Dosya indirirken bu web sitesini dikkate almayın, tarayıcının varsayılan indirme yöneticisini kullanın."
+  "types": {
+    "message": "Types"
   },
-  "preview_notify_": {
-    "message": "Tarayıcı sınırlamaları ve web sitelerinin indirme karşıtı kuralları nedeniyle, tüm videolar önizlenemeyebilir.<br/> Bazı videolar önizlenemeyebilir ancak indirilebilir.<br/> Bazı videolar ise ne önizlenebilir ne de indirilebilir."
+  "configs": {
+    "message": "Configs"
+  },
+  "selected": {
+    "message": "Selected"
+  },
+  "remove_failed_loading_images": {
+    "message": "Remove failed loading images"
+  },
+  "third_party_query_interfaces": {
+    "message": "Third-Party Query Interfaces"
+  },
+  "interface": {
+    "message": "Interface"
+  },
+  "implicit": {
+    "message": "Implicit"
+  },
+  "explicit": {
+    "message": "Explicit"
+  },
+  "data_source": {
+    "message": "Data source"
+  },
+  "test": {
+    "message": "Test"
+  },
+  "provider": {
+    "message": "Provider"
+  },
+  "provider_website": {
+    "message": "Provider website"
+  },
+  "optional": {
+    "message": "Optional"
+  },
+  "interface_type": {
+    "message": "Interface type"
+  },
+  "file_type": {
+    "message": "File type"
+  },
+  "window_width": {
+    "message": "Window width"
+  },
+  "window_height": {
+    "message": "Window height"
+  },
+  "icon": {
+    "message": "Icon"
+  },
+  "visible_element": {
+    "message": "Visible element"
+  },
+  "visible_elements": {
+    "message": "Visible elements"
+  },
+  "hidden_elements": {
+    "message": "Hidden elements"
+  },
+  "data_format": {
+    "message": "Data format"
+  },
+  "documentation": {
+    "message": "Documentation"
+  },
+  "host_match": {
+    "message": "Host match"
+  },
+  "path_match": {
+    "message": "Path match"
+  },
+  "hosts": {
+    "message": "Hosts"
+  },
+  "paths": {
+    "message": "Paths"
+  },
+  "host_match_placeholder_": {
+    "message": "Match the host addresses (domain names or IPs) in the input box, excluding ports. One address per line."
+  },
+  "path_match_placeholder_": {
+    "message": "Match the paths corresponding to the host addresses above. Each path should start with a '/', and you can use regular expressions. One path per line."
+  },
+  "window": {
+    "message": "Window"
+  },
+  "iframe": {
+    "message": "Iframe"
+  },
+  "hidden_iframe": {
+    "message": "Hidden iframe"
+  },
+  "one_css_selector_per_line": {
+    "message": "One CSS selector per line"
+  },
+  "response_data_type": {
+    "message": "Response data type"
+  },
+  "trash_script_code": {
+    "message": "Trash script code"
+  },
+  "behaviors": {
+    "message": "Behaviors"
+  },
+  "embed_code": {
+    "message": "Embed Code"
+  },
+  "import": {
+    "message": "Import"
+  },
+  "export": {
+    "message": "Export"
+  },
+  "share": {
+    "message": "Share"
+  },
+  "public_lists": {
+    "message": "Public lists"
+  },
+  "no_selected_rows": {
+    "message": "No selected rows"
+  },
+  "override": {
+    "message": "Override"
+  },
+  "override_duplicated_name_tips_": {
+    "message": "The name already exists.<br/> Do you want to overwrite the existing setting?"
+  },
+  "version": {
+    "message": "Version"
+  },
+  "create_button": {
+    "message": "Create button"
+  },
+  "styles": {
+    "message": "Styles"
+  },
+  "CSS_injection": {
+    "message": "CSS injection"
+  },
+  "insert_to": {
+    "message": "Insert to"
+  },
+  "display_options": {
+    "message": "Display options"
+  },
+  "invalid_create_btn_insert_to_": {
+    "message": "Invalid setting: Create button -> Insert to"
+  },
+  "media_files_detection": {
+    "message": "Media files detection"
+  },
+  "insertion_method": {
+    "message": "Insertion method"
+  },
+  "trigger": {
+    "message": "Trigger"
+  },
+  "script_code_cannot_be_empty": {
+    "message": "Script code cannot be empty."
+  },
+  "troubleshooting": {
+    "message": "Troubleshooting"
+  },
+  "invalid_data": {
+    "message": "Invalid data"
+  },
+  "description": {
+    "message": "Description"
+  },
+  "description_note_": {
+    "message": "The description, please make it as short as possible."
+  },
+  "download_exclusions_help_": {
+    "message": "When you start a download task, the browser will handle the download if it meets the specified settings. This option takes priority over all other settings. However, keep in mind that this does not apply to captured video and audio files. For these files, the download manager will still be used, as the browser's built-in download tool is not designed to handle them."
+  },
+  "custom_file_rules_help_": {
+    "message": "You can create custom rules for specific file types, such as lyrics or subtitles. As long as the webpage contains these resources, they will be detected. The detected resources will then show up in the custom section of the popup in the upper right corner, as well as in the resource explorer."
+  },
+  "site_settings_help_": {
+    "message": "Each website has its own individual settings. By checking any option in the \"This Website\" section of the popup, you will automatically create settings for that specific website. The custom file rules in the website settings will only apply to that particular website."
+  },
+  "third_party_interface_help_": {
+    "message": "The third-party query interface and file detection feature serve different purposes. <br/>Sometimes, on certain specially processed websites, files may not be easily detectable. This feature is designed to address that issue! You can easily extract file download links from specific web pages by writing scripts, or check for files on other servers or local applications using HTTP interactions. While there are third-party applications that can perform similar tasks, this feature simplifies the process with one-click downloading, improving overall efficiency."
+  },
+  "media_files_detection_text_": {
+    "message": "Enable or disable the media file detection feature."
+  },
+  "deep_analysis_res_text_": {
+    "message": "Enable or disable deep detection of resource files such as images and scripts. <br/>Activating this feature can help identify more potential resource files. <br/> If you do not use the resource manager feature, you can disable this option. <br/> To completely disable deep analysis, you will need to turn off all related options."
+  },
+  "deep_analysis_customs_text_": {
+    "message": "This option determines whether deep analysis also matches custom file rules.<br/> Note: If the custom file rules include regular expressions, it may impact the performance of the webpage. <br/> To completely disable deep analysis, you will need to turn off all related options."
   }
 }

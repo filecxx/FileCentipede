@@ -83,6 +83,9 @@
     "download_manager": {
         "message": "ダウンロードマネージャー"
     },
+    "download_managers": {
+        "message": "Download managers"
+    },
     "download_send_failed_message_prefix": {
         "message": "接続失敗"
     },
@@ -98,8 +101,14 @@
     "refresh_address_msg_content": {
         "message": "Before the address being captured, do not refresh the current page, please find: "
     },
+    "this_site": {
+        "message": "This site"
+    },
     "ignore_this_site": {
         "message": "このサイトで無効"
+    },
+    "potentials": {
+        "message": "Potentials"
     },
     "potential_urls": {
         "message": "Potential URLs"
@@ -152,6 +161,9 @@
     "duplicated_row": {
         "message": "重複行"
     },
+    "duplicated_name": {
+        "message": "Duplicated name"
+    },
     "service": {
         "message": "サービス"
     },
@@ -193,6 +205,9 @@
     },
     "name": {
         "message": "名"
+    },
+    "collector": {
+        "message": "Collector"
     },
     "collector_mode": {
         "message": "Collector Mode"
@@ -309,7 +324,7 @@
         "message": "Enabling this option will perform a deep analysis of the webpage to find hidden video or audio resources,<br/> but at the cost of consuming more CPU resources.<br/> If the webpage has fewer scripts or low data interaction frequency,<br/> the additional consumption can be negligible."
     },
     "allow_external_messages_text_": {
-        "message": "Allows other extensions or JS scripts to send messages to this extension,<br/> typically used when this extension cannot capture media resources on a certain webpage,<br/> you can write JS scripts for that webpage and send the script's results to this extension,<br/> eliminating the need to separately develop frontend and download functionality."
+        "message": "Allow external scripts to send messages to this extension; this feature can be replaced by the third-party query interface."
     },
     "filename_rule_tips_": {
         "message": "Uses CSS selector rules to retrieve the text of a specified element on the webpage as the preferred filename for media files in that domain.<br/> If retrieval fails, it will still use the title or og:title as the filename."
@@ -332,10 +347,352 @@
     "select_element_tip_": {
         "message": "Select elements on the webpage, set rules for obtaining filenames for media files in this domain, and record videos/audio, etc."
     },
-    "ignore_this_site_tip_": {
-        "message": "Ignore this website when downloading files, use the browser's default download manager."
-    },
     "preview_notify_": {
         "message": "Due to browser limitations and website anti-download rules, not all videos can be previewed.<br/> Some videos cannot be previewed but can be downloaded.<br/> Some videos cannot be previewed and cannot be downloaded."
+    },
+    "resources": {
+        "message": "Resources"
+    },
+    "res_explorer": {
+        "message": "Resource explorer"
+    },
+    "res_explorer_tip_": {
+        "message": "List all resources, images, scripts, documents, and custom file types in the current website."
+    },
+    "resolutions": {
+        "message": "Resolutions"
+    },
+    "use_browser_for_downloading": {
+        "message": "Use browser for downloading"
+    },
+    "excluded_from_collector_mode": {
+        "message": "Excluded from collector mode"
+    },
+    "site_settings": {
+        "message": "Site settings"
+    },
+    "images": {
+        "message": "Images"
+    },
+    "scripts": {
+        "message": "Scripts"
+    },
+    "custom": {
+        "message": "Custom"
+    },
+    "custom_file_rules": {
+        "message": "Custom file rules"
+    },
+    "filename_rules": {
+        "message": "File name rules"
+    },
+    "HTTP_res_request_monitoring": {
+        "message": "HTTP Resource Request Monitoring"
+    },
+    "HTTP_res_request_monitoring_tips_": {
+        "message": "Enabling HTTP resource request monitoring lets you record all resources on web pages, even if the resource explorer is closed. This means you can track resources that aren't currently displayed or have been removed. However, if the resource explorer is already open, turning on this feature won't offer any extra advantages. Please keep in mind that this feature will use more memory to store the recorded data, even when the resource explorer is not open."
+    },
+    "open_with_new_tab": {
+        "message": "Open with new tab"
+    },
+    "select_all": {
+        "message": "Select all"
+    },
+    "unselect_all": {
+        "message": "Unselect all"
+    },
+    "remove_selected": {
+        "message": "Remove selected"
+    },
+    "download_selected": {
+        "message": "Download selected"
+    },
+    "size": {
+        "message": "Size"
+    },
+    "width": {
+        "message": "Width"
+    },
+    "height": {
+        "message": "Height"
+    },
+    "sorting": {
+        "message": "Sorting"
+    },
+    "create_rule": {
+        "message": "Create rule"
+    },
+    "edit_rule": {
+        "message": "Edit rule"
+    },
+    "rule": {
+        "message": "Rule"
+    },
+    "unselect": {
+        "message": "Unselect"
+    },
+    "dark": {
+        "message": "Dark"
+    },
+    "too_many_tasks_download_warning_": {
+        "message": "You have %d download tasks ready to send. This may result in multiple pop-up windows appearing. Do you want to continue?"
+    },
+    "exclude_cross_origin_resources": {
+        "message": "Exclude cross-origin resources"
+    },
+    "error": {
+        "message": "Error"
+    },
+    "apply_to": {
+        "message": "Apply to"
+    },
+    "all_sites": {
+        "message": "All sites"
+    },
+    "file_extension": {
+        "message": "File extension"
+    },
+    "name_cannot_be_empty": {
+        "message": "Name cannot be empty"
+    },
+    "host_cannot_be_empty": {
+        "message": "Host cannot be empty"
+    },
+    "invalid_settings": {
+        "message": "Invalid settings"
+    },
+    "download_exclusions": {
+        "message": "Download Exclusions"
+    },
+    "planned_no_implemented_": {
+        "message": "Planned but not implemented."
+    },
+    "rule_name_duplicated": {
+        "message": "Rule name is duplicated"
+    },
+    "attr_name": {
+        "message": "Attribute name"
+    },
+    "custom_rule_selector_tips_": {
+        "message": "Use CSS selectors to query DOM elements from a webpage and extract URL addresses from the attributes or text content of the selected elements.<br/> For example, you can retrieve the URL from the 'href' attribute of an a tag."
+    },
+    "custom_rule_selector_attr_name_tips_": {
+        "message": "Once an element is matched using the specified CSS selector, extract the content from the designated attribute name. To extract the text content, use curly braces {} instead."
+    },
+    "custom_rule_url_regexp_tips_": {
+        "message": "Use JavaScript regular expressions to match all URL addresses.<br/> (Note: Using regular expressions may impact the performance of the webpage.)"
+    },
+    "url_conversion": {
+        "message": "URL conversion"
+    },
+    "relative_URL_to_absolute_URL_tips_": {
+        "message": "Convert relative URL to absolute URL.<br/>Example: /123/123.txt -> http://xxxx/123/123.txt"
+    },
+    "note": {
+        "message": "Note"
+    },
+    "custom_rule_tips_": {
+        "message": "When multiple settings are selected, the URL is only considered valid if all of these settings are matched."
+    },
+    "media_files": {
+        "message": "Media files"
+    },
+    "types": {
+        "message": "Types"
+    },
+    "configs": {
+        "message": "Configs"
+    },
+    "selected": {
+        "message": "Selected"
+    },
+    "remove_failed_loading_images": {
+        "message": "Remove failed loading images"
+    },
+    "third_party_query_interfaces": {
+        "message": "Third-Party Query Interfaces"
+    },
+    "interface": {
+        "message": "Interface"
+    },
+    "implicit": {
+        "message": "Implicit"
+    },
+    "explicit": {
+        "message": "Explicit"
+    },
+    "data_source": {
+        "message": "Data source"
+    },
+    "test": {
+        "message": "Test"
+    },
+    "provider": {
+        "message": "Provider"
+    },
+    "provider_website": {
+        "message": "Provider website"
+    },
+    "optional": {
+        "message": "Optional"
+    },
+    "interface_type": {
+        "message": "Interface type"
+    },
+    "file_type": {
+        "message": "File type"
+    },
+    "window_width": {
+        "message": "Window width"
+    },
+    "window_height": {
+        "message": "Window height"
+    },
+    "icon": {
+        "message": "Icon"
+    },
+    "visible_element": {
+        "message": "Visible element"
+    },
+    "visible_elements": {
+        "message": "Visible elements"
+    },
+    "hidden_elements": {
+        "message": "Hidden elements"
+    },
+    "data_format": {
+        "message": "Data format"
+    },
+    "documentation": {
+        "message": "Documentation"
+    },
+    "host_match": {
+        "message": "Host match"
+    },
+    "path_match": {
+        "message": "Path match"
+    },
+    "hosts": {
+        "message": "Hosts"
+    },
+    "paths": {
+        "message": "Paths"
+    },
+    "host_match_placeholder_": {
+        "message": "Match the host addresses (domain names or IPs) in the input box, excluding ports. One address per line."
+    },
+    "path_match_placeholder_": {
+        "message": "Match the paths corresponding to the host addresses above. Each path should start with a '/', and you can use regular expressions. One path per line."
+    },
+    "window": {
+        "message": "Window"
+    },
+    "iframe": {
+        "message": "Iframe"
+    },
+    "hidden_iframe": {
+        "message": "Hidden iframe"
+    },
+    "one_css_selector_per_line": {
+        "message": "One CSS selector per line"
+    },
+    "response_data_type": {
+        "message": "Response data type"
+    },
+    "trash_script_code": {
+        "message": "Trash script code"
+    },
+    "behaviors": {
+        "message": "Behaviors"
+    },
+    "embed_code": {
+        "message": "Embed Code"
+    },
+    "import": {
+        "message": "Import"
+    },
+    "export": {
+        "message": "Export"
+    },
+    "share": {
+        "message": "Share"
+    },
+    "public_lists": {
+        "message": "Public lists"
+    },
+    "no_selected_rows": {
+        "message": "No selected rows"
+    },
+    "override": {
+        "message": "Override"
+    },
+    "override_duplicated_name_tips_": {
+        "message": "The name already exists.<br/> Do you want to overwrite the existing setting?"
+    },
+    "version": {
+        "message": "Version"
+    },
+    "create_button": {
+        "message": "Create button"
+    },
+    "styles": {
+        "message": "Styles"
+    },
+    "CSS_injection": {
+        "message": "CSS injection"
+    },
+    "insert_to": {
+        "message": "Insert to"
+    },
+    "display_options": {
+        "message": "Display options"
+    },
+    "invalid_create_btn_insert_to_": {
+        "message": "Invalid setting: Create button -> Insert to"
+    },
+    "media_files_detection": {
+        "message": "Media files detection"
+    },
+    "insertion_method": {
+        "message": "Insertion method"
+    },
+    "trigger": {
+        "message": "Trigger"
+    },
+    "script_code_cannot_be_empty": {
+        "message": "Script code cannot be empty."
+    },
+    "troubleshooting": {
+        "message": "Troubleshooting"
+    },
+    "invalid_data": {
+        "message": "Invalid data"
+    },
+    "description": {
+        "message": "Description"
+    },
+    "description_note_": {
+        "message": "The description, please make it as short as possible."
+    },
+    "download_exclusions_help_": {
+        "message": "When you start a download task, the browser will handle the download if it meets the specified settings. This option takes priority over all other settings. However, keep in mind that this does not apply to captured video and audio files. For these files, the download manager will still be used, as the browser's built-in download tool is not designed to handle them."
+    },
+    "custom_file_rules_help_": {
+        "message": "You can create custom rules for specific file types, such as lyrics or subtitles. As long as the webpage contains these resources, they will be detected. The detected resources will then show up in the custom section of the popup in the upper right corner, as well as in the resource explorer."
+    },
+    "site_settings_help_": {
+        "message": "Each website has its own individual settings. By checking any option in the \"This Website\" section of the popup, you will automatically create settings for that specific website. The custom file rules in the website settings will only apply to that particular website."
+    },
+    "third_party_interface_help_": {
+        "message": "The third-party query interface and file detection feature serve different purposes. <br/>Sometimes, on certain specially processed websites, files may not be easily detectable. This feature is designed to address that issue! You can easily extract file download links from specific web pages by writing scripts, or check for files on other servers or local applications using HTTP interactions. While there are third-party applications that can perform similar tasks, this feature simplifies the process with one-click downloading, improving overall efficiency."
+    },
+    "media_files_detection_text_": {
+        "message": "Enable or disable the media file detection feature."
+    },
+    "deep_analysis_res_text_": {
+        "message": "Enable or disable deep detection of resource files such as images and scripts. <br/>Activating this feature can help identify more potential resource files. <br/> If you do not use the resource manager feature, you can disable this option. <br/> To completely disable deep analysis, you will need to turn off all related options."
+    },
+    "deep_analysis_customs_text_": {
+        "message": "This option determines whether deep analysis also matches custom file rules.<br/> Note: If the custom file rules include regular expressions, it may impact the performance of the webpage. <br/> To completely disable deep analysis, you will need to turn off all related options."
     }
 }
