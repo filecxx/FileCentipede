@@ -27,97 +27,315 @@ Dashboard: [https://w.filecxx.com](https://w.filecxx.com)
 
 Sponsors: [http://www.filecxx.com/en_US/sponsors.html](http://www.filecxx.com/en_US/sponsors.html)
 
-## Screenshot
+# Screenshots
 
 #### File Centipede
 
-![File Centipede](images/screenshot_software.png)
-![File Centipede](images/screenshot_software2.png)
-![File Centipede](images/screenshot_software_file_browser_webdav.png)
-![File Centipede](images/screenshot_software_file_browser_ssh.png)
-![File Centipede](images/screenshot_software_file_browser_ftp.png)
-![File Centipede](images/screenshot_software_file_browser_add.png)
-![File Centipede](images/screenshot_software_file_browser_log.png)
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col" width="1000px">Screenshot 1</th>
+      <th scope="col" width="1000px">Screenshot 2</th>
+      <th scope="col" width="1000px">Screenshot 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <picture>
+           <img alt="File Centipede" src="images/screenshot_software.png">
+        </picture>
+      </td>
+      <td>
+        <picture>
+          <img alt="File Centipede" src="images/screenshot_software2.png">
+        </picture>
+      </td>
+      <td>
+        <picture>
+          <img alt="File Centipede" src="images/screenshot_software_file_browser_webdav.png">
+        </picture>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col" width="1000px">Screenshot 4</th>
+      <th scope="col" width="1000px">Screenshot 5</th>
+      <th scope="col" width="1000px">Screenshot 6</th>
+      <th scope="col" width="1000px">Screenshot 7</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <picture>
+           <img alt="File Centipede" src="images/screenshot_software_file_browser_ssh.png">
+        </picture>
+      </td>
+      <td>
+        <picture>
+          <img alt="File Centipede" src="images/screenshot_software_file_browser_ftp.png">
+        </picture>
+      </td>
+      <td>
+        <picture>
+          <img alt="File Centipede" src="images/screenshot_software_file_browser_add.png">
+        </picture>
+      </td>
+        <td>
+        <picture>
+          <img alt="File Centipede" src="images/screenshot_software_file_browser_log.png">
+        </picture>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 #### Add task
 
-![Add task](images/screenshot_add_task.png)
-![Add task](images/screenshot_add_task2.png)
-![Add task](images/screenshot_add_task3.png)
-![Add task](images/screenshot_add_task4.png)
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col" width="1000px">Screenshot 1</th>
+      <th scope="col" width="1000px">Screenshot 2</th>
+      <th scope="col" width="1000px">Screenshot 3</th>
+      <th scope="col" width="1000px">Screenshot 4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <picture>
+           <img alt="Add task" src="images/screenshot_add_task.png">
+        </picture>
+      </td>
+      <td>
+        <picture>
+          <img alt="Add task" src="images/screenshot_add_task2.png">
+        </picture>
+      </td>
+      <td>
+        <picture>
+          <img alt="Add task" src="images/screenshot_add_task3.png">
+        </picture>
+      </td>
+        <td>
+        <picture>
+          <img alt="Add task" src="images/screenshot_add_task4.png">
+        </picture>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 #### Edit task
 
-![Edit task](images/screenshot_edit_task.png)
-![Edit task](images/screenshot_edit_task2.png)
-
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col" width="1000px">Screenshot 1</th>
+      <th scope="col" width="1000px">Screenshot 2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <picture>
+           <img alt="Edit task" src="images/screenshot_edit_task.png">
+        </picture>
+      </td>
+      <td>
+        <picture>
+          <img alt="Edit task" src="images/screenshot_edit_task2.png">
+        </picture>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 #### Confirm dialog
 
-![torrent confirm](images/screenshot_torrent_confirm.png)
-![http confirm](images/screenshot_http_confirm.png)
-![links confirm](images/screenshot_links_confirm.png)
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col" width="1000px">Screenshot 1</th>
+      <th scope="col" width="1000px">Screenshot 2</th>
+      <th scope="col" width="1000px">Screenshot 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <picture>
+           <img alt="torrent confirm" src="images/screenshot_torrent_confirm.png">
+        </picture>
+      </td>
+      <td>
+        <picture>
+          <img alt="http confirm" src="images/screenshot_http_confirm.png">
+        </picture>
+      </td>
+      <td>
+        <picture>
+          <img alt="links confirm" src="images/screenshot_links_confirm.png">
+        </picture>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-#### Add catalog
+#### Other sections
 
-![add catalog](images/screenshot_add_catalog.png)
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col" width="1000px">Add catalog</th>
+      <th scope="col" width="1000px">Settings</th>
+      <th scope="col" width="1000px">Proxy settings</th>
+      <th scope="col" width="1000px">Filter</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <picture>
+           <img alt="Add catalog" src="images/screenshot_add_catalog.png">
+        </picture>
+      </td>
+      <td>
+        <picture>
+          <img alt="Settings" src="images/screenshot_settings.png">
+        </picture>
+      </td>
+      <td>
+        <picture>
+          <img alt="Proxy settings" src="images/screenshot_proxy.png">
+        </picture>
+      </td>
+      <td>
+        <picture>
+          <img alt="Filter" src="images/screenshot_filter.png">
+        </picture>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col" width="1000px">Refresh address</th>
+      <th scope="col" width="1000px">Create torrent</th>
+      <th scope="col" width="1000px">Speed limit</th>
+      <th scope="col" width="1000px">Translate tool</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <picture>
+           <img alt="Refresh address" src="images/screenshot_refresh_address.png">
+        </picture>
+      </td>
+      <td>
+        <picture>
+          <img alt="Create torrent" src="images/screenshot_create_torrent.png">
+        </picture>
+      </td>
+      <td>
+        <picture>
+          <img alt="Speed limit" src="images/screenshot_download_speed_limit.png">
+        </picture>
+      </td>
+        <td>
+        <picture>
+          <img alt="Translate tool" src="images/screenshot_translate.png">
+        </picture>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col" width="1000px">HTTP tool</th>
+      <th scope="col" width="1000px">Checksum tool</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <picture>
+           <img alt="HTTP tool" src="images/screenshot_http_tool.png">
+        </picture>
+      </td>
+      <td>
+        <picture>
+          <img alt="Checksum tool" src="images/screenshot_checksum_tool.png">
+        </picture>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-#### Settings
-
-![settings](images/screenshot_settings.png)
-
-#### Proxy settings
-
-![proxy](images/screenshot_proxy.png)
 
 #### Site rules
 
-![Site rules](images/screenshot_site_rule.png)
-![Site rules](images/screenshot_site_rule2.png)
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col" width="1000px">Site rules</th>
+      <th scope="col" width="1000px">Site rules</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <picture>
+           <img alt="Site rules" src="images/screenshot_site_rule.png">
+        </picture>
+      </td>
+      <td>
+        <picture>
+          <img alt="Site rules" src="images/screenshot_site_rule2.png">
+        </picture>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-#### Filter
+#### Browser extension screenshots
 
-![filter](images/screenshot_filter.png)
-
-#### Refresh address
-
-![${refresh_address}](images/screenshot_refresh_address.png)
-
-#### Create torrent
-
-![create_torrent](images/screenshot_create_torrent.png)
-
-#### Speed limit
-
-![Speed limit](images/screenshot_download_speed_limit.png)
-
-#### Translate tool
-
-![Translate tool](images/screenshot_translate.png)
-
-#### HTTP tool
-
-![HTTP tool](images/screenshot_http_tool.png)
-
-#### Checksum tool
-
-![Checksum tool](images/screenshot_checksum_tool.png)
-
-Browser extension screenshots
------------------------------------
-
-#### Video bar
-
-![Video bar](images/extension_video_bar.png)
-
-#### Videos panel
-
-![videos panel](images/extension_videos.png)
-
-#### Audios panel
-
-![Audios panel](images/extension_audios.png)
-
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col" width="1000px">Video bar</th>
+      <th scope="col" width="1000px">Videos panel</th>
+      <th scope="col" width="1000px">Audios panel</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <picture>
+           <img alt="Video bar" src="images/extension_video_bar.png">
+        </picture>
+      </td>
+      <td>
+        <picture>
+          <img alt="Videos panel" src="images/extension_videos.png">
+        </picture>
+      </td>
+      <td>
+        <picture>
+          <img alt="Audios panel" src="images/extension_videos.png">
+        </picture>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## features
 * HTTP,HTTPS protocol (basic features like gzip, resumable, multi-connections will not be listed.)	1.0
