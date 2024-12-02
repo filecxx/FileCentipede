@@ -694,5 +694,8 @@
     },
     "deep_analysis_customs_text_": {
         "message": "此選項決定深度分析是否也匹配自訂檔案規則。<br/>注意：如果自訂檔案規則包含正則表達式，可能會影響網頁性能。<br/> 要完全禁用深度分析，您需要關閉所有相關選項。"
+    },
+    "loading": {
+        "message": "Loading"
     }
 }

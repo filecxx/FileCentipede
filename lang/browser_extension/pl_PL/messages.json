@@ -694,5 +694,8 @@
     },
     "deep_analysis_customs_text_": {
         "message": "This option determines whether deep analysis also matches custom file rules.<br/> Note: If the custom file rules include regular expressions, it may impact the performance of the webpage. <br/> To completely disable deep analysis, you will need to turn off all related options."
+    },
+    "loading": {
+        "message": "Loading"
     }
 }
