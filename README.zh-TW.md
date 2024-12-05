@@ -90,17 +90,49 @@ File centipede 是一款一體化網際網路檔案上傳/下載管理器、BitT
 
 ## 瀏覽器擴充截圖
 
-#### 影片欄
+
+#### Video bar
 
 ![Video bar](images/extension_video_bar.png)
 
-#### 視訊面板
+#### Videos panel
 
 ![videos panel](images/extension_videos.png)
 
-#### 音訊面板
+#### Audios panel
 
 ![Audios panel](images/extension_audios.png)
+
+#### Custom files panel
+
+![Custom files panel](images/extension_popup_custom.png)
+
+#### Resource explorer - images
+
+![Resource explorer - images](images/extension_res_explorer_images.png)
+
+
+#### Resource explorer - scripts
+
+![Resource explorer - scripts](images/extension_res_explorer_scripts.png)
+
+#### Videos preview
+
+![Videos preview](images/extension_preview.png)
+
+
+#### Videos collector
+
+![Videos collector](images/extension_collector_videos.png)
+
+
+#### Audios collector
+
+![Audios collector](images/extension_collector_audios.png)
+
+#### Settings
+
+![Settings](images/extension_settings.png)
 
 ## 功能特色
 

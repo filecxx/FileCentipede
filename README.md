@@ -118,6 +118,37 @@ Browser extension screenshots
 
 ![Audios panel](images/extension_audios.png)
 
+#### Custom files panel
+
+![Custom files panel](images/extension_popup_custom.png)
+
+#### Resource explorer - images
+
+![Resource explorer - images](images/extension_res_explorer_images.png)
+
+
+#### Resource explorer - scripts
+
+![Resource explorer - scripts](images/extension_res_explorer_scripts.png)
+
+#### Videos preview
+
+![Videos preview](images/extension_preview.png)
+
+
+#### Videos collector
+
+![Videos collector](images/extension_collector_videos.png)
+
+
+#### Audios collector
+
+![Audios collector](images/extension_collector_audios.png)
+
+#### Settings
+
+![Settings](images/extension_settings.png)
+
 
 ## features
 * HTTP,HTTPS protocol (basic features like gzip, resumable, multi-connections will not be listed.)	1.0

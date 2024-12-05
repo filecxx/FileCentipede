@@ -90,17 +90,49 @@ File centipede 是一款一体化互联网文件上传/下载管理器、BitTorr
 
 ## 浏览器扩展截图
 
-#### 视频栏
+#### Video bar
 
 ![Video bar](images/extension_video_bar.png)
 
-#### 视频面板
+#### Videos panel
 
 ![videos panel](images/extension_videos.png)
 
-#### 音频面板
+#### Audios panel
 
 ![Audios panel](images/extension_audios.png)
+
+#### Custom files panel
+
+![Custom files panel](images/extension_popup_custom.png)
+
+#### Resource explorer - images
+
+![Resource explorer - images](images/extension_res_explorer_images.png)
+
+
+#### Resource explorer - scripts
+
+![Resource explorer - scripts](images/extension_res_explorer_scripts.png)
+
+#### Videos preview
+
+![Videos preview](images/extension_preview.png)
+
+
+#### Videos collector
+
+![Videos collector](images/extension_collector_videos.png)
+
+
+#### Audios collector
+
+![Audios collector](images/extension_collector_audios.png)
+
+#### Settings
+
+![Settings](images/extension_settings.png)
+
 
 ## 特征
 
