@@ -1,13 +1,4 @@
-content_section_1_="
-<p>File Centipede 是最優秀的 Linux 下載工具。</p>
-<p>它是唯一同時支援所有主流協定與影片嗅探功能的 Linux 下載管理器。</p>
-"
-content_section_2_="
-它還內建許多輔助工具，例如檔案合併、雜湊值檢查、Base64 編碼器、URI 編碼器、磁力連結轉種子等……
-"
-content_section_3_="
-你也可以用它來管理遠端檔案，例如 WebDAV、FTP 和 SSH。
-"
-content_section_4_="
-安裝非常簡單，只需一鍵操作，且完全不需其他動態函式庫，甚至不依賴 Glibc。
-"
+content_section_1_="<p>File Centipede 是最優秀的 Linux 下載工具。</p><p>它是唯一同時支援所有主流協定與影片嗅探功能的 Linux 下載管理器。</p>"
+content_section_2_="它還內建許多輔助工具，例如檔案合併、雜湊值檢查、Base64 編碼器、URI 編碼器、磁力連結轉種子等……"
+content_section_3_="你也可以用它來管理遠端檔案，例如 WebDAV、FTP 和 SSH。"
+content_section_4_="安裝非常簡單，只需一鍵操作，且完全不需其他動態函式庫，甚至不依賴 Glibc。"
