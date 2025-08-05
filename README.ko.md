@@ -1,4 +1,4 @@
-[영어](./README.md)\|[중국어 간체](./README.zh-CN.md)\|[중국어 번체](./README.zh-TW.md)\|[한국어](./README.ko.md)\|[힌디어](./README.hi.md)\|[아랍어](./README.ar.md)\|[프랑스어](./README.fr.md)\|[러시아어](./README.ru.md)\|[라틴어](./README.la.md)\|[일본어](./README.ja.md)\|[이탈리아어](./README.it.md)\|[독일어](./README.de.md)\|[스페인어](./README.es.md)\|[스웨덴어](./README.sv.md)\|[페르시아어](./README.fa.md)\|[튀르키예어](./README.tr-TR.md)
+[English](./README.md) | [简体中文](./README.zh-CN.md) | [繁體中文](./README.zh-TW.md) | [한국어](./README.ko.md) | [Hindi](./README.hi.md) | [Arabic](./README.ar.md) | [Français](./README.fr.md) | [Русский](./README.ru.md) | [Latin](./README.la.md) | [日本語](./README.ja.md)| [Italian](./README.it.md) | [Deutsch](./README.de.md) | [Portuguese Br](./README.pt-BR.md) | [Español](./README.es.md) | [svenska](./README.sv.md) | [فارسی](./README.fa.md) | [Türkçe](./README.tr-TR.md)
 
 ![image](https://user-images.githubusercontent.com/100348948/165334090-0b1a6f28-554e-484b-9946-1ffef010fa78.png)
 
@@ -20,29 +20,43 @@ FileCentipede는 올인원 인터넷 파일 업로드/다운로드 관리자, Bi
 
 (광고 없이 무료입니다)
 
-웹사이트:<http://filecxx.com>
 
-계기반:<https://w.filecxx.com>
+웹사이트: [http://filecxx.com](http://filecxx.com)
 
-후원자:<http://www.filecxx.com/en_US/sponsors.html>
+대시보드: [https://w.filecxx.com](https://w.filecxx.com)
+
+후원자: [http://www.filecxx.com/en_US/sponsors.html](http://www.filecxx.com/en_US/sponsors.html)
 
 ## 스크린샷
 
-#### 파일 지네
+#### File Centipede
 
-![File Centipede](images/screenshot_software.png)![File Centipede](images/screenshot_software2.png)![File Centipede](images/screenshot_software_file_browser_webdav.png)![File Centipede](images/screenshot_software_file_browser_ssh.png)![File Centipede](images/screenshot_software_file_browser_ftp.png)![File Centipede](images/screenshot_software_file_browser_add.png)![File Centipede](images/screenshot_software_file_browser_log.png)
+![File Centipede](images/screenshot_software.png)
+![File Centipede](images/screenshot_software2.png)
+![File Centipede](images/screenshot_software_file_browser_webdav.png)
+![File Centipede](images/screenshot_software_file_browser_ssh.png)
+![File Centipede](images/screenshot_software_file_browser_ftp.png)
+![File Centipede](images/screenshot_software_file_browser_add.png)
+![File Centipede](images/screenshot_software_file_browser_log.png)
 
 #### 작업 추가
 
-![Add task](images/screenshot_add_task.png)![Add task](images/screenshot_add_task2.png)![Add task](images/screenshot_add_task3.png)![Add task](images/screenshot_add_task4.png)
+![Add task](images/screenshot_add_task.png)
+![Add task](images/screenshot_add_task2.png)
+![Add task](images/screenshot_add_task3.png)
+![Add task](images/screenshot_add_task4.png)
 
-#### 작업 수정
+#### 작업 편집
 
-![Edit task](images/screenshot_edit_task.png)![Edit task](images/screenshot_edit_task2.png)
+![Edit task](images/screenshot_edit_task.png)
+![Edit task](images/screenshot_edit_task2.png)
+
 
 #### 확인 대화상자
 
-![torrent confirm](images/screenshot_torrent_confirm.png)![http confirm](images/screenshot_http_confirm.png)![links confirm](images/screenshot_links_confirm.png)
+![torrent confirm](images/screenshot_torrent_confirm.png)
+![http confirm](images/screenshot_http_confirm.png)
+![links confirm](images/screenshot_links_confirm.png)
 
 #### 카탈로그 추가
 
@@ -58,7 +72,8 @@ FileCentipede는 올인원 인터넷 파일 업로드/다운로드 관리자, Bi
 
 #### 사이트 규칙
 
-![Site rules](images/screenshot_site_rule.png)![Site rules](images/screenshot_site_rule2.png)
+![Site rules](images/screenshot_site_rule.png)
+![Site rules](images/screenshot_site_rule2.png)
 
 #### 필터
 
@@ -89,6 +104,7 @@ FileCentipede는 올인원 인터넷 파일 업로드/다운로드 관리자, Bi
 ![Checksum tool](images/screenshot_checksum_tool.png)
 
 ## 브라우저 확장 스크린샷
+-----------------------------------
 
 #### 비디오 표시줄
 
@@ -102,16 +118,47 @@ FileCentipede는 올인원 인터넷 파일 업로드/다운로드 관리자, Bi
 
 ![Audios panel](images/extension_audios.png)
 
-## 특징
+#### 사용자 지정 패널
 
+![Custom files panel](images/extension_popup_custom.png)
+
+#### 리소스 탐색기 - 이미지
+
+![Resource explorer - images](images/extension_res_explorer_images.png)
+
+
+#### 리소스 탐색기 - 스크립트
+
+![Resource explorer - scripts](images/extension_res_explorer_scripts.png)
+
+#### 비디오 미리보기
+
+![Videos preview](images/extension_preview.png)
+
+
+#### 비디오 수집기
+
+![Videos collector](images/extension_collector_videos.png)
+
+
+#### 오디오 수집기
+
+![Audios collector](images/extension_collector_audios.png)
+
+#### 설정
+
+![Settings](images/extension_settings.png)
+
+
+## 특징
 -   HTTP,HTTPS 프로토콜(gzip, 재개 가능, 다중 연결과 같은 기본 기능은 나열되지 않습니다.) 1.0
 -   FTP, FTPS 프로토콜 1.0
 -   자석, HASH 주소 1.0
--   비트토렌트 1.0
--   Thunder, flashget, qqdl 1.0과 같은 기타 사용자 정의 프로토콜
+-   BitTorrent 1.0
+-   Thunder, flashget, qqdl 1.0과 같은 기타 사용자 지정 프로토콜
 -   JSON 형식의 주소 1.0
 -   m3u8 스트림 작업 1.0
--   스트림 작업 AES-128 암호 해독(SAMPLE-AES 암호 해독은 아직 지원되지 않음) 1.0
+-   스트림 작업 AES-128 암호 해독 (SAMPLE-AES 암호 해독은 아직 지원되지 않음) 1.0
 -   HTTP 쿠키, 헤더, 사용자 지정 사용자 에이전트 1.0
 -   토렌트 시드 제한 1.0
 -   전송 작업 구성 1.0을 동적으로 편집합니다.
@@ -119,11 +166,11 @@ FileCentipede는 올인원 인터넷 파일 업로드/다운로드 관리자, Bi
 -   만료된 주소 1.0 새로 고침
 -   카탈로그 1.0
 -   다운로드 제한, 업로드 속도 1.0
--   사용자 정의 주소 생성(filec, fileu) 1.0
+-   사용자 정의 주소 생성 (filec, fileu) 1.0
 -   프록시 관리 1.0
 -   필터 사용자 정의 1.0
 -   트래커 관리 1.0
--   작업 세부정보 1.0
+-   작업 세부 정보 1.0
 -   작업 1.0에서 토렌트 내보내기
 -   다중 언어 1.0
 -   대기열 또는 무제한 동시성 설정 1.0
@@ -146,8 +193,8 @@ FileCentipede는 올인원 인터넷 파일 업로드/다운로드 관리자, Bi
 -   컬, wget, aria2, axel 명령줄 2.0
 -   WebDAV 프로토콜 2.0
 -   파일 2.0 업로드
--   업로드 디렉토리 2.0
--   디렉토리 2.0 다운로드
+-   업로드 디렉터리 2.0
+-   디렉터리 2.0 다운로드
 -   모든 기능을 갖춘 WebDAV 파일 관리자 2.0
 -   모든 기능을 갖춘 FTP 파일 관리자 2.0
 -   모든 기능을 갖춘 SSH(sftp) 파일 관리자 2.0
@@ -176,7 +223,7 @@ FileU의 전체 소스 코드는 "source_code" 디렉터리에서 찾을 수 있
 
 -   웹사이트: "lang/website/\*.lang"
 -   소프트웨어: "lang/software/\*.lang"
--   브라우저 확장자: "lang/browser_extension/\*.lang"
+-   브라우저 확장: "lang/browser_extension/\*.lang"
 
 #### 웹사이트를 어떻게 번역하나요?
 
@@ -184,8 +231,8 @@ FileU의 전체 소스 코드는 "source_code" 디렉터리에서 찾을 수 있
 
 | 언어      | @                                                                                 |
 | :------ | :-------------------------------------------------------------------------------- |
-| 러시아어    | [@vanja-san @Den1704](https://github.com/vanja-san)[@덴1704](https://github.com/Den1704)          |
-| 중국어 번체  | [@bear0316 @postman1year](https://github.com/bear0316)[@우체부1년](https://github.com/postman1year) |
+| 러시아어    | [@vanja-san](https://github.com/vanja-san) [@Den1704](https://github.com/Den1704)          |
+| 중국어 번체  | [@bear0316](https://github.com/bear0316) [@postman1year](https://github.com/postman1year) |
 | 프랑스어  | [@XIAA25](https://github.com/XIAA25)                                                |
 | 네덜란드어 | [@XIAA25](https://github.com/XIAA25)                                                |
 | 한국어     | [@VenusGirl](https://github.com/VenusGirl)                                             |
@@ -197,5 +244,6 @@ FileU의 전체 소스 코드는 "source_code" 디렉터리에서 찾을 수 있
 | 폴란드어      | [@RunoHawk](https://github.com/RunoHawk)                                              |
 
 ## 오픈소스 라이브러리
-
-[후원](https://www.boost.org)[Qt](https://qt.io/)[libtorrent](https://www.libtorrent.org)
+[boost](https://www.boost.org)
+[Qt](https://qt.io/)
+[libtorrent](https://www.libtorrent.org)
