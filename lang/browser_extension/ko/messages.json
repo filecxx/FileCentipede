@@ -60,7 +60,7 @@
         "message": "주소 복사 성공"
     },
     "video_floating_bar": {
-        "message": "비디오 플로팅 바"
+        "message": "비디오 플로팅 표시줄"
     },
     "enable": {
         "message": "활성화"
@@ -72,7 +72,7 @@
         "message": "예"
     },
     "no": {
-        "message": "아니오"
+        "message": "아니요"
     },
     "send_failed": {
         "message": "전송 실패"
@@ -81,16 +81,16 @@
         "message": "연결할 수 없음 "
     },
     "download_send_failed_message": {
-        "message": "설치되지 않았거나 실행되지 않았습니다. 작업을 선택하십시오."
+        "message": "설치되지 않았거나 실행되지 않았습니다. 작업을 선택하세요."
     },
     "browser": {
         "message": "브라우저"
     },
     "download_manager": {
-        "message": "다운로드 매니저"
+        "message": "다운로드 관리자"
     },
     "download_managers": {
-        "message": "Download managers"
+        "message": "다운로드 관리자"
     },
     "recapture_address": {
         "message": "주소 다시 잡기"
@@ -99,16 +99,16 @@
         "message": "현재 웹 페이지를 주소가 잡힐 때까지 새로 고치지 마십시오. 다음 위치 찾기: "
     },
     "recapture_address_msg_success": {
-        "message": "새 주소를 성공적으로 잡았습니다. 정상적으로 다운로드되었는지 소프트웨어를 확인하십시오."
+        "message": "새 주소를 성공적으로 잡았습니다. 정상적으로 다운로드되었는지 소프트웨어를 확인하세요."
     },
     "this_site": {
-        "message": "This site"
+        "message": "이 사이트"
     },
     "ignore_this_site": {
         "message": "이 사이트 무시"
     },
     "potentials": {
-        "message": "Potentials"
+        "message": "잠재적"
     },
     "potential_urls": {
         "message": "잠재적인 URL"
@@ -162,7 +162,7 @@
         "message": "중복된 행"
     },
     "duplicated_name": {
-        "message": "Duplicated name"
+        "message": "중복된 이름"
     },
     "service": {
         "message": "서비스"
@@ -207,13 +207,13 @@
         "message": "이름"
     },
     "collector": {
-        "message": "콜렉터"
+        "message": "수집기"
     },
     "collector_mode": {
-        "message": "콜렉터 모드"
+        "message": "수집기 모드"
     },
     "record": {
-        "message": "녹음"
+        "message": "기록"
     },
     "determined": {
         "message": "결정됨"
@@ -324,378 +324,378 @@
         "message": "이 기능을 활성화하면 웹 페이지를 깊이 분석하여 숨겨진 비디오 또는 오디오 리소스를 찾습니다. 그러나 CPU 리소스를 더 많이 소모하게 됩니다. 페이지에 포함된 스크립트가 적거나 데이터 교환 빈도가 낮다면 추가 비용은 무시할 수 있습니다."
     },
     "allow_external_messages_text_": {
-        "message": "Allow external scripts to send messages to this extension; this feature can be replaced by the third-party query interface."
+        "message": "외부 스크립트가 이 확장자로 메시지를 보낼 수 있도록 허용합니다. 이 기능은 타사 쿼리 인터페이스로 대체할 수 있습니다."
     },
     "filename_rule_tips_": {
         "message": "CSS 선택기 규칙을 사용하여 웹 페이지에서 지정된 요소의 텍스트를이 도메인 아래 미디어 파일의 기본 파일 이름으로 가져옵니다. 가져오기에 실패하면 여전히 제목이나 og:title을 파일 이름으로 계속 사용합니다."
     },
     "download_manager_tip_": {
-        "message": "파일을 다운로드 할 때 기본적으로 사용되는 다운로드 매니저입니다."
+        "message": "파일을 다운로드 할 때 기본적으로 사용되는 다운로드 관리자입니다."
     },
     "collector_mode_tip_": {
         "message": "기록된 모든 웹 페이지에서 포착한 미디어 리소스를<br/> 기록하고 필요할 때 대량 미리보기 및 필터링을<br/> 수행하여 반복 작업을 줄입니다."
     },
     "collector_notify_": {
-        "message": "콜렉터 모드는 창이 열려있을 때에만 유효합니다. 이 창을 닫으면 모든 기록이 사라집니다. 브라우저 및 웹 사이트의 다운로드 체인 규칙 제한으로 일부 비디오는 미리 볼 수 없을 수 있습니다. 일부 비디오는 미리 볼 수 없지만 다운로드할 수 있습니다. 일부 비디오는 미리 볼 수 없고 다운로드할 수 없을 수 있습니다."
+        "message": "수집기 모드는 창이 열려있을 때에만 유효합니다. 이 창을 닫으면 모든 기록이 사라집니다. 브라우저 및 웹 사이트의 다운로드 체인 규칙 제한으로 일부 비디오는 미리 볼 수 없을 수 있습니다. 일부 비디오는 미리 볼 수 없지만 다운로드할 수 있습니다. 일부 비디오는 미리 볼 수 없고 다운로드할 수 없을 수 있습니다."
     },
     "collector_mode_help_text_": {
-        "message": "콜렉터 모드는 열릴 때 현재 모든 탭에서 이미 가져온 미디어 리소스를 먼저 나열한 후 그 후에 가져온 리소스도 콜렉터 모드 목록에 추가합니다. 창을 닫으면이 모든 기록이 사라집니다. 브라우저의 제한으로 인해 비디오 수가 5000 개를 초과하면 더 이상 Referer HTTP 헤더를 설정할 수 없으며 일부 웹 사이트 리소스는 미리 볼 수 없습니다. 브라우저는 HTTP 동시 연결에 제한이 있어 동시에 너무 많은 비디오를 재생할 수 없으며 비디오 요소의 생성 수도 제한되어 있습니다(크롬에서 약 100 개). 이로 인해 많은 메모리 및 CPU 리소스가 소모됩니다. 최적화: 모든 미리 보기된 비디오는 스크롤 위치에 따라 동적으로로드되며 보이지 않는 비디오는 자동으로 제거되고 비디오의 스냅 샷이 저장되며 다시 보일 때 자동으로 다시 만들어집니다. 네트워크가 나쁜 경우 '모두 재생'을 활성화하면 간헐적으로 일시 중지될 수 있습니다. 콜렉터 모드는 현재 베타 버전이므로 문제가 있으면 피드백을 환영합니다."
+        "message": "수집기 모드는 열릴 때 현재 모든 탭에서 이미 가져온 미디어 리소스를 먼저 나열한 후 그 후에 가져온 리소스도 콜렉터 모드 목록에 추가합니다. 창을 닫으면이 모든 기록이 사라집니다. 브라우저의 제한으로 인해 비디오 수가 5000 개를 초과하면 더 이상 Referer HTTP 헤더를 설정할 수 없으며 일부 웹 사이트 리소스는 미리 볼 수 없습니다. 브라우저는 HTTP 동시 연결에 제한이 있어 동시에 너무 많은 비디오를 재생할 수 없으며 비디오 요소의 생성 수도 제한되어 있습니다(크롬에서 약 100 개). 이로 인해 많은 메모리 및 CPU 리소스가 소모됩니다. 최적화: 모든 미리 보기된 비디오는 스크롤 위치에 따라 동적으로로드되며 보이지 않는 비디오는 자동으로 제거되고 비디오의 스냅 샷이 저장되며 다시 보일 때 자동으로 다시 만들어집니다. 네트워크가 나쁜 경우 '모두 재생'을 활성화하면 간헐적으로 일시 중지될 수 있습니다. 콜렉터 모드는 현재 베타 버전이므로 문제가 있으면 피드백을 환영합니다."
     },
     "settings_tip_": {
         "message": "확장 프로그램의 상세 설정"
     },
     "select_element_tip_": {
-        "message": "웹 페이지에서 요소를 선택하고이 도메인 아래의 미디어 파일의 파일 이름 가져오기 규칙을 설정하며 비디오/오디오 등을 녹화합니다."
+        "message": "웹 페이지에서 요소를 선택하고이 도메인 아래의 미디어 파일의 파일 이름 가져오기 규칙을 설정하며 비디오/오디오 등을 기록합니다."
     },
     "preview_notify_": {
         "message": "브라우저 및 웹 사이트의 다운로드 방지 규칙으로 인해 모든 비디오를 미리 볼 수 있는 것은 아닙니다. 일부 비디오는 미리 볼 수 없지만 다운로드할 수 있습니다. 일부 비디오는 미리 볼 수 없고 다운로드할 수 없을 수 있습니다."
     },
     "resources": {
-        "message": "Resources"
+        "message": "리소스"
     },
     "res_explorer": {
-        "message": "Resource explorer"
+        "message": "리소스 탐색기"
     },
     "res_explorer_tip_": {
-        "message": "List all resources, images, scripts, documents, and custom file types in the current website."
+        "message": "현재 웹사이트의 모든 리소스, 이미지, 스크립트, 문서 및 사용자 지정 파일 유형을 나열합니다."
     },
     "resolutions": {
-        "message": "Resolutions"
+        "message": "해상도"
     },
     "use_browser_for_downloading": {
-        "message": "Use browser for downloading"
+        "message": "브라우저를 사용하여 다운로드"
     },
     "excluded_from_collector_mode": {
-        "message": "Excluded from collector mode"
+        "message": "수집기 모드에서 제외됨"
     },
     "site_settings": {
-        "message": "Site settings"
+        "message": "사이트 설정"
     },
     "images": {
-        "message": "Images"
+        "message": "이미지"
     },
     "scripts": {
-        "message": "Scripts"
+        "message": "스크립트"
     },
     "custom": {
-        "message": "Custom"
+        "message": "사용자 지정"
     },
     "custom_file_rules": {
-        "message": "Custom file rules"
+        "message": "사용자 지정 규칙"
     },
     "filename_rules": {
-        "message": "File name rules"
+        "message": "파일 이름 규칙"
     },
     "HTTP_res_request_monitoring": {
-        "message": "HTTP Resource Request Monitoring"
+        "message": "HTTP 리소스 요청 모니터링"
     },
     "HTTP_res_request_monitoring_tips_": {
-        "message": "Enabling HTTP resource request monitoring lets you record all resources on web pages, even if the resource explorer is closed. This means you can track resources that aren't currently displayed or have been removed. However, if the resource explorer is already open, turning on this feature won't offer any extra advantages. Please keep in mind that this feature will use more memory to store the recorded data, even when the resource explorer is not open."
+        "message": "HTTP 리소스 요청 모니터링을 활성화하면 리소스 탐색기가 닫혀 있어도 웹 페이지에 모든 리소스를 기록할 수 있습니다. 즉, 현재 표시되지 않거나 제거되지 않은 리소스를 추적할 수 있습니다. 그러나 리소스 탐색기가 이미 열려 있는 경우 이 기능을 켜도 추가적인 이점이 없습니다. 리소스 탐색기가 열려 있지 않은 경우에도 이 기능은 기록된 데이터를 저장하는 데 더 많은 메모리를 사용한다는 점을 명심하세요."
     },
     "open_with_new_tab": {
-        "message": "Open with new tab"
+        "message": "새 탭으로 열기"
     },
     "select_all": {
-        "message": "Select all"
+        "message": "모두 선택"
     },
     "unselect_all": {
-        "message": "Unselect all"
+        "message": "모두 선택 취소"
     },
     "remove_selected": {
-        "message": "Remove selected"
+        "message": "선택 항목 제거"
     },
     "download_selected": {
-        "message": "Download selected"
+        "message": "선택 항목 다운로드"
     },
     "size": {
-        "message": "Size"
+        "message": "크기"
     },
     "width": {
-        "message": "Width"
+        "message": "너비"
     },
     "height": {
-        "message": "Height"
+        "message": "높이"
     },
     "sorting": {
-        "message": "Sorting"
+        "message": "정렬"
     },
     "create_rule": {
-        "message": "Create rule"
+        "message": "규칙 만들기"
     },
     "edit_rule": {
-        "message": "Edit rule"
+        "message": "규칙 편집"
     },
     "rule": {
-        "message": "Rule"
+        "message": "규칙"
     },
     "unselect": {
-        "message": "Unselect"
+        "message": "선택 취소"
     },
     "dark": {
-        "message": "Dark"
+        "message": "어두운"
     },
     "too_many_tasks_download_warning_": {
-        "message": "You have %d download tasks ready to send. This may result in multiple pop-up windows appearing. Do you want to continue?"
+        "message": "%d개의 다운로드 작업을 보낼 준비가 되었습니다. 이로 인해 여러 개의 팝업 창이 나타날 수 있습니다. 계속하시겠습니까?"
     },
     "exclude_cross_origin_resources": {
-        "message": "Exclude cross-origin resources"
+        "message": "교차 출처 리소스 제외"
     },
     "error": {
-        "message": "Error"
+        "message": "오류"
     },
     "apply_to": {
-        "message": "Apply to"
+        "message": "적용"
     },
     "all_sites": {
-        "message": "All sites"
+        "message": "모든 사이트"
     },
     "file_extension": {
-        "message": "File extension"
+        "message": "파일 확장자"
     },
     "name_cannot_be_empty": {
-        "message": "Name cannot be empty"
+        "message": "이름은 비워둘 수 없습니다"
     },
     "host_cannot_be_empty": {
-        "message": "Host cannot be empty"
+        "message": "호스트는 비워둘 수 없습니다"
     },
     "invalid_settings": {
-        "message": "Invalid settings"
+        "message": "잘못된 설정"
     },
     "download_exclusions": {
-        "message": "Download Exclusions"
+        "message": "다운로드 제외"
     },
     "planned_no_implemented_": {
-        "message": "Planned but not implemented."
+        "message": "계획되었지만 실행되지 않았습니다."
     },
     "rule_name_duplicated": {
-        "message": "Rule name is duplicated"
+        "message": "규칙 이름이 중복되었습니다"
     },
     "attr_name": {
-        "message": "Attribute name"
+        "message": "속성 이름"
     },
     "custom_rule_selector_tips_": {
-        "message": "Use CSS selectors to query DOM elements from a webpage and extract URL addresses from the attributes or text content of the selected elements.<br/> For example, you can retrieve the URL from the 'href' attribute of an a tag."
+        "message": "CSS 선택기를 사용하여 웹페이지에서 DOM 요소를 쿼리하고 선택한 요소의 속성 또는 텍스트 내용에서 URL 주소를 추출합니다.<br/> 예를 들어, 태그의 'href' 속성에서 URL을 검색할 수 있습니다."
     },
     "custom_rule_selector_attr_name_tips_": {
-        "message": "Once an element is matched using the specified CSS selector, extract the content from the designated attribute name. To extract the text content, use curly braces {} instead."
+        "message": "지정된 CSS 선택기를 사용하여 요소가 일치하면 지정된 속성 이름에서 내용을 추출합니다. 텍스트 내용을 추출하려면 대신 컬리 괄호 {}를 사용합니다."
     },
     "custom_rule_url_regexp_tips_": {
-        "message": "Use JavaScript regular expressions to match all URL addresses.<br/> (Note: Using regular expressions may impact the performance of the webpage.)"
+        "message": "JavaScript 정규 표현식을 사용하여 모든 URL 주소를 일치시킵니다.<br/> (참고: 정규 표현식을 사용하면 웹페이지의 성능에 영향을 미칠 수 있습니다.)"
     },
     "url_conversion": {
-        "message": "URL conversion"
+        "message": "URL 변환"
     },
     "relative_URL_to_absolute_URL_tips_": {
-        "message": "Convert relative URL to absolute URL.<br/>Example: /123/123.txt -> http://xxxx/123/123.txt"
+        "message": "상대 URL을 절대 URL로 변환합니다.<br/>예를들면: /123/123.txt -> http://xxxx/123/123.txt"
     },
     "note": {
-        "message": "Note"
+        "message": "참고"
     },
     "custom_rule_tips_": {
-        "message": "When multiple settings are selected, the URL is only considered valid if all of these settings are matched."
+        "message": "여러 설정을 선택하면 이 모든 설정이 일치하는 경우에만 URL이 유효한 것으로 간주됩니다."
     },
     "media_files": {
-        "message": "Media files"
+        "message": "미디어 파일"
     },
     "types": {
-        "message": "Types"
+        "message": "유형"
     },
     "configs": {
-        "message": "Configs"
+        "message": "구성"
     },
     "selected": {
-        "message": "Selected"
+        "message": "선택됨"
     },
     "remove_failed_loading_images": {
-        "message": "Remove failed loading images"
+        "message": "로드 실패한 이미지 제거"
     },
     "third_party_query_interfaces": {
-        "message": "Third-Party Query Interfaces"
+        "message": "타사 쿼리 인터페이스"
     },
     "interface": {
-        "message": "Interface"
+        "message": "인터페이스"
     },
     "implicit": {
-        "message": "Implicit"
+        "message": "암묵적"
     },
     "explicit": {
-        "message": "Explicit"
+        "message": "명시적"
     },
     "data_source": {
-        "message": "Data source"
+        "message": "데이터 소스"
     },
     "test": {
-        "message": "Test"
+        "message": "테스트"
     },
     "provider": {
-        "message": "Provider"
+        "message": "제공자"
     },
     "provider_website": {
-        "message": "Provider website"
+        "message": "제공자 웹사이트"
     },
     "optional": {
-        "message": "Optional"
+        "message": "선택사항"
     },
     "interface_type": {
-        "message": "Interface type"
+        "message": "인터페이스 유형"
     },
     "file_type": {
-        "message": "File type"
+        "message": "파일 유형"
     },
     "window_width": {
-        "message": "Window width"
+        "message": "창 너비"
     },
     "window_height": {
-        "message": "Window height"
+        "message": "창 높이"
     },
     "icon": {
-        "message": "Icon"
+        "message": "아이콘"
     },
     "visible_element": {
-        "message": "Visible element"
+        "message": "보이는 요소"
     },
     "visible_elements": {
-        "message": "Visible elements"
+        "message": "보이는 요소"
     },
     "hidden_elements": {
-        "message": "Hidden elements"
+        "message": "숨겨진 요소"
     },
     "data_format": {
-        "message": "Data format"
+        "message": "데이터 형식"
     },
     "documentation": {
-        "message": "Documentation"
+        "message": "문서"
     },
     "host_match": {
-        "message": "Host match"
+        "message": "호스트 일치"
     },
     "path_match": {
-        "message": "Path match"
+        "message": "경로 일치"
     },
     "hosts": {
-        "message": "Hosts"
+        "message": "호스트"
     },
     "paths": {
-        "message": "Paths"
+        "message": "경로"
     },
     "host_match_placeholder_": {
-        "message": "Match the host addresses (domain names or IPs) in the input box, excluding ports. One address per line."
+        "message": "입력 상자에서 포트를 제외한 호스트 주소 (도메인 이름 또는 IP)를 일치시킵니다. 한 줄당 하나의 주소입니다."
     },
     "path_match_placeholder_": {
-        "message": "Match the paths corresponding to the host addresses above. Each path should start with a '/', and you can use regular expressions. One path per line."
+        "message": "위의 호스트 주소에 해당하는 경로를 일치시킵니다. 각 경로는 '/'로 시작해야 하며, 정규식을 사용할 수 있습니다. 한 줄당 하나의 경로입니다."
     },
     "window": {
-        "message": "Window"
+        "message": "창"
     },
     "iframe": {
         "message": "Iframe"
     },
     "hidden_iframe": {
-        "message": "Hidden iframe"
+        "message": "숨겨진 iframe"
     },
     "one_css_selector_per_line": {
-        "message": "One CSS selector per line"
+        "message": "한 줄당 하나의 CSS 선택기"
     },
     "response_data_type": {
-        "message": "Response data type"
+        "message": "응답 데이터 유형"
     },
     "trash_script_code": {
-        "message": "Trash script code"
+        "message": "스크립트 코드 삭제"
     },
     "behaviors": {
-        "message": "Behaviors"
+        "message": "행동"
     },
     "embed_code": {
-        "message": "Embed Code"
+        "message": "임베드 코드"
     },
     "import": {
-        "message": "Import"
+        "message": "가져오기"
     },
     "export": {
-        "message": "Export"
+        "message": "내보내기"
     },
     "share": {
-        "message": "Share"
+        "message": "공유"
     },
     "public_lists": {
-        "message": "Public lists"
+        "message": "공개 목록"
     },
     "no_selected_rows": {
-        "message": "No selected rows"
+        "message": "선택한 행 없음"
     },
     "override": {
-        "message": "Override"
+        "message": "재정의"
     },
     "override_duplicated_name_tips_": {
-        "message": "The name already exists.<br/> Do you want to overwrite the existing setting?"
+        "message": "이름이 이미 존재합니다.<br/> 기존 설정을 덮어쓰시겠습니까?"
     },
     "version": {
-        "message": "Version"
+        "message": "버전"
     },
     "create_button": {
-        "message": "Create button"
+        "message": "버튼 만들기"
     },
     "styles": {
-        "message": "Styles"
+        "message": "스타일"
     },
     "CSS_injection": {
-        "message": "CSS injection"
+        "message": "CSS 주입"
     },
     "insert_to": {
-        "message": "Insert to"
+        "message": "삽입"
     },
     "display_options": {
-        "message": "Display options"
+        "message": "표시 옵션"
     },
     "invalid_create_btn_insert_to_": {
-        "message": "Invalid setting: Create button -> Insert to"
+        "message": "잘못된 설정: 버튼 만들기 -> 삽입"
     },
     "media_files_detection": {
-        "message": "Media files detection"
+        "message": "미디어 파일 탐지"
     },
     "insertion_method": {
-        "message": "Insertion method"
+        "message": "삽입 방법"
     },
     "trigger": {
-        "message": "Trigger"
+        "message": "트리거"
     },
     "script_code_cannot_be_empty": {
-        "message": "Script code cannot be empty."
+        "message": "스크립트 코드는 비워둘 수 없습니다."
     },
     "troubleshooting": {
-        "message": "Troubleshooting"
+        "message": "문제 해결"
     },
     "invalid_data": {
-        "message": "Invalid data"
+        "message": "잘못된 데이터"
     },
     "description": {
-        "message": "Description"
+        "message": "설명"
     },
     "description_note_": {
-        "message": "The description, please make it as short as possible."
+        "message": "설명은 가능한 한 짧게 해주세요."
     },
     "download_exclusions_help_": {
-        "message": "When you start a download task, the browser will handle the download if it meets the specified settings. This option takes priority over all other settings. However, keep in mind that this does not apply to captured video and audio files. For these files, the download manager will still be used, as the browser's built-in download tool is not designed to handle them."
+        "message": "다운로드 작업을 시작하면 브라우저가 지정된 설정을 충족하면 다운로드를 처리합니다. 이 옵션은 다른 모든 설정보다 우선 순위가 높습니다. 그러나 캡처된 비디오 및 오디오 파일에는 적용되지 않는다는 점을 명심하세요. 이러한 파일의 경우 브라우저의 내장 다운로드 도구가 이를 처리하도록 설계되지 않았기 때문에 다운로드 관리자가 계속 사용됩니다."
     },
     "custom_file_rules_help_": {
-        "message": "You can create custom rules for specific file types, such as lyrics or subtitles. As long as the webpage contains these resources, they will be detected. The detected resources will then show up in the custom section of the popup in the upper right corner, as well as in the resource explorer."
+        "message": "가사나 자막과 같은 특정 파일 유형에 대한 사용자 지정 규칙을 만들 수 있습니다. 웹페이지에 이러한 리소스가 포함되어 있는 한 이러한 리소스가 감지됩니다. 감지된 리소스는 오른쪽 상단의 팝업 사용자 지정 섹션과 리소스 탐색기에 표시됩니다."
     },
     "site_settings_help_": {
-        "message": "Each website has its own individual settings. By checking any option in the \"This Website\" section of the popup, you will automatically create settings for that specific website. The custom file rules in the website settings will only apply to that particular website."
+        "message": "각 웹사이트에는 고유한 개별 설정이 있습니다. 팝업의 "이 웹사이트" 섹션에서 원하는 옵션을 선택하면 해당 웹사이트에 대한 설정이 자동으로 생성됩니다. 웹사이트 설정의 사용자 지정 파일 규칙은 해당 웹사이트에만 적용됩니다."
     },
     "third_party_interface_help_": {
-        "message": "The third-party query interface and file detection feature serve different purposes. <br/>Sometimes, on certain specially processed websites, files may not be easily detectable. This feature is designed to address that issue! You can easily extract file download links from specific web pages by writing scripts, or check for files on other servers or local applications using HTTP interactions. While there are third-party applications that can perform similar tasks, this feature simplifies the process with one-click downloading, improving overall efficiency."
+        "message": "타사 쿼리 인터페이스와 파일 감지 기능은 서로 다른 용도로 사용됩니다. <br/>일부 특수 처리된 웹사이트에서는 파일이 쉽게 감지되지 않을 수 있습니다. 이 기능은 이러한 문제를 해결하기 위해 설계되었습니다! 스크립트를 작성하여 특정 웹 페이지에서 파일 다운로드 링크를 쉽게 추출하거나 HTTP 상호 작용을 사용하여 다른 서버나 로컬 응용 프로그램의 파일을 확인할 수 있습니다. 유사한 작업을 수행할 수 있는 타사 응용 프로그램도 있지만, 이 기능은 원클릭 다운로드로 프로세스를 간소화하여 전반적인 효율성을 향상시킵니다."
     },
     "media_files_detection_text_": {
-        "message": "Enable or disable the media file detection feature."
+        "message": "미디어 파일 감지 기능을 활성화하거나 비활성화합니다."
     },
     "deep_analysis_res_text_": {
-        "message": "Enable or disable deep detection of resource files such as images and scripts. <br/>Activating this feature can help identify more potential resource files. <br/> If you do not use the resource manager feature, you can disable this option. <br/> To completely disable deep analysis, you will need to turn off all related options."
+        "message": "이미지 및 스크립트와 같은 리소스 파일의 심층 탐지를 활성화하거나 비활성화합니다. <br/>이 기능을 활성화하면 더 많은 잠재적 리소스 파일을 식별하는 데 도움이 될 수 있습니다. <br/> 리소스 관리자 기능을 사용하지 않는 경우 이 옵션을 비활성화할 수 있습니다. <br/> 심층 분석을 완전히 비활성화하려면 관련된 모든 옵션을 꺼야 합니다."
     },
     "deep_analysis_customs_text_": {
-        "message": "This option determines whether deep analysis also matches custom file rules.<br/> Note: If the custom file rules include regular expressions, it may impact the performance of the webpage. <br/> To completely disable deep analysis, you will need to turn off all related options."
+        "message": "이 옵션은 딥 분석이 사용자 지정 파일 규칙과도 일치하는지 여부를 결정합니다.<br/> 참고: 사용자 지정 파일 규칙에 정규 표현식이 포함된 경우 웹페이지의 성능에 영향을 미칠 수 있습니다. <br/> 깊은 분석을 완전히 비활성화하려면 관련된 모든 옵션을 꺼야 합니다."
     },
     "loading": {
-        "message": "Loading"
+        "message": "로드 중"
     }
 }
