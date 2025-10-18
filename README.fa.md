@@ -75,7 +75,7 @@
 ![settings](images/screenshot_settings.png)
 
 
-#### تمظیمات پراکسی
+#### تنظیمات پراکسی
 
 ![proxy](images/screenshot_proxy.png)
 
@@ -224,7 +224,7 @@
 ![translate](images/document/how_to_translate_this_website.png)
 
 
-| Language            |@|
+| زبان            |مشارکت‌کنندگان|
 |:--------------------|:-------------|
 | Русский             | [@vanja-san](https://github.com/vanja-san) [@Den1704](https://github.com/Den1704)
 | 繁體中文             | [@bear0316](https://github.com/bear0316) [@postman1year](https://github.com/postman1year)
@@ -232,12 +232,15 @@
 | Nederlands         | [@XIAA25](https://github.com/XIAA25)
 | 한국어         | [@VenusGirl](https://github.com/VenusGirl)
 | Tiếng Việt | [@vuongtuha](https://github.com/vuongtuha)
-| Türkçe     | [@geeede](https://github.com/geeede)
-| Indonesian     | [@gigglylo](https://github.com/gigglylo)
+| Türkçe     | [@geeede](https://github.com/geeede) [@saurane](https://github.com/saurane)
+| Indonesian     | [@gigglylo](https://github.com/gigglylo) Rangga S. Nugraha
+| Deutsch     | [@Vulcanraven91](https://github.com/Vulcanraven91)
+| 日本語     | [@wany-oh](https://github.com/wany-oh)
+| polski     | [@RunoHawk](https://github.com/RunoHawk)
+| فارسی     | [@bananbenbadr](https://github.com/bananbenbadr)
 
 
-#### کتابخانه های منبع باز
-
+## کتابخانه‌های منبع باز
 [boost](https://www.boost.org)
 [Qt](https://qt.io/)
 [libtorrent](https://www.libtorrent.org)
