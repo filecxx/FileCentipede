@@ -1,0 +1,27 @@
+<svg width="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" height="64" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <linearGradient id="a" y1="17" y2="31" x1="40" x2="54" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#060606"/>
+   <stop offset="1" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="b" y1="392.36" y2="336.36" x2="0" gradientUnits="userSpaceOnUse" gradientTransform="translate(-48-332.36)">
+   <stop stop-color="#ffffff" stop-opacity="0"/>
+   <stop offset="1" stop-color="#ffffff" stop-opacity=".2"/>
+  </linearGradient>
+  <path id="c" d="m10 61v-58h30l14 14v44h-14z"/>
+ </defs>
+ <use fill="#51db51" xlink:href="#c"/>
+ <g color-rendering="auto" color-interpolation-filters="linearRGB" shape-rendering="auto" image-rendering="auto" text-rendering="auto" color-interpolation="sRGB" color="#000000">
+  <g transform="scale(1-1)">
+   <rect opacity=".5" x="10" y="-4" width="30" fill="#ffffff" height="1"/>
+   <rect opacity=".25" x="10" y="-61" width="44" height="1"/>
+  </g>
+  <path opacity=".5" fill="#ffffff" d="m54 17l-14-14v14z"/>
+ </g>
+ <path opacity=".2" fill="url(#a)" fill-rule="evenodd" d="m40 17l14 14v-14z"/>
+ <g fill="#ffffff" color-rendering="auto" color-interpolation-filters="linearRGB" shape-rendering="auto" image-rendering="auto" text-rendering="auto" color-interpolation="sRGB" color="#000000">
+  <path opacity=".75" d="m35.734 22.01c-3.983 0-7.211 3.228-7.211 7.207 0 1.082.245 2.103.672 3.02l-1.234 1.461-.107 1.369c-.011.01-1.344.049-1.344.049l-.686.496c0 0 .006 1.495 0 1.475l-.002.002-1.467.023-.621.709-.014 1.34c0 0-1.266-.083-1.395.035-.81.746-1.355 1.277-1.355 1.277l.006 3.506c0 0 .469-.002.688-.002l9.338-9.336c.495.431 1.049.794 1.648 1.078l.002-.002c.936.444 1.979.701 3.084.701 3.983 0 7.211-3.227 7.211-7.207 0-3.979-3.228-7.206-7.213-7.205m1.377 3.434c1.327 0 2.402 1.077 2.402 2.404 0 1.327-1.075 2.402-2.402 2.402-1.328 0-2.404-1.075-2.404-2.402 0-1.327 1.076-2.404 2.404-2.404"/>
+  <path opacity=".5" d="m37.11 25.445c-1.328 0-2.404 1.077-2.404 2.404 0 1.327 1.076 2.402 2.404 2.402 1.327 0 2.402-1.075 2.402-2.402 0-1.327-1.075-2.404-2.402-2.404m0 1.373c.569 0 1.029.462 1.029 1.031 0 .569-.461 1.029-1.029 1.029-.569 0-1.031-.461-1.031-1.029 0-.569.463-1.031 1.031-1.031m-6.109 7.828l-9.342 9.34h3.434l8.154-8.01c-.832-.307-1.59-.757-2.246-1.328"/>
+ </g>
+ <use fill="url(#b)" xlink:href="#c"/>
+</svg>

@@ -1,0 +1,29 @@
+<svg width="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" height="64">
+ <defs>
+  <linearGradient id="a" y1="61" y2="3" x2="0" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#f9b425"/>
+   <stop offset="1" stop-color="#f9bf3b"/>
+  </linearGradient>
+  <linearGradient id="b" y1="31" x1="54" y2="17" x2="40" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1 0 0-1-14 78)">
+   <stop stop-color="#383e51"/>
+   <stop offset="1" stop-color="#655c6f" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="c" y1="61" y2="47" x2="0" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#fbd783"/>
+   <stop offset="1" stop-color="#fde8b9"/>
+  </linearGradient>
+ </defs>
+ <path fill="url(#a)" d="m10 3v58h30l14-14v-44h-14z"/>
+ <rect width="30" x="10" y="60" fill="#2e3132" height="1" fill-opacity=".294"/>
+ <rect width="44" x="10" y="3" fill="#ffffff" height="1" fill-opacity=".41"/>
+ <g fill-rule="evenodd">
+  <path fill="url(#c)" d="m54 47l-14 14v-14z"/>
+  <path opacity=".2" fill="url(#b)" d="m26 61l14-14v14z"/>
+ </g>
+ <g fill="#fde8b9" color-rendering="auto" color-interpolation-filters="linearRGB" shape-rendering="auto" image-rendering="auto" text-rendering="auto" color-interpolation="sRGB" color="#000000">
+  <path d="m23 22.1c1.662 0 3 1.338 3 3 0 1.662-1.338 3-3 3-1.662 0-3-1.338-3-3 0-1.662 1.338-3 3-3m0 1c-1.108 0-2 .892-2 2 0 1.108.892 2 2 2 1.108 0 2-.892 2-2 0-1.108-.892-2-2-2m0 6.9c1.186 0 2.236.521 2.967 1.336-.247.224-.482.462-.703.713-.549-.637-1.352-1.049-2.264-1.049-1.662 0-3 1.338-3 3v3h3l.016 1h-4.02v-4c0-2.216 1.784-4 4-4"/>
+  <path d="m32 24.1c1.662 0 3 1.338 3 3 0 1.662-1.338 3-3 3-1.662 0-3-1.338-3-3 0-1.662 1.338-3 3-3m0 1c-1.108 0-2 .892-2 2 0 1.108.892 2 2 2 1.108 0 2-.892 2-2 0-1.108-.892-2-2-2"/>
+  <path d="m41 22.1c-1.662 0-3 1.338-3 3 0 1.662 1.338 3 3 3 1.662 0 3-1.338 3-3 0-1.662-1.338-3-3-3m0 1c1.108 0 2 .892 2 2 0 1.108-.892 2-2 2-1.108 0-2-.892-2-2 0-1.108.892-2 2-2m0 6.9c-1.186 0-2.236.521-2.967 1.336.247.224.482.462.703.713.549-.637 1.352-1.049 2.264-1.049 1.662 0 3 1.338 3 3v3h-3l-.016 1h4.02v-4c0-2.216-1.784-4-4-4"/>
+  <path d="m32.03 31.03c4.155 0 5.969 2.969 5.969 6.469v1.5h-12v-1.5c0-3.5 1.876-6.469 6.03-6.469m-.016.992c-3.601 0-5.02 2.254-5.02 5.578v.398h10v-.398c0-3.601-1.383-5.578-4.984-5.578"/>
+ </g>
+</svg>

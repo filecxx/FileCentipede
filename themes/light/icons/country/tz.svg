@@ -1,0 +1,11 @@
+<svg viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg">
+    <clipPath id="a">
+        <path d="m10 0h160v120h-160z"/>
+    </clipPath>
+    <g clip-path="url(#a)" fill-rule="evenodd" stroke-width="1pt" transform="matrix(4 0 0 4 -40 0)">
+        <path d="m0 0h180v120h-180z" fill="#09f"/>
+        <path d="m0 0h180l-180 120z" fill="#090"/>
+        <path d="m0 120h40l140-95v-25h-40l-140 95z"/>
+        <path d="m0 91.5 137.2-91.5h13.5l-150.7 100.5zm29.3 28.5 150.7-100.5v9l-137.2 91.5z" fill="#ff0"/>
+    </g>
+</svg>

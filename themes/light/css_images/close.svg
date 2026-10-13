@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <defs id="defs3051">
+    <style type="text/css" id="current-color-scheme">
+      .ColorScheme-Text {
+        color:#232629;
+      }
+      .ColorScheme-NegativeText {
+        color:#da4453;
+      }
+      </style>
+  </defs>
+  <g transform="translate(-421.71-531.79)">
+    <path style="fill-opacity: 1; stroke: none; fill: rgb(60, 60, 60);" class="ColorScheme-NegativeText" d="M 426.869 535.742 L 425.738 536.873 L 428.607 539.742 L 425.738 542.611 L 426.869 543.742 L 429.738 540.873 L 432.607 543.742 L 433.738 542.611 L 430.869 539.742 L 433.738 536.873 L 432.607 535.742 L 429.738 538.611 L 426.869 535.742 Z"/>
+  </g>
+</svg>

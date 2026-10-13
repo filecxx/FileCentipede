@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" inkscape:version="1.1-dev (d80adc983d, 2020-06-15)" sodipodi:docname="application-xmind.svg" id="svg35" version="1.1" height="64" viewBox="0 0 64 64" width="64">
+    <sodipodi:namedview inkscape:current-layer="svg35" showgrid="false" id="namedview37" inkscape:window-height="480" inkscape:window-width="640" inkscape:pageshadow="2" inkscape:pageopacity="0" guidetolerance="10" gridtolerance="10" objecttolerance="10" borderopacity="1" bordercolor="#666666" pagecolor="#ffffff" />
+    <defs id="defs17">
+        <linearGradient gradientTransform="matrix(1 0 0-1 0 64)" gradientUnits="userSpaceOnUse" x2="0" y2="61" y1="3" id="a">
+            <stop id="stop2" stop-color="#cf000f" />
+            <stop id="stop4" stop-color="#d91e18" offset="1" />
+        </linearGradient>
+        <linearGradient gradientTransform="matrix(1 0 0-1 0 64)" gradientUnits="userSpaceOnUse" x2="0" y2="47" y1="61" id="b">
+            <stop offset="0" stop-color="#fb9fa2" id="stop9" />
+            <stop offset="1" stop-color="#fb7d80" id="stop7" />
+        </linearGradient>
+        <linearGradient gradientUnits="userSpaceOnUse" x2="54" y2="31" x1="40" y1="17" id="c">
+            <stop id="stop12" stop-color="#383e51" />
+            <stop id="stop14" stop-opacity="0" stop-color="#655c6f" offset="1" />
+        </linearGradient>
+    </defs>
+    <path id="path19" d="m10 61v-58h30l14 14v44h-14z" fill="url(#a)" />
+    <g id="g25" transform="scale(1-1)">
+        <rect id="rect21" fill-opacity=".412" height="1" fill="#ffffff" y="-4" x="10" width="30" />
+        <rect id="rect23" fill-opacity=".294" height="1" fill="#2e3132" y="-61" x="10" width="44" />
+    </g>
+    <g id="g31" fill-rule="evenodd">
+        <path id="path27" d="m54 17l-14-14v14z" fill="url(#b)" />
+        <path id="path29" d="m40 17l14 14v-14z" fill="url(#c)" opacity=".2" />
+    </g>
+    <path id="path33" d="m41.25 26l-6.454 1.118c.093 4.223-4.186 7.158-8.201-.798l-7.593 1.119c1.182 4.302 5.425 4.832 8.255 7.095-1.415 2.122-7.843.844-7.671 7.467l6.454-1.119c-.093-4.223 7.355-7.78 11.369.177l7.593-1.119c-1.184-4.313-5.693-4.723-8.523-7 1.402-3.083 6.04-.31 4.77-6.94" fill="#fcbcbe" />
+</svg>

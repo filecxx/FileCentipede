@@ -1,0 +1,26 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg">
+    <path d="m0 0h640v160h-640z" fill="#f93"/>
+    <path d="m0 160h640v160h-640z" fill="#fff"/>
+    <path d="m0 320h640v160h-640z" fill="#128807"/>
+    <g transform="matrix(3.2 0 0 3.2 320 240)">
+        <circle fill="#008" r="20"/>
+        <circle fill="#fff" r="17.5"/>
+        <circle fill="#008" r="3.5"/>
+        <g id="a">
+            <g id="b">
+                <g id="c">
+                    <g id="d" fill="#008">
+                        <circle r=".9" transform="matrix(.99144486 .13052619 -.13052619 .99144486 17.349961 2.290741)"/>
+                        <path d="m0 17.5.6-10.5-.6-5-.6 5z"/>
+                    </g>
+                    <use height="100%" transform="matrix(.96592583 .25881905 -.25881905 .96592583 0 0)" width="100%"
+                         xlink:href="#d"/>
+                </g>
+                <use height="100%" transform="matrix(.8660254 .5 -.5 .8660254 0 0)" width="100%" xlink:href="#c"/>
+            </g>
+            <use height="100%" transform="matrix(.5 .8660254 -.8660254 .5 0 0)" width="100%" xlink:href="#b"/>
+        </g>
+        <use height="100%" transform="matrix(-.5 .8660254 -.8660254 -.5 0 0)" width="100%" xlink:href="#a"/>
+        <use height="100%" transform="matrix(-.5 -.8660254 .8660254 -.5 0 0)" width="100%" xlink:href="#a"/>
+    </g>
+</svg>

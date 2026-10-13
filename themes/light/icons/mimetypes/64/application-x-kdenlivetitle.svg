@@ -1,0 +1,25 @@
+<svg width="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" height="64">
+ <defs>
+  <linearGradient id="a" y1="61" y2="3" x2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1.31818 0 0 .75862-10.182 7.724)">
+   <stop stop-color="#6c7a89"/>
+   <stop offset="1" stop-color="#768492"/>
+  </linearGradient>
+  <linearGradient id="b" y1="54" x1="3" y2="10" x2="61" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#383e51"/>
+   <stop offset="1" stop-color="#655c6f" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="c" y1="54" y2="10" x2="0" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#dedede"/>
+   <stop offset="1" stop-color="#ececec"/>
+  </linearGradient>
+ </defs>
+ <path fill="url(#a)" d="m3 10v44h58v-44h-18.455z"/>
+ <rect width="58" x="3" y="53" fill="#2e3132" height="1" fill-opacity=".294"/>
+ <rect width="58" x="3" y="10" fill="#ffffff" height="1" fill-opacity=".41"/>
+ <path fill="#ececec" d="M32 21A11 11 0 0 0 21 32 11 11 0 0 0 32 43 11 11 0 0 0 43 32 11 11 0 0 0 32 21m.144531.951172a10 10 0 0 1 10 10 10 10 0 0 1 -10 10 10 10 0 0 1 -10 -10 10 10 0 0 1 10 -10"/>
+ <g fill-rule="evenodd">
+  <path fill="#edeef8" d="m38 31.462l-10 7.538v-14z"/>
+  <path fill="url(#b)" d="m57 54l-2-2 2-4-2-2 2-4-2-2 2-4-2-2 2-4-2-2 2-4-2-2 2-4-2-2 4-4 2 2v40z"/>
+ </g>
+ <path fill="url(#c)" d="m5 12v4h4v-4zm50 0v4h4v-4zm-50 6v4h4v-4zm50 0v4h4v-4zm-50 6v4h4v-4zm50 0v4h4v-4zm-50 6v4h4v-4zm50 0v4h4v-4zm-50 6v4h4v-4zm50 0v4h4v-4zm-50 6v4h4v-4zm50 0v4h4v-4zm-50 6v4h4v-4zm50 0v4h4v-4z"/>
+</svg>

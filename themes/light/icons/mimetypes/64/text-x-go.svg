@@ -1,0 +1,26 @@
+<svg width="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" height="64">
+ <defs>
+  <linearGradient id="a" y1="3" y2="61" x2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1 0 0-1 0 64)">
+   <stop stop-color="#5e6b78"/>
+   <stop offset="1" stop-color="#768492"/>
+  </linearGradient>
+  <linearGradient id="b" y1="61" y2="47" x2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1 0 0-1 0 64)">
+   <stop stop-color="#dedede"/>
+   <stop offset="1" stop-color="#fbfbfb"/>
+  </linearGradient>
+  <linearGradient id="c" y1="17" x1="40" y2="31" x2="54" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#383e51"/>
+   <stop offset="1" stop-color="#655c6f" stop-opacity="0"/>
+  </linearGradient>
+ </defs>
+ <path fill="url(#a)" d="m10 61v-58h30l14 14v44h-14z"/>
+ <g transform="scale(1-1)">
+  <rect width="30" x="10" y="-4" fill="#ffffff" height="1" fill-opacity=".412"/>
+  <rect width="44" x="10" y="-61" fill="#2e3132" height="1" fill-opacity=".294"/>
+ </g>
+ <g fill-rule="evenodd">
+  <path fill="url(#b)" d="m54 17l-14-14v14z"/>
+  <path opacity=".2" fill="url(#c)" d="m40 17l14 14v-14z"/>
+ </g>
+ <path fill="#fbfbfb" color-rendering="auto" color-interpolation-filters="linearRGB" shape-rendering="auto" image-rendering="auto" text-rendering="auto" color-interpolation="sRGB" color="#4d4d4d" d="M26.5 21A5.5 5.5 0 0 0 21 26.5 5.5 5.5 0 0 0 21.01367 26.755859 3 3 0 0 0 21 27 3 3 0 0 0 21.341797 28.386719 5.5 5.5 0 0 0 26.5 32 5.5 5.5 0 0 0 32 26.5 5.5 5.5 0 0 0 26.5 21M32 26.5A5.5 5.5 0 0 0 32.01367 26.755859 3 3 0 0 0 32 27 3 3 0 0 0 32.3418 28.386719 5.5 5.5 0 0 0 37.5 32 5.5 5.5 0 0 0 43 26.5 5.5 5.5 0 0 0 37.5 21 5.5 5.5 0 0 0 32 26.5M26.5 22A4.5 4.5 0 0 1 31 26.5 4.5 4.5 0 0 1 26.5 31 4.5 4.5 0 0 1 23.646484 29.976562 3 3 0 0 0 24 30 3 3 0 0 0 27 27 3 3 0 0 0 24 24 3 3 0 0 0 22.527344 24.390625 4.5 4.5 0 0 1 26.5 22M37.5 22A4.5 4.5 0 0 1 42 26.5 4.5 4.5 0 0 1 37.5 31 4.5 4.5 0 0 1 34.646484 29.976562 3 3 0 0 0 35 30 3 3 0 0 0 38 27 3 3 0 0 0 35 24 3 3 0 0 0 33.527344 24.390625 4.5 4.5 0 0 1 37.5 22M40.586 34.871C38.501 35.584 35.34 35.999 32 36 29.24 35.999 26.574 35.714 24.545 35.2L23.875 35.938C24.803 36.22 25.872 36.443 27 36.617V40A3 3 0 0 0 30 43 3 3 0 0 0 32.5 41.654297 3 3 0 0 0 35 43 3 3 0 0 0 38 40V36.457C39.24 36.22 40.37 35.906 41.3 35.525zM37 36.631V40A2 2 0 0 1 35 42 2 2 0 0 1 33 40V36.98C34.395 36.941 35.747 36.823 37 36.631M28 36.76C29.28 36.911 30.622 36.999 32 37V40A2 2 0 0 1 30 42 2 2 0 0 1 28 40z"/>
+</svg>

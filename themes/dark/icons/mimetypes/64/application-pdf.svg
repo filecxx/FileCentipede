@@ -1,0 +1,20 @@
+<svg width="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" height="64" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <linearGradient id="a" y1="392.36" y2="336.36" x2="0" gradientUnits="userSpaceOnUse" gradientTransform="translate(-14-332.36)">
+   <stop stop-color="#ffffff" stop-opacity="0"/>
+   <stop offset="1" stop-color="#ffffff" stop-opacity=".15"/>
+  </linearGradient>
+  <path color-rendering="auto" color-interpolation-filters="linearRGB" shape-rendering="auto" image-rendering="auto" text-rendering="auto" id="b" color-interpolation="sRGB" color="#000000" d="m10 3v58h44v-58h-14z"/>
+ </defs>
+ <use fill="#da2c2c" xlink:href="#b"/>
+ <g color-rendering="auto" color-interpolation-filters="linearRGB" shape-rendering="auto" image-rendering="auto" text-rendering="auto" color-interpolation="sRGB" color="#000000">
+  <rect opacity=".25" x="10" y="60" width="44" height="1"/>
+  <g fill="#ffffff">
+   <rect opacity=".5" x="10" y="3" width="44" height="1"/>
+   <path opacity=".8" d="m26.301 17.981c-.363.013-.752.11-1.179.293-3.813 1.629-1 5.371 3.856 8.793.029-.656.047-1.298.04-1.913-4.147-2.838-5.763-5.656-3.768-6.321 2.139-.885 3.718 1.737 3.768 6.321.26.177.521.351.794.53-.101-4.172-1.016-7.444-3.151-7.685-.114-.013-.239-.02-.36-.016m3.511 7.701l-.497-.788-.631.544-.132.828.832 1.569.418-.201c2.797 1.864 6.138 3.581 9.273 4.76l.931.542 1.287.031c1.186-.703.479-.962 4.789-1.495l-4.856.369c-3.746-1.45-7.94-3.887-11.417-6.159m9.343 6.692c.562.045 4.52-.647 6.264-.815.667-.087 3.31-.277 3.444 1.67.456-1.061-.23-2.066-1.71-2.381-2.287-.512-6.693 1.103-7.998 1.526m2.526-.492c-.68.244-1.828.219-2.562.517 1.041.533 6.371 1.947 8.528 1.542.345-.054 1.289-.316 1.325-1.076-1.728 1.201-6.498.358-7.291-.982m1.421.022c-.559-.179-3.444.709-4.02.49-3.547 1.182-7.432 2.883-10.591 4.698l-.915.181-.707 1.262-.949 1.235 1.07 1.065.837-1.374c3.699-2.218 11.01-5.83 15.277-7.56m-15.277 7.56c-.452.271-.884.539-1.293.799-.474 1.345-1.84 4.302-2.778 4.211 0 0-.172.143-.446.371 1.441.828 3.335-1.76 4.518-5.381m-4.072 5.01c-2.488-1.468 1.599-3.621 2.778-4.211.266-.759.517-1.582.754-2.46-3.715 2.312-6.04 4.709-4.796 6.293.3.383.539.659.816.748m3.979-7.04c.385-.239.79-.474 1.204-.712.732-2.952 1.217-6.347 1.318-9.458-.282-.188-.557-.378-.826-.568-.157 3.502-.808 7.457-1.694 10.738"/>
+  </g>
+ </g>
+ <rect width="1" x="16" y="4" fill="#ffffff" height="56" fill-opacity=".252"/>
+ <rect color-interpolation-filters="linearRGB" x="17" y="4" fill-opacity=".083" color="#000000" image-rendering="auto" color-rendering="auto" width="1" color-interpolation="sRGB" text-rendering="auto" height="56" shape-rendering="auto"/>
+ <use fill="url(#a)" xlink:href="#b"/>
+</svg>

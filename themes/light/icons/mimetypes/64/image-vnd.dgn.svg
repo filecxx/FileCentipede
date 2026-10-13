@@ -1,0 +1,17 @@
+<svg width="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" height="64">
+ <defs>
+  <linearGradient id="a" y1="57" y2="7" x2="0" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#22a7f0"/>
+   <stop offset="1" stop-color="#19b5fe"/>
+  </linearGradient>
+ </defs>
+ <g color-rendering="auto" color-interpolation-filters="linearRGB" shape-rendering="auto" image-rendering="auto" text-rendering="auto" color-interpolation="sRGB" color="#000000">
+  <path fill="url(#a)" d="m4 57v-50h56v50z"/>
+  <rect opacity=".25" x="4" y="56" width="56" height="1"/>
+  <g fill="#ffffff">
+   <rect opacity=".5" x="4" y="7" width="56" height="1"/>
+   <path opacity=".75" stroke-width="2" d="m8 11v42h48v-42h-1zm1 1h46v40h-46z"/>
+  </g>
+ </g>
+ <path fill="#ffffff" fill-rule="evenodd" d="m30 21v4h4v-4zm1 1h2v2h-2zm-1.664 1.258l-1.932.518.26.967 1.932-.518zm-3 1l-1.932.518.26.967 1.932-.518zm8.664.275v1.035l6.143 1.645-6.143 1.754v14.03h.029l7.971-2.277v-14.06zm-12 .4668a1 1 0 0 0 -1 1 1 1 0 0 0 1 1 1 1 0 0 0 1 -1 1 1 0 0 0 -1 -1m-2 2v14l12 2v-14zm21 1.01v11.303l-6-1.609v-7.979zm-6 10.729l5.322 1.426-5.322 1.52z"/>
+</svg>
