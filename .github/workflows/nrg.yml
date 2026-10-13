@@ -1,0 +1,59 @@
+name: Regenerate READMEs
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'README.src.md'
+      - '.github/workflows/nrg.yml'
+  pull_request:
+    paths:
+      - 'README.md'
+      - 'README.ar.md'
+      - 'README.de.md'
+      - 'README.es.md'
+      - 'README.fa.md'
+      - 'README.fr.md'
+      - 'README.hi.md'
+      - 'README.it.md'
+      - 'README.ja.md'
+      - 'README.ko.md'
+      - 'README.pt-BR.md'
+      - 'README.ru.md'
+      - 'README.sv.md'
+      - 'README.tr-TR.md'
+      - 'README.zh-CN.md'
+      - 'README.zh-TW.md'
+      - 'README.src.md'
+permissions:
+  contents: write
+jobs:
+  regenerate:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: nanolaba/nrg-action@v1
+        with:
+          file: README.src.md
+          nrg-version: '1.1'
+      - name: Commit regenerated READMEs
+        run: |
+          if [ -n "$(git status --porcelain README.md README.ar.md README.de.md README.es.md README.fa.md README.fr.md README.hi.md README.it.md README.ja.md README.ko.md README.pt-BR.md README.ru.md README.sv.md README.tr-TR.md README.zh-CN.md README.zh-TW.md)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add README.md README.ar.md README.de.md README.es.md README.fa.md README.fr.md README.hi.md README.it.md README.ja.md README.ko.md README.pt-BR.md README.ru.md README.sv.md README.tr-TR.md README.zh-CN.md README.zh-TW.md
+            git commit -m "docs: regenerate READMEs from README.src.md"
+            git push
+          fi
+  drift-check:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: nanolaba/nrg-action@v1
+        with:
+          file: README.src.md
+          mode: check
+          nrg-version: '1.1'
