@@ -202,6 +202,16 @@ Browser extension screenshots
 * Checksum tool	2.3
 * Remote download	2.6
 
+## Dark theme
+
+A drop-in dark theme with a **Theme** toggle button in the app toolbar is available in the [themes/](themes/) directory.
+
+1. Extract `release/filecxx_latest_win_x64.zip` (or use your installed portable copy)
+2. Copy the `themes/` folder and `themes/theme_switch.bat` next to `fileu.exe`
+3. Click **Theme** in the toolbar to switch between dark and light
+
+Flat matte-dark styling for the whole app — toolbar, task list, file browser, dialogs, settings — with matching icon sets for both modes. See [themes/README.md](themes/README.md) for details, customization, and known limitations.
+
 ## Source code
 
 The full source code of FileU can be found in the "source_code" directory.

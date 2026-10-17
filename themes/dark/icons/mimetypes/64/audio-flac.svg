@@ -1,0 +1,18 @@
+<svg version="1.1" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="a" x2="0" y1="392.36" y2="336.36" gradientTransform="translate(-6,-332.36)" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#fff" stop-opacity="0" offset="0"/>
+            <stop stop-color="#fff" stop-opacity=".2" offset="1"/>
+        </linearGradient>
+    </defs>
+    <g transform="translate(0,-4)" color="#000000" color-rendering="auto" image-rendering="auto" shape-rendering="auto">
+        <circle cx="37" cy="36" r="24" fill="#9adfee"/>
+        <path d="m5 11v50h50v-20h-4.096c-2.717 0-4.904-2.187-4.904-4.904v-0.191c0-2.717 2.187-4.904 4.904-4.904h4.096v-20z" fill="#35bedc"/>
+        <rect x="5" y="60" width="50" height="1" opacity=".25"/>
+        <g fill="#fff">
+            <rect x="5" y="11" width="50" height="1" opacity=".5"/>
+            <path d="m21 25v16.05c-0.635-0.648-1.517-1.053-2.5-1.053-1.939 0-3.5 1.561-3.5 3.5s1.561 3.5 3.5 3.5c1.905 0 3.437-1.509 3.49-3.4h0.01v-13.6h14v8.05c-0.635-0.648-1.517-1.053-2.5-1.053-1.939 0-3.5 1.561-3.5 3.5s1.561 3.5 3.5 3.5 3.5-1.561 3.5-3.5v-15.5h-15zm1 2h14v2h-14z" opacity=".75"/>
+        </g>
+        <path d="m5 11v50h50v-9.158a24 24 0 0 0 6-15.841797 24 24 0 0 0-6-15.830078v-9.17z" fill="url(#a)"/>
+    </g>
+</svg>

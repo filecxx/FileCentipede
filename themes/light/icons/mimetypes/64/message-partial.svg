@@ -1,0 +1,24 @@
+<svg width="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" height="64" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <linearGradient id="a" y1="17" x1="40" y2="31" gradientUnits="userSpaceOnUse" x2="54">
+   <stop stop-color="#060606"/>
+   <stop offset="1" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="b" y1="392.36" y2="336.36" gradientUnits="userSpaceOnUse" x2="0" gradientTransform="translate(-48-332.36)">
+   <stop stop-color="#ffffff" stop-opacity="0"/>
+   <stop offset="1" stop-color="#ffffff" stop-opacity=".2"/>
+  </linearGradient>
+  <path id="c" d="m10 61v-58h30l14 14v44h-14z"/>
+ </defs>
+ <use fill="#f6265b" xlink:href="#c"/>
+ <g color-rendering="auto" color-interpolation-filters="linearRGB" shape-rendering="auto" image-rendering="auto" text-rendering="auto" color-interpolation="sRGB" color="#000000">
+  <g transform="scale(1-1)">
+   <rect opacity=".5" x="10" y="-4" width="30" fill="#ffffff" height="1"/>
+   <rect opacity=".25" x="10" y="-61" width="44" height="1"/>
+  </g>
+  <path opacity=".75" fill="#fffcf9" d="m54 17l-14-14v14z"/>
+ </g>
+ <path opacity=".2" fill="url(#a)" fill-rule="evenodd" d="m40 17l14 14v-14z"/>
+ <path fill="#fffcf9" color-rendering="auto" color-interpolation-filters="linearRGB" shape-rendering="auto" image-rendering="auto" text-rendering="auto" color-interpolation="sRGB" color="#000000" d="m18 22v22h5.5l.5-1h-5v-.586l9.707-9.707.293.293.471-.943-9.06-9.06h13.586l.5-1zm22.5 0l-.5 1h3.586l-7.17 7.17-1.414 2.828.291-.291 9.707 9.707v.586h-15l-.5 1h16.5v-22zm-21.5 1l9 9-9 9zm26 0v18l-9-9z"/>
+ <use fill="url(#b)" xlink:href="#c"/>
+</svg>

@@ -1,0 +1,29 @@
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="24" height="24" id="svg3869" version="1.1" inkscape:version="0.91 r13725" sodipodi:docname="application-x-xliff-22.svg" viewBox="0 0 24 24">
+  <defs id="defs3871"/>
+  <sodipodi:namedview id="base" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:zoom="18.385642" inkscape:cx="3.5682124" inkscape:cy="13.425096" inkscape:document-units="px" inkscape:current-layer="layer1" showgrid="true" fit-margin-top="0" fit-margin-left="0" fit-margin-right="0" fit-margin-bottom="0" inkscape:window-width="1366" inkscape:window-height="699" inkscape:window-x="0" inkscape:window-y="0" inkscape:window-maximized="1" inkscape:showpageshadow="false" inkscape:snap-bbox="true" inkscape:object-nodes="true" inkscape:snap-global="false">
+    <inkscape:grid type="xygrid" id="grid4132"/>
+    <sodipodi:guide position="2,20.000017" orientation="18,0" id="guide4138"/>
+    <sodipodi:guide position="2,2.0000174" orientation="0,18" id="guide4140"/>
+    <sodipodi:guide position="20,2.0000174" orientation="-18,0" id="guide4142"/>
+    <sodipodi:guide position="20,20.000017" orientation="0,-18" id="guide4144"/>
+    <sodipodi:guide position="3,19.000017" orientation="16,0" id="guide4146"/>
+    <sodipodi:guide position="3,3.0000174" orientation="0,16" id="guide4148"/>
+    <sodipodi:guide position="19,3.0000174" orientation="-16,0" id="guide4150"/>
+    <sodipodi:guide position="24.562501,19.000001" orientation="0,-16" id="guide4152"/>
+  </sodipodi:namedview>
+  <metadata id="metadata3874">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <dc:title/>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g transform="translate(1,1)">
+    <svg:g inkscape:label="Capa 1" inkscape:groupmode="layer" id="layer1" transform="translate(-326,-534.3622)">
+      <svg:path inkscape:connector-curvature="0" d="m 338.16983,547.99865 -1.96362,-1.94043 0.0232,-0.0232 c 1.34516,-1.49978 2.30378,-3.22374 2.86812,-5.04821 l 2.26513,0 0,-1.54615 -5.41156,0 0,-1.54616 -1.54616,0 0,1.54616 -5.41155,0 0,1.53843 8.63529,0 c -0.51796,1.49204 -1.33743,2.90678 -2.45066,4.1437 -0.71896,-0.79627 -1.31423,-1.66985 -1.78582,-2.58982 l -1.54615,0 c 0.56435,1.26012 1.33743,2.45066 2.30378,3.52524 l -3.93497,3.88086 1.09777,1.09777 3.86539,-3.86538 2.40428,2.40426 0.58753,-1.57707 z m 4.35244,-3.91952 -1.54615,0 -3.47887,9.27696 1.54616,0 0.86585,-2.31924 3.67213,0 0.87357,2.31924 1.54616,0 -3.47885,-9.27696 z m -2.02547,5.41156 1.25239,-3.34743 1.25239,3.34743 -2.50478,0 z" id="path6" style="fill:#656f9d;fill-opacity:1"/>
+    </svg:g>
+  </g>
+</svg>

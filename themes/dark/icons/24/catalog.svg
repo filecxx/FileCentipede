@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs id="defs3051">
+    <style type="text/css" id="current-color-scheme">
+      .ColorScheme-Text {
+        color:#232629;
+      }
+      </style>
+  </defs>
+  <g transform="translate(1,1)">
+    <path style="fill-opacity: 1; stroke: none; fill: rgb(54, 54, 54);" d="M 3 3 L 3 4 L 3 19 L 4 19 L 19.039 18.893 L 18.775 17.947 L 4 18 L 4 10 L 7 10 L 7 9.99 L 7.008 10 L 9.008 8 L 18 8 L 18.046 17.983 L 19.052 18.878 L 19 5 L 12.008 5 L 10.008 3 L 10 3.01 L 10 3 L 4 3 L 3 3" class="ColorScheme-Text"/>
+  </g>
+</svg>

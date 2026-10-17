@@ -1,0 +1,24 @@
+<svg width="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" height="64" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <linearGradient id="a" y1="17" x1="40" y2="31" x2="54" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#383e51"/>
+   <stop offset="1" stop-color="#655c6f" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="b" y1="2.978" y2="60.978" x2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1 0 0-1 0 63.978)">
+   <stop stop-color="#ffffff" stop-opacity="0"/>
+   <stop offset="1" stop-color="#ffffff" stop-opacity=".2"/>
+  </linearGradient>
+  <path id="c" d="m10 60.978v-58h30l14 14v44h-14z"/>
+ </defs>
+ <use fill="#8542c2" xlink:href="#c"/>
+ <g transform="scale(1-1)">
+  <rect width="30" x="10" opacity=".5" y="-4" fill="#ffffff" height="1"/>
+  <rect width="44" x="10" opacity=".25" y="-61" height="1"/>
+ </g>
+ <g fill-rule="evenodd">
+  <path opacity=".5" fill="#ffffff" d="m54 17l-14-14v14z"/>
+  <path opacity=".2" fill="url(#a)" d="m40 17l14 14v-14z"/>
+ </g>
+ <path opacity=".75" color-interpolation-filters="linearRGB" color="#4d4d4d" image-rendering="auto" color-rendering="auto" d="m32 21.99999a11 3 0 0 0 -11 3v16a11 3 0 0 0 11 3 11 3 0 0 0 11 -3v-16a11 3 0 0 0 -11 -3m0 1a10 2 0 0 1 10 2 10 2 0 0 1 -10 2 10 2 0 0 1 -10 -2 10 2 0 0 1 10 -2m-10 3.24219a11 3 0 0 0 10 1.75781 11 3 0 0 0 10 -1.75781v3.758a10 2 0 0 1 -10 2 10 2 0 0 1 -10 -2zm0 5a11 3 0 0 0 10 1.75781 11 3 0 0 0 10 -1.75781v4.758a10 2 0 0 1 -10 2 10 2 0 0 1 -10 -2zm0 6a11 3 0 0 0 10 1.75781 11 3 0 0 0 10 -1.75781v3.758a10 2 0 0 1 -10 2 10 2 0 0 1 -10 -2v-1z" color-interpolation="sRGB" text-rendering="auto" fill="#ffffff" shape-rendering="auto"/>
+ <use fill="url(#b)" xlink:href="#c"/>
+</svg>
