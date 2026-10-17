@@ -1,701 +1,878 @@
 {
-    "appname":{
-       "message": "文件蜈蚣"
-    },
-    "videos": {
-      "message": "视频"
-    },
-    "audios": {
-      "message": "音频"
-    },
-    "magnets": {
-      "message": "磁力"
-    },
-    "type": {
-      "message": "类型"
-    },
-    "length_duration": {
-      "message": "长度 / 时间 / 大小"
-    },
-    "download": {
-      "message": "下载"
-    },
-    "cancel": {
-      "message": "取消"
-    },
-    "file": {
-      "message": "文件"
-    },
-    "files": {
-      "message": "文件"
-    },
-    "download_video": {
-      "message": "下载这个视频"
-    },
-    "download_audio": {
-      "message": "下载这个音频"
-    },
-    "download_link": {
-      "message": "下载这个链接"
-    },
-    "download_image": {
-      "message": "下载这个图片"
-    },
-    "minutes": {
-      "message": "分钟"
-    },
-    "text": {
-      "message": "文本"
-    },
-    "download_all": {
-      "message": "下载全部"
-    },
-    "copy_all": {
-      "message": "复制全部"
-    },
-    "copy": {
-      "message": "复制"
-    },
-    "copy_addr_msg": {
-      "message": "地址复制成功"
-    },
-    "video_floating_bar": {
-      "message": "视频浮动栏"
-    },
-    "enable": {
-      "message": "启用"
-    },
-    "disable": {
-      "message": "禁用"
-    },
-    "yes": {
-      "message": "是"
-    },
-    "no": {
-      "message": "否"
-    },
-    "send_failed": {
-      "message": "发送失败"
-    },
-    "download_send_failed_message_prefix": {
-      "message": "无法连接到 "
-    },
-    "download_send_failed_message": {
-      "message": "要么没有安装,或者没有启动, 选择一个操作."
-    },
-    "browser": {
-      "message": "浏览器"
-    },
-    "download_manager": {
-      "message": "下载管理器"
-    },
-    "download_managers": {
-      "message": "下载管理器"
-    },
-    "recapture_address": {
-      "message": "重新捕获地址"
-    },
-    "refresh_address_msg_content": {
-      "message": "在地址捕捉到之前不要刷新当前网页, 请找到: "
-    },
-    "recapture_address_msg_success": {
-      "message": "已经成功捕获到新地址,请打开软件查看是否正常下载."
-    },
-    "this_site": {
-      "message": "此网站"
-    },
-    "ignore_this_site": {
-      "message": "忽略此站"
-    },
-    "potentials": {
-      "message": "潜在的"
-    },
-    "potential_urls": {
-      "message": "潜在URLs"
-    },
-    "potential_keys": {
-      "message": "潜在密钥"
-    },
-    "rules": {
-      "message": "规则"
-    },
-    "filename": {
-      "message": "文件名"
-    },
-    "filetypes": {
-      "message": "文件类型"
-    },
-    "domain": {
-      "message": "域名"
-    },
-    "settings": {
-      "message": "设置"
-    },
-    "others": {
-      "message": "其他"
-    },
-    "preview": {
-      "message": "预览"
-    },
-    "save": {
-      "message": "保存"
-    },
-    "add": {
-      "message": "添加"
-    },
-    "edit": {
-      "message": "编辑"
-    },
-    "remove": {
-      "message": "删除"
-    },
-    "clear": {
-      "message": "清空"
-    },
-    "general": {
-      "message": "常规"
-    },
-    "deep_analysis": {
-      "message": "深度分析"
-    },
-    "duplicated_row": {
-      "message": "重复的行"
-    },
-    "duplicated_name": {
-      "message": "名称重复"
-    },
-    "service": {
-      "message": "服务"
-    },
-    "service_password": {
-      "message": "服务密码"
-    },
-    "extension": {
-      "message": "扩展"
-    },
-    "css_selector": {
-      "message": "CSS 选择器"
-    },
-    "do_not_download": {
-      "message": "不下载"
-    },
-    "capture_other_file_types": {
-      "message": "捕获其他文件类型"
-    },
-    "file_unsuport_preview": {
-      "message": "你无法预览这个文件."
-    },
-    "unsuport_m3u8_preview": {
-      "message": "你的浏览器不支持m3u8文件预览."
-    },
-    "invalid_domain": {
-      "message": "无效的域名."
-    },
-    "invalid_css_selector": {
-      "message": "无效的CSS选择器."
-    },
-    "filter": {
-      "message": "过滤"
-    },
-    "filter_out": {
-      "message": "过滤掉"
-    },
-    "more": {
-      "message": "更多"
-    },
-    "name": {
-      "message": "名称"
-    },
-    "collector": {
-      "message": "收集器"
-    },
-    "collector_mode": {
-      "message": "收集器模式"
-    },
-    "record": {
-      "message": "录制"
-    },
-    "determined": {
-      "message": "已确定的"
-    },
-    "uncertain": {
-      "message": "不确定的"
-    },
-    "segments": {
-      "message": "片段"
-    },
-    "hide_low_resolution": {
-      "message": "隐藏低分辨率"
-    },
-    "all": {
-      "message": "全部"
-    },
-    "adverts": {
-      "message": "广告"
-    },
-    "adverts_detection": {
-      "message": "广告检测"
-    },
-    "resolution": {
-      "message": "分辨率"
-    },
-    "play_all": {
-      "message": "播放全部"
-    },
-    "pause_all": {
-      "message": "暂停全部"
-    },
-    "load_all": {
-      "message": "加载全部"
-    },
-    "brute_force_search": {
-      "message": "暴力搜索"
-    },
-    "readme": {
-      "message": "自述"
-    },
-    "help": {
-      "message": "帮助"
-    },
-    "start": {
-      "message": "开始"
-    },
-    "stop": {
-      "message": "停止"
-    },
-    "port": {
-      "message": "端口"
-    },
-    "action": {
-      "message": "行为"
-    },
-    "actions": {
-      "message": "行为"
-    },
-    "are_u_sure": {
-      "message": "你确定吗？"
-    },
-    "crawler": {
-      "message": "爬行器"
-    },
-    "feature_not_implemented": {
-      "message": "此功能目前保留, 尚未实施."
-    },
-    "remove_low_quality_videos": {
-      "message": "移除低质量视频"
-    },
-    "remove_failed_loading_videos": {
-      "message": "移除加载失败的视频"
-    },
-    "page_url": {
-      "message": "网页URL"
-    },
-    "file_size": {
-      "message": "文件大小"
-    },
-    "file_duration": {
-      "message": "文件时间长度"
-    },
-    "playback_speed": {
-      "message": "播放速度"
-    },
-    "video_duration": {
-      "message": "视频时长"
-    },
-    "video_source": {
-      "message": "视频源"
-    },
-    "read_from_cache": {
-      "message": "从缓存中读取"
-    },
-    "record_from_screen": {
-      "message": "从屏幕录制"
-    },
-    "progress": {
-      "message": "进度"
-    },
-    "allow_external_messages": {
-      "message": "允许外部消息"
-    },
-    "example": {
-      "message": "示例"
-    },
-    "deep_analysis_text_": {
-      "message": "启用该项会对网页进行深度分析以查找隐藏的视频或音频资源,<br/> 但是会以消耗更多CPU资源为代价.<br/> 如果网页中包含的脚本较少或者数据交互频率不高,<br/> 那么额外的消耗可以忽略不计."
-    },
-    "allow_external_messages_text_": {
-      "message": "允许外部脚本给本扩展发送消息，该功能可以被第三方查询接口取代。"
-    },
-    "filename_rule_tips_": {
-      "message": "使用CSS选择器规则获取网页中指定元素的文本作为该域下媒体文件的首选文件名.<br/>如果获取失败, 仍然会继续使用标题或者og:title来作为文件名."
-    },
-    "download_manager_tip_": {
-      "message": "下载文件时候默认使用的下载管理器."
-    },
-    "collector_mode_tip_": {
-      "message": "记录所有网页捕获到的媒体资源, 必要时候再进行批量的预览和筛选, 减少重复的工作."
-    },
-    "collector_notify_": {
-      "message": "收集器模式只有在窗口开启时候才会有效, 关闭该窗口会丢失所有记录.<br/>由于浏览器的限制以及网站的下载链规则会导致并非所有视频都可以被预览.<br/>部分视频无法被预览, 但是可以被下载.<br/>部分视频既无法被预览, 也无法被下载."
-    },
-    "collector_mode_help_text_": {
-      "message": "收集器模式在打开时候会首先列出当前所有标签页中已经获取到的媒体资源, 之后获取到的也会加入到收集器模式列表中, 当窗口关闭时候这些记录都会消失.<br/><br/>需要注意, 由于浏览器的限制, 当视频数量超过5000时候无法再设置Referer HTTP 头, 会导致有一些网站的资源无法被预览. <br/><br/>浏览器对HTTP并发连接具有限制, 无法同时播放太多的视频，并且限制了创建video元素的数量(chrome下大约100个), 并且会消耗大量的内存和CPU资源.<br/><br/>优化: 所有预览的视频是根据滚动条位置动态加载的, 不可见的视频都会被自动移除, 并保存视频的截图, 再次可见时候又会自动创建, 网络不佳时候如果启动了 '播放全部' 会导致间断性的停顿. <br/><br/>收集器模式目前属于beta版本, 有任何问题欢迎进行反馈.<br/>"
-    },
-    "settings_tip_": {
-      "message": "扩展程序的详细设置"
-    },
-    "select_element_tip_": {
-      "message": "选择网页中的元素, 对该域下媒体文件的文件名的获取规则设置, 录制视频/音频等."
-    },
-    "preview_notify_": {
-      "message": "由于浏览器的限制以及网站的防下载规则会导致并非所有视频都可以被预览.<br/>部分视频无法被预览, 但是可以被下载.<br/>部分视频既无法被预览, 也无法被下载."
-    },
-    "resources": {
-      "message": "资源"
-    },
-    "res_explorer": {
-      "message": "资源管理器"
-    },
-    "res_explorer_tip_": {
-      "message": "列出当前网站中的所有资源，图片，脚本，文档，或者自定义类型文件等."
-    },
-    "resolutions": {
-      "message": "分辨率"
-    },
-    "use_browser_for_downloading": {
-      "message": "使用浏览器进行下载"
-    },
-    "excluded_from_collector_mode": {
-      "message": "从收集器模式中排除"
-    },
-    "site_settings": {
-      "message": "网站设置"
-    },
-    "images": {
-      "message": "图片"
-    },
-    "scripts": {
-      "message": "脚本"
-    },
-    "custom": {
-      "message": "自定义"
-    },
-    "custom_file_rules": {
-      "message": "自定义文件规则"
-    },
-    "filename_rules": {
-      "message": "文件名规则"
-    },
-    "HTTP_res_request_monitoring": {
-      "message": "HTTP资源请求监视"
-    },
-    "HTTP_res_request_monitoring_tips_": {
-      "message": "启用HTTP资源请求监视可以让您记录网页上的所有资源，即使资源管理器处于关闭状态。这意味着您可以跟踪当前未显示或已被移除的资源。然而，如果资源管理器已经打开，启用此功能不会提供任何额外的好处。请注意，即使资源管理器未打开，此功能也会使用更多内存来存储记录的数据。"
-    },
-    "open_with_new_tab": {
-      "message": "新标签中打开"
-    },
-    "select_all": {
-      "message": "选择全部"
-    },
-    "unselect_all": {
-      "message": "取消选择全部"
-    },
-    "remove_selected": {
-      "message": "移除选中的"
-    },
-    "download_selected": {
-      "message": "下载选中的"
-    },
-    "size": {
-      "message": "大小"
-    },
-    "width": {
-      "message": "宽"
-    },
-    "height": {
-      "message": "高"
-    },
-    "sorting": {
-      "message": "排序"
-    },
-    "create_rule": {
-      "message": "创建规则"
-    },
-    "edit_rule": {
-      "message": "编辑规则"
-    },
-    "rule": {
-      "message": "规则"
-    },
-    "unselect": {
-      "message": "取消选择"
-    },
-    "dark": {
-      "message": "黑暗"
-    },
-    "too_many_tasks_download_warning_": {
-      "message": "您有 %d 个下载任务准备发送。这可能会导致出现多个弹出窗口。是否要继续？"
-    },
-    "exclude_cross_origin_resources": {
-      "message": "排除跨域资源"
-    },
-    "error": {
-      "message": "错误"
-    },
-    "apply_to": {
-      "message": "应用到"
-    },
-    "all_sites": {
-      "message": "所有网站"
-    },
-    "file_extension": {
-      "message": "文件扩展名"
-    },
-    "name_cannot_be_empty": {
-      "message": "名称不能未空"
-    },
-    "host_cannot_be_empty": {
-      "message": "主机不能为空"
-    },
-    "invalid_settings": {
-      "message": "无效的设置"
-    },
-    "download_exclusions": {
-      "message": "下载排除项"
-    },
-    "planned_no_implemented_": {
-      "message": "已计划但未实施"
-    },
-    "rule_name_duplicated": {
-      "message": "规则名称重复"
-    },
-    "attr_name": {
-      "message": "属性名称"
-    },
-    "custom_rule_selector_tips_": {
-      "message": "使用CSS选择器从网页中查询DOM元素，并从选定元素的属性或文本内容中提取URL地址。<br/> 例如，您可以从a标签的'href'属性中获取URL。"
-    },
-    "custom_rule_selector_attr_name_tips_": {
-      "message": "使用指定的 CSS 选择器匹配元素后，从指定的属性名称中提取内容。要提取文本内容，请改用大括号 {}。"
-    },
-    "custom_rule_url_regexp_tips_": {
-      "message": "使用JavaScript正则表达式匹配所有URL地址。<br/>(注意：使用正则表达式可能会影响网页的性能。)"
-    },
-    "url_conversion": {
-      "message": "URL转换"
-    },
-    "relative_URL_to_absolute_URL_tips_": {
-      "message": "相对URL转换为绝对URL.<br/>例如: /123/123.txt -> http://xxxx/123/123.txt"
-    },
-    "note": {
-      "message": "提示"
-    },
-    "custom_rule_tips_": {
-      "message": "当多个设置被勾选的时候，只有当这些设置全部被匹配时候，URL才会被认为有效。"
-    },
-    "media_files": {
-      "message": "媒体文件"
-    },
-    "types": {
-      "message": "类型"
-    },
-    "configs": {
-      "message": "配置"
-    },
-    "selected": {
-      "message": "选中的"
-    },
-    "remove_failed_loading_images": {
-      "message": "移除加载失败的图片"
-    },
-    "third_party_query_interfaces": {
-      "message": "第三方查询接口"
-    },
-    "interface": {
-      "message": "接口"
-    },
-    "implicit": {
-      "message": "隐示的"
-    },
-    "explicit": {
-      "message": "显示的"
-    },
-    "data_source": {
-      "message": "数据源"
-    },
-    "test": {
-      "message": "测试"
-    },
-    "provider": {
-      "message": "提供者"
-    },
-    "provider_website": {
-      "message": "提供者网站"
-    },
-    "optional": {
-      "message": "可选的"
-    },
-    "interface_type": {
-      "message": "接口类型"
-    },
-    "file_type": {
-      "message": "文件类型"
-    },
-    "window_width": {
-      "message": "窗体宽度"
-    },
-    "window_height": {
-      "message": "窗体高度"
-    },
-    "icon": {
-      "message": "图标"
-    },
-    "visible_element": {
-      "message": "可见的元素"
-    },
-    "visible_elements": {
-      "message": "可见的元素"
-    },
-    "hidden_elements": {
-      "message": "隐藏的元素"
-    },
-    "data_format": {
-      "message": "数据格式"
-    },
-    "documentation": {
-      "message": "文档"
-    },
-    "host_match": {
-      "message": "匹配主机"
-    },
-    "path_match": {
-      "message": "匹配路径"
-    },
-    "hosts": {
-      "message": "主机"
-    },
-    "paths": {
-      "message": "路径"
-    },
-    "host_match_placeholder_": {
-      "message": "匹配输入框中的主机地址（域名或IP），不包括端口。每行一个地址。"
-    },
-    "path_match_placeholder_": {
-      "message": "匹配上面主机地址对应的路径。每个路径都应以“/”开头，并且可以使用正则表达式。每行一条路径"
-    },
-    "window": {
-      "message": "窗体"
-    },
-    "iframe": {
-      "message": "框架"
-    },
-    "hidden_iframe": {
-      "message": "隐藏的框架"
-    },
-    "one_css_selector_per_line": {
-      "message": "每行一个CSS选择器"
-    },
-    "response_data_type": {
-      "message": "返回数据类型"
-    },
-    "trash_script_code": {
-      "message": "垃圾脚本代码"
-    },
-    "behaviors": {
-      "message": "行为"
-    },
-    "embed_code": {
-      "message": "嵌入代码"
-    },
-    "import": {
-      "message": "导入"
-    },
-    "export": {
-      "message": "导出"
-    },
-    "share": {
-      "message": "分享"
-    },
-    "public_lists": {
-      "message": "公共列表"
-    },
-    "no_selected_rows": {
-      "message": "没有选中的行"
-    },
-    "override": {
-      "message": "覆盖"
-    },
-    "override_duplicated_name_tips_": {
-      "message": "该名称已经存在.<br/> 是否覆盖现有的设置?"
-    },
-    "version": {
-      "message": "版本"
-    },
-    "create_button": {
-      "message": "创建按钮"
-    },
-    "styles": {
-      "message": "风格"
-    },
-    "CSS_injection": {
-      "message": "CSS注入"
-    },
-    "insert_to": {
-      "message": "插入到"
-    },
-    "display_options": {
-      "message": "显示项"
-    },
-    "invalid_create_btn_insert_to_": {
-      "message": "无效的设置: 创建按钮 -> 插入到"
-    },
-    "media_files_detection": {
-      "message": "媒体文件检测"
-    },
-    "insertion_method": {
-      "message": "插入方式"
-    },
-    "trigger": {
-      "message": "触发"
-    },
-    "script_code_cannot_be_empty": {
-      "message": "脚本代码不能为空."
-    },
-    "troubleshooting": {
-      "message": "故障处理"
-    },
-    "invalid_data": {
-      "message": "无效的数据"
-    },
-    "description": {
-      "message": "描述"
-    },
-    "description_note_": {
-      "message": "描述, 请尽可能的保持简短."
-    },
-    "download_exclusions_help_": {
-      "message": "当您开始下载任务时，如果符合指定的设置，浏览器将负责处理下载。此选项优先于所有其他设置。然而，请注意，这不适用于捕获的视频和音频文件。对于这些文件，仍将使用下载管理器，因为浏览器内置的下载工具并不适合处理这些文件。"
-    },
-    "custom_file_rules_help_": {
-      "message": "您可以为特定类型的文件（如歌词或字幕）创建自定义规则。只要网页上包含这些资源，它们就会被检测到。检测到的资源会出现在右上角弹出窗口的自定义栏目中，以及资源管理器中。"
-    },
-    "site_settings_help_": {
-      "message": "每个网站的单独设置。在popup的此网站选项中勾选任意一项会自动为对应的网站创建设置，网站设置中的自定义文件规则仅会对该网站有效果。"
-    },
-    "third_party_interface_help_": {
-      "message": "第三方查询接口和文件检测功能有不同的目的。有时，在某些特殊处理的网站上，文件可能不容易被检测到。这个功能就是为了解决这个问题！您可以通过编写脚本轻松提取特定网页上的文件下载链接，或者通过HTTP交互检查其他服务器或本地应用程序上的文件。虽然有第三方应用程序可以执行类似的任务，但该功能通过一键下载的方式，简化了操作流程，提高了使用效率。"
-    },
-    "media_files_detection_text_": {
-      "message": "启用或禁用媒体文件检测功能。"
-    },
-    "deep_analysis_res_text_": {
-      "message": "启用或禁用对图片、脚本等资源文件的深度检测。<br/>启用该功能可以帮助识别更多潜在的资源文件。<br/> 如果您不使用资源管理器功能，可以禁用此选项。<br/> 要完全禁用深度分析，您需要关闭所有相关选项。"
-    },
-    "deep_analysis_customs_text_": {
-      "message": "该选项决定深度分析是否也匹配自定义文件规则。<br/>注意：如果自定义文件规则包含正则表达式，可能会影响网页性能。<br/> 要完全禁用深度分析，您需要关闭所有相关选项。"
-    },
-    "loading": {
-      "message": "载入中"
-    }
+  "allow_external_messages_text_": {
+    "message": "允许外部脚本给本扩展发送消息."
+  },
+  "host_match_placeholder_": {
+    "message": "匹配输入框中的主机地址（域名或IP），不包括端口。每行一个地址。"
+  },
+  "deep_analysis_text_": {
+    "message": "启用该项会对网页进行深度分析以查找隐藏的视频或音频资源,<br/> 但是会以消耗更多CPU资源为代价.<br/> 如果网页中包含的脚本较少或者数据交互频率不高,<br/> 那么额外的消耗可以忽略不计."
+  },
+  "example": {
+    "message": "示例"
+  },
+  "general": {
+    "message": "常规"
+  },
+  "read_from_cache": {
+    "message": "从缓存中读取"
+  },
+  "audios": {
+    "message": "音频"
+  },
+  "video_source": {
+    "message": "视频源"
+  },
+  "apply_to": {
+    "message": "应用到"
+  },
+  "file_extension": {
+    "message": "文件扩展名"
+  },
+  "troubleshooting": {
+    "message": "故障处理"
+  },
+  "save": {
+    "message": "保存"
+  },
+  "rules": {
+    "message": "规则"
+  },
+  "potential_keys": {
+    "message": "潜在密钥"
+  },
+  "height": {
+    "message": "高"
+  },
+  "browser": {
+    "message": "浏览器"
+  },
+  "videos": {
+    "message": "视频"
+  },
+  "play_all": {
+    "message": "播放全部"
+  },
+  "settings_tip_": {
+    "message": "扩展程序的详细设置"
+  },
+  "progress": {
+    "message": "进度"
+  },
+  "share": {
+    "message": "分享"
+  },
+  "help": {
+    "message": "帮助"
+  },
+  "are_u_sure": {
+    "message": "你确定吗？"
+  },
+  "remove_failed_loading_videos": {
+    "message": "移除加载失败的视频"
+  },
+  "resolution": {
+    "message": "分辨率"
+  },
+  "this_site": {
+    "message": "此网站"
+  },
+  "segments": {
+    "message": "片段"
+  },
+  "too_many_tasks_download_warning_": {
+    "message": "您有 %d 个下载任务准备发送。这可能会导致出现多个弹出窗口。是否要继续？"
+  },
+  "recapture_address": {
+    "message": "重新捕获地址"
+  },
+  "filename": {
+    "message": "文件名"
+  },
+  "type": {
+    "message": "类型"
+  },
+  "download_send_failed_message": {
+    "message": "要么没有安装,或者没有启动."
+  },
+  "determined": {
+    "message": "已确定的"
+  },
+  "test": {
+    "message": "测试"
+  },
+  "no": {
+    "message": "否"
+  },
+  "settings": {
+    "message": "设置"
+  },
+  "trash_script_code": {
+    "message": "垃圾脚本代码"
+  },
+  "filetypes": {
+    "message": "文件类型"
+  },
+  "HTTP_res_request_monitoring": {
+    "message": "HTTP资源请求监视"
+  },
+  "start": {
+    "message": "开始"
+  },
+  "create_button": {
+    "message": "创建按钮"
+  },
+  "uncertain": {
+    "message": "不确定的"
+  },
+  "yes": {
+    "message": "是"
+  },
+  "remove": {
+    "message": "删除"
+  },
+  "invalid_create_btn_insert_to_": {
+    "message": "无效的设置: 创建按钮 -> 插入到"
+  },
+  "css_selector": {
+    "message": "CSS 选择器"
+  },
+  "create_rule": {
+    "message": "创建规则"
+  },
+  "invalid_domain": {
+    "message": "无效的域名."
+  },
+  "rule": {
+    "message": "规则"
+  },
+  "data_source": {
+    "message": "数据源"
+  },
+  "version": {
+    "message": "版本"
+  },
+  "CSS_injection": {
+    "message": "CSS注入"
+  },
+  "download_send_failed_message_prefix": {
+    "message": "无法连接到 "
+  },
+  "username": {
+    "message": "账号"
+  },
+  "password": {
+    "message": "密码"
+  },
+  "download_manager": {
+    "message": "下载管理器"
+  },
+  "more": {
+    "message": "更多"
+  },
+  "description": {
+    "message": "描述"
+  },
+  "file": {
+    "message": "文件"
+  },
+  "custom_file_rules_help_": {
+    "message": "您可以为特定类型的文件（如歌词或字幕）创建自定义规则。只要网页上包含这些资源，它们就会被检测到。检测到的资源会出现在右上角弹出窗口的自定义栏目中，以及资源管理器中。"
+  },
+  "documentation": {
+    "message": "文档"
+  },
+  "page_url": {
+    "message": "网页URL"
+  },
+  "ignore_this_site": {
+    "message": "忽略此站"
+  },
+  "select_all": {
+    "message": "选择全部"
+  },
+  "iframe": {
+    "message": "框架"
+  },
+  "download_exclusions": {
+    "message": "下载排除项"
+  },
+  "hosts": {
+    "message": "主机"
+  },
+  "provider": {
+    "message": "提供者"
+  },
+  "filename_rule_tips_": {
+    "message": "使用CSS选择器规则获取网页中指定元素的文本作为该域下媒体文件的首选文件名.<br/>如果获取失败, 仍然会继续使用标题或者og:title来作为文件名."
+  },
+  "subtitles": {
+    "message": "字幕"
+  },
+  "edit": {
+    "message": "编辑"
+  },
+  "scripts": {
+    "message": "脚本"
+  },
+  "all": {
+    "message": "全部"
+  },
+  "export": {
+    "message": "导出"
+  },
+  "collector_notify_": {
+    "message": "收集器只有在窗口开启时候才会有效, 关闭该窗口会丢失所有记录.<br/>由于浏览器的限制以及网站的下载链规则会导致并非所有视频都可以被预览.<br/>部分视频无法被预览, 但是可以被下载.<br/>部分视频既无法被预览, 也无法被下载."
+  },
+  "size": {
+    "message": "大小"
+  },
+  "name_cannot_be_empty": {
+    "message": "名称不能为空"
+  },
+  "invalid_settings": {
+    "message": "无效的设置"
+  },
+  "width": {
+    "message": "宽"
+  },
+  "file_size": {
+    "message": "文件大小"
+  },
+  "preview_notify_": {
+    "message": "由于浏览器的限制以及网站的防下载规则会导致并非所有视频都可以被预览.<br/>部分视频无法被预览, 但是可以被下载.<br/>部分视频既无法被预览, 也无法被下载."
+  },
+  "interface_type": {
+    "message": "接口类型"
+  },
+  "relative_URL_to_absolute_URL_tips_": {
+    "message": "相对URL转换为绝对URL.<br/>例如: /123/123.txt -> http://xxxx/123/123.txt"
+  },
+  "custom_rule_url_regexp_tips_": {
+    "message": "使用JavaScript正则表达式匹配所有URL地址。<br/>(注意：使用正则表达式可能会影响网页的性能。)"
+  },
+  "download_manager_tip_": {
+    "message": "下载文件时候默认使用的下载管理器."
+  },
+  "optional": {
+    "message": "可选的"
+  },
+  "planned_no_implemented_": {
+    "message": "已计划但未实施"
+  },
+  "rule_name_duplicated": {
+    "message": "规则名称重复"
+  },
+  "deep_analysis_res_text_": {
+    "message": "启用或禁用对图片、脚本等资源文件的深度检测。<br/>启用该功能可以帮助识别更多潜在的资源文件。<br/> 如果您不使用资源管理器功能，可以禁用此选项。"
+  },
+  "unselect_all": {
+    "message": "取消选择全部"
+  },
+  "length_duration": {
+    "message": "长度 / 时间 / 大小"
+  },
+  "error": {
+    "message": "错误"
+  },
+  "playback_speed": {
+    "message": "播放速度"
+  },
+  "custom_rule_selector_tips_": {
+    "message": "使用CSS选择器从网页中查询DOM元素，并从选定元素的属性或文本内容中提取URL地址。<br/> 例如，您可以从a标签的'href'属性中获取URL。"
+  },
+  "remove_low_quality_videos": {
+    "message": "移除低质量视频"
+  },
+  "add": {
+    "message": "添加"
+  },
+  "download_selected": {
+    "message": "下载选中的"
+  },
+  "feature_not_implemented": {
+    "message": "此功能目前保留, 尚未实施."
+  },
+  "select_element_tip_": {
+    "message": "选择网页中的元素, 对该域下媒体文件的文件名的获取规则设置, 录制视频/音频等."
+  },
+  "behaviors": {
+    "message": "行为"
+  },
+  "response_data_type": {
+    "message": "返回数据类型"
+  },
+  "all_sites": {
+    "message": "所有网站"
+  },
+  "filter": {
+    "message": "过滤"
+  },
+  "readme": {
+    "message": "自述"
+  },
+  "insertion_method": {
+    "message": "插入方式"
+  },
+  "res_explorer_tip_": {
+    "message": "列出当前网站中的所有资源，图片，脚本，文档，或者自定义类型文件等."
+  },
+  "file_duration": {
+    "message": "文件时间长度"
+  },
+  "hidden_iframe": {
+    "message": "隐藏的框架"
+  },
+  "paths": {
+    "message": "路径"
+  },
+  "interface": {
+    "message": "接口"
+  },
+  "sorting": {
+    "message": "排序"
+  },
+  "site_settings_help_": {
+    "message": "每个网站的单独设置。在popup的此网站选项中勾选任意一项会自动为对应的网站创建设置，网站设置中的自定义文件规则仅会对该网站有效果。"
+  },
+  "copy": {
+    "message": "复制"
+  },
+  "dark": {
+    "message": "黑暗"
+  },
+  "third_party_query_interfaces": {
+    "message": "第三方查询接口"
+  },
+  "preview": {
+    "message": "预览"
+  },
+  "edit_rule": {
+    "message": "编辑规则"
+  },
+  "name": {
+    "message": "名称"
+  },
+  "description_note_": {
+    "message": "描述, 请尽可能的保持简短."
+  },
+  "open_with_new_tab": {
+    "message": "新标签中打开"
+  },
+  "remove_selected": {
+    "message": "移除选中的"
+  },
+  "clear": {
+    "message": "清空"
+  },
+  "adverts": {
+    "message": "广告"
+  },
+  "domain": {
+    "message": "域名"
+  },
+  "disable": {
+    "message": "禁用"
+  },
+  "HTTP_res_request_monitoring_tips_": {
+    "message": "启用HTTP资源请求监视可以让您记录网页上的所有资源，即使资源管理器处于关闭状态。这意味着您可以跟踪当前未显示或已被移除的资源。然而，如果资源管理器已经打开，启用此功能不会提供任何额外的好处。请注意，即使资源管理器未打开，此功能也会使用更多内存来存储记录的数据。"
+  },
+  "resolutions": {
+    "message": "分辨率"
+  },
+  "download_all": {
+    "message": "下载全部"
+  },
+  "custom": {
+    "message": "自定义"
+  },
+  "use_browser_for_downloading": {
+    "message": "使用浏览器进行下载"
+  },
+  "icon": {
+    "message": "图标"
+  },
+  "download_audio": {
+    "message": "下载这个音频"
+  },
+  "media_files_detection": {
+    "message": "媒体文件检测"
+  },
+  "note": {
+    "message": "提示"
+  },
+  "data_format": {
+    "message": "数据格式"
+  },
+  "duplicated_row": {
+    "message": "重复的行"
+  },
+  "trigger": {
+    "message": "触发"
+  },
+  "video_duration": {
+    "message": "视频时长"
+  },
+  "collector_mode_tip_": {
+    "message": "记录所有网页捕获到的媒体资源, 必要时候再进行批量的预览和筛选, 减少重复的工作."
+  },
+  "video_floating_bar": {
+    "message": "视频浮动栏"
+  },
+  "attr_name": {
+    "message": "属性名称"
+  },
+  "filename_rules": {
+    "message": "文件名规则"
+  },
+  "host_cannot_be_empty": {
+    "message": "主机不能为空"
+  },
+  "excluded_from_collector_mode": {
+    "message": "从收集器模式中排除"
+  },
+  "selected": {
+    "message": "选中的"
+  },
+  "window": {
+    "message": "窗体"
+  },
+  "window_width": {
+    "message": "窗体宽度"
+  },
+  "one_css_selector_per_line": {
+    "message": "每行一个CSS选择器"
+  },
+  "copy_addr_msg": {
+    "message": "地址复制成功"
+  },
+  "script_code_cannot_be_empty": {
+    "message": "脚本代码不能为空."
+  },
+  "media_files_detection_text_": {
+    "message": "启用或禁用媒体文件检测功能。"
+  },
+  "third_party_interface_help_": {
+    "message": "第三方查询接口和文件检测功能有不同的目的。有时，在某些特殊处理的网站上，文件可能不容易被检测到。这个功能就是为了解决这个问题！您可以通过编写脚本轻松提取特定网页上的文件下载链接，或者通过HTTP交互检查其他服务器或本地应用程序上的文件。虽然有第三方应用程序可以执行类似的任务，但该功能通过一键下载的方式，简化了操作流程，提高了使用效率。"
+  },
+  "window_height": {
+    "message": "窗体高度"
+  },
+  "magnets": {
+    "message": "磁力"
+  },
+  "potential_urls": {
+    "message": "潜在URLs"
+  },
+  "override": {
+    "message": "覆盖"
+  },
+  "insert_to": {
+    "message": "插入到"
+  },
+  "record_from_screen": {
+    "message": "从屏幕录制"
+  },
+  "path_match": {
+    "message": "匹配路径"
+  },
+  "host_match": {
+    "message": "匹配主机"
+  },
+  "visible_element": {
+    "message": "可见的元素"
+  },
+  "pause_all": {
+    "message": "暂停全部"
+  },
+  "allow_external_messages": {
+    "message": "允许外部消息"
+  },
+  "invalid_css_selector": {
+    "message": "无效的CSS选择器."
+  },
+  "images": {
+    "message": "图片"
+  },
+  "download": {
+    "message": "下载"
+  },
+  "adverts_detection": {
+    "message": "广告检测"
+  },
+  "types": {
+    "message": "类型"
+  },
+  "deep_analysis_customs_text_": {
+    "message": "该选项决定深度分析是否也匹配自定义文件规则。<br/>注意：如果自定义文件规则包含正则表达式，可能会影响网页性能。"
+  },
+  "minutes": {
+    "message": "分钟"
+  },
+  "implicit": {
+    "message": "隐式的"
+  },
+  "url_conversion": {
+    "message": "URL转换"
+  },
+  "media_files": {
+    "message": "媒体文件"
+  },
+  "styles": {
+    "message": "风格"
+  },
+  "custom_rule_selector_attr_name_tips_": {
+    "message": "使用指定的 CSS 选择器匹配元素后，从指定的属性名称中提取内容。要提取文本内容，请改用大括号 {}。"
+  },
+  "visible_elements": {
+    "message": "可见的元素"
+  },
+  "res_explorer": {
+    "message": "资源管理器"
+  },
+  "duplicated_name": {
+    "message": "名称重复"
+  },
+  "send_failed": {
+    "message": "发送失败"
+  },
+  "copy_all": {
+    "message": "复制全部"
+  },
+  "download_link": {
+    "message": "下载这个链接"
+  },
+  "max": {
+    "message": "最大"
+  },
+  "enable": {
+    "message": "启用"
+  },
+  "actions": {
+    "message": "行为"
+  },
+  "remove_failed_loading_images": {
+    "message": "移除加载失败的图片"
+  },
+  "brute_force_search": {
+    "message": "暴力搜索"
+  },
+  "hidden_elements": {
+    "message": "隐藏的元素"
+  },
+  "invalid_data": {
+    "message": "无效的数据"
+  },
+  "public_lists": {
+    "message": "公共列表"
+  },
+  "file_type": {
+    "message": "文件类型"
+  },
+  "recapture_address_msg_success": {
+    "message": "已经成功捕获到新地址,请打开软件查看是否正常下载."
+  },
+  "loading": {
+    "message": "载入中"
+  },
+  "download_exclusions_help_": {
+    "message": "当您开始下载任务时，如果符合指定的设置，浏览器将负责处理下载。此选项优先于所有其他设置。然而，请注意，这不适用于捕获的视频和音频文件。对于这些文件，仍将使用下载管理器，因为浏览器内置的下载工具并不适合处理这些文件。"
+  },
+  "crawler": {
+    "message": "爬行器"
+  },
+  "service": {
+    "message": "服务"
+  },
+  "port": {
+    "message": "端口"
+  },
+  "override_duplicated_name_tips_": {
+    "message": "该名称已经存在.<br/> 是否覆盖现有的设置?"
+  },
+  "unselect": {
+    "message": "取消选择"
+  },
+  "collector": {
+    "message": "收集器"
+  },
+  "file_unsuport_preview": {
+    "message": "你无法预览这个文件."
+  },
+  "potentials": {
+    "message": "潜在的"
+  },
+  "resources": {
+    "message": "资源"
+  },
+  "no_selected_rows": {
+    "message": "没有选中的行"
+  },
+  "explicit": {
+    "message": "显示的"
+  },
+  "extension": {
+    "message": "扩展"
+  },
+  "configs": {
+    "message": "配置"
+  },
+  "record": {
+    "message": "录制"
+  },
+  "collector_mode": {
+    "message": "收集器模式"
+  },
+  "path_match_placeholder_": {
+    "message": "匹配上面主机地址对应的路径。每个路径都应以“/”开头，并且可以使用正则表达式。每行一条路径"
+  },
+  "action": {
+    "message": "行为"
+  },
+  "filter_out": {
+    "message": "过滤掉"
+  },
+  "deep_analysis": {
+    "message": "深度分析"
+  },
+  "provider_website": {
+    "message": "提供者网站"
+  },
+  "unsuport_m3u8_preview": {
+    "message": "你的浏览器不支持m3u8文件预览."
+  },
+  "embed_code": {
+    "message": "嵌入代码"
+  },
+  "stop": {
+    "message": "停止"
+  },
+  "capture_other_file_types": {
+    "message": "捕获其他文件类型"
+  },
+  "refresh_address_msg_content": {
+    "message": "在地址捕捉到之前不要刷新当前网页, 请找到: "
+  },
+  "text": {
+    "message": "文本"
+  },
+  "appname": {
+    "message": "文件蜈蚣"
+  },
+  "import": {
+    "message": "导入"
+  },
+  "custom_rule_tips_": {
+    "message": "当多个设置被勾选的时候，只有当这些设置全部被匹配时候，URL才会被认为有效。"
+  },
+  "do_not_download": {
+    "message": "不下载"
+  },
+  "download_image": {
+    "message": "下载这个图片"
+  },
+  "download_managers": {
+    "message": "下载管理器"
+  },
+  "site_settings": {
+    "message": "网站设置"
+  },
+  "cancel": {
+    "message": "取消"
+  },
+  "custom_file_rules": {
+    "message": "自定义文件规则"
+  },
+  "exclude_cross_origin_resources": {
+    "message": "排除跨域资源"
+  },
+  "download_video": {
+    "message": "下载这个视频"
+  },
+  "display_options": {
+    "message": "显示项"
+  },
+  "others": {
+    "message": "其他"
+  },
+  "hide_low_resolution": {
+    "message": "隐藏低分辨率"
+  },
+  "files": {
+    "message": "文件"
+  },
+  "load_all": {
+    "message": "加载全部"
+  },
+  "disable_tooltips": {
+    "message": "禁用工具提示"
+  },
+  "title": {
+    "message": "标题"
+  },
+  "merge": {
+    "message": "合并"
+  },
+  "merge_tip_": {
+    "message": "合并 视频&音频"
+  },
+  "merge_warning_": {
+    "message": "请从列表中至少选择一个视频和一个音频"
+  },
+  "deep_analysis_level": {
+    "message": "深度分析级别"
+  },
+  "fast": {
+    "message": "快速"
+  },
+  "maximize": {
+    "message": "最大化"
+  },
+  "deep_analysis_level_tip_": {
+    "message": "对于资源检测，默认的“中等” 设置通常足以满足大多数使用场景。<br/>如果未能检测到预期的资源，可尝试提高检测级别，但这会增加 CPU 占用率。"
+  },
+  "download_and_merge": {
+    "message": "下载并且合并"
+  },
+  "popup_filter_tip_": {
+    "message": "按回车键保存."
+  },
+  "fast_forward": {
+    "message": "快进"
+  },
+  "seconds": {
+    "message": "秒"
+  },
+  "skip_intro": {
+    "message": "跳过片头"
+  },
+  "duration_length": {
+    "message": "持续时长"
+  },
+  "remove_failed_loading_audios": {
+    "message": "移除加载失败的音频"
+  },
+  "remove_shot_videos": {
+    "message": "移除短视频"
+  },
+  "log": {
+    "message": "日志"
+  },
+  "timestamp": {
+    "message": "时间戳"
+  },
+  "max_resolution_limit": {
+    "message": "最大分辨率限制"
+  },
+  "remove_high_quality_videos": {
+    "message": "移除高质量视频"
+  },
+  "disable_readme_notifications": {
+    "message": "禁用自述通知"
+  },
+  "max_resolution_limit_tips_": {
+    "message": "对于具有多种分辨率的流媒体文件，限制最大播放分辨率。"
+  },
+  "unsupported_media_merge_msg_": {
+    "message": "目前不支持多个流媒体文件和常规多媒体文件之间进行混合合并。"
+  },
+  "push_type": {
+    "message": "推送类型"
+  },
+  "send_http_request": {
+    "message": "发送HTTP请求"
+  },
+  "send_websocket_message": {
+    "message": "发送 websocket 消息"
+  },
+  "open_custom_protocol_url": {
+    "message": "打开自定义协议URL"
+  },
+  "callback_message_type": {
+    "message": "回调消息类型"
+  },
+  "callback_message": {
+    "message": "回调消息"
+  },
+  "notify": {
+    "message": "通知"
+  },
+  "message_box": {
+    "message": "消息框"
+  },
+  "prefix": {
+    "message": "前缀"
+  },
+  "suffix": {
+    "message": "后缀"
+  },
+  "connect_timeout": {
+    "message": "连接超时"
+  },
+  "URI_template": {
+    "message": "URI 模板"
+  },
+  "protocol": {
+    "message": "协议"
+  },
+  "encode": {
+    "message": "编码"
+  },
+  "decode": {
+    "message": "解码"
+  },
+  "message": {
+    "message": "消息"
+  },
+  "method": {
+    "message": "方法"
+  },
+  "custom_protocol": {
+    "message": "自定义协议"
+  },
+  "service_host": {
+    "message": "服务主机"
+  },
+  "service_port": {
+    "message": "服务端口"
+  },
+  "service_username": {
+    "message": "服务账号"
+  },
+  "service_password": {
+    "message": "服务密码"
+  },
+  "default_value": {
+    "message": "默认值"
+  },
+  "authorization": {
+    "message": "认证"
+  },
+  "download_task": {
+    "message": "下载任务"
+  },
+  "stream_media_task": {
+    "message": "流媒体任务"
+  },
+  "stream_media": {
+    "message": "流媒体"
+  },
+  "task_type": {
+    "message": "任务类型"
+  },
+  "preview_all": {
+    "message": "预览全部"
+  },
+  "medium": {
+    "message": "中等"
+  },
+  "high": {
+    "message": "高"
+  },
+  "unexpected_error": {
+    "message": "意外错误"
+  },
+  "video_preview_performance_warning_": {
+    "message": "<b>性能警告：</b><br/>在没有硬件解码的环境下（如 Linux + NVIDIA），同时播放多个 1080p 以上的视频可能导致内存或显存耗尽，造成此扩展程序崩溃或系统死机。此扩展程序对此做了大量的优化以缓解这些问题，但视频播放仍受浏览器自身的解码和资源管理机制限制，无法完全避免。"
+  }
 }

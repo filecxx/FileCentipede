@@ -2,11 +2,17 @@
     "appname":{
         "message": "File Centipede"
     },
+    "app_description":{
+        "message": "Download files, videos, audio, and images from web pages."
+    },
     "videos": {
         "message": "Videos"
     },
     "audios": {
         "message": "Audios"
+    },
+    "subtitles": {
+        "message": "Subtitles"
     },
     "magnets": {
         "message": "Magnets"
@@ -90,7 +96,7 @@
         "message": "Cannot connect to "
     },
     "download_send_failed_message": {
-        "message": "either is not installed,or is not running, choose an operation."
+        "message": "either is not installed,or is not running."
     },
     "recapture_address": {
         "message": "Recapture Address"
@@ -167,8 +173,11 @@
     "service": {
         "message": "Service"
     },
-    "service_password": {
-        "message": "Service password"
+    "username": {
+        "message": "Username"
+    },
+    "password": {
+        "message": "Password"
     },
     "extension": {
         "message": "Extension"
@@ -324,7 +333,7 @@
         "message": "Enabling this option will perform a deep analysis of the webpage to find hidden video or audio resources,<br/> but at the cost of consuming more CPU resources.<br/> If the webpage has fewer scripts or low data interaction frequency,<br/> the additional consumption can be negligible."
     },
     "allow_external_messages_text_": {
-        "message": "Allow external scripts to send messages to this extension; this feature can be replaced by the third-party query interface."
+        "message": "Allow external scripts to send messages to this extension."
     },
     "filename_rule_tips_": {
         "message": "Uses CSS selector rules to retrieve the text of a specified element on the webpage as the preferred filename for media files in that domain.<br/> If retrieval fails, it will still use the title or og:title as the filename."
@@ -336,10 +345,7 @@
         "message": "Records all media resources captured on webpages,<br/> and performs batch preview and filtering when necessary, <br/>reducing repetitive work."
     },
     "collector_notify_": {
-        "message": "Collector mode is only effective when the window is open; closing the window will lose all records.<br/> Due to browser limitations and website download chain rules, not all videos can be previewed.<br/> Some videos cannot be previewed but can be downloaded.<br/> Some videos cannot be previewed and cannot be downloaded."
-    },
-    "collector_mode_help_text_": {
-        "message": "In Collector mode, when opened, it initially lists all media resources obtained from the currently open tabs, and newly obtained ones will also be added to the Collector mode list. These records will disappear when the window is closed.<br/><br/>Note that due to browser limitations, when the number of videos exceeds 5000, the Referer HTTP header cannot be set, causing some resources on certain websites to be unpreviewable.<br/><br/>Browsers have limitations on HTTP concurrent connections, preventing too many videos from playing simultaneously and limiting the number of video elements that can be created (approximately 100 in Chrome), consuming a significant amount of memory and CPU resources.<br/><br/>Optimization: All previewed videos are dynamically loaded based on the scrollbar position; invisible videos are automatically removed and their snapshots saved. They will be recreated when visible again, causing intermittent pauses if 'Play All' is enabled and the network is slow.<br/><br/>Collector mode is currently in beta; feel free to provide feedback if you encounter any issues."
+        "message": "Collector is only effective when the window is open; closing the window will lose all records.<br/> Due to browser limitations and website download chain rules, not all videos can be previewed.<br/> Some videos cannot be previewed but can be downloaded.<br/> Some videos cannot be previewed and cannot be downloaded."
     },
     "settings_tip_": {
         "message": "Detailed settings for the extension."
@@ -690,12 +696,187 @@
         "message": "Enable or disable the media file detection feature."
     },
     "deep_analysis_res_text_": {
-        "message": "Enable or disable deep detection of resource files such as images and scripts. <br/>Activating this feature can help identify more potential resource files. <br/> If you do not use the resource manager feature, you can disable this option. <br/> To completely disable deep analysis, you will need to turn off all related options."
+        "message": "Enable or disable deep detection of resource files such as images and scripts. <br/>Activating this feature can help identify more potential resource files. <br/> If you do not use the resource manager feature, you can disable this option. "
     },
     "deep_analysis_customs_text_": {
-        "message": "This option determines whether deep analysis also matches custom file rules.<br/> Note: If the custom file rules include regular expressions, it may impact the performance of the webpage. <br/> To completely disable deep analysis, you will need to turn off all related options."
+        "message": "This option determines whether deep analysis also matches custom file rules.<br/> Note: If the custom file rules include regular expressions, it may impact the performance of the webpage."
     },
     "loading": {
         "message": "Loading"
+    },
+    "max": {
+        "message": "Max"
+    },
+    "disable_tooltips": {
+        "message": "Disable tooltips"
+    },
+    "title": {
+        "message": "Title"
+    },
+    "merge": {
+        "message": "Merge"
+    },
+    "merge_tip_": {
+        "message": "Merge video & audio"
+    },
+    "merge_warning_": {
+        "message": "Please select at least one video and audio from the list."
+    },
+    "deep_analysis_level": {
+        "message": "Deep analysis level"
+    },
+    "fast": {
+        "message": "Fast"
+    },
+    "maximize": {
+        "message": "Maximize"
+    },
+    "deep_analysis_level_tip_": {
+        "message": "For resource detection, the default Medium setting is generally sufficient for most use cases.<br/>If expected resources aren’t detected, try increasing the level, at the cost of higher CPU usage."
+    },
+    "download_and_merge": {
+        "message": "Download and merge"
+    },
+    "popup_filter_tip_": {
+        "message": "Pressing enter to save."
+    },
+    "fast_forward": {
+        "message": "Fast-forward"
+    },
+    "seconds": {
+        "message": "Seconds"
+    },
+    "skip_intro": {
+        "message": "Skip intro"
+    },
+
+    "duration_length": {
+        "message": "Duration length"
+    },
+    "remove_failed_loading_audios": {
+        "message": "Remove failed loading audios"
+    },
+    "remove_shot_videos": {
+        "message": "Remove short videos"
+    },
+    "log": {
+        "message": "Log"
+    },
+    "timestamp": {
+        "message": "Timestamp"
+    },
+    "max_resolution_limit": {
+        "message": "Max resolution limit"
+    },
+    "remove_high_quality_videos": {
+        "message": "Remove high quality videos"
+    },
+    "disable_readme_notifications": {
+        "message": "Disable readme notifications"
+    },
+    "max_resolution_limit_tips_": {
+        "message": "For streaming media files with multiple resolutions, limit the maximum playback resolution."
+    },
+    "unsupported_media_merge_msg_": {
+        "message": "Currently, combining multiple streaming media files with standard multimedia files in a single merge operation is not supported."
+    },
+    "push_type": {
+        "message": "Push type"
+    },
+    "send_http_request": {
+        "message": "Send HTTP request"
+    },
+    "send_websocket_message": {
+        "message": "Send websocket message"
+    },
+    "open_custom_protocol_url": {
+        "message": "Open custom protocol URL"
+    },
+    "callback_message_type": {
+        "message": "Callback message type"
+    },
+    "callback_message": {
+        "message": "Callback message"
+    },
+    "notify": {
+        "message": "Notify"
+    },
+    "message_box": {
+        "message": "Message box"
+    },
+    "prefix": {
+        "message": "Prefix"
+    },
+    "suffix": {
+        "message": "Suffix"
+    },
+    "connect_timeout": {
+        "message": "Connect timeout"
+    },
+    "URI_template": {
+        "message": "URI template"
+    },
+    "protocol": {
+        "message": "Protocol"
+    },
+    "encode": {
+        "message": "Encode"
+    },
+    "decode": {
+        "message": "decode"
+    },
+    "message": {
+        "message": "Message"
+    },
+    "method": {
+        "message": "Method"
+    },
+    "custom_protocol": {
+        "message": "custom_protocol"
+    },
+    "service_host": {
+        "message": "Service host"
+    },
+    "service_port": {
+        "message": "Service port"
+    },
+    "service_username": {
+        "message": "Service username"
+    },
+    "service_password": {
+        "message": "Service password"
+    },
+    "default_value": {
+        "message": "Default value"
+    },
+    "authorization": {
+        "message": "Authorization"
+    },
+    "download_task": {
+        "message": "Download task"
+    },
+    "stream_media_task": {
+        "message": "Stream media task"
+    },
+    "stream_media": {
+        "message": "Stream media"
+    },
+    "task_type": {
+        "message": "Task type"
+    },
+    "preview_all": {
+        "message": "Preview all"
+    },
+    "medium": {
+        "message": "Medium"
+    },
+    "high": {
+        "message": "High"
+    },
+    "unexpected_error": {
+        "message": "Unexpected error"
+    },
+    "video_preview_performance_warning_": {
+        "message": "<b>Performance Warning:</b><br/>In environments without hardware decoding (e.g., Linux + NVIDIA), playing multiple videos at 1080p or higher simultaneously may exhaust system memory or video memory, causing this extension to crash or the system to freeze. This extension has undergone extensive optimization to mitigate these issues, but video playback is still subject to the browser's own decoding and resource management mechanisms, making them impossible to avoid completely."
     }
 }

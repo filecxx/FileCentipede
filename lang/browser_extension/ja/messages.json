@@ -1,150 +1,162 @@
 {
-    "appname": {
-        "message": "File Centipede"
+    "subtitles": {
+        "message": "字幕"
     },
-    "videos": {
-        "message": "動画"
+    "one_css_selector_per_line": {
+        "message": "1 行に 1 つの CSS セレクター"
     },
-    "audios": {
-        "message": "音声"
+    "hidden_iframe": {
+        "message": "非表示の iframe"
     },
-    "magnets": {
-        "message": "マグネット"
+    "file_duration": {
+        "message": "ファイルの長さ"
     },
-    "type": {
-        "message": "タイプ"
+    "iframe": {
+        "message": "インラインフレーム"
     },
-    "length_duration": {
-        "message": "メディア情報"
+    "download_exclusions": {
+        "message": "ダウンロードの除外"
     },
-    "download": {
-        "message": "ダウンロード"
+    "path_match": {
+        "message": "パスの一致"
     },
-    "cancel": {
-        "message": "キャンセル"
+    "record_from_screen": {
+        "message": "画面から録画する"
     },
-    "file": {
-        "message": "ファイル"
+    "host_match": {
+        "message": "ホストマッチ"
     },
-    "files": {
-        "message": "ファイル"
+    "data_format": {
+        "message": "データ形式"
     },
-    "download_video": {
-        "message": "動画をダウンロード"
+    "visible_element": {
+        "message": "可視要素"
+    },
+    "icon": {
+        "message": "アイコン"
+    },
+    "note": {
+        "message": "注記"
     },
     "download_audio": {
         "message": "音声をダウンロード"
     },
-    "download_link": {
-        "message": "リンクをダウンロード"
+    "media_files_detection": {
+        "message": "メディアファイルの検出"
     },
-    "download_image": {
-        "message": "画像をダウンロード"
+    "window_height": {
+        "message": "窓の高さ"
     },
-    "minutes": {
-        "message": "分"
+    "magnets": {
+        "message": "マグネット"
     },
-    "text": {
-        "message": "テキスト"
+    "window_width": {
+        "message": "ウィンドウの幅"
     },
-    "download_all": {
-        "message": "全てダウンロード"
+    "interface_type": {
+        "message": "インターフェースの種類"
+    },
+    "preview_notify_": {
+        "message": "ブラウザの制限と Web サイトのダウンロード防止ルールにより、すべてのビデオをプレビューできるわけではありません。<br/> 一部のビデオはプレビューできませんが、ダウンロードできます。<br/> 一部のビデオはプレビューできず、ダウンロードできません。"
+    },
+    "relative_URL_to_absolute_URL_tips_": {
+        "message": "相対 URL を絶対 URL.<br/> に変換する例: /123/123.txt -> http://xxxx/123/123.txt"
+    },
+    "optional": {
+        "message": "オプション"
+    },
+    "download_manager_tip_": {
+        "message": "ファイルをダウンロードするときに使用されるデフォルトのダウンロード マネージャー。"
+    },
+    "implicit": {
+        "message": "暗黙"
+    },
+    "window": {
+        "message": "ウィンドウ"
+    },
+    "selected": {
+        "message": "選択済み"
+    },
+    "types": {
+        "message": "種類"
+    },
+    "adverts_detection": {
+        "message": "広告の検出"
+    },
+    "media_files": {
+        "message": "メディアファイル"
+    },
+    "styles": {
+        "message": "スタイル"
+    },
+    "url_conversion": {
+        "message": "URL 変換"
+    },
+    "custom_rule_selector_attr_name_tips_": {
+        "message": "指定された CSS セレクターを使用して要素が一致したら、指定された属性名からコンテンツを抽出します。テキスト コンテンツを抽出するには、代わりに中括弧 {} を使用します。"
+    },
+    "interface": {
+        "message": "インタフェース"
+    },
+    "paths": {
+        "message": "パス"
+    },
+    "adverts": {
+        "message": "広告"
+    },
+    "res_explorer": {
+        "message": "リソースエクスプローラー"
+    },
+    "duplicated_name": {
+        "message": "重複した名前"
+    },
+    "visible_elements": {
+        "message": "目に見える要素"
+    },
+    "send_failed": {
+        "message": "送信に失敗しました"
     },
     "copy_all": {
         "message": "全てコピー"
     },
-    "copy": {
-        "message": "コピー"
+    "uncertain": {
+        "message": "不確実"
     },
-    "copy_addr_msg": {
-        "message": "アドレスのコピー完了"
+    "download": {
+        "message": "ダウンロード"
     },
-    "video_floating_bar": {
-        "message": "フローティングバー"
+    "invalid_css_selector": {
+        "message": "CSS セレクターが無効です。"
+    },
+    "images": {
+        "message": "画像"
     },
     "enable": {
         "message": "有効"
     },
-    "disable": {
-        "message": "無効"
+    "potential_urls": {
+        "message": "潜在的な URL"
+    },
+    "allow_external_messages": {
+        "message": "外部メッセージを許可する"
+    },
+    "max": {
+        "message": "マックス"
+    },
+    "download_link": {
+        "message": "リンクをダウンロード"
+    },
+    "pause_all": {
+        "message": "すべて一時停止する"
+    },
+    "minutes": {
+        "message": "分"
+    },
+    "download_all": {
+        "message": "全てダウンロード"
     },
     "yes": {
-        "message": "Yes"
-    },
-    "no": {
-        "message": "No"
-    },
-    "send_failed": {
-        "message": "Send failed"
-    },
-    "browser": {
-        "message": "ブラウザ"
-    },
-    "download_manager": {
-        "message": "ダウンロードマネージャー"
-    },
-    "download_managers": {
-        "message": "Download managers"
-    },
-    "download_send_failed_message_prefix": {
-        "message": "接続失敗"
-    },
-    "download_send_failed_message": {
-        "message": "がインストールされていないか、起動していません。"
-    },
-    "recapture_address": {
-        "message": "Recapture Address"
-    },
-    "recapture_address_msg_success": {
-        "message": "Recapture address success, please open the software and check if it's downloading."
-    },
-    "refresh_address_msg_content": {
-        "message": "Before the address being captured, do not refresh the current page, please find: "
-    },
-    "this_site": {
-        "message": "This site"
-    },
-    "ignore_this_site": {
-        "message": "このサイトで無効"
-    },
-    "potentials": {
-        "message": "Potentials"
-    },
-    "potential_urls": {
-        "message": "Potential URLs"
-    },
-    "potential_keys": {
-        "message": "Potential Keys"
-    },
-    "rules": {
-        "message": "ルール"
-    },
-    "filename": {
-        "message": "ファイル名"
-    },
-    "filetypes": {
-        "message": "ファイルの種類"
-    },
-    "domain": {
-        "message": "ドメイン"
-    },
-    "settings": {
-        "message": "設定"
-    },
-    "others": {
-        "message": "その他"
-    },
-    "preview": {
-        "message": "プレビュー"
-    },
-    "save": {
-        "message": "保存"
-    },
-    "add": {
-        "message": "追加"
-    },
-    "edit": {
-        "message": "編集"
+        "message": "はい"
     },
     "remove": {
         "message": "削除"
@@ -152,550 +164,715 @@
     "clear": {
         "message": "クリア"
     },
-    "general": {
-        "message": "General"
+    "video_duration": {
+        "message": "動画の長さ"
     },
-    "deep_analysis": {
-        "message": "Deep analysis"
-    },
-    "duplicated_row": {
-        "message": "重複行"
-    },
-    "duplicated_name": {
-        "message": "Duplicated name"
-    },
-    "service": {
-        "message": "サービス"
-    },
-    "service_password": {
-        "message": "サービスのパスワード"
-    },
-    "extension": {
-        "message": "拡張"
+    "create_rule": {
+        "message": "ルールの作成"
     },
     "css_selector": {
         "message": "CSSセレクター"
     },
-    "do_not_download": {
-        "message": "Do not download"
+    "download_send_failed_message_prefix": {
+        "message": "接続失敗"
     },
-    "capture_other_file_types": {
-        "message": "Capture other file types"
+    "HTTP_res_request_monitoring": {
+        "message": "HTTP リソース要求の監視"
     },
-    "file_unsuport_preview": {
-        "message": "このファイルはプレビューできません"
+    "filetypes": {
+        "message": "ファイルの種類"
     },
-    "unsuport_m3u8_preview": {
-        "message": "このブラウザはm3u8のプレビューに対応していません"
+    "domain": {
+        "message": "ドメイン"
+    },
+    "data_source": {
+        "message": "データソース"
+    },
+    "rule": {
+        "message": "ルール"
     },
     "invalid_domain": {
         "message": "無効なドメイン。"
     },
-    "invalid_css_selector": {
-        "message": "Invalid css selector."
-    },
-    "filter": {
-        "message": "フィルター"
-    },
-    "filter_out": {
-        "message": "フィルター実行"
-    },
-    "more": {
-        "message": "もっと"
+    "trash_script_code": {
+        "message": "スクリプトコードをゴミ箱に入れる"
     },
     "name": {
         "message": "名"
     },
-    "collector": {
-        "message": "Collector"
-    },
-    "collector_mode": {
-        "message": "Collector Mode"
-    },
-    "record": {
-        "message": "Record"
-    },
-    "determined": {
-        "message": "Determined"
-    },
-    "uncertain": {
-        "message": "Uncertain"
-    },
-    "segments": {
-        "message": "Segments"
-    },
-    "hide_low_resolution": {
-        "message": "Hide low resolution"
-    },
-    "all": {
-        "message": "All"
-    },
-    "adverts": {
-        "message": "Adverts"
-    },
-    "adverts_detection": {
-        "message": "Adverts detection"
-    },
-    "resolution": {
-        "message": "Resolution"
-    },
-    "play_all": {
-        "message": "Play all"
-    },
-    "pause_all": {
-        "message": "Pause all"
-    },
-    "load_all": {
-        "message": "Load all"
-    },
-    "brute_force_search": {
-        "message": "Brute-force search"
-    },
-    "readme": {
-        "message": "Readme"
-    },
-    "help": {
-        "message": "Help"
-    },
-    "start": {
-        "message": "Start"
-    },
-    "stop": {
-        "message": "Stop"
-    },
-    "port": {
-        "message": "Port"
-    },
-    "action": {
-        "message": "Action"
-    },
-    "actions": {
-        "message": "Actions"
-    },
-    "are_u_sure": {
-        "message": "Are you sure?"
-    },
-    "crawler": {
-        "message": "Crawler"
-    },
-    "feature_not_implemented": {
-        "message": "This feature is currently reserved and has not been implemented yet."
-    },
-    "remove_low_quality_videos": {
-        "message": "Remove low quality videos"
-    },
-    "remove_failed_loading_videos": {
-        "message": "Remove failed loading videos"
-    },
-    "page_url": {
-        "message": "Page URL"
-    },
-    "file_size": {
-        "message": "File size"
-    },
-    "file_duration": {
-        "message": "File duration"
-    },
-    "playback_speed": {
-        "message": "Playback speed"
-    },
-    "video_duration": {
-        "message": "Video duration"
-    },
-    "video_source": {
-        "message": "Video source"
-    },
-    "read_from_cache": {
-        "message": "Read from cache"
-    },
-    "record_from_screen": {
-        "message": "Record from screen"
-    },
-    "progress": {
-        "message": "Progress"
-    },
-    "allow_external_messages": {
-        "message": "Allow external messages"
-    },
-    "example": {
-        "message": "Example"
-    },
-    "deep_analysis_text_": {
-        "message": "Enabling this option will perform a deep analysis of the webpage to find hidden video or audio resources,<br/> but at the cost of consuming more CPU resources.<br/> If the webpage has fewer scripts or low data interaction frequency,<br/> the additional consumption can be negligible."
-    },
-    "allow_external_messages_text_": {
-        "message": "Allow external scripts to send messages to this extension; this feature can be replaced by the third-party query interface."
-    },
-    "filename_rule_tips_": {
-        "message": "Uses CSS selector rules to retrieve the text of a specified element on the webpage as the preferred filename for media files in that domain.<br/> If retrieval fails, it will still use the title or og:title as the filename."
-    },
-    "download_manager_tip_": {
-        "message": "Default download manager used when downloading files."
-    },
-    "collector_mode_tip_": {
-        "message": "Records all media resources captured on webpages,<br/> and performs batch preview and filtering when necessary,<br/> reducing repetitive work."
-    },
-    "collector_notify_": {
-        "message": "Collector mode is only effective when the window is open; closing the window will lose all records.<br/> Due to browser limitations and website download chain rules, not all videos can be previewed.<br/> Some videos cannot be previewed but can be downloaded.<br/> Some videos cannot be previewed and cannot be downloaded."
-    },
-    "collector_mode_help_text_": {
-        "message": "In Collector mode, when opened, it initially lists all media resources obtained from the currently open tabs, and newly obtained ones will also be added to the Collector mode list. These records will disappear when the window is closed.<br/><br/>Note that due to browser limitations, when the number of videos exceeds 5000, the Referer HTTP header cannot be set, causing some resources on certain websites to be unpreviewable.<br/><br/>Browsers have limitations on HTTP concurrent connections, preventing too many videos from playing simultaneously and limiting the number of video elements that can be created (approximately 100 in Chrome), consuming a significant amount of memory and CPU resources.<br/><br/>Optimization: All previewed videos are dynamically loaded based on the scrollbar position; invisible videos are automatically removed and their snapshots saved. They will be recreated when visible again, causing intermittent pauses if 'Play All' is enabled and the network is slow.<br/><br/>Collector mode is currently in beta; feel free to provide feedback if you encounter any issues."
-    },
-    "settings_tip_": {
-        "message": "Detailed settings for the extension."
-    },
-    "select_element_tip_": {
-        "message": "Select elements on the webpage, set rules for obtaining filenames for media files in this domain, and record videos/audio, etc."
-    },
-    "preview_notify_": {
-        "message": "Due to browser limitations and website anti-download rules, not all videos can be previewed.<br/> Some videos cannot be previewed but can be downloaded.<br/> Some videos cannot be previewed and cannot be downloaded."
-    },
-    "resources": {
-        "message": "Resources"
-    },
-    "res_explorer": {
-        "message": "Resource explorer"
-    },
-    "res_explorer_tip_": {
-        "message": "List all resources, images, scripts, documents, and custom file types in the current website."
-    },
-    "resolutions": {
-        "message": "Resolutions"
-    },
-    "use_browser_for_downloading": {
-        "message": "Use browser for downloading"
-    },
-    "excluded_from_collector_mode": {
-        "message": "Excluded from collector mode"
-    },
-    "site_settings": {
-        "message": "Site settings"
-    },
-    "images": {
-        "message": "Images"
-    },
-    "scripts": {
-        "message": "Scripts"
-    },
-    "custom": {
-        "message": "Custom"
-    },
-    "custom_file_rules": {
-        "message": "Custom file rules"
-    },
-    "filename_rules": {
-        "message": "File name rules"
-    },
-    "HTTP_res_request_monitoring": {
-        "message": "HTTP Resource Request Monitoring"
-    },
-    "HTTP_res_request_monitoring_tips_": {
-        "message": "Enabling HTTP resource request monitoring lets you record all resources on web pages, even if the resource explorer is closed. This means you can track resources that aren't currently displayed or have been removed. However, if the resource explorer is already open, turning on this feature won't offer any extra advantages. Please keep in mind that this feature will use more memory to store the recorded data, even when the resource explorer is not open."
-    },
-    "open_with_new_tab": {
-        "message": "Open with new tab"
-    },
-    "select_all": {
-        "message": "Select all"
-    },
-    "unselect_all": {
-        "message": "Unselect all"
-    },
-    "remove_selected": {
-        "message": "Remove selected"
-    },
-    "download_selected": {
-        "message": "Download selected"
-    },
-    "size": {
-        "message": "Size"
-    },
-    "width": {
-        "message": "Width"
-    },
-    "height": {
-        "message": "Height"
-    },
-    "sorting": {
-        "message": "Sorting"
-    },
-    "create_rule": {
-        "message": "Create rule"
-    },
     "edit_rule": {
-        "message": "Edit rule"
-    },
-    "rule": {
-        "message": "Rule"
-    },
-    "unselect": {
-        "message": "Unselect"
-    },
-    "dark": {
-        "message": "Dark"
-    },
-    "too_many_tasks_download_warning_": {
-        "message": "You have %d download tasks ready to send. This may result in multiple pop-up windows appearing. Do you want to continue?"
-    },
-    "exclude_cross_origin_resources": {
-        "message": "Exclude cross-origin resources"
-    },
-    "error": {
-        "message": "Error"
-    },
-    "apply_to": {
-        "message": "Apply to"
-    },
-    "all_sites": {
-        "message": "All sites"
-    },
-    "file_extension": {
-        "message": "File extension"
-    },
-    "name_cannot_be_empty": {
-        "message": "Name cannot be empty"
-    },
-    "host_cannot_be_empty": {
-        "message": "Host cannot be empty"
-    },
-    "invalid_settings": {
-        "message": "Invalid settings"
-    },
-    "download_exclusions": {
-        "message": "Download Exclusions"
-    },
-    "planned_no_implemented_": {
-        "message": "Planned but not implemented."
-    },
-    "rule_name_duplicated": {
-        "message": "Rule name is duplicated"
-    },
-    "attr_name": {
-        "message": "Attribute name"
-    },
-    "custom_rule_selector_tips_": {
-        "message": "Use CSS selectors to query DOM elements from a webpage and extract URL addresses from the attributes or text content of the selected elements.<br/> For example, you can retrieve the URL from the 'href' attribute of an a tag."
-    },
-    "custom_rule_selector_attr_name_tips_": {
-        "message": "Once an element is matched using the specified CSS selector, extract the content from the designated attribute name. To extract the text content, use curly braces {} instead."
-    },
-    "custom_rule_url_regexp_tips_": {
-        "message": "Use JavaScript regular expressions to match all URL addresses.<br/> (Note: Using regular expressions may impact the performance of the webpage.)"
-    },
-    "url_conversion": {
-        "message": "URL conversion"
-    },
-    "relative_URL_to_absolute_URL_tips_": {
-        "message": "Convert relative URL to absolute URL.<br/>Example: /123/123.txt -> http://xxxx/123/123.txt"
-    },
-    "note": {
-        "message": "Note"
-    },
-    "custom_rule_tips_": {
-        "message": "When multiple settings are selected, the URL is only considered valid if all of these settings are matched."
-    },
-    "media_files": {
-        "message": "Media files"
-    },
-    "types": {
-        "message": "Types"
-    },
-    "configs": {
-        "message": "Configs"
-    },
-    "selected": {
-        "message": "Selected"
-    },
-    "remove_failed_loading_images": {
-        "message": "Remove failed loading images"
-    },
-    "third_party_query_interfaces": {
-        "message": "Third-Party Query Interfaces"
-    },
-    "interface": {
-        "message": "Interface"
-    },
-    "implicit": {
-        "message": "Implicit"
-    },
-    "explicit": {
-        "message": "Explicit"
-    },
-    "data_source": {
-        "message": "Data source"
-    },
-    "test": {
-        "message": "Test"
-    },
-    "provider": {
-        "message": "Provider"
-    },
-    "provider_website": {
-        "message": "Provider website"
-    },
-    "optional": {
-        "message": "Optional"
-    },
-    "interface_type": {
-        "message": "Interface type"
-    },
-    "file_type": {
-        "message": "File type"
-    },
-    "window_width": {
-        "message": "Window width"
-    },
-    "window_height": {
-        "message": "Window height"
-    },
-    "icon": {
-        "message": "Icon"
-    },
-    "visible_element": {
-        "message": "Visible element"
-    },
-    "visible_elements": {
-        "message": "Visible elements"
-    },
-    "hidden_elements": {
-        "message": "Hidden elements"
-    },
-    "data_format": {
-        "message": "Data format"
-    },
-    "documentation": {
-        "message": "Documentation"
-    },
-    "host_match": {
-        "message": "Host match"
-    },
-    "path_match": {
-        "message": "Path match"
-    },
-    "hosts": {
-        "message": "Hosts"
-    },
-    "paths": {
-        "message": "Paths"
-    },
-    "host_match_placeholder_": {
-        "message": "Match the host addresses (domain names or IPs) in the input box, excluding ports. One address per line."
-    },
-    "path_match_placeholder_": {
-        "message": "Match the paths corresponding to the host addresses above. Each path should start with a '/', and you can use regular expressions. One path per line."
-    },
-    "window": {
-        "message": "Window"
-    },
-    "iframe": {
-        "message": "Iframe"
-    },
-    "hidden_iframe": {
-        "message": "Hidden iframe"
-    },
-    "one_css_selector_per_line": {
-        "message": "One CSS selector per line"
-    },
-    "response_data_type": {
-        "message": "Response data type"
-    },
-    "trash_script_code": {
-        "message": "Trash script code"
-    },
-    "behaviors": {
-        "message": "Behaviors"
-    },
-    "embed_code": {
-        "message": "Embed Code"
-    },
-    "import": {
-        "message": "Import"
+        "message": "ルールの編集"
     },
     "export": {
-        "message": "Export"
+        "message": "輸出"
     },
-    "share": {
-        "message": "Share"
-    },
-    "public_lists": {
-        "message": "Public lists"
-    },
-    "no_selected_rows": {
-        "message": "No selected rows"
-    },
-    "override": {
-        "message": "Override"
-    },
-    "override_duplicated_name_tips_": {
-        "message": "The name already exists.<br/> Do you want to overwrite the existing setting?"
+    "all": {
+        "message": "全て"
     },
     "version": {
-        "message": "Version"
-    },
-    "create_button": {
-        "message": "Create button"
-    },
-    "styles": {
-        "message": "Styles"
+        "message": "バージョン"
     },
     "CSS_injection": {
-        "message": "CSS injection"
+        "message": "CSS 注入"
     },
-    "insert_to": {
-        "message": "Insert to"
+    "more": {
+        "message": "もっと"
     },
-    "display_options": {
-        "message": "Display options"
+    "username": {
+        "message": "ユーザー名"
+    },
+    "password": {
+        "message": "パスワード"
+    },
+    "download_manager": {
+        "message": "ダウンロードマネージャー"
     },
     "invalid_create_btn_insert_to_": {
-        "message": "Invalid setting: Create button -> Insert to"
-    },
-    "media_files_detection": {
-        "message": "Media files detection"
-    },
-    "insertion_method": {
-        "message": "Insertion method"
-    },
-    "trigger": {
-        "message": "Trigger"
-    },
-    "script_code_cannot_be_empty": {
-        "message": "Script code cannot be empty."
-    },
-    "troubleshooting": {
-        "message": "Troubleshooting"
-    },
-    "invalid_data": {
-        "message": "Invalid data"
+        "message": "無効な設定: [作成] ボタン -> [挿入先]"
     },
     "description": {
-        "message": "Description"
+        "message": "説明"
     },
-    "description_note_": {
-        "message": "The description, please make it as short as possible."
-    },
-    "download_exclusions_help_": {
-        "message": "When you start a download task, the browser will handle the download if it meets the specified settings. This option takes priority over all other settings. However, keep in mind that this does not apply to captured video and audio files. For these files, the download manager will still be used, as the browser's built-in download tool is not designed to handle them."
+    "video_floating_bar": {
+        "message": "フローティングバー"
     },
     "custom_file_rules_help_": {
-        "message": "You can create custom rules for specific file types, such as lyrics or subtitles. As long as the webpage contains these resources, they will be detected. The detected resources will then show up in the custom section of the popup in the upper right corner, as well as in the resource explorer."
+        "message": "歌詞や字幕など、特定のファイル タイプに対してカスタム ルールを作成できます。 Web ページにこれらのリソースが含まれている限り、それらは検出されます。検出されたリソースは、右上隅のポップアップのカスタム セクションとリソース エクスプローラーに表示されます。"
     },
-    "site_settings_help_": {
-        "message": "Each website has its own individual settings. By checking any option in the \"This Website\" section of the popup, you will automatically create settings for that specific website. The custom file rules in the website settings will only apply to that particular website."
+    "file": {
+        "message": "ファイル"
+    },
+    "documentation": {
+        "message": "ドキュメント"
+    },
+    "ignore_this_site": {
+        "message": "このサイトで無効"
+    },
+    "page_url": {
+        "message": "ページ URL"
+    },
+    "script_code_cannot_be_empty": {
+        "message": "スクリプト コードを空にすることはできません。"
+    },
+    "copy_addr_msg": {
+        "message": "アドレスのコピー完了"
+    },
+    "trigger": {
+        "message": "トリガー"
+    },
+    "duplicated_row": {
+        "message": "重複行"
+    },
+    "remove_low_quality_videos": {
+        "message": "低品質の動画を削除する"
+    },
+    "add": {
+        "message": "追加"
+    },
+    "readme": {
+        "message": "お読みください"
+    },
+    "insertion_method": {
+        "message": "挿入方法"
+    },
+    "behaviors": {
+        "message": "行動"
+    },
+    "response_data_type": {
+        "message": "応答データ型"
+    },
+    "filter": {
+        "message": "フィルター"
+    },
+    "all_sites": {
+        "message": "すべてのサイト"
+    },
+    "preview": {
+        "message": "プレビュー"
+    },
+    "third_party_query_interfaces": {
+        "message": "サードパーティのクエリインターフェイス"
+    },
+    "select_element_tip_": {
+        "message": "Web ページ上の要素を選択し、このドメイン内のメディア ファイルのファイル名を取得するためのルールを設定し、ビデオ/オーディオなどを記録します。"
+    },
+    "copy": {
+        "message": "コピー"
+    },
+    "edit": {
+        "message": "編集"
+    },
+    "scripts": {
+        "message": "スクリプト"
+    },
+    "create_button": {
+        "message": "「作成」ボタン"
+    },
+    "actions": {
+        "message": "アクション"
+    },
+    "remove_failed_loading_images": {
+        "message": "失敗した画像の読み込みを削除する"
+    },
+    "brute_force_search": {
+        "message": "ブルートフォース検索"
+    },
+    "hidden_elements": {
+        "message": "隠し要素"
+    },
+    "invalid_data": {
+        "message": "無効なデータ"
+    },
+    "public_lists": {
+        "message": "公開リスト"
+    },
+    "file_type": {
+        "message": "ファイルの種類"
+    },
+    "recapture_address_msg_success": {
+        "message": "アドレスの再取得が成功しました。ソフトウェアを開いて、ダウンロード中かどうかを確認してください。"
+    },
+    "insert_to": {
+        "message": "挿入先"
+    },
+    "override": {
+        "message": "オーバーライド"
     },
     "third_party_interface_help_": {
-        "message": "The third-party query interface and file detection feature serve different purposes. <br/>Sometimes, on certain specially processed websites, files may not be easily detectable. This feature is designed to address that issue! You can easily extract file download links from specific web pages by writing scripts, or check for files on other servers or local applications using HTTP interactions. While there are third-party applications that can perform similar tasks, this feature simplifies the process with one-click downloading, improving overall efficiency."
+        "message": "サードパーティのクエリ インターフェイスとファイル検出機能は、異なる目的を果たします。 <br/>特別に処理された特定の Web サイトでは、ファイルが簡単に検出できない場合があります。この機能はその問題を解決するために設計されました。スクリプトを記述して特定の Web ページからファイルのダウンロード リンクを簡単に抽出したり、__​​TOK_1__ インタラクションを使用して他のサーバーやローカル アプリケーション上のファイルをチェックしたりすることができます。同様のタスクを実行できるサードパーティ アプリケーションもありますが、この機能によりワンクリックでダウンロードできるためプロセスが簡素化され、全体的な効率が向上します。"
     },
     "media_files_detection_text_": {
-        "message": "Enable or disable the media file detection feature."
+        "message": "メディア ファイル検出機能を有効または無効にします。"
     },
-    "deep_analysis_res_text_": {
-        "message": "Enable or disable deep detection of resource files such as images and scripts. <br/>Activating this feature can help identify more potential resource files. <br/> If you do not use the resource manager feature, you can disable this option. <br/> To completely disable deep analysis, you will need to turn off all related options."
+    "description_note_": {
+        "message": "説明はできるだけ短くしてください。"
+    },
+    "loading": {
+        "message": "読み込み中"
+    },
+    "download_exclusions_help_": {
+        "message": "ダウンロード タスクを開始すると、指定された設定を満たしている場合、ブラウザーがダウンロードを処理します。このオプションは他のすべての設定よりも優先されます。ただし、これはキャプチャされたビデオおよびオーディオ ファイルには適用されないことに注意してください。これらのファイルについては、ブラウザーの組み込みダウンロード ツールがファイルを処理するように設計されていないため、ダウンロード マネージャーが引き続き使用されます。"
+    },
+    "crawler": {
+        "message": "クローラー"
+    },
+    "service": {
+        "message": "サービス"
+    },
+    "port": {
+        "message": "ポート"
+    },
+    "override_duplicated_name_tips_": {
+        "message": "この名前はすでに存在します。<br/> 既存の設定を上書きしますか?"
     },
     "deep_analysis_customs_text_": {
         "message": "This option determines whether deep analysis also matches custom file rules.<br/> Note: If the custom file rules include regular expressions, it may impact the performance of the webpage. <br/> To completely disable deep analysis, you will need to turn off all related options."
     },
-    "loading": {
-        "message": "Loading"
+    "unselect": {
+        "message": "選択を解除します"
+    },
+    "collector": {
+        "message": "コレクタ"
+    },
+    "file_unsuport_preview": {
+        "message": "このファイルはプレビューできません"
+    },
+    "potentials": {
+        "message": "可能性"
+    },
+    "resources": {
+        "message": "リソース"
+    },
+    "no_selected_rows": {
+        "message": "行が選択されていません"
+    },
+    "explicit": {
+        "message": "明示的な"
+    },
+    "extension": {
+        "message": "拡張"
+    },
+    "configs": {
+        "message": "構成"
+    },
+    "record": {
+        "message": "記録"
+    },
+    "collector_mode": {
+        "message": "コレクターモード"
+    },
+    "path_match_placeholder_": {
+        "message": "上記のホスト アドレスに対応するパスを一致させます。各パスは「/」で始まる必要があり、正規表現を使用できます。 1 行に 1 つのパス。"
+    },
+    "action": {
+        "message": "アクション"
+    },
+    "filter_out": {
+        "message": "フィルター実行"
+    },
+    "unsuport_m3u8_preview": {
+        "message": "このブラウザはm3u8のプレビューに対応していません"
+    },
+    "embed_code": {
+        "message": "コードを埋め込む"
+    },
+    "stop": {
+        "message": "停止"
+    },
+    "capture_other_file_types": {
+        "message": "他のファイルタイプをキャプチャする"
+    },
+    "refresh_address_msg_content": {
+        "message": "アドレスを取得する前に、現在のページを更新せずに、以下を見つけてください。"
+    },
+    "text": {
+        "message": "テキスト"
+    },
+    "appname": {
+        "message": "File Centipede"
+    },
+    "import": {
+        "message": "輸入"
+    },
+    "custom_rule_tips_": {
+        "message": "複数の設定が選択されている場合、URL は、これらの設定がすべて一致する場合にのみ有効とみなされます。"
+    },
+    "provider_website": {
+        "message": "プロバイダーのウェブサイト"
+    },
+    "deep_analysis": {
+        "message": "深い分析"
+    },
+    "do_not_download": {
+        "message": "ダウンロードしないでください"
+    },
+    "download_image": {
+        "message": "画像をダウンロード"
+    },
+    "download_managers": {
+        "message": "ダウンロードマネージャー"
+    },
+    "site_settings": {
+        "message": "サイト設定"
+    },
+    "cancel": {
+        "message": "キャンセル"
+    },
+    "custom_file_rules": {
+        "message": "カスタムファイルルール"
+    },
+    "exclude_cross_origin_resources": {
+        "message": "クロスオリジンリソースを除外する"
+    },
+    "download_video": {
+        "message": "動画をダウンロード"
+    },
+    "display_options": {
+        "message": "表示オプション"
+    },
+    "others": {
+        "message": "その他"
+    },
+    "hide_low_resolution": {
+        "message": "低解像度を隠す"
+    },
+    "files": {
+        "message": "ファイル"
+    },
+    "load_all": {
+        "message": "すべてロードする"
+    },
+    "settings": {
+        "message": "設定"
+    },
+    "no": {
+        "message": "いいえ"
+    },
+    "test": {
+        "message": "テスト"
+    },
+    "determined": {
+        "message": "決定した"
+    },
+    "download_send_failed_message": {
+        "message": "がインストールされていないか、起動していません。"
+    },
+    "type": {
+        "message": "タイプ"
+    },
+    "filename": {
+        "message": "ファイル名"
+    },
+    "recapture_address": {
+        "message": "アドレスを再取得する"
+    },
+    "too_many_tasks_download_warning_": {
+        "message": "%d 個のダウンロード タスクを送信する準備ができています。これにより、複数のポップアップ ウィンドウが表示される場合があります。続けますか?"
+    },
+    "segments": {
+        "message": "セグメント"
+    },
+    "this_site": {
+        "message": "このサイト"
+    },
+    "resolution": {
+        "message": "解決"
+    },
+    "remove_failed_loading_videos": {
+        "message": "読み込みに失敗したビデオを削除する"
+    },
+    "are_u_sure": {
+        "message": "本気ですか？"
+    },
+    "help": {
+        "message": "ヘルプ"
+    },
+    "share": {
+        "message": "共有"
+    },
+    "progress": {
+        "message": "進捗"
+    },
+    "settings_tip_": {
+        "message": "拡張機能の詳細設定。"
+    },
+    "play_all": {
+        "message": "すべてプレイする"
+    },
+    "videos": {
+        "message": "動画"
+    },
+    "browser": {
+        "message": "ブラウザ"
+    },
+    "height": {
+        "message": "身長"
+    },
+    "potential_keys": {
+        "message": "潜在的な鍵"
+    },
+    "start": {
+        "message": "始める"
+    },
+    "rules": {
+        "message": "ルール"
+    },
+    "file_size": {
+        "message": "ファイルサイズ"
+    },
+    "custom_rule_url_regexp_tips_": {
+        "message": "すべての URL アドレスと一致するには、JavaScript 正規表現を使用します。<br/> (注: 正規表現を使用すると、Web ページのパフォーマンスに影響を与える可能性があります。)"
+    },
+    "save": {
+        "message": "保存"
+    },
+    "troubleshooting": {
+        "message": "トラブルシューティング"
+    },
+    "file_extension": {
+        "message": "ファイル拡張子"
+    },
+    "apply_to": {
+        "message": "申請先"
+    },
+    "video_source": {
+        "message": "ビデオソース"
+    },
+    "audios": {
+        "message": "音声"
+    },
+    "read_from_cache": {
+        "message": "キャッシュから読み取る"
+    },
+    "general": {
+        "message": "一般的な"
+    },
+    "example": {
+        "message": "例"
+    },
+    "deep_analysis_text_": {
+        "message": "このオプションを有効にすると、Web ページの詳細な分析が実行されて、隠されたビデオまたはオーディオ リソースが見つかります (<br/>)。ただし、より多くの CPU リソースが消費されます。<br/> Web ページのスクリプトが少ない場合、またはデータ インタラクションの頻度が低い場合は、<br/> 、追加の消費は無視できる程度になります。"
+    },
+    "host_match_placeholder_": {
+        "message": "ポートを除く、入力ボックスのホスト アドレス (ドメイン名または IP) と一致します。 1 行に 1 つのアドレス。"
+    },
+    "allow_external_messages_text_": {
+        "message": "外部スクリプトがこの拡張機能にメッセージを送信できるようにします。"
+    },
+    "filename_rule_tips_": {
+        "message": "CSS セレクター ルールを使用して、Web ページ上の指定された要素のテキストを、そのドメイン内のメディア ファイルの優先ファイル名として取得します。<br/> 取得が失敗した場合でも、ファイル名としてタイトルまたは og:title が使用されます。"
+    },
+    "collector_mode_tip_": {
+        "message": "Records all media resources captured on webpages,<br/> and performs batch preview and filtering when necessary,<br/> reducing repetitive work."
+    },
+    "res_explorer_tip_": {
+        "message": "現在の Web サイト内のすべてのリソース、画像、スクリプト、ドキュメント、およびカスタム ファイル タイプを一覧表示します。"
+    },
+    "resolutions": {
+        "message": "決議"
+    },
+    "use_browser_for_downloading": {
+        "message": "ダウンロードにはブラウザを使用します"
+    },
+    "excluded_from_collector_mode": {
+        "message": "コレクターモードから除外されます"
+    },
+    "custom": {
+        "message": "カスタム"
+    },
+    "disable": {
+        "message": "無効"
+    },
+    "HTTP_res_request_monitoring_tips_": {
+        "message": "HTTP リソース リクエストの監視を有効にすると、リソース エクスプローラーが閉じている場合でも、Web ページ上のすべてのリソースを記録できます。つまり、現在表示されていないリソースや削除されたリソースを追跡できるということです。ただし、リソース エクスプローラーがすでに開いている場合、この機能を有効にしても追加の利点は得られません。この機能は、リソース エクスプローラーが開いていない場合でも、記録されたデータを保存するためにより多くのメモリを使用することに注意してください。"
+    },
+    "open_with_new_tab": {
+        "message": "新しいタブで開く"
+    },
+    "select_all": {
+        "message": "すべて選択"
+    },
+    "hosts": {
+        "message": "ホスト"
+    },
+    "deep_analysis_res_text_": {
+        "message": "Enable or disable deep detection of resource files such as images and scripts. <br/>Activating this feature can help identify more potential resource files. <br/> If you do not use the resource manager feature, you can disable this option. <br/> To completely disable deep analysis, you will need to turn off all related options."
+    },
+    "unselect_all": {
+        "message": "すべての選択を解除します"
+    },
+    "remove_selected": {
+        "message": "選択したものを削除"
+    },
+    "feature_not_implemented": {
+        "message": "この機能は現在予約されており、まだ実装されていません。"
+    },
+    "download_selected": {
+        "message": "選択されたダウンロード"
+    },
+    "provider": {
+        "message": "プロバイダー"
+    },
+    "collector_notify_": {
+        "message": "コレクターはウィンドウが開いている場合にのみ有効です。ウィンドウを閉じるとすべてのレコードが失われます。<br/> ブラウザの制限と Web サイトのダウンロード チェーン ルールにより、すべてのビデオをプレビューできるわけではありません。<br/> 一部のビデオはプレビューできませんが、ダウンロードできます。<br/> 一部のビデオはプレビューできず、ダウンロードできません。"
+    },
+    "size": {
+        "message": "サイズ"
+    },
+    "width": {
+        "message": "幅"
+    },
+    "site_settings_help_": {
+        "message": "各 Web サイトには独自の個別の設定があります。ポップアップの「この Web サイト」セクションのオプションをチェックすると、その特定の Web サイトの設定が自動的に作成されます。 Web サイト設定のカスタム ファイル ルールは、その特定の Web サイトにのみ適用されます。"
+    },
+    "sorting": {
+        "message": "仕分け"
+    },
+    "planned_no_implemented_": {
+        "message": "計画されているが実行されていない。"
+    },
+    "dark": {
+        "message": "暗い"
+    },
+    "length_duration": {
+        "message": "メディア情報"
+    },
+    "error": {
+        "message": "エラー"
+    },
+    "playback_speed": {
+        "message": "再生速度"
+    },
+    "custom_rule_selector_tips_": {
+        "message": "CSS セレクターを使用して、Web ページから DOM 要素をクエリし、選択した要素の属性またはテキスト コンテンツから URL アドレスを抽出します。<br/> たとえば、タグの 'href' 属性から URL を取得できます。"
+    },
+    "name_cannot_be_empty": {
+        "message": "名前を空にすることはできません"
+    },
+    "invalid_settings": {
+        "message": "無効な設定"
+    },
+    "host_cannot_be_empty": {
+        "message": "ホストを空にすることはできません"
+    },
+    "rule_name_duplicated": {
+        "message": "ルール名が重複しています"
+    },
+    "attr_name": {
+        "message": "属性名"
+    },
+    "filename_rules": {
+        "message": "ファイル名の規則"
+    },
+    "disable_tooltips": {
+        "message": "ツールチップを無効にする"
+    },
+    "title": {
+        "message": "タイトル"
+    },
+    "merge": {
+        "message": "マージ"
+    },
+    "merge_tip_": {
+        "message": "ビデオとオーディオを結合する"
+    },
+    "merge_warning_": {
+        "message": "リストからビデオとオーディオを少なくとも 1 つ選択してください。"
+    },
+    "deep_analysis_level": {
+        "message": "深い分析レベル"
+    },
+    "fast": {
+        "message": "速い"
+    },
+    "maximize": {
+        "message": "最大化する"
+    },
+    "deep_analysis_level_tip_": {
+        "message": "リソース検出については、通常、ほとんどのユースケースではデフォルトの中設定で十分です。<br/>予期したリソースが検出されない場合は、CPU の使用率が高くなりますが、レベルを上げてみてください。"
+    },
+    "download_and_merge": {
+        "message": "ダウンロードしてマージする"
+    },
+    "popup_filter_tip_": {
+        "message": "Enter を押して保存します。"
+    },
+    "fast_forward": {
+        "message": "早送り"
+    },
+    "seconds": {
+        "message": "秒"
+    },
+    "skip_intro": {
+        "message": "イントロをスキップ"
+    },
+    "duration_length": {
+        "message": "持続時間の長さ"
+    },
+    "remove_failed_loading_audios": {
+        "message": "読み込みに失敗したオーディオを削除する"
+    },
+    "remove_shot_videos": {
+        "message": "短い動画を削除する"
+    },
+    "log": {
+        "message": "ログ"
+    },
+    "timestamp": {
+        "message": "タイムスタンプ"
+    },
+    "max_resolution_limit": {
+        "message": "最大解像度制限"
+    },
+    "remove_high_quality_videos": {
+        "message": "高画質の動画を削除する"
+    },
+    "disable_readme_notifications": {
+        "message": "Readme 通知を無効にする"
+    },
+    "max_resolution_limit_tips_": {
+        "message": "複数の解像度を持つストリーミング メディア ファイルの場合は、最大再生解像度を制限します。"
+    },
+    "unsupported_media_merge_msg_": {
+        "message": "現在、単一のマージ操作で複数のストリーミング メディア ファイルと標準マルチメディア ファイルを結合することはサポートされていません。"
+    },
+    "push_type": {
+        "message": "プッシュ式"
+    },
+    "send_http_request": {
+        "message": "HTTP リクエストを送信する"
+    },
+    "send_websocket_message": {
+        "message": "websocket メッセージを送信する"
+    },
+    "open_custom_protocol_url": {
+        "message": "カスタム プロトコル URL を開く"
+    },
+    "callback_message_type": {
+        "message": "Callback メッセージ タイプ"
+    },
+    "callback_message": {
+        "message": "Callback メッセージ"
+    },
+    "notify": {
+        "message": "通知する"
+    },
+    "message_box": {
+        "message": "メッセージボックス"
+    },
+    "prefix": {
+        "message": "プレフィックス"
+    },
+    "suffix": {
+        "message": "サフィックス"
+    },
+    "connect_timeout": {
+        "message": "接続タイムアウト"
+    },
+    "URI_template": {
+        "message": "URI テンプレート"
+    },
+    "protocol": {
+        "message": "プロトコル"
+    },
+    "encode": {
+        "message": "エンコード"
+    },
+    "decode": {
+        "message": "デコードする"
+    },
+    "message": {
+        "message": "メッセージ"
+    },
+    "method": {
+        "message": "方法"
+    },
+    "custom_protocol": {
+        "message": "カスタムプロトコル"
+    },
+    "service_host": {
+        "message": "サービスホスト"
+    },
+    "service_port": {
+        "message": "サービスポート"
+    },
+    "service_username": {
+        "message": "サービスのユーザー名"
+    },
+    "service_password": {
+        "message": "サービスパスワード"
+    },
+    "default_value": {
+        "message": "デフォルト値"
+    },
+    "authorization": {
+        "message": "認可"
+    },
+    "download_task": {
+        "message": "download task"
+    },
+    "stream_media_task": {
+        "message": "ストリームメディアタスク"
+    },
+    "stream_media": {
+        "message": "ストリームメディア"
+    },
+    "task_type": {
+        "message": "タスクの種類"
+    },
+    "preview_all": {
+        "message": "すべてプレビュー"
+    },
+    "medium": {
+        "message": "中くらい"
+    },
+    "high": {
+        "message": "高い"
+    },
+    "unexpected_error": {
+        "message": "予期しないエラー"
+    },
+    "video_preview_performance_warning_": {
+        "message": "<b>パフォーマンス警告:</b><br/>ハードウェア デコードのない環境 (例: Linux + NVIDIA) では、1080p 以上で複数のビデオを同時に再生すると、システム メモリまたはビデオ メモリが使い果たされ、この拡張機能がクラッシュしたりシステムがフリーズしたりする可能性があります。この拡張機能はこれらの問題を軽減するために広範な最適化が行われていますが、ビデオの再生は依然としてブラウザー独自のデコードおよびリソース管理メカニズムの影響を受けるため、問題を完全に回避することは不可能です。"
     }
 }

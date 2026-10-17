@@ -1,0 +1,878 @@
+{
+  "subtitles": {
+    "message": "ترجمات"
+  },
+  "one_css_selector_per_line": {
+    "message": "محدد CSS واحد في كل سطر"
+  },
+  "hidden_iframe": {
+    "message": "iframe مخفي"
+  },
+  "file_duration": {
+    "message": "مدة الملف"
+  },
+  "iframe": {
+    "message": "iframe"
+  },
+  "download_exclusions": {
+    "message": "استثناءات التنزيل"
+  },
+  "path_match": {
+    "message": "مطابقة المسار"
+  },
+  "record_from_screen": {
+    "message": "تسجيل من الشاشة"
+  },
+  "host_match": {
+    "message": "مطابقة المضيف"
+  },
+  "data_format": {
+    "message": "تنسيق البيانات"
+  },
+  "visible_element": {
+    "message": "العنصر المرئي"
+  },
+  "icon": {
+    "message": "أيقونة"
+  },
+  "note": {
+    "message": "ملاحظة"
+  },
+  "download_audio": {
+    "message": "تنزيل هذا الصوت"
+  },
+  "media_files_detection": {
+    "message": "اكتشاف ملفات الوسائط"
+  },
+  "window_height": {
+    "message": "ارتفاع النافذة"
+  },
+  "magnets": {
+    "message": "مغناطيسات"
+  },
+  "window_width": {
+    "message": "عرض النافذة"
+  },
+  "interface_type": {
+    "message": "نوع الواجهة"
+  },
+  "preview_notify_": {
+    "message": "نظرًا لقيود المتصفح وقواعد الموقع المضادة للتنزيل، لا يمكن معاينة جميع مقاطع الفيديو.<br/> لا يمكن معاينة بعض مقاطع الفيديو ولكن يمكن تنزيلها.<br/> لا يمكن معاينة بعض مقاطع الفيديو ولا يمكن تنزيلها."
+  },
+  "relative_URL_to_absolute_URL_tips_": {
+    "message": "تحويل عنوان URL النسبي إلى عنوان URL مطلق.<br/>مثال: /123/123.txt -> http://xxxx/123/123.txt"
+  },
+  "optional": {
+    "message": "اختياري"
+  },
+  "download_manager_tip_": {
+    "message": "مدير التنزيل الافتراضي المستخدم عند تنزيل الملفات."
+  },
+  "implicit": {
+    "message": "ضمني"
+  },
+  "window": {
+    "message": "نافذة"
+  },
+  "selected": {
+    "message": "محدد"
+  },
+  "types": {
+    "message": "الأنواع"
+  },
+  "adverts_detection": {
+    "message": "كشف الإعلانات"
+  },
+  "media_files": {
+    "message": "ملفات الوسائط"
+  },
+  "styles": {
+    "message": "الأنماط"
+  },
+  "url_conversion": {
+    "message": "تحويل URL"
+  },
+  "custom_rule_selector_attr_name_tips_": {
+    "message": "بعد مطابقة عنصر باستخدام محدد CSS المحدد، استخرج المحتوى من اسم السمة المحدد. لاستخراج النص، استخدم الأقواس المعقوفة {} بدلاً من ذلك."
+  },
+  "interface": {
+    "message": "الواجهة"
+  },
+  "paths": {
+    "message": "المسارات"
+  },
+  "this_site": {
+    "message": "هذا الموقع"
+  },
+  "crawler": {
+    "message": "الزاحف"
+  },
+  "custom_rule_url_regexp_tips_": {
+    "message": "استخدم التعابير النمطية في JavaScript لمطابقة جميع عناوين URL.<br/> (ملاحظة: قد يؤثر استخدام التعابير النمطية على أداء صفحة الويب.)"
+  },
+  "file_size": {
+    "message": "حجم الملف"
+  },
+  "adverts": {
+    "message": "إعلانات"
+  },
+  "hidden_elements": {
+    "message": "عناصر مخفية"
+  },
+  "brute_force_search": {
+    "message": "بحث بالقوة الغاشمة"
+  },
+  "all": {
+    "message": "الكل"
+  },
+  "export": {
+    "message": "تصدير"
+  },
+  "collector_mode": {
+    "message": "وضع الجامع"
+  },
+  "capture_other_file_types": {
+    "message": "التقاط أنواع ملفات أخرى"
+  },
+  "configs": {
+    "message": "الإعدادات"
+  },
+  "general": {
+    "message": "عام"
+  },
+  "example": {
+    "message": "مثال"
+  },
+  "record": {
+    "message": "تسجيل"
+  },
+  "invalid_domain": {
+    "message": "نطاق غير صالح."
+  },
+  "rule": {
+    "message": "قاعدة"
+  },
+  "data_source": {
+    "message": "مصدر البيانات"
+  },
+  "remove_failed_loading_images": {
+    "message": "إزالة الصور التي فشل تحميلها"
+  },
+  "potentials": {
+    "message": "الاحتمالات"
+  },
+  "resources": {
+    "message": "الموارد"
+  },
+  "file_unsuport_preview": {
+    "message": "لا يمكنك معاينة هذا الملف"
+  },
+  "embed_code": {
+    "message": "كود التضمين"
+  },
+  "stop": {
+    "message": "إيقاف"
+  },
+  "rules": {
+    "message": "القواعد"
+  },
+  "browser": {
+    "message": "المتصفح"
+  },
+  "videos": {
+    "message": "مقاطع الفيديو"
+  },
+  "height": {
+    "message": "الارتفاع"
+  },
+  "start": {
+    "message": "ابدأ"
+  },
+  "potential_urls": {
+    "message": "عناوين URL المحتملة"
+  },
+  "insert_to": {
+    "message": "إدراج إلى"
+  },
+  "override": {
+    "message": "تجاوز"
+  },
+  "description_note_": {
+    "message": "الوصف، يرجى إبقاؤه قصيرًا قدر الإمكان."
+  },
+  "trash_script_code": {
+    "message": "كود سكربت غير مرغوب فيه"
+  },
+  "version": {
+    "message": "الإصدار"
+  },
+  "CSS_injection": {
+    "message": "حقن CSS"
+  },
+  "invalid_create_btn_insert_to_": {
+    "message": "إعداد غير صالح: إنشاء زر -> إدراج إلى"
+  },
+  "response_data_type": {
+    "message": "نوع بيانات الاستجابة"
+  },
+  "behaviors": {
+    "message": "السلوكيات"
+  },
+  "filter": {
+    "message": "تصفية"
+  },
+  "all_sites": {
+    "message": "جميع المواقع"
+  },
+  "documentation": {
+    "message": "التوثيق"
+  },
+  "no_selected_rows": {
+    "message": "لا توجد صفوف محددة"
+  },
+  "extension": {
+    "message": "الامتداد"
+  },
+  "explicit": {
+    "message": "صريح"
+  },
+  "ignore_this_site": {
+    "message": "تجاهل هذا الموقع"
+  },
+  "page_url": {
+    "message": "رابط الصفحة"
+  },
+  "custom_file_rules_help_": {
+    "message": "يمكنك إنشاء قواعد مخصصة لأنواع ملفات محددة، مثل كلمات الأغاني أو الترجمة. طالما أن صفحة الويب تحتوي على هذه الموارد، فسيتم اكتشافها. بعد ذلك ستظهر الموارد المكتشفة في القسم المخصص ضمن النافذة المنبثقة في الزاوية العلوية اليمنى، وكذلك في مستعرض الموارد."
+  },
+  "file": {
+    "message": "ملف"
+  },
+  "description": {
+    "message": "الوصف"
+  },
+  "minutes": {
+    "message": "دقائق"
+  },
+  "script_code_cannot_be_empty": {
+    "message": "لا يمكن أن يكون كود السكربت فارغًا."
+  },
+  "media_files_detection_text_": {
+    "message": "تمكين أو تعطيل ميزة اكتشاف ملفات الوسائط."
+  },
+  "third_party_interface_help_": {
+    "message": "واجهة الاستعلام الخارجية وميزة اكتشاف الملفات تخدمان أغراضًا مختلفة. <br/>أحيانًا، في بعض المواقع التي تتم معالجتها بشكل خاص، قد لا تكون الملفات سهلة الاكتشاف. تم تصميم هذه الميزة لمعالجة هذه المشكلة! يمكنك بسهولة استخراج روابط تنزيل الملفات من صفحات ويب محددة عن طريق كتابة السكربتات، أو التحقق من الملفات على خوادم أخرى أو تطبيقات محلية باستخدام تفاعلات HTTP. وعلى الرغم من وجود تطبيقات خارجية يمكنها تنفيذ مهام مشابهة، فإن هذه الميزة تبسط العملية من خلال التنزيل بنقرة واحدة، مما يحسن الكفاءة العامة."
+  },
+  "copy_addr_msg": {
+    "message": "تم نسخ العنوان بنجاح"
+  },
+  "invalid_data": {
+    "message": "بيانات غير صالحة"
+  },
+  "custom_file_rules": {
+    "message": "قواعد الملفات المخصصة"
+  },
+  "cancel": {
+    "message": "إلغاء"
+  },
+  "exclude_cross_origin_resources": {
+    "message": "استبعاد الموارد عبر الأصل"
+  },
+  "third_party_query_interfaces": {
+    "message": "واجهات الاستعلام الخارجية"
+  },
+  "preview": {
+    "message": "معاينة"
+  },
+  "public_lists": {
+    "message": "القوائم العامة"
+  },
+  "apply_to": {
+    "message": "تطبيق على"
+  },
+  "video_source": {
+    "message": "مصدر الفيديو"
+  },
+  "loading": {
+    "message": "جارٍ التحميل"
+  },
+  "download_exclusions_help_": {
+    "message": "عندما تبدأ مهمة تنزيل، سيتولى المتصفح التنزيل إذا كان يطابق الإعدادات المحددة. يتمتع هذا الخيار بالأولوية على جميع الإعدادات الأخرى. ومع ذلك، ضع في اعتبارك أن هذا لا ينطبق على ملفات الفيديو والصوت الملتقطة. بالنسبة لهذه الملفات، سيستمر استخدام مدير التنزيل، لأن أداة التنزيل المدمجة في المتصفح غير مصممة للتعامل معها."
+  },
+  "deep_analysis_customs_text_": {
+    "message": "يحدد هذا الخيار ما إذا كان التحليل العميق يطابق أيضًا قواعد الملفات المخصصة.<br/> ملاحظة: إذا كانت قواعد الملفات المخصصة تتضمن تعبيرات نمطية، فقد يؤثر ذلك في أداء صفحة الويب."
+  },
+  "visible_elements": {
+    "message": "العناصر المرئية"
+  },
+  "res_explorer": {
+    "message": "مستكشف الموارد"
+  },
+  "duplicated_name": {
+    "message": "اسم مكرر"
+  },
+  "clear": {
+    "message": "مسح"
+  },
+  "domain": {
+    "message": "النطاق"
+  },
+  "save": {
+    "message": "حفظ"
+  },
+  "file_extension": {
+    "message": "امتداد الملف"
+  },
+  "troubleshooting": {
+    "message": "استكشاف الأخطاء وإصلاحها"
+  },
+  "recapture_address": {
+    "message": "إعادة التقاط العنوان"
+  },
+  "type": {
+    "message": "النوع"
+  },
+  "filename": {
+    "message": "اسم الملف"
+  },
+  "filter_out": {
+    "message": "تصفية"
+  },
+  "invalid_css_selector": {
+    "message": "محدد CSS غير صالح."
+  },
+  "download": {
+    "message": "تنزيل"
+  },
+  "images": {
+    "message": "الصور"
+  },
+  "scripts": {
+    "message": "السكربتات"
+  },
+  "edit": {
+    "message": "تحرير"
+  },
+  "select_element_tip_": {
+    "message": "اختر العناصر في صفحة الويب، واضبط قواعد الحصول على أسماء الملفات للملفات الوسائطية في هذا النطاق، وسجل الفيديو/الصوت وما إلى ذلك."
+  },
+  "insertion_method": {
+    "message": "طريقة الإدراج"
+  },
+  "readme": {
+    "message": "اقرأني"
+  },
+  "video_duration": {
+    "message": "مدة الفيديو"
+  },
+  "create_button": {
+    "message": "إنشاء زر"
+  },
+  "copy": {
+    "message": "نسخ"
+  },
+  "create_rule": {
+    "message": "إنشاء قاعدة"
+  },
+  "css_selector": {
+    "message": "محدد CSS"
+  },
+  "download_send_failed_message": {
+    "message": "إما أنه غير مثبت أو أنه لا يعمل."
+  },
+  "collector_mode_tip_": {
+    "message": "يسجل جميع موارد الوسائط الملتقطة في صفحات الويب،<br/> ويجري معاينة مجمعة وتصفية عند الحاجة،<br/> مما يقلل العمل المتكرر."
+  },
+  "port": {
+    "message": "المنفذ"
+  },
+  "override_duplicated_name_tips_": {
+    "message": "الاسم موجود بالفعل.<br/> هل تريد الكتابة فوق الإعداد الحالي؟"
+  },
+  "username": {
+    "message": "اسم المستخدم"
+  },
+  "password": {
+    "message": "كلمة المرور"
+  },
+  "service": {
+    "message": "الخدمة"
+  },
+  "refresh_address_msg_content": {
+    "message": "قبل التقاط العنوان، لا تقم بتحديث الصفحة الحالية، ابحث عن: "
+  },
+  "res_explorer_tip_": {
+    "message": "يسرد جميع الموارد والصور والسكربتات والمستندات وأنواع الملفات المخصصة في الموقع الحالي."
+  },
+  "trigger": {
+    "message": "المشغل"
+  },
+  "duplicated_row": {
+    "message": "صف مكرر"
+  },
+  "too_many_tasks_download_warning_": {
+    "message": "لديك %d مهمة تنزيل جاهزة للإرسال. قد يؤدي ذلك إلى ظهور عدة نوافذ منبثقة. هل تريد المتابعة؟"
+  },
+  "segments": {
+    "message": "المقاطع"
+  },
+  "add": {
+    "message": "إضافة"
+  },
+  "remove_low_quality_videos": {
+    "message": "إزالة مقاطع الفيديو منخفضة الجودة"
+  },
+  "filetypes": {
+    "message": "أنواع الملفات"
+  },
+  "HTTP_res_request_monitoring": {
+    "message": "مراقبة طلبات موارد HTTP"
+  },
+  "do_not_download": {
+    "message": "عدم التنزيل"
+  },
+  "download_image": {
+    "message": "تنزيل هذه الصورة"
+  },
+  "actions": {
+    "message": "الإجراءات"
+  },
+  "filename_rule_tips_": {
+    "message": "يستخدم قواعد محدد CSS لأخذ النص من عنصر محدد في صفحة الويب كاسم ملف مفضل لملفات الوسائط في ذلك النطاق.<br/> إذا فشل الاستخراج، فسيستمر استخدام العنوان أو og:title كاسم للملف."
+  },
+  "are_u_sure": {
+    "message": "هل أنت متأكد؟"
+  },
+  "help": {
+    "message": "مساعدة"
+  },
+  "share": {
+    "message": "مشاركة"
+  },
+  "progress": {
+    "message": "التقدم"
+  },
+  "settings_tip_": {
+    "message": "الإعدادات التفصيلية للامتداد."
+  },
+  "play_all": {
+    "message": "تشغيل الكل"
+  },
+  "potential_keys": {
+    "message": "المفاتيح المحتملة"
+  },
+  "download_send_failed_message_prefix": {
+    "message": "يتعذر الاتصال بـ "
+  },
+  "provider_website": {
+    "message": "موقع المزود"
+  },
+  "deep_analysis": {
+    "message": "التحليل العميق"
+  },
+  "deep_analysis_text_": {
+    "message": "سيؤدي تمكين هذا الخيار إلى إجراء تحليل عميق لصفحة الويب للعثور على موارد الفيديو أو الصوت المخفية،<br/> ولكن على حساب استهلاك المزيد من موارد وحدة المعالجة المركزية.<br/> إذا كانت صفحة الويب تحتوي على عدد قليل من السكربتات أو كان تفاعل البيانات منخفض التردد،<br/> فيمكن تجاهل الاستهلاك الإضافي."
+  },
+  "host_match_placeholder_": {
+    "message": "طابق عناوين المضيف (أسماء النطاقات أو عناوين IP) في مربع الإدخال، باستثناء المنافذ. عنوان واحد في كل سطر."
+  },
+  "no": {
+    "message": "لا"
+  },
+  "test": {
+    "message": "اختبار"
+  },
+  "determined": {
+    "message": "محدد"
+  },
+  "enable": {
+    "message": "تمكين"
+  },
+  "allow_external_messages_text_": {
+    "message": "السماح للسكربتات الخارجية بإرسال رسائل إلى هذا الامتداد."
+  },
+  "collector": {
+    "message": "الجامع"
+  },
+  "unselect": {
+    "message": "إلغاء التحديد"
+  },
+  "action": {
+    "message": "إجراء"
+  },
+  "path_match_placeholder_": {
+    "message": "طابق المسارات المقابلة لعناوين المضيف أعلاه. يجب أن يبدأ كل مسار بـ '/'، ويمكنك استخدام التعبيرات النمطية. مسار واحد في كل سطر."
+  },
+  "unsuport_m3u8_preview": {
+    "message": "متصفحك لا يدعم معاينة ملفات m3u8."
+  },
+  "uncertain": {
+    "message": "غير مؤكد"
+  },
+  "file_type": {
+    "message": "نوع الملف"
+  },
+  "recapture_address_msg_success": {
+    "message": "تم التقاط العنوان الجديد بنجاح، يرجى فتح البرنامج والتحقق مما إذا كان التنزيل يعمل بشكل صحيح."
+  },
+  "text": {
+    "message": "نص"
+  },
+  "appname": {
+    "message": "File Centipede"
+  },
+  "import": {
+    "message": "استيراد"
+  },
+  "custom_rule_tips_": {
+    "message": "عندما يتم تحديد إعدادات متعددة، لا يعتبر عنوان URL صالحًا إلا إذا تطابقت جميع هذه الإعدادات."
+  },
+  "audios": {
+    "message": "الصوتيات"
+  },
+  "read_from_cache": {
+    "message": "القراءة من ذاكرة التخزين المؤقت"
+  },
+  "max": {
+    "message": "الحد الأقصى"
+  },
+  "download_link": {
+    "message": "تنزيل هذا الرابط"
+  },
+  "pause_all": {
+    "message": "إيقاف الكل مؤقتًا"
+  },
+  "allow_external_messages": {
+    "message": "السماح بالرسائل الخارجية"
+  },
+  "video_floating_bar": {
+    "message": "شريط الفيديو العائم"
+  },
+  "download_all": {
+    "message": "تنزيل الكل"
+  },
+  "send_failed": {
+    "message": "فشل الإرسال"
+  },
+  "copy_all": {
+    "message": "نسخ الكل"
+  },
+  "download_video": {
+    "message": "تنزيل هذا الفيديو"
+  },
+  "display_options": {
+    "message": "خيارات العرض"
+  },
+  "others": {
+    "message": "أخرى"
+  },
+  "hide_low_resolution": {
+    "message": "إخفاء الدقة المنخفضة"
+  },
+  "files": {
+    "message": "الملفات"
+  },
+  "remove_failed_loading_videos": {
+    "message": "إزالة مقاطع الفيديو التي فشل تحميلها"
+  },
+  "resolution": {
+    "message": "الدقة"
+  },
+  "settings": {
+    "message": "الإعدادات"
+  },
+  "load_all": {
+    "message": "تحميل الكل"
+  },
+  "yes": {
+    "message": "نعم"
+  },
+  "remove": {
+    "message": "إزالة"
+  },
+  "download_manager": {
+    "message": "مدير التنزيل"
+  },
+  "more": {
+    "message": "المزيد"
+  },
+  "download_managers": {
+    "message": "مديرو التنزيل"
+  },
+  "site_settings": {
+    "message": "إعدادات الموقع"
+  },
+  "name": {
+    "message": "الاسم"
+  },
+  "edit_rule": {
+    "message": "تحرير القاعدة"
+  },
+  "resolutions": {
+    "message": "الدقات"
+  },
+  "use_browser_for_downloading": {
+    "message": "استخدام المتصفح للتنزيل"
+  },
+  "excluded_from_collector_mode": {
+    "message": "مستبعد من وضع الجامع"
+  },
+  "custom": {
+    "message": "مخصص"
+  },
+  "disable": {
+    "message": "تعطيل"
+  },
+  "HTTP_res_request_monitoring_tips_": {
+    "message": "يتيح لك تمكين مراقبة طلبات موارد HTTP تسجيل جميع الموارد على صفحات الويب، حتى إذا كان مستكشف الموارد مغلقًا. هذا يعني أنه يمكنك تتبع الموارد التي لا يتم عرضها حاليًا أو تمت إزالتها. ومع ذلك، إذا كان مستكشف الموارد مفتوحًا بالفعل، فلن يوفر تشغيل هذه الميزة أي مزايا إضافية. يرجى ملاحظة أن هذه الميزة ستستخدم المزيد من الذاكرة لتخزين البيانات المسجلة، حتى عندما لا يكون مستكشف الموارد مفتوحًا."
+  },
+  "open_with_new_tab": {
+    "message": "فتح في علامة تبويب جديدة"
+  },
+  "select_all": {
+    "message": "تحديد الكل"
+  },
+  "hosts": {
+    "message": "المضيفون"
+  },
+  "deep_analysis_res_text_": {
+    "message": "تمكين أو تعطيل الاكتشاف العميق لملفات الموارد مثل الصور والسكربتات.<br/>يمكن أن يساعد تفعيل هذه الميزة في تحديد المزيد من ملفات الموارد المحتملة.<br/> إذا كنت لا تستخدم ميزة مدير الموارد، فيمكنك تعطيل هذا الخيار."
+  },
+  "unselect_all": {
+    "message": "إلغاء تحديد الكل"
+  },
+  "remove_selected": {
+    "message": "إزالة المحدد"
+  },
+  "feature_not_implemented": {
+    "message": "هذه الميزة محجوزة حاليًا ولم يتم تنفيذها بعد."
+  },
+  "download_selected": {
+    "message": "تنزيل المحدد"
+  },
+  "provider": {
+    "message": "المزود"
+  },
+  "collector_notify_": {
+    "message": "الجامع فعال فقط عندما تكون النافذة مفتوحة؛ إغلاق النافذة سيؤدي إلى فقدان جميع السجلات.<br/> نظرًا لقيود المتصفح وقواعد سلسلة التنزيل الخاصة بالموقع، لا يمكن معاينة جميع مقاطع الفيديو.<br/> يمكن معاينة بعض مقاطع الفيديو ولكن يمكن تنزيلها.<br/> بعض مقاطع الفيديو لا يمكن معاينتها ولا يمكن تنزيلها."
+  },
+  "size": {
+    "message": "الحجم"
+  },
+  "width": {
+    "message": "العرض"
+  },
+  "site_settings_help_": {
+    "message": "لكل موقع ويب إعداداته الفردية الخاصة. عند تحديد أي خيار في قسم \"هذا الموقع\" في النافذة المنبثقة، سيتم إنشاء إعدادات لذلك الموقع المحدد تلقائيًا. ستنطبق قواعد الملفات المخصصة في إعدادات الموقع فقط على ذلك الموقع المحدد."
+  },
+  "sorting": {
+    "message": "الترتيب"
+  },
+  "planned_no_implemented_": {
+    "message": "مخطط له ولكن لم يتم تنفيذه."
+  },
+  "dark": {
+    "message": "داكن"
+  },
+  "length_duration": {
+    "message": "الطول / المدة / الحجم"
+  },
+  "error": {
+    "message": "خطأ"
+  },
+  "playback_speed": {
+    "message": "سرعة التشغيل"
+  },
+  "custom_rule_selector_tips_": {
+    "message": "استخدم محددات CSS للاستعلام عن عناصر DOM من صفحة ويب واستخراج عناوين URL من السمات أو المحتوى النصي للعناصر المحددة.<br/> على سبيل المثال، يمكنك الحصول على عنوان URL من السمة 'href' لوسم a."
+  },
+  "name_cannot_be_empty": {
+    "message": "لا يمكن أن يكون الاسم فارغًا"
+  },
+  "invalid_settings": {
+    "message": "إعدادات غير صالحة"
+  },
+  "host_cannot_be_empty": {
+    "message": "لا يمكن أن يكون المضيف فارغًا"
+  },
+  "rule_name_duplicated": {
+    "message": "اسم القاعدة مكرر"
+  },
+  "attr_name": {
+    "message": "اسم السمة"
+  },
+  "filename_rules": {
+    "message": "قواعد اسم الملف"
+  },
+  "disable_tooltips": {
+    "message": "تعطيل تلميحات الأدوات"
+  },
+  "title": {
+    "message": "العنوان"
+  },
+  "merge": {
+    "message": "دمج"
+  },
+  "merge_tip_": {
+    "message": "دمج الفيديو والصوت"
+  },
+  "merge_warning_": {
+    "message": "يرجى اختيار فيديو واحد وصوت واحد على الأقل من القائمة."
+  },
+  "deep_analysis_level": {
+    "message": "مستوى التحليل العميق"
+  },
+  "fast": {
+    "message": "سريع"
+  },
+  "maximize": {
+    "message": "تكبير"
+  },
+  "deep_analysis_level_tip_": {
+    "message": "بالنسبة لاكتشاف الموارد، يكون الإعداد الافتراضي \"متوسط\" كافيًا عمومًا لمعظم حالات الاستخدام.<br/>إذا لم يتم اكتشاف الموارد المتوقعة، فحاول زيادة المستوى، على حساب زيادة استخدام وحدة المعالجة المركزية."
+  },
+  "download_and_merge": {
+    "message": "تنزيل ودمج"
+  },
+  "popup_filter_tip_": {
+    "message": "اضغط Enter للحفظ."
+  },
+  "fast_forward": {
+    "message": "تقديم سريع"
+  },
+  "seconds": {
+    "message": "ثوانٍ"
+  },
+  "skip_intro": {
+    "message": "تخطي المقدمة"
+  },
+  "duration_length": {
+    "message": "المدة"
+  },
+  "remove_failed_loading_audios": {
+    "message": "إزالة الملفات الصوتية التي فشل تحميلها"
+  },
+  "remove_shot_videos": {
+    "message": "إزالة مقاطع الفيديو القصيرة"
+  },
+  "log": {
+    "message": "السجل"
+  },
+  "timestamp": {
+    "message": "الطابع الزمني"
+  },
+  "max_resolution_limit": {
+    "message": "حد الدقة القصوى"
+  },
+  "remove_high_quality_videos": {
+    "message": "إزالة مقاطع الفيديو عالية الجودة"
+  },
+  "disable_readme_notifications": {
+    "message": "تعطيل إشعارات ملف README"
+  },
+  "max_resolution_limit_tips_": {
+    "message": "بالنسبة لملفات الوسائط المتدفقة ذات الدقات المتعددة، قم بتحديد الحد الأقصى لدقة التشغيل."
+  },
+  "unsupported_media_merge_msg_": {
+    "message": "حاليًا، لا يتم دعم دمج عدة ملفات وسائط متدفقة مع ملفات الوسائط المتعددة القياسية في عملية دمج واحدة."
+  },
+  "push_type": {
+    "message": "نوع الدفع"
+  },
+  "send_http_request": {
+    "message": "إرسال طلب HTTP"
+  },
+  "send_websocket_message": {
+    "message": "إرسال رسالة websocket"
+  },
+  "open_custom_protocol_url": {
+    "message": "فتح عنوان URL لبروتوكول مخصص"
+  },
+  "callback_message_type": {
+    "message": "نوع رسالة الاستدعاء"
+  },
+  "callback_message": {
+    "message": "رسالة الاستدعاء"
+  },
+  "notify": {
+    "message": "إشعار"
+  },
+  "message_box": {
+    "message": "مربع الرسالة"
+  },
+  "prefix": {
+    "message": "بادئة"
+  },
+  "suffix": {
+    "message": "لاحقة"
+  },
+  "connect_timeout": {
+    "message": "مهلة الاتصال"
+  },
+  "URI_template": {
+    "message": "قالب URI"
+  },
+  "protocol": {
+    "message": "البروتوكول"
+  },
+  "encode": {
+    "message": "ترميز"
+  },
+  "decode": {
+    "message": "فك الترميز"
+  },
+  "message": {
+    "message": "رسالة"
+  },
+  "method": {
+    "message": "الطريقة"
+  },
+  "custom_protocol": {
+    "message": "بروتوكول مخصص"
+  },
+  "service_host": {
+    "message": "مضيف الخدمة"
+  },
+  "service_port": {
+    "message": "منفذ الخدمة"
+  },
+  "service_username": {
+    "message": "اسم مستخدم الخدمة"
+  },
+  "service_password": {
+    "message": "كلمة مرور الخدمة"
+  },
+  "default_value": {
+    "message": "القيمة الافتراضية"
+  },
+  "authorization": {
+    "message": "التفويض"
+  },
+  "download_task": {
+    "message": "مهمة تنزيل"
+  },
+  "stream_media_task": {
+    "message": "مهمة الوسائط المتدفقة"
+  },
+  "stream_media": {
+    "message": "وسائط متدفقة"
+  },
+  "task_type": {
+    "message": "نوع المهمة"
+  },
+  "preview_all": {
+    "message": "معاينة الكل"
+  },
+  "medium": {
+    "message": "متوسط"
+  },
+  "high": {
+    "message": "عالٍ"
+  },
+  "unexpected_error": {
+    "message": "خطأ غير متوقع"
+  },
+  "video_preview_performance_warning_": {
+    "message": "<b>تحذير الأداء:</b><br/>في البيئات التي لا تحتوي على فك تشفير عتادي (مثل Linux + NVIDIA)، قد يؤدي تشغيل عدة مقاطع فيديو بدقة 1080p أو أعلى في الوقت نفسه إلى استنفاد ذاكرة النظام أو ذاكرة الفيديو، مما يتسبب في تعطل هذا الامتداد أو تجميد النظام. لقد خضع هذا الامتداد لتحسينات مكثفة للتخفيف من هذه المشكلات، لكن تشغيل الفيديو لا يزال خاضعًا لآليات فك الترميز وإدارة الموارد الخاصة بالمتصفح نفسه، مما يجعل تجنبها بالكامل مستحيلاً."
+  }
+}

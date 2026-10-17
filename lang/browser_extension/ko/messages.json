@@ -1,701 +1,878 @@
 {
-    "appname": {
-        "message": "File Centipede"
-    },
-    "videos": {
-        "message": "비디오"
-    },
-    "audios": {
-        "message": "오디오"
-    },
-    "magnets": {
-        "message": "자석"
-    },
-    "type": {
-        "message": "유형"
-    },
-    "length_duration": {
-        "message": "길이 / 시간 / 크기"
-    },
-    "download": {
-        "message": "다운로드"
-    },
-    "cancel": {
-        "message": "취소"
-    },
-    "file": {
-        "message": "파일"
-    },
-    "files": {
-        "message": "파일"
-    },
-    "download_video": {
-        "message": "이 비디오 다운로드"
-    },
-    "download_audio": {
-        "message": "이 오디오 다운로드"
-    },
-    "download_link": {
-        "message": "이 링크 다운로드"
-    },
-    "download_image": {
-        "message": "이 이미지 다운로드"
-    },
-    "minutes": {
-        "message": "분"
-    },
-    "text": {
-        "message": "텍스트"
-    },
-    "download_all": {
-        "message": "모두 다운로드"
-    },
-    "copy_all": {
-        "message": "모두 복사"
-    },
-    "copy": {
-        "message": "복사"
-    },
-    "copy_addr_msg": {
-        "message": "주소 복사 성공"
-    },
-    "video_floating_bar": {
-        "message": "비디오 플로팅 표시줄"
-    },
-    "enable": {
-        "message": "활성화"
-    },
-    "disable": {
-        "message": "비활성화"
-    },
-    "yes": {
-        "message": "예"
-    },
-    "no": {
-        "message": "아니요"
-    },
-    "send_failed": {
-        "message": "전송 실패"
-    },
-    "download_send_failed_message_prefix": {
-        "message": "연결할 수 없음 "
-    },
-    "download_send_failed_message": {
-        "message": "설치되지 않았거나 실행되지 않았습니다. 작업을 선택하세요."
-    },
-    "browser": {
-        "message": "브라우저"
-    },
-    "download_manager": {
-        "message": "다운로드 관리자"
-    },
-    "download_managers": {
-        "message": "다운로드 관리자"
-    },
-    "recapture_address": {
-        "message": "주소 다시 잡기"
-    },
-    "refresh_address_msg_content": {
-        "message": "현재 웹 페이지를 주소가 잡힐 때까지 새로 고치지 마십시오. 다음 위치 찾기: "
-    },
-    "recapture_address_msg_success": {
-        "message": "새 주소를 성공적으로 잡았습니다. 정상적으로 다운로드되었는지 소프트웨어를 확인하세요."
-    },
-    "this_site": {
-        "message": "이 사이트"
-    },
-    "ignore_this_site": {
-        "message": "이 사이트 무시"
-    },
-    "potentials": {
-        "message": "잠재적"
-    },
-    "potential_urls": {
-        "message": "잠재적인 URL"
-    },
-    "potential_keys": {
-        "message": "잠재적인 키"
-    },
-    "rules": {
-        "message": "규칙"
-    },
-    "filename": {
-        "message": "파일 이름"
-    },
-    "filetypes": {
-        "message": "파일 유형"
-    },
-    "domain": {
-        "message": "도메인"
-    },
-    "settings": {
-        "message": "설정"
-    },
-    "others": {
-        "message": "기타"
-    },
-    "preview": {
-        "message": "미리 보기"
-    },
-    "save": {
-        "message": "저장"
-    },
-    "add": {
-        "message": "추가"
-    },
-    "edit": {
-        "message": "편집"
-    },
-    "remove": {
-        "message": "제거"
-    },
-    "clear": {
-        "message": "지우기"
-    },
-    "general": {
-        "message": "일반"
-    },
-    "deep_analysis": {
-        "message": "깊은 분석"
-    },
-    "duplicated_row": {
-        "message": "중복된 행"
-    },
-    "duplicated_name": {
-        "message": "중복된 이름"
-    },
-    "service": {
-        "message": "서비스"
-    },
-    "service_password": {
-        "message": "서비스 비밀번호"
-    },
-    "extension": {
-        "message": "확장"
-    },
-    "css_selector": {
-        "message": "CSS 선택기"
-    },
-    "do_not_download": {
-        "message": "다운로드하지 않음"
-    },
-    "capture_other_file_types": {
-        "message": "다른 파일 유형 캡처"
-    },
-    "file_unsuport_preview": {
-        "message": "이 파일을 미리 보기할 수 없습니다."
-    },
-    "unsuport_m3u8_preview": {
-        "message": "브라우저가 m3u8 파일 미리 보기를 지원하지 않습니다."
-    },
-    "invalid_domain": {
-        "message": "유효하지 않은 도메인."
-    },
-    "invalid_css_selector": {
-        "message": "유효하지 않은 CSS 선택기."
-    },
-    "filter": {
-        "message": "필터"
-    },
-    "filter_out": {
-        "message": "필터링 제외"
-    },
-    "more": {
-        "message": "더 보기"
-    },
-    "name": {
-        "message": "이름"
-    },
-    "collector": {
-        "message": "수집기"
-    },
-    "collector_mode": {
-        "message": "수집기 모드"
-    },
-    "record": {
-        "message": "기록"
-    },
-    "determined": {
-        "message": "결정됨"
-    },
-    "uncertain": {
-        "message": "불확실한"
-    },
-    "segments": {
-        "message": "세그먼트"
-    },
-    "hide_low_resolution": {
-        "message": "낮은 해상도 숨기기"
-    },
-    "all": {
-        "message": "모두"
-    },
-    "adverts": {
-        "message": "광고"
-    },
-    "adverts_detection": {
-        "message": "광고 감지"
-    },
-    "resolution": {
-        "message": "해상도"
-    },
-    "play_all": {
-        "message": "모두 재생"
-    },
-    "pause_all": {
-        "message": "모두 일시 중지"
-    },
-    "load_all": {
-        "message": "모두 로드"
-    },
-    "brute_force_search": {
-        "message": "무차별 검색"
-    },
-    "readme": {
-        "message": "자세한 내용"
-    },
-    "help": {
-        "message": "도움말"
-    },
-    "start": {
-        "message": "시작"
-    },
-    "stop": {
-        "message": "정지"
-    },
-    "port": {
-        "message": "포트"
-    },
-    "action": {
-        "message": "동작"
-    },
-    "actions": {
-        "message": "동작"
-    },
-    "are_u_sure": {
-        "message": "확실합니까?"
-    },
-    "crawler": {
-        "message": "크롤러"
-    },
-    "feature_not_implemented": {
-        "message": "이 기능은 현재 보류 중이며 아직 구현되지 않았습니다."
-    },
-    "remove_low_quality_videos": {
-        "message": "낮은 품질의 비디오 제거"
-    },
-    "remove_failed_loading_videos": {
-        "message": "로드에 실패한 비디오 제거"
-    },
-    "page_url": {
-        "message": "페이지 URL"
-    },
-    "file_size": {
-        "message": "파일 크기"
-    },
-    "file_duration": {
-        "message": "파일 지속 시간"
-    },
-    "playback_speed": {
-        "message": "재생 속도"
-    },
-    "video_duration": {
-        "message": "비디오 지속 시간"
-    },
-    "video_source": {
-        "message": "비디오 소스"
-    },
-    "read_from_cache": {
-        "message": "캐시에서 읽기"
-    },
-    "record_from_screen": {
-        "message": "화면 녹화"
-    },
-    "progress": {
-        "message": "진행 상황"
-    },
-    "allow_external_messages": {
-        "message": "외부 메시지 허용"
-    },
-    "example": {
-        "message": "예제"
-    },
-    "deep_analysis_text_": {
-        "message": "이 기능을 활성화하면 웹 페이지를 깊이 분석하여 숨겨진 비디오 또는 오디오 리소스를 찾습니다. 그러나 CPU 리소스를 더 많이 소모하게 됩니다. 페이지에 포함된 스크립트가 적거나 데이터 교환 빈도가 낮다면 추가 비용은 무시할 수 있습니다."
-    },
-    "allow_external_messages_text_": {
-        "message": "외부 스크립트가 이 확장자로 메시지를 보낼 수 있도록 허용합니다. 이 기능은 타사 쿼리 인터페이스로 대체할 수 있습니다."
-    },
-    "filename_rule_tips_": {
-        "message": "CSS 선택기 규칙을 사용하여 웹 페이지에서 지정된 요소의 텍스트를이 도메인 아래 미디어 파일의 기본 파일 이름으로 가져옵니다. 가져오기에 실패하면 여전히 제목이나 og:title을 파일 이름으로 계속 사용합니다."
-    },
-    "download_manager_tip_": {
-        "message": "파일을 다운로드 할 때 기본적으로 사용되는 다운로드 관리자입니다."
-    },
-    "collector_mode_tip_": {
-        "message": "기록된 모든 웹 페이지에서 포착한 미디어 리소스를<br/> 기록하고 필요할 때 대량 미리보기 및 필터링을<br/> 수행하여 반복 작업을 줄입니다."
-    },
-    "collector_notify_": {
-        "message": "수집기 모드는 창이 열려있을 때에만 유효합니다. 이 창을 닫으면 모든 기록이 사라집니다. 브라우저 및 웹 사이트의 다운로드 체인 규칙 제한으로 일부 비디오는 미리 볼 수 없을 수 있습니다. 일부 비디오는 미리 볼 수 없지만 다운로드할 수 있습니다. 일부 비디오는 미리 볼 수 없고 다운로드할 수 없을 수 있습니다."
-    },
-    "collector_mode_help_text_": {
-        "message": "수집기 모드는 열릴 때 현재 모든 탭에서 이미 가져온 미디어 리소스를 먼저 나열한 후 그 후에 가져온 리소스도 콜렉터 모드 목록에 추가합니다. 창을 닫으면이 모든 기록이 사라집니다. 브라우저의 제한으로 인해 비디오 수가 5000 개를 초과하면 더 이상 Referer HTTP 헤더를 설정할 수 없으며 일부 웹 사이트 리소스는 미리 볼 수 없습니다. 브라우저는 HTTP 동시 연결에 제한이 있어 동시에 너무 많은 비디오를 재생할 수 없으며 비디오 요소의 생성 수도 제한되어 있습니다(크롬에서 약 100 개). 이로 인해 많은 메모리 및 CPU 리소스가 소모됩니다. 최적화: 모든 미리 보기된 비디오는 스크롤 위치에 따라 동적으로로드되며 보이지 않는 비디오는 자동으로 제거되고 비디오의 스냅 샷이 저장되며 다시 보일 때 자동으로 다시 만들어집니다. 네트워크가 나쁜 경우 '모두 재생'을 활성화하면 간헐적으로 일시 중지될 수 있습니다. 콜렉터 모드는 현재 베타 버전이므로 문제가 있으면 피드백을 환영합니다."
-    },
-    "settings_tip_": {
-        "message": "확장 프로그램의 상세 설정"
-    },
-    "select_element_tip_": {
-        "message": "웹 페이지에서 요소를 선택하고이 도메인 아래의 미디어 파일의 파일 이름 가져오기 규칙을 설정하며 비디오/오디오 등을 기록합니다."
-    },
-    "preview_notify_": {
-        "message": "브라우저 및 웹 사이트의 다운로드 방지 규칙으로 인해 모든 비디오를 미리 볼 수 있는 것은 아닙니다. 일부 비디오는 미리 볼 수 없지만 다운로드할 수 있습니다. 일부 비디오는 미리 볼 수 없고 다운로드할 수 없을 수 있습니다."
-    },
-    "resources": {
-        "message": "리소스"
-    },
-    "res_explorer": {
-        "message": "리소스 탐색기"
-    },
-    "res_explorer_tip_": {
-        "message": "현재 웹사이트의 모든 리소스, 이미지, 스크립트, 문서 및 사용자 지정 파일 유형을 나열합니다."
-    },
-    "resolutions": {
-        "message": "해상도"
-    },
-    "use_browser_for_downloading": {
-        "message": "브라우저를 사용하여 다운로드"
-    },
-    "excluded_from_collector_mode": {
-        "message": "수집기 모드에서 제외됨"
-    },
-    "site_settings": {
-        "message": "사이트 설정"
-    },
-    "images": {
-        "message": "이미지"
-    },
-    "scripts": {
-        "message": "스크립트"
-    },
-    "custom": {
-        "message": "사용자 지정"
-    },
-    "custom_file_rules": {
-        "message": "사용자 지정 규칙"
-    },
-    "filename_rules": {
-        "message": "파일 이름 규칙"
-    },
-    "HTTP_res_request_monitoring": {
-        "message": "HTTP 리소스 요청 모니터링"
-    },
-    "HTTP_res_request_monitoring_tips_": {
-        "message": "HTTP 리소스 요청 모니터링을 활성화하면 리소스 탐색기가 닫혀 있어도 웹 페이지에 모든 리소스를 기록할 수 있습니다. 즉, 현재 표시되지 않거나 제거되지 않은 리소스를 추적할 수 있습니다. 그러나 리소스 탐색기가 이미 열려 있는 경우 이 기능을 켜도 추가적인 이점이 없습니다. 리소스 탐색기가 열려 있지 않은 경우에도 이 기능은 기록된 데이터를 저장하는 데 더 많은 메모리를 사용한다는 점을 명심하세요."
-    },
-    "open_with_new_tab": {
-        "message": "새 탭으로 열기"
-    },
-    "select_all": {
-        "message": "모두 선택"
-    },
-    "unselect_all": {
-        "message": "모두 선택 취소"
-    },
-    "remove_selected": {
-        "message": "선택 항목 제거"
-    },
-    "download_selected": {
-        "message": "선택 항목 다운로드"
-    },
-    "size": {
-        "message": "크기"
-    },
-    "width": {
-        "message": "너비"
-    },
-    "height": {
-        "message": "높이"
-    },
-    "sorting": {
-        "message": "정렬"
-    },
-    "create_rule": {
-        "message": "규칙 만들기"
-    },
-    "edit_rule": {
-        "message": "규칙 편집"
-    },
-    "rule": {
-        "message": "규칙"
-    },
-    "unselect": {
-        "message": "선택 취소"
-    },
-    "dark": {
-        "message": "어두운"
-    },
-    "too_many_tasks_download_warning_": {
-        "message": "%d개의 다운로드 작업을 보낼 준비가 되었습니다. 이로 인해 여러 개의 팝업 창이 나타날 수 있습니다. 계속하시겠습니까?"
-    },
-    "exclude_cross_origin_resources": {
-        "message": "교차 출처 리소스 제외"
-    },
-    "error": {
-        "message": "오류"
-    },
-    "apply_to": {
-        "message": "적용"
-    },
-    "all_sites": {
-        "message": "모든 사이트"
-    },
-    "file_extension": {
-        "message": "파일 확장자"
-    },
-    "name_cannot_be_empty": {
-        "message": "이름은 비워둘 수 없습니다"
-    },
-    "host_cannot_be_empty": {
-        "message": "호스트는 비워둘 수 없습니다"
-    },
-    "invalid_settings": {
-        "message": "잘못된 설정"
-    },
-    "download_exclusions": {
-        "message": "다운로드 제외"
-    },
-    "planned_no_implemented_": {
-        "message": "계획되었지만 실행되지 않았습니다."
-    },
-    "rule_name_duplicated": {
-        "message": "규칙 이름이 중복되었습니다"
-    },
-    "attr_name": {
-        "message": "속성 이름"
-    },
-    "custom_rule_selector_tips_": {
-        "message": "CSS 선택기를 사용하여 웹페이지에서 DOM 요소를 쿼리하고 선택한 요소의 속성 또는 텍스트 내용에서 URL 주소를 추출합니다.<br/> 예를 들어, 태그의 'href' 속성에서 URL을 검색할 수 있습니다."
-    },
-    "custom_rule_selector_attr_name_tips_": {
-        "message": "지정된 CSS 선택기를 사용하여 요소가 일치하면 지정된 속성 이름에서 내용을 추출합니다. 텍스트 내용을 추출하려면 대신 컬리 괄호 {}를 사용합니다."
-    },
-    "custom_rule_url_regexp_tips_": {
-        "message": "JavaScript 정규 표현식을 사용하여 모든 URL 주소를 일치시킵니다.<br/> (참고: 정규 표현식을 사용하면 웹페이지의 성능에 영향을 미칠 수 있습니다.)"
-    },
-    "url_conversion": {
-        "message": "URL 변환"
-    },
-    "relative_URL_to_absolute_URL_tips_": {
-        "message": "상대 URL을 절대 URL로 변환합니다.<br/>예를들면: /123/123.txt -> http://xxxx/123/123.txt"
-    },
-    "note": {
-        "message": "참고"
-    },
-    "custom_rule_tips_": {
-        "message": "여러 설정을 선택하면 이 모든 설정이 일치하는 경우에만 URL이 유효한 것으로 간주됩니다."
-    },
-    "media_files": {
-        "message": "미디어 파일"
-    },
-    "types": {
-        "message": "유형"
-    },
-    "configs": {
-        "message": "구성"
-    },
-    "selected": {
-        "message": "선택됨"
-    },
-    "remove_failed_loading_images": {
-        "message": "로드 실패한 이미지 제거"
-    },
-    "third_party_query_interfaces": {
-        "message": "타사 쿼리 인터페이스"
-    },
-    "interface": {
-        "message": "인터페이스"
-    },
-    "implicit": {
-        "message": "암묵적"
-    },
-    "explicit": {
-        "message": "명시적"
-    },
-    "data_source": {
-        "message": "데이터 소스"
-    },
-    "test": {
-        "message": "테스트"
-    },
-    "provider": {
-        "message": "제공자"
-    },
-    "provider_website": {
-        "message": "제공자 웹사이트"
-    },
-    "optional": {
-        "message": "선택사항"
-    },
-    "interface_type": {
-        "message": "인터페이스 유형"
-    },
-    "file_type": {
-        "message": "파일 유형"
-    },
-    "window_width": {
-        "message": "창 너비"
-    },
-    "window_height": {
-        "message": "창 높이"
-    },
-    "icon": {
-        "message": "아이콘"
-    },
-    "visible_element": {
-        "message": "보이는 요소"
-    },
-    "visible_elements": {
-        "message": "보이는 요소"
-    },
-    "hidden_elements": {
-        "message": "숨겨진 요소"
-    },
-    "data_format": {
-        "message": "데이터 형식"
-    },
-    "documentation": {
-        "message": "문서"
-    },
-    "host_match": {
-        "message": "호스트 일치"
-    },
-    "path_match": {
-        "message": "경로 일치"
-    },
-    "hosts": {
-        "message": "호스트"
-    },
-    "paths": {
-        "message": "경로"
-    },
-    "host_match_placeholder_": {
-        "message": "입력 상자에서 포트를 제외한 호스트 주소 (도메인 이름 또는 IP)를 일치시킵니다. 한 줄당 하나의 주소입니다."
-    },
-    "path_match_placeholder_": {
-        "message": "위의 호스트 주소에 해당하는 경로를 일치시킵니다. 각 경로는 '/'로 시작해야 하며, 정규식을 사용할 수 있습니다. 한 줄당 하나의 경로입니다."
-    },
-    "window": {
-        "message": "창"
-    },
-    "iframe": {
-        "message": "Iframe"
-    },
-    "hidden_iframe": {
-        "message": "숨겨진 iframe"
-    },
-    "one_css_selector_per_line": {
-        "message": "한 줄당 하나의 CSS 선택기"
-    },
-    "response_data_type": {
-        "message": "응답 데이터 유형"
-    },
-    "trash_script_code": {
-        "message": "스크립트 코드 삭제"
-    },
-    "behaviors": {
-        "message": "행동"
-    },
-    "embed_code": {
-        "message": "임베드 코드"
-    },
-    "import": {
-        "message": "가져오기"
-    },
-    "export": {
-        "message": "내보내기"
-    },
-    "share": {
-        "message": "공유"
-    },
-    "public_lists": {
-        "message": "공개 목록"
-    },
-    "no_selected_rows": {
-        "message": "선택한 행 없음"
-    },
-    "override": {
-        "message": "재정의"
-    },
-    "override_duplicated_name_tips_": {
-        "message": "이름이 이미 존재합니다.<br/> 기존 설정을 덮어쓰시겠습니까?"
-    },
-    "version": {
-        "message": "버전"
-    },
-    "create_button": {
-        "message": "버튼 만들기"
-    },
-    "styles": {
-        "message": "스타일"
-    },
-    "CSS_injection": {
-        "message": "CSS 주입"
-    },
-    "insert_to": {
-        "message": "삽입"
-    },
-    "display_options": {
-        "message": "표시 옵션"
-    },
-    "invalid_create_btn_insert_to_": {
-        "message": "잘못된 설정: 버튼 만들기 -> 삽입"
-    },
-    "media_files_detection": {
-        "message": "미디어 파일 탐지"
-    },
-    "insertion_method": {
-        "message": "삽입 방법"
-    },
-    "trigger": {
-        "message": "트리거"
-    },
-    "script_code_cannot_be_empty": {
-        "message": "스크립트 코드는 비워둘 수 없습니다."
-    },
-    "troubleshooting": {
-        "message": "문제 해결"
-    },
-    "invalid_data": {
-        "message": "잘못된 데이터"
-    },
-    "description": {
-        "message": "설명"
-    },
-    "description_note_": {
-        "message": "설명은 가능한 한 짧게 해주세요."
-    },
-    "download_exclusions_help_": {
-        "message": "다운로드 작업을 시작하면 브라우저가 지정된 설정을 충족하면 다운로드를 처리합니다. 이 옵션은 다른 모든 설정보다 우선 순위가 높습니다. 그러나 캡처된 비디오 및 오디오 파일에는 적용되지 않는다는 점을 명심하세요. 이러한 파일의 경우 브라우저의 내장 다운로드 도구가 이를 처리하도록 설계되지 않았기 때문에 다운로드 관리자가 계속 사용됩니다."
-    },
-    "custom_file_rules_help_": {
-        "message": "가사나 자막과 같은 특정 파일 유형에 대한 사용자 지정 규칙을 만들 수 있습니다. 웹페이지에 이러한 리소스가 포함되어 있는 한 이러한 리소스가 감지됩니다. 감지된 리소스는 오른쪽 상단의 팝업 사용자 지정 섹션과 리소스 탐색기에 표시됩니다."
-    },
-    "site_settings_help_": {
-        "message": "각 웹사이트에는 고유한 개별 설정이 있습니다. 팝업의 \"이 웹사이트\" 섹션에서 원하는 옵션을 선택하면 해당 웹사이트에 대한 설정이 자동으로 생성됩니다. 웹사이트 설정의 사용자 지정 파일 규칙은 해당 웹사이트에만 적용됩니다."
-    },
-    "third_party_interface_help_": {
-        "message": "타사 쿼리 인터페이스와 파일 감지 기능은 서로 다른 용도로 사용됩니다. <br/>일부 특수 처리된 웹사이트에서는 파일이 쉽게 감지되지 않을 수 있습니다. 이 기능은 이러한 문제를 해결하기 위해 설계되었습니다! 스크립트를 작성하여 특정 웹 페이지에서 파일 다운로드 링크를 쉽게 추출하거나 HTTP 상호 작용을 사용하여 다른 서버나 로컬 응용 프로그램의 파일을 확인할 수 있습니다. 유사한 작업을 수행할 수 있는 타사 응용 프로그램도 있지만, 이 기능은 원클릭 다운로드로 프로세스를 간소화하여 전반적인 효율성을 향상시킵니다."
-    },
-    "media_files_detection_text_": {
-        "message": "미디어 파일 감지 기능을 활성화하거나 비활성화합니다."
-    },
-    "deep_analysis_res_text_": {
-        "message": "이미지 및 스크립트와 같은 리소스 파일의 심층 탐지를 활성화하거나 비활성화합니다. <br/>이 기능을 활성화하면 더 많은 잠재적 리소스 파일을 식별하는 데 도움이 될 수 있습니다. <br/> 리소스 관리자 기능을 사용하지 않는 경우 이 옵션을 비활성화할 수 있습니다. <br/> 심층 분석을 완전히 비활성화하려면 관련된 모든 옵션을 꺼야 합니다."
-    },
-    "deep_analysis_customs_text_": {
-        "message": "이 옵션은 딥 분석이 사용자 지정 파일 규칙과도 일치하는지 여부를 결정합니다.<br/> 참고: 사용자 지정 파일 규칙에 정규 표현식이 포함된 경우 웹페이지의 성능에 영향을 미칠 수 있습니다. <br/> 깊은 분석을 완전히 비활성화하려면 관련된 모든 옵션을 꺼야 합니다."
-    },
-    "loading": {
-        "message": "로드 중"
-    }
+  "subtitles": {
+    "message": "자막"
+  },
+  "one_css_selector_per_line": {
+    "message": "한 줄당 하나의 CSS 선택기"
+  },
+  "hidden_iframe": {
+    "message": "숨겨진 iframe"
+  },
+  "file_duration": {
+    "message": "파일 지속 시간"
+  },
+  "iframe": {
+    "message": "아이프레임"
+  },
+  "download_exclusions": {
+    "message": "다운로드 제외"
+  },
+  "path_match": {
+    "message": "경로 일치"
+  },
+  "record_from_screen": {
+    "message": "화면 녹화"
+  },
+  "host_match": {
+    "message": "호스트 일치"
+  },
+  "data_format": {
+    "message": "데이터 형식"
+  },
+  "visible_element": {
+    "message": "보이는 요소"
+  },
+  "icon": {
+    "message": "아이콘"
+  },
+  "note": {
+    "message": "참고"
+  },
+  "download_audio": {
+    "message": "이 오디오 다운로드"
+  },
+  "media_files_detection": {
+    "message": "미디어 파일 탐지"
+  },
+  "window_height": {
+    "message": "창 높이"
+  },
+  "magnets": {
+    "message": "마그넷"
+  },
+  "window_width": {
+    "message": "창 너비"
+  },
+  "interface_type": {
+    "message": "인터페이스 유형"
+  },
+  "preview_notify_": {
+    "message": "브라우저 제한 및 웹사이트 다운로드 방지 규칙으로 인해 모든 동영상을 미리 볼 수는 없습니다.<br/> 일부 동영상은 미리 볼 수 없지만 다운로드할 수 있습니다.<br/> 일부 동영상은 미리 볼 수 없고 다운로드할 수 없습니다."
+  },
+  "relative_URL_to_absolute_URL_tips_": {
+    "message": "상대 URL을 절대 URL로 변환합니다.<br/>예를들면: /123/123.txt -> http://xxxx/123/123.txt"
+  },
+  "optional": {
+    "message": "선택사항"
+  },
+  "download_manager_tip_": {
+    "message": "파일을 다운로드 할 때 기본적으로 사용되는 다운로드 관리자입니다."
+  },
+  "implicit": {
+    "message": "암묵적"
+  },
+  "window": {
+    "message": "창"
+  },
+  "selected": {
+    "message": "선택됨"
+  },
+  "types": {
+    "message": "유형"
+  },
+  "adverts_detection": {
+    "message": "광고 감지"
+  },
+  "media_files": {
+    "message": "미디어 파일"
+  },
+  "styles": {
+    "message": "스타일"
+  },
+  "url_conversion": {
+    "message": "URL 변환"
+  },
+  "custom_rule_selector_attr_name_tips_": {
+    "message": "지정된 CSS 선택기를 사용하여 요소가 일치하면 지정된 속성 이름에서 내용을 추출합니다. 텍스트 내용을 추출하려면 대신 컬리 괄호 {}를 사용합니다."
+  },
+  "interface": {
+    "message": "인터페이스"
+  },
+  "paths": {
+    "message": "경로"
+  },
+  "adverts": {
+    "message": "광고"
+  },
+  "res_explorer": {
+    "message": "리소스 탐색기"
+  },
+  "duplicated_name": {
+    "message": "중복된 이름"
+  },
+  "visible_elements": {
+    "message": "보이는 요소"
+  },
+  "send_failed": {
+    "message": "전송 실패"
+  },
+  "copy_all": {
+    "message": "모두 복사"
+  },
+  "uncertain": {
+    "message": "불확실한"
+  },
+  "download": {
+    "message": "다운로드"
+  },
+  "invalid_css_selector": {
+    "message": "유효하지 않은 CSS 선택기."
+  },
+  "images": {
+    "message": "이미지"
+  },
+  "enable": {
+    "message": "활성화"
+  },
+  "potential_urls": {
+    "message": "잠재적인 URL"
+  },
+  "allow_external_messages": {
+    "message": "외부 메시지 허용"
+  },
+  "max": {
+    "message": "최대"
+  },
+  "download_link": {
+    "message": "이 링크 다운로드"
+  },
+  "pause_all": {
+    "message": "모두 일시 중지"
+  },
+  "minutes": {
+    "message": "분"
+  },
+  "download_all": {
+    "message": "모두 다운로드"
+  },
+  "yes": {
+    "message": "예"
+  },
+  "remove": {
+    "message": "제거"
+  },
+  "clear": {
+    "message": "지우기"
+  },
+  "video_duration": {
+    "message": "비디오 지속 시간"
+  },
+  "create_rule": {
+    "message": "규칙 만들기"
+  },
+  "css_selector": {
+    "message": "CSS 선택기"
+  },
+  "download_send_failed_message_prefix": {
+    "message": "연결할 수 없음 "
+  },
+  "HTTP_res_request_monitoring": {
+    "message": "HTTP 리소스 요청 모니터링"
+  },
+  "filetypes": {
+    "message": "파일 유형"
+  },
+  "domain": {
+    "message": "도메인"
+  },
+  "data_source": {
+    "message": "데이터 소스"
+  },
+  "rule": {
+    "message": "규칙"
+  },
+  "invalid_domain": {
+    "message": "유효하지 않은 도메인."
+  },
+  "trash_script_code": {
+    "message": "스크립트 코드 삭제"
+  },
+  "name": {
+    "message": "이름"
+  },
+  "edit_rule": {
+    "message": "규칙 편집"
+  },
+  "export": {
+    "message": "내보내기"
+  },
+  "all": {
+    "message": "모두"
+  },
+  "version": {
+    "message": "버전"
+  },
+  "CSS_injection": {
+    "message": "CSS 주입"
+  },
+  "more": {
+    "message": "더 보기"
+  },
+  "username": {
+    "message": "사용자 이름"
+  },
+  "password": {
+    "message": "비밀번호"
+  },
+  "download_manager": {
+    "message": "다운로드 관리자"
+  },
+  "invalid_create_btn_insert_to_": {
+    "message": "잘못된 설정: 버튼 만들기 -> 삽입"
+  },
+  "description": {
+    "message": "설명"
+  },
+  "video_floating_bar": {
+    "message": "비디오 플로팅 표시줄"
+  },
+  "custom_file_rules_help_": {
+    "message": "가사나 자막과 같은 특정 파일 유형에 대한 사용자 지정 규칙을 만들 수 있습니다. 웹페이지에 이러한 리소스가 포함되어 있는 한 이러한 리소스가 감지됩니다. 감지된 리소스는 오른쪽 상단의 팝업 사용자 지정 섹션과 리소스 탐색기에 표시됩니다."
+  },
+  "file": {
+    "message": "파일"
+  },
+  "documentation": {
+    "message": "문서"
+  },
+  "ignore_this_site": {
+    "message": "이 사이트 무시"
+  },
+  "page_url": {
+    "message": "페이지 URL"
+  },
+  "script_code_cannot_be_empty": {
+    "message": "스크립트 코드는 비워둘 수 없습니다."
+  },
+  "copy_addr_msg": {
+    "message": "주소 복사 성공"
+  },
+  "trigger": {
+    "message": "트리거"
+  },
+  "duplicated_row": {
+    "message": "중복된 행"
+  },
+  "remove_low_quality_videos": {
+    "message": "낮은 품질의 비디오 제거"
+  },
+  "add": {
+    "message": "추가"
+  },
+  "readme": {
+    "message": "자세한 내용"
+  },
+  "insertion_method": {
+    "message": "삽입 방법"
+  },
+  "behaviors": {
+    "message": "행동"
+  },
+  "response_data_type": {
+    "message": "응답 데이터 유형"
+  },
+  "filter": {
+    "message": "필터"
+  },
+  "all_sites": {
+    "message": "모든 사이트"
+  },
+  "preview": {
+    "message": "미리 보기"
+  },
+  "third_party_query_interfaces": {
+    "message": "타사 쿼리 인터페이스"
+  },
+  "select_element_tip_": {
+    "message": "웹 페이지에서 요소를 선택하고이 도메인 아래의 미디어 파일의 파일 이름 가져오기 규칙을 설정하며 비디오/오디오 등을 기록합니다."
+  },
+  "copy": {
+    "message": "복사"
+  },
+  "edit": {
+    "message": "편집"
+  },
+  "scripts": {
+    "message": "스크립트"
+  },
+  "create_button": {
+    "message": "버튼 만들기"
+  },
+  "actions": {
+    "message": "동작"
+  },
+  "remove_failed_loading_images": {
+    "message": "로드 실패한 이미지 제거"
+  },
+  "brute_force_search": {
+    "message": "무차별 검색"
+  },
+  "hidden_elements": {
+    "message": "숨겨진 요소"
+  },
+  "invalid_data": {
+    "message": "잘못된 데이터"
+  },
+  "public_lists": {
+    "message": "공개 목록"
+  },
+  "file_type": {
+    "message": "파일 유형"
+  },
+  "recapture_address_msg_success": {
+    "message": "새 주소를 성공적으로 잡았습니다. 정상적으로 다운로드되었는지 소프트웨어를 확인하세요."
+  },
+  "insert_to": {
+    "message": "삽입"
+  },
+  "override": {
+    "message": "재정의"
+  },
+  "third_party_interface_help_": {
+    "message": "타사 쿼리 인터페이스와 파일 감지 기능은 서로 다른 용도로 사용됩니다. <br/>일부 특수 처리된 웹사이트에서는 파일이 쉽게 감지되지 않을 수 있습니다. 이 기능은 이러한 문제를 해결하기 위해 설계되었습니다! 스크립트를 작성하여 특정 웹 페이지에서 파일 다운로드 링크를 쉽게 추출하거나 HTTP 상호 작용을 사용하여 다른 서버나 로컬 응용 프로그램의 파일을 확인할 수 있습니다. 유사한 작업을 수행할 수 있는 타사 응용 프로그램도 있지만, 이 기능은 원클릭 다운로드로 프로세스를 간소화하여 전반적인 효율성을 향상시킵니다."
+  },
+  "media_files_detection_text_": {
+    "message": "미디어 파일 감지 기능을 활성화하거나 비활성화합니다."
+  },
+  "description_note_": {
+    "message": "설명은 가능한 한 짧게 해주세요."
+  },
+  "loading": {
+    "message": "로드 중"
+  },
+  "download_exclusions_help_": {
+    "message": "다운로드 작업을 시작하면 브라우저가 지정된 설정을 충족하면 다운로드를 처리합니다. 이 옵션은 다른 모든 설정보다 우선 순위가 높습니다. 그러나 캡처된 비디오 및 오디오 파일에는 적용되지 않는다는 점을 명심하세요. 이러한 파일의 경우 브라우저의 내장 다운로드 도구가 이를 처리하도록 설계되지 않았기 때문에 다운로드 관리자가 계속 사용됩니다."
+  },
+  "crawler": {
+    "message": "크롤러"
+  },
+  "service": {
+    "message": "서비스"
+  },
+  "port": {
+    "message": "포트"
+  },
+  "override_duplicated_name_tips_": {
+    "message": "이름이 이미 존재합니다.<br/> 기존 설정을 덮어쓰시겠습니까?"
+  },
+  "deep_analysis_customs_text_": {
+    "message": "이 옵션은 딥 분석이 사용자 지정 파일 규칙과도 일치하는지 여부를 결정합니다.<br/> 참고: 사용자 지정 파일 규칙에 정규 표현식이 포함된 경우 웹페이지의 성능에 영향을 미칠 수 있습니다. "
+  },
+  "unselect": {
+    "message": "선택 취소"
+  },
+  "collector": {
+    "message": "수집기"
+  },
+  "file_unsuport_preview": {
+    "message": "이 파일을 미리 보기할 수 없습니다."
+  },
+  "potentials": {
+    "message": "잠재적"
+  },
+  "resources": {
+    "message": "리소스"
+  },
+  "no_selected_rows": {
+    "message": "선택한 행 없음"
+  },
+  "explicit": {
+    "message": "명시적"
+  },
+  "extension": {
+    "message": "확장"
+  },
+  "configs": {
+    "message": "구성"
+  },
+  "record": {
+    "message": "기록"
+  },
+  "collector_mode": {
+    "message": "수집기 모드"
+  },
+  "path_match_placeholder_": {
+    "message": "위의 호스트 주소에 해당하는 경로를 일치시킵니다. 각 경로는 '/'로 시작해야 하며, 정규식을 사용할 수 있습니다. 한 줄당 하나의 경로입니다."
+  },
+  "action": {
+    "message": "동작"
+  },
+  "filter_out": {
+    "message": "필터링 제외"
+  },
+  "unsuport_m3u8_preview": {
+    "message": "브라우저가 m3u8 파일 미리 보기를 지원하지 않습니다."
+  },
+  "embed_code": {
+    "message": "임베드 코드"
+  },
+  "stop": {
+    "message": "정지"
+  },
+  "capture_other_file_types": {
+    "message": "다른 파일 유형 캡처"
+  },
+  "refresh_address_msg_content": {
+    "message": "현재 웹 페이지를 주소가 잡힐 때까지 새로 고치지 마십시오. 다음 위치 찾기: "
+  },
+  "text": {
+    "message": "텍스트"
+  },
+  "appname": {
+    "message": "파일 지네"
+  },
+  "import": {
+    "message": "가져오기"
+  },
+  "custom_rule_tips_": {
+    "message": "여러 설정을 선택하면 이 모든 설정이 일치하는 경우에만 URL이 유효한 것으로 간주됩니다."
+  },
+  "provider_website": {
+    "message": "제공자 웹사이트"
+  },
+  "deep_analysis": {
+    "message": "심층 분석"
+  },
+  "do_not_download": {
+    "message": "다운로드하지 않음"
+  },
+  "download_image": {
+    "message": "이 이미지 다운로드"
+  },
+  "download_managers": {
+    "message": "다운로드 관리자"
+  },
+  "site_settings": {
+    "message": "사이트 설정"
+  },
+  "cancel": {
+    "message": "취소"
+  },
+  "custom_file_rules": {
+    "message": "사용자 지정 파일 규칙"
+  },
+  "exclude_cross_origin_resources": {
+    "message": "교차 출처 리소스 제외"
+  },
+  "download_video": {
+    "message": "이 비디오 다운로드"
+  },
+  "display_options": {
+    "message": "표시 옵션"
+  },
+  "others": {
+    "message": "기타"
+  },
+  "hide_low_resolution": {
+    "message": "낮은 해상도 숨기기"
+  },
+  "files": {
+    "message": "파일"
+  },
+  "load_all": {
+    "message": "모두 로드"
+  },
+  "settings": {
+    "message": "설정"
+  },
+  "no": {
+    "message": "아니요"
+  },
+  "test": {
+    "message": "테스트"
+  },
+  "determined": {
+    "message": "결정됨"
+  },
+  "download_send_failed_message": {
+    "message": "설치되지 않았거나 실행되지 않았습니다."
+  },
+  "type": {
+    "message": "유형"
+  },
+  "filename": {
+    "message": "파일 이름"
+  },
+  "recapture_address": {
+    "message": "주소 다시 잡기"
+  },
+  "too_many_tasks_download_warning_": {
+    "message": "%d개의 다운로드 작업을 보낼 준비가 되었습니다. 이로 인해 여러 개의 팝업 창이 나타날 수 있습니다. 계속하시겠습니까?"
+  },
+  "segments": {
+    "message": "세그먼트"
+  },
+  "this_site": {
+    "message": "이 사이트"
+  },
+  "resolution": {
+    "message": "해상도"
+  },
+  "remove_failed_loading_videos": {
+    "message": "로드에 실패한 비디오 제거"
+  },
+  "are_u_sure": {
+    "message": "확실합니까?"
+  },
+  "help": {
+    "message": "도움말"
+  },
+  "share": {
+    "message": "공유"
+  },
+  "progress": {
+    "message": "진행 상황"
+  },
+  "settings_tip_": {
+    "message": "확장 프로그램의 상세 설정"
+  },
+  "play_all": {
+    "message": "모두 재생"
+  },
+  "videos": {
+    "message": "비디오"
+  },
+  "browser": {
+    "message": "브라우저"
+  },
+  "height": {
+    "message": "높이"
+  },
+  "potential_keys": {
+    "message": "잠재적인 키"
+  },
+  "start": {
+    "message": "시작"
+  },
+  "rules": {
+    "message": "규칙"
+  },
+  "file_size": {
+    "message": "파일 크기"
+  },
+  "custom_rule_url_regexp_tips_": {
+    "message": "JavaScript 정규 표현식을 사용하여 모든 URL 주소를 일치시킵니다.<br/> (참고: 정규 표현식을 사용하면 웹페이지의 성능에 영향을 미칠 수 있습니다.)"
+  },
+  "save": {
+    "message": "저장"
+  },
+  "troubleshooting": {
+    "message": "문제 해결"
+  },
+  "file_extension": {
+    "message": "파일 확장자"
+  },
+  "apply_to": {
+    "message": "적용"
+  },
+  "video_source": {
+    "message": "비디오 소스"
+  },
+  "audios": {
+    "message": "오디오"
+  },
+  "read_from_cache": {
+    "message": "캐시에서 읽기"
+  },
+  "general": {
+    "message": "일반"
+  },
+  "example": {
+    "message": "예제"
+  },
+  "deep_analysis_text_": {
+    "message": "이 기능을 활성화하면 웹 페이지를 깊이 분석하여 숨겨진 비디오 또는 오디오 리소스를 찾습니다. 그러나 CPU 리소스를 더 많이 소모하게 됩니다. 페이지에 포함된 스크립트가 적거나 데이터 교환 빈도가 낮다면 추가 비용은 무시할 수 있습니다."
+  },
+  "host_match_placeholder_": {
+    "message": "입력 상자에서 포트를 제외한 호스트 주소 (도메인 이름 또는 IP)를 일치시킵니다. 한 줄당 하나의 주소입니다."
+  },
+  "allow_external_messages_text_": {
+    "message": "외부 스크립트가 이 확장자로 메시지를 보낼 수 있도록 허용합니다. "
+  },
+  "filename_rule_tips_": {
+    "message": "CSS 선택기 규칙을 사용하여 웹 페이지에서 지정된 요소의 텍스트를이 도메인 아래 미디어 파일의 기본 파일 이름으로 가져옵니다. 가져오기에 실패하면 여전히 제목이나 og:title을 파일 이름으로 계속 사용합니다."
+  },
+  "collector_mode_tip_": {
+    "message": "기록된 모든 웹 페이지에서 포착한 미디어 리소스를<br/> 기록하고 필요할 때 대량 미리보기 및 필터링을<br/> 수행하여 반복 작업을 줄입니다."
+  },
+  "res_explorer_tip_": {
+    "message": "현재 웹사이트의 모든 리소스, 이미지, 스크립트, 문서 및 사용자 지정 파일 유형을 나열합니다."
+  },
+  "resolutions": {
+    "message": "해상도"
+  },
+  "use_browser_for_downloading": {
+    "message": "브라우저를 사용하여 다운로드"
+  },
+  "excluded_from_collector_mode": {
+    "message": "수집기 모드에서 제외됨"
+  },
+  "custom": {
+    "message": "사용자 지정"
+  },
+  "disable": {
+    "message": "비활성화"
+  },
+  "HTTP_res_request_monitoring_tips_": {
+    "message": "HTTP 리소스 요청 모니터링을 활성화하면 리소스 탐색기가 닫혀 있어도 웹 페이지에 모든 리소스를 기록할 수 있습니다. 즉, 현재 표시되지 않거나 제거되지 않은 리소스를 추적할 수 있습니다. 그러나 리소스 탐색기가 이미 열려 있는 경우 이 기능을 켜도 추가적인 이점이 없습니다. 리소스 탐색기가 열려 있지 않은 경우에도 이 기능은 기록된 데이터를 저장하는 데 더 많은 메모리를 사용한다는 점을 명심하세요."
+  },
+  "open_with_new_tab": {
+    "message": "새 탭으로 열기"
+  },
+  "select_all": {
+    "message": "모두 선택"
+  },
+  "hosts": {
+    "message": "호스트"
+  },
+  "deep_analysis_res_text_": {
+    "message": "이미지 및 스크립트와 같은 리소스 파일의 심층 탐지를 활성화하거나 비활성화합니다. <br/>이 기능을 활성화하면 더 많은 잠재적 리소스 파일을 식별하는 데 도움이 될 수 있습니다. <br/> 리소스 관리자 기능을 사용하지 않는 경우 이 옵션을 비활성화할 수 있습니다. "
+  },
+  "unselect_all": {
+    "message": "모두 선택 취소"
+  },
+  "remove_selected": {
+    "message": "선택 항목 제거"
+  },
+  "feature_not_implemented": {
+    "message": "이 기능은 현재 보류 중이며 아직 구현되지 않았습니다."
+  },
+  "download_selected": {
+    "message": "선택 항목 다운로드"
+  },
+  "provider": {
+    "message": "제공자"
+  },
+  "collector_notify_": {
+    "message": "수집기는 창이 열려 있을 때만 유효합니다. 창을 닫으면 모든 기록이 손실됩니다.<br/> 브라우저 제한 및 웹사이트 다운로드 체인 규칙으로 인해 모든 동영상을 미리 볼 수는 없습니다.<br/> 일부 동영상은 미리 볼 수 없지만 다운로드할 수는 있습니다.<br/> 일부 동영상은 미리 볼 수 없거나 다운로드할 수 없습니다."
+  },
+  "size": {
+    "message": "크기"
+  },
+  "width": {
+    "message": "너비"
+  },
+  "site_settings_help_": {
+    "message": "각 웹사이트에는 고유한 개별 설정이 있습니다. 팝업의 \"이 웹사이트\" 섹션에서 원하는 옵션을 선택하면 해당 웹사이트에 대한 설정이 자동으로 생성됩니다. 웹사이트 설정의 사용자 지정 파일 규칙은 해당 웹사이트에만 적용됩니다."
+  },
+  "sorting": {
+    "message": "정렬"
+  },
+  "planned_no_implemented_": {
+    "message": "계획되었지만 실행되지 않았습니다."
+  },
+  "dark": {
+    "message": "어두운"
+  },
+  "length_duration": {
+    "message": "길이 / 시간 / 크기"
+  },
+  "error": {
+    "message": "오류"
+  },
+  "playback_speed": {
+    "message": "재생 속도"
+  },
+  "custom_rule_selector_tips_": {
+    "message": "CSS 선택기를 사용하여 웹페이지에서 DOM 요소를 쿼리하고 선택한 요소의 속성 또는 텍스트 내용에서 URL 주소를 추출합니다.<br/> 예를 들어, 태그의 'href' 속성에서 URL을 검색할 수 있습니다."
+  },
+  "name_cannot_be_empty": {
+    "message": "이름은 비워둘 수 없습니다"
+  },
+  "invalid_settings": {
+    "message": "잘못된 설정"
+  },
+  "host_cannot_be_empty": {
+    "message": "호스트는 비워둘 수 없습니다"
+  },
+  "rule_name_duplicated": {
+    "message": "규칙 이름이 중복되었습니다"
+  },
+  "attr_name": {
+    "message": "속성 이름"
+  },
+  "filename_rules": {
+    "message": "파일 이름 규칙"
+  },
+  "disable_tooltips": {
+    "message": "툴팁 비활성화"
+  },
+  "title": {
+    "message": "제목"
+  },
+  "merge": {
+    "message": "병합"
+  },
+  "merge_tip_": {
+    "message": "비디오 및 오디오 병합"
+  },
+  "merge_warning_": {
+    "message": "목록에서 하나 이상의 비디오 및 오디오를 선택하십시오."
+  },
+  "deep_analysis_level": {
+    "message": "심층 분석 수준"
+  },
+  "fast": {
+    "message": "빠름"
+  },
+  "maximize": {
+    "message": "최대화"
+  },
+  "deep_analysis_level_tip_": {
+    "message": "리소스 감지의 경우 일반적으로 대부분의 사용 사례에서 기본 중간 설정으로 충분합니다.<br/>예상한 리소스가 감지되지 않으면 CPU 사용량이 늘어나더라도 수준을 높여보세요."
+  },
+  "download_and_merge": {
+    "message": "다운로드 및 병합"
+  },
+  "popup_filter_tip_": {
+    "message": "저장하려면 Enter를 누르세요."
+  },
+  "fast_forward": {
+    "message": "빨리감기"
+  },
+  "seconds": {
+    "message": "초"
+  },
+  "skip_intro": {
+    "message": "소개 건너뛰기"
+  },
+  "duration_length": {
+    "message": "기간"
+  },
+  "remove_failed_loading_audios": {
+    "message": "실패한 로딩 오디오 제거"
+  },
+  "remove_shot_videos": {
+    "message": "짧은 동영상 삭제"
+  },
+  "log": {
+    "message": "로그"
+  },
+  "timestamp": {
+    "message": "타임스탬프"
+  },
+  "max_resolution_limit": {
+    "message": "최대 해상도 제한"
+  },
+  "remove_high_quality_videos": {
+    "message": "고화질 동영상 삭제"
+  },
+  "disable_readme_notifications": {
+    "message": "Readme 알림 비활성화"
+  },
+  "max_resolution_limit_tips_": {
+    "message": "여러 해상도의 미디어 파일 스트리밍의 경우 최대 재생 해상도를 제한하세요."
+  },
+  "unsupported_media_merge_msg_": {
+    "message": "현재 단일 병합 작업으로 여러 스트리밍 미디어 파일을 표준 멀티미디어 파일과 결합하는 것은 지원되지 않습니다."
+  },
+  "push_type": {
+    "message": "푸시 유형"
+  },
+  "send_http_request": {
+    "message": "HTTP 요청 보내기"
+  },
+  "send_websocket_message": {
+    "message": "웹소켓 메시지 보내기"
+  },
+  "open_custom_protocol_url": {
+    "message": "맞춤 프로토콜 URL 열기"
+  },
+  "callback_message_type": {
+    "message": "콜백 메시지 유형"
+  },
+  "callback_message": {
+    "message": "콜백 메시지"
+  },
+  "notify": {
+    "message": "알림"
+  },
+  "message_box": {
+    "message": "메시지 상자"
+  },
+  "prefix": {
+    "message": "접두사"
+  },
+  "suffix": {
+    "message": "접미사"
+  },
+  "connect_timeout": {
+    "message": "연결 시간 초과"
+  },
+  "URI_template": {
+    "message": "URI 템플릿"
+  },
+  "protocol": {
+    "message": "프로토콜"
+  },
+  "encode": {
+    "message": "인코딩"
+  },
+  "decode": {
+    "message": "디코딩"
+  },
+  "message": {
+    "message": "메시지"
+  },
+  "method": {
+    "message": "방법"
+  },
+  "custom_protocol": {
+    "message": "사용자 지정 프로토콜"
+  },
+  "service_host": {
+    "message": "서비스 호스트"
+  },
+  "service_port": {
+    "message": "서비스 포트"
+  },
+  "service_username": {
+    "message": "서비스 사용자 이름"
+  },
+  "service_password": {
+    "message": "서비스 비밀번호"
+  },
+  "default_value": {
+    "message": "기본값"
+  },
+  "authorization": {
+    "message": "권한 부여"
+  },
+  "download_task": {
+    "message": "다운로드 작업"
+  },
+  "stream_media_task": {
+    "message": "미디어 작업 스트리밍"
+  },
+  "stream_media": {
+    "message": "미디어 스트리밍"
+  },
+  "task_type": {
+    "message": "작업 유형"
+  },
+  "preview_all": {
+    "message": "모두 미리보기"
+  },
+  "medium": {
+    "message": "중간"
+  },
+  "high": {
+    "message": "높음"
+  },
+  "unexpected_error": {
+    "message": "예상치 못한 오류"
+  },
+  "video_preview_performance_warning_": {
+    "message": "<b>성능 경고:</b><br/>하드웨어 디코딩이 없는 환경(예: Linux + NVIDIA)에서 1080p 이상으로 여러 동영상을 동시에 재생하면 시스템 메모리나 비디오 메모리가 소진되어 이 확장 프로그램이 충돌하거나 시스템이 정지될 수 있습니다. 이 확장 프로그램은 이러한 문제를 완화하기 위해 광범위한 최적화를 거쳤지만 비디오 재생은 여전히 브라우저 자체 디코딩 및 리소스 관리 메커니즘의 영향을 받기 때문에 완전히 피할 수는 없습니다."
+  }
 }

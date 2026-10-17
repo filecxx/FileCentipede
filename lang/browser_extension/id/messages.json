@@ -1,150 +1,162 @@
 {
-    "appname":{
-        "message": "File Centipede"
+    "subtitles": {
+        "message": "Subtitel"
     },
-    "videos": {
-        "message": "Video"
+    "one_css_selector_per_line": {
+        "message": "Satu pemilih CSS per baris"
     },
-    "audios": {
-        "message": "Audio"
+    "hidden_iframe": {
+        "message": "Iframe tersembunyi"
     },
-    "magnets": {
-        "message": "Magnet"
+    "file_duration": {
+        "message": "Durasi file"
     },
-    "type": {
-        "message": "Tipe"
+    "iframe": {
+        "message": "Iframe"
     },
-    "length_duration": {
-        "message": "Panjang / Durasi / Ukuran"
+    "download_exclusions": {
+        "message": "Pengecualian unduhan"
     },
-    "download": {
-        "message": "Unduh"
+    "path_match": {
+        "message": "Pencocokan jalur"
     },
-    "cancel": {
-        "message": "Batal"
+    "record_from_screen": {
+        "message": "Rekam dari layar"
     },
-    "file": {
-        "message": "File"
+    "host_match": {
+        "message": "Pencocokan host"
     },
-    "files": {
-        "message": "File"
+    "data_format": {
+        "message": "Format data"
     },
-    "download_video": {
-        "message": "Unduh video ini"
+    "visible_element": {
+        "message": "Elemen yang terlihat"
+    },
+    "icon": {
+        "message": "Ikon"
+    },
+    "note": {
+        "message": "Catatan"
     },
     "download_audio": {
         "message": "Unduh audio ini"
     },
-    "download_link": {
-        "message": "Unduh tautan ini"
+    "media_files_detection": {
+        "message": "Deteksi file media"
     },
-    "download_image": {
-        "message": "Unduh gambar ini"
+    "window_height": {
+        "message": "Tinggi jendela"
     },
-    "minutes": {
-        "message": "Menit"
+    "magnets": {
+        "message": "Magnet"
     },
-    "text": {
-        "message": "Teks"
+    "window_width": {
+        "message": "Lebar jendela"
     },
-    "download_all": {
-        "message": "Unduh semua"
+    "interface_type": {
+        "message": "Jenis antarmuka"
     },
-    "copy_all": {
-        "message": "Salin semua"
+    "preview_notify_": {
+        "message": "Karena keterbatasan browser dan aturan anti-unduhan situs web, tidak semua video dapat dipratinjau.<br/> Beberapa video tidak dapat dipratinjau tetapi dapat diunduh.<br/> Beberapa video tidak dapat dipratinjau dan tidak dapat diunduh."
     },
-    "copy": {
-        "message": "salin"
+    "relative_URL_to_absolute_URL_tips_": {
+        "message": "Ubah URL relatif menjadi URL absolut.<br/>Contoh: /123/123.txt -> http://xxxx/123/123.txt"
     },
-    "copy_addr_msg": {
-        "message": "Alamat berhasil disalin"
+    "optional": {
+        "message": "Opsional"
     },
-    "video_floating_bar": {
-        "message": "Bar mengambang"
+    "download_manager_tip_": {
+        "message": "Pengelola unduhan default yang digunakan saat mengunduh file."
     },
-    "enable": {
-        "message": "Aktifkan"
+    "implicit": {
+        "message": "Implisit"
     },
-    "disable": {
-        "message": "Nonaktifkan"
+    "window": {
+        "message": "Jendela"
     },
-    "yes": {
-        "message": "Ya"
+    "selected": {
+        "message": "Terpilih"
     },
-    "no": {
-        "message": "Tidak"
+    "types": {
+        "message": "Jenis"
+    },
+    "adverts_detection": {
+        "message": "Deteksi iklan"
+    },
+    "media_files": {
+        "message": "File media"
+    },
+    "styles": {
+        "message": "Gaya"
+    },
+    "url_conversion": {
+        "message": "Konversi URL"
+    },
+    "custom_rule_selector_attr_name_tips_": {
+        "message": "Setelah elemen dicocokkan menggunakan pemilih CSS yang ditentukan, ekstrak konten dari nama atribut yang ditentukan. Untuk mengekstrak konten teks, gunakan kurung kurawal {} sebagai gantinya."
+    },
+    "interface": {
+        "message": "Antarmuka"
+    },
+    "paths": {
+        "message": "Jalur"
+    },
+    "adverts": {
+        "message": "Iklan"
+    },
+    "res_explorer": {
+        "message": "Penjelajah sumber daya"
+    },
+    "duplicated_name": {
+        "message": "Nama duplikat"
+    },
+    "visible_elements": {
+        "message": "Elemen yang terlihat"
     },
     "send_failed": {
         "message": "Gagal mengirim"
     },
-    "browser": {
-        "message": "Browser"
+    "copy_all": {
+        "message": "Salin semua"
     },
-    "download_manager": {
-        "message": "Pengelola unduhan"
+    "uncertain": {
+        "message": "Tidak pasti"
     },
-    "download_managers": {
-        "message": "Download managers"
+    "download": {
+        "message": "Unduh"
     },
-    "download_send_failed_message_prefix": {
-        "message": "Tidak dapat terhubung ke "
+    "invalid_css_selector": {
+        "message": "Pemilih CSS tidak valid."
     },
-    "download_send_failed_message": {
-        "message": "entah tidak diinstal, atau tidak berjalan, pilih operasi."
+    "images": {
+        "message": "Gambar"
     },
-    "recapture_address": {
-        "message": "Ambil alamat ulang"
-    },
-    "recapture_address_msg_success": {
-        "message": "Pengambilan alamat ulang berhasil, harap buka aplikasi dan pastikan sedang mengunduh."
-    },
-    "refresh_address_msg_content": {
-        "message": "Sebelum alamat diambil, jangan refresh halaman saat ini, temukan: "
-    },
-    "this_site": {
-        "message": "This site"
-    },
-    "ignore_this_site": {
-        "message": "Abaikan situs ini"
-    },
-    "potentials": {
-        "message": "Potentials"
+    "enable": {
+        "message": "Aktifkan"
     },
     "potential_urls": {
         "message": "URL potensial"
     },
-    "potential_keys": {
-        "message": "Kunci Potensial"
+    "allow_external_messages": {
+        "message": "Izinkan pesan eksternal"
     },
-    "rules": {
-        "message": "Aturan"
+    "max": {
+        "message": "Maks"
     },
-    "filename": {
-        "message": "Nama file"
+    "download_link": {
+        "message": "Unduh tautan ini"
     },
-    "filetypes": {
-        "message": "Tipe file"
+    "pause_all": {
+        "message": "Jeda semua"
     },
-    "domain": {
-        "message": "Domain"
+    "minutes": {
+        "message": "Menit"
     },
-    "settings": {
-        "message": "Pengaturan"
+    "download_all": {
+        "message": "Unduh semua"
     },
-    "others": {
-        "message": "Lainnya"
-    },
-    "preview": {
-        "message": "Pratinjau"
-    },
-    "save": {
-        "message": "Simpan"
-    },
-    "add": {
-        "message": "Tambah"
-    },
-    "edit": {
-        "message": "Edit"
+    "yes": {
+        "message": "Ya"
     },
     "remove": {
         "message": "Hapus"
@@ -152,552 +164,715 @@
     "clear": {
         "message": "Bersihkan"
     },
-    "general": {
-        "message": "Umum"
+    "video_duration": {
+        "message": "Durasi video"
     },
-    "deep_analysis": {
-        "message": "Analisis mendalam"
-    },
-    "duplicated_row": {
-        "message": "Baris duplikat"
-    },
-    "duplicated_name": {
-        "message": "Duplicated name"
-    },
-    "service": {
-        "message": "Layanan"
-    },
-    "service_password": {
-        "message": "Kata sandi layanan"
-    },
-    "extension": {
-        "message": "Ekstensi"
+    "create_rule": {
+        "message": "Buat aturan"
     },
     "css_selector": {
         "message": "Pemilih CSS"
     },
-    "do_not_download": {
-        "message": "Jangan unduh"
+    "download_send_failed_message_prefix": {
+        "message": "Tidak dapat terhubung ke "
     },
-    "capture_other_file_types": {
-        "message": "Tangkap tipe file lainnya"
+    "HTTP_res_request_monitoring": {
+        "message": "Pemantauan permintaan sumber daya HTTP"
     },
-    "file_unsuport_preview": {
-        "message": "Anda tidak dapat melihat pratinjau file ini"
+    "filetypes": {
+        "message": "Tipe file"
     },
-    "unsuport_m3u8_preview": {
-        "message": "Browser web anda tidak mendukung pratinjau file m3u8."
+    "domain": {
+        "message": "Domain"
+    },
+    "data_source": {
+        "message": "Sumber data"
+    },
+    "rule": {
+        "message": "Aturan"
     },
     "invalid_domain": {
         "message": "Domain tidak valid."
     },
-    "invalid_css_selector": {
-        "message": "Pemilih css tidak valid."
-    },
-    "filter": {
-        "message": "Filter"
-    },
-    "filter_out": {
-        "message": "Tersaring"
-    },
-    "more": {
-        "message": "Lebih banyak lagi"
+    "trash_script_code": {
+        "message": "Kode skrip sampah"
     },
     "name": {
         "message": "Nama"
     },
-    "collector": {
-        "message": "Kolektor"
+    "edit_rule": {
+        "message": "Sunting aturan"
     },
-    "collector_mode": {
-        "message": "Mode Kolektor"
-    },
-    "record": {
-        "message": "Rekam"
-    },
-    "determined": {
-        "message": "Ditentukan"
-    },
-    "uncertain": {
-        "message": "Tidak pasti"
-    },
-    "segments": {
-        "message": "Segmen"
-    },
-    "hide_low_resolution": {
-        "message": "Sembunyikan resolusi rendah"
+    "export": {
+        "message": "Ekspor"
     },
     "all": {
         "message": "Semua"
     },
-    "adverts": {
-        "message": "Iklan"
+    "version": {
+        "message": "Versi"
     },
-    "adverts_detection": {
-        "message": "Deteksi iklan"
+    "CSS_injection": {
+        "message": "Injeksi CSS"
     },
-    "resolution": {
-        "message": "Resolusi"
+    "more": {
+        "message": "Lainnya"
     },
-    "play_all": {
-        "message": "Putar semua"
+    "username": {
+        "message": "Nama pengguna"
     },
-    "pause_all": {
-        "message": "Jeda semua"
+    "password": {
+        "message": "Kata sandi"
     },
-    "load_all": {
-        "message": "Muat semua"
+    "download_manager": {
+        "message": "Pengelola unduhan"
     },
-    "brute_force_search": {
-        "message": "Pencarian brute-force"
+    "invalid_create_btn_insert_to_": {
+        "message": "Pengaturan tidak valid: Buat tombol -> Sisipkan ke"
     },
-    "readme": {
-        "message": "Baca aku"
+    "description": {
+        "message": "Deskripsi"
     },
-    "help": {
-        "message": "Bantuan"
+    "video_floating_bar": {
+        "message": "Bilah mengambang video"
     },
-    "start": {
-        "message": "Mulai"
+    "custom_file_rules_help_": {
+        "message": "Anda dapat membuat aturan khusus untuk jenis file tertentu, seperti lirik atau subtitel. Selama halaman web berisi sumber daya ini, sumber daya tersebut akan terdeteksi. Sumber daya yang terdeteksi kemudian akan muncul di bagian kustom popup di sudut kanan atas, serta di penjelajah sumber daya."
     },
-    "stop": {
-        "message": "Berhenti"
+    "file": {
+        "message": "File"
     },
-    "port": {
-        "message": "Port"
+    "documentation": {
+        "message": "Dokumentasi"
     },
-    "action": {
-        "message": "Aksi"
+    "ignore_this_site": {
+        "message": "Abaikan situs ini"
     },
-    "actions": {
-        "message": "Aksi"
+    "page_url": {
+        "message": "URL halaman"
     },
-    "are_u_sure": {
-        "message": "Apa anda yakin?"
+    "script_code_cannot_be_empty": {
+        "message": "Kode skrip tidak boleh kosong."
     },
-    "crawler": {
-        "message": "Crawler"
+    "copy_addr_msg": {
+        "message": "Alamat berhasil disalin"
     },
-    "feature_not_implemented": {
-        "message": "Fitur ini saat ini dicadangkan dan belum diimplementasikan."
+    "trigger": {
+        "message": "Pemicu"
+    },
+    "duplicated_row": {
+        "message": "Baris duplikat"
     },
     "remove_low_quality_videos": {
         "message": "Hapus video berkualitas rendah"
     },
-    "remove_failed_loading_videos": {
-        "message": "Hapus video yang gagal dimuat"
+    "add": {
+        "message": "Tambah"
     },
-    "page_url": {
-        "message": "Halaman URL"
+    "readme": {
+        "message": "Baca saya"
     },
-    "file_size": {
-        "message": "Ukuran file"
+    "insertion_method": {
+        "message": "Metode penyisipan"
     },
-    "file_duration": {
-        "message": "Durasi file"
+    "behaviors": {
+        "message": "Perilaku"
     },
-    "playback_speed": {
-        "message": "Kecepatan pemutaran"
+    "response_data_type": {
+        "message": "Tipe data respons"
     },
-    "video_duration": {
-        "message": "Durasi video"
+    "filter": {
+        "message": "Filter"
     },
-    "video_source": {
-        "message": "Sumber video"
+    "all_sites": {
+        "message": "Semua situs"
     },
-    "read_from_cache": {
-        "message": "Baca dari cache"
+    "preview": {
+        "message": "Pratinjau"
     },
-    "record_from_screen": {
-        "message": "Rekam dari layar"
-    },
-    "progress": {
-        "message": "Progress"
-    },
-    "allow_external_messages": {
-        "message": "Izinkan pesan eksternal"
-    },
-    "example": {
-        "message": "Contoh"
-    },
-
-    "deep_analysis_text_": {
-        "message": "Mengaktifkan opsi ini akan melakukan analisis mendalam terhadap halaman web untuk menemukan sumber daya video atau audio yang tersembunyi,<br/> tetapi dengan mengorbankan sumber daya CPU yang lebih banyak.<br/> Jika halaman web memiliki skrip yang lebih sedikit atau frekuensi interaksi data yang rendah,<br/> konsumsi tambahan dapat diabaikan."
-    },
-    "allow_external_messages_text_": {
-        "message": "Allow external scripts to send messages to this extension; this feature can be replaced by the third-party query interface."
-    },
-    "filename_rule_tips_": {
-        "message": "Menggunakan aturan pemilih CSS untuk mengambil teks dari elemen tertentu di halaman web sebagai nama file pilihan untuk file media di domain tersebut.<br/> Jika pengambilan gagal, judul atau og:title masih akan digunakan sebagai nama file."
-    },
-    "download_manager_tip_": {
-        "message": "Pengelola unduhan default yang digunakan saat mengunduh file."
-    },
-    "collector_mode_tip_": {
-        "message": "Merekam semua sumber daya media yang diambil di halaman web,<br/> dan melakukan pratinjau batch dan pemfilteran bila diperlukan, <br/>mengurangi pekerjaan yang berulang."
-    },
-    "collector_notify_": {
-        "message": "Mode kolektor hanya efektif ketika jendela terbuka; menutup jendela akan menghilangkan semua rekaman.<br/> Karena keterbatasan browser dan aturan pengunduhan berantai pada situs web, tidak semua video dapat dipratinjau.<br/> Beberapa video tidak dapat dipratinjau tetapi dapat diunduh.<br/> Beberapa video tidak dapat dipratinjau dan tidak dapat diunduh."
-    },
-    "collector_mode_help_text_": {
-        "message": "Dalam mode Kolektor, ketika dibuka, awalnya akan mencantumkan semua sumber daya media yang diperoleh dari tab yang sedang terbuka, dan sumber daya yang baru diperoleh juga akan ditambahkan ke daftar mode Kolektor. Catatan ini akan hilang ketika jendela ditutup.<br/><br/>Perhatikan bahwa karena keterbatasan browser, ketika jumlah video melebihi 5000, rujukan header HTTP tidak dapat disetel, menyebabkan beberapa sumber daya di situs web tertentu tidak dapat dipratinjau.<br/><br/>Browser memiliki batasan pada koneksi HTTP yang bersamaan, mencegah terlalu banyak video diputar secara bersamaan dan membatasi jumlah elemen video yang dapat dibuat (sekitar 100 di Chrome), sehingga menghabiskan banyak memori dan sumber daya CPU.<br/><br/>Optimasi: Semua video yang dipratinjau dimuat secara dinamis berdasarkan posisi bilah gulir; video yang tidak terlihat dihapus secara otomatis dan cuplikannya disimpan. Mereka akan dibuat ulang ketika terlihat kembali, sehingga menyebabkan jeda terputus-putus jika 'Putar Semua' diaktifkan dan jaringan lambat.<br/><br/>Mode kolektor saat ini dalam versi beta; jangan ragu untuk memberikan umpan balik jika anda mengalami masalah."
-    },
-    "settings_tip_": {
-        "message": "Pengaturan terperinci untuk ekstensi."
+    "third_party_query_interfaces": {
+        "message": "Antarmuka kueri pihak ketiga"
     },
     "select_element_tip_": {
         "message": "Pilih elemen di halaman web, tetapkan aturan untuk mendapatkan nama file untuk file media di domain ini, dan rekam video/audio, dll."
     },
-    "preview_notify_": {
-        "message": "Karena keterbatasan browser dan aturan anti-unduhan situs web, tidak semua video dapat dipratinjau.<br/> Beberapa video tidak dapat dipratinjau tetapi dapat diunduh.<br/> Beberapa video tidak dapat dipratinjau dan tidak dapat diunduh."
+    "copy": {
+        "message": "Salin"
     },
-    "resources": {
-        "message": "Resources"
-    },
-    "res_explorer": {
-        "message": "Resource explorer"
-    },
-    "res_explorer_tip_": {
-        "message": "List all resources, images, scripts, documents, and custom file types in the current website."
-    },
-    "resolutions": {
-        "message": "Resolutions"
-    },
-    "use_browser_for_downloading": {
-        "message": "Use browser for downloading"
-    },
-    "excluded_from_collector_mode": {
-        "message": "Excluded from collector mode"
-    },
-    "site_settings": {
-        "message": "Site settings"
-    },
-    "images": {
-        "message": "Images"
+    "edit": {
+        "message": "Edit"
     },
     "scripts": {
-        "message": "Scripts"
-    },
-    "custom": {
-        "message": "Custom"
-    },
-    "custom_file_rules": {
-        "message": "Custom file rules"
-    },
-    "filename_rules": {
-        "message": "File name rules"
-    },
-    "HTTP_res_request_monitoring": {
-        "message": "HTTP Resource Request Monitoring"
-    },
-    "HTTP_res_request_monitoring_tips_": {
-        "message": "Enabling HTTP resource request monitoring lets you record all resources on web pages, even if the resource explorer is closed. This means you can track resources that aren't currently displayed or have been removed. However, if the resource explorer is already open, turning on this feature won't offer any extra advantages. Please keep in mind that this feature will use more memory to store the recorded data, even when the resource explorer is not open."
-    },
-    "open_with_new_tab": {
-        "message": "Open with new tab"
-    },
-    "select_all": {
-        "message": "Select all"
-    },
-    "unselect_all": {
-        "message": "Unselect all"
-    },
-    "remove_selected": {
-        "message": "Remove selected"
-    },
-    "download_selected": {
-        "message": "Download selected"
-    },
-    "size": {
-        "message": "Size"
-    },
-    "width": {
-        "message": "Width"
-    },
-    "height": {
-        "message": "Height"
-    },
-    "sorting": {
-        "message": "Sorting"
-    },
-    "create_rule": {
-        "message": "Create rule"
-    },
-    "edit_rule": {
-        "message": "Edit rule"
-    },
-    "rule": {
-        "message": "Rule"
-    },
-    "unselect": {
-        "message": "Unselect"
-    },
-    "dark": {
-        "message": "Dark"
-    },
-    "too_many_tasks_download_warning_": {
-        "message": "You have %d download tasks ready to send. This may result in multiple pop-up windows appearing. Do you want to continue?"
-    },
-    "exclude_cross_origin_resources": {
-        "message": "Exclude cross-origin resources"
-    },
-    "error": {
-        "message": "Error"
-    },
-    "apply_to": {
-        "message": "Apply to"
-    },
-    "all_sites": {
-        "message": "All sites"
-    },
-    "file_extension": {
-        "message": "File extension"
-    },
-    "name_cannot_be_empty": {
-        "message": "Name cannot be empty"
-    },
-    "host_cannot_be_empty": {
-        "message": "Host cannot be empty"
-    },
-    "invalid_settings": {
-        "message": "Invalid settings"
-    },
-    "download_exclusions": {
-        "message": "Download Exclusions"
-    },
-    "planned_no_implemented_": {
-        "message": "Planned but not implemented."
-    },
-    "rule_name_duplicated": {
-        "message": "Rule name is duplicated"
-    },
-    "attr_name": {
-        "message": "Attribute name"
-    },
-    "custom_rule_selector_tips_": {
-        "message": "Use CSS selectors to query DOM elements from a webpage and extract URL addresses from the attributes or text content of the selected elements.<br/> For example, you can retrieve the URL from the 'href' attribute of an a tag."
-    },
-    "custom_rule_selector_attr_name_tips_": {
-        "message": "Once an element is matched using the specified CSS selector, extract the content from the designated attribute name. To extract the text content, use curly braces {} instead."
-    },
-    "custom_rule_url_regexp_tips_": {
-        "message": "Use JavaScript regular expressions to match all URL addresses.<br/> (Note: Using regular expressions may impact the performance of the webpage.)"
-    },
-    "url_conversion": {
-        "message": "URL conversion"
-    },
-    "relative_URL_to_absolute_URL_tips_": {
-        "message": "Convert relative URL to absolute URL.<br/>Example: /123/123.txt -> http://xxxx/123/123.txt"
-    },
-    "note": {
-        "message": "Note"
-    },
-    "custom_rule_tips_": {
-        "message": "When multiple settings are selected, the URL is only considered valid if all of these settings are matched."
-    },
-    "media_files": {
-        "message": "Media files"
-    },
-    "types": {
-        "message": "Types"
-    },
-    "configs": {
-        "message": "Configs"
-    },
-    "selected": {
-        "message": "Selected"
-    },
-    "remove_failed_loading_images": {
-        "message": "Remove failed loading images"
-    },
-    "third_party_query_interfaces": {
-        "message": "Third-Party Query Interfaces"
-    },
-    "interface": {
-        "message": "Interface"
-    },
-    "implicit": {
-        "message": "Implicit"
-    },
-    "explicit": {
-        "message": "Explicit"
-    },
-    "data_source": {
-        "message": "Data source"
-    },
-    "test": {
-        "message": "Test"
-    },
-    "provider": {
-        "message": "Provider"
-    },
-    "provider_website": {
-        "message": "Provider website"
-    },
-    "optional": {
-        "message": "Optional"
-    },
-    "interface_type": {
-        "message": "Interface type"
-    },
-    "file_type": {
-        "message": "File type"
-    },
-    "window_width": {
-        "message": "Window width"
-    },
-    "window_height": {
-        "message": "Window height"
-    },
-    "icon": {
-        "message": "Icon"
-    },
-    "visible_element": {
-        "message": "Visible element"
-    },
-    "visible_elements": {
-        "message": "Visible elements"
-    },
-    "hidden_elements": {
-        "message": "Hidden elements"
-    },
-    "data_format": {
-        "message": "Data format"
-    },
-    "documentation": {
-        "message": "Documentation"
-    },
-    "host_match": {
-        "message": "Host match"
-    },
-    "path_match": {
-        "message": "Path match"
-    },
-    "hosts": {
-        "message": "Hosts"
-    },
-    "paths": {
-        "message": "Paths"
-    },
-    "host_match_placeholder_": {
-        "message": "Match the host addresses (domain names or IPs) in the input box, excluding ports. One address per line."
-    },
-    "path_match_placeholder_": {
-        "message": "Match the paths corresponding to the host addresses above. Each path should start with a '/', and you can use regular expressions. One path per line."
-    },
-    "window": {
-        "message": "Window"
-    },
-    "iframe": {
-        "message": "Iframe"
-    },
-    "hidden_iframe": {
-        "message": "Hidden iframe"
-    },
-    "one_css_selector_per_line": {
-        "message": "One CSS selector per line"
-    },
-    "response_data_type": {
-        "message": "Response data type"
-    },
-    "trash_script_code": {
-        "message": "Trash script code"
-    },
-    "behaviors": {
-        "message": "Behaviors"
-    },
-    "embed_code": {
-        "message": "Embed Code"
-    },
-    "import": {
-        "message": "Import"
-    },
-    "export": {
-        "message": "Export"
-    },
-    "share": {
-        "message": "Share"
-    },
-    "public_lists": {
-        "message": "Public lists"
-    },
-    "no_selected_rows": {
-        "message": "No selected rows"
-    },
-    "override": {
-        "message": "Override"
-    },
-    "override_duplicated_name_tips_": {
-        "message": "The name already exists.<br/> Do you want to overwrite the existing setting?"
-    },
-    "version": {
-        "message": "Version"
+        "message": "Skrip"
     },
     "create_button": {
-        "message": "Create button"
+        "message": "Buat tombol"
     },
-    "styles": {
-        "message": "Styles"
+    "actions": {
+        "message": "Aksi"
     },
-    "CSS_injection": {
-        "message": "CSS injection"
+    "remove_failed_loading_images": {
+        "message": "Hapus gambar yang gagal dimuat"
     },
-    "insert_to": {
-        "message": "Insert to"
+    "brute_force_search": {
+        "message": "Pencarian brute-force"
     },
-    "display_options": {
-        "message": "Display options"
-    },
-    "invalid_create_btn_insert_to_": {
-        "message": "Invalid setting: Create button -> Insert to"
-    },
-    "media_files_detection": {
-        "message": "Media files detection"
-    },
-    "insertion_method": {
-        "message": "Insertion method"
-    },
-    "trigger": {
-        "message": "Trigger"
-    },
-    "script_code_cannot_be_empty": {
-        "message": "Script code cannot be empty."
-    },
-    "troubleshooting": {
-        "message": "Troubleshooting"
+    "hidden_elements": {
+        "message": "Elemen tersembunyi"
     },
     "invalid_data": {
-        "message": "Invalid data"
+        "message": "Data tidak valid"
     },
-    "description": {
-        "message": "Description"
+    "public_lists": {
+        "message": "Daftar publik"
     },
-    "description_note_": {
-        "message": "The description, please make it as short as possible."
+    "file_type": {
+        "message": "Tipe file"
     },
-    "download_exclusions_help_": {
-        "message": "When you start a download task, the browser will handle the download if it meets the specified settings. This option takes priority over all other settings. However, keep in mind that this does not apply to captured video and audio files. For these files, the download manager will still be used, as the browser's built-in download tool is not designed to handle them."
+    "recapture_address_msg_success": {
+        "message": "Pengambilan alamat ulang berhasil, harap buka aplikasi dan pastikan sedang mengunduh."
     },
-    "custom_file_rules_help_": {
-        "message": "You can create custom rules for specific file types, such as lyrics or subtitles. As long as the webpage contains these resources, they will be detected. The detected resources will then show up in the custom section of the popup in the upper right corner, as well as in the resource explorer."
+    "insert_to": {
+        "message": "Sisipkan ke"
     },
-    "site_settings_help_": {
-        "message": "Each website has its own individual settings. By checking any option in the \"This Website\" section of the popup, you will automatically create settings for that specific website. The custom file rules in the website settings will only apply to that particular website."
+    "override": {
+        "message": "Timpa"
     },
     "third_party_interface_help_": {
-        "message": "The third-party query interface and file detection feature serve different purposes. <br/>Sometimes, on certain specially processed websites, files may not be easily detectable. This feature is designed to address that issue! You can easily extract file download links from specific web pages by writing scripts, or check for files on other servers or local applications using HTTP interactions. While there are third-party applications that can perform similar tasks, this feature simplifies the process with one-click downloading, improving overall efficiency."
+        "message": "Antarmuka kueri pihak ketiga dan fitur deteksi file memiliki tujuan yang berbeda. <br/>Terkadang, pada situs web tertentu yang diproses secara khusus, file mungkin sulit dideteksi. Fitur ini dirancang untuk mengatasi masalah tersebut! Anda dapat dengan mudah mengekstrak tautan unduhan file dari halaman web tertentu dengan menulis skrip, atau memeriksa file di server lain atau aplikasi lokal menggunakan interaksi HTTP. Meskipun ada aplikasi pihak ketiga yang dapat melakukan tugas serupa, fitur ini menyederhanakan prosesnya dengan unduhan satu klik, sehingga meningkatkan efisiensi secara keseluruhan."
     },
     "media_files_detection_text_": {
-        "message": "Enable or disable the media file detection feature."
+        "message": "Aktifkan atau nonaktifkan fitur deteksi file media."
     },
-    "deep_analysis_res_text_": {
-        "message": "Enable or disable deep detection of resource files such as images and scripts. <br/>Activating this feature can help identify more potential resource files. <br/> If you do not use the resource manager feature, you can disable this option. <br/> To completely disable deep analysis, you will need to turn off all related options."
-    },
-    "deep_analysis_customs_text_": {
-        "message": "This option determines whether deep analysis also matches custom file rules.<br/> Note: If the custom file rules include regular expressions, it may impact the performance of the webpage. <br/> To completely disable deep analysis, you will need to turn off all related options."
+    "description_note_": {
+        "message": "Deskripsi, harap dibuat sesingkat mungkin."
     },
     "loading": {
-        "message": "Loading"
+        "message": "Memuat"
+    },
+    "download_exclusions_help_": {
+        "message": "Saat Anda memulai tugas unduhan, browser akan menangani unduhan jika memenuhi pengaturan yang ditentukan. Opsi ini diprioritaskan di atas semua pengaturan lainnya. Namun, perlu diingat bahwa ini tidak berlaku untuk file video dan audio yang ditangkap. Untuk file-file ini, pengelola unduhan tetap akan digunakan, karena alat unduhan bawaan browser tidak dirancang untuk menanganinya."
+    },
+    "crawler": {
+        "message": "Crawler"
+    },
+    "service": {
+        "message": "Layanan"
+    },
+    "port": {
+        "message": "Port"
+    },
+    "override_duplicated_name_tips_": {
+        "message": "Nama sudah ada.<br/> Apakah Anda ingin menimpa pengaturan yang ada?"
+    },
+    "deep_analysis_customs_text_": {
+        "message": "Opsi ini menentukan apakah analisis mendalam juga mencocokkan aturan file kustom.<br/> Catatan: Jika aturan file kustom menyertakan ekspresi reguler, hal ini dapat memengaruhi kinerja halaman web. <br/> Untuk menonaktifkan analisis mendalam sepenuhnya, Anda perlu mematikan semua opsi terkait."
+    },
+    "unselect": {
+        "message": "Batalkan pilihan"
+    },
+    "collector": {
+        "message": "Kolektor"
+    },
+    "file_unsuport_preview": {
+        "message": "Anda tidak dapat melihat pratinjau file ini"
+    },
+    "potentials": {
+        "message": "Potensial"
+    },
+    "resources": {
+        "message": "Sumber daya"
+    },
+    "no_selected_rows": {
+        "message": "Tidak ada baris yang dipilih"
+    },
+    "explicit": {
+        "message": "Eksplisit"
+    },
+    "extension": {
+        "message": "Ekstensi"
+    },
+    "configs": {
+        "message": "Konfigurasi"
+    },
+    "record": {
+        "message": "Rekam"
+    },
+    "collector_mode": {
+        "message": "Mode Kolektor"
+    },
+    "path_match_placeholder_": {
+        "message": "Cocokkan jalur yang sesuai dengan alamat host di atas. Setiap jalur harus diawali dengan '/', dan Anda dapat menggunakan ekspresi reguler. Satu jalur per baris."
+    },
+    "action": {
+        "message": "Aksi"
+    },
+    "filter_out": {
+        "message": "Saring keluar"
+    },
+    "unsuport_m3u8_preview": {
+        "message": "Browser web anda tidak mendukung pratinjau file m3u8."
+    },
+    "embed_code": {
+        "message": "Kode sematan"
+    },
+    "stop": {
+        "message": "Berhenti"
+    },
+    "capture_other_file_types": {
+        "message": "Tangkap tipe file lainnya"
+    },
+    "refresh_address_msg_content": {
+        "message": "Sebelum alamat diambil, jangan refresh halaman saat ini, temukan: "
+    },
+    "text": {
+        "message": "Teks"
+    },
+    "appname": {
+        "message": "File Centipede"
+    },
+    "import": {
+        "message": "Impor"
+    },
+    "custom_rule_tips_": {
+        "message": "Ketika beberapa pengaturan dipilih, URL hanya dianggap valid jika semua pengaturan tersebut cocok."
+    },
+    "provider_website": {
+        "message": "Situs web penyedia"
+    },
+    "deep_analysis": {
+        "message": "Analisis mendalam"
+    },
+    "do_not_download": {
+        "message": "Jangan unduh"
+    },
+    "download_image": {
+        "message": "Unduh gambar ini"
+    },
+    "download_managers": {
+        "message": "Pengelola unduhan"
+    },
+    "site_settings": {
+        "message": "Pengaturan situs"
+    },
+    "cancel": {
+        "message": "Batal"
+    },
+    "custom_file_rules": {
+        "message": "Aturan file kustom"
+    },
+    "exclude_cross_origin_resources": {
+        "message": "Kecualikan sumber daya lintas asal"
+    },
+    "download_video": {
+        "message": "Unduh video ini"
+    },
+    "display_options": {
+        "message": "Opsi tampilan"
+    },
+    "others": {
+        "message": "Lainnya"
+    },
+    "hide_low_resolution": {
+        "message": "Sembunyikan resolusi rendah"
+    },
+    "files": {
+        "message": "File"
+    },
+    "load_all": {
+        "message": "Muat semua"
+    },
+    "settings": {
+        "message": "Pengaturan"
+    },
+    "no": {
+        "message": "Tidak"
+    },
+    "test": {
+        "message": "Uji"
+    },
+    "determined": {
+        "message": "Ditentukan"
+    },
+    "download_send_failed_message": {
+        "message": "entah tidak diinstal, atau tidak berjalan."
+    },
+    "type": {
+        "message": "Tipe"
+    },
+    "filename": {
+        "message": "Nama file"
+    },
+    "recapture_address": {
+        "message": "Ambil alamat ulang"
+    },
+    "too_many_tasks_download_warning_": {
+        "message": "Anda memiliki %d tugas unduhan yang siap dikirim. Hal ini dapat menyebabkan beberapa jendela pop-up muncul. Apakah Anda ingin melanjutkan?"
+    },
+    "segments": {
+        "message": "Segmen"
+    },
+    "this_site": {
+        "message": "Situs ini"
+    },
+    "resolution": {
+        "message": "Resolusi"
+    },
+    "remove_failed_loading_videos": {
+        "message": "Hapus video yang gagal dimuat"
+    },
+    "are_u_sure": {
+        "message": "Apa anda yakin?"
+    },
+    "help": {
+        "message": "Bantuan"
+    },
+    "share": {
+        "message": "Bagikan"
+    },
+    "progress": {
+        "message": "Kemajuan"
+    },
+    "settings_tip_": {
+        "message": "Pengaturan terperinci untuk ekstensi."
+    },
+    "play_all": {
+        "message": "Putar semua"
+    },
+    "videos": {
+        "message": "Video"
+    },
+    "browser": {
+        "message": "Browser"
+    },
+    "height": {
+        "message": "Tinggi"
+    },
+    "potential_keys": {
+        "message": "Kunci potensial"
+    },
+    "start": {
+        "message": "Mulai"
+    },
+    "rules": {
+        "message": "Aturan"
+    },
+    "file_size": {
+        "message": "Ukuran file"
+    },
+    "custom_rule_url_regexp_tips_": {
+        "message": "Gunakan ekspresi reguler JavaScript untuk mencocokkan semua alamat URL.<br/> (Catatan: Menggunakan ekspresi reguler dapat memengaruhi kinerja halaman web.)"
+    },
+    "save": {
+        "message": "Simpan"
+    },
+    "troubleshooting": {
+        "message": "Pemecahan masalah"
+    },
+    "file_extension": {
+        "message": "Ekstensi file"
+    },
+    "apply_to": {
+        "message": "Terapkan ke"
+    },
+    "video_source": {
+        "message": "Sumber video"
+    },
+    "audios": {
+        "message": "Audio"
+    },
+    "read_from_cache": {
+        "message": "Baca dari cache"
+    },
+    "general": {
+        "message": "Umum"
+    },
+    "example": {
+        "message": "Contoh"
+    },
+    "deep_analysis_text_": {
+        "message": "Mengaktifkan opsi ini akan melakukan analisis mendalam terhadap halaman web untuk menemukan sumber daya video atau audio yang tersembunyi,<br/> tetapi dengan mengorbankan sumber daya CPU yang lebih banyak.<br/> Jika halaman web memiliki skrip yang lebih sedikit atau frekuensi interaksi data yang rendah,<br/> konsumsi tambahan dapat diabaikan."
+    },
+    "host_match_placeholder_": {
+        "message": "Cocokkan alamat host (nama domain atau IP) di kotak input, tidak termasuk port. Satu alamat per baris."
+    },
+    "allow_external_messages_text_": {
+        "message": "Izinkan skrip eksternal mengirim pesan ke ekstensi ini."
+    },
+    "filename_rule_tips_": {
+        "message": "Menggunakan aturan pemilih CSS untuk mengambil teks dari elemen tertentu di halaman web sebagai nama file pilihan untuk file media di domain tersebut.<br/> Jika pengambilan gagal, judul atau og:title masih akan digunakan sebagai nama file."
+    },
+    "collector_mode_tip_": {
+        "message": "Merekam semua sumber daya media yang diambil di halaman web,<br/> dan melakukan pratinjau batch dan pemfilteran bila diperlukan, <br/>mengurangi pekerjaan yang berulang."
+    },
+    "res_explorer_tip_": {
+        "message": "Daftar semua sumber daya, gambar, skrip, dokumen, dan tipe file kustom di situs web saat ini."
+    },
+    "resolutions": {
+        "message": "Resolusi"
+    },
+    "use_browser_for_downloading": {
+        "message": "Gunakan browser untuk mengunduh"
+    },
+    "excluded_from_collector_mode": {
+        "message": "Dikecualikan dari mode kolektor"
+    },
+    "custom": {
+        "message": "Kustom"
+    },
+    "disable": {
+        "message": "Nonaktifkan"
+    },
+    "HTTP_res_request_monitoring_tips_": {
+        "message": "Mengaktifkan pemantauan permintaan sumber daya HTTP memungkinkan Anda merekam semua sumber daya di halaman web, bahkan jika penjelajah sumber daya ditutup. Artinya Anda dapat melacak sumber daya yang saat ini tidak ditampilkan atau telah dihapus. Namun, jika penjelajah sumber daya sudah terbuka, mengaktifkan fitur ini tidak memberikan keuntungan tambahan. Perlu diingat bahwa fitur ini akan menggunakan lebih banyak memori untuk menyimpan data yang direkam, bahkan saat penjelajah sumber daya tidak terbuka."
+    },
+    "open_with_new_tab": {
+        "message": "Buka di tab baru"
+    },
+    "select_all": {
+        "message": "Pilih semua"
+    },
+    "hosts": {
+        "message": "Host"
+    },
+    "deep_analysis_res_text_": {
+        "message": "Aktifkan atau nonaktifkan deteksi mendalam terhadap file sumber daya seperti gambar dan skrip. <br/>Mengaktifkan fitur ini dapat membantu mengidentifikasi lebih banyak file sumber daya potensial. <br/> Jika Anda tidak menggunakan fitur penjelajah sumber daya, Anda dapat menonaktifkan opsi ini. <br/> Untuk menonaktifkan analisis mendalam sepenuhnya, Anda perlu mematikan semua opsi terkait."
+    },
+    "unselect_all": {
+        "message": "Batalkan semua pilihan"
+    },
+    "remove_selected": {
+        "message": "Hapus yang dipilih"
+    },
+    "feature_not_implemented": {
+        "message": "Fitur ini saat ini dicadangkan dan belum diimplementasikan."
+    },
+    "download_selected": {
+        "message": "Unduh yang dipilih"
+    },
+    "provider": {
+        "message": "Penyedia"
+    },
+    "collector_notify_": {
+        "message": "Kolektor hanya efektif saat jendela terbuka; menutup jendela akan menghilangkan semua catatan.<br/> Karena keterbatasan browser dan aturan rantai unduhan situs web, tidak semua video dapat dipratinjau.<br/> Beberapa video tidak dapat dipratinjau tetapi dapat diunduh.<br/> Beberapa video tidak dapat dipratinjau dan tidak dapat diunduh."
+    },
+    "size": {
+        "message": "Ukuran"
+    },
+    "width": {
+        "message": "Lebar"
+    },
+    "site_settings_help_": {
+        "message": "Setiap situs web memiliki pengaturan individualnya sendiri. Dengan mencentang opsi apa pun di bagian \"Situs ini\" pada popup, Anda akan otomatis membuat pengaturan untuk situs web tersebut. Aturan file kustom dalam pengaturan situs web hanya berlaku untuk situs web tersebut."
+    },
+    "sorting": {
+        "message": "Pengurutan"
+    },
+    "planned_no_implemented_": {
+        "message": "Direncanakan tetapi belum diimplementasikan."
+    },
+    "dark": {
+        "message": "Gelap"
+    },
+    "length_duration": {
+        "message": "Panjang / Durasi / Ukuran"
+    },
+    "error": {
+        "message": "Kesalahan"
+    },
+    "playback_speed": {
+        "message": "Kecepatan pemutaran"
+    },
+    "custom_rule_selector_tips_": {
+        "message": "Gunakan pemilih CSS untuk mengkueri elemen DOM dari halaman web dan mengekstrak alamat URL dari atribut atau konten teks elemen yang dipilih.<br/> Misalnya, Anda dapat mengambil URL dari atribut 'href' pada tag a."
+    },
+    "name_cannot_be_empty": {
+        "message": "Nama tidak boleh kosong"
+    },
+    "invalid_settings": {
+        "message": "Pengaturan tidak valid"
+    },
+    "host_cannot_be_empty": {
+        "message": "Host tidak boleh kosong"
+    },
+    "rule_name_duplicated": {
+        "message": "Nama aturan duplikat"
+    },
+    "attr_name": {
+        "message": "Nama atribut"
+    },
+    "filename_rules": {
+        "message": "Aturan nama file"
+    },
+    "disable_tooltips": {
+        "message": "Nonaktifkan tooltip"
+    },
+    "title": {
+        "message": "Judul"
+    },
+    "merge": {
+        "message": "Gabungkan"
+    },
+    "merge_tip_": {
+        "message": "Gabungkan video & audio"
+    },
+    "merge_warning_": {
+        "message": "Pilih setidaknya satu video dan satu audio dari daftar."
+    },
+    "deep_analysis_level": {
+        "message": "Tingkat analisis mendalam"
+    },
+    "fast": {
+        "message": "Cepat"
+    },
+    "maximize": {
+        "message": "Maksimalkan"
+    },
+    "deep_analysis_level_tip_": {
+        "message": "Untuk deteksi sumber daya, pengaturan Sedang default umumnya sudah cukup untuk sebagian besar kasus penggunaan.<br/>Jika sumber daya yang diharapkan tidak terdeteksi, coba tingkatkan levelnya, dengan konsekuensi penggunaan CPU yang lebih tinggi."
+    },
+    "download_and_merge": {
+        "message": "Unduh dan gabungkan"
+    },
+    "popup_filter_tip_": {
+        "message": "Tekan Enter untuk menyimpan."
+    },
+    "fast_forward": {
+        "message": "Maju cepat"
+    },
+    "seconds": {
+        "message": "Detik"
+    },
+    "skip_intro": {
+        "message": "Lewati intro"
+    },
+    "duration_length": {
+        "message": "Panjang durasi"
+    },
+    "remove_failed_loading_audios": {
+        "message": "Hapus audio yang gagal dimuat"
+    },
+    "remove_shot_videos": {
+        "message": "Hapus video pendek"
+    },
+    "log": {
+        "message": "Log"
+    },
+    "timestamp": {
+        "message": "Stempel waktu"
+    },
+    "max_resolution_limit": {
+        "message": "Batas resolusi maksimum"
+    },
+    "remove_high_quality_videos": {
+        "message": "Hapus video berkualitas tinggi"
+    },
+    "disable_readme_notifications": {
+        "message": "Nonaktifkan notifikasi readme"
+    },
+    "max_resolution_limit_tips_": {
+        "message": "Untuk file media streaming dengan beberapa resolusi, batasi resolusi pemutaran maksimum."
+    },
+    "unsupported_media_merge_msg_": {
+        "message": "Saat ini, menggabungkan beberapa file media streaming dengan file multimedia standar dalam satu operasi penggabungan tidak didukung."
+    },
+    "push_type": {
+        "message": "Tipe push"
+    },
+    "send_http_request": {
+        "message": "Kirim permintaan HTTP"
+    },
+    "send_websocket_message": {
+        "message": "Kirim pesan websocket"
+    },
+    "open_custom_protocol_url": {
+        "message": "Buka URL protokol kustom"
+    },
+    "callback_message_type": {
+        "message": "Tipe pesan callback"
+    },
+    "callback_message": {
+        "message": "Pesan callback"
+    },
+    "notify": {
+        "message": "Beri tahu"
+    },
+    "message_box": {
+        "message": "Kotak pesan"
+    },
+    "prefix": {
+        "message": "Awalan"
+    },
+    "suffix": {
+        "message": "Akhiran"
+    },
+    "connect_timeout": {
+        "message": "Batas waktu koneksi"
+    },
+    "URI_template": {
+        "message": "Templat URI"
+    },
+    "protocol": {
+        "message": "Protokol"
+    },
+    "encode": {
+        "message": "Enkode"
+    },
+    "decode": {
+        "message": "Dekode"
+    },
+    "message": {
+        "message": "Pesan"
+    },
+    "method": {
+        "message": "Metode"
+    },
+    "custom_protocol": {
+        "message": "Protokol kustom"
+    },
+    "service_host": {
+        "message": "Host layanan"
+    },
+    "service_port": {
+        "message": "Port layanan"
+    },
+    "service_username": {
+        "message": "Nama pengguna layanan"
+    },
+    "service_password": {
+        "message": "Kata sandi layanan"
+    },
+    "default_value": {
+        "message": "Nilai default"
+    },
+    "authorization": {
+        "message": "Otorisasi"
+    },
+    "download_task": {
+        "message": "Tugas unduhan"
+    },
+    "stream_media_task": {
+        "message": "Tugas media streaming"
+    },
+    "stream_media": {
+        "message": "Media streaming"
+    },
+    "task_type": {
+        "message": "Tipe tugas"
+    },
+    "preview_all": {
+        "message": "Pratinjau semua"
+    },
+    "medium": {
+        "message": "Sedang"
+    },
+    "high": {
+        "message": "Tinggi"
+    },
+    "unexpected_error": {
+        "message": "Kesalahan tak terduga"
+    },
+    "video_preview_performance_warning_": {
+        "message": "<b>Peringatan Kinerja:</b><br/>Di lingkungan tanpa dekode perangkat keras (misalnya Linux + NVIDIA), memutar beberapa video pada 1080p atau lebih tinggi secara bersamaan dapat menghabiskan memori sistem atau memori video, menyebabkan ekstensi ini crash atau sistem hang. Ekstensi ini telah dioptimalkan secara ekstensif untuk mengurangi masalah tersebut, tetapi pemutaran video tetap tunduk pada mekanisme dekode dan pengelolaan sumber daya milik browser itu sendiri, sehingga tidak dapat dihindari sepenuhnya."
     }
-
 }

@@ -1,0 +1,878 @@
+{
+  "subtitles": {
+    "message": "Napisy"
+  },
+  "one_css_selector_per_line": {
+    "message": "Jeden selektor CSS na linię"
+  },
+  "hidden_iframe": {
+    "message": "Ukryty iframe"
+  },
+  "file_duration": {
+    "message": "Czas trwania pliku"
+  },
+  "iframe": {
+    "message": "iframe"
+  },
+  "download_exclusions": {
+    "message": "Wykluczenia pobierania"
+  },
+  "path_match": {
+    "message": "Dopasowanie ścieżki"
+  },
+  "record_from_screen": {
+    "message": "Nagrywanie ekranu"
+  },
+  "host_match": {
+    "message": "Dopasowanie hosta"
+  },
+  "data_format": {
+    "message": "Format danych"
+  },
+  "visible_element": {
+    "message": "Widoczny element"
+  },
+  "icon": {
+    "message": "Ikona"
+  },
+  "note": {
+    "message": "Uwaga"
+  },
+  "download_audio": {
+    "message": "Pobierz ten dźwięk"
+  },
+  "media_files_detection": {
+    "message": "Wykrywanie plików multimedialnych"
+  },
+  "window_height": {
+    "message": "Wysokość okna"
+  },
+  "magnets": {
+    "message": "Magnesy"
+  },
+  "window_width": {
+    "message": "Szerokość okna"
+  },
+  "interface_type": {
+    "message": "Typ interfejsu"
+  },
+  "preview_notify_": {
+    "message": "Z powodu ograniczeń przeglądarki i reguł anty-pobierania witryny nie wszystkie filmy można podejrzeć.<br/> Niektórych filmów nie można podejrzeć, ale można je pobrać.<br/> Niektórych filmów nie można ani podejrzeć, ani pobrać."
+  },
+  "relative_URL_to_absolute_URL_tips_": {
+    "message": "Konwertuje adres URL względny na adres URL bezwzględny.<br/>Przykład: /123/123.txt -> http://xxxx/123/123.txt"
+  },
+  "optional": {
+    "message": "Opcjonalne"
+  },
+  "download_manager_tip_": {
+    "message": "Domyślny menedżer pobierania używany podczas pobierania plików."
+  },
+  "implicit": {
+    "message": "Domyślny"
+  },
+  "window": {
+    "message": "Okno"
+  },
+  "selected": {
+    "message": "Wybrane"
+  },
+  "types": {
+    "message": "Typy"
+  },
+  "adverts_detection": {
+    "message": "Wykrywanie reklam"
+  },
+  "media_files": {
+    "message": "Pliki multimedialne"
+  },
+  "styles": {
+    "message": "Style"
+  },
+  "url_conversion": {
+    "message": "Konwersja URL"
+  },
+  "custom_rule_selector_attr_name_tips_": {
+    "message": "Po dopasowaniu elementu za pomocą określonego selektora CSS wyodrębnij zawartość z podanej nazwy atrybutu. Aby wyodrębnić tekst, użyj zamiast tego nawiasów klamrowych {}."
+  },
+  "interface": {
+    "message": "Interfejs"
+  },
+  "paths": {
+    "message": "Ścieżki"
+  },
+  "this_site": {
+    "message": "Ta witryna"
+  },
+  "crawler": {
+    "message": "Crawler"
+  },
+  "custom_rule_url_regexp_tips_": {
+    "message": "Użyj wyrażeń regularnych JavaScript, aby dopasować wszystkie adresy URL.<br/> (Uwaga: używanie wyrażeń regularnych może wpłynąć na wydajność strony.)"
+  },
+  "file_size": {
+    "message": "Rozmiar pliku"
+  },
+  "adverts": {
+    "message": "Reklamy"
+  },
+  "hidden_elements": {
+    "message": "Ukryte elementy"
+  },
+  "brute_force_search": {
+    "message": "Wyszukiwanie brute-force"
+  },
+  "all": {
+    "message": "Wszystkie"
+  },
+  "export": {
+    "message": "Eksport"
+  },
+  "collector_mode": {
+    "message": "Tryb kolektora"
+  },
+  "capture_other_file_types": {
+    "message": "Przechwytuj inne typy plików"
+  },
+  "configs": {
+    "message": "Konfiguracje"
+  },
+  "general": {
+    "message": "Ogólne"
+  },
+  "example": {
+    "message": "Przykład"
+  },
+  "record": {
+    "message": "Nagrywaj"
+  },
+  "invalid_domain": {
+    "message": "Nieprawidłowa domena."
+  },
+  "rule": {
+    "message": "Reguła"
+  },
+  "data_source": {
+    "message": "Źródło danych"
+  },
+  "remove_failed_loading_images": {
+    "message": "Usuń obrazy, których nie udało się załadować"
+  },
+  "potentials": {
+    "message": "Potencjały"
+  },
+  "resources": {
+    "message": "Zasoby"
+  },
+  "file_unsuport_preview": {
+    "message": "Nie możesz podejrzeć tego pliku"
+  },
+  "embed_code": {
+    "message": "Kod osadzania"
+  },
+  "stop": {
+    "message": "Zatrzymaj"
+  },
+  "rules": {
+    "message": "Reguły"
+  },
+  "browser": {
+    "message": "Przeglądarka"
+  },
+  "videos": {
+    "message": "Filmy"
+  },
+  "height": {
+    "message": "Wysokość"
+  },
+  "start": {
+    "message": "Start"
+  },
+  "potential_urls": {
+    "message": "Potencjalne adresy URL"
+  },
+  "insert_to": {
+    "message": "Wstaw do"
+  },
+  "override": {
+    "message": "Zastąp"
+  },
+  "description_note_": {
+    "message": "Opis, proszę zachować go możliwie krótko."
+  },
+  "trash_script_code": {
+    "message": "Bezużyteczny kod skryptu"
+  },
+  "version": {
+    "message": "Wersja"
+  },
+  "CSS_injection": {
+    "message": "Wstrzykiwanie CSS"
+  },
+  "invalid_create_btn_insert_to_": {
+    "message": "Nieprawidłowe ustawienie: Utwórz przycisk -> Wstaw do"
+  },
+  "response_data_type": {
+    "message": "Typ danych odpowiedzi"
+  },
+  "behaviors": {
+    "message": "Zachowania"
+  },
+  "filter": {
+    "message": "Filtr"
+  },
+  "all_sites": {
+    "message": "Wszystkie witryny"
+  },
+  "documentation": {
+    "message": "Dokumentacja"
+  },
+  "no_selected_rows": {
+    "message": "Brak zaznaczonych wierszy"
+  },
+  "extension": {
+    "message": "Rozszerzenie"
+  },
+  "explicit": {
+    "message": "Jawny"
+  },
+  "ignore_this_site": {
+    "message": "Ignoruj tę witrynę"
+  },
+  "page_url": {
+    "message": "URL strony"
+  },
+  "custom_file_rules_help_": {
+    "message": "Możesz tworzyć niestandardowe reguły dla określonych typów plików, takich jak teksty piosenek lub napisy. Dopóki strona internetowa zawiera te zasoby, zostaną one wykryte. Wykryte zasoby pojawią się następnie w sekcji niestandardowej wyskakującego okna w prawym górnym rogu, a także w eksploratorze zasobów."
+  },
+  "file": {
+    "message": "Plik"
+  },
+  "description": {
+    "message": "Opis"
+  },
+  "minutes": {
+    "message": "Minuty"
+  },
+  "script_code_cannot_be_empty": {
+    "message": "Kod skryptu nie może być pusty."
+  },
+  "media_files_detection_text_": {
+    "message": "Włącz lub wyłącz funkcję wykrywania plików multimedialnych."
+  },
+  "third_party_interface_help_": {
+    "message": "Interfejs zapytań zewnętrznych i funkcja wykrywania plików służą różnym celom. <br/>Czasami na niektórych specjalnie przetwarzanych stronach pliki mogą nie być łatwo wykrywalne. Ta funkcja została zaprojektowana, aby rozwiązać ten problem! Możesz łatwo wyodrębniać linki pobierania plików z określonych stron internetowych, pisząc skrypty, lub sprawdzać pliki na innych serwerach albo w lokalnych aplikacjach za pomocą interakcji HTTP. Chociaż istnieją aplikacje zewnętrzne, które mogą wykonywać podobne zadania, ta funkcja upraszcza proces dzięki pobieraniu jednym kliknięciem, zwiększając ogólną wydajność."
+  },
+  "copy_addr_msg": {
+    "message": "Adres skopiowany pomyślnie"
+  },
+  "invalid_data": {
+    "message": "Nieprawidłowe dane"
+  },
+  "custom_file_rules": {
+    "message": "Niestandardowe reguły plików"
+  },
+  "cancel": {
+    "message": "Anuluj"
+  },
+  "exclude_cross_origin_resources": {
+    "message": "Wyklucz zasoby międzyoriginowe"
+  },
+  "third_party_query_interfaces": {
+    "message": "Interfejsy zapytań zewnętrznych"
+  },
+  "preview": {
+    "message": "Podgląd"
+  },
+  "public_lists": {
+    "message": "Publiczne listy"
+  },
+  "apply_to": {
+    "message": "Zastosuj do"
+  },
+  "video_source": {
+    "message": "Źródło wideo"
+  },
+  "loading": {
+    "message": "Ładowanie"
+  },
+  "download_exclusions_help_": {
+    "message": "Gdy uruchamiasz zadanie pobierania, przeglądarka obsłuży pobieranie, jeśli spełnia określone ustawienia. Ta opcja ma pierwszeństwo przed wszystkimi innymi ustawieniami. Pamiętaj jednak, że nie dotyczy to przechwyconych plików wideo i audio. W przypadku tych plików nadal będzie używany menedżer pobierania, ponieważ wbudowane narzędzie pobierania przeglądarki nie jest do ich obsługi przeznaczone."
+  },
+  "deep_analysis_customs_text_": {
+    "message": "Ta opcja określa, czy głęboka analiza ma również dopasowywać niestandardowe reguły plików.<br/> Uwaga: jeśli niestandardowe reguły plików zawierają wyrażenia regularne, może to wpłynąć na wydajność strony."
+  },
+  "visible_elements": {
+    "message": "Widoczne elementy"
+  },
+  "res_explorer": {
+    "message": "Eksplorator zasobów"
+  },
+  "duplicated_name": {
+    "message": "Zduplikowana nazwa"
+  },
+  "clear": {
+    "message": "Wyczyść"
+  },
+  "domain": {
+    "message": "Domena"
+  },
+  "save": {
+    "message": "Zapisz"
+  },
+  "file_extension": {
+    "message": "Rozszerzenie pliku"
+  },
+  "troubleshooting": {
+    "message": "Rozwiązywanie problemów"
+  },
+  "recapture_address": {
+    "message": "Przechwyć adres ponownie"
+  },
+  "type": {
+    "message": "Typ"
+  },
+  "filename": {
+    "message": "Nazwa pliku"
+  },
+  "filter_out": {
+    "message": "Odfiltruj"
+  },
+  "invalid_css_selector": {
+    "message": "Nieprawidłowy selektor CSS."
+  },
+  "download": {
+    "message": "Pobierz"
+  },
+  "images": {
+    "message": "Obrazy"
+  },
+  "scripts": {
+    "message": "Skrypty"
+  },
+  "edit": {
+    "message": "Edytuj"
+  },
+  "select_element_tip_": {
+    "message": "Wybierz elementy na stronie internetowej, ustaw reguły pobierania nazw plików multimedialnych dla tej domeny i nagrywaj wideo/audio itp."
+  },
+  "insertion_method": {
+    "message": "Metoda wstawiania"
+  },
+  "readme": {
+    "message": "README"
+  },
+  "video_duration": {
+    "message": "Długość wideo"
+  },
+  "create_button": {
+    "message": "Utwórz przycisk"
+  },
+  "copy": {
+    "message": "Kopiuj"
+  },
+  "create_rule": {
+    "message": "Utwórz regułę"
+  },
+  "css_selector": {
+    "message": "Selektor CSS"
+  },
+  "download_send_failed_message": {
+    "message": "Nie jest zainstalowany lub nie działa."
+  },
+  "collector_mode_tip_": {
+    "message": "Rejestruje wszystkie przechwycone zasoby multimedialne na stronach internetowych,<br/> i w razie potrzeby umożliwia zbiorczy podgląd oraz filtrowanie,<br/> zmniejszając powtarzalną pracę."
+  },
+  "port": {
+    "message": "Port"
+  },
+  "override_duplicated_name_tips_": {
+    "message": "Ta nazwa już istnieje.<br/> Czy chcesz zastąpić istniejące ustawienie?"
+  },
+  "username": {
+    "message": "Nazwa użytkownika"
+  },
+  "password": {
+    "message": "Hasło"
+  },
+  "service": {
+    "message": "Usługa"
+  },
+  "refresh_address_msg_content": {
+    "message": "Nie odświeżaj bieżącej strony, zanim adres nie zostanie przechwycony, znajdź: "
+  },
+  "res_explorer_tip_": {
+    "message": "Wyświetla wszystkie zasoby, obrazy, skrypty, dokumenty i niestandardowe typy plików na bieżącej stronie."
+  },
+  "trigger": {
+    "message": "Wyzwalacz"
+  },
+  "duplicated_row": {
+    "message": "Zduplikowany wiersz"
+  },
+  "too_many_tasks_download_warning_": {
+    "message": "Masz %d zadań pobierania gotowych do wysłania. Może to spowodować pojawienie się wielu okienek. Czy chcesz kontynuować?"
+  },
+  "segments": {
+    "message": "Segmenty"
+  },
+  "add": {
+    "message": "Dodaj"
+  },
+  "remove_low_quality_videos": {
+    "message": "Usuń filmy niskiej jakości"
+  },
+  "filetypes": {
+    "message": "Typy plików"
+  },
+  "HTTP_res_request_monitoring": {
+    "message": "Monitorowanie żądań zasobów HTTP"
+  },
+  "do_not_download": {
+    "message": "Nie pobieraj"
+  },
+  "download_image": {
+    "message": "Pobierz ten obraz"
+  },
+  "actions": {
+    "message": "Działania"
+  },
+  "filename_rule_tips_": {
+    "message": "Używa reguł selektora CSS do pobierania tekstu z określonego elementu na stronie jako preferowanej nazwy pliku dla plików multimedialnych w tej domenie.<br/> Jeśli pobranie się nie powiedzie, nadal będzie używany tytuł lub og:title jako nazwa pliku."
+  },
+  "are_u_sure": {
+    "message": "Czy na pewno?"
+  },
+  "help": {
+    "message": "Pomoc"
+  },
+  "share": {
+    "message": "Udostępnij"
+  },
+  "progress": {
+    "message": "Postęp"
+  },
+  "settings_tip_": {
+    "message": "Szczegółowe ustawienia rozszerzenia."
+  },
+  "play_all": {
+    "message": "Odtwórz wszystko"
+  },
+  "potential_keys": {
+    "message": "Potencjalne klucze"
+  },
+  "download_send_failed_message_prefix": {
+    "message": "Nie można połączyć się z "
+  },
+  "provider_website": {
+    "message": "Strona dostawcy"
+  },
+  "deep_analysis": {
+    "message": "Głęboka analiza"
+  },
+  "deep_analysis_text_": {
+    "message": "Włączenie tej opcji spowoduje przeprowadzenie głębokiej analizy strony internetowej w celu znalezienia ukrytych zasobów wideo lub audio,<br/> ale kosztem większego zużycia zasobów CPU.<br/> Jeśli strona zawiera niewiele skryptów lub ma małą częstotliwość interakcji z danymi,<br/> dodatkowe zużycie można pominąć."
+  },
+  "host_match_placeholder_": {
+    "message": "Dopasuj adresy hostów (nazwy domen lub IP) w polu wejściowym, z wyłączeniem portów. Jeden adres w wierszu."
+  },
+  "no": {
+    "message": "Nie"
+  },
+  "test": {
+    "message": "Test"
+  },
+  "determined": {
+    "message": "Określone"
+  },
+  "enable": {
+    "message": "Włącz"
+  },
+  "allow_external_messages_text_": {
+    "message": "Zezwól zewnętrznym skryptom wysyłać wiadomości do tego rozszerzenia."
+  },
+  "collector": {
+    "message": "Kolektor"
+  },
+  "unselect": {
+    "message": "Odznacz"
+  },
+  "action": {
+    "message": "Działanie"
+  },
+  "path_match_placeholder_": {
+    "message": "Dopasuj ścieżki odpowiadające powyższym adresom hosta. Każda ścieżka powinna zaczynać się od '/', można też używać wyrażeń regularnych. Jedna ścieżka w wierszu."
+  },
+  "unsuport_m3u8_preview": {
+    "message": "Twoja przeglądarka nie obsługuje podglądu plików m3u8."
+  },
+  "uncertain": {
+    "message": "Niepewne"
+  },
+  "file_type": {
+    "message": "Typ pliku"
+  },
+  "recapture_address_msg_success": {
+    "message": "Ponowne przechwycenie adresu powiodło się, otwórz program i sprawdź, czy plik jest pobierany poprawnie."
+  },
+  "text": {
+    "message": "Tekst"
+  },
+  "appname": {
+    "message": "File Centipede"
+  },
+  "import": {
+    "message": "Importuj"
+  },
+  "custom_rule_tips_": {
+    "message": "Gdy zaznaczono wiele ustawień, adres URL jest uznawany za prawidłowy tylko wtedy, gdy wszystkie te ustawienia zostaną dopasowane."
+  },
+  "audios": {
+    "message": "Audio"
+  },
+  "read_from_cache": {
+    "message": "Czytaj z pamięci podręcznej"
+  },
+  "max": {
+    "message": "Maks"
+  },
+  "download_link": {
+    "message": "Pobierz ten link"
+  },
+  "pause_all": {
+    "message": "Wstrzymaj wszystko"
+  },
+  "allow_external_messages": {
+    "message": "Zezwól na wiadomości zewnętrzne"
+  },
+  "video_floating_bar": {
+    "message": "Pływający pasek wideo"
+  },
+  "download_all": {
+    "message": "Pobierz wszystko"
+  },
+  "send_failed": {
+    "message": "Wysyłanie nie powiodło się"
+  },
+  "copy_all": {
+    "message": "Kopiuj wszystko"
+  },
+  "download_video": {
+    "message": "Pobierz to wideo"
+  },
+  "display_options": {
+    "message": "Opcje wyświetlania"
+  },
+  "others": {
+    "message": "Inne"
+  },
+  "hide_low_resolution": {
+    "message": "Ukryj niską rozdzielczość"
+  },
+  "files": {
+    "message": "Pliki"
+  },
+  "remove_failed_loading_videos": {
+    "message": "Usuń filmy z błędem ładowania"
+  },
+  "resolution": {
+    "message": "Rozdzielczość"
+  },
+  "settings": {
+    "message": "Ustawienia"
+  },
+  "load_all": {
+    "message": "Załaduj wszystko"
+  },
+  "yes": {
+    "message": "Tak"
+  },
+  "remove": {
+    "message": "Usuń"
+  },
+  "download_manager": {
+    "message": "Menedżer pobierania"
+  },
+  "more": {
+    "message": "Więcej"
+  },
+  "download_managers": {
+    "message": "Menedżery pobierania"
+  },
+  "site_settings": {
+    "message": "Ustawienia witryny"
+  },
+  "name": {
+    "message": "Nazwa"
+  },
+  "edit_rule": {
+    "message": "Edytuj regułę"
+  },
+  "resolutions": {
+    "message": "Rozdzielczości"
+  },
+  "use_browser_for_downloading": {
+    "message": "Użyj przeglądarki do pobierania"
+  },
+  "excluded_from_collector_mode": {
+    "message": "Wykluczone z trybu kolektora"
+  },
+  "custom": {
+    "message": "Niestandardowe"
+  },
+  "disable": {
+    "message": "Wyłącz"
+  },
+  "HTTP_res_request_monitoring_tips_": {
+    "message": "Włączenie monitorowania żądań zasobów HTTP pozwala rejestrować wszystkie zasoby na stronach internetowych, nawet jeśli eksplorator zasobów jest zamknięty. Oznacza to, że możesz śledzić zasoby, które nie są obecnie wyświetlane lub zostały usunięte. Jeśli jednak eksplorator zasobów jest już otwarty, włączenie tej funkcji nie przyniesie dodatkowych korzyści. Pamiętaj, że funkcja ta będzie używać więcej pamięci do przechowywania zarejestrowanych danych, nawet gdy eksplorator zasobów nie jest otwarty."
+  },
+  "open_with_new_tab": {
+    "message": "Otwórz w nowej karcie"
+  },
+  "select_all": {
+    "message": "Zaznacz wszystko"
+  },
+  "hosts": {
+    "message": "Hosty"
+  },
+  "deep_analysis_res_text_": {
+    "message": "Włącz lub wyłącz głębokie wykrywanie plików zasobów, takich jak obrazy i skrypty. <br/>Włączenie tej funkcji może pomóc zidentyfikować więcej potencjalnych plików zasobów. <br/> Jeśli nie korzystasz z funkcji menedżera zasobów, możesz wyłączyć tę opcję."
+  },
+  "unselect_all": {
+    "message": "Odznacz wszystko"
+  },
+  "remove_selected": {
+    "message": "Usuń zaznaczone"
+  },
+  "feature_not_implemented": {
+    "message": "Ta funkcja jest obecnie zarezerwowana i nie została jeszcze zaimplementowana."
+  },
+  "download_selected": {
+    "message": "Pobierz zaznaczone"
+  },
+  "provider": {
+    "message": "Dostawca"
+  },
+  "collector_notify_": {
+    "message": "Kolektor działa tylko, gdy okno jest otwarte; zamknięcie okna spowoduje utratę wszystkich zapisów.<br/> Ze względu na ograniczenia przeglądarki i zasady łańcucha pobierania witryny nie wszystkie filmy można podejrzeć.<br/> Niektórych filmów nie można podejrzeć, ale można je pobrać.<br/> Niektórych filmów nie można ani podejrzeć, ani pobrać."
+  },
+  "size": {
+    "message": "Rozmiar"
+  },
+  "width": {
+    "message": "Szerokość"
+  },
+  "site_settings_help_": {
+    "message": "Każda witryna ma własne indywidualne ustawienia. Zaznaczenie dowolnej opcji w sekcji \"Ta witryna\" w wyskakującym oknie spowoduje automatyczne utworzenie ustawień dla tej konkretnej witryny. Niestandardowe reguły plików w ustawieniach witryny będą obowiązywać tylko dla tej konkretnej witryny."
+  },
+  "sorting": {
+    "message": "Sortowanie"
+  },
+  "planned_no_implemented_": {
+    "message": "Zaplanowano, ale nie zaimplementowano."
+  },
+  "dark": {
+    "message": "Ciemny"
+  },
+  "length_duration": {
+    "message": "Długość / czas trwania / rozmiar"
+  },
+  "error": {
+    "message": "Błąd"
+  },
+  "playback_speed": {
+    "message": "Prędkość odtwarzania"
+  },
+  "custom_rule_selector_tips_": {
+    "message": "Użyj selektorów CSS, aby odpytywać elementy DOM ze strony internetowej i wyodrębniać adresy URL z atrybutów lub treści tekstowej wybranych elementów.<br/> Na przykład możesz pobrać adres URL z atrybutu 'href' znacznika a."
+  },
+  "name_cannot_be_empty": {
+    "message": "Nazwa nie może być pusta"
+  },
+  "invalid_settings": {
+    "message": "Nieprawidłowe ustawienia"
+  },
+  "host_cannot_be_empty": {
+    "message": "Host nie może być pusty"
+  },
+  "rule_name_duplicated": {
+    "message": "Nazwa reguły jest zduplikowana"
+  },
+  "attr_name": {
+    "message": "Nazwa atrybutu"
+  },
+  "filename_rules": {
+    "message": "Reguły nazwy pliku"
+  },
+  "disable_tooltips": {
+    "message": "Wyłącz podpowiedzi"
+  },
+  "title": {
+    "message": "Tytuł"
+  },
+  "merge": {
+    "message": "Scal"
+  },
+  "merge_tip_": {
+    "message": "Scal wideo i audio"
+  },
+  "merge_warning_": {
+    "message": "Wybierz co najmniej jedno wideo i jedno audio z listy."
+  },
+  "deep_analysis_level": {
+    "message": "Poziom głębokiej analizy"
+  },
+  "fast": {
+    "message": "Szybki"
+  },
+  "maximize": {
+    "message": "Maksymalizuj"
+  },
+  "deep_analysis_level_tip_": {
+    "message": "W przypadku wykrywania zasobów domyślne ustawienie Średnie jest zwykle wystarczające w większości przypadków użycia.<br/>Jeśli oczekiwane zasoby nie zostaną wykryte, spróbuj zwiększyć poziom kosztem większego zużycia CPU."
+  },
+  "download_and_merge": {
+    "message": "Pobierz i scal"
+  },
+  "popup_filter_tip_": {
+    "message": "Naciśnij Enter, aby zapisać."
+  },
+  "fast_forward": {
+    "message": "Przewiń do przodu"
+  },
+  "seconds": {
+    "message": "Sekundy"
+  },
+  "skip_intro": {
+    "message": "Pomiń intro"
+  },
+  "duration_length": {
+    "message": "Długość trwania"
+  },
+  "remove_failed_loading_audios": {
+    "message": "Usuń audio z błędem ładowania"
+  },
+  "remove_shot_videos": {
+    "message": "Usuń krótkie filmy"
+  },
+  "log": {
+    "message": "Dziennik"
+  },
+  "timestamp": {
+    "message": "Znacznik czasu"
+  },
+  "max_resolution_limit": {
+    "message": "Limit maksymalnej rozdzielczości"
+  },
+  "remove_high_quality_videos": {
+    "message": "Usuń filmy wysokiej jakości"
+  },
+  "disable_readme_notifications": {
+    "message": "Wyłącz powiadomienia README"
+  },
+  "max_resolution_limit_tips_": {
+    "message": "W przypadku strumieniowych plików multimedialnych z wieloma rozdzielczościami ogranicz maksymalną rozdzielczość odtwarzania."
+  },
+  "unsupported_media_merge_msg_": {
+    "message": "Obecnie łączenie wielu strumieniowych plików multimedialnych ze стандартowymi plikami multimedialnymi w jednej operacji scalania nie jest obsługiwane."
+  },
+  "push_type": {
+    "message": "Typ wypychania"
+  },
+  "send_http_request": {
+    "message": "Wyślij żądanie HTTP"
+  },
+  "send_websocket_message": {
+    "message": "Wyślij wiadomość WebSocket"
+  },
+  "open_custom_protocol_url": {
+    "message": "Otwórz adres URL niestandardowego protokołu"
+  },
+  "callback_message_type": {
+    "message": "Typ wiadomości zwrotnej"
+  },
+  "callback_message": {
+    "message": "Wiadomość zwrotna"
+  },
+  "notify": {
+    "message": "Powiadom"
+  },
+  "message_box": {
+    "message": "Pole wiadomości"
+  },
+  "prefix": {
+    "message": "Prefiks"
+  },
+  "suffix": {
+    "message": "Sufiks"
+  },
+  "connect_timeout": {
+    "message": "Limit czasu połączenia"
+  },
+  "URI_template": {
+    "message": "Szablon URI"
+  },
+  "protocol": {
+    "message": "Protokół"
+  },
+  "encode": {
+    "message": "Koduj"
+  },
+  "decode": {
+    "message": "Dekoduj"
+  },
+  "message": {
+    "message": "Wiadomość"
+  },
+  "method": {
+    "message": "Metoda"
+  },
+  "custom_protocol": {
+    "message": "Niestandardowy protokół"
+  },
+  "service_host": {
+    "message": "Host usługi"
+  },
+  "service_port": {
+    "message": "Port usługi"
+  },
+  "service_username": {
+    "message": "Nazwa użytkownika usługi"
+  },
+  "service_password": {
+    "message": "Hasło usługi"
+  },
+  "default_value": {
+    "message": "Wartość domyślna"
+  },
+  "authorization": {
+    "message": "Autoryzacja"
+  },
+  "download_task": {
+    "message": "Zadanie pobierania"
+  },
+  "stream_media_task": {
+    "message": "Zadanie strumieniowego multimediów"
+  },
+  "stream_media": {
+    "message": "Strumieniowe multimedia"
+  },
+  "task_type": {
+    "message": "Typ zadania"
+  },
+  "preview_all": {
+    "message": "Podgląd wszystkiego"
+  },
+  "medium": {
+    "message": "Średni"
+  },
+  "high": {
+    "message": "Wysoki"
+  },
+  "unexpected_error": {
+    "message": "Nieoczekiwany błąd"
+  },
+  "video_preview_performance_warning_": {
+    "message": "<b>Ostrzeżenie o wydajności:</b><br/>W środowiskach bez dekodowania sprzętowego (np. Linux + NVIDIA) jednoczesne odtwarzanie wielu filmów w 1080p lub wyższej może wyczerpać pamięć systemową lub pamięć wideo, powodując awarię tego rozszerzenia lub zawieszenie systemu. To rozszerzenie zostało szeroko zoptymalizowane, aby złagodzić te problemy, ale odtwarzanie wideo nadal zależy od mechanizmów dekodowania i zarządzania zasobami samej przeglądarki, więc nie da się tego całkowicie uniknąć."
+  }
+}
