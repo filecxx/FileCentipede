@@ -1,7 +1,7 @@
 .screenshot img
 {
-    border: 1px solid #bcbebf;
     border-radius: 8px;
+    max-width: 100%;
 }
 
 .downloads .platforms_
