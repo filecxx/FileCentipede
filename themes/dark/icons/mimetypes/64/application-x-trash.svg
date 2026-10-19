@@ -1,0 +1,26 @@
+<svg width="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" height="64">
+ <defs>
+  <linearGradient id="a" y1="61" y2="3" x2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1 0 0-1 0 64)">
+   <stop stop-color="#26c281"/>
+   <stop offset="1" stop-color="#3fc380"/>
+  </linearGradient>
+  <linearGradient id="b" y1="61" y2="47" x2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1 0 0-1 0 64)">
+   <stop stop-color="#036b53"/>
+   <stop offset="1" stop-color="#036b53"/>
+  </linearGradient>
+  <linearGradient id="c" y1="17" x1="40" y2="31" x2="54" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#383e51"/>
+   <stop offset="1" stop-color="#655c6f" stop-opacity="0"/>
+  </linearGradient>
+ </defs>
+ <path fill="url(#a)" d="m10 61v-58h30l14 14v44h-14z"/>
+ <g transform="scale(1-1)">
+  <rect width="30" x="10" y="-4" fill="#ffffff" height="1" fill-opacity=".412"/>
+  <rect width="44" x="10" y="-61" fill="#2e3132" height="1" fill-opacity=".294"/>
+ </g>
+ <g fill-rule="evenodd">
+  <path fill="url(#b)" d="m54 17l-14-14v14z"/>
+  <path opacity=".2" fill="url(#c)" d="m40 17l14 14v-14z"/>
+ </g>
+ <path fill="#036b53" d="m-119.09 339.54c-.978 1.757-1.757 4.402-1.757 6.068 0 .387 0 .879.096 1.561l-12.23-21.03c-.392-.682-.683-1.662-.683-2.544 0-.883.292-1.957.683-2.641l5.871-10.273-6.554-3.715 21.328-.395 10.369 18.686-6.651-3.815-10.473 18.1m9.394-59.29c1.857-3.232 4.893-4.993 8.608-4.993 4.01 0 7.146 1.861 9.394 5.672l3.328 5.576-11.547 19.962-18.686-10.86 8.903-15.357m1.366 76.21c-5.576 0-10.173-4.598-10.173-10.174 0-1.566.687-4.209 1.665-5.871l3.127-5.576h23.19v21.622h-17.811m18.593-76.8c-1.466-2.54-3.423-4.306-5.772-5.285h24.07c2.153 0 3.814.883 4.796 2.548l5.967 10.174 6.455-3.819-10.373 18.593-21.23-.299 6.554-3.715-10.469-18.2m37.08 55.37c2.932 0 5.38-.783 7.433-2.345l-12.134 21.13c-.978 1.662-2.736 2.641-4.79 2.641h-11.45v7.532l-10.956-18.293 10.956-18.299v7.634h20.942m9.386-17.611c.883 1.566 1.374 3.227 1.374 4.989 0 3.523-2.253 7.241-5.38 9-1.47.787-3.527 1.278-5.576 1.278h-6.463l-11.54-19.962 18.686-10.665 8.899 15.36" transform="matrix(.25737 0 0 .25737 54.41-48.808)"/>
+</svg>

@@ -1,0 +1,26 @@
+<svg width="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" height="64" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <linearGradient id="a" y1="17" x1="40" y2="31" gradientUnits="userSpaceOnUse" x2="54" gradientTransform="translate(612 1314.36)">
+   <stop stop-color="#060606"/>
+   <stop offset="1" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="b" y1="392.36" y2="336.36" gradientUnits="userSpaceOnUse" x2="0" gradientTransform="translate(564 982)">
+   <stop stop-color="#ffffff" stop-opacity="0"/>
+   <stop offset="1" stop-color="#ffffff" stop-opacity=".2"/>
+  </linearGradient>
+  <path id="c" d="m622 1375.36v-58h30l14 14v44h-14z"/>
+ </defs>
+ <g transform="translate(-612-1314.36)">
+  <use fill="#8373d7" xlink:href="#c"/>
+  <g color-rendering="auto" color-interpolation-filters="linearRGB" shape-rendering="auto" image-rendering="auto" text-rendering="auto" color-interpolation="sRGB" color="#000000" transform="scale(1-1)">
+   <rect opacity=".5" x="622" y="-1318.36" width="30" fill="#ffffff" height="1"/>
+   <rect opacity=".25" x="622" y="-1375.36" width="44" height="1"/>
+  </g>
+  <g fill-rule="evenodd">
+   <path opacity=".6" d="m666 1331.36l-14-14v14z"/>
+   <path opacity=".2" fill="url(#a)" d="m652 1331.36l14 14v-14z"/>
+  </g>
+  <path opacity=".7" color-interpolation-filters="linearRGB" color="#000000" image-rendering="auto" color-rendering="auto" d="m645.05 1339.04l-5.318 17.59h1.045l5.318-17.59zm7.967.744v.01c-1.347-.012-2.694.373-3.871 1.049.003.297-.005 1.037-.002 1.334 1.3-.781 2.851-1.772 4.381-1.477 1.091.219 2.376.996 2.523 2.138.156 1.021-.599 2.133-1.335 2.821-.89.974-2.079 1.753-2.574 3.02-.277.848-.117 1.798-.141 2.684.379-.02.489.024.867 0 .006-.999-.267-2.184.465-3.03.611-.977 1.708-1.649 2.474-2.492.694-.711 1.285-1.593 1.275-2.615.035-1.332-.831-2.643-2.094-3.092-.621-.255-1.303-.352-1.969-.348zm-17.02 2.574l-6 6 6 6 .707-.707-5.293-5.293 5.293-5.293zm17 11l-.982.014-.018 1.986h1z" color-interpolation="sRGB" text-rendering="auto" shape-rendering="auto"/>
+  <use fill="url(#b)" xlink:href="#c"/>
+ </g>
+</svg>

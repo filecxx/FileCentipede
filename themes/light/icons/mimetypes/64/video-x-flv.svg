@@ -1,0 +1,22 @@
+<svg width="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" height="64" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <linearGradient id="a" y1="392.36" y2="324.66" gradientUnits="userSpaceOnUse" x2="0" gradientTransform="matrix(1 0 0 .84587 59-272.73)">
+   <stop stop-color="#ffffff" stop-opacity="0"/>
+   <stop offset="1" stop-color="#ffffff" stop-opacity=".2"/>
+  </linearGradient>
+  <path color-rendering="auto" color-interpolation-filters="linearRGB" shape-rendering="auto" image-rendering="auto" text-rendering="auto" id="b" color-interpolation="sRGB" color="#000000" d="m63 17v44h58v-44h-18.455z"/>
+ </defs>
+ <g transform="translate(-60)">
+  <use fill="#db3333" xlink:href="#b"/>
+  <rect width="58" x="63" y="60" fill="#2e3132" height="1" fill-opacity=".294"/>
+  <g fill="#ffffff">
+   <rect width="58" x="63" y="17" height="1" fill-opacity=".41"/>
+   <g color-rendering="auto" color-interpolation-filters="linearRGB" shape-rendering="auto" image-rendering="auto" text-rendering="auto" color-interpolation="sRGB" color="#000000">
+    <path opacity=".75" d="m115 19v4h4v-4zm0 6v4h4v-4zm0 6v4h4v-4zm0 6v4h4v-4zm0 6v4h4v-4zm0 6v4h4v-4zm0 6v4h4v-4z"/>
+    <path opacity=".75" d="m65 19v4h4v-4zm0 6v4h4v-4zm0 6v4h4v-4zm0 6v4h4v-4zm0 6v4h4v-4zm0 6v4h4v-4zm0 6v4h4v-4z"/>
+   </g>
+  </g>
+  <use fill="url(#a)" xlink:href="#b"/>
+  <path opacity=".75" color-interpolation-filters="linearRGB" color="#000000" image-rendering="auto" color-rendering="auto" d="m100 29.01v4.426c-4.519.077-5.63 4.387-5.63 4.387h3.409v4.426h-5.285c-3.179 9.589-10.494 8.735-10.494 8.735v-4.426c0 0 4.642.842 7.01-7.609 2.961-10.571 10.991-9.938 10.991-9.938" color-interpolation="sRGB" text-rendering="auto" fill="#ffffff" shape-rendering="auto"/>
+ </g>
+</svg>

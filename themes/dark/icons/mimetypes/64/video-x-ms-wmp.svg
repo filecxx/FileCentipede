@@ -1,0 +1,23 @@
+<svg width="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" height="64" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <linearGradient id="a" y1="392.36" y2="324.66" gradientUnits="userSpaceOnUse" x2="0" gradientTransform="matrix(1 0 0 .84587-1-272.73)">
+   <stop stop-color="#ffffff" stop-opacity="0"/>
+   <stop offset="1" stop-color="#ffffff" stop-opacity=".2"/>
+  </linearGradient>
+  <path color-rendering="auto" color-interpolation-filters="linearRGB" shape-rendering="auto" image-rendering="auto" text-rendering="auto" id="b" color-interpolation="sRGB" color="#000000" d="m3 17v44h58v-44h-18.455z"/>
+ </defs>
+ <use fill="#35bedc" xlink:href="#b"/>
+ <g color-rendering="auto" color-interpolation-filters="linearRGB" shape-rendering="auto" image-rendering="auto" text-rendering="auto" color-interpolation="sRGB" color="#000000">
+  <rect opacity=".25" x="3" y="60" width="58" height="1"/>
+  <rect opacity=".5" x="3" y="17" width="58" fill="#ffffff" height="1"/>
+ </g>
+ <g fill="#ffffff">
+  <path opacity=".75" d="M32 28A11 11 0 0 0 21 39 11 11 0 0 0 32 50 11 11 0 0 0 43 39 11 11 0 0 0 32 28m.14453.95117a10 10 0 0 1 10 10 10 10 0 0 1 -10 10 10 10 0 0 1 -10 -10 10 10 0 0 1 10 -10"/>
+  <g color-rendering="auto" color-interpolation-filters="linearRGB" shape-rendering="auto" image-rendering="auto" text-rendering="auto" color-interpolation="sRGB" color="#000000">
+   <path opacity=".75" d="m38.38 38.962l-10 5.538v-11z"/>
+   <path opacity=".75" d="m55 19v4h4v-4zm0 6v4h4v-4zm0 6v4h4v-4zm0 6v4h4v-4zm0 6v4h4v-4zm0 6v4h4v-4zm0 6v4h4v-4z"/>
+   <path opacity=".75" d="m5 19v4h4v-4zm0 6v4h4v-4zm0 6v4h4v-4zm0 6v4h4v-4zm0 6v4h4v-4zm0 6v4h4v-4zm0 6v4h4v-4z"/>
+  </g>
+ </g>
+ <use fill="url(#a)" xlink:href="#b"/>
+</svg>

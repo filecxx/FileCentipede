@@ -1,0 +1,67 @@
+<svg version="1.1" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient id="a" x1="40" x2="54" y1="17" y2="31" gradientTransform="translate(238 78.36)" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#060606" offset="0"/>
+            <stop stop-opacity="0" offset="1"/>
+        </linearGradient>
+        <linearGradient id="b" x2="0" y1="392.36" y2="336.36" gradientTransform="translate(190,-254)" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#fff" stop-opacity="0" offset="0"/>
+            <stop stop-color="#fff" stop-opacity=".2" offset="1"/>
+        </linearGradient>
+        <path id="c" d="m248 139.36v-58h30l14 14v44h-14z"/>
+    </defs>
+  <g
+     transform="translate(-238,-78.36)"
+     id="g27">
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       style="fill:#209ae7"
+       xlink:href="#c"
+       id="use11" />
+    <g
+       style="color:#000000"
+       >
+      <rect
+         style="opacity:0.5;fill:#ffffff"
+         x="248"
+         y="-82.360001"
+         width="30"
+         height="1"
+         id="rect13" />
+      <rect
+         style="opacity:0.25"
+         x="248"
+         y="-139.36"
+         width="44"
+         height="1"
+         id="rect15" />
+    </g>
+    <g
+       style="fill-rule:evenodd"
+       >
+      <path
+         style="opacity:0.5;fill:#ffffff"
+         d="m 292,95.36 -14,-14 v 14 z"
+         />
+      <path
+         style="opacity:0.2;fill:url(#a)"
+         d="m 278,95.36 14,14 v -14 z"
+         />
+    </g>
+    <use
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       style="fill:url(#b-7)"
+       xlink:href="#c"
+       id="use25" />
+  </g>
+  <path
+     style="fill:#ffffff;fill-opacity:0.7"
+     d="M 32,22.9 31.74,23.1 23,27 v 12 l 9,4 9,-4 V 27 Z m 0,1.17 v 5.3 L 31.5,29.7 24,27.56 Z m 8,4 V 38.4 l -8,3.4 V 30.6 Z"
+     />
+</svg>

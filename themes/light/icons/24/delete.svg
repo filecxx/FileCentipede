@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style type="text/css" id="current-color-scheme">
+        .ColorScheme-NegativeText {
+            color:#da4453;
+        }
+        </style>
+  </defs>
+  <g transform="matrix(1.057762, 0, 0, 1, -0.039711, 1)" style="">
+    <path style="fill:currentColor;fill-opacity:1;stroke:none" class="ColorScheme-NegativeText" d="M8 3v2h1V4h4v1h1V3H8M4 6v1h14V6H4m2 2v11h10V8h-1v10H7V8H6"/>
+  </g>
+</svg>

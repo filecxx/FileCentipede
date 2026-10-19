@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <g transform="matrix(0.916667, 0, 0, 0.916667, 1, 1)">
+    <path d="M0 0h24v24H0z" fill="none" style="fill-rule: nonzero;"/>
+    <path d="M 3.273 18.764 L 20.728 18.764 L 20.728 20.727 L 3.273 20.727 L 3.273 18.764 Z M 12.97 8.946 L 19.758 8.946 L 12 16.8 L 4.243 8.946 L 11.031 8.946 L 11.031 1.091 L 12.97 1.091 L 12.97 8.946 Z" style="fill-rule: nonzero; fill: rgb(43, 43, 43);" bx:origin="0.000005 0.000005"/>
+  </g>
+</svg>
