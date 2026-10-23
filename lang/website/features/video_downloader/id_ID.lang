@@ -1,10 +1,5 @@
 content_section_1_="
-File Centipede dapat mengunduh video dari lebih dari 99% situs web.
-"
-
-content_section_2_="
-Ini bahkan dapat menganalisis alamat video dari Javascript, dan mengekstrak kunci video yang terdekripsi dari penutupan Javascript.
-Untuk beberapa situs web khusus, hanya File Centipede yang dapat mengunduh videonya.
+After installing the browser extension, it automatically detects media resources when you visit webpages containing video or audio.<br/>It supports nearly all common video formats and streaming protocols, including MP4, MKV, M3U8, and MPD, as well as downloads from most live streams. Both the browser extension and the desktop client must be installed to download live streams.
 "
 
 content_section_3_="

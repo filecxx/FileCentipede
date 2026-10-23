@@ -1,0 +1,209 @@
+.markdown_view {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: 0;
+    border: 1px solid #d1d5db;
+    background: #ffffff;
+    color: #24292f;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.65;
+    overflow-wrap: break-word;
+    scrollbar-gutter: stable;
+}
+
+.markdown_view_body {
+    padding: 16px 20px;
+}
+
+
+.markdown_view h1,
+.markdown_view h2,
+.markdown_view h3,
+.markdown_view h4,
+.markdown_view h5,
+.markdown_view h6 {
+    margin-top: 24px;
+    margin-bottom: 12px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: #1f2328;
+}
+
+.markdown_view h1 {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d1d9e0;
+    font-size: 1.8em;
+}
+
+.markdown_view h2 {
+    padding-bottom: 8px;
+    border-bottom: 1px solid #d8dee4;
+    font-size: 1.45em;
+}
+
+.markdown_view h3 { font-size: 1.2em; }
+.markdown_view h4 { font-size: 1.05em; }
+.markdown_view h5,
+.markdown_view h6 { font-size: 1em; }
+
+.markdown_view h1:first-child,
+.markdown_view h2:first-child,
+.markdown_view h3:first-child {
+    margin-top: 0;
+}
+
+
+.markdown_view p {
+    margin: 0 0 12px;
+}
+
+.markdown_view hr {
+    height: 0;
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #d8dee4;
+}
+
+
+.markdown_view a {
+    color: #0969da;
+    text-decoration: none;
+}
+
+.markdown_view a:hover {
+    color: #0550ae;
+    text-decoration: underline;
+}
+
+
+.markdown_view ul,
+.markdown_view ol {
+    margin: 0 0 12px;
+    padding-left: 2em;
+}
+
+.markdown_view li {
+    margin: 3px 0;
+}
+
+.markdown_view li > p {
+    margin-bottom: 6px;
+}
+
+.markdown_view li > ul,
+.markdown_view li > ol {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+
+.markdown_view table {
+    width: max-content;
+    max-width: 100%;
+    margin: 12px 0 16px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 13px;
+}
+
+.markdown_view th,
+.markdown_view td {
+    padding: 7px 12px;
+    border: 1px solid #d1d9e0;
+    text-align: left;
+    vertical-align: top;
+}
+
+.markdown_view th {
+    background: #f6f8fa;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.markdown_view tr:nth-child(even) {
+    background: #f6f8fa;
+}
+
+.markdown_view tr:hover {
+    background: #f0f5ff;
+}
+
+.markdown_view code {
+    padding: 2px 5px;
+    border-radius: 4px;
+    background: #eff1f3;
+    color: #cf222e;
+    font-family: "Source Code Pro", "Cascadia Code",
+    Consolas, "Courier New", monospace;
+    font-size: 0.9em;
+    overflow-wrap: anywhere;
+}
+
+
+.markdown_view pre {
+    overflow: auto;
+    margin: 12px 0 16px;
+    padding: 12px 14px;
+    border: 1px solid #d8dee4;
+    border-radius: 6px;
+    background: #f6f8fa;
+    line-height: 1.5;
+    tab-size: 4;
+}
+
+.markdown_view pre code {
+    display: block;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: #24292f;
+    font-size: 13px;
+    overflow-wrap: normal;
+    white-space: pre;
+}
+
+
+.markdown_view blockquote {
+    margin: 0 0 12px;
+    padding: 2px 16px;
+    border-left: 4px solid #d1d9e0;
+    color: #59636e;
+}
+
+.markdown_view blockquote > :last-child {
+    margin-bottom: 0;
+}
+
+
+.markdown_view img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+
+.markdown_view strong {
+    font-weight: 600;
+}
+
+.markdown_view del {
+    color: #6e7781;
+}
+
+.markdown_view input[type="checkbox"] {
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+
+.markdown_view_body > :first-child {
+    margin-top: 0;
+}
+
+.markdown_view_body > :last-child {
+    margin-bottom: 0;
+}

@@ -1,12 +1,20 @@
 body
 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
     font-size: 14px;
     margin: 0;
     padding: 0;
     color: #393d3f;
     background: white;
+    line-height: 1.5;
 }
 
+img{
+    max-width: 100%;
+}
 h1
 {
     font-size: 24px;
@@ -128,9 +136,9 @@ code
     z-index: 9;
     font-size: 14px;
 }
-.nav .links_
+.nav .tool_button
 {
-    padding: 8px 4px 8px 4px;
+    margin: 4px;
 }
 .nav a
 {
@@ -174,6 +182,29 @@ code
 {
     background: url("images/16/features.png") 4px 7px no-repeat,linear-gradient(to bottom,#a7a7a8 0%,#cccdce 100%);
 }
+
+.nav .group_begin_
+{
+    border-right: 1px solid #bcbebf;
+    padding-right: 4px;
+    display: inline-block;
+}
+
+.nav .group_
+{
+    border-left: 1px solid #bcbebf;
+    border-right: 1px solid #bcbebf;
+    padding-right: 4px;
+    display: inline-block;
+}
+
+.nav .group_end_
+{
+    float: right;
+    border-left: 1px solid #bcbebf;
+    display: inline-block;
+}
+
 .nav .screenshot_
 {
     background: url("images/16/screenshot.png") 4px 8px no-repeat;
@@ -348,7 +379,7 @@ code
 
 .body .article_ img
 {
-    border: 1px solid #bcbebf;
+
 }
 
 

@@ -10,7 +10,7 @@
 }
 .downloads .platform_ .button
 {
-    background:url("images/download.png") 5px 8px no-repeat,linear-gradient(to bottom,#eff0f1 0%,#dbdcdd 100%);
+    background: url("images/download.png") 5px 8px no-repeat,linear-gradient(to bottom,#eff0f1 0%,#dbdcdd 100%);
     padding: 0 12px 0 25px;
     margin-right: 6px;
 }
@@ -26,6 +26,23 @@
 {
 
 }
+
+.downloads .platform_ .firefox
+{
+    background: url("images/64/firefox.png") 5px 8px no-repeat,linear-gradient(to bottom,#eff0f1 0%,#dbdcdd 100%);
+    background-size: 16px auto, cover;
+}
+.downloads .platform_ .chrome
+{
+    background: url("images/64/chrome.png") 5px 8px no-repeat,linear-gradient(to bottom,#eff0f1 0%,#dbdcdd 100%);
+    background-size: 16px auto, cover;
+}
+.downloads .platform_ .edge
+{
+    background: url("images/64/edge.png") 5px 8px no-repeat,linear-gradient(to bottom,#eff0f1 0%,#dbdcdd 100%);
+    background-size: 16px auto, cover;
+}
+
 
 .downloads .platform_ .button.blue_
 {

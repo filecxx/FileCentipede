@@ -1,10 +1,5 @@
 content_section_1_="
-檔案蜈蚣能從超過99%的網站上下載影片。
-"
-
-content_section_2_="
-它甚至可以從Javascript中分析影片地址，並且從Javascript閉包中選取解密後的金鑰。
-對於一些特殊網站，只有檔案蜈蚣才能做到下載其影片。
+After installing the browser extension, it automatically detects media resources when you visit webpages containing video or audio.<br/>It supports nearly all common video formats and streaming protocols, including MP4, MKV, M3U8, and MPD, as well as downloads from most live streams. Both the browser extension and the desktop client must be installed to download live streams.
 "
 
 content_section_3_="

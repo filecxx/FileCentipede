@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <meta name="description" content="文件蜈蚣是一个全能网络文件上传/下载器, BitTorrent客户端, WebDAV客户端, FTP客户端, 和SSH客户端. 它快速, 可定制, 用户友好, 多协议支持, 同时也包含了很多有用的辅助工具如: HTTP请求器, 文件合并工具, 编码/解码工具等. 和网页浏览器进行集成, 你可以从网页上下载音频和视频, 甚至是加密视频."/>
+    <meta name="description" content="一个通用的文件下载管理器,网络文件管理器和文件服务器.<br/><br/>它专注于解决文件传输效率的问题, 没有AI, 没有提升10倍下载速度, 也不试图成为你电脑中的主角. 只是一个解决实际问题的工具."/>
     <meta name="keywords" content="文件蜈蚣, IDM, BT种子客户端, 下载种子, 网页中下载视频, 视频嗅探工具, 最快的下载加速器, 最好的下载工具, linux下载工具, 免费下载工具, transmission, libtorrent, 文件蜈蚣下载, 无广告下载工具"/>
     <title>文件蜈蚣 官方网站</title>
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
     <link rel="icon" href="../favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="../style/base.css?t=6">
-    <link rel="stylesheet" href="../style/index.css?t=6">
+    <link rel="stylesheet" href="../style/base.css?t=7">
+    <link rel="stylesheet" href="../style/index.css?t=7">
 </head>
 <body>
 
@@ -19,11 +19,16 @@
     <div class="nav">
     <div class="links_">
         <a class="tool_button home_" href="index.html#">主页</a>
+        <a class="tool_button download_" href="index.html#downloads">下载</a>
         <a class="tool_button features_" href="index.html#features">特性</a>
-        <a class="tool_button download_" href="download.html">下载</a>
-        <a class="tool_button screenshot_" href="screenshot.html">截图</a>
+        <a class="tool_button screenshot_" href="screenshot.html">截图 1</a>
+        <a class="tool_button screenshot_" href="screenshot_browser_extension.html">截图 2</a>
         <a class="tool_button documentation_" href="documentation.html">文档</a>
-        <a class="tool_button donate_" href="https://w.filecxx.com" rel="nofollow">购买</a>
+
+        <div class="group_end_">
+            <a class="tool_button donate_" href="https://w.filecxx.com" rel="nofollow">购买</a>
+        </div>
+
     </div>
 </div>
 
@@ -55,11 +60,10 @@
     <div class="body">
         <div class="section description" id="description">
             <h2>描述</h2>
-            <div id="description_text">文件蜈蚣是一个全能网络文件上传/下载器, BitTorrent客户端, WebDAV客户端, FTP客户端, 和SSH客户端. 它快速, 可定制, 用户友好, 多协议支持, 同时也包含了很多有用的辅助工具如: HTTP请求器, 文件合并工具, 编码/解码工具等. 和网页浏览器进行集成, 你可以从网页上下载音频和视频, 甚至是加密视频.</div>
+            <div id="description_text">一个通用的文件下载管理器,网络文件管理器和文件服务器.<br/><br/>它专注于解决文件传输效率的问题, 没有AI, 没有提升10倍下载速度, 也不试图成为你电脑中的主角. 只是一个解决实际问题的工具.</div>
         </div>
 
         <div class="section">
-            <a class="label_ blue_" href="os/linux_download_manager.html">Linux下载工具</a>
             <a class="label_ blue_" href="features/video_downloader.html">视频下载工具</a>
             <a class="label_ blue_" href="features/bittorrent_client.html">BitTorrent客户端</a>
             <a class="label_ blue_" href="features/webdav_file_manager.html">WebDAV文件管理器</a>
@@ -83,22 +87,24 @@
         <div class="detail_">
             <div class="version_">
                 最新版本:
-                <b>2.82</b>
-                <span style="color: green">(2023.02.06)</span>
+                <b>2.9</b>
+                <span style="color: green">(2026.10.20)</span>
                 <span> - </span>
                 <a href="update_log.html">更新日志</a>
-                <span> - </span>
-                <a href="https://github.com/filecxx/FileCentipede/issues/944">Update Schedule & Status</a>
             </div>
             <div style="margin-top: 12px">
-                <span>激活码:</span>
-                <a href="activation_code.html">免费获取</a>
+
             </div>
         </div>
 
         <div class="platforms_">
             <div class="platform_">
-                <h4>Windows x64 (>= Windows vista)</h4>
+                <div style="margin: 10px 0 10px">
+                    <h4 style="display: inline;">Windows x64 (>= Windows 7) - <span style="color: green">免费试用</span></h4>
+
+                    - <a href="activation_code.html">激活码</a>
+                </div>
+
                 <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/filecxx_latest_win_x64.zip">下载链接1</a>
                 <a class="button" href="../release/filecxx_latest_win_x64.zip" id="download_windows_zip">下载链接2</a>
                 <a class="button" href="https://sourceforge.net/projects/filecentipede/files/">下载链接3</a>
@@ -106,7 +112,8 @@
                 <a class="button blue_" href="#" onclick="return download_file('download_windows_zip')">(Web) 下载</a>
             </div>
             <div class="platform_">
-                <h4>Linux x64</h4>
+                <h4>Linux x64 (>= glibc 2.38) - <span style="color: green">免费</span></h4>
+
                 <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/filecxx_latest_linux_x64.zip">下载链接1</a>
                 <a class="button" href="../release/filecxx_latest_linux_x64.zip" id="download_linux_zip">下载链接2</a>
                 <a class="button" href="https://sourceforge.net/projects/filecentipede/files/">下载链接3</a>
@@ -118,52 +125,52 @@
 
     <div class="section">
         <div class="platforms_">
+            <h2>浏览器扩展: </h2>
             <!--
             <div class="platform_">
                 <h4>定制</h4>
-                <a class="button disabled" href="#">获取定制的版本 (免费)</a>
+                <a class="button disabled" href="#">get_customized_version</a>
             </div>
             -->
             <div class="version_">
                 最新版本:
-                <b>2.99.6</b>
-                <span style="color: green">(2024.12.06)</span>
+                <b>2.99.7</b>
+                <span style="color: green">(2026.10.20)</span>
             </div>
             <div class="platform_">
                 <h4>Firefox extension</h4>
+                <a class="button firefox" href="https://addons.mozilla.org/firefox/addon/filecxx/" target="_blank">在线安装</a>
                 <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/firefox.xpi">下载链接1</a>
                 <a class="button" href="../release/firefox.xpi">下载链接2</a>
-                <a class="button" href="https://addons.mozilla.org/firefox/addon/filecxx/" target="_blank">在线安装</a>
-            </div>
-            <div class="platform_">
-                <h4>Microsoft Edge</h4>
-                <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/chrome_mv3.zip">下载链接1</a>
-                <a class="button" href="../release/chrome_mv3.zip">下载链接2</a>
-                <a class="button" href="https://microsoftedge.microsoft.com/addons/detail/jeekmibdibcjeihbjnjgbegjalfelhon" target="_blank">在线安装</a>
             </div>
 
             <div class="platform_">
-                <h4>Chrome Manifest V2</h4>
+                <h4>Chrome</h4>
+                <a class="button chrome" href="https://chrome.google.com/webstore/detail/ogfhebakocdbenmnkaajmckmbcnnafmm" target="_blank">在线安装</a>
                 <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/chrome.zip">下载链接1</a>
                 <a class="button" href="../release/chrome.zip">下载链接2</a>
             </div>
-            <div class="platform_">
-                <h4>Chrome Manifest V3</h4>
-                <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/chrome_mv3.zip">下载链接1</a>
-                <a class="button" href="../release/chrome_mv3.zip">下载链接2</a>
-                <a class="button" href="https://chrome.google.com/webstore/detail/ogfhebakocdbenmnkaajmckmbcnnafmm" target="_blank">在线安装</a>
-            </div>
 
             <div class="platform_">
-                <h4>Github</h4>
-                <a class="button" target="_blank" href="https://github.com/filecxx/FileCentipede">https://github.com/filecxx/FileCentipede</a>
+                <h4>Microsoft Edge</h4>
+                <a class="button edge" href="https://microsoftedge.microsoft.com/addons/detail/jeekmibdibcjeihbjnjgbegjalfelhon" target="_blank">在线安装</a>
+                <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/chrome.zip">下载链接1</a>
+                <a class="button" href="../release/chrome.zip">下载链接2</a>
             </div>
-            <div class="platform_">
-                <h4>PAD (Portable Application Description)</h4>
-                <a class="button" target="_blank" href="/release/FileCentipede_pad.xml">File Centipede PAD.xml</a>
-            </div>
-
         </div>
+    </div>
+
+    <div class="section">
+
+        <div class="platform_">
+            <h4>Github</h4>
+            <a class="button" target="_blank" href="https://github.com/filecxx/FileCentipede">https://github.com/filecxx/FileCentipede</a>
+        </div>
+        <div class="platform_">
+            <h4>PAD (Portable Application Description)</h4>
+            <a class="button" target="_blank" href="/release/FileCentipede_pad.xml">File Centipede PAD.xml</a>
+        </div>
+
     </div>
     <!--
     <div class="section">
@@ -205,16 +212,19 @@
                 <div class="label_">English</div>
                 <div class="label_">简体中文</div>
                 <div class="label_">繁體中文</div>
+                <div class="label_">日本語</div>
+                <div class="label_">한국어</div>
                 <div class="label_">русский</div>
                 <div class="label_">português</div>
                 <div class="label_">Français</div>
                 <div class="label_">Nederlands</div>
-                <div class="label_">한국어</div>
                 <div class="label_">Tiếng Việt</div>
                 <div class="label_">Türkçe</div>
                 <div class="label_">Deutsch</div>
                 <div class="label_">Indonesia</div>
                 <div class="label_">Italiano</div>
+                <div class="label_">Polski</div>
+                <div class="label_">Español</div>
             </div>
         </div>
         <div class="section features" id="features">
@@ -278,10 +288,29 @@
                 <tr><td>站点规则</td><td>2.1</td></tr>
                 <tr><td>校验和工具</td><td>2.3</td></tr>
                 <tr><td>远程下载</td><td>2.6</td></tr>
+                <tr><td>TS video file transcoding / Fix</td><td>2.9</td></tr>
+                <tr><td>内置视频/音频文件合并</td><td>2.9</td></tr>
+                <tr><td>HTTPS Proxy, Socks5s Proxy</td><td>2.9</td></tr>
+                <tr><td>代理批量测试提取</td><td>2.9</td></tr>
+                <tr><td>操作系统代理设置</td><td>2.9</td></tr>
+                <tr><td>代理模式：始终、可用时、作为备用、轮询</td><td>2.9</td></tr>
+                <tr><td>DASH MPD 流任务</td><td>2.9</td></tr>
+                <tr><td>直播任务</td><td>2.9</td></tr>
+                <tr><td>流式任务确认对话框，多文件流式任务</td><td>2.9</td></tr>
+                <tr><td>高性能 HTTP 文件服务器</td><td>2.9</td></tr>
+                <tr><td>HTTP Mirrors/CDN setting</td><td>2.9</td></tr>
+                <tr><td>自动合并视频与音频</td><td>2.9</td></tr>
+                <tr><td>Gloryhole</td><td>2.9</td></tr>
+                <tr><td>WebTorrent support</td><td>2.9</td></tr>
                 </tbody>
             </table>
         </div>
+
+        <div class="section">
+            <a href="user_privacy_guarantee.html">用户隐私保障</a>
+        </div>
     </div>
+
     <div class="footer">
     <div class="copyright_">
         <span> © 2026, filecxx.com</span>

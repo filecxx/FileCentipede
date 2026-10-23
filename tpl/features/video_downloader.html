@@ -23,9 +23,11 @@
         </div>
 
         <div class="section">
+            <p style="color: red">${DRM_or_youtube_unsupported_}</p>
+        </div>
+        <div class="section">
             <div class="article_">
                 <p>${content_section_1_}</p>
-                <p>${content_section_2_}</p>
             </div>
         </div>
 
@@ -52,14 +54,14 @@
         </div>
 
         <div class="section">
-            <a href="../documentation/browser_integration.html" class="article_">${how_to_install} ${browser_extension}</a>
-        </div>
+            <div>
+                <img src="../../images/extension_preview.png" alt="download web video">
+            </div>
 
-        <div class="section">
-            <a href="../download.html" class="button">${download}</a>
+            <div>
+                <img src="../../images/screenshot_stream_confirm.png" alt="download videos">
+            </div>
         </div>
-
-        ${@import ../tpl/tpl_share.html}
     </div>
 
     ${@import ../tpl/tpl_footer.html}

@@ -4,22 +4,24 @@
         <div class="detail_">
             <div class="version_">
                 ${latest_version}:
-                <b>2.82</b>
-                <span style="color: green">(2023.02.06)</span>
+                <b>2.9</b>
+                <span style="color: green">(2026.10.20)</span>
                 <span> - </span>
                 <a href="update_log.html">${update_log}</a>
-                <span> - </span>
-                <a href="https://github.com/filecxx/FileCentipede/issues/944">Update Schedule & Status</a>
             </div>
             <div style="margin-top: 12px">
-                <span>${activation_code}:</span>
-                <a href="activation_code.html">${get_it_free}</a>
+
             </div>
         </div>
 
         <div class="platforms_">
             <div class="platform_">
-                <h4>Windows x64 (>= Windows vista)</h4>
+                <div style="margin: 10px 0 10px">
+                    <h4 style="display: inline;">Windows x64 (>= Windows 7) - <span style="color: green">${free_trial}</span></h4>
+
+                    - <a href="activation_code.html">${activation_code}</a>
+                </div>
+
                 <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/filecxx_latest_win_x64.zip">${download_link}1</a>
                 <a class="button" href="../release/filecxx_latest_win_x64.zip" id="download_windows_zip">${download_link}2</a>
                 <a class="button" href="https://sourceforge.net/projects/filecentipede/files/">${download_link}3</a>
@@ -27,7 +29,8 @@
                 <a class="button blue_" href="#" onclick="return download_file('download_windows_zip')">(Web) ${download}</a>
             </div>
             <div class="platform_">
-                <h4>Linux x64</h4>
+                <h4>Linux x64 (>= glibc 2.38) - <span style="color: green">${free}</span></h4>
+
                 <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/filecxx_latest_linux_x64.zip">${download_link}1</a>
                 <a class="button" href="../release/filecxx_latest_linux_x64.zip" id="download_linux_zip">${download_link}2</a>
                 <a class="button" href="https://sourceforge.net/projects/filecentipede/files/">${download_link}3</a>
@@ -39,6 +42,7 @@
 
     <div class="section">
         <div class="platforms_">
+            <h2>${browser_extension}: </h2>
             <!--
             <div class="platform_">
                 <h4>${customize}</h4>
@@ -47,44 +51,43 @@
             -->
             <div class="version_">
                 ${latest_version}:
-                <b>2.99.6</b>
-                <span style="color: green">(2024.12.06)</span>
+                <b>2.99.7</b>
+                <span style="color: green">(2026.10.20)</span>
             </div>
             <div class="platform_">
                 <h4>Firefox extension</h4>
+                <a class="button firefox" href="https://addons.mozilla.org/firefox/addon/filecxx/" target="_blank">${online_install}</a>
                 <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/firefox.xpi">${download_link}1</a>
                 <a class="button" href="../release/firefox.xpi">${download_link}2</a>
-                <a class="button" href="https://addons.mozilla.org/firefox/addon/filecxx/" target="_blank">${online_install}</a>
-            </div>
-            <div class="platform_">
-                <h4>Microsoft Edge</h4>
-                <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/chrome_mv3.zip">${download_link}1</a>
-                <a class="button" href="../release/chrome_mv3.zip">${download_link}2</a>
-                <a class="button" href="https://microsoftedge.microsoft.com/addons/detail/jeekmibdibcjeihbjnjgbegjalfelhon" target="_blank">${online_install}</a>
             </div>
 
             <div class="platform_">
-                <h4>Chrome Manifest V2</h4>
+                <h4>Chrome</h4>
+                <a class="button chrome" href="https://chrome.google.com/webstore/detail/ogfhebakocdbenmnkaajmckmbcnnafmm" target="_blank">${online_install}</a>
                 <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/chrome.zip">${download_link}1</a>
                 <a class="button" href="../release/chrome.zip">${download_link}2</a>
             </div>
-            <div class="platform_">
-                <h4>Chrome Manifest V3</h4>
-                <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/chrome_mv3.zip">${download_link}1</a>
-                <a class="button" href="../release/chrome_mv3.zip">${download_link}2</a>
-                <a class="button" href="https://chrome.google.com/webstore/detail/ogfhebakocdbenmnkaajmckmbcnnafmm" target="_blank">${online_install}</a>
-            </div>
 
             <div class="platform_">
-                <h4>Github</h4>
-                <a class="button" target="_blank" href="https://github.com/filecxx/FileCentipede">https://github.com/filecxx/FileCentipede</a>
+                <h4>Microsoft Edge</h4>
+                <a class="button edge" href="https://microsoftedge.microsoft.com/addons/detail/jeekmibdibcjeihbjnjgbegjalfelhon" target="_blank">${online_install}</a>
+                <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/chrome.zip">${download_link}1</a>
+                <a class="button" href="../release/chrome.zip">${download_link}2</a>
             </div>
-            <div class="platform_">
-                <h4>PAD (Portable Application Description)</h4>
-                <a class="button" target="_blank" href="/release/FileCentipede_pad.xml">File Centipede PAD.xml</a>
-            </div>
-
         </div>
+    </div>
+
+    <div class="section">
+
+        <div class="platform_">
+            <h4>Github</h4>
+            <a class="button" target="_blank" href="https://github.com/filecxx/FileCentipede">https://github.com/filecxx/FileCentipede</a>
+        </div>
+        <div class="platform_">
+            <h4>PAD (Portable Application Description)</h4>
+            <a class="button" target="_blank" href="/release/FileCentipede_pad.xml">File Centipede PAD.xml</a>
+        </div>
+
     </div>
     <!--
     <div class="section">

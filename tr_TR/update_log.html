@@ -8,11 +8,15 @@
     <title>Güncelleme günlüğü - File Centipede</title>
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
     <link rel="icon" href="../favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="../style/base.css">
+    <link rel="stylesheet" href="../style/base.css?t=2">
     <style>
         li{
             font-size: 16px;
-            padding: 4px 8px 4px 8px;
+            padding: 4px 6px 4px 6px;
+        }
+        .note_text
+        {
+            color: #7c7c7c;
         }
     </style>
 </head>
@@ -22,11 +26,16 @@
     <div class="nav">
     <div class="links_">
         <a class="tool_button home_" href="index.html#">Ana Sayfa</a>
+        <a class="tool_button download_" href="index.html#downloads">İndirme</a>
         <a class="tool_button features_" href="index.html#features">Özellikler</a>
-        <a class="tool_button download_" href="download.html">İndirme</a>
-        <a class="tool_button screenshot_" href="screenshot.html">Ekran görüntüsü</a>
+        <a class="tool_button screenshot_" href="screenshot.html">Ekran görüntüsü 1</a>
+        <a class="tool_button screenshot_" href="screenshot_browser_extension.html">Ekran görüntüsü 2</a>
         <a class="tool_button documentation_" href="documentation.html">Dökümantasyon</a>
-        <a class="tool_button donate_" href="https://w.filecxx.com" rel="nofollow">satın al</a>
+
+        <div class="group_end_">
+            <a class="tool_button donate_" href="https://w.filecxx.com" rel="nofollow">satın al</a>
+        </div>
+
     </div>
 </div>
 
@@ -58,348 +67,276 @@
     <div class="body">
         <div class="section">
             <h1>Güncelleme günlüğü</h1>
-
-            <video loading="lazy" src="videos/features/1.webm" autoplay loop muted playsinline></video>
         </div>
 
         <div class="section">
-            <h3>2.9</h3>
-            <h4>Summary:</h4>
+            <h2>2.9 (uptime: 2026.10.21)</h2>
+
+            <div>
+                <p>This release is not part of the 3.0 major release.</p>
+                <p>No major new features have been introduced, the focus is primarily on refining existing functionality and fixing bugs.</p>
+            </div>
+
+            <div>
+                <h3>Changes</h3>
+            </div>
+            <ul>
+                <li>
+                    <div>
+                        <strong>New icon</strong>
+                        (thanks to user JKwanJ for the design).
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <strong>Administrator privileges are no longer required at startup</strong>
+                        <p class="note_text">
+                            (except for operations such as registering file associations and system services during installation.)
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <strong>Licensing adjustments:</strong>
+                        <p>
+                            The Linux version is free now,
+                            while the Windows version and the upcoming macOS version are not free. However, the trial expiration reminder interval has been increased from 5 minutes to 1 hour. The reminder will also no longer appear while the application is minimized or in the system tray.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <strong>Adjusted default settings:</strong>
+                    </div>
+                    <ul>
+                        <li>
+                            The default maximum number of connections for HTTP download tasks has been reduced from 16 to 8.
+                        </li>
+                        <li>
+                            The default parallelism option for Stream tasks has been changed from <em>Fastest</em> to <em>Smooth</em>.
+                            The maximum number of connections remains 16.
+                        </li>
+                    </ul>
+                    <div class="note_text">
+                        Reason: Aggressive connections can improve download speeds under high-latency conditions, but they are also more likely to trigger a WAF (Web Application Firewall), causing the server to block downloads partway through. Users can still manually change these settings or use Site Rules to apply individual restrictions to unfriendly hosts.
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <strong>Linux version:</strong>
+                    </div>
+                    <div>
+                        <p>Due to compatibility and fallback issues, musl has been replaced with glibc, with a minimum required version of 2.38 (run <b>ldd --version</b> to check your system's libc version). </p>
+                        <p>The Linux version no longer bundles the libc or Qt5 shared libraries.</p>
+                    </div>
+                    <div class="note_text">
+                        (While this resolves compatibility issues with desktop environments on mainstream distributions, it introduces new compatibility issues on Linux distributions that use musl libc, such as Alpine.)
+                    </div>
+                </li>
+            </ul>
+
+            <div><h3>Summary</h3></div>
+            <ul>
+                <li>
+                    <div><strong>Fixed bugs accumulated over the past several years.</strong></div>
+                    <div>
+                        <p>
+                            Fixed all bugs reported by users over the past several years, as well as those encountered by the developer during personal use.
+                        </p>
+                        <p class="note_text">
+                            (This does not guarantee that no bugs have been missed or that new features have not introduced new bugs. Further testing in a wider range of real-world scenarios is still needed.)
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <strong>Substantial download engine optimizations.</strong>
+                    </div>
+                    <div>
+                        <p>
+                            The download engine has been significantly optimized, with multiple fallback strategies added. The primary goal is to ensure that the correct file is downloaded successfully. The low-speed issue caused by TCP starvation in certain scenarios has also been addressed.
+                        </p>
+                        <p class="note_text">
+                            (However, the issue has not been completely resolved. It is impossible to make the perfect trade-off for every scenario. The 3.0 release is expected to introduce a setting that leaves this decision to the user.)
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <strong>Added an Acceleration Servers settings category, with HTTP Mirror Servers as a subcategory.</strong>
+                    </div>
+                    <div>
+                       <p>
+                           Similar to Site Rules, but this feature allows a single task to download from multiple URLs in parallel.
+                           It is a general-purpose feature that users must configure manually.
+                           The application will not include predefined rules for popular but unstable services such as Hugging Face and GitHub, as doing so would conflict with the developer's design philosophy.
+                       </p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <strong>Improved connection lists in HTTP and Stream task details.</strong>
+                    </div>
+                    <div>
+                        <p> In previous versions, the connection lists only displayed the status, number of connections, chunks, and addresses, making their purpose somewhat unclear.</p>
+                        <p>The current version displays each connection's progress, speed, latency, and the proxy it is using.</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <strong>Major improvements to proxy settings.</strong>
+                    </div>
+                    <div>
+                        <p>
+                            Proxy functionality has been significantly enhanced, with further major improvements planned.
+                        </p>
+                        <p class="note_text">
+                            (As the current online ecosystem continues to deteriorate, traditional download manager kind software finds itself on the verge of death, potentially becoming completely unusable at any time due to factors such as Cloudflare.
+                            proxy software with dynamically updatable rules and SSL can be used to forward traffic and bypass WAF verification as an interim solution.)
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <strong>Replaced the planned WebUI with an HTTP file server.</strong>
+                    </div>
+                    <div>
+                        <p>
+                            Since native remote functionality already exists, there are no longer plans to develop a WebUI. Instead, the functionality has been upgraded to an HTTP file server.
+                        </p>
+                    </div>
+                    <div class="note_text">
+                        <p>
+                            In daily work, the developer frequently encounters situations requiring file transfers across networks, as well as cases where other software needs an HTTP URL for subscriptions or similar purposes. Switching between local and remote servers, or installing and configuring another local HTTP server application, is cumbersome, unstable, and wastes considerable time.
+                        </p>
+                        <p>
+                            Now, users only need to enable this feature in the settings and place files in the designated folder.
+                        </p>
+                        <p>
+                            The HTTP server delivers adequate performance, approaching that of Nginx, and is fully capable of serving as a public-facing server.
+                            However, the maximum thread pool size is currently limited to 8.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <strong>Stream media files are still merged into <b>.ts</b> files by default.</strong>
+                    </div>
+                    <p>
+                        If you need the output in MKV format, right-click the task and select <strong>
+                        [Actions] -> [TS Transcoding / Repair]</strong> to convert it.
+                    </p>
+                    <p class="note_text">
+                        The application does not convert files to MKV by default because most media players can play TS files directly, and merging is extremely fast, limited primarily by disk speed and typically reaching gigabytes per second. By comparison, MKV conversion runs at approximately less than 100 MB/s because it performs numerous media file checks and repairs, including timeline corrections.
+                    </p>
+                </li>
+                <li>
+                    <div>
+                        <strong>BitTorrent now supports WebTorrent.</strong>
+                    </div>
+                    <div>
+                        <p class="note_text">
+                            (One side effect is a considerable increase in binary size. If no users need this feature, it may be removed in the future.)
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <strong>Fixed the inability to automatically merge stream media files with separate video and audio tracks.</strong>
+                    </div>
+                    <div>
+                        <p>The application now supports both automatic and manual merging.</p>
+                        <p>
+                            This is a built-in feature that increases the binary size by approximately 2-3 MB.
+                            This feature is built in and adds only about 2-3 MB to the binary.
+                            Users don't need to install FFmpeg, which is over 100 MB, and the feature doesn't rely on external process calls.
+                        </p>
+                    </div>
+                    <div class="note_text">
+                        <p>(Its fault tolerance is still inferior to that of FFtools, which has undergone decades of optimization, but it is more than adequate for downloading and merging media files.)</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <strong>Improved the stream download confirmation dialog.</strong>
+                    </div>
+                    <div>
+                        <p>When downloading stream media, the application displays a confirmation dialog containing the file list, including video, audio, and subtitles. Multiple files can be downloaded together as a folder.</p>
+                        <p>If video/audio merging is enabled (the default), and there is only one video file and one audio file, they will ultimately be merged into a single file, and the other files will be deleted.</p>
+                        <p>If you upgraded from an earlier version, go to <strong>Settings -> Stream -> Without Confirm</strong> and uncheck the option to enable the confirmation dialog.</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <strong>Implemented full MPD support.</strong>
+                    </div>
+                    <div>
+                        <p>
+                            The JavaScript MPD implementation is a cut-down port of the C++ version. Furthermore, since almost all MPD encryption schemes involve DRM, MPD files containing encryption configurations will be rejected for download by default. To proceed, you must manually edit the MPD file, remove the relevant sections, and then drag the file into the application.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <strong>Added live downloading support for M3U8 and MPD streams.</strong>
+                    </div>
+                    <div>
+                        <p>When a live stream ends, a fatal error occurs, or the task is paused, the task is considered complete and the downloaded files are merged.</p>
+                        <p class="note_text">
+                           (Live streams using variant M3U8 protocols, such as Stripchat, are still unsupported. Currently, attempting to download them only retrieves a branded intro.)
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <strong>Fixed all performance issues in the browser extension and substantially improved multimedia detection.</strong>
+                    </div>
+                    <div class="note_text">
+                        <p>
+                            (In practice, the actual improvements to detection capabilities are limited. Most of the work involved fixing bugs that prevented previously implemented functionality from working correctly.)
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <strong>Major improvements to the browser extension user experience.</strong>
+                    </div>
+                    <div>
+                        <p>
+                            Examples include a segment detection success rate exceeding 90%; an option to skip a specified number of seconds at the beginning of videos during batch video preview; filtering functionality in the Collector; and automatic extraction of regular images from SVG image packs in the Resource Manager.
+                        </p>
+                        <p class="note_text">
+                            (A side effect is that you will see many blank images.)
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <strong>Added support for custom download managers in the browser extension settings.</strong>
+                    </div>
+                    <div>
+                        <p>Users can now add third-party download managers or backend receivers other than FileCXX. </p>
+                        <p>The built-in FileCXX default downloader cannot be deleted or edited in the list.</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <strong>Other minor, non-critical features have been added but are not listed here.</strong>
+                    </div>
+                </li>
+            </ul>
+
+            <div><h3>Notes</h3></div>
+            <ul>
+                <li>
+                    <p>Some new features are not fully polished. For example, tools such as merging and remuxing cannot be canceled midway through execution and do not display progress or status information.</p>
+                    <p>This is intentional. The 3.0 major release will substantially upgrade the application's UI architecture based on another project, while retaining CPU rendering, low memory usage, and broad compatibility. </p>
+                    <p>The developer does not want to duplicate work that will soon be replaced.</p>
+                </li>
+            </ul>
 
         </div>
 
-        <div class="section">
-            <h3>2.82 (uptime: 2023.02.06)</h3>
-            <h4>New:</h4>
-            <p>Fully shutdown.</p>
-
-            <h4>Fixed:</h4>
-            <p>When the remote HTTP server sends error data without disconnecting, causing this segment of data not to be downloaded and the final file size to not match the remote one, this scenario is likely to occur when the remote connection is unstable or frequently switches proxy IPs.</p>
-            <p>When downloading a file from the file browser, the file save path follows the catalog instead of the user choosing one.</p>
-            <p>The browser extension gets the wrong cookies from the incognito window.</p>
-
-            <h4>Changes:</h4>
-            <p>Change the default parallel option to "Fastest".</p>
-            <p>FileCXX private DHT network module (libdybn) has been removed, using BitTorrent public DHT network as the alternate.</p>
-        </div>
-
-        <div class="section">
-            <h3>2.81 (uptime: 2023.1.6)</h3>
-            <h4>New:</h4>
-            <p>Language: Tiếng Việt</p>
-
-            <h4>Fixed:</h4>
-            <p>HTTP task infinite redirect when reading partial content gets 301 code.</p>
-            <p>When downloading a large number of small files, repeatedly stopping or deleting tasks may cause errors in tasks that are waiting in the queue, indirectly causing filec to crash.</p>
-            <p>When the taskbar tray icon is clicked, the window does not become the top window.</p>
-        </div>
-        <div class="section">
-            <h3>2.8 stable (uptime: 2022.12.31)</h3>
-            <p>
-                This is the last version of FileCentipede2. The development of the next major version 3.0 has started.<br/><br/>
-                If you have any feature requests, please post them on
-                <a href="https://github.com/filecxx/FileCentipede/discussions/402">https://github.com/filecxx/FileCentipede/discussions/402</a>
-            </p>
-
-            <h4>Changes:</h4>
-            <p>Browser extensions up to 1.8</p>
-            <p>Language file "ru_RU.lang" updated.</p>
-
-            <h4>Fixed:</h4>
-            <p>URL directory parse error, such as "http://localhost/a=1&b=/dir/file".</p>
-            <p>The FTP task becomes stuck in the stopping state if the connection fails.</p>
-            <p>Unable to receive FTP file list when remote FTP server sends code 226 before sending the file list.</p>
-            <p>The browser extension shows "Send failed" when getting an URL that starts with "blob:".</p>
-            <p>The browser extension sometimes fails to obtain the cookie information for a URL.</p>
-            <p>A new strategy for downloading protected m3u8 segments.</p>
-            <p>In some cases, the downloaded file is m3u8 content instead of a video.</p>
-            <p>m3u8 png segments.</p>
-            <p>m3u8 parsing segment URL lost the last character when the m3u8 file did not end with a newline.</p>
-            <p>Use "filename*=UTF-8" as the preferred filename instead of "filename=".</p>
-            <p>The "Blocks" from the detail panel are displayed reversely when the HTTP task is not resumable.</p>
-            <p>Unlocked variables caused the filec process to crash.</p>
-            <p>The settings from the 'Update-dialog' cannot be saved.</p>
-            <p>Display an error message when the remote client fails to connect.</p>
-            <p>Increase the SSH maximum connect timeout to 120 seconds, rather than the current 12 seconds.</p>
-            <p>filec crashes if the remote HTTP response headers include both 'content-range' and 'transfer-encoding' at the same time.</p>
-            <p>When downloading multiple files with the same file name but different contents simultaneously, the automatic renaming function may potentially cause errors in writing to the files due to a lack of locking, indirectly causing filec to crash.</p>
-        </div>
-
-        <div class="section">
-            <h3>2.7 (uptime: 2022.08.29)</h3>
-            <h4>New:</h4>
-            <p>URI generator (from URI tool)</p>
-
-            <h4>Fixed:</h4>
-            <p>thread deadlock</p>
-            <p>unable to download files when HTTP server response conflicted headers: Accept-Ranges, Content-Range, Content-Encoding</p>
-            <p>unable to download files when HTTP server response transfer_encoding is chunked with 0-byte data</p>
-            <p>magnet-task causing filec crashes during multiple times of adding and canceling.</p>
-            <p>ESC key on dialog</p>
-            <p>duplicate shortcut key</p>
-            <p>fileu dialog crashes</p>
-            <p>fileu status bar DHT number was inaccurate.</p>
-            <p>remote client crashes on windows 7</p>
-            <p>torrent-task directory icon missed after restarting filec</p>
-
-        </div>
-
-        <div class="section">
-            <h3>2.6 & 2.61 (uptime: 2022.08.21)</h3>
-            <h4>New:</h4>
-            <p>Remote download manager (NativeUI, not WebUI)</p>
-            <p>File browser: copy file URL, path</p>
-            <p>Command line: service_port, service_password, remote_access</p>
-            <p>Browser extensions up to 1.7</p>
-
-            <h4>Fixed:</h4>
-            <p>(2.61) downgrade wolfssl to 5.4.0 </p>
-            <p>Cannot save options from the software's update dialog.</p>
-            <p>filec crashes when deleting an SSH or FTP directory and then canceling it.</p>
-
-        </div>
-
-        <div class="section">
-            <h3>2.5 (uptime: 2022.08.13)</h3>
-            <h4>New:</h4>
-            <p>Save column width.</p>
-            <p>Save window position. (default: off)</p>
-            <p>Force restart</p>
-            <p>Add trackers from the subscribed list.</p>
-            <p>Command line: create_torrent</p>
-            <p>Language: português</p>
-            <p>Translation tool: select languages directory</p>
-
-            <h4>Fixed:</h4>
-            <p>When remote HTTP server received range: bytes=0-0, but continue response more data, causing task progress over 100%.</p>
-            <p>Max Connect timeout up to 120s instead of 12s</p>
-            <p>File name incomplete when remote HTTP server response header field content-disposition contains multiple "=?UTF8?B?" sections.</p>
-            <p>Auto upgrade software.</p>
-        </div>
-
-
-        <div class="section">
-            <h3>2.4 (uptime: 2022.08.02)</h3>
-            <h4>New:</h4>
-            <p>Tray icon event for windows.</p>
-            <p>Set all new tasks save-path from the Add-task-dialog.</p>
-
-            <h4>Fixed:</h4>
-            <p>After pausing and resuming an HTTP task, the task progress reset to 0.</p>
-            <p>Auto-created host's default config error when entering address from the file browser's address bar.</p>
-            <p>File browser extracts username and password from URL.</p>
-            <p>Remove the default path "/" from the file browser.</p>
-            <p>Remove the checkbox from torrent confirm-dialog when the torrent only has one file.</p>
-            <p>Torrent confirm-dialog file size missing when the torrent only has one file.</p>
-        </div>
-
-        <div class="section">
-            <h3>2.3 (uptime: 2022.08.01)</h3>
-            <h4>New:</h4>
-            <p>Browser extension up to 1.5, massively optimized, it can extract videos from javascript.</p>
-            <p>File checksum tool (text, file, directory).</p>
-            <p>File size filter for torrent-task.</p>
-            <p>Taskbar progress for windows</p>
-            <p>Alert setting: delete task</p>
-            <p>Alert setting: delete catalog</p>
-            <p>Stream-task settings: Base URL, Key, IV</p>
-            <p>Merge tool: video+audio merge (FFmpeg required)</p>
-            <p>Language Français</p>
-            <p>Language Nederlands</p>
-
-            <h4>Fixed:</h4>
-            <p>announce_to_all_tiers and announce_to_all_trackers set as default.</p>
-            <p>HTTPS trackers (Linux)</p>
-            <p>filec crashes when HTTP cookies over 4 KB.</p>
-            <p>Convert URI space to "%20" instead of "+"</p>
-            <p>m3u8 merge files error on windows7</p>
-            <p>uploaded directories displayed as regular files from the file browser.</p>
-            <p>SSH connections timed out but the state was still connected.</p>
-            <p>SSH file manager "operation failed" error.</p>
-            <p>When resuming an HTTP task and the URL address was expired causing an incomplete file to be downloaded. (New bug since 2.0)</p>
-            <p>Torrent-task inaccurate statistics.</p>
-            <p>Torrent-task rename from confirm-dialog failed.</p>
-            <p>m3u8 parse error.</p>
-            <p>Clipboard multiple triggers.</p>
-            <p>HTTP-task filename with =?UTF-8?B?</p>
-            <p>fileu incomplete task list (fully fixed).</p>
-            <p>fileu directory icon.</p>
-            <p>fileu window randomly activated.</p>
-            <p>DHT 0</p>
-            <p>...</p>
-        </div>
-
-        <div class="section">
-            <h3>2.21 (uptime: 2022.07.02)</h3>
-            <h4>Fixed:</h4>
-            <p>stream-task 401, 403 error.</p>
-            <p>stream-task HTTP 302 redirect causing filec crashes.</p>
-            <p>stream-task merge file error after pausing and resuming the task.</p>
-        </div>
-        <div class="section">
-            <h3>2.2 (uptime: 2022.06.30)</h3>
-            <h4>New:</h4>
-            <p>torrent port setting</p>
-
-            <h4>Fixed:</h4>
-            <p>"CheckBox" for torrent-task subdirectories</p>
-            <p>torrent-task state display as completed but still seeding.</p>
-            <p>torrent-task lost the resume-data in some cases.</p>
-        </div>
-        <div class="section">
-            <h3>2.1 (uptime: 2022.06.29)</h3>
-            <h4>New:</h4>
-            <p>site rules</p>
-            <p>language zh_TW</p>
-            <h4>Fixed:</h4>
-            <p>WebDAV default config error for file downloading.</p>
-            <p>torrent-task is not able to stop when checking files.</p>
-            <p>when the HTTP server response code is 401 or 403, remove the "Referer" and "Origin" fields from HTTP headers before resending the HTTP request.</p>
-            <p>some web servers accepted HTTP range requests but the response code is 200 with 0-byte content, instead of 201, causing a 0-byte file to be downloaded. (wingftp)</p>
-            <p>torrent-task files rename failed after multiple tries.</p>
-            <p>FTP server 504 error (CLNT, OPTS UTF8 ON).</p>
-            <p>DateTime 0.000000.</p>
-        </div>
-        <div class="section">
-            <h3>2.02 (uptime: 2022.06.25)</h3>
-            <h4>Fixed:</h4>
-            <p>redundant path separator</p>
-            <p>XML tag case-sensitive caused the WebDAV list directory to fail.</p>
-            <p>file has not been removed from the file browser list when the remote directory path is  /</p>
-            <p>when uploading/downloading a directory max connections have been reduced when the directory contains a small file.</p>
-        </div>
-        <div class="section">
-            <h3>2.0/2.01 (uptime: 2022.06.24)</h3>
-            <h4>New:</h4>
-            <p>opening a task file show an alert when the file has been deleted or moved.</p>
-            <p>context-menu for torrent confirm-dialog</p>
-            <p>supported command line: curl, wget, aria2, axel</p>
-            <p>option: silent mode</p>
-            <p>detail panel: blocks</p>
-            <p>detail panel: connections</p>
-            <p>protocol: SSH(sftp)</p>
-            <p>option: proxy modes (Always, If_Available, Round_Robin, Round_Robin_Connections)</p>
-            <p>option: no task record</p>
-            <p>option: parallel (smooth, fastest)</p>
-            <p>settings: stream task</p>
-            <p>settings: SSH</p>
-            <p>settings: File Browser</p>
-            <p>download directory & upload directory</p>
-            <p>file browser, network file manager for WebDAV, WebDAVS, FTP, FTPS, SSH(SFTP)</p>
-            <p>...</p>
-            <h4>Fixed:</h4>
-            <p>filec fails to start when the database file is broken.</p>
-            <p>global-speed-limit settings for stream tasks.</p>
-            <p>file icon association error on windows.</p>
-            <p>filec crashes when the service receives an empty request.</p>
-            <p>filec crashes when the local network is unavailable.</p>
-            <p>ftp compatibility for non-standard server.</p>
-            <p>HTTP cookie containing a "secure" field case endless loop.</p>
-            <p>when add-task dialog switching the URL config causing fields are missed.</p>
-            <p>stream-task missing completed dialog.</p>
-            <p>tasks-detail update data is in slow motion.</p>
-            <p>tray icon show/hide fails in some case.</p>
-            <p>http-task state frozen when the response body is empty.</p>
-            <p>torrent-confirm dialog information error.</p>
-            <p>an invalid file is downloaded when the HTTP response code is 206 and the keep-alive is false.</p>
-            <p>incomplete encoded URI path.</p>
-            <p>encode URI path before sending the HTTP header.</p>
-            <p>stream-task HTTP response code 474 marked as server busy.</p>
-            <p>copy address from task error (std::string_view out of scope).</p>
-            <p>an empty file was downloaded when the HTTP response headers contained content-encoding and content-range.</p>
-            <p>"Host" field in HTTP headers.</p>
-            <p>translation tool: Israel has been removed from the Arabic countries list.</p>
-            <p>heap-use-after-free.</p>
-            <p>uncaught exceptions.</p>
-            <p>memory overflowed.</p>
-            <p>...</p>
-            <h4>Changes:</h4>
-            <p>few</p>
-        </div>
-        <div class="section">
-            <h3>1.9 (uptime: 2022.03.27)</h3>
-            <h4>Fixed:</h4>
-            <p>The downloaded file is 1 byte when the HTTP header field "content-range" did not contain the "bytes" string</p>
-            <p>HTTP request range limitations</p>
-        </div>
-        <div class="section">
-            <h3>1.8 (uptime: 2022.03.26)</h3>
-            <h4>New:</h4>
-            <p>Ignore this site -> browser extensions</p>
-            <p>Browser extensions up to 1.4</p>
-            <h4>Fixed:</h4>
-            <p>The rename dialog is behind the confirm-dialog (windows only)</p>
-            <p>Open directory did not work when save-path is the root directory (windows only)</p>
-        </div>
-        <div class="section">
-            <h3>1.7 (uptime: 2022.03.25)</h3>
-            <h4>New:</h4>
-            <p>Add context menu on confirm-links dialog</p>
-            <h4>Fixed:</h4>
-            <p>Process filec.exe froze when HTTP response header no charset and "attachment;filename=" contains a non-utf8 string (windows only, caused by MinGW)</p>
-            <p>Not able to change proxy on task-edit dialog</p>
-        </div>
-        <div class="section">
-            <h3>1.6 (uptime: 2022.03.25)</h3>
-            <h4>New:</h4>
-            <p>Sound effects when task download completed or error. (optional)</p>
-            <p>Browser extensions up to 1.3</p>
-            <p>Download all links from the web page</p>
-            <h4>Fixed:</h4>
-            <p>UI configs are lost when upgrading to a new version.</p>
-            <p>On windows7, fileu std::filesystem::path error (caused by MinGW).</p>
-        </div>
-        <div class="section">
-            <h3>1.5 (uptime: 2022.03.22)</h3>
-            <h4>New:</h4>
-            <p>File last modified time from HTTP server</p>
-            <p>Show HTTP, Torrent confirming-dialog on top</p>
-            <p>Task completed dialog</p>
-            <h4>Fixed:</h4>
-            <p>302 redirect on stream task</p>
-            <p>Datetime format changed from GTM to ISO YYYY-MM-DD hh:mm:ss</p>
-            <p>fileu.exe is hidden when launched from Windows system service. (from browser extension after reboot)</p>
-        </div>
-        <div class="section">
-            <h3>1.4 (uptime: 2022.03.20)</h3>
-            <h4>New:</h4>
-            <p>Add/Remove User agents.</p>
-            <h4>Fixed:</h4>
-            <p>HTTP tasks lost 1 byte after during pause and restart the task. (critical)</p>
-            <p>Some websites have HTTP range request limitations, auto-ban small range requests, cause download errors.</p>
-            <p>History path</p>
-            <p>Windows DPI</p>
-        </div>
-        <div class="section">
-            <h3>1.3 (uptime: 2022.03.18)</h3>
-            <h4>New:</h4>
-            <p>Users can change the software name during installation.</p>
-            <p>Switch download manager from browser extension popup panel.</p>
-            <p>Show confirm-dialog when tasks are sent from the web browser.</p>
-            <p>Add new option "Without confirm" to HTTP settings</p>
-            <h4>Fixed:</h4>
-            <p>HTTPS request fails when the port is not 443</p>
-            <p>The translation tool inserted redundant backslashes into the string</p>
-            <p>System service from settings is enabled when installing without system service</p>
-            <p>Add 5 DHT bootstrap nodes</p>
-        </div>
-        <div class="section">
-            <h3>1.2 (uptime: 2022.03.16)</h3>
-            <h4>Fixed:</h4>
-            <p>filec.exe fails to start when the desktop environment is non-English (windows only)</p>
-        </div>
-        <div class="section">
-            <h3>1.1 (uptime: 2022.03.15)</h3>
-
-            <h4>New:</h4>
-            <p>save window size</p>
-            <p>auto add trackers to the new task (including downloads)</p>
-
-            <h4>Fixed:</h4>
-            <p>few</p>
-
-            (uninstall before installing the new version)
-        </div>
     </div>
 
     <div class="footer">

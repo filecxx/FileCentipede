@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <meta name="description" content="File Centipede adalah manajer unggah/unduh file internet All-In-One, Klien BitTorrent, klien WebDAV, klien FTP, dan klien SSH. Dirancang untuk cepat, dapat disesuaikan, dan ramah pengguna. Mendukung multi-protokol dan berisi banyak alat bantu berguna seperti permintaan HTTP, penggabungan file, dan pengkode. Dengan integrasi penjelajah, Anda dapat mengunduh audio dan video dari situs web, bahkan video terenkripsi."/>
+    <meta name="description" content="Manajer unduhan serba guna, manajer file jaringan, dan server file.<br/><br/>Berfokus pada membuat transfer file lebih efisien. Tanpa AI, tanpa klaim unduhan 10x lebih cepat, dan tidak berusaha menjadi pusat perhatian di komputer Anda. Hanya alat untuk menyelesaikan masalah praktis."/>
     <meta name="keywords" content="File Centipede, manajer unduh Internet, klien Torrent, manajer unduh Torrents, unduh video dari web, akselerator unduh tercepat, manajer unduh terbaik, manajer unduh Linux, manajer unduh gratis, klien WebDAV, klien FTP, klien SSH(SFTP)"/>
     <title>File Centipede Situs Resmi</title>
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
     <link rel="icon" href="../favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="../style/base.css?t=6">
-    <link rel="stylesheet" href="../style/index.css?t=6">
+    <link rel="stylesheet" href="../style/base.css?t=7">
+    <link rel="stylesheet" href="../style/index.css?t=7">
 </head>
 <body>
 
@@ -19,11 +19,16 @@
     <div class="nav">
     <div class="links_">
         <a class="tool_button home_" href="index.html#">Beranda</a>
+        <a class="tool_button download_" href="index.html#downloads">Unduh</a>
         <a class="tool_button features_" href="index.html#features">Fitur</a>
-        <a class="tool_button download_" href="download.html">Unduh</a>
-        <a class="tool_button screenshot_" href="screenshot.html">Tangkapan layar</a>
+        <a class="tool_button screenshot_" href="screenshot.html">Tangkapan layar 1</a>
+        <a class="tool_button screenshot_" href="screenshot_browser_extension.html">Tangkapan layar 2</a>
         <a class="tool_button documentation_" href="documentation.html">Dokumentasi</a>
-        <a class="tool_button donate_" href="https://w.filecxx.com" rel="nofollow">Beli</a>
+
+        <div class="group_end_">
+            <a class="tool_button donate_" href="https://w.filecxx.com" rel="nofollow">Beli</a>
+        </div>
+
     </div>
 </div>
 
@@ -55,11 +60,10 @@
     <div class="body">
         <div class="section description" id="description">
             <h2>Deskripsi</h2>
-            <div id="description_text">File Centipede adalah manajer unggah/unduh file internet All-In-One, Klien BitTorrent, klien WebDAV, klien FTP, dan klien SSH. Dirancang untuk cepat, dapat disesuaikan, dan ramah pengguna. Mendukung multi-protokol dan berisi banyak alat bantu berguna seperti permintaan HTTP, penggabungan file, dan pengkode. Dengan integrasi penjelajah, Anda dapat mengunduh audio dan video dari situs web, bahkan video terenkripsi.</div>
+            <div id="description_text">Manajer unduhan serba guna, manajer file jaringan, dan server file.<br/><br/>Berfokus pada membuat transfer file lebih efisien. Tanpa AI, tanpa klaim unduhan 10x lebih cepat, dan tidak berusaha menjadi pusat perhatian di komputer Anda. Hanya alat untuk menyelesaikan masalah praktis.</div>
         </div>
 
         <div class="section">
-            <a class="label_ blue_" href="os/linux_download_manager.html">Manajer unduh Linux</a>
             <a class="label_ blue_" href="features/video_downloader.html">Pengunduh video</a>
             <a class="label_ blue_" href="features/bittorrent_client.html">Klien BitTorrent</a>
             <a class="label_ blue_" href="features/webdav_file_manager.html">Manajer file WebDAV</a>
@@ -83,22 +87,24 @@
         <div class="detail_">
             <div class="version_">
                 Versi terbaru:
-                <b>2.82</b>
-                <span style="color: green">(2023.02.06)</span>
+                <b>2.9</b>
+                <span style="color: green">(2026.10.20)</span>
                 <span> - </span>
                 <a href="update_log.html">Log pembaruan</a>
-                <span> - </span>
-                <a href="https://github.com/filecxx/FileCentipede/issues/944">Update Schedule & Status</a>
             </div>
             <div style="margin-top: 12px">
-                <span>Kode aktivasi:</span>
-                <a href="activation_code.html">Dapatkan gratis</a>
+
             </div>
         </div>
 
         <div class="platforms_">
             <div class="platform_">
-                <h4>Windows x64 (>= Windows vista)</h4>
+                <div style="margin: 10px 0 10px">
+                    <h4 style="display: inline;">Windows x64 (>= Windows 7) - <span style="color: green">Uji Coba Gratis</span></h4>
+
+                    - <a href="activation_code.html">Kode aktivasi</a>
+                </div>
+
                 <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/filecxx_latest_win_x64.zip">Tautan unduh1</a>
                 <a class="button" href="../release/filecxx_latest_win_x64.zip" id="download_windows_zip">Tautan unduh2</a>
                 <a class="button" href="https://sourceforge.net/projects/filecentipede/files/">Tautan unduh3</a>
@@ -106,7 +112,8 @@
                 <a class="button blue_" href="#" onclick="return download_file('download_windows_zip')">(Web) Unduh</a>
             </div>
             <div class="platform_">
-                <h4>Linux x64</h4>
+                <h4>Linux x64 (>= glibc 2.38) - <span style="color: green">Gratis</span></h4>
+
                 <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/filecxx_latest_linux_x64.zip">Tautan unduh1</a>
                 <a class="button" href="../release/filecxx_latest_linux_x64.zip" id="download_linux_zip">Tautan unduh2</a>
                 <a class="button" href="https://sourceforge.net/projects/filecentipede/files/">Tautan unduh3</a>
@@ -118,52 +125,52 @@
 
     <div class="section">
         <div class="platforms_">
+            <h2>Ekstensi penjelajah: </h2>
             <!--
             <div class="platform_">
                 <h4>Kustomisasi</h4>
-                <a class="button disabled" href="#">Dapatkan versi kustom (Gratis)</a>
+                <a class="button disabled" href="#">get_customized_version</a>
             </div>
             -->
             <div class="version_">
                 Versi terbaru:
-                <b>2.99.6</b>
-                <span style="color: green">(2024.12.06)</span>
+                <b>2.99.7</b>
+                <span style="color: green">(2026.10.20)</span>
             </div>
             <div class="platform_">
                 <h4>Firefox extension</h4>
+                <a class="button firefox" href="https://addons.mozilla.org/firefox/addon/filecxx/" target="_blank">Instal online</a>
                 <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/firefox.xpi">Tautan unduh1</a>
                 <a class="button" href="../release/firefox.xpi">Tautan unduh2</a>
-                <a class="button" href="https://addons.mozilla.org/firefox/addon/filecxx/" target="_blank">Instal online</a>
-            </div>
-            <div class="platform_">
-                <h4>Microsoft Edge</h4>
-                <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/chrome_mv3.zip">Tautan unduh1</a>
-                <a class="button" href="../release/chrome_mv3.zip">Tautan unduh2</a>
-                <a class="button" href="https://microsoftedge.microsoft.com/addons/detail/jeekmibdibcjeihbjnjgbegjalfelhon" target="_blank">Instal online</a>
             </div>
 
             <div class="platform_">
-                <h4>Chrome Manifest V2</h4>
+                <h4>Chrome</h4>
+                <a class="button chrome" href="https://chrome.google.com/webstore/detail/ogfhebakocdbenmnkaajmckmbcnnafmm" target="_blank">Instal online</a>
                 <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/chrome.zip">Tautan unduh1</a>
                 <a class="button" href="../release/chrome.zip">Tautan unduh2</a>
             </div>
-            <div class="platform_">
-                <h4>Chrome Manifest V3</h4>
-                <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/chrome_mv3.zip">Tautan unduh1</a>
-                <a class="button" href="../release/chrome_mv3.zip">Tautan unduh2</a>
-                <a class="button" href="https://chrome.google.com/webstore/detail/ogfhebakocdbenmnkaajmckmbcnnafmm" target="_blank">Instal online</a>
-            </div>
 
             <div class="platform_">
-                <h4>Github</h4>
-                <a class="button" target="_blank" href="https://github.com/filecxx/FileCentipede">https://github.com/filecxx/FileCentipede</a>
+                <h4>Microsoft Edge</h4>
+                <a class="button edge" href="https://microsoftedge.microsoft.com/addons/detail/jeekmibdibcjeihbjnjgbegjalfelhon" target="_blank">Instal online</a>
+                <a class="button" href="https://github.com/filecxx/FileCentipede/raw/main/release/chrome.zip">Tautan unduh1</a>
+                <a class="button" href="../release/chrome.zip">Tautan unduh2</a>
             </div>
-            <div class="platform_">
-                <h4>PAD (Portable Application Description)</h4>
-                <a class="button" target="_blank" href="/release/FileCentipede_pad.xml">File Centipede PAD.xml</a>
-            </div>
-
         </div>
+    </div>
+
+    <div class="section">
+
+        <div class="platform_">
+            <h4>Github</h4>
+            <a class="button" target="_blank" href="https://github.com/filecxx/FileCentipede">https://github.com/filecxx/FileCentipede</a>
+        </div>
+        <div class="platform_">
+            <h4>PAD (Portable Application Description)</h4>
+            <a class="button" target="_blank" href="/release/FileCentipede_pad.xml">File Centipede PAD.xml</a>
+        </div>
+
     </div>
     <!--
     <div class="section">
@@ -205,16 +212,19 @@
                 <div class="label_">English</div>
                 <div class="label_">简体中文</div>
                 <div class="label_">繁體中文</div>
+                <div class="label_">日本語</div>
+                <div class="label_">한국어</div>
                 <div class="label_">русский</div>
                 <div class="label_">português</div>
                 <div class="label_">Français</div>
                 <div class="label_">Nederlands</div>
-                <div class="label_">한국어</div>
                 <div class="label_">Tiếng Việt</div>
                 <div class="label_">Türkçe</div>
                 <div class="label_">Deutsch</div>
                 <div class="label_">Indonesia</div>
                 <div class="label_">Italiano</div>
+                <div class="label_">Polski</div>
+                <div class="label_">Español</div>
             </div>
         </div>
         <div class="section features" id="features">
@@ -238,7 +248,7 @@
                 <tr><td>Cookie HTTP, header, user-agent dengan kustomisasi pengguna</td><td>1.0</td></tr>
                 <tr><td>Batas seeding torrent</td><td>1.0</td></tr>
                 <tr><td>Edit konfigurasi tugas transfer secara dinamis</td><td>1.0</td></tr>
-                <tr><td>Anti leeches</td><td>1.0</td></tr>
+                <tr><td>Anti leecher</td><td>1.0</td></tr>
                 <tr><td>Segarkan alamat yang kedaluwarsa</td><td>1.0</td></tr>
                 <tr><td>Katalog</td><td>1.0</td></tr>
                 <tr><td>Batas kecepatan unduh, unggah</td><td>1.0</td></tr>
@@ -278,10 +288,29 @@
                 <tr><td>Aturan situs</td><td>2.1</td></tr>
                 <tr><td>Alat checksum</td><td>2.3</td></tr>
                 <tr><td>Unduhan jarak jauh</td><td>2.6</td></tr>
+                <tr><td>Transkoding / Perbaikan file video TS</td><td>2.9</td></tr>
+                <tr><td>Penggabungan file video/audio bawaan</td><td>2.9</td></tr>
+                <tr><td>HTTPS Proxy, Socks5s Proxy</td><td>2.9</td></tr>
+                <tr><td>Ekstrak uji batch proxy</td><td>2.9</td></tr>
+                <tr><td>Pengaturan proxy Sistem Operasi</td><td>2.9</td></tr>
+                <tr><td>Mode proxy: Selalu, Jika tersedia, Sebagai cadangan, Round robin</td><td>2.9</td></tr>
+                <tr><td>Tugas aliran Dash mpd</td><td>2.9</td></tr>
+                <tr><td>Tugas siaran langsung</td><td>2.9</td></tr>
+                <tr><td>Dialog konfirmasi tugas aliran, Tugas aliran multi-file</td><td>2.9</td></tr>
+                <tr><td>Server file HTTP berkinerja tinggi</td><td>2.9</td></tr>
+                <tr><td>Pengaturan Mirror/CDN HTTP</td><td>2.9</td></tr>
+                <tr><td>Gabung otomatis video + audio</td><td>2.9</td></tr>
+                <tr><td>Gloryhole</td><td>2.9</td></tr>
+                <tr><td>Dukungan WebTorrent</td><td>2.9</td></tr>
                 </tbody>
             </table>
         </div>
+
+        <div class="section">
+            <a href="user_privacy_guarantee.html">Jaminan Privasi Pengguna</a>
+        </div>
     </div>
+
     <div class="footer">
     <div class="copyright_">
         <span> © 2026, filecxx.com</span>
