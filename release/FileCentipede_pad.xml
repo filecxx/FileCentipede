@@ -37,16 +37,16 @@
     <Contact_Info>
       <Contact_First_Name>file</Contact_First_Name>
       <Contact_Last_Name>centipede</Contact_Last_Name>
-      <Contact_Email>namelessitguy@mailfence.com</Contact_Email>
+      <Contact_Email>a@filecxx.com</Contact_Email>
       <Author_First_Name>file</Author_First_Name>
       <Author_Last_Name>centipede</Author_Last_Name>
-      <Author_Email>namelessitguy@mailfence.com</Author_Email>
+      <Author_Email>a@filecxx.com</Author_Email>
       <Contact_Phone></Contact_Phone>
     </Contact_Info>
     <Support_Info>
-      <Sales_Email>namelessitguy@mailfence.com</Sales_Email>
-      <Support_Email>namelessitguy@mailfence.com</Support_Email>
-      <General_Email>namelessitguy@mailfence.com</General_Email>
+      <Sales_Email>a@filecxx.com</Sales_Email>
+      <Support_Email>a@filecxx.com</Support_Email>
+      <General_Email>a@filecxx.com</General_Email>
       <Sales_Phone>123123123</Sales_Phone>
       <Support_Phone>123123123</Support_Phone>
       <General_Phone>123123123</General_Phone>
@@ -59,7 +59,7 @@
   <Program_Info>
     <AppID>app-0100aa3d7a5e</AppID>
     <Program_Name>FileCentipede</Program_Name>
-    <Program_Version>2.82</Program_Version>
+    <Program_Version>2.9</Program_Version>
     <Program_Release_Month>2</Program_Release_Month>
     <Program_Release_Day>6</Program_Release_Day>
     <Program_Release_Year>2023</Program_Release_Year>
@@ -161,6 +161,21 @@ File merge tool
 Checksum tool
 Statistics
 Remote download
+TS video file transcoding / Fix
+Built-in video/audio files merge
+HTTPS Proxy, Socks5s Proxy
+Proxy batch test extract
+Operating System proxy setting
+Proxy modes: Always, If available, As backup, Round robin
+Dash mpd stream task
+Live stream task
+Stream task confirmation dialog, Multi-file stream task
+High performance HTTP file server
+HTTP Mirrors/CDN setting
+Auto merge video + audio
+Gloryhole
+WebTorrent support
+
       </Char_Desc_2000>
     </English>
   </Program_Descriptions>
@@ -213,7 +228,7 @@ Remote download
     <NewsFeed_Site_URL></NewsFeed_Site_URL>
     <NewsFeed_Author_First_Name>1</NewsFeed_Author_First_Name>
     <NewsFeed_Author_Last_Name>1</NewsFeed_Author_Last_Name>
-    <NewsFeed_Author_Email>namelessitguy@mailfence.com</NewsFeed_Author_Email>
+    <NewsFeed_Author_Email>a@filecxx.com</NewsFeed_Author_Email>
     <NewsFeed_Language></NewsFeed_Language>
     <NewsFeed_Title></NewsFeed_Title>
     <NewsFeed_Description_70></NewsFeed_Description_70>
@@ -239,7 +254,7 @@ Remote download
     <Site_Description_450></Site_Description_450>
     <Site_Contact_First_Name>1</Site_Contact_First_Name>
     <Site_Contact_Last_Name>1</Site_Contact_Last_Name>
-    <Site_Contact_Email>namelessitguy@mailfence.com</Site_Contact_Email>
+    <Site_Contact_Email>a@filecxx.com</Site_Contact_Email>
   </Site>
   <Temp_Icon>https://cdnjs.cloudflare.com/ajax/libs/fatcow-icons/20130425/FatCow_Icons32x32/flag_yellow.png</Temp_Icon>
   <Dynamic_PAD>
