@@ -26,6 +26,8 @@ Just a tool for solving practical problems.
 
 **Dashboard:** [https://w.filecxx.com](https://w.filecxx.com)
 
+**Devlog:** [https://dev.to/filecxx](https://dev.to/filecxx)
+
 ---
 
 ## Screenshots

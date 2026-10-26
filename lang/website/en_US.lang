@@ -315,3 +315,5 @@ feature_31=Magnet to torrent tool
 feature_52=Operating System proxy setting
 documentation=Documentation
 save=Save
+feature_62=IP filter
+devlog=DevLog

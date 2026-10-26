@@ -315,3 +315,4 @@ user_exists=Kullanıcı mevcut
 download_tips_=Dikkat: Yeni sürümü yüklemeden önce eski sürümü kaldırın.
 ignore_server_busy=Sunucunun meşgul olduğunu görmezden gelin
 file=Dosya
+devlog=DevLog

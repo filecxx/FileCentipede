@@ -315,3 +315,4 @@ user_exists=사용자가 존재합니다
 download_tips_=참고: 새 버전을 설치하기 전에 이전 버전을 제거하십시오.
 ignore_server_busy=서버 사용 중 무시
 file=파일
+devlog=개발 일지
